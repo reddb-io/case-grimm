@@ -1,0 +1,64 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "snow_white_and_rose_red_tale",       "node_type": "tale",         "name": "Snow-White and Rose-Red" },
+    { "label": "snow_white_and_rose_red_snow",       "node_type": "character",    "name": "Snow-white (gentle sister)" },
+    { "label": "snow_white_and_rose_red_rose",       "node_type": "character",    "name": "Rose-red (lively sister)" },
+    { "label": "snow_white_and_rose_red_mother",     "node_type": "character",    "name": "The Widow Mother" },
+    { "label": "snow_white_and_rose_red_bear",       "node_type": "character",    "name": "Enchanted Bear (Prince)" },
+    { "label": "snow_white_and_rose_red_brother",    "node_type": "character",    "name": "Bear's Brother (Rose-red's husband)" },
+    { "label": "snow_white_and_rose_red_dwarf",      "node_type": "character",    "name": "Treacherous Wicked Dwarf" },
+    { "label": "snow_white_and_rose_red_lamb",       "node_type": "character",    "name": "Household Lamb" },
+    { "label": "snow_white_and_rose_red_dove",       "node_type": "character",    "name": "White Household Dove" },
+    { "label": "snow_white_and_rose_red_angel",      "node_type": "character",    "name": "Guardian-Angel Child" },
+    { "label": "obj_swrr_rose_trees",                "node_type": "magic_object", "name": "Two Rose-Trees (white and red)" },
+    { "label": "obj_swrr_dwarf_treasure",            "node_type": "magic_object", "name": "Dwarf's Stolen Treasure" }
+  ],
+  "edges": [
+    { "from": "snow_white_and_rose_red_snow",  "to": "snow_white_and_rose_red_mother", "label": "CHILD_OF" },
+    { "from": "snow_white_and_rose_red_rose",  "to": "snow_white_and_rose_red_mother", "label": "CHILD_OF" },
+    { "from": "snow_white_and_rose_red_snow",  "to": "snow_white_and_rose_red_rose",   "label": "SIBLING_OF" },
+    { "from": "snow_white_and_rose_red_rose",  "to": "snow_white_and_rose_red_snow",   "label": "SIBLING_OF" },
+    { "from": "snow_white_and_rose_red_snow",  "to": "snow_white_and_rose_red_bear",   "label": "MARRIES" },
+    { "from": "snow_white_and_rose_red_rose",  "to": "snow_white_and_rose_red_brother","label": "MARRIES" },
+    { "from": "snow_white_and_rose_red_snow",  "to": "snow_white_and_rose_red_dwarf",  "label": "RESCUES" },
+    { "from": "snow_white_and_rose_red_rose",  "to": "snow_white_and_rose_red_dwarf",  "label": "RESCUES" },
+    { "from": "snow_white_and_rose_red_bear",  "to": "snow_white_and_rose_red_dwarf",  "label": "KILLS" },
+    { "from": "snow_white_and_rose_red_angel", "to": "snow_white_and_rose_red_snow",   "label": "RESCUES" },
+    { "from": "snow_white_and_rose_red_angel", "to": "snow_white_and_rose_red_rose",   "label": "RESCUES" },
+
+    { "from": "snow_white_and_rose_red_snow",    "to": "snow_white_and_rose_red_tale", "label": "APPEARS_IN" },
+    { "from": "snow_white_and_rose_red_rose",    "to": "snow_white_and_rose_red_tale", "label": "APPEARS_IN" },
+    { "from": "snow_white_and_rose_red_mother",  "to": "snow_white_and_rose_red_tale", "label": "APPEARS_IN" },
+    { "from": "snow_white_and_rose_red_bear",    "to": "snow_white_and_rose_red_tale", "label": "APPEARS_IN" },
+    { "from": "snow_white_and_rose_red_brother", "to": "snow_white_and_rose_red_tale", "label": "APPEARS_IN" },
+    { "from": "snow_white_and_rose_red_dwarf",   "to": "snow_white_and_rose_red_tale", "label": "APPEARS_IN" },
+    { "from": "snow_white_and_rose_red_lamb",    "to": "snow_white_and_rose_red_tale", "label": "APPEARS_IN" },
+    { "from": "snow_white_and_rose_red_dove",    "to": "snow_white_and_rose_red_tale", "label": "APPEARS_IN" },
+    { "from": "snow_white_and_rose_red_angel",   "to": "snow_white_and_rose_red_tale", "label": "APPEARS_IN" },
+
+    { "from": "snow_white_and_rose_red_snow",  "to": "arc_humble_hero",      "label": "IS_ARCHETYPE" },
+    { "from": "snow_white_and_rose_red_rose",  "to": "arc_humble_hero",      "label": "IS_ARCHETYPE" },
+    { "from": "snow_white_and_rose_red_bear",  "to": "arc_royal_rescuer",    "label": "IS_ARCHETYPE" },
+    { "from": "snow_white_and_rose_red_dwarf", "to": "arc_greedy",           "label": "IS_ARCHETYPE" },
+    { "from": "snow_white_and_rose_red_dwarf", "to": "arc_disguised_villain","label": "IS_ARCHETYPE" },
+    { "from": "snow_white_and_rose_red_angel", "to": "arc_wise_helper",      "label": "IS_ARCHETYPE" },
+
+    { "from": "snow_white_and_rose_red_bear",  "to": "sp_bear",  "label": "IS_SPECIES" },
+    { "from": "snow_white_and_rose_red_dwarf", "to": "sp_dwarf", "label": "IS_SPECIES" },
+    { "from": "snow_white_and_rose_red_dove",  "to": "sp_dove",  "label": "IS_SPECIES" },
+
+    { "from": "snow_white_and_rose_red_tale", "to": "theme_metamorphosis",  "label": "CONTAINS_THEME" },
+    { "from": "snow_white_and_rose_red_tale", "to": "theme_curse",          "label": "CONTAINS_THEME" },
+    { "from": "snow_white_and_rose_red_tale", "to": "theme_humble_triumph", "label": "CONTAINS_THEME" },
+    { "from": "snow_white_and_rose_red_tale", "to": "theme_test_of_virtue", "label": "CONTAINS_THEME" },
+    { "from": "snow_white_and_rose_red_tale", "to": "theme_moral_punishment","label": "CONTAINS_THEME" },
+    { "from": "snow_white_and_rose_red_tale", "to": "theme_forest_danger",  "label": "CONTAINS_THEME" },
+
+    { "from": "snow_white_and_rose_red_tale", "to": "obj_swrr_rose_trees",     "label": "HAS_MAGIC_OBJECT" },
+    { "from": "snow_white_and_rose_red_tale", "to": "obj_swrr_dwarf_treasure", "label": "HAS_MAGIC_OBJECT" },
+
+    { "from": "snow_white_and_rose_red_tale", "to": "loc_cottage", "label": "HAS_LOCATION" },
+    { "from": "snow_white_and_rose_red_tale", "to": "loc_forest",  "label": "HAS_LOCATION" }
+  ]
+}

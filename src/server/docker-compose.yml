@@ -1,0 +1,37 @@
+services:
+  reddb:
+    image: ghcr.io/reddb-io/reddb:latest
+    container_name: grimm-reddb
+    # Exposes all three transports simultaneously. Flags map 1:1 to
+    # `red server --http --grpc --http-bind … --grpc-bind … --wire-bind …`.
+    # The wire (TCP/RedWire) transport is enabled by default; --http and
+    # --grpc opt-in the HTTP and gRPC frontends.
+    command:
+      - server
+      - --http
+      - --grpc
+      - --path
+      - /data/server.rdb
+      - --http-bind
+      - 0.0.0.0:8080
+      - --grpc-bind
+      - 0.0.0.0:5055
+      - --wire-bind
+      - 0.0.0.0:5050
+    ports:
+      - "8080:8080"   # HTTP JSON
+      - "5055:5055"   # gRPC
+      - "5050:5050"   # RedWire (native TCP)
+    volumes:
+      # Bind-mount the repo's ./output dir so server.rdb is visible on the host.
+      - ../../output:/data
+    healthcheck:
+      # SELECT 1 round-trip is a more reliable readiness probe than the
+      # `/health` diagnostics endpoint, which returns 503 in the normal
+      # "degraded" state after first boot.
+      test:
+        - CMD-SHELL
+        - "wget -qO- --post-data='{\"query\":\"SELECT 1\"}' --header='content-type: application/json' http://127.0.0.1:8080/query >/dev/null"
+      interval: 5s
+      timeout: 2s
+      retries: 10

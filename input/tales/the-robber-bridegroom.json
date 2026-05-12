@@ -1,0 +1,57 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "the_robber_bridegroom_tale",       "node_type": "tale",         "name": "The Robber Bridegroom" },
+    { "label": "the_robber_bridegroom_miller",     "node_type": "character",    "name": "The Miller" },
+    { "label": "the_robber_bridegroom_daughter",   "node_type": "character",    "name": "Miller's Daughter" },
+    { "label": "the_robber_bridegroom_groom",      "node_type": "character",    "name": "Cannibal Bridegroom" },
+    { "label": "the_robber_bridegroom_old_woman",  "node_type": "character",    "name": "Imprisoned Old Woman" },
+    { "label": "the_robber_bridegroom_robbers",    "node_type": "character",    "name": "Cannibal Robber Band (collective)" },
+    { "label": "the_robber_bridegroom_dead",       "node_type": "character",    "name": "Dragged Maiden (victim)" },
+    { "label": "the_robber_bridegroom_bird",       "node_type": "character",    "name": "Warning Bird in Cage" },
+    { "label": "obj_rb_peas_lentils",              "node_type": "magic_object", "name": "Peas and Lentils Trail" },
+    { "label": "obj_rb_severed_finger",            "node_type": "magic_object", "name": "Severed Finger with Gold Ring" }
+  ],
+  "edges": [
+    { "from": "the_robber_bridegroom_miller",   "to": "the_robber_bridegroom_daughter", "label": "PROMISES_TO" },
+    { "from": "the_robber_bridegroom_groom",    "to": "the_robber_bridegroom_daughter", "label": "DECEIVES" },
+    { "from": "the_robber_bridegroom_robbers",  "to": "the_robber_bridegroom_dead",     "label": "KILLS" },
+    { "from": "the_robber_bridegroom_robbers",  "to": "the_robber_bridegroom_dead",     "label": "EATS" },
+    { "from": "the_robber_bridegroom_old_woman","to": "the_robber_bridegroom_daughter", "label": "HELPS" },
+    { "from": "the_robber_bridegroom_old_woman","to": "the_robber_bridegroom_daughter", "label": "RESCUES" },
+    { "from": "the_robber_bridegroom_bird",     "to": "the_robber_bridegroom_daughter", "label": "HELPS" },
+
+    { "from": "the_robber_bridegroom_miller",    "to": "the_robber_bridegroom_tale", "label": "APPEARS_IN" },
+    { "from": "the_robber_bridegroom_daughter",  "to": "the_robber_bridegroom_tale", "label": "APPEARS_IN" },
+    { "from": "the_robber_bridegroom_groom",     "to": "the_robber_bridegroom_tale", "label": "APPEARS_IN" },
+    { "from": "the_robber_bridegroom_old_woman", "to": "the_robber_bridegroom_tale", "label": "APPEARS_IN" },
+    { "from": "the_robber_bridegroom_robbers",   "to": "the_robber_bridegroom_tale", "label": "APPEARS_IN" },
+    { "from": "the_robber_bridegroom_dead",      "to": "the_robber_bridegroom_tale", "label": "APPEARS_IN" },
+    { "from": "the_robber_bridegroom_bird",      "to": "the_robber_bridegroom_tale", "label": "APPEARS_IN" },
+
+    { "from": "the_robber_bridegroom_groom",     "to": "arc_predator",          "label": "IS_ARCHETYPE" },
+    { "from": "the_robber_bridegroom_groom",     "to": "arc_disguised_villain", "label": "IS_ARCHETYPE" },
+    { "from": "the_robber_bridegroom_robbers",   "to": "arc_predator",          "label": "IS_ARCHETYPE" },
+    { "from": "the_robber_bridegroom_daughter",  "to": "arc_oppressed_maiden",  "label": "IS_ARCHETYPE" },
+    { "from": "the_robber_bridegroom_daughter",  "to": "arc_humble_hero",       "label": "IS_ARCHETYPE" },
+    { "from": "the_robber_bridegroom_old_woman", "to": "arc_wise_helper",       "label": "IS_ARCHETYPE" },
+    { "from": "the_robber_bridegroom_bird",      "to": "arc_animal_helper",     "label": "IS_ARCHETYPE" },
+
+    { "from": "the_robber_bridegroom_bird", "to": "sp_bird", "label": "IS_SPECIES" },
+
+    { "from": "the_robber_bridegroom_tale", "to": "theme_devouring",        "label": "CONTAINS_THEME" },
+    { "from": "the_robber_bridegroom_tale", "to": "theme_disguise",         "label": "CONTAINS_THEME" },
+    { "from": "the_robber_bridegroom_tale", "to": "theme_moral_punishment", "label": "CONTAINS_THEME" },
+    { "from": "the_robber_bridegroom_tale", "to": "theme_test_of_virtue",   "label": "CONTAINS_THEME" },
+    { "from": "the_robber_bridegroom_tale", "to": "theme_forest_danger",    "label": "CONTAINS_THEME" },
+
+    { "from": "the_robber_bridegroom_tale", "to": "obj_rb_peas_lentils",      "label": "HAS_MAGIC_OBJECT" },
+    { "from": "the_robber_bridegroom_tale", "to": "obj_rb_severed_finger",    "label": "HAS_MAGIC_OBJECT" },
+
+    { "from": "the_robber_bridegroom_tale", "to": "loc_forest",  "label": "HAS_LOCATION" },
+    { "from": "the_robber_bridegroom_tale", "to": "loc_mill",    "label": "HAS_LOCATION" },
+    { "from": "the_robber_bridegroom_tale", "to": "loc_cellar",  "label": "HAS_LOCATION" },
+
+    { "from": "the_robber_bridegroom_tale", "to": "num_3", "label": "CONTAINS_NUMBER" }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "the_blue_light_tale",      "node_type": "tale",         "name": "The Blue Light" },
+    { "label": "the_blue_light_soldier",   "node_type": "character",    "name": "Dismissed Soldier" },
+    { "label": "the_blue_light_king",      "node_type": "character",    "name": "The Cruel King" },
+    { "label": "the_blue_light_witch",     "node_type": "character",    "name": "The Witch (in forest)" },
+    { "label": "the_blue_light_princess",  "node_type": "character",    "name": "King's Daughter" },
+    { "label": "the_blue_light_dwarf",     "node_type": "character",    "name": "Black Manikin (Pipe Dwarf)" },
+    { "label": "obj_the_blue_light",       "node_type": "magic_object", "name": "The Blue Light" },
+    { "label": "obj_the_blue_light_pipe",  "node_type": "magic_object", "name": "Magic Tobacco Pipe" }
+  ],
+  "edges": [
+    { "from": "the_blue_light_witch",    "to": "the_blue_light_soldier",  "label": "DECEIVES" },
+    { "from": "the_blue_light_dwarf",    "to": "the_blue_light_witch",    "label": "KILLS" },
+    { "from": "the_blue_light_dwarf",    "to": "the_blue_light_soldier",  "label": "HELPS" },
+    { "from": "the_blue_light_king",     "to": "the_blue_light_soldier",  "label": "OPPRESSED_BY" },
+    { "from": "the_blue_light_princess", "to": "the_blue_light_king",     "label": "CHILD_OF" },
+    { "from": "the_blue_light_soldier",  "to": "the_blue_light_princess", "label": "CAPTURES" },
+    { "from": "the_blue_light_soldier",  "to": "the_blue_light_princess", "label": "MARRIES" },
+
+    { "from": "the_blue_light_soldier",  "to": "the_blue_light_tale", "label": "APPEARS_IN" },
+    { "from": "the_blue_light_king",     "to": "the_blue_light_tale", "label": "APPEARS_IN" },
+    { "from": "the_blue_light_witch",    "to": "the_blue_light_tale", "label": "APPEARS_IN" },
+    { "from": "the_blue_light_princess", "to": "the_blue_light_tale", "label": "APPEARS_IN" },
+    { "from": "the_blue_light_dwarf",    "to": "the_blue_light_tale", "label": "APPEARS_IN" },
+
+    { "from": "the_blue_light_soldier", "to": "arc_humble_hero",  "label": "IS_ARCHETYPE" },
+    { "from": "the_blue_light_witch",   "to": "arc_evil_witch",   "label": "IS_ARCHETYPE" },
+    { "from": "the_blue_light_dwarf",   "to": "arc_wise_helper",  "label": "IS_ARCHETYPE" },
+
+    { "from": "the_blue_light_witch", "to": "sp_witch", "label": "IS_SPECIES" },
+    { "from": "the_blue_light_dwarf", "to": "sp_dwarf", "label": "IS_SPECIES" },
+
+    { "from": "the_blue_light_tale", "to": "theme_magic_pact",     "label": "CONTAINS_THEME" },
+    { "from": "the_blue_light_tale", "to": "theme_moral_punishment","label": "CONTAINS_THEME" },
+    { "from": "the_blue_light_tale", "to": "theme_humble_triumph", "label": "CONTAINS_THEME" },
+
+    { "from": "the_blue_light_tale", "to": "obj_the_blue_light",      "label": "HAS_MAGIC_OBJECT" },
+    { "from": "the_blue_light_tale", "to": "obj_the_blue_light_pipe", "label": "HAS_MAGIC_OBJECT" },
+
+    { "from": "the_blue_light_tale", "to": "loc_forest",  "label": "HAS_LOCATION" },
+    { "from": "the_blue_light_tale", "to": "loc_well",    "label": "HAS_LOCATION" },
+    { "from": "the_blue_light_tale", "to": "loc_cottage", "label": "HAS_LOCATION" },
+    { "from": "the_blue_light_tale", "to": "loc_castle",  "label": "HAS_LOCATION" },
+
+    { "from": "the_blue_light_tale", "to": "num_3", "label": "CONTAINS_NUMBER" }
+  ]
+}

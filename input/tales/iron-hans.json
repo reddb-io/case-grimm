@@ -1,0 +1,61 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "iron_hans_tale",         "node_type": "tale",         "name": "Iron Hans" },
+    { "label": "iron_hans",              "node_type": "character",    "name": "Iron Hans (enchanted wild king)" },
+    { "label": "iron_hans_king",         "node_type": "character",    "name": "King (prince's father)" },
+    { "label": "iron_hans_queen",        "node_type": "character",    "name": "Queen (prince's mother)" },
+    { "label": "iron_hans_prince",       "node_type": "character",    "name": "The Prince (golden-haired youth)" },
+    { "label": "iron_hans_host_king",    "node_type": "character",    "name": "Host King (employer)" },
+    { "label": "iron_hans_princess",     "node_type": "character",    "name": "Princess (rescuer's bride)" },
+    { "label": "iron_hans_cook",         "node_type": "character",    "name": "Palace Cook" },
+    { "label": "iron_hans_gardener",     "node_type": "character",    "name": "Palace Gardener" },
+    { "label": "iron_hans_lost_men",     "node_type": "character",    "name": "Lost Huntsmen (collective)" },
+
+    { "label": "obj_iron_hans_golden_ball",   "node_type": "magic_object", "name": "Golden Ball" },
+    { "label": "obj_iron_hans_gold_well",     "node_type": "magic_object", "name": "Gold Well" },
+    { "label": "obj_iron_hans_golden_apples", "node_type": "magic_object", "name": "Three Golden Apples" },
+    { "label": "obj_iron_hans_armor",         "node_type": "magic_object", "name": "Three Suits of Armor (red, white, black)" }
+  ],
+  "edges": [
+    { "from": "iron_hans_prince", "to": "iron_hans_king",   "label": "CHILD_OF" },
+    { "from": "iron_hans_prince", "to": "iron_hans_queen",  "label": "CHILD_OF" },
+    { "from": "iron_hans_prince", "to": "iron_hans",        "label": "RESCUES" },
+    { "from": "iron_hans",        "to": "iron_hans_prince", "label": "HELPS" },
+    { "from": "iron_hans_prince", "to": "iron_hans_host_king", "label": "RESCUES" },
+    { "from": "iron_hans_prince", "to": "iron_hans_princess",  "label": "MARRIES" },
+    { "from": "iron_hans",        "to": "iron_hans_lost_men",  "label": "KILLS" },
+
+    { "from": "iron_hans",            "to": "iron_hans_tale", "label": "APPEARS_IN" },
+    { "from": "iron_hans_king",       "to": "iron_hans_tale", "label": "APPEARS_IN" },
+    { "from": "iron_hans_queen",      "to": "iron_hans_tale", "label": "APPEARS_IN" },
+    { "from": "iron_hans_prince",     "to": "iron_hans_tale", "label": "APPEARS_IN" },
+    { "from": "iron_hans_host_king",  "to": "iron_hans_tale", "label": "APPEARS_IN" },
+    { "from": "iron_hans_princess",   "to": "iron_hans_tale", "label": "APPEARS_IN" },
+    { "from": "iron_hans_cook",       "to": "iron_hans_tale", "label": "APPEARS_IN" },
+    { "from": "iron_hans_gardener",   "to": "iron_hans_tale", "label": "APPEARS_IN" },
+    { "from": "iron_hans_lost_men",   "to": "iron_hans_tale", "label": "APPEARS_IN" },
+
+    { "from": "iron_hans",        "to": "arc_wise_helper",  "label": "IS_ARCHETYPE" },
+    { "from": "iron_hans_prince", "to": "arc_humble_hero",  "label": "IS_ARCHETYPE" },
+    { "from": "iron_hans_prince", "to": "arc_royal_rescuer","label": "IS_ARCHETYPE" },
+
+    { "from": "iron_hans_tale", "to": "theme_metamorphosis",  "label": "CONTAINS_THEME" },
+    { "from": "iron_hans_tale", "to": "theme_curse",          "label": "CONTAINS_THEME" },
+    { "from": "iron_hans_tale", "to": "theme_humble_triumph", "label": "CONTAINS_THEME" },
+    { "from": "iron_hans_tale", "to": "theme_test_of_virtue", "label": "CONTAINS_THEME" },
+    { "from": "iron_hans_tale", "to": "theme_forest_danger",  "label": "CONTAINS_THEME" },
+    { "from": "iron_hans_tale", "to": "theme_disguise",       "label": "CONTAINS_THEME" },
+
+    { "from": "iron_hans_tale", "to": "obj_iron_hans_golden_ball",   "label": "HAS_MAGIC_OBJECT" },
+    { "from": "iron_hans_tale", "to": "obj_iron_hans_gold_well",     "label": "HAS_MAGIC_OBJECT" },
+    { "from": "iron_hans_tale", "to": "obj_iron_hans_golden_apples", "label": "HAS_MAGIC_OBJECT" },
+    { "from": "iron_hans_tale", "to": "obj_iron_hans_armor",         "label": "HAS_MAGIC_OBJECT" },
+
+    { "from": "iron_hans_tale", "to": "loc_forest", "label": "HAS_LOCATION" },
+    { "from": "iron_hans_tale", "to": "loc_castle", "label": "HAS_LOCATION" },
+    { "from": "iron_hans_tale", "to": "loc_well",   "label": "HAS_LOCATION" },
+
+    { "from": "iron_hans_tale", "to": "num_3", "label": "CONTAINS_NUMBER" }
+  ]
+}

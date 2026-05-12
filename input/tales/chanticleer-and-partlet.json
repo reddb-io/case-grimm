@@ -1,0 +1,57 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "chanticleer_and_partlet_tale", "node_type": "tale",      "name": "The Adventures of Chanticleer and Partlet" },
+    { "label": "chanticleer",                  "node_type": "character", "name": "Chanticleer (Rooster)" },
+    { "label": "partlet",                      "node_type": "character", "name": "Partlet (Hen)" },
+    { "label": "chanticleer_duck",             "node_type": "character", "name": "Duck" },
+    { "label": "chanticleer_needle",           "node_type": "character", "name": "Needle" },
+    { "label": "chanticleer_pin",              "node_type": "character", "name": "Pin" },
+    { "label": "chanticleer_landlord",         "node_type": "character", "name": "Innkeeper" },
+    { "label": "chanticleer_cat",              "node_type": "character", "name": "Cat" },
+    { "label": "chanticleer_egg",              "node_type": "character", "name": "Talking Egg" },
+    { "label": "chanticleer_millstone",        "node_type": "character", "name": "Millstone" },
+    { "label": "chanticleer_mr_korbes",        "node_type": "character", "name": "Mr Korbes the Fox" },
+    { "label": "chanticleer_river",            "node_type": "character", "name": "The River" },
+    { "label": "chanticleer_bride",            "node_type": "character", "name": "The Bride" }
+  ],
+  "edges": [
+    { "from": "chanticleer", "to": "partlet",     "label": "MARRIES" },
+
+    { "from": "chanticleer",            "to": "chanticleer_landlord",  "label": "DECEIVES" },
+    { "from": "partlet",                "to": "chanticleer_landlord",  "label": "DECEIVES" },
+    { "from": "chanticleer_pin",        "to": "chanticleer_landlord",  "label": "KILLS" },
+    { "from": "chanticleer_millstone",  "to": "chanticleer_mr_korbes", "label": "KILLS" },
+    { "from": "chanticleer_river",      "to": "partlet",               "label": "HELPS" },
+    { "from": "chanticleer_bride",      "to": "chanticleer",           "label": "HELPS" },
+
+    { "from": "chanticleer",           "to": "chanticleer_and_partlet_tale", "label": "APPEARS_IN" },
+    { "from": "partlet",               "to": "chanticleer_and_partlet_tale", "label": "APPEARS_IN" },
+    { "from": "chanticleer_duck",      "to": "chanticleer_and_partlet_tale", "label": "APPEARS_IN" },
+    { "from": "chanticleer_needle",    "to": "chanticleer_and_partlet_tale", "label": "APPEARS_IN" },
+    { "from": "chanticleer_pin",       "to": "chanticleer_and_partlet_tale", "label": "APPEARS_IN" },
+    { "from": "chanticleer_landlord",  "to": "chanticleer_and_partlet_tale", "label": "APPEARS_IN" },
+    { "from": "chanticleer_cat",       "to": "chanticleer_and_partlet_tale", "label": "APPEARS_IN" },
+    { "from": "chanticleer_egg",       "to": "chanticleer_and_partlet_tale", "label": "APPEARS_IN" },
+    { "from": "chanticleer_millstone", "to": "chanticleer_and_partlet_tale", "label": "APPEARS_IN" },
+    { "from": "chanticleer_mr_korbes", "to": "chanticleer_and_partlet_tale", "label": "APPEARS_IN" },
+
+    { "from": "chanticleer",           "to": "arc_trickster",     "label": "IS_ARCHETYPE" },
+    { "from": "partlet",               "to": "arc_trickster",     "label": "IS_ARCHETYPE" },
+    { "from": "chanticleer_mr_korbes", "to": "arc_predator",      "label": "IS_ARCHETYPE" },
+    { "from": "chanticleer_duck",      "to": "arc_animal_helper", "label": "IS_ARCHETYPE" },
+
+    { "from": "chanticleer",           "to": "sp_rooster", "label": "IS_SPECIES" },
+    { "from": "partlet",               "to": "sp_hen",     "label": "IS_SPECIES" },
+    { "from": "chanticleer_duck",      "to": "sp_duck",    "label": "IS_SPECIES" },
+    { "from": "chanticleer_cat",       "to": "sp_cat",     "label": "IS_SPECIES" },
+    { "from": "chanticleer_mr_korbes", "to": "sp_fox",     "label": "IS_SPECIES" },
+
+    { "from": "chanticleer_and_partlet_tale", "to": "theme_moral_punishment", "label": "CONTAINS_THEME" },
+    { "from": "chanticleer_and_partlet_tale", "to": "theme_humble_triumph",   "label": "CONTAINS_THEME" },
+    { "from": "chanticleer_and_partlet_tale", "to": "theme_broken_promise",   "label": "CONTAINS_THEME" },
+
+    { "from": "chanticleer_and_partlet_tale", "to": "loc_mountains", "label": "HAS_LOCATION" },
+    { "from": "chanticleer_and_partlet_tale", "to": "loc_river",     "label": "HAS_LOCATION" }
+  ]
+}

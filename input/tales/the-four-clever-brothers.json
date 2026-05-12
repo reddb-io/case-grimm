@@ -1,0 +1,61 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "the_four_clever_brothers_tale",      "node_type": "tale",         "name": "The Four Clever Brothers" },
+    { "label": "the_four_clever_brothers_father",    "node_type": "character",    "name": "Poor Father" },
+    { "label": "the_four_clever_brothers_thief",     "node_type": "character",    "name": "Eldest Brother (Thief)" },
+    { "label": "the_four_clever_brothers_stargazer", "node_type": "character",    "name": "Second Brother (Star-Gazer)" },
+    { "label": "the_four_clever_brothers_huntsman",  "node_type": "character",    "name": "Third Brother (Huntsman)" },
+    { "label": "the_four_clever_brothers_tailor",    "node_type": "character",    "name": "Youngest Brother (Tailor)" },
+    { "label": "the_four_clever_brothers_king",      "node_type": "character",    "name": "The King" },
+    { "label": "the_four_clever_brothers_princess",  "node_type": "character",    "name": "Kidnapped Princess" },
+    { "label": "the_four_clever_brothers_dragon",    "node_type": "character",    "name": "The Sea Dragon" },
+    { "label": "obj_4cb_magic_glass",                "node_type": "magic_object", "name": "All-Seeing Glass" },
+    { "label": "obj_4cb_magic_bow",                  "node_type": "magic_object", "name": "Unmissing Bow" },
+    { "label": "obj_4cb_magic_needle",               "node_type": "magic_object", "name": "Seamless Needle" }
+  ],
+  "edges": [
+    { "from": "the_four_clever_brothers_thief",     "to": "the_four_clever_brothers_father", "label": "CHILD_OF" },
+    { "from": "the_four_clever_brothers_stargazer", "to": "the_four_clever_brothers_father", "label": "CHILD_OF" },
+    { "from": "the_four_clever_brothers_huntsman",  "to": "the_four_clever_brothers_father", "label": "CHILD_OF" },
+    { "from": "the_four_clever_brothers_tailor",    "to": "the_four_clever_brothers_father", "label": "CHILD_OF" },
+    { "from": "the_four_clever_brothers_thief",     "to": "the_four_clever_brothers_stargazer","label": "SIBLING_OF" },
+    { "from": "the_four_clever_brothers_stargazer", "to": "the_four_clever_brothers_thief",  "label": "SIBLING_OF" },
+    { "from": "the_four_clever_brothers_thief",     "to": "the_four_clever_brothers_huntsman","label": "SIBLING_OF" },
+    { "from": "the_four_clever_brothers_huntsman",  "to": "the_four_clever_brothers_thief",  "label": "SIBLING_OF" },
+    { "from": "the_four_clever_brothers_thief",     "to": "the_four_clever_brothers_tailor", "label": "SIBLING_OF" },
+    { "from": "the_four_clever_brothers_tailor",    "to": "the_four_clever_brothers_thief",  "label": "SIBLING_OF" },
+
+    { "from": "the_four_clever_brothers_dragon",    "to": "the_four_clever_brothers_princess","label": "CAPTURES" },
+    { "from": "the_four_clever_brothers_thief",     "to": "the_four_clever_brothers_princess","label": "RESCUES" },
+    { "from": "the_four_clever_brothers_huntsman",  "to": "the_four_clever_brothers_dragon",  "label": "KILLS" },
+
+    { "from": "the_four_clever_brothers_father",    "to": "the_four_clever_brothers_tale", "label": "APPEARS_IN" },
+    { "from": "the_four_clever_brothers_thief",     "to": "the_four_clever_brothers_tale", "label": "APPEARS_IN" },
+    { "from": "the_four_clever_brothers_stargazer", "to": "the_four_clever_brothers_tale", "label": "APPEARS_IN" },
+    { "from": "the_four_clever_brothers_huntsman",  "to": "the_four_clever_brothers_tale", "label": "APPEARS_IN" },
+    { "from": "the_four_clever_brothers_tailor",    "to": "the_four_clever_brothers_tale", "label": "APPEARS_IN" },
+    { "from": "the_four_clever_brothers_king",      "to": "the_four_clever_brothers_tale", "label": "APPEARS_IN" },
+    { "from": "the_four_clever_brothers_princess",  "to": "the_four_clever_brothers_tale", "label": "APPEARS_IN" },
+    { "from": "the_four_clever_brothers_dragon",    "to": "the_four_clever_brothers_tale", "label": "APPEARS_IN" },
+
+    { "from": "the_four_clever_brothers_thief",     "to": "arc_humble_hero",      "label": "IS_ARCHETYPE" },
+    { "from": "the_four_clever_brothers_stargazer", "to": "arc_humble_hero",      "label": "IS_ARCHETYPE" },
+    { "from": "the_four_clever_brothers_huntsman",  "to": "arc_humble_hero",      "label": "IS_ARCHETYPE" },
+    { "from": "the_four_clever_brothers_tailor",    "to": "arc_humble_hero",      "label": "IS_ARCHETYPE" },
+    { "from": "the_four_clever_brothers_tailor",    "to": "arc_youngest_sibling", "label": "IS_ARCHETYPE" },
+    { "from": "the_four_clever_brothers_dragon",    "to": "arc_predator",         "label": "IS_ARCHETYPE" },
+    { "from": "the_four_clever_brothers_princess",  "to": "arc_oppressed_maiden", "label": "IS_ARCHETYPE" },
+
+    { "from": "the_four_clever_brothers_dragon", "to": "sp_dragon", "label": "IS_SPECIES" },
+
+    { "from": "the_four_clever_brothers_tale", "to": "theme_humble_triumph", "label": "CONTAINS_THEME" },
+    { "from": "the_four_clever_brothers_tale", "to": "theme_test_of_virtue", "label": "CONTAINS_THEME" },
+
+    { "from": "the_four_clever_brothers_tale", "to": "obj_4cb_magic_glass",  "label": "HAS_MAGIC_OBJECT" },
+    { "from": "the_four_clever_brothers_tale", "to": "obj_4cb_magic_bow",    "label": "HAS_MAGIC_OBJECT" },
+    { "from": "the_four_clever_brothers_tale", "to": "obj_4cb_magic_needle", "label": "HAS_MAGIC_OBJECT" },
+
+    { "from": "the_four_clever_brothers_tale", "to": "num_4", "label": "CONTAINS_NUMBER" }
+  ]
+}

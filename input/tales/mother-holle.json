@@ -1,0 +1,47 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "mother_holle_tale",        "node_type": "tale",         "name": "Mother Holle" },
+    { "label": "mother_holle",             "node_type": "character",    "name": "Mother Holle" },
+    { "label": "mother_holle_widow",       "node_type": "character",    "name": "The Widow" },
+    { "label": "mother_holle_industrious", "node_type": "character",    "name": "Industrious Stepdaughter" },
+    { "label": "mother_holle_lazy",        "node_type": "character",    "name": "Lazy Daughter" },
+    { "label": "mother_holle_cock",        "node_type": "character",    "name": "Cock at the Well" },
+    { "label": "obj_mother_holle_spindle", "node_type": "magic_object", "name": "Bloodied Spindle" },
+    { "label": "obj_mother_holle_shower_of_gold", "node_type": "magic_object", "name": "Shower of Gold" },
+    { "label": "obj_mother_holle_pitch",   "node_type": "magic_object", "name": "Bucket of Pitch" }
+  ],
+  "edges": [
+    { "from": "mother_holle_industrious", "to": "mother_holle_widow", "label": "CHILD_OF" },
+    { "from": "mother_holle_lazy",        "to": "mother_holle_widow", "label": "CHILD_OF" },
+    { "from": "mother_holle_industrious", "to": "mother_holle_widow", "label": "OPPRESSED_BY" },
+    { "from": "mother_holle_industrious", "to": "mother_holle_lazy",  "label": "SIBLING_OF" },
+    { "from": "mother_holle_lazy",        "to": "mother_holle_industrious", "label": "SIBLING_OF" },
+    { "from": "mother_holle",             "to": "mother_holle_industrious", "label": "HELPS" },
+
+    { "from": "mother_holle",             "to": "mother_holle_tale", "label": "APPEARS_IN" },
+    { "from": "mother_holle_widow",       "to": "mother_holle_tale", "label": "APPEARS_IN" },
+    { "from": "mother_holle_industrious", "to": "mother_holle_tale", "label": "APPEARS_IN" },
+    { "from": "mother_holle_lazy",        "to": "mother_holle_tale", "label": "APPEARS_IN" },
+    { "from": "mother_holle_cock",        "to": "mother_holle_tale", "label": "APPEARS_IN" },
+
+    { "from": "mother_holle",             "to": "arc_wise_helper",      "label": "IS_ARCHETYPE" },
+    { "from": "mother_holle_widow",       "to": "arc_cruel_stepmother", "label": "IS_ARCHETYPE" },
+    { "from": "mother_holle_industrious", "to": "arc_humble_hero",      "label": "IS_ARCHETYPE" },
+    { "from": "mother_holle_industrious", "to": "arc_oppressed_maiden", "label": "IS_ARCHETYPE" },
+
+    { "from": "mother_holle_cock", "to": "sp_rooster", "label": "IS_SPECIES" },
+
+    { "from": "mother_holle_tale", "to": "theme_cruel_stepfamily",  "label": "CONTAINS_THEME" },
+    { "from": "mother_holle_tale", "to": "theme_test_of_virtue",    "label": "CONTAINS_THEME" },
+    { "from": "mother_holle_tale", "to": "theme_humble_triumph",    "label": "CONTAINS_THEME" },
+    { "from": "mother_holle_tale", "to": "theme_moral_punishment",  "label": "CONTAINS_THEME" },
+
+    { "from": "mother_holle_tale", "to": "obj_mother_holle_spindle",         "label": "HAS_MAGIC_OBJECT" },
+    { "from": "mother_holle_tale", "to": "obj_mother_holle_shower_of_gold",  "label": "HAS_MAGIC_OBJECT" },
+    { "from": "mother_holle_tale", "to": "obj_mother_holle_pitch",           "label": "HAS_MAGIC_OBJECT" },
+
+    { "from": "mother_holle_tale", "to": "loc_well",    "label": "HAS_LOCATION" },
+    { "from": "mother_holle_tale", "to": "loc_cottage", "label": "HAS_LOCATION" }
+  ]
+}

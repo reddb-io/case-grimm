@@ -1,0 +1,60 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "the_pink_tale",    "node_type": "tale",         "name": "The Pink" },
+    { "label": "the_pink_queen",   "node_type": "character",    "name": "The Queen (mother)" },
+    { "label": "the_pink_king",    "node_type": "character",    "name": "The King (father)" },
+    { "label": "the_pink_son",     "node_type": "character",    "name": "Wishing Prince" },
+    { "label": "the_pink_cook",    "node_type": "character",    "name": "The Wicked Cook" },
+    { "label": "the_pink_maiden",  "node_type": "character",    "name": "Wished-For Maiden (the Pink)" },
+    { "label": "the_pink_doves",   "node_type": "character",    "name": "Two White-Dove Angels" },
+    { "label": "obj_pink_flower",  "node_type": "magic_object", "name": "The Pink Flower (maiden's form)" },
+    { "label": "obj_pink_poodle",  "node_type": "magic_object", "name": "Black Poodle (cook's form)" },
+    { "label": "obj_pink_tower",   "node_type": "magic_object", "name": "Sunless Tower" }
+  ],
+  "edges": [
+    { "from": "the_pink_son",    "to": "the_pink_queen", "label": "CHILD_OF" },
+    { "from": "the_pink_son",    "to": "the_pink_king",  "label": "CHILD_OF" },
+    { "from": "the_pink_cook",   "to": "the_pink_son",   "label": "CAPTURES" },
+    { "from": "the_pink_cook",   "to": "the_pink_king",  "label": "DECEIVES" },
+    { "from": "the_pink_cook",   "to": "the_pink_maiden","label": "OPPRESSED_BY" },
+    { "from": "the_pink_maiden", "to": "the_pink_son",   "label": "HELPS" },
+    { "from": "the_pink_son",    "to": "the_pink_maiden","label": "MARRIES" },
+    { "from": "the_pink_son",    "to": "the_pink_queen", "label": "RESCUES" },
+    { "from": "the_pink_doves",  "to": "the_pink_queen", "label": "HELPS" },
+    { "from": "the_pink_king",   "to": "the_pink_queen", "label": "OPPRESSED_BY" },
+
+    { "from": "the_pink_queen",  "to": "the_pink_tale", "label": "APPEARS_IN" },
+    { "from": "the_pink_king",   "to": "the_pink_tale", "label": "APPEARS_IN" },
+    { "from": "the_pink_son",    "to": "the_pink_tale", "label": "APPEARS_IN" },
+    { "from": "the_pink_cook",   "to": "the_pink_tale", "label": "APPEARS_IN" },
+    { "from": "the_pink_maiden", "to": "the_pink_tale", "label": "APPEARS_IN" },
+    { "from": "the_pink_doves",  "to": "the_pink_tale", "label": "APPEARS_IN" },
+
+    { "from": "the_pink_son",    "to": "arc_humble_hero",       "label": "IS_ARCHETYPE" },
+    { "from": "the_pink_son",    "to": "arc_royal_rescuer",     "label": "IS_ARCHETYPE" },
+    { "from": "the_pink_cook",   "to": "arc_disguised_villain", "label": "IS_ARCHETYPE" },
+    { "from": "the_pink_queen",  "to": "arc_oppressed_maiden",  "label": "IS_ARCHETYPE" },
+    { "from": "the_pink_maiden", "to": "arc_wise_helper",       "label": "IS_ARCHETYPE" },
+    { "from": "the_pink_doves",  "to": "arc_animal_helper",     "label": "IS_ARCHETYPE" },
+
+    { "from": "the_pink_doves", "to": "sp_dove", "label": "IS_SPECIES" },
+
+    { "from": "the_pink_tale", "to": "theme_disguise",         "label": "CONTAINS_THEME" },
+    { "from": "the_pink_tale", "to": "theme_metamorphosis",    "label": "CONTAINS_THEME" },
+    { "from": "the_pink_tale", "to": "theme_curse",            "label": "CONTAINS_THEME" },
+    { "from": "the_pink_tale", "to": "theme_humble_triumph",   "label": "CONTAINS_THEME" },
+    { "from": "the_pink_tale", "to": "theme_moral_punishment", "label": "CONTAINS_THEME" },
+    { "from": "the_pink_tale", "to": "theme_magic_pact",       "label": "CONTAINS_THEME" },
+
+    { "from": "the_pink_tale", "to": "obj_pink_flower", "label": "HAS_MAGIC_OBJECT" },
+    { "from": "the_pink_tale", "to": "obj_pink_poodle", "label": "HAS_MAGIC_OBJECT" },
+    { "from": "the_pink_tale", "to": "obj_pink_tower",  "label": "HAS_MAGIC_OBJECT" },
+
+    { "from": "the_pink_tale", "to": "loc_castle", "label": "HAS_LOCATION" },
+    { "from": "the_pink_tale", "to": "loc_tower",  "label": "HAS_LOCATION" },
+    { "from": "the_pink_tale", "to": "loc_forest", "label": "HAS_LOCATION" },
+
+    { "from": "the_pink_tale", "to": "num_7", "label": "CONTAINS_NUMBER" }
+  ]
+}

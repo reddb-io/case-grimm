@@ -1,0 +1,66 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "the_golden_goose_tale",     "node_type": "tale",         "name": "The Golden Goose" },
+    { "label": "the_golden_goose_dummling", "node_type": "character",    "name": "Dummling (Simpleton, youngest)" },
+    { "label": "the_golden_goose_eldest",   "node_type": "character",    "name": "Eldest Brother" },
+    { "label": "the_golden_goose_second",   "node_type": "character",    "name": "Second Brother" },
+    { "label": "the_golden_goose_father",   "node_type": "character",    "name": "The Father" },
+    { "label": "the_golden_goose_mother",   "node_type": "character",    "name": "The Mother" },
+    { "label": "the_golden_goose_grey_man", "node_type": "character",    "name": "Little Grey Old Man" },
+    { "label": "the_golden_goose_host",     "node_type": "character",    "name": "Innkeeper" },
+    { "label": "the_golden_goose_daughters","node_type": "character",    "name": "Innkeeper's Three Daughters (collective)" },
+    { "label": "the_golden_goose_parson",   "node_type": "character",    "name": "The Parson" },
+    { "label": "the_golden_goose_sexton",   "node_type": "character",    "name": "The Sexton" },
+    { "label": "the_golden_goose_king",     "node_type": "character",    "name": "The Serious King" },
+    { "label": "the_golden_goose_princess", "node_type": "character",    "name": "Unsmiling Princess" },
+    { "label": "the_golden_goose_drinker",  "node_type": "character",    "name": "Forest Man with Thirst" },
+    { "label": "the_golden_goose_eater",    "node_type": "character",    "name": "Forest Man with Hunger" },
+    { "label": "obj_the_golden_goose",      "node_type": "magic_object", "name": "The Golden Goose" },
+    { "label": "obj_the_golden_goose_ship", "node_type": "magic_object", "name": "Ship that Sails Land and Sea" }
+  ],
+  "edges": [
+    { "from": "the_golden_goose_dummling", "to": "the_golden_goose_father",   "label": "CHILD_OF" },
+    { "from": "the_golden_goose_eldest",   "to": "the_golden_goose_father",   "label": "CHILD_OF" },
+    { "from": "the_golden_goose_second",   "to": "the_golden_goose_father",   "label": "CHILD_OF" },
+    { "from": "the_golden_goose_dummling", "to": "the_golden_goose_eldest",   "label": "SIBLING_OF" },
+    { "from": "the_golden_goose_eldest",   "to": "the_golden_goose_dummling", "label": "SIBLING_OF" },
+    { "from": "the_golden_goose_dummling", "to": "the_golden_goose_second",   "label": "SIBLING_OF" },
+    { "from": "the_golden_goose_second",   "to": "the_golden_goose_dummling", "label": "SIBLING_OF" },
+    { "from": "the_golden_goose_grey_man", "to": "the_golden_goose_dummling", "label": "HELPS" },
+    { "from": "the_golden_goose_dummling", "to": "the_golden_goose_princess", "label": "MARRIES" },
+
+    { "from": "the_golden_goose_dummling",  "to": "the_golden_goose_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_goose_eldest",    "to": "the_golden_goose_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_goose_second",    "to": "the_golden_goose_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_goose_father",    "to": "the_golden_goose_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_goose_mother",    "to": "the_golden_goose_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_goose_grey_man",  "to": "the_golden_goose_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_goose_host",      "to": "the_golden_goose_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_goose_daughters", "to": "the_golden_goose_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_goose_parson",    "to": "the_golden_goose_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_goose_sexton",    "to": "the_golden_goose_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_goose_king",      "to": "the_golden_goose_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_goose_princess",  "to": "the_golden_goose_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_goose_drinker",   "to": "the_golden_goose_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_goose_eater",     "to": "the_golden_goose_tale", "label": "APPEARS_IN" },
+
+    { "from": "the_golden_goose_dummling", "to": "arc_humble_hero",      "label": "IS_ARCHETYPE" },
+    { "from": "the_golden_goose_dummling", "to": "arc_youngest_sibling", "label": "IS_ARCHETYPE" },
+    { "from": "the_golden_goose_eldest",   "to": "arc_fool",             "label": "IS_ARCHETYPE" },
+    { "from": "the_golden_goose_second",   "to": "arc_fool",             "label": "IS_ARCHETYPE" },
+    { "from": "the_golden_goose_grey_man", "to": "arc_wise_helper",      "label": "IS_ARCHETYPE" },
+
+    { "from": "the_golden_goose_tale", "to": "theme_humble_triumph", "label": "CONTAINS_THEME" },
+    { "from": "the_golden_goose_tale", "to": "theme_test_of_virtue", "label": "CONTAINS_THEME" },
+    { "from": "the_golden_goose_tale", "to": "theme_magic_pact",     "label": "CONTAINS_THEME" },
+
+    { "from": "the_golden_goose_tale", "to": "obj_the_golden_goose",      "label": "HAS_MAGIC_OBJECT" },
+    { "from": "the_golden_goose_tale", "to": "obj_the_golden_goose_ship", "label": "HAS_MAGIC_OBJECT" },
+
+    { "from": "the_golden_goose_tale", "to": "loc_forest", "label": "HAS_LOCATION" },
+    { "from": "the_golden_goose_tale", "to": "loc_castle", "label": "HAS_LOCATION" },
+
+    { "from": "the_golden_goose_tale", "to": "num_3", "label": "CONTAINS_NUMBER" }
+  ]
+}

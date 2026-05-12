@@ -1,0 +1,44 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "little_red_cap_tale", "node_type": "tale",      "name": "Little Red-Cap" },
+    { "label": "little_red_cap",      "node_type": "character", "name": "Little Red-Cap" },
+    { "label": "lrc_grandmother",     "node_type": "character", "name": "Grandmother" },
+    { "label": "lrc_wolf",            "node_type": "character", "name": "Wolf (Little Red-Cap)" },
+    { "label": "lrc_huntsman",        "node_type": "character", "name": "Huntsman (Little Red-Cap)" },
+    { "label": "obj_red_cap",         "node_type": "magic_object", "name": "Red Velvet Cap" }
+  ],
+  "edges": [
+    { "from": "little_red_cap", "to": "lrc_grandmother", "label": "CHILD_OF" },
+    { "from": "lrc_wolf",       "to": "little_red_cap",  "label": "DECEIVES" },
+    { "from": "lrc_wolf",       "to": "lrc_grandmother", "label": "EATS" },
+    { "from": "lrc_wolf",       "to": "little_red_cap",  "label": "EATS" },
+    { "from": "lrc_huntsman",   "to": "lrc_wolf",        "label": "KILLS" },
+    { "from": "lrc_huntsman",   "to": "little_red_cap",  "label": "RESCUES" },
+    { "from": "lrc_huntsman",   "to": "lrc_grandmother", "label": "RESCUES" },
+
+    { "from": "little_red_cap", "to": "little_red_cap_tale", "label": "APPEARS_IN" },
+    { "from": "lrc_grandmother","to": "little_red_cap_tale", "label": "APPEARS_IN" },
+    { "from": "lrc_wolf",       "to": "little_red_cap_tale", "label": "APPEARS_IN" },
+    { "from": "lrc_huntsman",   "to": "little_red_cap_tale", "label": "APPEARS_IN" },
+
+    { "from": "lrc_wolf",       "to": "arc_predator",          "label": "IS_ARCHETYPE" },
+    { "from": "lrc_wolf",       "to": "arc_trickster",         "label": "IS_ARCHETYPE" },
+    { "from": "lrc_wolf",       "to": "arc_disguised_villain", "label": "IS_ARCHETYPE" },
+    { "from": "little_red_cap", "to": "arc_naive_victim",      "label": "IS_ARCHETYPE" },
+    { "from": "lrc_huntsman",   "to": "arc_wise_helper",       "label": "IS_ARCHETYPE" },
+
+    { "from": "lrc_wolf", "to": "sp_wolf", "label": "IS_SPECIES" },
+
+    { "from": "little_red_cap_tale", "to": "theme_devouring",      "label": "CONTAINS_THEME" },
+    { "from": "little_red_cap_tale", "to": "theme_forest_danger",  "label": "CONTAINS_THEME" },
+    { "from": "little_red_cap_tale", "to": "theme_disguise",       "label": "CONTAINS_THEME" },
+    { "from": "little_red_cap_tale", "to": "theme_resurrection",   "label": "CONTAINS_THEME" },
+    { "from": "little_red_cap_tale", "to": "theme_moral_punishment","label": "CONTAINS_THEME" },
+
+    { "from": "little_red_cap_tale", "to": "obj_red_cap", "label": "HAS_MAGIC_OBJECT" },
+
+    { "from": "little_red_cap_tale", "to": "loc_forest",            "label": "HAS_LOCATION" },
+    { "from": "little_red_cap_tale", "to": "loc_grandmother_house", "label": "HAS_LOCATION" }
+  ]
+}

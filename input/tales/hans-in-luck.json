@@ -1,0 +1,42 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "hans_in_luck_tale",       "node_type": "tale",      "name": "Hans in Luck" },
+    { "label": "hans_in_luck_hans",       "node_type": "character", "name": "Hans" },
+    { "label": "hans_in_luck_master",     "node_type": "character", "name": "Hans's Master (7-year employer)" },
+    { "label": "hans_in_luck_horseman",   "node_type": "character", "name": "Horseman" },
+    { "label": "hans_in_luck_shepherd",   "node_type": "character", "name": "Shepherd" },
+    { "label": "hans_in_luck_butcher",    "node_type": "character", "name": "Butcher" },
+    { "label": "hans_in_luck_countryman", "node_type": "character", "name": "Countryman (with goose)" },
+    { "label": "hans_in_luck_grinder",    "node_type": "character", "name": "Scissor-grinder" },
+    { "label": "hans_in_luck_mother",     "node_type": "character", "name": "Hans's Mother" }
+  ],
+  "edges": [
+    { "from": "hans_in_luck_hans", "to": "hans_in_luck_mother", "label": "CHILD_OF" },
+    { "from": "hans_in_luck_horseman",   "to": "hans_in_luck_hans", "label": "DECEIVES" },
+    { "from": "hans_in_luck_shepherd",   "to": "hans_in_luck_hans", "label": "DECEIVES" },
+    { "from": "hans_in_luck_butcher",    "to": "hans_in_luck_hans", "label": "DECEIVES" },
+    { "from": "hans_in_luck_countryman", "to": "hans_in_luck_hans", "label": "DECEIVES" },
+    { "from": "hans_in_luck_grinder",    "to": "hans_in_luck_hans", "label": "DECEIVES" },
+
+    { "from": "hans_in_luck_hans",       "to": "hans_in_luck_tale", "label": "APPEARS_IN" },
+    { "from": "hans_in_luck_master",     "to": "hans_in_luck_tale", "label": "APPEARS_IN" },
+    { "from": "hans_in_luck_horseman",   "to": "hans_in_luck_tale", "label": "APPEARS_IN" },
+    { "from": "hans_in_luck_shepherd",   "to": "hans_in_luck_tale", "label": "APPEARS_IN" },
+    { "from": "hans_in_luck_butcher",    "to": "hans_in_luck_tale", "label": "APPEARS_IN" },
+    { "from": "hans_in_luck_countryman", "to": "hans_in_luck_tale", "label": "APPEARS_IN" },
+    { "from": "hans_in_luck_grinder",    "to": "hans_in_luck_tale", "label": "APPEARS_IN" },
+    { "from": "hans_in_luck_mother",     "to": "hans_in_luck_tale", "label": "APPEARS_IN" },
+
+    { "from": "hans_in_luck_hans",       "to": "arc_fool",      "label": "IS_ARCHETYPE" },
+    { "from": "hans_in_luck_horseman",   "to": "arc_trickster", "label": "IS_ARCHETYPE" },
+    { "from": "hans_in_luck_shepherd",   "to": "arc_trickster", "label": "IS_ARCHETYPE" },
+    { "from": "hans_in_luck_butcher",    "to": "arc_trickster", "label": "IS_ARCHETYPE" },
+    { "from": "hans_in_luck_countryman", "to": "arc_trickster", "label": "IS_ARCHETYPE" },
+    { "from": "hans_in_luck_grinder",    "to": "arc_trickster", "label": "IS_ARCHETYPE" },
+
+    { "from": "hans_in_luck_tale", "to": "theme_folly", "label": "CONTAINS_THEME" },
+
+    { "from": "hans_in_luck_tale", "to": "num_7", "label": "CONTAINS_NUMBER" }
+  ]
+}

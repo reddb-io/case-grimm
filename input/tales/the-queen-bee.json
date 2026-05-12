@@ -1,0 +1,61 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "the_queen_bee_tale",      "node_type": "tale",      "name": "The Queen Bee" },
+    { "label": "the_queen_bee_dwarf",     "node_type": "character", "name": "Little Dwarf Brother (hero)" },
+    { "label": "the_queen_bee_eldest",    "node_type": "character", "name": "Eldest Brother" },
+    { "label": "the_queen_bee_second",    "node_type": "character", "name": "Second Brother" },
+    { "label": "the_queen_bee_old_man",   "node_type": "character", "name": "Grey Old Man (in castle)" },
+    { "label": "the_queen_bee_princess",  "node_type": "character", "name": "Youngest of Three Princesses" },
+    { "label": "the_queen_bee_ants_king", "node_type": "character", "name": "King of the Ants" },
+    { "label": "the_queen_bee_ducks",     "node_type": "character", "name": "Two Ducks (helpers)" },
+    { "label": "the_queen_bee_bee_queen", "node_type": "character", "name": "Queen of the Bees" }
+  ],
+  "edges": [
+    { "from": "the_queen_bee_dwarf",  "to": "the_queen_bee_eldest",   "label": "SIBLING_OF" },
+    { "from": "the_queen_bee_eldest", "to": "the_queen_bee_dwarf",    "label": "SIBLING_OF" },
+    { "from": "the_queen_bee_dwarf",  "to": "the_queen_bee_second",   "label": "SIBLING_OF" },
+    { "from": "the_queen_bee_second", "to": "the_queen_bee_dwarf",    "label": "SIBLING_OF" },
+    { "from": "the_queen_bee_dwarf",  "to": "the_queen_bee_ants_king","label": "RESCUES" },
+    { "from": "the_queen_bee_dwarf",  "to": "the_queen_bee_ducks",    "label": "RESCUES" },
+    { "from": "the_queen_bee_dwarf",  "to": "the_queen_bee_bee_queen","label": "RESCUES" },
+    { "from": "the_queen_bee_ants_king","to": "the_queen_bee_dwarf",  "label": "HELPS" },
+    { "from": "the_queen_bee_ducks",   "to": "the_queen_bee_dwarf",   "label": "HELPS" },
+    { "from": "the_queen_bee_bee_queen","to": "the_queen_bee_dwarf",  "label": "HELPS" },
+    { "from": "the_queen_bee_dwarf",   "to": "the_queen_bee_princess","label": "MARRIES" },
+
+    { "from": "the_queen_bee_dwarf",     "to": "the_queen_bee_tale", "label": "APPEARS_IN" },
+    { "from": "the_queen_bee_eldest",    "to": "the_queen_bee_tale", "label": "APPEARS_IN" },
+    { "from": "the_queen_bee_second",    "to": "the_queen_bee_tale", "label": "APPEARS_IN" },
+    { "from": "the_queen_bee_old_man",   "to": "the_queen_bee_tale", "label": "APPEARS_IN" },
+    { "from": "the_queen_bee_princess",  "to": "the_queen_bee_tale", "label": "APPEARS_IN" },
+    { "from": "the_queen_bee_ants_king", "to": "the_queen_bee_tale", "label": "APPEARS_IN" },
+    { "from": "the_queen_bee_ducks",     "to": "the_queen_bee_tale", "label": "APPEARS_IN" },
+    { "from": "the_queen_bee_bee_queen", "to": "the_queen_bee_tale", "label": "APPEARS_IN" },
+
+    { "from": "the_queen_bee_dwarf",     "to": "arc_humble_hero",      "label": "IS_ARCHETYPE" },
+    { "from": "the_queen_bee_dwarf",     "to": "arc_youngest_sibling", "label": "IS_ARCHETYPE" },
+    { "from": "the_queen_bee_eldest",    "to": "arc_fool",             "label": "IS_ARCHETYPE" },
+    { "from": "the_queen_bee_second",    "to": "arc_fool",             "label": "IS_ARCHETYPE" },
+    { "from": "the_queen_bee_old_man",   "to": "arc_wise_helper",      "label": "IS_ARCHETYPE" },
+    { "from": "the_queen_bee_ants_king", "to": "arc_animal_helper",    "label": "IS_ARCHETYPE" },
+    { "from": "the_queen_bee_ducks",     "to": "arc_animal_helper",    "label": "IS_ARCHETYPE" },
+    { "from": "the_queen_bee_bee_queen", "to": "arc_animal_helper",    "label": "IS_ARCHETYPE" },
+
+    { "from": "the_queen_bee_dwarf",     "to": "sp_dwarf", "label": "IS_SPECIES" },
+    { "from": "the_queen_bee_ants_king", "to": "sp_ant",   "label": "IS_SPECIES" },
+    { "from": "the_queen_bee_ducks",     "to": "sp_duck",  "label": "IS_SPECIES" },
+    { "from": "the_queen_bee_bee_queen", "to": "sp_bee",   "label": "IS_SPECIES" },
+
+    { "from": "the_queen_bee_tale", "to": "theme_humble_triumph", "label": "CONTAINS_THEME" },
+    { "from": "the_queen_bee_tale", "to": "theme_test_of_virtue", "label": "CONTAINS_THEME" },
+    { "from": "the_queen_bee_tale", "to": "theme_curse",          "label": "CONTAINS_THEME" },
+    { "from": "the_queen_bee_tale", "to": "theme_metamorphosis",  "label": "CONTAINS_THEME" },
+    { "from": "the_queen_bee_tale", "to": "theme_resurrection",   "label": "CONTAINS_THEME" },
+
+    { "from": "the_queen_bee_tale", "to": "loc_castle", "label": "HAS_LOCATION" },
+    { "from": "the_queen_bee_tale", "to": "loc_forest", "label": "HAS_LOCATION" },
+
+    { "from": "the_queen_bee_tale", "to": "num_3", "label": "CONTAINS_NUMBER" }
+  ]
+}

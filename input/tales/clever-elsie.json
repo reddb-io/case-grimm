@@ -1,0 +1,35 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "clever_elsie_tale",   "node_type": "tale",      "name": "Clever Elsie" },
+    { "label": "clever_elsie",        "node_type": "character", "name": "Clever Elsie" },
+    { "label": "clever_elsie_hans",   "node_type": "character", "name": "Hans (Elsie's husband)" },
+    { "label": "clever_elsie_father", "node_type": "character", "name": "Elsie's Father" },
+    { "label": "clever_elsie_mother", "node_type": "character", "name": "Elsie's Mother" },
+    { "label": "clever_elsie_maid",   "node_type": "character", "name": "Servant Maid" },
+    { "label": "clever_elsie_boy",    "node_type": "character", "name": "Servant Boy" },
+    { "label": "obj_clever_elsie_pickaxe", "node_type": "magic_object", "name": "Pickaxe in the Cellar" },
+    { "label": "obj_clever_elsie_bell_net", "node_type": "magic_object", "name": "Fowler's Bell-Net" }
+  ],
+  "edges": [
+    { "from": "clever_elsie", "to": "clever_elsie_father", "label": "CHILD_OF" },
+    { "from": "clever_elsie", "to": "clever_elsie_mother", "label": "CHILD_OF" },
+    { "from": "clever_elsie", "to": "clever_elsie_hans",   "label": "MARRIES" },
+    { "from": "clever_elsie_hans", "to": "clever_elsie",   "label": "DECEIVES" },
+
+    { "from": "clever_elsie",        "to": "clever_elsie_tale", "label": "APPEARS_IN" },
+    { "from": "clever_elsie_hans",   "to": "clever_elsie_tale", "label": "APPEARS_IN" },
+    { "from": "clever_elsie_father", "to": "clever_elsie_tale", "label": "APPEARS_IN" },
+    { "from": "clever_elsie_mother", "to": "clever_elsie_tale", "label": "APPEARS_IN" },
+    { "from": "clever_elsie_maid",   "to": "clever_elsie_tale", "label": "APPEARS_IN" },
+    { "from": "clever_elsie_boy",    "to": "clever_elsie_tale", "label": "APPEARS_IN" },
+
+    { "from": "clever_elsie", "to": "arc_fool", "label": "IS_ARCHETYPE" },
+
+    { "from": "clever_elsie_tale", "to": "theme_folly",    "label": "CONTAINS_THEME" },
+    { "from": "clever_elsie_tale", "to": "theme_disguise", "label": "CONTAINS_THEME" },
+
+    { "from": "clever_elsie_tale", "to": "obj_clever_elsie_pickaxe",  "label": "HAS_MAGIC_OBJECT" },
+    { "from": "clever_elsie_tale", "to": "obj_clever_elsie_bell_net", "label": "HAS_MAGIC_OBJECT" }
+  ]
+}

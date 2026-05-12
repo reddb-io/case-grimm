@@ -1,0 +1,51 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "the_twelve_huntsmen_tale",         "node_type": "tale",      "name": "The Twelve Huntsmen" },
+    { "label": "the_twelve_huntsmen_prince",       "node_type": "character", "name": "The Prince (later King)" },
+    { "label": "the_twelve_huntsmen_first_bride",  "node_type": "character", "name": "True First Bride" },
+    { "label": "the_twelve_huntsmen_second_bride", "node_type": "character", "name": "Promised Second Bride" },
+    { "label": "the_twelve_huntsmen_father_king",  "node_type": "character", "name": "Prince's Dying Father (King)" },
+    { "label": "the_twelve_huntsmen_father_in_law","node_type": "character", "name": "First Bride's Father (King)" },
+    { "label": "the_twelve_huntsmen_lion",         "node_type": "character", "name": "Wondrous Knowing Lion" },
+    { "label": "the_twelve_huntsmen_servant",      "node_type": "character", "name": "Loyal Tipping Servant" },
+    { "label": "the_twelve_huntsmen_others",       "node_type": "character", "name": "Eleven Look-Alike Maidens (collective)" }
+  ],
+  "edges": [
+    { "from": "the_twelve_huntsmen_prince",      "to": "the_twelve_huntsmen_father_king",  "label": "CHILD_OF" },
+    { "from": "the_twelve_huntsmen_first_bride", "to": "the_twelve_huntsmen_father_in_law","label": "CHILD_OF" },
+    { "from": "the_twelve_huntsmen_prince",      "to": "the_twelve_huntsmen_father_king",  "label": "PROMISES_TO" },
+    { "from": "the_twelve_huntsmen_prince",      "to": "the_twelve_huntsmen_first_bride",  "label": "PROMISES_TO" },
+    { "from": "the_twelve_huntsmen_first_bride", "to": "the_twelve_huntsmen_prince",       "label": "DECEIVES" },
+    { "from": "the_twelve_huntsmen_servant",     "to": "the_twelve_huntsmen_first_bride",  "label": "HELPS" },
+    { "from": "the_twelve_huntsmen_lion",        "to": "the_twelve_huntsmen_prince",       "label": "HELPS" },
+    { "from": "the_twelve_huntsmen_prince",      "to": "the_twelve_huntsmen_first_bride",  "label": "MARRIES" },
+
+    { "from": "the_twelve_huntsmen_prince",        "to": "the_twelve_huntsmen_tale", "label": "APPEARS_IN" },
+    { "from": "the_twelve_huntsmen_first_bride",   "to": "the_twelve_huntsmen_tale", "label": "APPEARS_IN" },
+    { "from": "the_twelve_huntsmen_second_bride",  "to": "the_twelve_huntsmen_tale", "label": "APPEARS_IN" },
+    { "from": "the_twelve_huntsmen_father_king",   "to": "the_twelve_huntsmen_tale", "label": "APPEARS_IN" },
+    { "from": "the_twelve_huntsmen_father_in_law", "to": "the_twelve_huntsmen_tale", "label": "APPEARS_IN" },
+    { "from": "the_twelve_huntsmen_lion",          "to": "the_twelve_huntsmen_tale", "label": "APPEARS_IN" },
+    { "from": "the_twelve_huntsmen_servant",       "to": "the_twelve_huntsmen_tale", "label": "APPEARS_IN" },
+    { "from": "the_twelve_huntsmen_others",        "to": "the_twelve_huntsmen_tale", "label": "APPEARS_IN" },
+
+    { "from": "the_twelve_huntsmen_first_bride", "to": "arc_humble_hero",       "label": "IS_ARCHETYPE" },
+    { "from": "the_twelve_huntsmen_first_bride", "to": "arc_oppressed_maiden",  "label": "IS_ARCHETYPE" },
+    { "from": "the_twelve_huntsmen_prince",      "to": "arc_royal_rescuer",     "label": "IS_ARCHETYPE" },
+    { "from": "the_twelve_huntsmen_lion",        "to": "arc_animal_helper",     "label": "IS_ARCHETYPE" },
+    { "from": "the_twelve_huntsmen_lion",        "to": "arc_wise_helper",       "label": "IS_ARCHETYPE" },
+    { "from": "the_twelve_huntsmen_servant",     "to": "arc_wise_helper",       "label": "IS_ARCHETYPE" },
+
+    { "from": "the_twelve_huntsmen_lion", "to": "sp_lion", "label": "IS_SPECIES" },
+
+    { "from": "the_twelve_huntsmen_tale", "to": "theme_disguise",       "label": "CONTAINS_THEME" },
+    { "from": "the_twelve_huntsmen_tale", "to": "theme_broken_promise", "label": "CONTAINS_THEME" },
+    { "from": "the_twelve_huntsmen_tale", "to": "theme_test_of_virtue", "label": "CONTAINS_THEME" },
+    { "from": "the_twelve_huntsmen_tale", "to": "theme_humble_triumph", "label": "CONTAINS_THEME" },
+
+    { "from": "the_twelve_huntsmen_tale", "to": "loc_castle", "label": "HAS_LOCATION" },
+
+    { "from": "the_twelve_huntsmen_tale", "to": "num_12", "label": "CONTAINS_NUMBER" }
+  ]
+}

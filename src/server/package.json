@@ -1,0 +1,23 @@
+{
+  "name": "ex-grimms-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "up": "docker compose up -d",
+    "up:bare": "../embedded/node_modules/.pnpm/@reddb-io+sdk@1.0.8/node_modules/@reddb-io/sdk/bin/red server --http --grpc --http-bind 127.0.0.1:8080 --grpc-bind 127.0.0.1:5055 --wire-bind 127.0.0.1:5050 --path ../../output/server.rdb",
+    "down": "docker compose down",
+    "logs": "docker compose logs -f reddb",
+    "start": "tsx src/index.ts",
+    "start:http": "REDDB_URL=http://127.0.0.1:8080 tsx src/index.ts",
+    "start:wire": "REDDB_URL=red://127.0.0.1:5050 tsx src/index.ts",
+    "start:grpc": "REDDB_URL=grpc://127.0.0.1:5055 tsx src/index.ts"
+  },
+  "dependencies": {
+    "@reddb-io/client": "^1.0.8"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "@types/node": "^22.10.2"
+  }
+}

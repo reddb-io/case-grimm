@@ -1,0 +1,43 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "the_turnip_tale",          "node_type": "tale",         "name": "The Turnip" },
+    { "label": "the_turnip_poor_brother",  "node_type": "character",    "name": "Poor Soldier-Brother (gardener)" },
+    { "label": "the_turnip_rich_brother",  "node_type": "character",    "name": "Rich Brother (envious)" },
+    { "label": "the_turnip_king",          "node_type": "character",    "name": "The King" },
+    { "label": "the_turnip_student",       "node_type": "character",    "name": "The Singing Student" },
+    { "label": "the_turnip_villains",      "node_type": "character",    "name": "Hired Villains (collective)" },
+    { "label": "obj_turnip_giant_turnip",  "node_type": "magic_object", "name": "Monstrous Turnip" },
+    { "label": "obj_turnip_sack_of_wisdom","node_type": "magic_object", "name": "Sack of Wisdom" }
+  ],
+  "edges": [
+    { "from": "the_turnip_poor_brother", "to": "the_turnip_rich_brother", "label": "SIBLING_OF" },
+    { "from": "the_turnip_rich_brother", "to": "the_turnip_poor_brother", "label": "SIBLING_OF" },
+    { "from": "the_turnip_rich_brother", "to": "the_turnip_poor_brother", "label": "ENVIES" },
+    { "from": "the_turnip_villains",     "to": "the_turnip_poor_brother", "label": "CAPTURES" },
+    { "from": "the_turnip_poor_brother", "to": "the_turnip_student",      "label": "DECEIVES" },
+
+    { "from": "the_turnip_poor_brother", "to": "the_turnip_tale", "label": "APPEARS_IN" },
+    { "from": "the_turnip_rich_brother", "to": "the_turnip_tale", "label": "APPEARS_IN" },
+    { "from": "the_turnip_king",         "to": "the_turnip_tale", "label": "APPEARS_IN" },
+    { "from": "the_turnip_student",      "to": "the_turnip_tale", "label": "APPEARS_IN" },
+    { "from": "the_turnip_villains",     "to": "the_turnip_tale", "label": "APPEARS_IN" },
+
+    { "from": "the_turnip_poor_brother", "to": "arc_humble_hero", "label": "IS_ARCHETYPE" },
+    { "from": "the_turnip_poor_brother", "to": "arc_trickster",   "label": "IS_ARCHETYPE" },
+    { "from": "the_turnip_rich_brother", "to": "arc_greedy",      "label": "IS_ARCHETYPE" },
+    { "from": "the_turnip_rich_brother", "to": "arc_fool",        "label": "IS_ARCHETYPE" },
+    { "from": "the_turnip_student",      "to": "arc_fool",        "label": "IS_ARCHETYPE" },
+
+    { "from": "the_turnip_tale", "to": "theme_humble_triumph",   "label": "CONTAINS_THEME" },
+    { "from": "the_turnip_tale", "to": "theme_moral_punishment", "label": "CONTAINS_THEME" },
+    { "from": "the_turnip_tale", "to": "theme_disguise",         "label": "CONTAINS_THEME" },
+    { "from": "the_turnip_tale", "to": "theme_envy",             "label": "CONTAINS_THEME" },
+
+    { "from": "the_turnip_tale", "to": "obj_turnip_giant_turnip",   "label": "HAS_MAGIC_OBJECT" },
+    { "from": "the_turnip_tale", "to": "obj_turnip_sack_of_wisdom", "label": "HAS_MAGIC_OBJECT" },
+
+    { "from": "the_turnip_tale", "to": "loc_castle", "label": "HAS_LOCATION" },
+    { "from": "the_turnip_tale", "to": "loc_forest", "label": "HAS_LOCATION" }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "doctor_knowall_tale",          "node_type": "tale",         "name": "Doctor Knowall" },
+    { "label": "doctor_knowall_crabb",         "node_type": "character",    "name": "Peasant Crabb (Doctor Knowall)" },
+    { "label": "doctor_knowall_grete",         "node_type": "character",    "name": "Grete (Crabb's wife)" },
+    { "label": "doctor_knowall_real_doctor",   "node_type": "character",    "name": "The Real Doctor" },
+    { "label": "doctor_knowall_lord",          "node_type": "character",    "name": "Rich Lord" },
+    { "label": "doctor_knowall_servants",      "node_type": "character",    "name": "Five Thieving Servants (collective)" },
+    { "label": "obj_doctor_knowall_abc_book",  "node_type": "magic_object", "name": "ABC Book with the Cock" }
+  ],
+  "edges": [
+    { "from": "doctor_knowall_crabb",    "to": "doctor_knowall_grete",     "label": "MARRIES" },
+    { "from": "doctor_knowall_servants", "to": "doctor_knowall_lord",      "label": "DECEIVES" },
+    { "from": "doctor_knowall_crabb",    "to": "doctor_knowall_servants",  "label": "DECEIVES" },
+
+    { "from": "doctor_knowall_crabb",       "to": "doctor_knowall_tale", "label": "APPEARS_IN" },
+    { "from": "doctor_knowall_grete",       "to": "doctor_knowall_tale", "label": "APPEARS_IN" },
+    { "from": "doctor_knowall_real_doctor", "to": "doctor_knowall_tale", "label": "APPEARS_IN" },
+    { "from": "doctor_knowall_lord",        "to": "doctor_knowall_tale", "label": "APPEARS_IN" },
+    { "from": "doctor_knowall_servants",    "to": "doctor_knowall_tale", "label": "APPEARS_IN" },
+
+    { "from": "doctor_knowall_crabb",    "to": "arc_humble_hero",  "label": "IS_ARCHETYPE" },
+    { "from": "doctor_knowall_crabb",    "to": "arc_trickster",    "label": "IS_ARCHETYPE" },
+    { "from": "doctor_knowall_servants", "to": "arc_naive_victim", "label": "IS_ARCHETYPE" },
+
+    { "from": "doctor_knowall_tale", "to": "theme_disguise",       "label": "CONTAINS_THEME" },
+    { "from": "doctor_knowall_tale", "to": "theme_humble_triumph", "label": "CONTAINS_THEME" },
+    { "from": "doctor_knowall_tale", "to": "theme_folly",          "label": "CONTAINS_THEME" },
+
+    { "from": "doctor_knowall_tale", "to": "obj_doctor_knowall_abc_book", "label": "HAS_MAGIC_OBJECT" },
+
+    { "from": "doctor_knowall_tale", "to": "loc_castle", "label": "HAS_LOCATION" }
+  ]
+}

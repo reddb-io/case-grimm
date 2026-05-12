@@ -1,0 +1,35 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "frederick_and_catherine_tale",      "node_type": "tale",      "name": "Frederick and Catherine" },
+    { "label": "frederick_and_catherine_frederick", "node_type": "character", "name": "Frederick" },
+    { "label": "frederick_and_catherine_catherine", "node_type": "character", "name": "Catherine" },
+    { "label": "frederick_and_catherine_dog",       "node_type": "character", "name": "The Dog (steals steak)" },
+    { "label": "frederick_and_catherine_pedlars",   "node_type": "character", "name": "Pedlars (collective)" },
+    { "label": "frederick_and_catherine_thieves",   "node_type": "character", "name": "Forest Thieves (collective)" },
+    { "label": "obj_frederick_and_catherine_door",  "node_type": "magic_object", "name": "The Carried-Off House Door" }
+  ],
+  "edges": [
+    { "from": "frederick_and_catherine_frederick", "to": "frederick_and_catherine_catherine", "label": "MARRIES" },
+    { "from": "frederick_and_catherine_catherine", "to": "frederick_and_catherine_frederick", "label": "MARRIES" },
+    { "from": "frederick_and_catherine_pedlars",   "to": "frederick_and_catherine_catherine", "label": "DECEIVES" },
+
+    { "from": "frederick_and_catherine_frederick", "to": "frederick_and_catherine_tale", "label": "APPEARS_IN" },
+    { "from": "frederick_and_catherine_catherine", "to": "frederick_and_catherine_tale", "label": "APPEARS_IN" },
+    { "from": "frederick_and_catherine_dog",       "to": "frederick_and_catherine_tale", "label": "APPEARS_IN" },
+    { "from": "frederick_and_catherine_pedlars",   "to": "frederick_and_catherine_tale", "label": "APPEARS_IN" },
+    { "from": "frederick_and_catherine_thieves",   "to": "frederick_and_catherine_tale", "label": "APPEARS_IN" },
+
+    { "from": "frederick_and_catherine_catherine", "to": "arc_fool",      "label": "IS_ARCHETYPE" },
+    { "from": "frederick_and_catherine_pedlars",   "to": "arc_trickster", "label": "IS_ARCHETYPE" },
+    { "from": "frederick_and_catherine_thieves",   "to": "arc_trickster", "label": "IS_ARCHETYPE" },
+
+    { "from": "frederick_and_catherine_tale", "to": "theme_folly",          "label": "CONTAINS_THEME" },
+    { "from": "frederick_and_catherine_tale", "to": "theme_humble_triumph", "label": "CONTAINS_THEME" },
+
+    { "from": "frederick_and_catherine_tale", "to": "obj_frederick_and_catherine_door", "label": "HAS_MAGIC_OBJECT" },
+
+    { "from": "frederick_and_catherine_tale", "to": "loc_cellar", "label": "HAS_LOCATION" },
+    { "from": "frederick_and_catherine_tale", "to": "loc_forest", "label": "HAS_LOCATION" }
+  ]
+}

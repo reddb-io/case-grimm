@@ -1,0 +1,46 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "the_willow_wren_and_the_bear_tale",  "node_type": "tale",      "name": "The Willow-Wren and the Bear" },
+    { "label": "the_willow_wren_and_the_bear_wren",  "node_type": "character", "name": "Willow-Wren King" },
+    { "label": "the_willow_wren_and_the_bear_queen", "node_type": "character", "name": "Willow-Wren Queen" },
+    { "label": "the_willow_wren_and_the_bear_chicks","node_type": "character", "name": "Wren Chicks (collective)" },
+    { "label": "the_willow_wren_and_the_bear_bear",  "node_type": "character", "name": "Old Growler (Bear)" },
+    { "label": "the_willow_wren_and_the_bear_wolf",  "node_type": "character", "name": "The Wolf" },
+    { "label": "the_willow_wren_and_the_bear_fox",   "node_type": "character", "name": "The Fox (general)" },
+    { "label": "the_willow_wren_and_the_bear_gnat",  "node_type": "character", "name": "Spy Gnat" },
+    { "label": "the_willow_wren_and_the_bear_hornet","node_type": "character", "name": "Stinging Hornet" }
+  ],
+  "edges": [
+    { "from": "the_willow_wren_and_the_bear_chicks", "to": "the_willow_wren_and_the_bear_wren",  "label": "CHILD_OF" },
+    { "from": "the_willow_wren_and_the_bear_chicks", "to": "the_willow_wren_and_the_bear_queen", "label": "CHILD_OF" },
+    { "from": "the_willow_wren_and_the_bear_bear",   "to": "the_willow_wren_and_the_bear_chicks","label": "OPPRESSED_BY" },
+    { "from": "the_willow_wren_and_the_bear_gnat",   "to": "the_willow_wren_and_the_bear_wren",  "label": "HELPS" },
+    { "from": "the_willow_wren_and_the_bear_hornet", "to": "the_willow_wren_and_the_bear_fox",   "label": "DECEIVES" },
+
+    { "from": "the_willow_wren_and_the_bear_wren",   "to": "the_willow_wren_and_the_bear_tale", "label": "APPEARS_IN" },
+    { "from": "the_willow_wren_and_the_bear_queen",  "to": "the_willow_wren_and_the_bear_tale", "label": "APPEARS_IN" },
+    { "from": "the_willow_wren_and_the_bear_chicks", "to": "the_willow_wren_and_the_bear_tale", "label": "APPEARS_IN" },
+    { "from": "the_willow_wren_and_the_bear_bear",   "to": "the_willow_wren_and_the_bear_tale", "label": "APPEARS_IN" },
+    { "from": "the_willow_wren_and_the_bear_wolf",   "to": "the_willow_wren_and_the_bear_tale", "label": "APPEARS_IN" },
+    { "from": "the_willow_wren_and_the_bear_fox",    "to": "the_willow_wren_and_the_bear_tale", "label": "APPEARS_IN" },
+    { "from": "the_willow_wren_and_the_bear_gnat",   "to": "the_willow_wren_and_the_bear_tale", "label": "APPEARS_IN" },
+    { "from": "the_willow_wren_and_the_bear_hornet", "to": "the_willow_wren_and_the_bear_tale", "label": "APPEARS_IN" },
+
+    { "from": "the_willow_wren_and_the_bear_wren", "to": "arc_humble_hero",   "label": "IS_ARCHETYPE" },
+    { "from": "the_willow_wren_and_the_bear_bear", "to": "arc_fool",          "label": "IS_ARCHETYPE" },
+    { "from": "the_willow_wren_and_the_bear_fox",  "to": "arc_fool",          "label": "IS_ARCHETYPE" },
+    { "from": "the_willow_wren_and_the_bear_gnat", "to": "arc_trickster",     "label": "IS_ARCHETYPE" },
+
+    { "from": "the_willow_wren_and_the_bear_wren", "to": "sp_bird",  "label": "IS_SPECIES" },
+    { "from": "the_willow_wren_and_the_bear_bear", "to": "sp_bear",  "label": "IS_SPECIES" },
+    { "from": "the_willow_wren_and_the_bear_wolf", "to": "sp_wolf",  "label": "IS_SPECIES" },
+    { "from": "the_willow_wren_and_the_bear_fox",  "to": "sp_fox",   "label": "IS_SPECIES" },
+
+    { "from": "the_willow_wren_and_the_bear_tale", "to": "theme_moral_punishment", "label": "CONTAINS_THEME" },
+    { "from": "the_willow_wren_and_the_bear_tale", "to": "theme_humble_triumph",   "label": "CONTAINS_THEME" },
+    { "from": "the_willow_wren_and_the_bear_tale", "to": "theme_disguise",         "label": "CONTAINS_THEME" },
+
+    { "from": "the_willow_wren_and_the_bear_tale", "to": "loc_forest", "label": "HAS_LOCATION" }
+  ]
+}

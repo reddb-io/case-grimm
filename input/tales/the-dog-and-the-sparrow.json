@@ -1,0 +1,36 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "the_dog_and_the_sparrow_tale",        "node_type": "tale",      "name": "The Dog and the Sparrow" },
+    { "label": "the_dog_and_the_sparrow_dog",         "node_type": "character", "name": "The Dog" },
+    { "label": "the_dog_and_the_sparrow_sparrow",     "node_type": "character", "name": "The Sparrow" },
+    { "label": "the_dog_and_the_sparrow_master",      "node_type": "character", "name": "The Shepherd-Master (cruel)" },
+    { "label": "the_dog_and_the_sparrow_carter",      "node_type": "character", "name": "The Carter" },
+    { "label": "the_dog_and_the_sparrow_carter_wife", "node_type": "character", "name": "The Carter's Wife" }
+  ],
+  "edges": [
+    { "from": "the_dog_and_the_sparrow_dog",     "to": "the_dog_and_the_sparrow_master",      "label": "OPPRESSED_BY" },
+    { "from": "the_dog_and_the_sparrow_sparrow", "to": "the_dog_and_the_sparrow_dog",         "label": "HELPS" },
+    { "from": "the_dog_and_the_sparrow_carter",  "to": "the_dog_and_the_sparrow_dog",         "label": "KILLS" },
+    { "from": "the_dog_and_the_sparrow_sparrow", "to": "the_dog_and_the_sparrow_carter",      "label": "DECEIVES" },
+    { "from": "the_dog_and_the_sparrow_carter_wife", "to": "the_dog_and_the_sparrow_carter",  "label": "KILLS" },
+
+    { "from": "the_dog_and_the_sparrow_dog",         "to": "the_dog_and_the_sparrow_tale", "label": "APPEARS_IN" },
+    { "from": "the_dog_and_the_sparrow_sparrow",     "to": "the_dog_and_the_sparrow_tale", "label": "APPEARS_IN" },
+    { "from": "the_dog_and_the_sparrow_master",      "to": "the_dog_and_the_sparrow_tale", "label": "APPEARS_IN" },
+    { "from": "the_dog_and_the_sparrow_carter",      "to": "the_dog_and_the_sparrow_tale", "label": "APPEARS_IN" },
+    { "from": "the_dog_and_the_sparrow_carter_wife", "to": "the_dog_and_the_sparrow_tale", "label": "APPEARS_IN" },
+
+    { "from": "the_dog_and_the_sparrow_dog",     "to": "arc_naive_victim",  "label": "IS_ARCHETYPE" },
+    { "from": "the_dog_and_the_sparrow_sparrow", "to": "arc_animal_helper", "label": "IS_ARCHETYPE" },
+    { "from": "the_dog_and_the_sparrow_sparrow", "to": "arc_trickster",     "label": "IS_ARCHETYPE" },
+    { "from": "the_dog_and_the_sparrow_carter",  "to": "arc_fool",          "label": "IS_ARCHETYPE" },
+
+    { "from": "the_dog_and_the_sparrow_dog",     "to": "sp_dog",  "label": "IS_SPECIES" },
+    { "from": "the_dog_and_the_sparrow_sparrow", "to": "sp_bird", "label": "IS_SPECIES" },
+
+    { "from": "the_dog_and_the_sparrow_tale", "to": "theme_moral_punishment", "label": "CONTAINS_THEME" },
+    { "from": "the_dog_and_the_sparrow_tale", "to": "theme_humble_triumph",   "label": "CONTAINS_THEME" },
+    { "from": "the_dog_and_the_sparrow_tale", "to": "theme_devouring",        "label": "CONTAINS_THEME" }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "tom_thumb_tale",      "node_type": "tale",      "name": "Tom Thumb" },
+    { "label": "tom_thumb",           "node_type": "character", "name": "Tom Thumb" },
+    { "label": "tom_thumb_woodman",   "node_type": "character", "name": "The Woodman (father)" },
+    { "label": "tom_thumb_mother",    "node_type": "character", "name": "Tom's Mother" },
+    { "label": "tom_thumb_strangers", "node_type": "character", "name": "Travelling Strangers (collective)" },
+    { "label": "tom_thumb_thieves",   "node_type": "character", "name": "Parson-House Thieves (collective)" },
+    { "label": "tom_thumb_cow",       "node_type": "character", "name": "The Cow (swallows Tom)" },
+    { "label": "tom_thumb_wolf",      "node_type": "character", "name": "The Hungry Wolf" },
+    { "label": "tom_thumb_cook",      "node_type": "character", "name": "The Parson's Cook" }
+  ],
+  "edges": [
+    { "from": "tom_thumb",          "to": "tom_thumb_woodman", "label": "CHILD_OF" },
+    { "from": "tom_thumb",          "to": "tom_thumb_mother",  "label": "CHILD_OF" },
+    { "from": "tom_thumb_strangers","to": "tom_thumb",         "label": "CAPTURES" },
+    { "from": "tom_thumb",          "to": "tom_thumb_strangers","label": "DECEIVES" },
+    { "from": "tom_thumb",          "to": "tom_thumb_thieves", "label": "DECEIVES" },
+    { "from": "tom_thumb_cow",      "to": "tom_thumb",         "label": "EATS" },
+    { "from": "tom_thumb_wolf",     "to": "tom_thumb",         "label": "EATS" },
+    { "from": "tom_thumb_woodman",  "to": "tom_thumb_wolf",    "label": "KILLS" },
+    { "from": "tom_thumb_woodman",  "to": "tom_thumb",         "label": "RESCUES" },
+
+    { "from": "tom_thumb",           "to": "tom_thumb_tale", "label": "APPEARS_IN" },
+    { "from": "tom_thumb_woodman",   "to": "tom_thumb_tale", "label": "APPEARS_IN" },
+    { "from": "tom_thumb_mother",    "to": "tom_thumb_tale", "label": "APPEARS_IN" },
+    { "from": "tom_thumb_strangers", "to": "tom_thumb_tale", "label": "APPEARS_IN" },
+    { "from": "tom_thumb_thieves",   "to": "tom_thumb_tale", "label": "APPEARS_IN" },
+    { "from": "tom_thumb_cow",       "to": "tom_thumb_tale", "label": "APPEARS_IN" },
+    { "from": "tom_thumb_wolf",      "to": "tom_thumb_tale", "label": "APPEARS_IN" },
+    { "from": "tom_thumb_cook",      "to": "tom_thumb_tale", "label": "APPEARS_IN" },
+
+    { "from": "tom_thumb",          "to": "arc_humble_hero",      "label": "IS_ARCHETYPE" },
+    { "from": "tom_thumb",          "to": "arc_trickster",        "label": "IS_ARCHETYPE" },
+    { "from": "tom_thumb",          "to": "arc_youngest_sibling", "label": "IS_ARCHETYPE" },
+    { "from": "tom_thumb_wolf",     "to": "arc_predator",         "label": "IS_ARCHETYPE" },
+    { "from": "tom_thumb_strangers","to": "arc_greedy",           "label": "IS_ARCHETYPE" },
+    { "from": "tom_thumb_thieves",  "to": "arc_trickster",        "label": "IS_ARCHETYPE" },
+
+    { "from": "tom_thumb_wolf", "to": "sp_wolf", "label": "IS_SPECIES" },
+
+    { "from": "tom_thumb_tale", "to": "theme_devouring",      "label": "CONTAINS_THEME" },
+    { "from": "tom_thumb_tale", "to": "theme_humble_triumph", "label": "CONTAINS_THEME" },
+    { "from": "tom_thumb_tale", "to": "theme_disguise",       "label": "CONTAINS_THEME" },
+    { "from": "tom_thumb_tale", "to": "theme_resurrection",   "label": "CONTAINS_THEME" },
+
+    { "from": "tom_thumb_tale", "to": "loc_forest",  "label": "HAS_LOCATION" },
+    { "from": "tom_thumb_tale", "to": "loc_cottage", "label": "HAS_LOCATION" }
+  ]
+}

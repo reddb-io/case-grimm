@@ -1,0 +1,74 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "the_golden_bird_tale",        "node_type": "tale",         "name": "The Golden Bird" },
+    { "label": "the_golden_bird_king",        "node_type": "character",    "name": "The King (with the apple tree)" },
+    { "label": "the_golden_bird_gardener",    "node_type": "character",    "name": "The Gardener" },
+    { "label": "the_golden_bird_eldest",      "node_type": "character",    "name": "Eldest Son" },
+    { "label": "the_golden_bird_second",      "node_type": "character",    "name": "Second Son" },
+    { "label": "the_golden_bird_youngest",    "node_type": "character",    "name": "Youngest Son" },
+    { "label": "the_golden_bird_fox",         "node_type": "character",    "name": "Enchanted Fox (princess's brother)" },
+    { "label": "the_golden_bird_princess",    "node_type": "character",    "name": "Beautiful Princess" },
+    { "label": "the_golden_bird_other_king",  "node_type": "character",    "name": "Princess's Father (King)" },
+    { "label": "obj_gb_golden_apples",        "node_type": "magic_object", "name": "Golden Apples" },
+    { "label": "obj_gb_golden_bird",          "node_type": "magic_object", "name": "The Golden Bird" },
+    { "label": "obj_gb_golden_horse",         "node_type": "magic_object", "name": "The Golden Horse" },
+    { "label": "obj_gb_golden_cage",          "node_type": "magic_object", "name": "Golden Cage (forbidden swap)" },
+    { "label": "obj_gb_golden_saddle",        "node_type": "magic_object", "name": "Golden Saddle (forbidden swap)" }
+  ],
+  "edges": [
+    { "from": "the_golden_bird_eldest",   "to": "the_golden_bird_gardener", "label": "CHILD_OF" },
+    { "from": "the_golden_bird_second",   "to": "the_golden_bird_gardener", "label": "CHILD_OF" },
+    { "from": "the_golden_bird_youngest", "to": "the_golden_bird_gardener", "label": "CHILD_OF" },
+    { "from": "the_golden_bird_eldest",   "to": "the_golden_bird_youngest", "label": "SIBLING_OF" },
+    { "from": "the_golden_bird_youngest", "to": "the_golden_bird_eldest",   "label": "SIBLING_OF" },
+    { "from": "the_golden_bird_second",   "to": "the_golden_bird_youngest", "label": "SIBLING_OF" },
+    { "from": "the_golden_bird_youngest", "to": "the_golden_bird_second",   "label": "SIBLING_OF" },
+
+    { "from": "the_golden_bird_fox",      "to": "the_golden_bird_youngest", "label": "HELPS" },
+    { "from": "the_golden_bird_eldest",   "to": "the_golden_bird_youngest", "label": "DECEIVES" },
+    { "from": "the_golden_bird_second",   "to": "the_golden_bird_youngest", "label": "DECEIVES" },
+    { "from": "the_golden_bird_youngest", "to": "the_golden_bird_princess", "label": "MARRIES" },
+    { "from": "the_golden_bird_youngest", "to": "the_golden_bird_fox",      "label": "RESCUES" },
+
+    { "from": "the_golden_bird_king",       "to": "the_golden_bird_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_bird_gardener",   "to": "the_golden_bird_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_bird_eldest",     "to": "the_golden_bird_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_bird_second",     "to": "the_golden_bird_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_bird_youngest",   "to": "the_golden_bird_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_bird_fox",        "to": "the_golden_bird_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_bird_princess",   "to": "the_golden_bird_tale", "label": "APPEARS_IN" },
+    { "from": "the_golden_bird_other_king", "to": "the_golden_bird_tale", "label": "APPEARS_IN" },
+
+    { "from": "the_golden_bird_youngest", "to": "arc_humble_hero",      "label": "IS_ARCHETYPE" },
+    { "from": "the_golden_bird_youngest", "to": "arc_youngest_sibling", "label": "IS_ARCHETYPE" },
+    { "from": "the_golden_bird_eldest",   "to": "arc_fool",             "label": "IS_ARCHETYPE" },
+    { "from": "the_golden_bird_second",   "to": "arc_fool",             "label": "IS_ARCHETYPE" },
+    { "from": "the_golden_bird_eldest",   "to": "arc_trickster",        "label": "IS_ARCHETYPE" },
+    { "from": "the_golden_bird_second",   "to": "arc_trickster",        "label": "IS_ARCHETYPE" },
+    { "from": "the_golden_bird_fox",      "to": "arc_wise_helper",      "label": "IS_ARCHETYPE" },
+    { "from": "the_golden_bird_fox",      "to": "arc_animal_helper",    "label": "IS_ARCHETYPE" },
+
+    { "from": "the_golden_bird_fox", "to": "sp_fox", "label": "IS_SPECIES" },
+
+    { "from": "the_golden_bird_tale", "to": "theme_metamorphosis",    "label": "CONTAINS_THEME" },
+    { "from": "the_golden_bird_tale", "to": "theme_curse",            "label": "CONTAINS_THEME" },
+    { "from": "the_golden_bird_tale", "to": "theme_test_of_virtue",   "label": "CONTAINS_THEME" },
+    { "from": "the_golden_bird_tale", "to": "theme_humble_triumph",   "label": "CONTAINS_THEME" },
+    { "from": "the_golden_bird_tale", "to": "theme_broken_promise",   "label": "CONTAINS_THEME" },
+    { "from": "the_golden_bird_tale", "to": "theme_moral_punishment", "label": "CONTAINS_THEME" },
+
+    { "from": "the_golden_bird_tale", "to": "obj_gb_golden_apples", "label": "HAS_MAGIC_OBJECT" },
+    { "from": "the_golden_bird_tale", "to": "obj_gb_golden_bird",   "label": "HAS_MAGIC_OBJECT" },
+    { "from": "the_golden_bird_tale", "to": "obj_gb_golden_horse",  "label": "HAS_MAGIC_OBJECT" },
+    { "from": "the_golden_bird_tale", "to": "obj_gb_golden_cage",   "label": "HAS_MAGIC_OBJECT" },
+    { "from": "the_golden_bird_tale", "to": "obj_gb_golden_saddle", "label": "HAS_MAGIC_OBJECT" },
+
+    { "from": "the_golden_bird_tale", "to": "loc_forest", "label": "HAS_LOCATION" },
+    { "from": "the_golden_bird_tale", "to": "loc_castle", "label": "HAS_LOCATION" },
+    { "from": "the_golden_bird_tale", "to": "loc_river",  "label": "HAS_LOCATION" },
+
+    { "from": "the_golden_bird_tale", "to": "num_3", "label": "CONTAINS_NUMBER" },
+    { "from": "the_golden_bird_tale", "to": "num_7", "label": "CONTAINS_NUMBER" }
+  ]
+}

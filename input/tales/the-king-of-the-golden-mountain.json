@@ -1,0 +1,64 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "the_king_of_the_golden_mountain_tale",     "node_type": "tale",         "name": "The King of the Golden Mountain" },
+    { "label": "the_king_of_the_golden_mountain_merchant", "node_type": "character",    "name": "The Merchant (father)" },
+    { "label": "the_king_of_the_golden_mountain_heinel",   "node_type": "character",    "name": "Heinel (son, later king)" },
+    { "label": "the_king_of_the_golden_mountain_dwarf",    "node_type": "character",    "name": "The Black Dwarf" },
+    { "label": "the_king_of_the_golden_mountain_fairy",    "node_type": "character",    "name": "The Good Fairy" },
+    { "label": "the_king_of_the_golden_mountain_princess", "node_type": "character",    "name": "Enchanted White-Snake Princess" },
+    { "label": "the_king_of_the_golden_mountain_son",      "node_type": "character",    "name": "Heinel's Son" },
+    { "label": "the_king_of_the_golden_mountain_giants",   "node_type": "character",    "name": "Three Giants (collective)" },
+    { "label": "obj_kgm_wishing_ring",                     "node_type": "magic_object", "name": "Wishing Ring" },
+    { "label": "obj_kgm_sword",                            "node_type": "magic_object", "name": "Heads-Off Sword" },
+    { "label": "obj_kgm_cloak",                            "node_type": "magic_object", "name": "Form-Changing Cloak" },
+    { "label": "obj_kgm_boots",                            "node_type": "magic_object", "name": "Wishing Boots" },
+    { "label": "obj_kgm_water_of_life",                    "node_type": "magic_object", "name": "Water of Life" }
+  ],
+  "edges": [
+    { "from": "the_king_of_the_golden_mountain_heinel",   "to": "the_king_of_the_golden_mountain_merchant", "label": "CHILD_OF" },
+    { "from": "the_king_of_the_golden_mountain_merchant","to": "the_king_of_the_golden_mountain_dwarf",     "label": "PROMISES_TO" },
+    { "from": "the_king_of_the_golden_mountain_dwarf",    "to": "the_king_of_the_golden_mountain_merchant", "label": "DECEIVES" },
+    { "from": "the_king_of_the_golden_mountain_fairy",    "to": "the_king_of_the_golden_mountain_heinel",   "label": "HELPS" },
+    { "from": "the_king_of_the_golden_mountain_heinel",   "to": "the_king_of_the_golden_mountain_princess", "label": "RESCUES" },
+    { "from": "the_king_of_the_golden_mountain_heinel",   "to": "the_king_of_the_golden_mountain_princess", "label": "MARRIES" },
+    { "from": "the_king_of_the_golden_mountain_princess", "to": "the_king_of_the_golden_mountain_heinel",   "label": "DECEIVES" },
+
+    { "from": "the_king_of_the_golden_mountain_merchant", "to": "the_king_of_the_golden_mountain_tale", "label": "APPEARS_IN" },
+    { "from": "the_king_of_the_golden_mountain_heinel",   "to": "the_king_of_the_golden_mountain_tale", "label": "APPEARS_IN" },
+    { "from": "the_king_of_the_golden_mountain_dwarf",    "to": "the_king_of_the_golden_mountain_tale", "label": "APPEARS_IN" },
+    { "from": "the_king_of_the_golden_mountain_fairy",    "to": "the_king_of_the_golden_mountain_tale", "label": "APPEARS_IN" },
+    { "from": "the_king_of_the_golden_mountain_princess", "to": "the_king_of_the_golden_mountain_tale", "label": "APPEARS_IN" },
+    { "from": "the_king_of_the_golden_mountain_son",      "to": "the_king_of_the_golden_mountain_tale", "label": "APPEARS_IN" },
+    { "from": "the_king_of_the_golden_mountain_giants",   "to": "the_king_of_the_golden_mountain_tale", "label": "APPEARS_IN" },
+
+    { "from": "the_king_of_the_golden_mountain_heinel",   "to": "arc_humble_hero",      "label": "IS_ARCHETYPE" },
+    { "from": "the_king_of_the_golden_mountain_heinel",   "to": "arc_royal_rescuer",    "label": "IS_ARCHETYPE" },
+    { "from": "the_king_of_the_golden_mountain_dwarf",    "to": "arc_trickster",        "label": "IS_ARCHETYPE" },
+    { "from": "the_king_of_the_golden_mountain_fairy",    "to": "arc_wise_helper",      "label": "IS_ARCHETYPE" },
+    { "from": "the_king_of_the_golden_mountain_princess", "to": "arc_oppressed_maiden", "label": "IS_ARCHETYPE" },
+    { "from": "the_king_of_the_golden_mountain_princess", "to": "arc_disguised_villain","label": "IS_ARCHETYPE" },
+
+    { "from": "the_king_of_the_golden_mountain_dwarf", "to": "sp_dwarf", "label": "IS_SPECIES" },
+
+    { "from": "the_king_of_the_golden_mountain_tale", "to": "theme_magic_pact",     "label": "CONTAINS_THEME" },
+    { "from": "the_king_of_the_golden_mountain_tale", "to": "theme_broken_promise", "label": "CONTAINS_THEME" },
+    { "from": "the_king_of_the_golden_mountain_tale", "to": "theme_curse",          "label": "CONTAINS_THEME" },
+    { "from": "the_king_of_the_golden_mountain_tale", "to": "theme_metamorphosis",  "label": "CONTAINS_THEME" },
+    { "from": "the_king_of_the_golden_mountain_tale", "to": "theme_test_of_virtue", "label": "CONTAINS_THEME" },
+    { "from": "the_king_of_the_golden_mountain_tale", "to": "theme_moral_punishment","label": "CONTAINS_THEME" },
+    { "from": "the_king_of_the_golden_mountain_tale", "to": "theme_disguise",       "label": "CONTAINS_THEME" },
+
+    { "from": "the_king_of_the_golden_mountain_tale", "to": "obj_kgm_wishing_ring",  "label": "HAS_MAGIC_OBJECT" },
+    { "from": "the_king_of_the_golden_mountain_tale", "to": "obj_kgm_sword",         "label": "HAS_MAGIC_OBJECT" },
+    { "from": "the_king_of_the_golden_mountain_tale", "to": "obj_kgm_cloak",         "label": "HAS_MAGIC_OBJECT" },
+    { "from": "the_king_of_the_golden_mountain_tale", "to": "obj_kgm_boots",         "label": "HAS_MAGIC_OBJECT" },
+    { "from": "the_king_of_the_golden_mountain_tale", "to": "obj_kgm_water_of_life", "label": "HAS_MAGIC_OBJECT" },
+
+    { "from": "the_king_of_the_golden_mountain_tale", "to": "loc_castle",    "label": "HAS_LOCATION" },
+    { "from": "the_king_of_the_golden_mountain_tale", "to": "loc_mountains", "label": "HAS_LOCATION" },
+
+    { "from": "the_king_of_the_golden_mountain_tale", "to": "num_12", "label": "CONTAINS_NUMBER" },
+    { "from": "the_king_of_the_golden_mountain_tale", "to": "num_3",  "label": "CONTAINS_NUMBER" }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "the_fisherman_and_his_wife_tale",      "node_type": "tale",         "name": "The Fisherman and His Wife" },
+    { "label": "the_fisherman_and_his_wife_fisherman", "node_type": "character",    "name": "The Fisherman" },
+    { "label": "the_fisherman_and_his_wife_ilsabill",  "node_type": "character",    "name": "Dame Ilsabill (wife)" },
+    { "label": "the_fisherman_and_his_wife_fish",      "node_type": "character",    "name": "Enchanted Flounder-Prince" },
+    { "label": "obj_fisherman_pigsty",                 "node_type": "magic_object", "name": "The Pigsty / Restored Pigsty" }
+  ],
+  "edges": [
+    { "from": "the_fisherman_and_his_wife_fisherman", "to": "the_fisherman_and_his_wife_ilsabill", "label": "MARRIES" },
+    { "from": "the_fisherman_and_his_wife_ilsabill",  "to": "the_fisherman_and_his_wife_fisherman","label": "OPPRESSED_BY" },
+    { "from": "the_fisherman_and_his_wife_fisherman", "to": "the_fisherman_and_his_wife_fish",     "label": "RESCUES" },
+    { "from": "the_fisherman_and_his_wife_fish",      "to": "the_fisherman_and_his_wife_fisherman","label": "HELPS" },
+
+    { "from": "the_fisherman_and_his_wife_fisherman", "to": "the_fisherman_and_his_wife_tale", "label": "APPEARS_IN" },
+    { "from": "the_fisherman_and_his_wife_ilsabill",  "to": "the_fisherman_and_his_wife_tale", "label": "APPEARS_IN" },
+    { "from": "the_fisherman_and_his_wife_fish",      "to": "the_fisherman_and_his_wife_tale", "label": "APPEARS_IN" },
+
+    { "from": "the_fisherman_and_his_wife_fisherman", "to": "arc_fool",          "label": "IS_ARCHETYPE" },
+    { "from": "the_fisherman_and_his_wife_fisherman", "to": "arc_naive_victim",  "label": "IS_ARCHETYPE" },
+    { "from": "the_fisherman_and_his_wife_ilsabill",  "to": "arc_greedy",        "label": "IS_ARCHETYPE" },
+    { "from": "the_fisherman_and_his_wife_fish",      "to": "arc_wise_helper",   "label": "IS_ARCHETYPE" },
+    { "from": "the_fisherman_and_his_wife_fish",      "to": "arc_animal_helper", "label": "IS_ARCHETYPE" },
+
+    { "from": "the_fisherman_and_his_wife_fish", "to": "sp_fish", "label": "IS_SPECIES" },
+
+    { "from": "the_fisherman_and_his_wife_tale", "to": "theme_magic_pact",     "label": "CONTAINS_THEME" },
+    { "from": "the_fisherman_and_his_wife_tale", "to": "theme_broken_promise", "label": "CONTAINS_THEME" },
+    { "from": "the_fisherman_and_his_wife_tale", "to": "theme_moral_punishment","label": "CONTAINS_THEME" },
+    { "from": "the_fisherman_and_his_wife_tale", "to": "theme_metamorphosis",  "label": "CONTAINS_THEME" },
+    { "from": "the_fisherman_and_his_wife_tale", "to": "theme_curse",          "label": "CONTAINS_THEME" },
+
+    { "from": "the_fisherman_and_his_wife_tale", "to": "obj_fisherman_pigsty", "label": "HAS_MAGIC_OBJECT" },
+
+    { "from": "the_fisherman_and_his_wife_tale", "to": "loc_castle",  "label": "HAS_LOCATION" },
+    { "from": "the_fisherman_and_his_wife_tale", "to": "loc_cottage", "label": "HAS_LOCATION" }
+  ]
+}

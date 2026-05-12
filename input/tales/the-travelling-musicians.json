@@ -1,0 +1,50 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "the_travelling_musicians_tale",    "node_type": "tale",      "name": "The Travelling Musicians" },
+    { "label": "the_travelling_musicians_ass",     "node_type": "character", "name": "The Old Ass" },
+    { "label": "the_travelling_musicians_dog",     "node_type": "character", "name": "The Old Dog" },
+    { "label": "the_travelling_musicians_cat",     "node_type": "character", "name": "The Old Cat" },
+    { "label": "the_travelling_musicians_cock",    "node_type": "character", "name": "The Cock (Chanticleer)" },
+    { "label": "the_travelling_musicians_robbers", "node_type": "character", "name": "Gang of Robbers (collective)" }
+  ],
+  "edges": [
+    { "from": "the_travelling_musicians_ass", "to": "the_travelling_musicians_dog",  "label": "HELPS" },
+    { "from": "the_travelling_musicians_ass", "to": "the_travelling_musicians_cat",  "label": "HELPS" },
+    { "from": "the_travelling_musicians_ass", "to": "the_travelling_musicians_cock", "label": "HELPS" },
+    { "from": "the_travelling_musicians_ass",  "to": "the_travelling_musicians_robbers", "label": "DECEIVES" },
+    { "from": "the_travelling_musicians_dog",  "to": "the_travelling_musicians_robbers", "label": "DECEIVES" },
+    { "from": "the_travelling_musicians_cat",  "to": "the_travelling_musicians_robbers", "label": "DECEIVES" },
+    { "from": "the_travelling_musicians_cock", "to": "the_travelling_musicians_robbers", "label": "DECEIVES" },
+
+    { "from": "the_travelling_musicians_ass",     "to": "the_travelling_musicians_tale", "label": "APPEARS_IN" },
+    { "from": "the_travelling_musicians_dog",     "to": "the_travelling_musicians_tale", "label": "APPEARS_IN" },
+    { "from": "the_travelling_musicians_cat",     "to": "the_travelling_musicians_tale", "label": "APPEARS_IN" },
+    { "from": "the_travelling_musicians_cock",    "to": "the_travelling_musicians_tale", "label": "APPEARS_IN" },
+    { "from": "the_travelling_musicians_robbers", "to": "the_travelling_musicians_tale", "label": "APPEARS_IN" },
+
+    { "from": "the_travelling_musicians_ass",     "to": "arc_humble_hero",   "label": "IS_ARCHETYPE" },
+    { "from": "the_travelling_musicians_ass",     "to": "arc_animal_helper", "label": "IS_ARCHETYPE" },
+    { "from": "the_travelling_musicians_dog",     "to": "arc_humble_hero",   "label": "IS_ARCHETYPE" },
+    { "from": "the_travelling_musicians_dog",     "to": "arc_animal_helper", "label": "IS_ARCHETYPE" },
+    { "from": "the_travelling_musicians_cat",     "to": "arc_humble_hero",   "label": "IS_ARCHETYPE" },
+    { "from": "the_travelling_musicians_cat",     "to": "arc_animal_helper", "label": "IS_ARCHETYPE" },
+    { "from": "the_travelling_musicians_cock",    "to": "arc_humble_hero",   "label": "IS_ARCHETYPE" },
+    { "from": "the_travelling_musicians_cock",    "to": "arc_animal_helper", "label": "IS_ARCHETYPE" },
+    { "from": "the_travelling_musicians_robbers", "to": "arc_predator",      "label": "IS_ARCHETYPE" },
+
+    { "from": "the_travelling_musicians_ass",  "to": "sp_ass",     "label": "IS_SPECIES" },
+    { "from": "the_travelling_musicians_dog",  "to": "sp_dog",     "label": "IS_SPECIES" },
+    { "from": "the_travelling_musicians_cat",  "to": "sp_cat",     "label": "IS_SPECIES" },
+    { "from": "the_travelling_musicians_cock", "to": "sp_rooster", "label": "IS_SPECIES" },
+
+    { "from": "the_travelling_musicians_tale", "to": "theme_humble_triumph", "label": "CONTAINS_THEME" },
+    { "from": "the_travelling_musicians_tale", "to": "theme_disguise",       "label": "CONTAINS_THEME" },
+    { "from": "the_travelling_musicians_tale", "to": "theme_moral_punishment","label": "CONTAINS_THEME" },
+
+    { "from": "the_travelling_musicians_tale", "to": "loc_forest",  "label": "HAS_LOCATION" },
+    { "from": "the_travelling_musicians_tale", "to": "loc_cottage", "label": "HAS_LOCATION" },
+
+    { "from": "the_travelling_musicians_tale", "to": "num_4", "label": "CONTAINS_NUMBER" }
+  ]
+}

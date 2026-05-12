@@ -1,0 +1,75 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "wolf_seven_kids_tale", "node_type": "tale",      "name": "The Wolf and the Seven Little Kids" },
+    { "label": "mother_goat",          "node_type": "character", "name": "Mother Goat" },
+    { "label": "kid_1",                "node_type": "character", "name": "Little Kid 1" },
+    { "label": "kid_2",                "node_type": "character", "name": "Little Kid 2" },
+    { "label": "kid_3",                "node_type": "character", "name": "Little Kid 3" },
+    { "label": "kid_4",                "node_type": "character", "name": "Little Kid 4" },
+    { "label": "kid_5",                "node_type": "character", "name": "Little Kid 5" },
+    { "label": "kid_6",                "node_type": "character", "name": "Little Kid 6" },
+    { "label": "kid_7",                "node_type": "character", "name": "Little Kid 7 (hid in clock-case)" },
+    { "label": "wsk_wolf",             "node_type": "character", "name": "Wolf (Seven Kids)" }
+  ],
+  "edges": [
+    { "from": "kid_1", "to": "mother_goat", "label": "CHILD_OF" },
+    { "from": "kid_2", "to": "mother_goat", "label": "CHILD_OF" },
+    { "from": "kid_3", "to": "mother_goat", "label": "CHILD_OF" },
+    { "from": "kid_4", "to": "mother_goat", "label": "CHILD_OF" },
+    { "from": "kid_5", "to": "mother_goat", "label": "CHILD_OF" },
+    { "from": "kid_6", "to": "mother_goat", "label": "CHILD_OF" },
+    { "from": "kid_7", "to": "mother_goat", "label": "CHILD_OF" },
+
+    { "from": "wsk_wolf", "to": "kid_1", "label": "DECEIVES" },
+    { "from": "wsk_wolf", "to": "kid_1", "label": "EATS" },
+    { "from": "wsk_wolf", "to": "kid_2", "label": "EATS" },
+    { "from": "wsk_wolf", "to": "kid_3", "label": "EATS" },
+    { "from": "wsk_wolf", "to": "kid_4", "label": "EATS" },
+    { "from": "wsk_wolf", "to": "kid_5", "label": "EATS" },
+    { "from": "wsk_wolf", "to": "kid_6", "label": "EATS" },
+    { "from": "mother_goat", "to": "wsk_wolf", "label": "KILLS" },
+    { "from": "mother_goat", "to": "kid_1", "label": "RESCUES" },
+    { "from": "mother_goat", "to": "kid_2", "label": "RESCUES" },
+    { "from": "mother_goat", "to": "kid_3", "label": "RESCUES" },
+    { "from": "mother_goat", "to": "kid_4", "label": "RESCUES" },
+    { "from": "mother_goat", "to": "kid_5", "label": "RESCUES" },
+    { "from": "mother_goat", "to": "kid_6", "label": "RESCUES" },
+
+    { "from": "mother_goat", "to": "wolf_seven_kids_tale", "label": "APPEARS_IN" },
+    { "from": "kid_1",       "to": "wolf_seven_kids_tale", "label": "APPEARS_IN" },
+    { "from": "kid_2",       "to": "wolf_seven_kids_tale", "label": "APPEARS_IN" },
+    { "from": "kid_3",       "to": "wolf_seven_kids_tale", "label": "APPEARS_IN" },
+    { "from": "kid_4",       "to": "wolf_seven_kids_tale", "label": "APPEARS_IN" },
+    { "from": "kid_5",       "to": "wolf_seven_kids_tale", "label": "APPEARS_IN" },
+    { "from": "kid_6",       "to": "wolf_seven_kids_tale", "label": "APPEARS_IN" },
+    { "from": "kid_7",       "to": "wolf_seven_kids_tale", "label": "APPEARS_IN" },
+    { "from": "wsk_wolf",    "to": "wolf_seven_kids_tale", "label": "APPEARS_IN" },
+
+    { "from": "wsk_wolf", "to": "arc_predator",          "label": "IS_ARCHETYPE" },
+    { "from": "wsk_wolf", "to": "arc_trickster",         "label": "IS_ARCHETYPE" },
+    { "from": "wsk_wolf", "to": "arc_disguised_villain", "label": "IS_ARCHETYPE" },
+    { "from": "kid_7",    "to": "arc_youngest_sibling",  "label": "IS_ARCHETYPE" },
+    { "from": "mother_goat", "to": "arc_wise_helper",    "label": "IS_ARCHETYPE" },
+
+    { "from": "wsk_wolf",    "to": "sp_wolf", "label": "IS_SPECIES" },
+    { "from": "mother_goat", "to": "sp_goat", "label": "IS_SPECIES" },
+    { "from": "kid_1", "to": "sp_goat", "label": "IS_SPECIES" },
+    { "from": "kid_2", "to": "sp_goat", "label": "IS_SPECIES" },
+    { "from": "kid_3", "to": "sp_goat", "label": "IS_SPECIES" },
+    { "from": "kid_4", "to": "sp_goat", "label": "IS_SPECIES" },
+    { "from": "kid_5", "to": "sp_goat", "label": "IS_SPECIES" },
+    { "from": "kid_6", "to": "sp_goat", "label": "IS_SPECIES" },
+    { "from": "kid_7", "to": "sp_goat", "label": "IS_SPECIES" },
+
+    { "from": "wolf_seven_kids_tale", "to": "theme_devouring",        "label": "CONTAINS_THEME" },
+    { "from": "wolf_seven_kids_tale", "to": "theme_disguise",         "label": "CONTAINS_THEME" },
+    { "from": "wolf_seven_kids_tale", "to": "theme_moral_punishment", "label": "CONTAINS_THEME" },
+    { "from": "wolf_seven_kids_tale", "to": "theme_resurrection",     "label": "CONTAINS_THEME" },
+
+    { "from": "wolf_seven_kids_tale", "to": "loc_cottage", "label": "HAS_LOCATION" },
+    { "from": "wolf_seven_kids_tale", "to": "loc_forest",  "label": "HAS_LOCATION" },
+
+    { "from": "wolf_seven_kids_tale", "to": "num_7", "label": "CONTAINS_NUMBER" }
+  ]
+}

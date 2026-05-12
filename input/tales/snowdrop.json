@@ -1,0 +1,81 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "snow_white_tale",   "node_type": "tale",         "name": "Snow White" },
+    { "label": "snow_white",        "node_type": "character",    "name": "Snow White" },
+    { "label": "evil_queen",        "node_type": "character",    "name": "Evil Queen" },
+    { "label": "huntsman",          "node_type": "character",    "name": "Huntsman" },
+    { "label": "snow_prince",       "node_type": "character",    "name": "Prince (Snow White)" },
+    { "label": "dwarf_1",           "node_type": "character",    "name": "Dwarf 1" },
+    { "label": "dwarf_2",           "node_type": "character",    "name": "Dwarf 2" },
+    { "label": "dwarf_3",           "node_type": "character",    "name": "Dwarf 3" },
+    { "label": "dwarf_4",           "node_type": "character",    "name": "Dwarf 4" },
+    { "label": "dwarf_5",           "node_type": "character",    "name": "Dwarf 5" },
+    { "label": "dwarf_6",           "node_type": "character",    "name": "Dwarf 6" },
+    { "label": "dwarf_7",           "node_type": "character",    "name": "Dwarf 7" },
+    { "label": "obj_magic_mirror",  "node_type": "magic_object", "name": "Magic Mirror" },
+    { "label": "obj_poisoned_apple","node_type": "magic_object", "name": "Poisoned Apple" },
+    { "label": "obj_glass_coffin",  "node_type": "magic_object", "name": "Glass Coffin" }
+  ],
+  "edges": [
+    { "from": "evil_queen",  "to": "snow_white",       "label": "ENVIES" },
+    { "from": "evil_queen",  "to": "obj_magic_mirror", "label": "OWNS" },
+    { "from": "obj_magic_mirror", "to": "evil_queen",  "label": "ANSWERS_TO" },
+    { "from": "evil_queen",  "to": "huntsman",         "label": "COMMANDS" },
+    { "from": "huntsman",    "to": "snow_white",       "label": "SPARES" },
+    { "from": "evil_queen",  "to": "snow_white",       "label": "DECEIVES" },
+    { "from": "evil_queen",  "to": "snow_white",       "label": "CURSES" },
+    { "from": "snow_white",  "to": "snow_prince",      "label": "MARRIES" },
+
+    { "from": "dwarf_1", "to": "snow_white", "label": "SHELTERS" },
+    { "from": "dwarf_2", "to": "snow_white", "label": "SHELTERS" },
+    { "from": "dwarf_3", "to": "snow_white", "label": "SHELTERS" },
+    { "from": "dwarf_4", "to": "snow_white", "label": "SHELTERS" },
+    { "from": "dwarf_5", "to": "snow_white", "label": "SHELTERS" },
+    { "from": "dwarf_6", "to": "snow_white", "label": "SHELTERS" },
+    { "from": "dwarf_7", "to": "snow_white", "label": "SHELTERS" },
+
+    { "from": "snow_white",  "to": "snow_white_tale", "label": "APPEARS_IN" },
+    { "from": "evil_queen",  "to": "snow_white_tale", "label": "APPEARS_IN" },
+    { "from": "huntsman",    "to": "snow_white_tale", "label": "APPEARS_IN" },
+    { "from": "snow_prince", "to": "snow_white_tale", "label": "APPEARS_IN" },
+    { "from": "dwarf_1",     "to": "snow_white_tale", "label": "APPEARS_IN" },
+    { "from": "dwarf_2",     "to": "snow_white_tale", "label": "APPEARS_IN" },
+    { "from": "dwarf_3",     "to": "snow_white_tale", "label": "APPEARS_IN" },
+    { "from": "dwarf_4",     "to": "snow_white_tale", "label": "APPEARS_IN" },
+    { "from": "dwarf_5",     "to": "snow_white_tale", "label": "APPEARS_IN" },
+    { "from": "dwarf_6",     "to": "snow_white_tale", "label": "APPEARS_IN" },
+    { "from": "dwarf_7",     "to": "snow_white_tale", "label": "APPEARS_IN" },
+
+    { "from": "snow_white",  "to": "arc_oppressed_maiden",  "label": "IS_ARCHETYPE" },
+    { "from": "evil_queen",  "to": "arc_evil_witch",        "label": "IS_ARCHETYPE" },
+    { "from": "evil_queen",  "to": "arc_cruel_stepmother",  "label": "IS_ARCHETYPE" },
+    { "from": "evil_queen",  "to": "arc_disguised_villain", "label": "IS_ARCHETYPE" },
+    { "from": "snow_prince", "to": "arc_royal_rescuer",     "label": "IS_ARCHETYPE" },
+
+    { "from": "dwarf_1", "to": "sp_dwarf", "label": "IS_SPECIES" },
+    { "from": "dwarf_2", "to": "sp_dwarf", "label": "IS_SPECIES" },
+    { "from": "dwarf_3", "to": "sp_dwarf", "label": "IS_SPECIES" },
+    { "from": "dwarf_4", "to": "sp_dwarf", "label": "IS_SPECIES" },
+    { "from": "dwarf_5", "to": "sp_dwarf", "label": "IS_SPECIES" },
+    { "from": "dwarf_6", "to": "sp_dwarf", "label": "IS_SPECIES" },
+    { "from": "dwarf_7", "to": "sp_dwarf", "label": "IS_SPECIES" },
+
+    { "from": "snow_white_tale", "to": "theme_envy",          "label": "CONTAINS_THEME" },
+    { "from": "snow_white_tale", "to": "theme_false_death",   "label": "CONTAINS_THEME" },
+    { "from": "snow_white_tale", "to": "theme_resurrection",  "label": "CONTAINS_THEME" },
+    { "from": "snow_white_tale", "to": "theme_disguise",      "label": "CONTAINS_THEME" },
+    { "from": "snow_white_tale", "to": "theme_cruel_stepfamily", "label": "CONTAINS_THEME" },
+    { "from": "snow_white_tale", "to": "theme_moral_punishment", "label": "CONTAINS_THEME" },
+
+    { "from": "snow_white_tale", "to": "obj_magic_mirror",   "label": "HAS_MAGIC_OBJECT" },
+    { "from": "snow_white_tale", "to": "obj_poisoned_apple", "label": "HAS_MAGIC_OBJECT" },
+    { "from": "snow_white_tale", "to": "obj_glass_coffin",   "label": "HAS_MAGIC_OBJECT" },
+
+    { "from": "snow_white_tale", "to": "loc_forest",  "label": "HAS_LOCATION" },
+    { "from": "snow_white_tale", "to": "loc_cottage", "label": "HAS_LOCATION" },
+    { "from": "snow_white_tale", "to": "loc_castle",  "label": "HAS_LOCATION" },
+
+    { "from": "snow_white_tale", "to": "num_7", "label": "CONTAINS_NUMBER" }
+  ]
+}

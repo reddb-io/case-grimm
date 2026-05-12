@@ -1,0 +1,59 @@
+{
+  "collection": "tales",
+  "nodes": [
+    { "label": "the_little_peasant_tale",        "node_type": "tale",         "name": "The Little Peasant" },
+    { "label": "the_little_peasant",             "node_type": "character",    "name": "The Little Peasant" },
+    { "label": "the_little_peasant_wife",        "node_type": "character",    "name": "Little Peasant's Wife" },
+    { "label": "the_little_peasant_carpenter",   "node_type": "character",    "name": "The Carpenter (gossip)" },
+    { "label": "the_little_peasant_miller",      "node_type": "character",    "name": "The Miller" },
+    { "label": "the_little_peasant_miller_wife", "node_type": "character",    "name": "The Miller's Wife" },
+    { "label": "the_little_peasant_parson",      "node_type": "character",    "name": "The Parson (the Devil)" },
+    { "label": "the_little_peasant_raven",       "node_type": "character",    "name": "The Raven (false prophet)" },
+    { "label": "the_little_peasant_shepherd",    "node_type": "character",    "name": "The Ambitious Shepherd" },
+    { "label": "the_little_peasant_mayor",       "node_type": "character",    "name": "The Mayor" },
+    { "label": "the_little_peasant_villagers",   "node_type": "character",    "name": "Rich Villagers (collective)" },
+    { "label": "obj_lp_wooden_calf",             "node_type": "magic_object", "name": "Wooden Painted Calf" }
+  ],
+  "edges": [
+    { "from": "the_little_peasant",             "to": "the_little_peasant_wife",      "label": "MARRIES" },
+    { "from": "the_little_peasant",             "to": "the_little_peasant_miller",    "label": "DECEIVES" },
+    { "from": "the_little_peasant_miller_wife", "to": "the_little_peasant_miller",    "label": "DECEIVES" },
+    { "from": "the_little_peasant",             "to": "the_little_peasant_shepherd",  "label": "DECEIVES" },
+    { "from": "the_little_peasant",             "to": "the_little_peasant_villagers", "label": "DECEIVES" },
+    { "from": "the_little_peasant",             "to": "the_little_peasant_shepherd",  "label": "KILLS" },
+    { "from": "the_little_peasant_parson",      "to": "the_little_peasant",           "label": "HELPS" },
+
+    { "from": "the_little_peasant",             "to": "the_little_peasant_tale", "label": "APPEARS_IN" },
+    { "from": "the_little_peasant_wife",        "to": "the_little_peasant_tale", "label": "APPEARS_IN" },
+    { "from": "the_little_peasant_carpenter",   "to": "the_little_peasant_tale", "label": "APPEARS_IN" },
+    { "from": "the_little_peasant_miller",      "to": "the_little_peasant_tale", "label": "APPEARS_IN" },
+    { "from": "the_little_peasant_miller_wife", "to": "the_little_peasant_tale", "label": "APPEARS_IN" },
+    { "from": "the_little_peasant_parson",      "to": "the_little_peasant_tale", "label": "APPEARS_IN" },
+    { "from": "the_little_peasant_raven",       "to": "the_little_peasant_tale", "label": "APPEARS_IN" },
+    { "from": "the_little_peasant_shepherd",    "to": "the_little_peasant_tale", "label": "APPEARS_IN" },
+    { "from": "the_little_peasant_mayor",       "to": "the_little_peasant_tale", "label": "APPEARS_IN" },
+    { "from": "the_little_peasant_villagers",   "to": "the_little_peasant_tale", "label": "APPEARS_IN" },
+
+    { "from": "the_little_peasant",             "to": "arc_humble_hero",   "label": "IS_ARCHETYPE" },
+    { "from": "the_little_peasant",             "to": "arc_trickster",     "label": "IS_ARCHETYPE" },
+    { "from": "the_little_peasant_miller",      "to": "arc_fool",          "label": "IS_ARCHETYPE" },
+    { "from": "the_little_peasant_miller_wife", "to": "arc_trickster",     "label": "IS_ARCHETYPE" },
+    { "from": "the_little_peasant_shepherd",    "to": "arc_greedy",        "label": "IS_ARCHETYPE" },
+    { "from": "the_little_peasant_villagers",   "to": "arc_greedy",        "label": "IS_ARCHETYPE" },
+
+    { "from": "the_little_peasant_raven", "to": "sp_raven", "label": "IS_SPECIES" },
+
+    { "from": "the_little_peasant_tale", "to": "theme_humble_triumph",   "label": "CONTAINS_THEME" },
+    { "from": "the_little_peasant_tale", "to": "theme_moral_punishment", "label": "CONTAINS_THEME" },
+    { "from": "the_little_peasant_tale", "to": "theme_disguise",         "label": "CONTAINS_THEME" },
+    { "from": "the_little_peasant_tale", "to": "theme_folly",            "label": "CONTAINS_THEME" },
+
+    { "from": "the_little_peasant_tale", "to": "obj_lp_wooden_calf", "label": "HAS_MAGIC_OBJECT" },
+
+    { "from": "the_little_peasant_tale", "to": "loc_mill",  "label": "HAS_LOCATION" },
+    { "from": "the_little_peasant_tale", "to": "loc_river", "label": "HAS_LOCATION" },
+
+    { "from": "the_little_peasant_tale", "to": "num_3", "label": "CONTAINS_NUMBER" },
+    { "from": "the_little_peasant_tale", "to": "num_4", "label": "CONTAINS_NUMBER" }
+  ]
+}
