@@ -12,6 +12,11 @@ coverage/
 output/*
 !output/.gitignore
 !output/.gitkeep
+!output/*.rdb
+!output/*.rdb-*
+!output/*.rdb.meta.json
+!output/*.rdb.meta.rdbx
+!output/*.rdb.meta.rdbx.seq-*
 
 # Logs
 logs/

@@ -1,3 +1,8 @@
 *
 !.gitignore
 !.gitkeep
+!*.rdb
+!*.rdb-*
+!*.rdb.meta.json
+!*.rdb.meta.rdbx
+!*.rdb.meta.rdbx.seq-*
