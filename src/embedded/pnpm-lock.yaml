@@ -11,6 +11,9 @@ importers:
       '@reddb-io/sdk':
         specifier: ^1.0.8
         version: 1.0.8
+      cli-args-parser:
+        specifier: ^1.0.6
+        version: 1.0.6
     devDependencies:
       '@types/node':
         specifier: ^22.10.2
@@ -187,6 +190,10 @@ packages:
   '@types/node@22.19.19':
     resolution: {integrity: sha512-dyh/xO2Fh5bYrfWaaqGrRQQGkNdmYw6AmaAUvYeUMNTWQtvb796ikLdmTchRmOlOiIJ1TDXfWgVx1QkUlQ6Hew==}
 
+  cli-args-parser@1.0.6:
+    resolution: {integrity: sha512-c6dKqF8mo2Vq1gw9OUoYoEGnGi9uatHLJWEzbzBn55kXMJdWIFMfRld9NprOF02oco9+SU9E2AgobmdjXxLlBw==}
+    engines: {node: '>=18.0.0'}
+
   esbuild@0.27.7:
     resolution: {integrity: sha512-IxpibTjyVnmrIQo5aqNpCgoACA/dTKLTlhMHihVHhdkxKyPO1uBBthumT0rdHmcsk9uMonIWS0m4FljWzILh3w==}
     engines: {node: '>=18'}
@@ -301,6 +308,8 @@ snapshots:
   '@types/node@22.19.19':
     dependencies:
       undici-types: 6.21.0
+
+  cli-args-parser@1.0.6: {}
 
   esbuild@0.27.7:
     optionalDependencies:

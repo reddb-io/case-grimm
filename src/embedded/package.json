@@ -5,14 +5,16 @@
   "scripts": {
     "start": "tsx src/index.ts",
     "query": "tsx src/query.ts",
-    "sim": "tsx src/similarity.ts"
+    "sim": "tsx src/similarity.ts",
+    "insights": "tsx src/insights.ts"
   },
   "dependencies": {
-    "@reddb-io/sdk": "^1.0.8"
+    "@reddb-io/sdk": "^1.0.8",
+    "cli-args-parser": "^1.0.6"
   },
   "devDependencies": {
+    "@types/node": "^22.10.2",
     "tsx": "^4.19.2",
-    "typescript": "^5.6.3",
-    "@types/node": "^22.10.2"
+    "typescript": "^5.6.3"
   }
 }

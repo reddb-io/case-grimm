@@ -3,6 +3,11 @@
   "catalog": {
     "name": "reddb",
     "stats_by_collection": {
+      "ingest_log": {
+        "cross_refs": 0,
+        "entities": 89,
+        "segments": 1
+      },
       "red.config": {
         "cross_refs": 0,
         "entities": 0,
@@ -25,7 +30,7 @@
       },
       "red_config": {
         "cross_refs": 0,
-        "entities": 229,
+        "entities": 101,
         "segments": 1
       },
       "red_conflicts": {
@@ -58,6 +63,11 @@
         "entities": 0,
         "segments": 0
       },
+      "red_timeseries_meta": {
+        "cross_refs": 0,
+        "entities": 1,
+        "segments": 1
+      },
       "red_vcs_settings": {
         "cross_refs": 0,
         "entities": 0,
@@ -69,21 +79,38 @@
         "segments": 0
       },
       "tales": {
-        "cross_refs": 6964,
+        "cross_refs": 6901,
         "entities": 2396,
         "segments": 1
       }
     },
-    "total_collections": 14,
-    "total_entities": 2625,
-    "updated_at_unix_ms": "1778593090850"
+    "total_collections": 16,
+    "total_entities": 2587,
+    "updated_at_unix_ms": "1778628150484"
   },
   "collection_contracts": [
+    {
+      "append_only": true,
+      "context_index_enabled": false,
+      "context_index_fields": [],
+      "created_at_unix_ms": "1778628136625",
+      "declared_columns": [],
+      "declared_model": "timeseries",
+      "default_ttl_ms": null,
+      "name": "ingest_log",
+      "origin": "explicit",
+      "schema_mode": "semi_structured",
+      "subscriptions": [],
+      "table_def": null,
+      "timestamps_enabled": false,
+      "updated_at_unix_ms": "1778628136625",
+      "version": 1
+    },
     {
       "append_only": false,
       "context_index_enabled": false,
       "context_index_fields": [],
-      "created_at_unix_ms": "1778590735433",
+      "created_at_unix_ms": "1778628136433",
       "declared_columns": [],
       "declared_model": "config",
       "default_ttl_ms": null,
@@ -93,14 +120,14 @@
       "subscriptions": [],
       "table_def": null,
       "timestamps_enabled": false,
-      "updated_at_unix_ms": "1778590735433",
+      "updated_at_unix_ms": "1778628136433",
       "version": 1
     },
     {
       "append_only": false,
       "context_index_enabled": false,
       "context_index_fields": [],
-      "created_at_unix_ms": "1778590735443",
+      "created_at_unix_ms": "1778628136441",
       "declared_columns": [],
       "declared_model": "vault",
       "default_ttl_ms": null,
@@ -110,14 +137,14 @@
       "subscriptions": [],
       "table_def": null,
       "timestamps_enabled": false,
-      "updated_at_unix_ms": "1778590735443",
+      "updated_at_unix_ms": "1778628136441",
       "version": 1
     },
     {
       "append_only": false,
       "context_index_enabled": false,
       "context_index_fields": [],
-      "created_at_unix_ms": "1778590735648",
+      "created_at_unix_ms": "1778628136670",
       "declared_columns": [],
       "declared_model": "graph",
       "default_ttl_ms": null,
@@ -127,15 +154,85 @@
       "subscriptions": [],
       "table_def": null,
       "timestamps_enabled": false,
-      "updated_at_unix_ms": "1778590735648",
+      "updated_at_unix_ms": "1778628136670",
       "version": 1
     }
   ],
   "collection_ttl_defaults_ms": {},
   "exports": [],
-  "generated_at_unix_ms": "1778593090850",
+  "generated_at_unix_ms": "1778628150484",
   "graph_projections": [],
   "indexes": [
+    {
+      "artifact_checksum": null,
+      "artifact_kind": "graph.adjacency",
+      "artifact_root_page": null,
+      "backend": "adjacency-map",
+      "build_state": "registry-loaded",
+      "collection": "ingest_log",
+      "enabled": true,
+      "entries": 0,
+      "estimated_memory_bytes": "0",
+      "kind": "graph.adjacency",
+      "last_refresh_ms": "1778628136648",
+      "name": "ingest_log::graph-adjacency"
+    },
+    {
+      "artifact_checksum": null,
+      "artifact_kind": null,
+      "artifact_root_page": null,
+      "backend": "page-btree",
+      "build_state": "registry-loaded",
+      "collection": "ingest_log",
+      "enabled": true,
+      "entries": 0,
+      "estimated_memory_bytes": "0",
+      "kind": "btree",
+      "last_refresh_ms": "1778628136648",
+      "name": "ingest_log::metadata-btree"
+    },
+    {
+      "artifact_checksum": null,
+      "artifact_kind": null,
+      "artifact_root_page": null,
+      "backend": "hybrid-score",
+      "build_state": "registry-loaded",
+      "collection": "ingest_log",
+      "enabled": true,
+      "entries": 0,
+      "estimated_memory_bytes": "0",
+      "kind": "search.hybrid",
+      "last_refresh_ms": "1778628136648",
+      "name": "ingest_log::search-hybrid"
+    },
+    {
+      "artifact_checksum": null,
+      "artifact_kind": "hnsw",
+      "artifact_root_page": null,
+      "backend": "vector-hnsw",
+      "build_state": "registry-loaded",
+      "collection": "ingest_log",
+      "enabled": true,
+      "entries": 0,
+      "estimated_memory_bytes": "0",
+      "kind": "vector.hnsw",
+      "last_refresh_ms": "1778628136648",
+      "name": "ingest_log::vector-hnsw"
+    },
+    {
+      "artifact_checksum": null,
+      "artifact_kind": "ivf",
+      "artifact_root_page": null,
+      "backend": "vector-ivf",
+      "build_state": "registry-loaded",
+      "collection": "ingest_log",
+      "enabled": true,
+      "entries": 0,
+      "estimated_memory_bytes": "0",
+      "kind": "vector.inverted",
+      "last_refresh_ms": "1778628136648",
+      "name": "ingest_log::vector-inverted"
+    },
     {
       "artifact_checksum": null,
       "artifact_kind": "graph.adjacency",
@@ -147,7 +244,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778590735433",
+      "last_refresh_ms": "1778628136433",
       "name": "red.config::graph-adjacency"
     },
     {
@@ -161,7 +258,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778590735433",
+      "last_refresh_ms": "1778628136433",
       "name": "red.config::metadata-btree"
     },
     {
@@ -175,7 +272,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778590735433",
+      "last_refresh_ms": "1778628136433",
       "name": "red.config::search-hybrid"
     },
     {
@@ -189,7 +286,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778590735433",
+      "last_refresh_ms": "1778628136433",
       "name": "red.config::vector-hnsw"
     },
     {
@@ -203,7 +300,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778590735433",
+      "last_refresh_ms": "1778628136433",
       "name": "red.config::vector-inverted"
     },
     {
@@ -217,7 +314,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778590735453",
+      "last_refresh_ms": "1778628136450",
       "name": "red.vault::graph-adjacency"
     },
     {
@@ -231,7 +328,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778590735453",
+      "last_refresh_ms": "1778628136450",
       "name": "red.vault::metadata-btree"
     },
     {
@@ -245,7 +342,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778590735453",
+      "last_refresh_ms": "1778628136450",
       "name": "red.vault::search-hybrid"
     },
     {
@@ -259,7 +356,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778590735453",
+      "last_refresh_ms": "1778628136450",
       "name": "red.vault::vector-hnsw"
     },
     {
@@ -273,7 +370,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778590735453",
+      "last_refresh_ms": "1778628136450",
       "name": "red.vault::vector-inverted"
     },
     {
@@ -287,7 +384,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628136648",
       "name": "red_closure::graph-adjacency"
     },
     {
@@ -301,7 +398,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628136648",
       "name": "red_closure::metadata-btree"
     },
     {
@@ -315,7 +412,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628136648",
       "name": "red_closure::search-hybrid"
     },
     {
@@ -329,7 +426,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628136648",
       "name": "red_closure::vector-hnsw"
     },
     {
@@ -343,7 +440,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628136648",
       "name": "red_closure::vector-inverted"
     },
     {
@@ -357,7 +454,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628136648",
       "name": "red_commits::graph-adjacency"
     },
     {
@@ -371,7 +468,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628136648",
       "name": "red_commits::metadata-btree"
     },
     {
@@ -385,7 +482,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628136648",
       "name": "red_commits::search-hybrid"
     },
     {
@@ -399,7 +496,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628136648",
       "name": "red_commits::vector-hnsw"
     },
     {
@@ -413,7 +510,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628136648",
       "name": "red_commits::vector-inverted"
     },
     {
@@ -427,7 +524,7 @@
       "entries": 101,
       "estimated_memory_bytes": "6464",
       "kind": "btree",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628136648",
       "name": "red_config::metadata-btree"
     },
     {
@@ -441,7 +538,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628136648",
       "name": "red_conflicts::graph-adjacency"
     },
     {
@@ -455,7 +552,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628136648",
       "name": "red_conflicts::metadata-btree"
     },
     {
@@ -469,7 +566,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628136648",
       "name": "red_conflicts::search-hybrid"
     },
     {
@@ -483,7 +580,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628136648",
       "name": "red_conflicts::vector-hnsw"
     },
     {
@@ -497,7 +594,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628136648",
       "name": "red_conflicts::vector-inverted"
     },
     {
@@ -511,7 +608,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628136648",
       "name": "red_merge_state::graph-adjacency"
     },
     {
@@ -519,13 +616,13 @@
       "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "page-btree",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_merge_state",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628150467",
       "name": "red_merge_state::metadata-btree"
     },
     {
@@ -533,55 +630,55 @@
       "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "hybrid-score",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_merge_state",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628150467",
       "name": "red_merge_state::search-hybrid"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "hnsw",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "vector-hnsw",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_merge_state",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628150467",
       "name": "red_merge_state::vector-hnsw"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "ivf",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "vector-ivf",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_merge_state",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628150467",
       "name": "red_merge_state::vector-inverted"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "graph.adjacency",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "adjacency-map",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_migration_deps",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778590746293",
+      "last_refresh_ms": "1778628150467",
       "name": "red_migration_deps::graph-adjacency"
     },
     {
@@ -595,7 +692,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_migration_deps::metadata-btree"
     },
     {
@@ -609,7 +706,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_migration_deps::search-hybrid"
     },
     {
@@ -623,7 +720,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_migration_deps::vector-hnsw"
     },
     {
@@ -637,7 +734,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_migration_deps::vector-inverted"
     },
     {
@@ -651,7 +748,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_migrations::graph-adjacency"
     },
     {
@@ -665,7 +762,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_migrations::metadata-btree"
     },
     {
@@ -679,7 +776,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_migrations::search-hybrid"
     },
     {
@@ -693,7 +790,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_migrations::vector-hnsw"
     },
     {
@@ -707,7 +804,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_migrations::vector-inverted"
     },
     {
@@ -721,7 +818,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_refs::graph-adjacency"
     },
     {
@@ -735,7 +832,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_refs::metadata-btree"
     },
     {
@@ -749,7 +846,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_refs::search-hybrid"
     },
     {
@@ -763,7 +860,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_refs::vector-hnsw"
     },
     {
@@ -777,7 +874,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_refs::vector-inverted"
     },
     {
@@ -791,7 +888,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_remotes::graph-adjacency"
     },
     {
@@ -805,7 +902,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_remotes::metadata-btree"
     },
     {
@@ -819,7 +916,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_remotes::search-hybrid"
     },
     {
@@ -833,7 +930,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_remotes::vector-hnsw"
     },
     {
@@ -847,8 +944,22 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_remotes::vector-inverted"
+    },
+    {
+      "artifact_checksum": null,
+      "artifact_kind": null,
+      "artifact_root_page": null,
+      "backend": "page-btree",
+      "build_state": "catalog-derived",
+      "collection": "red_timeseries_meta",
+      "enabled": true,
+      "entries": 1,
+      "estimated_memory_bytes": "64",
+      "kind": "btree",
+      "last_refresh_ms": "1778628150467",
+      "name": "red_timeseries_meta::metadata-btree"
     },
     {
       "artifact_checksum": null,
@@ -861,7 +972,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_vcs_settings::graph-adjacency"
     },
     {
@@ -875,7 +986,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_vcs_settings::metadata-btree"
     },
     {
@@ -889,7 +1000,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_vcs_settings::search-hybrid"
     },
     {
@@ -903,7 +1014,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_vcs_settings::vector-hnsw"
     },
     {
@@ -917,7 +1028,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_vcs_settings::vector-inverted"
     },
     {
@@ -931,7 +1042,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_worksets::graph-adjacency"
     },
     {
@@ -945,7 +1056,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_worksets::metadata-btree"
     },
     {
@@ -959,7 +1070,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_worksets::search-hybrid"
     },
     {
@@ -973,7 +1084,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_worksets::vector-hnsw"
     },
     {
@@ -987,7 +1098,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "red_worksets::vector-inverted"
     },
     {
@@ -998,10 +1109,10 @@
       "build_state": "catalog-derived",
       "collection": "tales",
       "enabled": true,
-      "entries": 6964,
-      "estimated_memory_bytes": "668544",
+      "entries": 6901,
+      "estimated_memory_bytes": "662496",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "tales::graph-adjacency"
     },
     {
@@ -1015,15 +1126,15 @@
       "entries": 2396,
       "estimated_memory_bytes": "153344",
       "kind": "btree",
-      "last_refresh_ms": "1778593090844",
+      "last_refresh_ms": "1778628150467",
       "name": "tales::metadata-btree"
     }
   ],
-  "last_healed_at_unix_ms": "1778590735416",
+  "last_healed_at_unix_ms": "1778628136421",
   "last_loaded_from": "native_bootstrap",
   "manifest": {
-    "collection_count": 14,
-    "created_at_unix_ms": "1778590735416",
+    "collection_count": 16,
+    "created_at_unix_ms": "1778628136421",
     "format_version": 2,
     "options": {
       "auto_checkpoint_pages": 1000,
@@ -1047,7 +1158,7 @@
       "snapshot_retention": 16,
       "verify_checksums": true
     },
-    "updated_at_unix_ms": "1778593090850"
+    "updated_at_unix_ms": "1778628150484"
   },
   "manifest_events": [
     {
@@ -1063,12 +1174,12 @@
     },
     {
       "block": {
-        "checksum": "272534938462958138082650447390934302722",
-        "index": "14774148617987123795"
+        "checksum": "106562900284719249991573296357490819074",
+        "index": "5776786399752439492"
       },
-      "collection": "tales",
-      "kind": "update",
-      "object_key": "tales",
+      "collection": "red_timeseries_meta",
+      "kind": "insert",
+      "object_key": "red_timeseries_meta",
       "snapshot_max": null,
       "snapshot_min": "2"
     },
@@ -1085,12 +1196,23 @@
     },
     {
       "block": {
-        "checksum": "168347749235965564576238410150468124675",
-        "index": "9126149772733939217"
+        "checksum": "118595452058775840316566007235370549251",
+        "index": "6429072338451262778"
       },
-      "collection": "red_config",
+      "collection": "ingest_log",
       "kind": "update",
-      "object_key": "red_config",
+      "object_key": "ingest_log",
+      "snapshot_max": null,
+      "snapshot_min": "3"
+    },
+    {
+      "block": {
+        "checksum": "195401922786348291666810992246663413763",
+        "index": "10592759459640180485"
+      },
+      "collection": "tales",
+      "kind": "update",
+      "object_key": "tales",
       "snapshot_max": null,
       "snapshot_min": "3"
     },
@@ -1107,17 +1229,6 @@
     },
     {
       "block": {
-        "checksum": "9311593398581273306390558539666948100",
-        "index": "504782489602174906"
-      },
-      "collection": "red_config",
-      "kind": "update",
-      "object_key": "red_config",
-      "snapshot_max": null,
-      "snapshot_min": "4"
-    },
-    {
-      "block": {
         "checksum": "73786976294838206468",
         "index": "4"
       },
@@ -1126,348 +1237,64 @@
       "object_key": "superblock:4",
       "snapshot_max": null,
       "snapshot_min": "4"
-    },
-    {
-      "block": {
-        "checksum": "92233720368547758085",
-        "index": "5"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:5",
-      "snapshot_max": null,
-      "snapshot_min": "5"
-    },
-    {
-      "block": {
-        "checksum": "169466481085809550321763539966027104262",
-        "index": "9186796347835418041"
-      },
-      "collection": "red_config",
-      "kind": "update",
-      "object_key": "red_config",
-      "snapshot_max": null,
-      "snapshot_min": "6"
-    },
-    {
-      "block": {
-        "checksum": "110680464442257309702",
-        "index": "6"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:6",
-      "snapshot_max": null,
-      "snapshot_min": "6"
-    },
-    {
-      "block": {
-        "checksum": "129127208515966861319",
-        "index": "7"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:7",
-      "snapshot_max": null,
-      "snapshot_min": "7"
-    },
-    {
-      "block": {
-        "checksum": "228936062647874432703358361617838374920",
-        "index": "12410648824155150232"
-      },
-      "collection": "red_config",
-      "kind": "update",
-      "object_key": "red_config",
-      "snapshot_max": null,
-      "snapshot_min": "8"
-    },
-    {
-      "block": {
-        "checksum": "147573952589676412936",
-        "index": "8"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:8",
-      "snapshot_max": null,
-      "snapshot_min": "8"
-    },
-    {
-      "block": {
-        "checksum": "166020696663385964553",
-        "index": "9"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:9",
-      "snapshot_max": null,
-      "snapshot_min": "9"
-    },
-    {
-      "block": {
-        "checksum": "107598438296090269200245486784073433098",
-        "index": "5832923027833428393"
-      },
-      "collection": "red_config",
-      "kind": "update",
-      "object_key": "red_config",
-      "snapshot_max": null,
-      "snapshot_min": "10"
-    },
-    {
-      "block": {
-        "checksum": "184467440737095516170",
-        "index": "10"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:10",
-      "snapshot_max": null,
-      "snapshot_min": "10"
-    },
-    {
-      "block": {
-        "checksum": "202914184810805067787",
-        "index": "11"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:11",
-      "snapshot_max": null,
-      "snapshot_min": "11"
-    },
-    {
-      "block": {
-        "checksum": "161309698818813875568457256076316770316",
-        "index": "8744616295117020619"
-      },
-      "collection": "red_config",
-      "kind": "update",
-      "object_key": "red_config",
-      "snapshot_max": null,
-      "snapshot_min": "12"
-    },
-    {
-      "block": {
-        "checksum": "221360928884514619404",
-        "index": "12"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:12",
-      "snapshot_max": null,
-      "snapshot_min": "12"
-    },
-    {
-      "block": {
-        "checksum": "239807672958224171021",
-        "index": "13"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:13",
-      "snapshot_max": null,
-      "snapshot_min": "13"
-    },
-    {
-      "block": {
-        "checksum": "99154375520089793487110235532463964174",
-        "index": "5375169467516243635"
-      },
-      "collection": "red_config",
-      "kind": "update",
-      "object_key": "red_config",
-      "snapshot_max": null,
-      "snapshot_min": "14"
-    },
-    {
-      "block": {
-        "checksum": "258254417031933722638",
-        "index": "14"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:14",
-      "snapshot_max": null,
-      "snapshot_min": "14"
-    },
-    {
-      "block": {
-        "checksum": "276701161105643274255",
-        "index": "15"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:15",
-      "snapshot_max": null,
-      "snapshot_min": "15"
-    },
-    {
-      "block": {
-        "checksum": "66753492950991478798484081856997228560",
-        "index": "3618714103923038384"
-      },
-      "collection": "red_config",
-      "kind": "update",
-      "object_key": "red_config",
-      "snapshot_max": null,
-      "snapshot_min": "16"
-    },
-    {
-      "block": {
-        "checksum": "295147905179352825872",
-        "index": "16"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:16",
-      "snapshot_max": null,
-      "snapshot_min": "16"
-    },
-    {
-      "block": {
-        "checksum": "313594649253062377489",
-        "index": "17"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:17",
-      "snapshot_max": null,
-      "snapshot_min": "17"
     }
   ],
   "protocol_version": "reddb-physical-v1",
   "snapshots": [
     {
-      "collection_count": 14,
-      "created_at_unix_ms": "1778590746313",
+      "collection_count": 0,
+      "created_at_unix_ms": "1778628136421",
+      "snapshot_id": "0",
+      "superblock_sequence": "0",
+      "total_entities": 0
+    },
+    {
+      "collection_count": 2,
+      "created_at_unix_ms": "1778628136451",
+      "snapshot_id": "1",
+      "superblock_sequence": "1",
+      "total_entities": 0
+    },
+    {
+      "collection_count": 15,
+      "created_at_unix_ms": "1778628136649",
       "snapshot_id": "2",
       "superblock_sequence": "2",
-      "total_entities": 2497
+      "total_entities": 102
     },
     {
-      "collection_count": 14,
-      "created_at_unix_ms": "1778590758842",
+      "collection_count": 16,
+      "created_at_unix_ms": "1778628149798",
       "snapshot_id": "3",
       "superblock_sequence": "3",
-      "total_entities": 2513
+      "total_entities": 2587
     },
     {
-      "collection_count": 14,
-      "created_at_unix_ms": "1778592115497",
+      "collection_count": 16,
+      "created_at_unix_ms": "1778628150484",
       "snapshot_id": "4",
       "superblock_sequence": "4",
-      "total_entities": 2529
-    },
-    {
-      "collection_count": 14,
-      "created_at_unix_ms": "1778592116931",
-      "snapshot_id": "5",
-      "superblock_sequence": "5",
-      "total_entities": 2529
-    },
-    {
-      "collection_count": 14,
-      "created_at_unix_ms": "1778592387068",
-      "snapshot_id": "6",
-      "superblock_sequence": "6",
-      "total_entities": 2545
-    },
-    {
-      "collection_count": 14,
-      "created_at_unix_ms": "1778592388078",
-      "snapshot_id": "7",
-      "superblock_sequence": "7",
-      "total_entities": 2545
-    },
-    {
-      "collection_count": 14,
-      "created_at_unix_ms": "1778592403420",
-      "snapshot_id": "8",
-      "superblock_sequence": "8",
-      "total_entities": 2561
-    },
-    {
-      "collection_count": 14,
-      "created_at_unix_ms": "1778592404365",
-      "snapshot_id": "9",
-      "superblock_sequence": "9",
-      "total_entities": 2561
-    },
-    {
-      "collection_count": 14,
-      "created_at_unix_ms": "1778592427835",
-      "snapshot_id": "10",
-      "superblock_sequence": "10",
-      "total_entities": 2577
-    },
-    {
-      "collection_count": 14,
-      "created_at_unix_ms": "1778592428347",
-      "snapshot_id": "11",
-      "superblock_sequence": "11",
-      "total_entities": 2577
-    },
-    {
-      "collection_count": 14,
-      "created_at_unix_ms": "1778592968127",
-      "snapshot_id": "12",
-      "superblock_sequence": "12",
-      "total_entities": 2593
-    },
-    {
-      "collection_count": 14,
-      "created_at_unix_ms": "1778592968539",
-      "snapshot_id": "13",
-      "superblock_sequence": "13",
-      "total_entities": 2593
-    },
-    {
-      "collection_count": 14,
-      "created_at_unix_ms": "1778593021589",
-      "snapshot_id": "14",
-      "superblock_sequence": "14",
-      "total_entities": 2609
-    },
-    {
-      "collection_count": 14,
-      "created_at_unix_ms": "1778593022008",
-      "snapshot_id": "15",
-      "superblock_sequence": "15",
-      "total_entities": 2609
-    },
-    {
-      "collection_count": 14,
-      "created_at_unix_ms": "1778593090466",
-      "snapshot_id": "16",
-      "superblock_sequence": "16",
-      "total_entities": 2625
-    },
-    {
-      "collection_count": 14,
-      "created_at_unix_ms": "1778593090850",
-      "snapshot_id": "17",
-      "superblock_sequence": "17",
-      "total_entities": 2625
+      "total_entities": 2587
     }
   ],
   "superblock": {
     "collection_roots": {
+      "ingest_log": "6429072338451262778",
       "red.config": "6141268819718733570",
       "red.vault": "4046765320294292152",
       "red_closure": "2962625817060036908",
       "red_commits": "8835022039134948539",
-      "red_config": "3618714103923038384",
+      "red_config": "14040946897314763130",
       "red_conflicts": "1534443990078542426",
       "red_merge_state": "4230045656060963467",
       "red_migration_deps": "2873662948492294836",
       "red_migrations": "12837160998890813542",
       "red_refs": "8767304113166891413",
       "red_remotes": "14034059703144543526",
+      "red_timeseries_meta": "5776786399752439492",
       "red_vcs_settings": "18015840595644011411",
       "red_worksets": "4675175877922372847",
-      "tales": "14774148617987123795"
+      "tales": "10592759459640180485"
     },
     "copies": 4,
     "format_version": 2,
@@ -1485,7 +1312,7 @@
         "index": "0"
       }
     },
-    "sequence": "17"
+    "sequence": "4"
   },
   "tree_definitions": []
 }

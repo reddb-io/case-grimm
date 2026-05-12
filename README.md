@@ -1,228 +1,120 @@
-# Grimms' Fairy Tales — RedDB Graph Playground
+# Grimms' Fairy Tales — a Queryable Folklore Graph
 
-An executable folklore graph built with [RedDB](https://github.com/reddb-io/reddb).
+> *"Cinderella is structurally the miller's daughter from Rumpelstiltskin
+> at 63.6%."* — a fact this repo will tell you in 30 ms.
 
-This repo turns the **Grimms' Fairy Tales** corpus into a graph of characters,
-tales, archetypes, themes, places, magic objects, symbolic numbers, and the
-relationships between them. It also ships a committed RedDB snapshot, so users
-can query the graph immediately instead of waiting for ingestion.
+A live, queryable knowledge graph of the **62 Grimms' Fairy Tales** built on
+[RedDB](https://github.com/reddb-io/reddb). Characters, archetypes, themes,
+places, magic objects, and symbolic numbers — wired together as **655 nodes
+and 1,741 directed edges** — and shipped as a **committed RedDB snapshot** so
+you can query the graph the second you clone the repo.
 
-The fun part: the graph starts surfacing folklore structure. Cinderella maps
-onto the miller's daughter from *Rumpelstiltskin*. The Little Red-Cap wolf maps
-onto a human cannibal bridegroom. The Frog Prince splits into two roles in
-*Lily and the Lion*. Those are not hard-coded comparisons; they fall out of the
-ontology and graph.
-
-## Try It
+No ingest step. No setup. Open the database, ask folklore questions in SQL.
 
 ```bash
-cd src/embedded
+git clone <repo> && cd ex-grimms-fairy-tales/src/embedded
 pnpm install
-pnpm start
 pnpm query "GRAPH CENTRALITY"
-pnpm sim cinderella 3
+pnpm sim cinderella 5
 ```
 
-The committed snapshot contains:
+---
 
-| item | count |
-|------|------:|
-| tales | 62 |
-| graph nodes | 655 |
-| graph edges | 1,741 |
+## What the Graph Knows
+
+| | |
+|---|---:|
+| tales | **62** |
+| graph nodes | **655** |
+| graph edges | **1,741** |
 | characters | 402 |
 | magic objects | 116 |
 | archetypes | 15 |
 | themes | 17 |
+| locations | 11 |
+| species | 28 |
+| symbolic numbers | 4 |
 
-## Goal
+Eight node types, ~30 edge labels, all directed. See
+[`input/SCHEMA.md`](./input/SCHEMA.md) for the full schema and
+[`input/ONTOLOGY.md`](./input/ONTOLOGY.md) for the tale-agnostic vocabulary.
 
-Learn and showcase RedDB's **graph** model by mapping:
+---
 
-- **Nodes** — characters, stories, archetypes, themes, locations, magic objects, symbolic numbers.
-- **Edges** — `APPEARS_IN`, `MARRIES`, `KILLS`, `HELPS`, `DECEIVES`, `EATS`,
-  `IS_ARCHETYPE`, `CONTAINS_THEME`, `HAS_LOCATION`, `HAS_MAGIC_OBJECT`, etc.
+## What the Graph Discovers
 
-Then explore questions like:
-
-- Which characters appear in more than one tale?
-- Which animals speak? Which characters get devoured?
-- Which tales share a theme (forest, hunger, false death, broken promise)?
-- How often does the number 7 show up across stories?
-- Multi-hop traversals (prince → bride → stepmother → witch).
-- Ad hoc SQL and graph-algorithm queries against the committed database.
-
-## Things The Graph Finds
+These insights aren't hard-coded — they fall out of the ontology + traversal.
 
 | Try | Result |
 |-----|--------|
-| `pnpm sim cinderella 3` | Cinderella's strongest cross-tale match is the miller's daughter from *Rumpelstiltskin* at **63.6%**. They share `humble_hero`, `oppressed_maiden`, `castle`, `num_3`, `humble_triumph`, `magic_pact`, and `test_of_virtue`. |
-| `pnpm sim lrc_wolf 4` | The Little Red-Cap wolf matches the Seven Kids wolf at **69.2%**, but also the **human** cannibal bridegroom from *The Robber Bridegroom* at **46.7%**. Same predator function, different species. |
-| `pnpm sim gingerbread_witch 3` | The Hansel & Gretel witch's best cross-tale match is Old Sanna from *Fundevogel* at **43.8%**: another forest witch / predator / child-cooking pattern. |
-| `pnpm sim the_frog_prince_frog 3` | The Frog Prince maps equally to the Griffin and the enchanted Lion-Prince in *Lily and the Lion* at **57.1%** each. One compact character in one tale becomes two roles in another. |
-| `pnpm query "GRAPH CENTRALITY"` | The most central concepts are not specific princes or princesses; they are `arc_humble_hero`, `arc_wise_helper`, `theme_humble_triumph`, `loc_forest`, and `arc_trickster`. |
-| `pnpm query "SELECT COUNT(*) FROM tales WHERE label = 'DECEIVES'"` | Deception appears **71** times across the graph. |
+| `pnpm sim cinderella 3` | Cinderella's strongest cross-tale match is the **miller's daughter from *Rumpelstiltskin* at 63.6%**. Shared: `humble_hero`, `oppressed_maiden`, `castle`, `num_3`, `humble_triumph`, `magic_pact`, `test_of_virtue`. |
+| `pnpm sim lrc_wolf 4` | The Little Red-Cap wolf matches the Seven Kids wolf at 69.2% — but also the **human cannibal bridegroom** from *The Robber Bridegroom* at 46.7%. Same predator function, different species. |
+| `pnpm sim gingerbread_witch 3` | The Hansel & Gretel witch's best cross-tale match is **Old Sanna from *Fundevogel* at 43.8%**: another forest witch / predator / child-cooking pattern. |
+| `pnpm sim the_frog_prince_frog 3` | The Frog Prince maps equally to the **Griffin and the enchanted Lion-Prince** in *Lily and the Lion* at 57.1% each. One compact character becomes two roles in another tale. |
+| `pnpm query "GRAPH CENTRALITY"` | The most central concepts are not specific princes; they are `arc_humble_hero`, `arc_wise_helper`, `theme_humble_triumph`, `loc_forest`, `arc_trickster`. The skeleton of fairy tale. |
+| `pnpm query "SELECT COUNT(*) FROM tales WHERE label = 'DECEIVES'"` | Deception appears **71** times across the corpus. |
 
-## Stack
+---
 
-- **RedDB** — multi-model engine (graph + document + vector).
-- **pnpm** — package manager.
-- **TypeScript / Node** — ingestion and query scripts.
+## How to Use the Graph
 
-## Layout
+Everything goes through `pnpm query "<SQL or GRAPH>"`, which opens the
+committed `output/embedded.rdb` and runs your query against the `tales`
+collection.
 
-```
-.
-├── input/                  # corpus + curated structured data — see input/SCHEMA.md
-│   ├── BOOKS.txt           # raw Gutenberg corpus
-│   ├── TALES.json          # manifest of every tale in BOOKS.txt + modelled status
-│   ├── SCHEMA.md           # graph schema: node types, edge labels, conventions
-│   ├── ONTOLOGY.md         # canonical definition of the tale-agnostic vocabulary
-│   ├── ontology.json       # loader-consumable mirror of ONTOLOGY.md
-│   └── tales/
-│       ├── <slug>.txt      # tale body sliced from BOOKS.txt
-│       └── <slug>.json     # graph data for that tale (modelled only)
-├── src/
-│   ├── shared/             # shared loader (recursive glob + dedupe)
-│   ├── embedded/           # RedDB embedded in-process (@reddb-io/sdk)
-│   └── server/             # RedDB as a Docker server + HTTP client
-├── output/                 # committed snapshots + runtime output
-└── README.md
-```
-
-Folder conventions:
-
-- **`input/`** — the source of truth: raw corpus + every curated graph JSON.
-  The loader walks this tree recursively and treats any `.json` file
-  containing a `collection` field as graph data. Files without one
-  (like `TALES.json`) are ignored by the loader.
-- **`input/TALES.json`** — manifest listing every tale found in `BOOKS.txt`,
-  with `modelled: true|false` and a pointer to the graph file when modelled.
-- **`output/`** — committed RedDB snapshots plus generated runtime files.
-  `embedded.rdb` is ready to query locally; `server.rdb` is the server-mode
-  snapshot used by `docker-compose.yml`. Logs and result caches stay ignored.
-
-## Examples
-
-| Example | When to use it                                | Stack                              | DB file               |
-|---------|-----------------------------------------------|------------------------------------|-----------------------|
-| [embedded](./src/embedded) | local scripts, ETL, single-process | `@reddb-io/sdk` + stdio JSON-RPC   | `output/embedded.rdb` |
-| [server](./src/server)     | multiple clients, containers      | Docker + HTTP JSON (native fetch)  | `output/server.rdb`   |
-
-The `embedded` example also ships **`pnpm sim <character>`** — a Jaccard
-similarity engine over each character's ontological fingerprint (archetypes
-+ species + their tale's themes/locations/numbers). Surfaces cross-tale
-narrative parallels like *"Cinderella is structurally the miller's
-daughter in Rumpelstiltskin (64%)"* or *"the cannibal bridegroom plays
-the Little Red-Cap wolf's role (47%)"*. See [`src/embedded/README.md`](./src/embedded/README.md#pnpm-sim-character_slug-topn---same-tale--similarity-engine) for cooler examples.
-
-Both walk `input/` recursively (via `src/shared/load-graph.ts`) and
-populate the same `tales` collection. Nodes are deduped by `label`, so
-shared ontology entries (archetypes, themes, etc.) are inserted once even
-if referenced from multiple tale files.
-
-See [`input/SCHEMA.md`](./input/SCHEMA.md) for the full list of node types,
-edge labels, naming conventions, and sample queries.
-
-## What You Can Test
-
-The repo includes a committed `output/embedded.rdb`, so users can query the
-graph immediately after installing dependencies. No ingest step is required
-unless they delete the database or point `REDDB_URI` somewhere else.
+### 1. SQL — count, group, filter
 
 ```bash
-cd src/embedded
-pnpm install
-```
-
-Run the full demo suite against the committed database:
-
-```bash
-pnpm start
-```
-
-This opens `../../output/embedded.rdb`, skips ingest when the collection is
-already populated, then prints:
-
-- entity counts by type (`character`, `tale`, `theme`, `archetype`, etc.)
-- most common edge labels (`APPEARS_IN`, `IS_ARCHETYPE`, `DECEIVES`, ...)
-- counts for narrative actions like `EATS`, `KILLS`, `CURSES`, `RESCUES`
-- graph analytics: `CENTRALITY`, `COMMUNITY`, `COMPONENTS`, `CYCLES`,
-  `CLUSTERING`, `PROPERTIES`
-- shortest paths between known characters such as `evil_queen → snow_white`
-  and `lrc_wolf → wsk_wolf`
-
-Ask ad hoc SQL/GRAPH questions with `pnpm query`. Example commands and
-results from the committed snapshot:
-
-```bash
+# Entity distribution by node type
 pnpm query "SELECT node_type, COUNT(*) FROM tales WHERE node_type IS NOT NULL GROUP BY node_type"
-```
 
-| node_type | count |
-|-----------|------:|
-| character | 402 |
-| magic_object | 116 |
-| tale | 62 |
-| species | 28 |
-| theme | 17 |
-| archetype | 15 |
-| location | 11 |
-| symbol_number | 4 |
-
-```bash
+# Top relationship labels by frequency
 pnpm query "SELECT label, COUNT(*) FROM tales WHERE node_type IS NULL GROUP BY label"
-```
 
-Top relationship counts:
-
-| label | count |
-|-------|------:|
-| `APPEARS_IN` | 399 |
-| `IS_ARCHETYPE` | 286 |
-| `CONTAINS_THEME` | 253 |
-| `HAS_MAGIC_OBJECT` | 116 |
-| `HAS_LOCATION` | 109 |
-| `IS_SPECIES` | 99 |
-| `CHILD_OF` | 75 |
-| `DECEIVES` | 71 |
-| `HELPS` | 59 |
-| `SIBLING_OF` | 44 |
-
-```bash
+# How often does X happen?
 pnpm query "SELECT COUNT(*) FROM tales WHERE label = 'DECEIVES'"
+pnpm query "SELECT COUNT(*) FROM tales WHERE label = 'KILLS'"
+pnpm query "SELECT COUNT(*) FROM tales WHERE label = 'EATS'"
 ```
 
-| count |
-|------:|
-| 71 |
+| node_type | count |   | label | count |
+|---|---:|---|---|---:|
+| character | 402 |   | `APPEARS_IN` | 399 |
+| magic_object | 116 |   | `IS_ARCHETYPE` | 286 |
+| tale | 62 |   | `CONTAINS_THEME` | 253 |
+| species | 28 |   | `HAS_MAGIC_OBJECT` | 116 |
+| theme | 17 |   | `HAS_LOCATION` | 109 |
+| archetype | 15 |   | `IS_SPECIES` | 99 |
+| location | 11 |   | `DECEIVES` | 71 |
+| symbol_number | 4 |   | `HELPS` | 59 |
+
+### 2. `GRAPH CENTRALITY` — what's structurally important
 
 ```bash
 pnpm query "GRAPH CENTRALITY"
 ```
 
-Top central nodes:
-
 | label | score |
-|-------|------:|
+|---|---:|
 | `arc_humble_hero` | 49 |
 | `arc_wise_helper` | 39 |
 | `theme_humble_triumph` | 37 |
 | `loc_forest` | 34 |
 | `arc_trickster` | 33 |
-| `theme_moral_punishment` | 33 |
-| `loc_castle` | 30 |
-| `theme_test_of_virtue` | 29 |
-| `arc_animal_helper` | 28 |
-| `arc_fool` | 27 |
+
+Reads like a syllabus on what fairy tales are *about*.
+
+### 3. `GRAPH PROPERTIES` — global stats
 
 ```bash
 pnpm query "GRAPH PROPERTIES"
 ```
 
 | node_count | edge_count | density | is_connected | is_cyclic |
-|-----------:|-----------:|--------:|--------------|-----------|
-| 655 | 1741 | 0.007619581203165488 | false | true |
+|---:|---:|---:|---|---|
+| 655 | 1741 | 0.00762 | false | true |
+
+### 4. `GRAPH NEIGHBORHOOD` — what's around a node
 
 ```bash
 pnpm query "GRAPH NEIGHBORHOOD '128' DIRECTION both"
@@ -230,65 +122,178 @@ pnpm query "GRAPH NEIGHBORHOOD '128' DIRECTION both"
 
 Excerpt for node `128` (`theme_humble_triumph`):
 
-| depth | label | node_id |
-|------:|-------|--------:|
-| 0 | `theme_humble_triumph` | 128 |
-| 1 | `cinderella_tale` | 177 |
-| 1 | `hansel_gretel_tale` | 275 |
-| 1 | `rumpelstiltskin_tale` | 358 |
-| 1 | `the_golden_goose_tale` | 471 |
-| 1 | `the_valiant_little_tailor_tale` | 676 |
+| depth | label |
+|---:|---|
+| 0 | `theme_humble_triumph` |
+| 1 | `cinderella_tale` |
+| 1 | `hansel_gretel_tale` |
+| 1 | `rumpelstiltskin_tale` |
+| 1 | `the_golden_goose_tale` |
+| 1 | `the_valiant_little_tailor_tale` |
 
-Try narrative-similarity questions with the ontology fingerprint engine:
+### 5. `GRAPH SHORTEST_PATH` — multi-hop traversal
+
+`evil_queen → snow_white`, `lrc_wolf → wsk_wolf`, prince → bride → stepmother
+→ witch. Run `pnpm start` to see the full demo suite execute these
+automatically.
+
+### 6. `GRAPH COMMUNITY` / `COMPONENTS` / `CYCLES` / `CLUSTERING`
+
+```bash
+pnpm query "GRAPH COMMUNITY"
+pnpm query "GRAPH COMPONENTS"
+```
+
+Each surfaces a different lens on graph structure — natural clusters,
+disconnected sub-corpora, recurring cycles, local density.
+
+### 7. `pnpm sim <slug>` — Jaccard similarity over ontology fingerprints
 
 ```bash
 pnpm sim cinderella 5
-pnpm sim lrc_wolf 5
-pnpm sim gingerbread_witch 4
-pnpm sim the_frog_prince_frog 3
+pnpm sim hansel
+pnpm sim evil_queen
+pnpm sim the_blue_light_soldier
+pnpm sim cinderella --same-tale 8     # include intra-tale characters
 ```
 
-Good questions this project can answer today:
+Builds a per-character fingerprint of `{archetypes ∪ species ∪ tale themes
+∪ tale locations ∪ tale symbolic numbers}` and Jaccard-scores everyone
+against it. Excludes same-tale candidates by default so cross-tale
+narrative parallels surface. Full math + examples in
+[`src/embedded/README.md`](./src/embedded/README.md).
 
-- Which archetypes and themes are most central across the modelled tales?
-- Which edge types dominate the corpus?
-- How often do actions like deception, killing, rescue, capture, or devouring
-  appear?
-- Which tales or characters are connected by short graph paths?
-- Which characters in different tales play similar narrative roles?
+### 8. `pnpm insights <command>` — 21-command analytics CLI
 
-### Coverage
+Full folklore-analytics CLI built with [`cli-args-parser`](https://www.npmjs.com/package/cli-args-parser) —
+auto help, validation, completion. See [INSIGHTS.md](./INSIGHTS.md) for the
+full menu and example outputs. Highlights:
 
-`input/TALES.json` is the authoritative manifest. Today: **62 / 62 tales modelled**.
+```bash
+pnpm insights cooc theme                          # theme co-occurrence matrix
+pnpm insights prey                                # every EATS edge
+pnpm insights triangles                           # 3-cycles in narrative graph
+pnpm insights bridges                             # articulation points (Tarjan)
+pnpm insights pagerank                            # weighted PageRank
+pnpm insights weirdest -n 10                      # rarest fingerprints
+pnpm insights subgraph PREDATION                  # edge-typed slice + centrality
 
-| status     | tales |
-|------------|-------|
-| modelled   | all 62 tales from `BOOKS.txt` |
-| pending    | none |
+pnpm insights find theme:devouring loc:forest     # hybrid filter, returns table+subgraph
+pnpm insights recommend cinderella                # similar tales
+pnpm insights path cinderella snow_white          # shortest path between any 2 nodes
+pnpm insights explain cinderella                  # full dossier on a node
+pnpm insights match arc_predator sp_wolf theme_forest_danger
+pnpm insights stats                               # degree distribution, percentiles
+```
 
-To add a new tale: drop `input/tales/<slug>.json` following the format
-in `SCHEMA.md`, then flip the matching entry in `TALES.json` to
-`"modelled": true` and point `data_file` at it. No code changes needed.
+### 9. `pnpm insights cypher "<pattern>"` — graph-notation queries
+
+```bash
+pnpm insights cypher "(a)-[:DECEIVES]->(b) RETURN a, b"
+pnpm insights cypher "(a)-[:EATS]->(b)-[:APPEARS_IN]->(t) RETURN a, b, t"
+pnpm insights cypher "(a:character)-[:IS_ARCHETYPE]->(b {label:'arc_predator'}) RETURN a"
+```
+
+Subset Cypher pattern matcher: labeled edges, reverse direction (`<-`),
+node-type filters (`:character`), label filters (`{label:'…'}`), multi-hop
+traversals. See [INSIGHTS.md § Graph Notation](./INSIGHTS.md#graph-notation--cypher-subset).
+
+### 10. `pnpm insights logs` — timeseries collection
+
+The ingest process writes per-batch metrics to a **`ingest_log` TIMESERIES
+collection** living in the same `.rdb` file as the graph:
+
+```bash
+pnpm insights logs                                # summary by metric
+pnpm insights logs --metric nodes_batch_ms -n 7   # last 7 points
+```
+
+| metric | count | avg | min | max |
+|---|---:|---:|---:|---:|
+| `nodes_batch_ms` | 7 | 149 | 85 | 175 |
+| `edges_batch_ms` | 35 | 219 | 165 | 257 |
+| `ingest_total_ms` | 1 | 8996 | 8996 | 8996 |
+
+Showcases RedDB's multi-model engine — **graph + timeseries side-by-side**,
+one connection, one SQL surface. See
+[INSIGHTS.md § Multi-Model](./INSIGHTS.md#multi-model-timeseries--graph-in-one-database).
+
+---
+
+## Stack
+
+- **[RedDB](https://github.com/reddb-io/reddb)** — multi-model engine (graph
+  + document + vector) with SQL/GRAPH query layer.
+- **TypeScript / Node** — ingestion + query scripts.
+- **pnpm** — package manager.
+
+Two run modes:
+
+| Example | When to use | Stack | DB file |
+|---|---|---|---|
+| [`src/embedded`](./src/embedded) | local scripts, ETL, single-process | `@reddb-io/sdk` over stdio JSON-RPC | `output/embedded.rdb` |
+| [`src/server`](./src/server)   | multi-client, containers, remote   | Docker + HTTP / RedWire / gRPC      | `output/server.rdb`   |
+
+Same corpus, same `tales` collection, same query API — only `connect()`
+differs.
+
+---
+
+## Layout
+
+```
+.
+├── input/                  # corpus + curated graph data — see input/SCHEMA.md
+│   ├── BOOKS.txt           # raw Gutenberg corpus (62 tales)
+│   ├── TALES.json          # manifest: every tale + modelled status
+│   ├── SCHEMA.md           # node types, edge labels, conventions
+│   ├── ONTOLOGY.md         # tale-agnostic vocabulary definitions
+│   ├── ontology.json       # loader-consumable mirror of ONTOLOGY.md
+│   └── tales/
+│       ├── <slug>.txt      # tale body sliced from BOOKS.txt
+│       └── <slug>.json     # graph data (nodes + edges) for that tale
+├── src/
+│   ├── shared/             # recursive loader + dedupe (load-graph.ts)
+│   ├── embedded/           # RedDB in-process via @reddb-io/sdk
+│   └── server/             # RedDB as Docker server + HTTP/Wire/gRPC client
+├── output/                 # committed snapshots: embedded.rdb, server.rdb
+└── README.md
+```
+
+The loader walks `input/` recursively. Any `*.json` with a `collection`
+field is treated as graph data; nodes are deduped by `label` so shared
+ontology entries (archetypes, themes) are inserted once across all tales.
+
+---
+
+## Adding a Tale
+
+1. Drop `input/tales/<slug>.json` matching the format in [`SCHEMA.md`](./input/SCHEMA.md).
+2. Flip the entry in `TALES.json` to `"modelled": true` and point `data_file` at it.
+3. Delete `output/embedded.rdb` and run `pnpm start` to re-ingest.
+
+No code changes needed. Coverage today: **62 / 62 tales modelled**.
+
+---
 
 ## Roadmap
 
-1. [ ] Add more curated relationships for objects, transformations, promises,
-       punishments, and rescues.
-2. [ ] Add a small gallery of saved query examples and expected outputs.
-3. [ ] Add an `ASK` natural-language query demo over the graph.
+1. [ ] Curated edges for transformations, promises, punishments, rescues.
+2. [ ] Saved query gallery with expected outputs.
+3. [ ] `ASK` — natural-language query demo over the graph.
+
+---
 
 ## Acknowledgements
 
-This project is possible thanks to [Project Gutenberg](https://www.gutenberg.org/)
-and the volunteers who digitised, proofread, and released this collection into
-the public domain.
+Built on [Project Gutenberg](https://www.gutenberg.org/)'s digitisation of
+*Grimms' Fairy Tales* (eBook #2591, Jacob & Wilhelm Grimm).
+Edition credits: Emma Dudding, John Bickers, Dagny, David Widger.
+Released April 1, 2001.
 
-- **Corpus source**: <https://www.gutenberg.org/cache/epub/2591/pg2591.txt>
-- **eBook #2591** — *Grimms' Fairy Tales*, Jacob & Wilhelm Grimm
-- **Edition credits**: Emma Dudding, John Bickers, Dagny, David Widger
-- **Release date**: April 1, 2001
+- Corpus: <https://www.gutenberg.org/cache/epub/2591/pg2591.txt>
 
 ## License
 
 - Repo code: MIT.
-- Corpus: public domain (see Project Gutenberg license).
+- Corpus: public domain (Project Gutenberg).

@@ -60,7 +60,41 @@ const ID_OFFSET = 101
 const NODE_CHUNK = 100
 const EDGE_CHUNK = 50
 
-async function ingestNodes(db: RedDB, graph: GrimmGraph): Promise<Map<string, EntityId>> {
+/**
+ * Bootstraps the `ingest_log` TIMESERIES collection. RedDB ships native
+ * timeseries support; here we use it to record per-batch ingestion metrics
+ * so the showcase doubles as a demo of the timeseries model alongside graph.
+ *
+ * Columns are fixed by the engine: metric, value, tags (JSON string),
+ * timestamp (ms since epoch).
+ */
+async function ensureIngestLog(db: RedDB, name = 'ingest_log'): Promise<string> {
+  try {
+    await db.query(`CREATE TIMESERIES ${name}`)
+  } catch {
+    // already exists — fine
+  }
+  return name
+}
+
+async function logPoint(
+  db: RedDB,
+  collection: string,
+  metric: string,
+  value: number,
+  tags: Record<string, string | number> = {},
+): Promise<void> {
+  const tagsJson = sqlString(JSON.stringify(tags))
+  await db.query(
+    `INSERT INTO ${collection} (metric, value, tags, timestamp) VALUES (${sqlString(metric)}, ${value}, ${tagsJson}, ${Date.now()})`,
+  )
+}
+
+async function ingestNodes(
+  db: RedDB,
+  graph: GrimmGraph,
+  logCollection: string,
+): Promise<Map<string, EntityId>> {
   const C = graph.collection
   console.log(`Inserting ${graph.nodes.length} nodes into '${C}' in chunks of ${NODE_CHUNK}...`)
   const start = Date.now()
@@ -69,6 +103,7 @@ async function ingestNodes(db: RedDB, graph: GrimmGraph): Promise<Map<string, En
 
   // Multi-row VALUES is ~3× faster than one-row-per-call.
   for (let i = 0; i < graph.nodes.length; i += NODE_CHUNK) {
+    const batchStart = Date.now()
     const batch = graph.nodes.slice(i, i + NODE_CHUNK)
     const tuples = batch
       .map((n) => `(${sqlString(n.label)}, ${sqlString(n.node_type)}, ${sqlString(n.name)})`)
@@ -77,9 +112,18 @@ async function ingestNodes(db: RedDB, graph: GrimmGraph): Promise<Map<string, En
     for (let j = 0; j < batch.length; j++) {
       labelToId.set(batch[j].label, i + j + 1 + ID_OFFSET)
     }
+    const batchMs = Date.now() - batchStart
+    await logPoint(db, logCollection, 'nodes_batch_ms', batchMs, {
+      phase: 'nodes',
+      batch_idx: Math.floor(i / NODE_CHUNK),
+      batch_size: batch.length,
+    })
+    await logPoint(db, logCollection, 'nodes_inserted', batch.length, { phase: 'nodes' })
     process.stdout.write(`  ${Math.min(i + NODE_CHUNK, graph.nodes.length)}/${graph.nodes.length}\r`)
   }
-  console.log(`  ${graph.nodes.length}/${graph.nodes.length} nodes in ${Date.now() - start}ms`)
+  const total = Date.now() - start
+  console.log(`  ${graph.nodes.length}/${graph.nodes.length} nodes in ${total}ms`)
+  await logPoint(db, logCollection, 'nodes_total_ms', total, { phase: 'nodes' })
   console.log(`  built label → entity_id map for ${labelToId.size} nodes (offset = ${ID_OFFSET})`)
 
   // Calibrate: ask RedDB for the node at the first user id and confirm its
@@ -112,6 +156,7 @@ async function ingestEdges(
   db: RedDB,
   graph: GrimmGraph,
   labelToId: Map<string, EntityId>,
+  logCollection: string,
 ): Promise<void> {
   const C = graph.collection
   console.log(`Inserting ${graph.edges.length} edges into '${C}' in chunks of ${EDGE_CHUNK}...`)
@@ -134,14 +179,25 @@ async function ingestEdges(
   const skipped = graph.edges.length - valid.length
 
   for (let i = 0; i < valid.length; i += EDGE_CHUNK) {
+    const batchStart = Date.now()
     const batch = valid.slice(i, i + EDGE_CHUNK)
     const tuples = batch
       .map(([label, from, to]) => `(${sqlString(label)}, ${from}, ${to})`)
       .join(', ')
     await db.query(`INSERT INTO ${C} EDGE (label, from, to) VALUES ${tuples}`)
+    const batchMs = Date.now() - batchStart
+    await logPoint(db, logCollection, 'edges_batch_ms', batchMs, {
+      phase: 'edges',
+      batch_idx: Math.floor(i / EDGE_CHUNK),
+      batch_size: batch.length,
+    })
+    await logPoint(db, logCollection, 'edges_inserted', batch.length, { phase: 'edges' })
     process.stdout.write(`  ${Math.min(i + EDGE_CHUNK, valid.length)}/${valid.length}\r`)
   }
-  console.log(`  ${valid.length}/${graph.edges.length} edges in ${Date.now() - start}ms`)
+  const total = Date.now() - start
+  console.log(`  ${valid.length}/${graph.edges.length} edges in ${total}ms`)
+  await logPoint(db, logCollection, 'edges_total_ms', total, { phase: 'edges' })
+  if (skipped > 0) await logPoint(db, logCollection, 'edges_skipped', skipped, { phase: 'edges' })
   if (skipped > 0) {
     console.warn(`  ⚠ skipped ${skipped} edges with unresolved endpoints:`)
     for (const u of unresolved) console.warn(`     - ${u}`)
@@ -282,6 +338,23 @@ async function runDemos(
       console.log(`  ${from} → ${to}: ✗ no path`)
     }
   }
+
+  // ---------------------------------------------------------------------
+  // Timeseries demo — read back the ingest log written during this run
+  // (or a previous one, since the snapshot keeps it). Showcases the
+  // timeseries model living next to the graph in the same database file.
+  // ---------------------------------------------------------------------
+
+  header('Ingest log (timeseries collection)')
+  const ingestStats = await safe(
+    db,
+    `SELECT metric, COUNT(*), SUM(value), AVG(value), MIN(value), MAX(value) FROM ingest_log GROUP BY metric`,
+  )
+  if (ingestStats && ingestStats.length) {
+    console.table(ingestStats)
+  } else {
+    console.log('  (no ingest_log entries — the snapshot was loaded without re-ingesting)')
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -310,8 +383,13 @@ async function main(): Promise<void> {
       labelToId = new Map(graph.nodes.map((n, i) => [n.label, i + 1 + ID_OFFSET]))
     } else {
       console.log()
-      labelToId = await ingestNodes(db, graph)
-      await ingestEdges(db, graph, labelToId)
+      const overallStart = Date.now()
+      const logCol = await ensureIngestLog(db)
+      labelToId = await ingestNodes(db, graph, logCol)
+      await ingestEdges(db, graph, labelToId, logCol)
+      await logPoint(db, logCol, 'ingest_total_ms', Date.now() - overallStart, { phase: 'overall' })
+      await logPoint(db, logCol, 'nodes_total', graph.nodes.length, { phase: 'overall' })
+      await logPoint(db, logCol, 'edges_total', graph.edges.length, { phase: 'overall' })
     }
 
     await runDemos(db, graph.collection, labelToId)
