@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "tsx src/index.ts",
+    "query": "tsx src/query.ts",
     "sim": "tsx src/similarity.ts"
   },
   "dependencies": {

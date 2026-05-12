@@ -15,6 +15,7 @@ over stdio — no server, no port, no container.
 ```bash
 pnpm install
 pnpm start                       # ingest 655 nodes / 1741 edges + run demos
+pnpm query "GRAPH CENTRALITY"    # ask an ad hoc SQL/GRAPH question
 pnpm sim lrc_wolf 5              # find characters similar to the Little Red-Cap wolf
 pnpm sim cinderella 5            # …or to Cinderella
 pnpm sim gingerbread_witch 4     # …or to the Hansel & Gretel witch
@@ -85,6 +86,24 @@ Two ways to resolve:
 
 Typical ingest: **~10 seconds** (1.8s nodes + 8s edges over stdio). Idempotent
 re-runs skip ingest and jump straight to demos.
+
+---
+
+## `pnpm query "<SQL or GRAPH command>"` — ask the committed DB
+
+The repo includes `../../output/embedded.rdb`, so this command can query the
+snapshot immediately:
+
+```bash
+pnpm query "SELECT node_type, COUNT(*) FROM tales WHERE node_type IS NOT NULL GROUP BY node_type"
+pnpm query "SELECT COUNT(*) FROM tales WHERE label = 'DECEIVES'"
+pnpm query "GRAPH CENTRALITY"
+pnpm query "GRAPH PROPERTIES"
+pnpm query "GRAPH NEIGHBORHOOD '128' DIRECTION both"
+```
+
+Use this for quick checks, demos, and screenshots without re-ingesting the
+corpus.
 
 ---
 
@@ -221,28 +240,17 @@ pnpm sim the_frog_prince_princess     # naive-princess-who-makes-a-pact
 pnpm sim cinderella --same-tale 8     # include the stepsisters & prince in scoring
 ```
 
-### Why this isn't pure SQL
-
-You'd think `MATCH (c)-[:IS_ARCHETYPE]->(a) WITH c, COLLECT(a) …` would do this in one query. In RedDB 1.0.7, MATCH's `RETURN` projects empty rows
-and `WHERE` doesn't filter — both broken — so the fingerprint join is
-done client-side. The full graph is still queryable for centrality /
-community / shortest-path; only row-projecting MATCH is currently a no-op.
-See the project root README's "Feedback on RedDB 1.0.7" for the
-catalogue.
-
 ---
 
-## Notes & limitations
+## Notes
 
 - **String escaping** — names containing apostrophes (e.g. *Cinderella's
   Father*) are escaped by doubling the quote (`''`). Slugs are URL-safe.
-- **Multi-row inserts** (`VALUES (…), (…), …`) are about 3× faster than
-  one-row-per-call. Chunks of 100 for nodes / 50 for edges are sweet
-  spots — see the in-memory benchmark commented in `src/index.ts`.
+- **Multi-row inserts** (`VALUES (…), (…), …`) keep ingestion fast. The
+  example uses chunks of 100 nodes and 50 edges.
 - **Sequential id assumption** — `entity_id = insertion_index + 102`. Holds
   for a fresh collection only. The script's idempotency guard refuses to
   re-ingest into a populated DB, which is what protects this assumption.
-- **MATCH limitations** — see the "Why this isn't pure SQL" note above.
-  Any demo or feature here that surfaces real per-row data uses either
-  aggregate SQL (`SELECT … GROUP BY`) or `GRAPH <algorithm>` clauses;
-  similarity does the join in client memory.
+- **Similarity engine** — `pnpm sim` builds fingerprints from the curated JSON
+  so it can compare character roles across tales without pulling in every
+  sibling character from the same story.

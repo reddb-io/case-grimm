@@ -33,7 +33,7 @@ Then explore questions like:
 - Which tales share a theme (forest, hunger, false death, broken promise)?
 - How often does the number 7 show up across stories?
 - Multi-hop traversals (prince → bride → stepmother → witch).
-- Natural-language queries via `ASK`.
+- Ad hoc SQL and graph-algorithm queries against the committed database.
 
 ## Stack
 
@@ -70,9 +70,9 @@ Folder conventions:
   (like `tales.json`) are ignored by the loader.
 - **`input/tales.json`** — manifest listing every tale found in `books.txt`,
   with `modelled: true|false` and a pointer to the graph file when modelled.
-- **`output/`** — generated files (gitignored). The SDK writes `embedded.rdb`
-  here; `server.rdb` lives here because `docker-compose.yml` bind-mounts
-  `./output → /data` into the container.
+- **`output/`** — committed RedDB snapshots plus generated runtime files.
+  `embedded.rdb` is ready to query locally; `server.rdb` is the server-mode
+  snapshot used by `docker-compose.yml`. Logs and result caches stay ignored.
 
 ## Examples
 
@@ -96,94 +96,82 @@ if referenced from multiple tale files.
 See [`input/SCHEMA.md`](./input/SCHEMA.md) for the full list of node types,
 edge labels, naming conventions, and sample queries.
 
+## What You Can Test
+
+The repo includes a committed `output/embedded.rdb`, so users can query the
+graph immediately after installing dependencies. No ingest step is required
+unless they delete the database or point `REDDB_URI` somewhere else.
+
+```bash
+cd src/embedded
+pnpm install
+```
+
+Run the full demo suite against the committed database:
+
+```bash
+pnpm start
+```
+
+This opens `../../output/embedded.rdb`, skips ingest when the collection is
+already populated, then prints:
+
+- entity counts by type (`character`, `tale`, `theme`, `archetype`, etc.)
+- most common edge labels (`APPEARS_IN`, `IS_ARCHETYPE`, `DECEIVES`, ...)
+- counts for narrative actions like `EATS`, `KILLS`, `CURSES`, `RESCUES`
+- graph analytics: `CENTRALITY`, `COMMUNITY`, `COMPONENTS`, `CYCLES`,
+  `CLUSTERING`, `PROPERTIES`
+- shortest paths between known characters such as `evil_queen → snow_white`
+  and `lrc_wolf → wsk_wolf`
+
+Ask ad hoc SQL/GRAPH questions with `pnpm query`:
+
+```bash
+pnpm query "SELECT node_type, COUNT(*) FROM tales WHERE node_type IS NOT NULL GROUP BY node_type"
+pnpm query "SELECT label, COUNT(*) FROM tales WHERE node_type IS NULL GROUP BY label"
+pnpm query "SELECT COUNT(*) FROM tales WHERE label = 'DECEIVES'"
+pnpm query "GRAPH CENTRALITY"
+pnpm query "GRAPH PROPERTIES"
+pnpm query "GRAPH NEIGHBORHOOD '128' DIRECTION both"
+```
+
+Try narrative-similarity questions with the ontology fingerprint engine:
+
+```bash
+pnpm sim cinderella 5
+pnpm sim lrc_wolf 5
+pnpm sim gingerbread_witch 4
+pnpm sim the_frog_prince_frog 3
+```
+
+Good questions this project can answer today:
+
+- Which archetypes and themes are most central across the modelled tales?
+- Which edge types dominate the corpus?
+- How often do actions like deception, killing, rescue, capture, or devouring
+  appear?
+- Which tales or characters are connected by short graph paths?
+- Which characters in different tales play similar narrative roles?
+
 ### Coverage
 
-`input/tales.json` is the authoritative manifest. Today: **5 / 62 tales modelled**.
+`input/tales.json` is the authoritative manifest. Today: **62 / 62 tales modelled**.
 
 | status     | tales |
 |------------|-------|
-| modelled   | `ashputtel` (Cinderella), `snowdrop` (Snow White), `hansel-and-gretel`, `little-red-cap`, `the-wolf-and-the-seven-little-kids` |
-| pending    | the other 57 entries in `tales.json` |
+| modelled   | all 62 tales from `books.txt` |
+| pending    | none |
 
 To add a new tale: drop `input/tales/<slug>.json` following the format
 in `SCHEMA.md`, then flip the matching entry in `tales.json` to
 `"modelled": true` and point `data_file` at it. No code changes needed.
 
-## Feedback on RedDB 1.0.7 / 1.0.8 (collected while building this)
-
-What we found while writing the examples — non-exhaustive but everything
-here was observed empirically.
-
-### `@reddb-io/sdk@1.0.8` (embedded, stdio JSON-RPC)
-
-- ✅ **Connection works** on `memory://` and `file:///abs/path`.
-- ✅ **Aggregate SQL works** — `SELECT … COUNT(*) … GROUP BY` returns
-  proper rows with column keys.
-- ✅ **All `GRAPH <algorithm>` clauses work** — `CENTRALITY`,
-  `COMMUNITY`, `COMPONENTS`, `CYCLES`, `CLUSTERING`, `PROPERTIES`,
-  `NEIGHBORHOOD '<id>' DIRECTION incoming|outgoing|both`,
-  `SHORTEST_PATH '<id>' TO '<id>'`.
-- ❌ **`SELECT col FROM coll`** (row projection, no aggregate) returns
-  empty rows even when data is there.
-- ❌ **`MATCH (n) WHERE n.label = '…' RETURN n.foo`** returns rows but
-  every row is `{}`. WHERE also doesn't filter — same number of rows
-  regardless. MATCH is documentation-only in 1.0.8.
-- ❌ **`db.insert()` returns `{affected}` only** — no `id`. Combined
-  with the SELECT issue above, you cannot read back the entity id of
-  a freshly inserted node. We work around with a sequential-id offset
-  of **+101** (RedDB reserves the first 101 ids per collection for
-  internal metadata).
-- ❌ **`INSERT … RETURNING *`** rejects graph inserts: *"RETURNING is
-  not yet supported for this INSERT path"*.
-- ❌ **`GRAPH TRAVERSE FROM '<label>' …`** parse-errors. The label
-  exists (we can SELECT it, query it via NEIGHBORHOOD by id) but
-  TRAVERSE's label index doesn't see it. Workaround: use id.
-- ⚠️ **Multi-row `INSERT … VALUES (…), (…)`** for graph nodes is ~3×
-  faster than single-row over stdio. Chunks of 100 nodes / 50 edges
-  are sweet spots.
-
-### `@reddb-io/client@1.0.8` (remote — http / red / grpc)
-
-All three transports have observable bugs against a stock `red 1.0.8`
-server:
-
-- ❌ **`http://`** — `connect()` rejects with `HTTP_503` because the
-  server's `/health` endpoint reports `state: "degraded"` (a normal
-  post-boot state — `SELECT 1` round-trips fine) and the client
-  treats any non-2xx as fatal. The readiness check is wrong; should
-  probably be a `SELECT 1` round-trip.
-- ❌ **`red://`** — connects and `INSERT` calls succeed, but `SELECT`
-  responses arrive without `rows` / `columns` populated. Only `{ok,
-  affected, statement}` comes back. Deserialization of result records
-  over the wire protocol is incomplete.
-- ❌ **`grpc://`** — `RedDBError: length=68288512 / code:
-  FRAME_INVALID_LENGTH` thrown from `redwire.js:414`. Looks like the
-  gRPC adapter is routing responses through the redwire frame parser
-  instead of decoding them as gRPC payloads.
-
-The server example works around the HTTP issue with a thin raw-`fetch`
-shim that mirrors `db.query()`. Wire and gRPC currently fail with the
-official client. The shape of the example is forward-compatible — when
-the client is fixed, the transport router in `src/server/src/index.ts`
-collapses to one line.
-
-### Image distribution
-
-The container image `ghcr.io/reddb-io/reddb:latest` is **private** on
-GHCR. Without `docker login ghcr.io` the `docker-compose.yml` flow
-errors with `unauthorized`. The server example documents a bare-metal
-fallback (running the `red` binary that the SDK's `postinstall` already
-downloaded) so the example is runnable without GHCR access.
-
 ## Roadmap
 
-1. [ ] Strip Gutenberg header/license from `books.txt`.
-2. [ ] Segment the corpus by tale.
-3. [ ] Extract entities (NER) — characters, locations, objects.
-4. [ ] Enrich `grimm-graph.json` with archetypes, themes, symbolic numbers.
-5. [ ] Load nodes and edges into RedDB via `INSERT ... NODE / EDGE`.
-6. [ ] Write traversal and community-detection queries.
-7. [ ] Try `ASK` natural-language queries over the graph.
+1. [ ] Add more curated relationships for objects, transformations, promises,
+       punishments, and rescues.
+2. [ ] Add a small gallery of saved query examples and expected outputs.
+3. [ ] Add an `ASK` natural-language query demo over the graph.
 
 ## License
 

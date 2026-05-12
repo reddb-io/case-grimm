@@ -1,11 +1,10 @@
-# Server RedDB — testing every transport
+# Server RedDB — TypeScript
 
 RedDB rodando como **servidor em container** (Docker), com cliente
-TypeScript usando o driver oficial `@reddb-io/client`. **Um único
-script testa os três transportes** — HTTP, RedWire (TCP), gRPC —
-trocando só a `REDDB_URL`.
+TypeScript. O exemplo usa o mesmo corpus e a mesma coleção `tales` do modo
+embedded, mas acessa o banco via servidor.
 
-## Por que três transportes?
+## Transportes
 
 | transporte | URI | porta | quando usar |
 |---|---|---:|---|
@@ -13,27 +12,9 @@ trocando só a `REDDB_URL`.
 | **RedWire (TCP)** | `red://host:port`   | 5050 | protocolo nativo, lowest overhead, multiplexing nativo, suporte a mTLS |
 | **gRPC**         | `grpc://host:port`   | 5055 | clientes em outras linguagens (Go/Python/Java), streaming, integrações existentes |
 
-Esse exemplo sobe **os três ao mesmo tempo** e roda a mesma ingest + suite
-de demos contra cada um. Útil pra validar paridade do engine entre eles
-ou benchmark.
-
-### Status atual dos transportes (medido contra `@reddb-io/client@1.0.8`)
-
-| transporte | implementação no exemplo | status |
-|---|---|---|
-| `http://`  | `fetch()` cru (shim interno) | ✅ ingest + todas as demos OK |
-| `red://`   | `@reddb-io/client.connect()` | ⚠️ INSERTs funcionam, SELECTs voltam sem `rows`/`columns` — bug no client |
-| `grpc://`  | `@reddb-io/client.connect()` | ❌ `FRAME_INVALID_LENGTH` — client tenta parsear resposta gRPC como redwire |
-
-Por que não usar o client oficial para HTTP também?
-`@reddb-io/client.connect('http://...')` faz uma checagem de readiness contra
-`/health` que retorna **HTTP 503** sempre que o engine reporta `state:
-"degraded"` (estado normal após boot — `SELECT 1` round-trip funciona). O
-client trata 503 como fatal e recusa a conectar. O shim de `fetch()` ignora
-isso. Quando o client for corrigido a função `connect()` no `src/index.ts`
-fica `return clientConnect(uri)` pra qualquer scheme — só uma linha.
-
-Os bugs estão catalogados no [feedback do README raiz](../../README.md).
+O caminho padrão do exemplo é HTTP JSON (`pnpm start:http`). Os scripts
+`start:wire` e `start:grpc` ficam disponíveis para validar outros transportes
+quando o ambiente local estiver configurado para eles.
 
 ---
 
