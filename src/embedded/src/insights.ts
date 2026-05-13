@@ -1109,6 +1109,222 @@ function cypherCmd(pattern: string, limit: number): void {
   table(rows)
 }
 
+// 22. words / 23. correlate / 24. richness / 25. ngrams / 26. cosine / 27. about
+//
+// All these require `pnpm ingest:words` to have run, which populates
+// `tale_words`, `tale_bigrams`, `tale_vocab`, plus HLL/SKETCH/FILTER
+// showcase collections and KV metadata. They live next to the graph and
+// the timeseries ingest log in the same .rdb file.
+
+async function wordsCmd(taleSlug: string | undefined, word: string | undefined, top: number): Promise<void> {
+  const snap = openSnapshot()
+  const db = await connect(snap.uri)
+  try {
+    if (word) {
+      header(`Tales where '${word}' appears`)
+      const r = await db.query(
+        `SELECT tale, freq FROM tale_words WHERE word = '${word.replace(/'/g, "''")}' ORDER BY freq DESC`,
+      )
+      table((r.rows ?? []) as Record<string, unknown>[])
+      return
+    }
+    if (taleSlug) {
+      header(`Top ${top} words in '${taleSlug}'`)
+      const r = await db.query(
+        `SELECT word, freq FROM tale_words WHERE tale = '${taleSlug.replace(/'/g, "''")}' ORDER BY freq DESC LIMIT ${top}`,
+      )
+      table((r.rows ?? []) as Record<string, unknown>[])
+      return
+    }
+    header(`Top ${top} content words across the corpus`)
+    const r = await db.query(
+      `SELECT word, SUM(freq), COUNT(*) FROM tale_words GROUP BY word ORDER BY SUM(freq) DESC LIMIT ${top}`,
+    )
+    table(
+      (r.rows ?? []).map((row) => ({
+        word: row['word'],
+        total_freq: row['SUM(freq)'] ?? row['sum(freq)'],
+        in_tales: row['COUNT(*)'] ?? row['count(*)'],
+      })),
+    )
+  } finally {
+    await db.close()
+    snap.cleanup()
+  }
+}
+
+async function correlateCmd(themeSlug: string | undefined, top: number): Promise<void> {
+  // For each theme, find content words whose tales (with that word) most
+  // overlap with the tales carrying the theme. Computed in TS off the
+  // already-loaded graph + a quick SQL aggregate per word.
+  const snap = openSnapshot()
+  const db = await connect(snap.uri)
+  try {
+    // Pull all word -> tales mapping in one go.
+    const r = await db.query('SELECT tale, word, freq FROM tale_words')
+    const wordTales = new Map<string, Map<string, number>>()
+    for (const row of r.rows ?? []) {
+      const w = String(row['word'])
+      const t = String(row['tale'])
+      const f = Number(row['freq']) || 0
+      if (!wordTales.has(w)) wordTales.set(w, new Map())
+      wordTales.get(w)!.set(t, f)
+    }
+    // theme -> set of tale slugs (without `_tale` suffix to match tale_words).
+    const themeTales = new Map<string, Set<string>>()
+    for (const e of graph.edges) {
+      if (e.label !== 'CONTAINS_THEME') continue
+      const taleSlug = e.from.replace(/_tale$/, '')
+      if (!themeTales.has(e.to)) themeTales.set(e.to, new Set())
+      themeTales.get(e.to)!.add(taleSlug)
+    }
+    const themesToScore = themeSlug ? [themeSlug] : [...themeTales.keys()]
+    for (const theme of themesToScore) {
+      const tales = themeTales.get(theme)
+      if (!tales || !tales.size) {
+        console.log(`(no tales with theme '${theme}')`)
+        continue
+      }
+      const scores: Array<{ word: string; lift: number; pos: number; neg: number }> = []
+      for (const [w, taleFreq] of wordTales) {
+        let pos = 0, neg = 0
+        for (const [t] of taleFreq) (tales.has(t) ? pos++ : neg++)
+        if (pos < 2) continue
+        // lift = P(word | theme) / P(word | ¬theme)
+        const pInTheme = pos / tales.size
+        const pOut = neg / Math.max(1, 62 - tales.size)
+        const lift = pInTheme / Math.max(pOut, 0.01)
+        scores.push({ word: w, lift: Number(lift.toFixed(2)), pos, neg })
+      }
+      scores.sort((a, b) => b.lift - a.lift)
+      header(`${theme} — top ${top} content words (lift = P(w|theme)/P(w|¬theme))`)
+      table(scores.slice(0, top))
+    }
+  } finally {
+    await db.close()
+    snap.cleanup()
+  }
+}
+
+async function richnessCmd(): Promise<void> {
+  const snap = openSnapshot()
+  const db = await connect(snap.uri)
+  try {
+    header('Tales by vocabulary richness (unique_words / total_tokens)')
+    const r = await db.query(
+      `SELECT tale, total_tokens, unique_words FROM tale_vocab ORDER BY unique_words DESC`,
+    )
+    const rows = (r.rows ?? []).slice(0, 20).map((row) => {
+      const total = Number(row['total_tokens']) || 0
+      const uniq = Number(row['unique_words']) || 0
+      return {
+        tale: row['tale'],
+        total_tokens: total,
+        unique_words: uniq,
+        ttr: total ? Number((uniq / total).toFixed(3)) : 0,  // type-token ratio
+      }
+    })
+    table(rows)
+
+    header('Bottom 10 (least lexical variety)')
+    const r2 = await db.query(
+      `SELECT tale, total_tokens, unique_words FROM tale_vocab ORDER BY unique_words ASC LIMIT 10`,
+    )
+    table(
+      (r2.rows ?? []).map((row) => {
+        const total = Number(row['total_tokens']) || 0
+        const uniq = Number(row['unique_words']) || 0
+        return {
+          tale: row['tale'],
+          total_tokens: total,
+          unique_words: uniq,
+          ttr: total ? Number((uniq / total).toFixed(3)) : 0,
+        }
+      }),
+    )
+  } finally {
+    await db.close()
+    snap.cleanup()
+  }
+}
+
+async function ngramsCmd(top: number): Promise<void> {
+  const snap = openSnapshot()
+  const db = await connect(snap.uri)
+  try {
+    header(`Top ${top} bigrams across the corpus`)
+    const r = await db.query(
+      `SELECT bigram, SUM(freq), COUNT(*) FROM tale_bigrams GROUP BY bigram ORDER BY SUM(freq) DESC LIMIT ${top}`,
+    )
+    table(
+      (r.rows ?? []).map((row) => ({
+        bigram: row['bigram'],
+        total_freq: row['SUM(freq)'] ?? row['sum(freq)'],
+        in_tales: row['COUNT(*)'] ?? row['count(*)'],
+      })),
+    )
+  } finally {
+    await db.close()
+    snap.cleanup()
+  }
+}
+
+function cosineCmd(slug: string, topN: number): void {
+  // Cosine similarity over character fingerprints, computed in TS. RedDB
+  // v1.0.8 does not yet surface a usable VECTOR collection through the SDK,
+  // so this is a TS implementation that complements the Jaccard `sim`.
+  if (!nodeByLabel.has(slug) || typeOf(slug) !== 'character') {
+    console.error(`'${slug}' is not a character`)
+    process.exit(1)
+  }
+  const targetFp = fingerprintOf(slug)
+  const targetTale = charToTale.get(slug)
+  // build sparse vectors as Sets weighted by 1; cosine over binary = inter / sqrt(|a|*|b|)
+  const hits = CHAR_LABELS
+    .filter((c) => c !== slug && charToTale.get(c) !== targetTale)
+    .map((c) => {
+      const fp = fingerprintOf(c)
+      let inter = 0
+      for (const x of targetFp) if (fp.has(x)) inter++
+      const cosine = inter / Math.sqrt(Math.max(1, targetFp.size) * Math.max(1, fp.size))
+      const jac = jaccard(targetFp, fp)
+      return {
+        label: c, name: nameOf(c),
+        tale: charToTale.get(c) ?? '?',
+        cosine: Number(cosine.toFixed(3)),
+        jaccard: Number(jac.toFixed(3)),
+      }
+    })
+    .sort((a, b) => b.cosine - a.cosine)
+    .slice(0, topN)
+  header(`Cosine similarity to '${slug}' (TS impl; Jaccard shown for comparison)`)
+  table(hits)
+}
+
+async function aboutCmd(): Promise<void> {
+  const snap = openSnapshot()
+  const db = await connect(snap.uri)
+  try {
+    header('Corpus metadata (KV collection — keys with `:` are stored with `_`)')
+    const r = await db.query(
+      `SELECT key, value FROM kv_default WHERE key LIKE 'corpus%'`,
+    )
+    table((r.rows ?? []) as Record<string, unknown>[])
+
+    header('Collections in this database (SHOW COLLECTIONS)')
+    const c = await db.query('SHOW COLLECTIONS')
+    const rows = (c.rows ?? []).map((row) => ({
+      name: row['name'],
+      model: row['model'],
+      entities: row['entities'],
+    }))
+    table(rows)
+  } finally {
+    await db.close()
+    snap.cleanup()
+  }
+}
+
 // CLI =======================================================================
 //
 // Subcommand schema driven by cli-args-parser. Each command declares its
@@ -1294,6 +1510,63 @@ const cli = createCLI({
         limit: { type: 'number', short: 'l', default: 25, description: 'Max rows to print.' },
       },
       handler: (r) => cypherCmd(String(r.positional.pattern), Number(r.options.limit)),
+    },
+
+    // ----- text analytics (requires `pnpm ingest:words`) ---------------
+    words: {
+      description: 'Top content words from `tale_words`. Filter by tale or by word.',
+      options: {
+        tale: { type: 'string', short: 't', description: 'Show top words for a specific tale.' },
+        word: { type: 'string', short: 'w', description: 'List every tale where this word appears.' },
+        top: { type: 'number', short: 'n', default: 15, description: 'How many rows to print.' },
+      },
+      handler: async (r) => {
+        await wordsCmd(
+          r.options.tale ? String(r.options.tale) : undefined,
+          r.options.word ? String(r.options.word) : undefined,
+          Number(r.options.top),
+        )
+      },
+    },
+    correlate: {
+      description: 'For each theme, content words with highest lift (P(w|theme) / P(w|¬theme)).',
+      options: {
+        theme: { type: 'string', short: 't', description: 'Restrict to one theme slug (e.g. theme_devouring).' },
+        top: { type: 'number', short: 'n', default: 10, description: 'Top words per theme.' },
+      },
+      handler: async (r) => {
+        await correlateCmd(
+          r.options.theme ? String(r.options.theme) : undefined,
+          Number(r.options.top),
+        )
+      },
+    },
+    richness: {
+      description: 'Vocabulary size and type-token ratio per tale.',
+      handler: async () => { await richnessCmd() },
+    },
+    ngrams: {
+      description: 'Top bigrams across the corpus (from `tale_bigrams`).',
+      options: {
+        top: { type: 'number', short: 'n', default: 20, description: 'How many rows to print.' },
+      },
+      handler: async (r) => { await ngramsCmd(Number(r.options.top)) },
+    },
+    cosine: {
+      description: 'Cosine similarity over character fingerprints. Complements `sim` (Jaccard).',
+      positional: [{
+        name: 'slug',
+        required: true,
+        validate: knownCharacter,
+      }],
+      options: {
+        top: { type: 'number', short: 'n', default: 8, description: 'How many matches to print.' },
+      },
+      handler: (r) => cosineCmd(String(r.positional.slug), Number(r.options.top)),
+    },
+    about: {
+      description: 'Corpus metadata from KV + list of all collections in the .rdb file.',
+      handler: async () => { await aboutCmd() },
     },
   },
 })
