@@ -6,7 +6,8 @@
     "start": "tsx src/index.ts",
     "query": "tsx src/query.ts",
     "sim": "tsx src/similarity.ts",
-    "insights": "tsx src/insights.ts"
+    "insights": "tsx src/insights.ts",
+    "ingest:words": "tsx src/ingest-words.ts"
   },
   "dependencies": {
     "@reddb-io/sdk": "^1.0.8",
