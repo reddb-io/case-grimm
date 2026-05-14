@@ -47,6 +47,9 @@ jobs:
       - name: Generate docs data
         run: |
           ./grimm setup
+          rm -f output/embedded.rdb*
+          rm -f output/embedded.result-cache.l2*
+          rm -f output/red-slow.log output/.audit.log
           ./grimm rebuild
           ./grimm export docs
 
