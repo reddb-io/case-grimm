@@ -72,6 +72,18 @@ const questions: Record<string, {
     models: ['graph'],
     run: () => runEmbedded(['query', 'GRAPH CENTRALITY']),
   },
+  'forest-meaning': {
+    question: 'What does a forest represent across Grimm tales?',
+    answer: 'The forest is not one symbol. In the graph it behaves as danger, threshold, exile, shelter, donor-space, and suspension of domestic order depending on the tale.',
+    models: ['graph', 'statistics', 'ontology'],
+    run: () => runEmbedded(['insights', 'trope', 'loc_forest']),
+  },
+  thresholds: {
+    question: 'When does a place become a threshold instead of scenery?',
+    answer: 'A location becomes a threshold when crossing it changes agency, danger, identity, or moral jurisdiction. The ontology lets doors, forests, wells, graves, rivers, mountains, and castles be compared as a family of crossings.',
+    models: ['graph', 'ontology'],
+    run: () => runEmbedded(['insights', 'trope', 'threshold_forest']),
+  },
   'propp-hansel': {
     question: 'How does one tale unfold as narrative functions?',
     answer: 'Propp events materialize a tale as ordered narrative functions, with actors, scenes, and textual evidence attached as graph properties.',

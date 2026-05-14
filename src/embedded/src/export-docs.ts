@@ -45,6 +45,20 @@ const showcaseQuestions = [
     command: './grimm ask central-concepts',
   },
   {
+    id: 'forest-meaning',
+    question: 'What does a forest represent across Grimm tales?',
+    answer: 'The forest is not one symbol. In the graph it behaves as danger, threshold, exile, shelter, donor-space, and suspension of domestic order depending on the tale.',
+    models: ['graph', 'statistics', 'ontology'],
+    command: './grimm ask forest-meaning',
+  },
+  {
+    id: 'thresholds',
+    question: 'When does a place become a threshold instead of scenery?',
+    answer: 'Doors, forests, wells, graves, rivers, mountains, and castles become thresholds when crossing them changes agency, danger, identity, or moral jurisdiction.',
+    models: ['graph', 'ontology'],
+    command: './grimm ask thresholds',
+  },
+  {
     id: 'propp-hansel',
     question: 'How does one tale unfold as narrative functions?',
     answer: 'Hansel and Gretel can be read as prose and as an ordered chain of narrative functions with actor, scene, and evidence.',
