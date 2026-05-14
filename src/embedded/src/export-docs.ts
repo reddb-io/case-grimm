@@ -110,6 +110,7 @@ function sourceRows(corpus: AnyRecord, slug: string): AnyRecord[] {
       const bookTale = bookTales.get(row.book_tale_id)
       const book = books.get(row.book_id)
       const textPath = row.book_tale_slug ? sourceTextPath(row.book_id, row.book_tale_slug) : null
+      const hasText = Boolean(textPath && existsSync(textPath))
       return {
         ...row,
         title: bookTale?.title ?? row.book_tale_slug,
@@ -118,9 +119,10 @@ function sourceRows(corpus: AnyRecord, slug: string): AnyRecord[] {
         language: bookTale?.language ?? null,
         word_count: bookTale?.word_count ?? null,
         book_word_count: book?.word_count ?? null,
-        text_file: textPath && existsSync(textPath)
+        text_file: hasText && textPath
           ? textPath.replace(`${repoRoot}/`, '')
           : null,
+        text: hasText && textPath ? readText(textPath) : null,
       }
     })
 }

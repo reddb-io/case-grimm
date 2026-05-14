@@ -57,6 +57,7 @@
     error: '',
     diagnostics: '',
     busy: false,
+    sourceIndex: 0,
   };
 
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -79,6 +80,28 @@
     return paragraphs(text)
       .map((part) => `<p>${escapeHtml(part).replace(/\n/g, '<br>')}</p>`)
       .join('');
+  }
+
+  function compareTextHtml(goldText, sourceText) {
+    const gold = paragraphs(goldText);
+    const source = paragraphs(sourceText);
+    const rows = Math.max(gold.length, source.length);
+    return `
+      <div class="compare-view">
+        <div class="compare-heading">Gold canonical</div>
+        <div class="compare-heading">Selected source</div>
+        ${Array.from({ length: rows }, (_, index) => `
+          <section class="compare-cell">
+            <div class="compare-index">${index + 1}</div>
+            ${gold[index] ? htmlText(gold[index]) : '<p class="empty-state">No matching paragraph.</p>'}
+          </section>
+          <section class="compare-cell">
+            <div class="compare-index">${index + 1}</div>
+            ${source[index] ? htmlText(source[index]) : '<p class="empty-state">No matching paragraph.</p>'}
+          </section>
+        `).join('')}
+      </div>
+    `;
   }
 
   function escapeHtml(value) {
@@ -221,9 +244,14 @@
   }
 
   function currentText() {
+    if (state.tab === 'source') return state.tale?.sources?.[state.sourceIndex]?.text || 'This source text is not available in the generated docs data.';
     if (state.tab === 'translation') return state.translated || 'Use Translate to generate this view.';
     if (state.tab === 'friendly') return state.friendly || 'Use Friendly rewrite to generate this view.';
     return state.tale?.text || '';
+  }
+
+  function selectedSource(tale = state.tale) {
+    return tale?.sources?.[state.sourceIndex] || null;
   }
 
   function render() {
@@ -246,6 +274,16 @@
       tale.atu ? `ATU ${tale.atu}` : null,
       `${tale.stats.words} words`,
     ].filter(Boolean).join(' · ');
+    const sourceOptions = (tale.sources || [])
+      .map((source, index) => `<option value="${index}" ${index === state.sourceIndex ? 'selected' : ''}>${escapeHtml(`${source.is_base ? 'Base' : source.weight}: ${source.title || source.book_tale_slug}`)}</option>`)
+      .join('');
+    const source = selectedSource(tale);
+    const textMeta = state.tab === 'source' && source
+      ? [source.book_id, source.word_count ? `${source.word_count} source words` : null, source.match_method ? `match: ${source.match_method}` : null].filter(Boolean).join(' · ')
+      : meta;
+    const bodyHtml = state.tab === 'compare'
+      ? compareTextHtml(tale.text, source?.text || '')
+      : htmlText(currentText());
 
     root.innerHTML = `
       <div class="tale-app">
@@ -268,6 +306,10 @@
               <option value="study">Study notes</option>
             </select>
           </label>
+          <label class="tale-field">
+            <span class="tale-label">Source</span>
+            <select data-role="source-select" ${sourceOptions ? '' : 'disabled'}>${sourceOptions || '<option>No source text</option>'}</select>
+          </label>
           <button class="tale-button" data-role="translate" ${state.busy ? 'disabled' : ''}>Translate</button>
           <button class="tale-button primary" data-role="friendly" ${state.busy ? 'disabled' : ''}>Friendly rewrite</button>
           <button class="tale-button" data-role="diagnostics" ${state.busy ? 'disabled' : ''}>Check browser</button>
@@ -280,14 +322,16 @@
           <article class="tale-card">
             <header class="tale-card-header">
               <div class="tale-card-title">${escapeHtml(tale.title)}</div>
-              <div class="tale-meta">${escapeHtml(meta)}</div>
+              <div class="tale-meta">${escapeHtml(textMeta)}</div>
             </header>
             <div class="tale-tabs">
-              <button class="tale-tab ${state.tab === 'original' ? 'active' : ''}" data-tab="original">Original EN</button>
+              <button class="tale-tab ${state.tab === 'original' ? 'active' : ''}" data-tab="original">Gold canonical</button>
+              <button class="tale-tab ${state.tab === 'source' ? 'active' : ''}" data-tab="source" ${sourceOptions ? '' : 'disabled'}>Source text</button>
+              <button class="tale-tab ${state.tab === 'compare' ? 'active' : ''}" data-tab="compare" ${sourceOptions ? '' : 'disabled'}>Compare</button>
               <button class="tale-tab ${state.tab === 'translation' ? 'active' : ''}" data-tab="translation">${escapeHtml(LANGUAGES[state.language].label)}</button>
               <button class="tale-tab ${state.tab === 'friendly' ? 'active' : ''}" data-tab="friendly">Friendly</button>
             </div>
-            <div class="tale-text">${htmlText(currentText())}</div>
+            <div class="tale-text ${state.tab === 'compare' ? 'compare-container' : ''}">${bodyHtml}</div>
           </article>
 
           <aside class="tale-side">
@@ -311,7 +355,16 @@
       state.tale = state.data.tales.find((item) => item.slug === slug);
       state.translated = localStorage.getItem(key('translation', slug)) || '';
       state.friendly = '';
+      state.sourceIndex = Math.max(0, state.tale.sources?.findIndex((source) => source.is_base) ?? 0);
       state.tab = 'original';
+      state.error = '';
+      state.status = '';
+      render();
+    });
+
+    $('[data-role="source-select"]', root)?.addEventListener('change', (event) => {
+      state.sourceIndex = Number(event.target.value) || 0;
+      state.tab = 'source';
       state.error = '';
       state.status = '';
       render();
@@ -713,6 +766,7 @@ ${parts[index]}
     try {
       state.data = await loadData();
       state.tale = pickInitialTale(state.data);
+      state.sourceIndex = Math.max(0, state.tale.sources?.findIndex((source) => source.is_base) ?? 0);
       state.translated = localStorage.getItem(key('translation', state.tale.slug)) || '';
       state.status = 'Reader ready.';
       render();

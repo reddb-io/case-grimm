@@ -27,7 +27,7 @@
   border-radius: 8px;
   display: grid;
   gap: 12px;
-  grid-template-columns: minmax(220px, 1fr) minmax(180px, 260px) auto auto;
+  grid-template-columns: minmax(220px, 1fr) minmax(150px, 220px) minmax(150px, 220px) minmax(220px, 1fr) auto auto auto;
   padding: 14px;
 }
 
@@ -148,6 +148,49 @@
 
 .tale-text p {
   margin: 0 0 1em;
+}
+
+.compare-container {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.compare-view {
+  display: grid;
+  gap: 0;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.compare-heading {
+  background: #f5f7fa;
+  border-bottom: 1px solid var(--reader-border);
+  color: var(--reader-muted);
+  font-size: 12px;
+  font-weight: 900;
+  padding: 8px 10px;
+  position: sticky;
+  text-transform: uppercase;
+  top: 0;
+  z-index: 1;
+}
+
+.compare-cell {
+  border-bottom: 1px solid #e8edf2;
+  min-width: 0;
+  padding: 10px;
+}
+
+.compare-cell:nth-child(4n),
+.compare-cell:nth-child(4n + 1) {
+  border-left: 1px solid #e8edf2;
+}
+
+.compare-index {
+  color: var(--reader-muted);
+  font-size: 11px;
+  font-weight: 900;
+  margin-bottom: 5px;
 }
 
 .tale-side {
@@ -387,5 +430,13 @@
 
   .tale-meta {
     white-space: normal;
+  }
+
+  .compare-view {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-heading {
+    position: static;
   }
 }
