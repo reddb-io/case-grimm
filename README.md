@@ -36,7 +36,7 @@ project turns that literary problem into a working RedDB showcase.
 
 The gold layer is a curated canonical collection of **206 Grimm tales**. Each
 tale keeps readable text, provenance back to book editions, KHM/ATU metadata,
-characters, traits, objects, locations, world laws, moral regimes, Propp-like
+characters, curated traits, objects, locations, world laws, moral regimes, Propp-like
 narrative events, branches, and textual evidence. The embedded RedDB snapshot
 then lets the same corpus be explored as graph, tables, KV, time series, and
 statistics.
@@ -70,7 +70,7 @@ embedded-first.
 
 | RedDB capability | Where it appears | Why it matters |
 |---|---|---|
-| Graph | `tales` | Characters, traits, motifs, Propp events, provenance edges, and tale structure. |
+| Graph | `tales` | Characters, curated traits, motifs, Propp events, provenance edges, and tale structure. |
 | Tables | `tale_words`, `tale_bigrams`, `tale_vocab` | Text evidence, vocabulary, frequency, and lexical exploration. |
 | KV | `kv_default` | Snapshot metadata and corpus-level facts. |
 | Time series | `ingest_log` | Ingest counters and timing metrics for the build itself. |
@@ -82,20 +82,25 @@ embedded-first.
 | Metric | Count |
 |---|---:|
 | Canonical tales | 206 |
-| Graph nodes | 14,256 |
-| Graph edges | 46,202 |
-| Trait nodes | 6,126 |
+| Graph nodes | 8,180 |
+| Graph edges | 42,532 |
+| Curated trait nodes | 50 |
 | Propp event nodes | 2,355 |
 | Character nodes | 1,563 |
 
 | Collection | Model | Rows/entities |
 |---|---|---:|
-| `tales` | graph | 60,458 |
+| `tales` | graph | 50,712 |
 | `tale_words` | table | 53,946 |
 | `tale_bigrams` | table | 4,075 |
 | `tale_vocab` | table | 206 |
-| `ingest_log` | time series | 2,599 |
+| `ingest_log` | time series | 2,335 |
 | `kv_default` | KV | 6 |
+
+Traits are intentionally curated. The gold YAML still preserves the raw
+character labels for auditability, but the graph promotes only reusable
+character traits such as `Clever`, `Helper`, `Adversary`, `Witness`, `Royal`,
+`Hidden Or Disguised`, and `Cursed Or Transformed`.
 
 ---
 
@@ -171,7 +176,7 @@ old_sultan                          11
 ### Q4. What is structurally central in the corpus?
 
 **Answer:** the center is not only famous characters. The corpus center is made
-of reusable story machinery: traits, narrative functions, appearances, agency,
+of reusable story machinery: curated traits, narrative functions, appearances, agency,
 locations, and Propp events.
 
 ```bash
@@ -179,7 +184,7 @@ locations, and Propp events.
 ```
 
 ```text
-HAS_TRAIT                 6,851
+HAS_TRAIT                 3,181
 HAS_NARRATIVE_FUNCTION    4,710
 APPEARS_IN                3,824
 GAINS_AGENCY_THROUGH      3,313

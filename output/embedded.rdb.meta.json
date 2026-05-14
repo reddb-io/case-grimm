@@ -5,7 +5,7 @@
     "stats_by_collection": {
       "ingest_log": {
         "cross_refs": 0,
-        "entities": 2599,
+        "entities": 2335,
         "segments": 1
       },
       "kv_default": {
@@ -35,7 +35,7 @@
       },
       "red_config": {
         "cross_refs": 0,
-        "entities": 181,
+        "entities": 133,
         "segments": 1
       },
       "red_conflicts": {
@@ -99,8 +99,8 @@
         "segments": 1
       },
       "tales": {
-        "cross_refs": 92404,
-        "entities": 60458,
+        "cross_refs": 85064,
+        "entities": 50712,
         "segments": 1
       },
       "vocab_hll": {
@@ -120,15 +120,15 @@
       }
     },
     "total_collections": 23,
-    "total_entities": 121472,
-    "updated_at_unix_ms": "1778772345353"
+    "total_entities": 111414,
+    "updated_at_unix_ms": "1778787757894"
   },
   "collection_contracts": [
     {
       "append_only": true,
       "context_index_enabled": false,
       "context_index_fields": [],
-      "created_at_unix_ms": "1778761473042",
+      "created_at_unix_ms": "1778787524429",
       "declared_columns": [],
       "declared_model": "timeseries",
       "default_ttl_ms": null,
@@ -138,7 +138,7 @@
       "subscriptions": [],
       "table_def": null,
       "timestamps_enabled": false,
-      "updated_at_unix_ms": "1778761473042",
+      "updated_at_unix_ms": "1778787524429",
       "vector_dimension": null,
       "vector_metric": null,
       "version": 1
@@ -147,7 +147,7 @@
       "append_only": false,
       "context_index_enabled": false,
       "context_index_fields": [],
-      "created_at_unix_ms": "1778761436898",
+      "created_at_unix_ms": "1778787470915",
       "declared_columns": [],
       "declared_model": "kv",
       "default_ttl_ms": null,
@@ -157,7 +157,7 @@
       "subscriptions": [],
       "table_def": null,
       "timestamps_enabled": false,
-      "updated_at_unix_ms": "1778761436898",
+      "updated_at_unix_ms": "1778787470915",
       "vector_dimension": null,
       "vector_metric": null,
       "version": 1
@@ -166,7 +166,7 @@
       "append_only": false,
       "context_index_enabled": false,
       "context_index_fields": [],
-      "created_at_unix_ms": "1778761425704",
+      "created_at_unix_ms": "1778787449553",
       "declared_columns": [],
       "declared_model": "config",
       "default_ttl_ms": null,
@@ -176,7 +176,7 @@
       "subscriptions": [],
       "table_def": null,
       "timestamps_enabled": false,
-      "updated_at_unix_ms": "1778761425704",
+      "updated_at_unix_ms": "1778787449553",
       "vector_dimension": null,
       "vector_metric": null,
       "version": 1
@@ -185,7 +185,7 @@
       "append_only": false,
       "context_index_enabled": false,
       "context_index_fields": [],
-      "created_at_unix_ms": "1778761425711",
+      "created_at_unix_ms": "1778787449568",
       "declared_columns": [],
       "declared_model": "vault",
       "default_ttl_ms": null,
@@ -195,7 +195,7 @@
       "subscriptions": [],
       "table_def": null,
       "timestamps_enabled": false,
-      "updated_at_unix_ms": "1778761425711",
+      "updated_at_unix_ms": "1778787449568",
       "vector_dimension": null,
       "vector_metric": null,
       "version": 1
@@ -204,7 +204,7 @@
       "append_only": false,
       "context_index_enabled": false,
       "context_index_fields": [],
-      "created_at_unix_ms": "1778761427253",
+      "created_at_unix_ms": "1778787453029",
       "declared_columns": [],
       "declared_model": "table",
       "default_ttl_ms": null,
@@ -212,9 +212,9 @@
       "origin": "implicit",
       "schema_mode": "dynamic",
       "subscriptions": [],
-      "table_def": "5254424c010000000c74616c655f62696772616d73d3be056a00000000d3be056a0000000000000000",
+      "table_def": "5254424c010000000c74616c655f62696772616d737d24066a000000007d24066a0000000000000000",
       "timestamps_enabled": false,
-      "updated_at_unix_ms": "1778761427253",
+      "updated_at_unix_ms": "1778787453029",
       "vector_dimension": null,
       "vector_metric": null,
       "version": 1
@@ -223,7 +223,7 @@
       "append_only": false,
       "context_index_enabled": false,
       "context_index_fields": [],
-      "created_at_unix_ms": "1778761431918",
+      "created_at_unix_ms": "1778787460760",
       "declared_columns": [],
       "declared_model": "table",
       "default_ttl_ms": null,
@@ -231,9 +231,9 @@
       "origin": "implicit",
       "schema_mode": "dynamic",
       "subscriptions": [],
-      "table_def": "5254424c010000000a74616c655f766f636162d7be056a00000000d7be056a0000000000000000",
+      "table_def": "5254424c010000000a74616c655f766f6361628424066a000000008424066a0000000000000000",
       "timestamps_enabled": false,
-      "updated_at_unix_ms": "1778761431918",
+      "updated_at_unix_ms": "1778787460760",
       "vector_dimension": null,
       "vector_metric": null,
       "version": 1
@@ -242,7 +242,7 @@
       "append_only": false,
       "context_index_enabled": false,
       "context_index_fields": [],
-      "created_at_unix_ms": "1778761426281",
+      "created_at_unix_ms": "1778787450745",
       "declared_columns": [],
       "declared_model": "table",
       "default_ttl_ms": null,
@@ -250,9 +250,9 @@
       "origin": "implicit",
       "schema_mode": "dynamic",
       "subscriptions": [],
-      "table_def": "5254424c010000000a74616c655f776f726473d2be056a00000000d2be056a0000000000000000",
+      "table_def": "5254424c010000000a74616c655f776f7264737a24066a000000007a24066a0000000000000000",
       "timestamps_enabled": false,
-      "updated_at_unix_ms": "1778761426281",
+      "updated_at_unix_ms": "1778787450745",
       "vector_dimension": null,
       "vector_metric": null,
       "version": 1
@@ -261,7 +261,7 @@
       "append_only": false,
       "context_index_enabled": false,
       "context_index_fields": [],
-      "created_at_unix_ms": "1778761483126",
+      "created_at_unix_ms": "1778787542500",
       "declared_columns": [],
       "declared_model": "graph",
       "default_ttl_ms": null,
@@ -271,7 +271,7 @@
       "subscriptions": [],
       "table_def": null,
       "timestamps_enabled": false,
-      "updated_at_unix_ms": "1778761483126",
+      "updated_at_unix_ms": "1778787542500",
       "vector_dimension": null,
       "vector_metric": null,
       "version": 1
@@ -280,7 +280,7 @@
       "append_only": false,
       "context_index_enabled": false,
       "context_index_fields": [],
-      "created_at_unix_ms": "1778761426037",
+      "created_at_unix_ms": "1778787450200",
       "declared_columns": [],
       "declared_model": "hll",
       "default_ttl_ms": null,
@@ -290,7 +290,7 @@
       "subscriptions": [],
       "table_def": null,
       "timestamps_enabled": false,
-      "updated_at_unix_ms": "1778761426037",
+      "updated_at_unix_ms": "1778787450200",
       "vector_dimension": null,
       "vector_metric": null,
       "version": 1
@@ -299,7 +299,7 @@
       "append_only": false,
       "context_index_enabled": false,
       "context_index_fields": [],
-      "created_at_unix_ms": "1778761426109",
+      "created_at_unix_ms": "1778787450316",
       "declared_columns": [],
       "declared_model": "filter",
       "default_ttl_ms": null,
@@ -309,7 +309,7 @@
       "subscriptions": [],
       "table_def": null,
       "timestamps_enabled": false,
-      "updated_at_unix_ms": "1778761426109",
+      "updated_at_unix_ms": "1778787450316",
       "vector_dimension": null,
       "vector_metric": null,
       "version": 1
@@ -318,7 +318,7 @@
       "append_only": false,
       "context_index_enabled": false,
       "context_index_fields": [],
-      "created_at_unix_ms": "1778761426070",
+      "created_at_unix_ms": "1778787450257",
       "declared_columns": [],
       "declared_model": "sketch",
       "default_ttl_ms": null,
@@ -328,7 +328,7 @@
       "subscriptions": [],
       "table_def": null,
       "timestamps_enabled": false,
-      "updated_at_unix_ms": "1778761426070",
+      "updated_at_unix_ms": "1778787450257",
       "vector_dimension": null,
       "vector_metric": null,
       "version": 1
@@ -336,21 +336,21 @@
   ],
   "collection_ttl_defaults_ms": {},
   "exports": [],
-  "generated_at_unix_ms": "1778772345353",
+  "generated_at_unix_ms": "1778787757894",
   "graph_projections": [],
   "indexes": [
     {
       "artifact_checksum": null,
-      "artifact_kind": "graph.adjacency",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "adjacency-map",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "ingest_log",
       "enabled": true,
-      "entries": 2599,
-      "estimated_memory_bytes": "249504",
+      "entries": 2335,
+      "estimated_memory_bytes": "224160",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "ingest_log::graph-adjacency"
     },
     {
@@ -358,13 +358,13 @@
       "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "page-btree",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "ingest_log",
       "enabled": true,
-      "entries": 2599,
-      "estimated_memory_bytes": "166336",
+      "entries": 2335,
+      "estimated_memory_bytes": "149440",
       "kind": "btree",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "ingest_log::metadata-btree"
     },
     {
@@ -372,41 +372,41 @@
       "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "hybrid-score",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "ingest_log",
       "enabled": true,
-      "entries": 2599,
-      "estimated_memory_bytes": "374256",
+      "entries": 2335,
+      "estimated_memory_bytes": "336240",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "ingest_log::search-hybrid"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "hnsw",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "vector-hnsw",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "ingest_log",
       "enabled": true,
-      "entries": 2599,
-      "estimated_memory_bytes": "665344",
+      "entries": 2335,
+      "estimated_memory_bytes": "597760",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "ingest_log::vector-hnsw"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "ivf",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "vector-ivf",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "ingest_log",
       "enabled": true,
-      "entries": 2599,
-      "estimated_memory_bytes": "332672",
+      "entries": 2335,
+      "estimated_memory_bytes": "298880",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "ingest_log::vector-inverted"
     },
     {
@@ -414,27 +414,27 @@
       "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "page-btree",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "kv_default",
       "enabled": true,
       "entries": 6,
       "estimated_memory_bytes": "384",
       "kind": "btree",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "kv_default::metadata-btree"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "graph.adjacency",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "adjacency-map",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red.config",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red.config::graph-adjacency"
     },
     {
@@ -442,13 +442,13 @@
       "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "page-btree",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red.config",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red.config::metadata-btree"
     },
     {
@@ -456,55 +456,55 @@
       "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "hybrid-score",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red.config",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red.config::search-hybrid"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "hnsw",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "vector-hnsw",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red.config",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red.config::vector-hnsw"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "ivf",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "vector-ivf",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red.config",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red.config::vector-inverted"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "graph.adjacency",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "adjacency-map",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red.vault",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red.vault::graph-adjacency"
     },
     {
@@ -512,13 +512,13 @@
       "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "page-btree",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red.vault",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red.vault::metadata-btree"
     },
     {
@@ -526,55 +526,55 @@
       "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "hybrid-score",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red.vault",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red.vault::search-hybrid"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "hnsw",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "vector-hnsw",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red.vault",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red.vault::vector-hnsw"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "ivf",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "vector-ivf",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red.vault",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red.vault::vector-inverted"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "graph.adjacency",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "adjacency-map",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_closure",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red_closure::graph-adjacency"
     },
     {
@@ -582,13 +582,13 @@
       "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "page-btree",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_closure",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red_closure::metadata-btree"
     },
     {
@@ -596,55 +596,55 @@
       "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "hybrid-score",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_closure",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red_closure::search-hybrid"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "hnsw",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "vector-hnsw",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_closure",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red_closure::vector-hnsw"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "ivf",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "vector-ivf",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_closure",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red_closure::vector-inverted"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "graph.adjacency",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "adjacency-map",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_commits",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red_commits::graph-adjacency"
     },
     {
@@ -652,13 +652,13 @@
       "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "page-btree",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_commits",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red_commits::metadata-btree"
     },
     {
@@ -666,41 +666,41 @@
       "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "hybrid-score",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_commits",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red_commits::search-hybrid"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "hnsw",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "vector-hnsw",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_commits",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red_commits::vector-hnsw"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "ivf",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "vector-ivf",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_commits",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red_commits::vector-inverted"
     },
     {
@@ -708,27 +708,27 @@
       "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "page-btree",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_config",
       "enabled": true,
-      "entries": 149,
-      "estimated_memory_bytes": "9536",
+      "entries": 133,
+      "estimated_memory_bytes": "8512",
       "kind": "btree",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red_config::metadata-btree"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "graph.adjacency",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "adjacency-map",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_conflicts",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red_conflicts::graph-adjacency"
     },
     {
@@ -736,13 +736,13 @@
       "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "page-btree",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_conflicts",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red_conflicts::metadata-btree"
     },
     {
@@ -750,41 +750,41 @@
       "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "hybrid-score",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_conflicts",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red_conflicts::search-hybrid"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "hnsw",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "vector-hnsw",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_conflicts",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red_conflicts::vector-hnsw"
     },
     {
       "artifact_checksum": null,
-      "artifact_kind": "ivf",
+      "artifact_kind": null,
       "artifact_root_page": null,
       "backend": "vector-ivf",
-      "build_state": "registry-loaded",
+      "build_state": "catalog-derived",
       "collection": "red_conflicts",
       "enabled": true,
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778771218643",
+      "last_refresh_ms": "1778787756903",
       "name": "red_conflicts::vector-inverted"
     },
     {
@@ -798,7 +798,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_merge_state::graph-adjacency"
     },
     {
@@ -812,7 +812,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_merge_state::metadata-btree"
     },
     {
@@ -826,7 +826,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_merge_state::search-hybrid"
     },
     {
@@ -840,7 +840,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_merge_state::vector-hnsw"
     },
     {
@@ -854,7 +854,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_merge_state::vector-inverted"
     },
     {
@@ -868,7 +868,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_migration_deps::graph-adjacency"
     },
     {
@@ -882,7 +882,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_migration_deps::metadata-btree"
     },
     {
@@ -896,7 +896,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_migration_deps::search-hybrid"
     },
     {
@@ -910,7 +910,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_migration_deps::vector-hnsw"
     },
     {
@@ -924,7 +924,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_migration_deps::vector-inverted"
     },
     {
@@ -938,7 +938,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_migrations::graph-adjacency"
     },
     {
@@ -952,7 +952,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_migrations::metadata-btree"
     },
     {
@@ -966,7 +966,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_migrations::search-hybrid"
     },
     {
@@ -980,7 +980,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_migrations::vector-hnsw"
     },
     {
@@ -994,7 +994,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_migrations::vector-inverted"
     },
     {
@@ -1008,7 +1008,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_refs::graph-adjacency"
     },
     {
@@ -1022,7 +1022,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_refs::metadata-btree"
     },
     {
@@ -1036,7 +1036,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_refs::search-hybrid"
     },
     {
@@ -1050,7 +1050,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_refs::vector-hnsw"
     },
     {
@@ -1064,7 +1064,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_refs::vector-inverted"
     },
     {
@@ -1078,7 +1078,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_remotes::graph-adjacency"
     },
     {
@@ -1092,7 +1092,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_remotes::metadata-btree"
     },
     {
@@ -1106,7 +1106,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_remotes::search-hybrid"
     },
     {
@@ -1120,7 +1120,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_remotes::vector-hnsw"
     },
     {
@@ -1134,7 +1134,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_remotes::vector-inverted"
     },
     {
@@ -1148,7 +1148,7 @@
       "entries": 1,
       "estimated_memory_bytes": "64",
       "kind": "btree",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_timeseries_meta::metadata-btree"
     },
     {
@@ -1162,7 +1162,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_vcs_settings::graph-adjacency"
     },
     {
@@ -1176,7 +1176,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_vcs_settings::metadata-btree"
     },
     {
@@ -1190,7 +1190,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_vcs_settings::search-hybrid"
     },
     {
@@ -1204,7 +1204,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_vcs_settings::vector-hnsw"
     },
     {
@@ -1218,7 +1218,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_vcs_settings::vector-inverted"
     },
     {
@@ -1232,7 +1232,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_worksets::graph-adjacency"
     },
     {
@@ -1246,7 +1246,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_worksets::metadata-btree"
     },
     {
@@ -1260,7 +1260,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_worksets::search-hybrid"
     },
     {
@@ -1274,7 +1274,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_worksets::vector-hnsw"
     },
     {
@@ -1288,7 +1288,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "red_worksets::vector-inverted"
     },
     {
@@ -1302,7 +1302,7 @@
       "entries": 4075,
       "estimated_memory_bytes": "260800",
       "kind": "btree",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "tale_bigrams::metadata-btree"
     },
     {
@@ -1316,7 +1316,7 @@
       "entries": 206,
       "estimated_memory_bytes": "13184",
       "kind": "btree",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "tale_vocab::metadata-btree"
     },
     {
@@ -1330,7 +1330,7 @@
       "entries": 53946,
       "estimated_memory_bytes": "3452544",
       "kind": "btree",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "tale_words::metadata-btree"
     },
     {
@@ -1341,10 +1341,10 @@
       "build_state": "catalog-derived",
       "collection": "tales",
       "enabled": true,
-      "entries": 92404,
-      "estimated_memory_bytes": "8870784",
+      "entries": 85064,
+      "estimated_memory_bytes": "8166144",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "tales::graph-adjacency"
     },
     {
@@ -1355,10 +1355,10 @@
       "build_state": "catalog-derived",
       "collection": "tales",
       "enabled": true,
-      "entries": 60458,
-      "estimated_memory_bytes": "3869312",
+      "entries": 50712,
+      "estimated_memory_bytes": "3245568",
       "kind": "btree",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "tales::metadata-btree"
     },
     {
@@ -1372,7 +1372,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "vocab_hll::graph-adjacency"
     },
     {
@@ -1386,7 +1386,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "vocab_hll::metadata-btree"
     },
     {
@@ -1400,7 +1400,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "vocab_hll::search-hybrid"
     },
     {
@@ -1414,7 +1414,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "vocab_hll::vector-hnsw"
     },
     {
@@ -1428,7 +1428,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "vocab_hll::vector-inverted"
     },
     {
@@ -1442,7 +1442,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "word_filter::graph-adjacency"
     },
     {
@@ -1456,7 +1456,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "word_filter::metadata-btree"
     },
     {
@@ -1470,7 +1470,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "word_filter::search-hybrid"
     },
     {
@@ -1484,7 +1484,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "word_filter::vector-hnsw"
     },
     {
@@ -1498,7 +1498,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "word_filter::vector-inverted"
     },
     {
@@ -1512,7 +1512,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "graph.adjacency",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "word_sketch::graph-adjacency"
     },
     {
@@ -1526,7 +1526,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "btree",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "word_sketch::metadata-btree"
     },
     {
@@ -1540,7 +1540,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "search.hybrid",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "word_sketch::search-hybrid"
     },
     {
@@ -1554,7 +1554,7 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.hnsw",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "word_sketch::vector-hnsw"
     },
     {
@@ -1568,15 +1568,15 @@
       "entries": 0,
       "estimated_memory_bytes": "0",
       "kind": "vector.inverted",
-      "last_refresh_ms": "1778772345023",
+      "last_refresh_ms": "1778787756903",
       "name": "word_sketch::vector-inverted"
     }
   ],
-  "last_healed_at_unix_ms": "1778761425695",
+  "last_healed_at_unix_ms": "1778787449523",
   "last_loaded_from": "native_bootstrap",
   "manifest": {
     "collection_count": 23,
-    "created_at_unix_ms": "1778761425695",
+    "created_at_unix_ms": "1778787449523",
     "format_version": 2,
     "options": {
       "auto_checkpoint_pages": 1000,
@@ -1600,7 +1600,7 @@
       "snapshot_retention": 16,
       "verify_checksums": true
     },
-    "updated_at_unix_ms": "1778772345353"
+    "updated_at_unix_ms": "1778787757894"
   },
   "manifest_events": [
     {
@@ -1649,8 +1649,8 @@
     },
     {
       "block": {
-        "checksum": "189158691936930452407883992822808838149",
-        "index": "10254313237126813359"
+        "checksum": "119612113185435574360267670784143523845",
+        "index": "6484185648561564990"
       },
       "collection": "kv_default",
       "kind": "update",
@@ -1682,8 +1682,8 @@
     },
     {
       "block": {
-        "checksum": "292701154823751405797743375624005746695",
-        "index": "15867361397446362993"
+        "checksum": "45654227901726698240302842594499493895",
+        "index": "2474920653710020943"
       },
       "collection": "red_timeseries_meta",
       "kind": "insert",
@@ -1704,8 +1704,8 @@
     },
     {
       "block": {
-        "checksum": "271441547731795262795662207296737378312",
-        "index": "14714875787682008619"
+        "checksum": "302788252872096340372602916460044484616",
+        "index": "16414184078350856488"
       },
       "collection": "ingest_log",
       "kind": "update",
@@ -1715,8 +1715,8 @@
     },
     {
       "block": {
-        "checksum": "87524334922076439662194794623250989064",
-        "index": "4744703703393208966"
+        "checksum": "49535537102624856128525576147782598664",
+        "index": "2685326847095108941"
       },
       "collection": "tales",
       "kind": "update",
@@ -1748,8 +1748,8 @@
     },
     {
       "block": {
-        "checksum": "113991790429809200572122916973235404810",
-        "index": "6179507341475573425"
+        "checksum": "308646464523980024283592486884982390794",
+        "index": "16731758368343465774"
       },
       "collection": "ingest_log",
       "kind": "update",
@@ -1759,8 +1759,8 @@
     },
     {
       "block": {
-        "checksum": "19800336193532968206598920046903296010",
-        "index": "1073378375848590375"
+        "checksum": "208642837180411346182965643390922784778",
+        "index": "11310550867227067998"
       },
       "collection": "kv_default",
       "kind": "update",
@@ -1770,8 +1770,8 @@
     },
     {
       "block": {
-        "checksum": "3685291492802555204283813792384548874",
-        "index": "199780052136943904"
+        "checksum": "76692124506529379392009143864426233866",
+        "index": "4157488400125397391"
       },
       "collection": "red_config",
       "kind": "update",
@@ -1781,8 +1781,8 @@
     },
     {
       "block": {
-        "checksum": "200113496252463516817871836105058287626",
-        "index": "10848174369029539751"
+        "checksum": "213955125056823014929630079505378836490",
+        "index": "11598530570050764905"
       },
       "collection": "red_timeseries_meta",
       "kind": "update",
@@ -1792,8 +1792,8 @@
     },
     {
       "block": {
-        "checksum": "92901432875520838906130587212954206218",
-        "index": "5036196767532797838"
+        "checksum": "13310709396510275786654294686698569738",
+        "index": "721575002250982933"
       },
       "collection": "tales",
       "kind": "update",
@@ -1822,376 +1822,117 @@
       "object_key": "superblock:11",
       "snapshot_max": null,
       "snapshot_min": "11"
-    },
-    {
-      "block": {
-        "checksum": "133094471603559865802032970263148101644",
-        "index": "7215065762919494277"
-      },
-      "collection": "ingest_log",
-      "kind": "update",
-      "object_key": "ingest_log",
-      "snapshot_max": null,
-      "snapshot_min": "12"
-    },
-    {
-      "block": {
-        "checksum": "242889070720798131266889518252545802252",
-        "index": "13167042907423733015"
-      },
-      "collection": "kv_default",
-      "kind": "update",
-      "object_key": "kv_default",
-      "snapshot_max": null,
-      "snapshot_min": "12"
-    },
-    {
-      "block": {
-        "checksum": "187748777394558522684331622527657836556",
-        "index": "10177881616633885759"
-      },
-      "collection": "red_config",
-      "kind": "update",
-      "object_key": "red_config",
-      "snapshot_max": null,
-      "snapshot_min": "12"
-    },
-    {
-      "block": {
-        "checksum": "306867133953335925354055128664904826892",
-        "index": "16635300664830355555"
-      },
-      "collection": "red_timeseries_meta",
-      "kind": "update",
-      "object_key": "red_timeseries_meta",
-      "snapshot_max": null,
-      "snapshot_min": "12"
-    },
-    {
-      "block": {
-        "checksum": "264909968837208474432717831000926715916",
-        "index": "14360798186318435344"
-      },
-      "collection": "tales",
-      "kind": "update",
-      "object_key": "tales",
-      "snapshot_max": null,
-      "snapshot_min": "12"
-    },
-    {
-      "block": {
-        "checksum": "221360928884514619404",
-        "index": "12"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:12",
-      "snapshot_max": null,
-      "snapshot_min": "12"
-    },
-    {
-      "block": {
-        "checksum": "239807672958224171021",
-        "index": "13"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:13",
-      "snapshot_max": null,
-      "snapshot_min": "13"
-    },
-    {
-      "block": {
-        "checksum": "26381022712007955800026583885863190542",
-        "index": "1430118106837422983"
-      },
-      "collection": "ingest_log",
-      "kind": "update",
-      "object_key": "ingest_log",
-      "snapshot_max": null,
-      "snapshot_min": "14"
-    },
-    {
-      "block": {
-        "checksum": "104163522273181576742438286883473588238",
-        "index": "5646715857116284739"
-      },
-      "collection": "kv_default",
-      "kind": "update",
-      "object_key": "kv_default",
-      "snapshot_max": null,
-      "snapshot_min": "14"
-    },
-    {
-      "block": {
-        "checksum": "19609249717389232987672096867256107022",
-        "index": "1063019557220208513"
-      },
-      "collection": "red_config",
-      "kind": "update",
-      "object_key": "red_config",
-      "snapshot_max": null,
-      "snapshot_min": "14"
-    },
-    {
-      "block": {
-        "checksum": "105920282999815229748742360939460821006",
-        "index": "5741950046933955737"
-      },
-      "collection": "red_timeseries_meta",
-      "kind": "update",
-      "object_key": "red_timeseries_meta",
-      "snapshot_max": null,
-      "snapshot_min": "14"
-    },
-    {
-      "block": {
-        "checksum": "44421380149816376509282164782737129486",
-        "index": "2408087843161768892"
-      },
-      "collection": "tales",
-      "kind": "update",
-      "object_key": "tales",
-      "snapshot_max": null,
-      "snapshot_min": "14"
-    },
-    {
-      "block": {
-        "checksum": "258254417031933722638",
-        "index": "14"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:14",
-      "snapshot_max": null,
-      "snapshot_min": "14"
-    },
-    {
-      "block": {
-        "checksum": "276701161105643274255",
-        "index": "15"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:15",
-      "snapshot_max": null,
-      "snapshot_min": "15"
-    },
-    {
-      "block": {
-        "checksum": "272916395459277943847532801542957563920",
-        "index": "14794827443193110219"
-      },
-      "collection": "ingest_log",
-      "kind": "update",
-      "object_key": "ingest_log",
-      "snapshot_max": null,
-      "snapshot_min": "16"
-    },
-    {
-      "block": {
-        "checksum": "48716979146798361323316718765095256080",
-        "index": "2640952731394489979"
-      },
-      "collection": "kv_default",
-      "kind": "update",
-      "object_key": "kv_default",
-      "snapshot_max": null,
-      "snapshot_min": "16"
-    },
-    {
-      "block": {
-        "checksum": "194076434307926858559314319288521719824",
-        "index": "10520904585244729313"
-      },
-      "collection": "red_config",
-      "kind": "update",
-      "object_key": "red_config",
-      "snapshot_max": null,
-      "snapshot_min": "16"
-    },
-    {
-      "block": {
-        "checksum": "325082223936684062132404748121301581840",
-        "index": "17622742671428605589"
-      },
-      "collection": "red_timeseries_meta",
-      "kind": "update",
-      "object_key": "red_timeseries_meta",
-      "snapshot_max": null,
-      "snapshot_min": "16"
-    },
-    {
-      "block": {
-        "checksum": "184976604294804042052067204883990708240",
-        "index": "10027601811770901614"
-      },
-      "collection": "tales",
-      "kind": "update",
-      "object_key": "tales",
-      "snapshot_max": null,
-      "snapshot_min": "16"
-    },
-    {
-      "block": {
-        "checksum": "295147905179352825872",
-        "index": "16"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:16",
-      "snapshot_max": null,
-      "snapshot_min": "16"
-    },
-    {
-      "block": {
-        "checksum": "313594649253062377489",
-        "index": "17"
-      },
-      "collection": "__system__",
-      "kind": "checkpoint",
-      "object_key": "superblock:17",
-      "snapshot_max": null,
-      "snapshot_min": "17"
     }
   ],
   "protocol_version": "reddb-physical-v1",
   "snapshots": [
     {
+      "collection_count": 0,
+      "created_at_unix_ms": "1778787449523",
+      "snapshot_id": "0",
+      "superblock_sequence": "0",
+      "total_entities": 0
+    },
+    {
+      "collection_count": 2,
+      "created_at_unix_ms": "1778787449579",
+      "snapshot_id": "1",
+      "superblock_sequence": "1",
+      "total_entities": 0
+    },
+    {
       "collection_count": 14,
-      "created_at_unix_ms": "1778761426054",
+      "created_at_unix_ms": "1778787450231",
       "snapshot_id": "2",
       "superblock_sequence": "2",
       "total_entities": 101
     },
     {
       "collection_count": 15,
-      "created_at_unix_ms": "1778761426087",
+      "created_at_unix_ms": "1778787450286",
       "snapshot_id": "3",
       "superblock_sequence": "3",
       "total_entities": 101
     },
     {
       "collection_count": 16,
-      "created_at_unix_ms": "1778761426129",
+      "created_at_unix_ms": "1778787450363",
       "snapshot_id": "4",
       "superblock_sequence": "4",
       "total_entities": 101
     },
     {
       "collection_count": 20,
-      "created_at_unix_ms": "1778761446917",
+      "created_at_unix_ms": "1778787490879",
       "snapshot_id": "5",
       "superblock_sequence": "5",
       "total_entities": 58334
     },
     {
       "collection_count": 20,
-      "created_at_unix_ms": "1778761456665",
+      "created_at_unix_ms": "1778787510095",
       "snapshot_id": "6",
       "superblock_sequence": "6",
       "total_entities": 58334
     },
     {
       "collection_count": 22,
-      "created_at_unix_ms": "1778761478244",
+      "created_at_unix_ms": "1778787534099",
       "snapshot_id": "7",
       "superblock_sequence": "7",
       "total_entities": 58351
     },
     {
       "collection_count": 23,
-      "created_at_unix_ms": "1778761587354",
+      "created_at_unix_ms": "1778787586445",
       "snapshot_id": "8",
       "superblock_sequence": "8",
-      "total_entities": 121408
+      "total_entities": 111398
     },
     {
       "collection_count": 23,
-      "created_at_unix_ms": "1778761609076",
+      "created_at_unix_ms": "1778787625198",
       "snapshot_id": "9",
       "superblock_sequence": "9",
-      "total_entities": 121408
+      "total_entities": 111398
     },
     {
       "collection_count": 23,
-      "created_at_unix_ms": "1778770660084",
+      "created_at_unix_ms": "1778787708490",
       "snapshot_id": "10",
       "superblock_sequence": "10",
-      "total_entities": 121424
+      "total_entities": 111414
     },
     {
       "collection_count": 23,
-      "created_at_unix_ms": "1778770682649",
+      "created_at_unix_ms": "1778787757894",
       "snapshot_id": "11",
       "superblock_sequence": "11",
-      "total_entities": 121424
-    },
-    {
-      "collection_count": 23,
-      "created_at_unix_ms": "1778771219121",
-      "snapshot_id": "12",
-      "superblock_sequence": "12",
-      "total_entities": 121440
-    },
-    {
-      "collection_count": 23,
-      "created_at_unix_ms": "1778771242019",
-      "snapshot_id": "13",
-      "superblock_sequence": "13",
-      "total_entities": 121440
-    },
-    {
-      "collection_count": 23,
-      "created_at_unix_ms": "1778771348143",
-      "snapshot_id": "14",
-      "superblock_sequence": "14",
-      "total_entities": 121456
-    },
-    {
-      "collection_count": 23,
-      "created_at_unix_ms": "1778771370306",
-      "snapshot_id": "15",
-      "superblock_sequence": "15",
-      "total_entities": 121456
-    },
-    {
-      "collection_count": 23,
-      "created_at_unix_ms": "1778772320974",
-      "snapshot_id": "16",
-      "superblock_sequence": "16",
-      "total_entities": 121472
-    },
-    {
-      "collection_count": 23,
-      "created_at_unix_ms": "1778772345353",
-      "snapshot_id": "17",
-      "superblock_sequence": "17",
-      "total_entities": 121472
+      "total_entities": 111414
     }
   ],
   "superblock": {
     "collection_roots": {
-      "ingest_log": "14794827443193110219",
-      "kv_default": "2640952731394489979",
+      "ingest_log": "16731758368343465774",
+      "kv_default": "11310550867227067998",
       "red.config": "6141268819718733570",
       "red.vault": "4046765320294292152",
       "red_closure": "2962625817060036908",
       "red_commits": "8835022039134948539",
-      "red_config": "10520904585244729313",
+      "red_config": "4157488400125397391",
       "red_conflicts": "1534443990078542426",
       "red_merge_state": "4230045656060963467",
       "red_migration_deps": "2873662948492294836",
       "red_migrations": "12837160998890813542",
       "red_refs": "8767304113166891413",
       "red_remotes": "14034059703144543526",
-      "red_timeseries_meta": "17622742671428605589",
+      "red_timeseries_meta": "11598530570050764905",
       "red_vcs_settings": "18015840595644011411",
       "red_worksets": "4675175877922372847",
-      "tale_bigrams": "8016707589202238315",
-      "tale_vocab": "18398115312619190042",
-      "tale_words": "2211929998746575436",
-      "tales": "10027601811770901614",
+      "tale_bigrams": "6676689422853376485",
+      "tale_vocab": "14242093865692604050",
+      "tale_words": "7952231822164020168",
+      "tales": "721575002250982933",
       "vocab_hll": "11810969637793232449",
       "word_filter": "9007473912865025522",
       "word_sketch": "12332917154728044916"
@@ -2212,7 +1953,7 @@
         "index": "0"
       }
     },
-    "sequence": "17"
+    "sequence": "11"
   },
   "tree_definitions": []
 }

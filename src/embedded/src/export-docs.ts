@@ -172,7 +172,7 @@ async function redDbOverview(): Promise<AnyRecord> {
       db,
       'SELECT metric, COUNT(*), SUM(value), AVG(value), MIN(value), MAX(value) FROM ingest_log GROUP BY metric',
     )
-    const centrality = await safeRows(db, 'GRAPH CENTRALITY')
+    const centrality = await safeRows(db, 'GRAPH CENTRALITY LIMIT 25')
     const taleWords = await safeRows(db, 'SELECT COUNT(*) FROM tale_words')
     const taleBigrams = await safeRows(db, 'SELECT COUNT(*) FROM tale_bigrams')
     const taleVocab = await safeRows(db, 'SELECT COUNT(*) FROM tale_vocab')
@@ -180,7 +180,7 @@ async function redDbOverview(): Promise<AnyRecord> {
     return {
       collections,
       ingest_metrics,
-      centrality_top: centrality.slice(0, 25),
+      centrality_top: centrality,
       table_counts: {
         tale_words: taleWords[0]?.['COUNT(*)'] ?? taleWords[0]?.['count(*)'] ?? null,
         tale_bigrams: taleBigrams[0]?.['COUNT(*)'] ?? taleBigrams[0]?.['count(*)'] ?? null,

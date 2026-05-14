@@ -353,6 +353,11 @@ async function main(): Promise<void> {
       await logPoint(db, logCol, 'edges_total', graph.edges.length, { phase: 'overall' })
     }
 
+    if (process.env.REDDB_SKIP_DEMOS === '1') {
+      console.log('\nSkipping demo queries because REDDB_SKIP_DEMOS=1.')
+      return
+    }
+
     await runDemos(db, graph.collection, labelToId)
   } catch (err) {
     if (err instanceof RedDBError) console.error(`\n[${err.code}] ${err.message}`)

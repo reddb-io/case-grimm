@@ -40,6 +40,12 @@ function snapshotUri(): { uri: string; cleanup?: () => void } {
 
 const snapshot = snapshotUri()
 
+function closeInBackground(db: Awaited<ReturnType<typeof connect>>): void {
+  db.close().catch(() => {
+    // Query output has already been printed; close failures should not hide it.
+  })
+}
+
 try {
   const db = await connect(snapshot.uri)
   try {
@@ -52,7 +58,7 @@ try {
       console.log(JSON.stringify(result, null, 2))
     }
   } finally {
-    await db.close()
+    closeInBackground(db)
     snapshot.cleanup?.()
   }
 } catch (err) {
@@ -64,3 +70,5 @@ try {
   }
   process.exit(1)
 }
+
+process.exit(0)

@@ -134,7 +134,7 @@ function rebuild(): void {
   runRoot(['run', 'build:corpus'])
   runRoot(['run', 'validate'])
   runEmbedded(['ingest:words'])
-  runEmbedded(['start'])
+  run('pnpm', ['start'], { cwd: embeddedRoot, env: { REDDB_SKIP_DEMOS: '1' } })
 }
 
 const cli = createCLI({
@@ -233,6 +233,16 @@ const cli = createCLI({
 const argv = process.argv.slice(2)
 if (argv.length === 0 || argv[0] === 'help' || argv[0] === '--help' || argv[0] === '-h') {
   console.log(cli.help())
+  process.exit(0)
+}
+
+if (argv[0] === 'query') {
+  const sql = argv.slice(1).join(' ').trim()
+  if (!sql) {
+    console.error('usage: ./grimm query "<SQL or GRAPH command>"')
+    process.exit(1)
+  }
+  runEmbedded(['query', sql])
   process.exit(0)
 }
 

@@ -116,8 +116,106 @@ function slugifyLabelPart(value: string): string {
   return columnPart(value) || 'unnamed'
 }
 
-function traitLabel(trait: string): string {
-  return `trait_${slugifyLabelPart(trait)}`
+type CanonicalTrait = {
+  label: string
+  name: string
+  family: string
+  description: string
+  patterns: RegExp[]
+}
+
+type CanonicalTraitMatch = {
+  trait: CanonicalTrait
+  rawTraits: string[]
+}
+
+const CHARACTER_TRAITS: CanonicalTrait[] = [
+  trait('trait_clever', 'Clever', 'cognition', 'Solves problems through intelligence, wit, or practical judgment.', ['clever', 'wise', 'cunning', 'crafty', 'riddle-solver', 'answerer', 'solver']),
+  trait('trait_foolish', 'Foolish', 'cognition', 'Misreads danger, advice, or social reality.', ['fool', 'foolish', 'stupid', 'simpleton', 'simple', 'silly']),
+  trait('trait_curious', 'Curious', 'cognition', 'Crosses into knowledge because they want to see, ask, or know.', ['curious', 'questioner', 'inquisitive']),
+  trait('trait_brave', 'Brave', 'cognition', 'Acts despite danger, fear, violence, or supernatural risk.', ['brave', 'fearless', 'bold', 'courageous']),
+  trait('trait_fearful', 'Fearful', 'cognition', 'Defined by fear, alarm, dread, or panic.', ['afraid', 'fearful', 'frightened', 'terrified', 'alarm-raiser']),
+  trait('trait_kind', 'Kind', 'moral', 'Shows care, help, hospitality, tenderness, or compassion.', ['kind', 'good-hearted', 'compassionate', 'tender-hearted', 'hospitable', 'gentle']),
+  trait('trait_generous', 'Generous', 'moral', 'Gives food, shelter, objects, money, mercy, or opportunity.', ['generous', 'giver', 'givers', 'bestower', 'bestowers', 'sharer', 'sharers', 'reward-giver', 'kingdom-giver', 'daughter-giver', 'blessing-giver']),
+  trait('trait_merciful', 'Merciful', 'moral', 'Spare, forgive, or plead for life instead of punishment.', ['merciful', 'mercy', 'forgiving', 'spared', 'pardoner']),
+  trait('trait_loyal', 'Loyal', 'moral', 'Keeps faith with kin, lord, promise, companion, or beloved.', ['loyal', 'faithful', 'devoted', 'true', 'trustworthy', 'trusting']),
+  trait('trait_pious', 'Pious', 'moral', 'Acts through prayer, holiness, devotion, blessing, or sacred duty.', ['pious', 'devout', 'holy', 'prayerful', 'saintly']),
+  trait('trait_obedient', 'Obedient', 'moral', 'Accepts commands, prohibitions, social rules, or parental demands.', ['obedient', 'submissive', 'compliant']),
+  trait('trait_rebellious', 'Rebellious', 'moral', 'Breaks commands, prohibitions, social place, or expected obedience.', ['rebellious', 'disobedient', 'defiant', 'runaway']),
+  trait('trait_wicked', 'Wicked', 'moral', 'Marked by moral corruption, malice, or destructive intent.', ['wicked', 'evil', 'sinful', 'bad', 'malicious']),
+  trait('trait_cruel', 'Cruel', 'moral', 'Harms others through violence, neglect, humiliation, or needless punishment.', ['cruel', 'brutal', 'hard-hearted', 'murderous', 'death-sentencer', 'death-threatener']),
+  trait('trait_greedy', 'Greedy', 'moral', 'Desires food, wealth, status, or reward beyond right measure.', ['greedy', 'avaricious', 'gluttonous', 'covetous']),
+  trait('trait_proud', 'Proud', 'moral', 'Acts from pride, haughtiness, vanity, contempt, or rank-conscious arrogance.', ['proud', 'haughty', 'vain', 'arrogant', 'mocker']),
+  trait('trait_envious', 'Envious', 'moral', "Resents another person's beauty, fortune, rank, or love.", ['envious', 'jealous', 'envier']),
+  trait('trait_deceptive', 'Deceptive', 'moral', 'Uses lies, disguise, fraud, false accusation, or betrayal.', ['false', 'deceitful', 'deceiver', 'liar', 'fraud', 'betrayer', 'treacherous', 'impostor']),
+  trait('trait_industrious', 'Industrious', 'labor', 'Works diligently, spins, serves, gathers, cooks, cleans, or completes practical tasks.', ['industrious', 'hard-working', 'worker', 'workers', 'maker', 'makers', 'spinner', 'cook', 'servant', 'servants', 'gardener', 'woodcutter', 'carrier']),
+  trait('trait_lazy', 'Lazy', 'labor', 'Avoids work, delays effort, idles, or tries to gain without labor.', ['lazy', 'idle', 'work-shy']),
+  trait('trait_poor', 'Poor', 'social', 'Lives under scarcity, poverty, hunger, or low material power.', ['poor', 'beggar', 'beggar-maid', 'penniless']),
+  trait('trait_rich', 'Rich', 'social', 'Has money, land, treasure, abundance, or high material power.', ['rich', 'wealthy', 'merchant']),
+  trait('trait_royal', 'Royal', 'social', 'Belongs to kingly, queenly, princely, princessly, or courtly power.', ['king', 'queen', 'prince', 'princess', 'royal']),
+  trait('trait_low_status', 'Low Status', 'social', 'Occupies a marginal, despised, peasant, servant, or socially humiliated position.', ['peasant', 'servant', 'maid', 'kitchen-servant', 'despised', 'outcast', 'low-born']),
+  trait('trait_old', 'Old', 'life-stage', 'Age grants weakness, wisdom, liminality, need, or authority.', ['old', 'aged', 'elderly']),
+  trait('trait_young', 'Young', 'life-stage', 'Childhood or youth shapes vulnerability, testing, innocence, or promise.', ['young', 'child', 'boy', 'girl', 'daughter', 'son', 'newborn', 'little']),
+  trait('trait_beautiful', 'Beautiful', 'embodiment', 'Beauty changes desire, rank, danger, recognition, or rivalry.', ['beautiful', 'pretty', 'fair', 'golden-haired', 'lovely']),
+  trait('trait_ugly', 'Ugly', 'embodiment', 'Ugliness, deformity, dirt, or repulsiveness affects status or recognition.', ['ugly', 'dirty', 'deformed', 'misshapen', 'blackened']),
+  trait('trait_hungry', 'Hungry', 'embodiment', 'Need for food drives action, vulnerability, bargaining, or danger.', ['hungry', 'starving', 'famished']),
+  trait('trait_parent', 'Kin Parent', 'kinship', 'Acts as mother, father, step-parent, adoptive parent, or foster parent.', ['mother', 'father', 'stepmother', 'step-father', 'parent', 'adoptive-father', 'foster']),
+  trait('trait_sibling', 'Kin Sibling', 'kinship', 'Acts through brotherhood, sisterhood, or sibling rivalry/support.', ['brother', 'sister', 'sibling']),
+  trait('trait_spouse_or_suitor', 'Spouse Or Suitor', 'kinship', 'Acts as bride, bridegroom, husband, wife, betrothed, lover, or suitor.', ['bride', 'bridegroom', 'husband', 'wife', 'betrothed', 'suitor', 'wooer', 'lover']),
+  trait('trait_helper', 'Helper', 'narrative-role', 'Aids another character with advice, labor, magic, rescue, objects, or timing.', ['helper', 'helpers', 'aid', 'rescuer', 'rescuers', 'protective', 'shelterer', 'shelterers', 'guide', 'guides', 'adviser', 'advisers', 'advisor', 'advisors', 'instructor', 'instructors', 'companion']),
+  trait('trait_adversary', 'Adversary', 'narrative-role', 'Opposes, harms, captures, deceives, hunts, tests, or blocks another character.', ['enemy', 'opponent', 'adversary', 'villain', 'persecutor', 'threatener', 'murderer', 'robber', 'captor', 'captors', 'killer', 'killers', 'thief', 'thieves', 'devourer', 'devourers']),
+  trait('trait_victim', 'Victim', 'narrative-role', 'Suffers abandonment, capture, false accusation, violence, curse, or dispossession.', ['victim', 'falsely-accused', 'abandoned', 'betrayed', 'persecuted', 'rejected', 'robbed']),
+  trait('trait_donor', 'Donor', 'narrative-role', 'Provides a gift, blessing, knowledge, object, test, or reward that changes the plot.', ['donor', 'donors', 'gift', 'gift-giver', 'gift-givers', 'blessing-giver', 'reward-giver', 'provider', 'providers']),
+  trait('trait_seeker', 'Seeker', 'narrative-role', 'Searches, travels, wanders, follows, or quests toward restoration or discovery.', ['seeker', 'searcher', 'wanderer', 'traveller', 'traveler', 'passenger', 'quester', 'pursuer']),
+  trait('trait_judge', 'Judge', 'narrative-role', 'Judges guilt, merit, hospitality, truth, or punishment.', ['judge', 'judgment', 'hospitality-judge', 'tester']),
+  trait('trait_witness', 'Witness', 'narrative-role', 'Sees, overhears, verifies, or preserves knowledge that matters later.', ['witness', 'witnesses', 'observer', 'observers', 'overhearer', 'watcher']),
+  trait('trait_messenger', 'Messenger', 'narrative-role', 'Carries speech, warning, summons, prophecy, formula, or public announcement.', ['messenger', 'warning', 'warning-giver', 'danger-warner', 'speaker', 'caller', 'herald', 'announcer', 'formula-speaker']),
+  trait('trait_task_setter', 'Task Setter', 'narrative-role', 'Creates impossible tasks, riddles, trials, commands, or marriage conditions.', ['task-setter', 'impossible-task-setter', 'riddle-setter', 'condition-setter']),
+  trait('trait_task_solver', 'Task Solver', 'narrative-role', 'Solves riddles, completes impossible tasks, answers tests, or breaks conditions.', ['task-solver', 'riddle-solver', 'answerer', 'solver']),
+  trait('trait_oath_bound', 'Oath Bound', 'obligation', 'Is bound by promise, oath, debt, vow, taboo, or contract.', ['oath-bound', 'promise-bound', 'vow-bound', 'debt-bound', 'bound']),
+  trait('trait_hidden', 'Hidden Or Disguised', 'state', 'Identity, body, knowledge, or presence is concealed.', ['hidden', 'disguised', 'concealed', 'secret', 'unrecognized']),
+  trait('trait_lost_or_exiled', 'Lost Or Exiled', 'state', 'Removed from home, lost in a threshold space, banished, rejected, or displaced.', ['lost', 'exiled', 'banished', 'rejected', 'forest-lost', 'outcast']),
+  trait('trait_imprisoned', 'Imprisoned', 'state', 'Held in tower, pit, cage, cellar, enchantment, captivity, or forced enclosure.', ['imprisoned', 'captive', 'trapped', 'locked', 'cellar', 'tower-prisoner']),
+  trait('trait_dead_or_wounded', 'Dead Or Wounded', 'state', 'Killed, beheaded, drowned, wounded, dismembered, executed, or made deathlike.', ['dead', 'death', 'drowned', 'drowning-victim', 'beheaded', 'wounded', 'dismembered', 'executed']),
+  trait('trait_cursed_or_transformed', 'Cursed Or Transformed', 'state', 'Altered by curse, enchantment, animal form, restoration, or disenchantment.', ['cursed', 'enchanted', 'transformed', 'disenchanted', 'restored', 'released-bridegroom', 'restored-bride']),
+  trait('trait_rewarded', 'Rewarded', 'outcome', 'Receives compensation, marriage, kingdom, wealth, restoration, or public elevation.', ['rewarded', 'compensated', 'restored', 'enriched', 'kingdom-giver']),
+  trait('trait_punished', 'Punished', 'outcome', 'Receives execution, humiliation, mutilation, exile, exposure, or violent justice.', ['punished', 'executed', 'banished', 'beheaded', 'death-sentencer']),
+]
+
+function trait(
+  label: string,
+  name: string,
+  family: string,
+  description: string,
+  keywords: string[],
+): CanonicalTrait {
+  return {
+    label,
+    name,
+    family,
+    description,
+    patterns: keywords.map((keyword) => {
+      const part = slugifyLabelPart(keyword).replace(/_/g, '-')
+      return new RegExp(`(^|-)${part}($|-)`)
+    }),
+  }
+}
+
+function canonicalTraitMatches(rawTraits: string[]): CanonicalTraitMatch[] {
+  const normalized = rawTraits.map((raw) => ({
+    raw,
+    label: slugifyLabelPart(raw).replace(/_/g, '-'),
+  }))
+  const matches: CanonicalTraitMatch[] = []
+
+  for (const traitDef of CHARACTER_TRAITS) {
+    const rawMatches = normalized
+      .filter(({ label }) => traitDef.patterns.some((pattern) => pattern.test(label)))
+      .map(({ raw }) => raw)
+    if (rawMatches.length) matches.push({ trait: traitDef, rawTraits: rawMatches })
+  }
+
+  return matches
 }
 
 function proppEventLabel(taleSlug: string, order: number): string {
@@ -341,6 +439,8 @@ function loadGoldYamlGraph(goldDir: string): GrimmGraph | null {
         for (const [label, character] of Object.entries(characters)) {
           const characterRecord = isRecord(character) ? character : {}
           const evidence = cleanEvidence(characterRecord.evidence)
+          const rawTraits = stringArray(characterRecord.traits)
+          const canonicalTraits = canonicalTraitMatches(rawTraits)
           addNode(
             nodes,
             seenLabels,
@@ -351,6 +451,9 @@ function loadGoldYamlGraph(goldDir: string): GrimmGraph | null {
               tale_slug: tale.slug,
               species: characterRecord.species,
               being_type: characterRecord.being_type,
+              raw_traits: rawTraits.join('|'),
+              raw_trait_count: rawTraits.length,
+              canonical_trait_count: canonicalTraits.length,
               evidence,
             }),
           )
@@ -358,10 +461,22 @@ function loadGoldYamlGraph(goldDir: string): GrimmGraph | null {
             tale_slug: tale.slug,
             source_kind: 'character',
           })
-          for (const trait of stringArray(characterRecord.traits)) {
-            const traitNode = traitLabel(trait)
-            addNode(nodes, seenLabels, traitNode, 'trait', trait)
-            addEdge(edges, label, traitNode, 'HAS_TRAIT', characterEdgeProps(tale.slug, 'traits', evidence))
+          for (const match of canonicalTraits) {
+            addNode(
+              nodes,
+              seenLabels,
+              match.trait.label,
+              'trait',
+              match.trait.name,
+              {
+                family: match.trait.family,
+                description: match.trait.description,
+              },
+            )
+            addEdge(edges, label, match.trait.label, 'HAS_TRAIT', {
+              ...characterEdgeProps(tale.slug, 'traits', evidence),
+              raw_traits: match.rawTraits.join('|'),
+            })
           }
           if (isRecord(character)) addCharacterEdges(edges, label, character, tale.slug)
         }
