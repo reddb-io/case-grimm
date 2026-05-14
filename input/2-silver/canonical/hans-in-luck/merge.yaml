@@ -1,0 +1,23 @@
+slug: hans-in-luck
+khm: 83
+base:
+  book: pg5314-grimm-hunt
+edits:
+- id: 1
+  op: insert_before
+  from: pg2591-grimm-taylor
+  anchor: After a little while he thought that it ought to go faster
+  text: |+
+    And he sang—
+
+         No care and no sorrow,
+         A fig for the morrow!
+         We’ll laugh and be merry,
+         Sing neigh down derry!
+
+
+  label: §3 Hans's riding song restored from Taylor
+  bridge_words:
+  - And
+  - he
+  - sang

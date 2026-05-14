@@ -1,0 +1,10 @@
+slug: the-wolf-and-the-man
+khm: 72
+atu: '157'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg22555-grimm-eeden-dutch
+  weight: supplementary
+sections: []

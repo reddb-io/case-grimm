@@ -1,0 +1,169 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-bittern-and-hoopoe
+khm: 173
+atu: "236"
+atu_name: The Bittern and the Hoopoe
+canonical_source: ../../2-silver/canonical/the-bittern-and-hoopoe/canonical.txt
+title: The Bittern and the Hoopoe
+
+
+entities:
+
+  characters:
+
+    bittern_hoopoe_questioning_man:
+      name: The Questioning Man
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [pasture-questioner, frame-audience, moderation-listener]
+      evidence: |
+        said a man to an old cow-herd
+
+    bittern_hoopoe_old_cowherd:
+      name: The Old Cow-Herd
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      speech_acts_performed: [speech_testimony]
+      traits: [old-cowherd, moderation-teacher, animal-call-narrator, pasture-judge]
+      evidence: |
+        where the grass is neither too rich nor too poor
+
+    bittern_hoopoe_bittern:
+      name: The Bittern
+      species: sp_bird
+      agency_modes: [agency_domestic_labor, agency_speech]
+      existential_states: [state_transformed]
+      speech_acts_performed: [speech_command]
+      affects: [affect_grief]
+      traits: [former-shepherd, rich-meadow-herder, failed-gatherer, eternal-come-cows-caller]
+      evidence: |
+        that is the bittern; he was once a shepherd
+
+    bittern_hoopoe_hoopoe:
+      name: The Hoopoe
+      species: sp_bird
+      agency_modes: [agency_domestic_labor, agency_speech]
+      existential_states: [state_transformed]
+      speech_acts_performed: [speech_command]
+      affects: [affect_grief]
+      traits: [former-shepherd, barren-hill-herder, failed-raiser, eternal-up-caller]
+      evidence: |
+        and so was the hoopoe also
+
+    bittern_hoopoe_wild_cows:
+      name: The Wild Meadow Cows
+      species: sp_cattle
+      agency_modes: [agency_endurance]
+      traits: [rich-pasture-fed, wild, unmanageable, runaway-herd]
+      evidence: |
+        his cows became wild and unmanageable
+
+    bittern_hoopoe_weak_cows:
+      name: The Weak Hill Cows
+      species: sp_cattle
+      agency_modes: [agency_endurance]
+      traits: [barren-hill-pastured, thin, faint, unable-to-rise]
+      evidence: |
+        his cows became thin, and got no strength
+
+  locations:
+
+    loc_bittern_hoopoe_moderate_pasture:
+      name: The Moderate Pasture
+      instance_of: loc_meadow
+      evidence: |
+        where the grass is neither too rich nor too poor
+
+    loc_bittern_hoopoe_meadow:
+      name: The Meadow of the Bittern's Cry
+      instance_of: loc_meadow
+      evidence: |
+        that melancholy cry from the meadow there
+
+    loc_bittern_hoopoe_rich_meadows:
+      name: The Rich Green Meadows
+      instance_of: loc_meadow
+      evidence: |
+        rich green meadows where flowers grew in abundance
+
+    loc_bittern_hoopoe_barren_hills:
+      name: The High Barren Hills
+      instance_of: loc_mountain
+      evidence: |
+        high barren hills, where the wind plays with the sand
+
+
+classifications:
+
+  world_laws:
+    - law_immoderate_pasture_creates_eternal_herding_call
+
+  moral_regimes:
+    - moral_moderation_preserves_order
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_speech
+
+  affects_driving:
+    - affect_grief
+
+  symbol_numbers: []
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_frame_question, order: 1, actor: bittern_hoopoe_questioning_man,
+      scene: "a man asks an old cow-herd where he likes best to feed flocks" }
+  - { function: func_prudential_answer, order: 2, actor: bittern_hoopoe_old_cowherd,
+      scene: "the cow-herd names grass that is neither too rich nor too poor" }
+  - { function: func_etiological_prompt, order: 3, actor: bittern_hoopoe_old_cowherd,
+      scene: "the meadow cry introduces the bittern and hoopoe as former shepherds" }
+  - { function: func_bad_pasture_choice, order: 4, actor: bittern_hoopoe_bittern,
+      scene: "the bittern pastures flocks on rich meadows and the cows become unmanageable" }
+  - { function: func_failed_command, order: 5, actor: bittern_hoopoe_bittern,
+      scene: "the bittern calls the cows home but they run away from him" }
+  - { function: func_bad_pasture_choice, order: 6, actor: bittern_hoopoe_hoopoe,
+      scene: "the hoopoe drives cattle onto barren hills and the cows become weak" }
+  - { function: func_failed_command, order: 7, actor: bittern_hoopoe_hoopoe,
+      scene: "the hoopoe calls the cows up but they remain lying on the sand" }
+  - { function: func_explicit_moral, order: 8, actor: moral_moderation_preserves_order,
+      scene: "the tale states that this is what happens when one has no moderation" }
+  - { function: func_etiological_afterlife, order: 9, actor: law_immoderate_pasture_creates_eternal_herding_call,
+      scene: "the birds' old herding commands continue as their present cries" }
+
+
+edges:
+
+  - { from: bittern_hoopoe_questioning_man, to: bittern_hoopoe_old_cowherd, label: ASKS_PASTURE_JUDGMENT_FROM,
+      evidence: "Where do you like best to feed your flocks?" }
+  - { from: bittern_hoopoe_old_cowherd, to: loc_bittern_hoopoe_moderate_pasture, label: PREFERS_MODERATE_GRASS,
+      evidence: "where the grass is neither too rich nor too poor" }
+  - { from: bittern_hoopoe_old_cowherd, to: loc_bittern_hoopoe_meadow, label: HEARS_ETIOLOGICAL_CRY_FROM,
+      evidence: "melancholy cry from the meadow there" }
+  - { from: bittern_hoopoe_old_cowherd, to: bittern_hoopoe_bittern, label: IDENTIFIES_AS_FORMER_SHEPHERD,
+      evidence: "that is the bittern; he was once a shepherd" }
+  - { from: bittern_hoopoe_old_cowherd, to: bittern_hoopoe_hoopoe, label: IDENTIFIES_AS_FORMER_SHEPHERD,
+      evidence: "and so was the hoopoe also" }
+  - { from: bittern_hoopoe_bittern, to: loc_bittern_hoopoe_rich_meadows, label: PASTURES_FLOCKS_ON,
+      evidence: "The bittern pastured his flocks on rich green meadows" }
+  - { from: loc_bittern_hoopoe_rich_meadows, to: bittern_hoopoe_wild_cows, label: MAKES_CATTLE_WILD,
+      evidence: "his cows became wild and unmanageable" }
+  - { from: bittern_hoopoe_wild_cows, to: bittern_hoopoe_bittern, label: RUN_AWAY_FROM,
+      evidence: "they were too high-spirited, and ran away from him" }
+  - { from: bittern_hoopoe_bittern, to: bittern_hoopoe_wild_cows, label: COMMANDS_HOME_IN_VAIN,
+      evidence: "they took no notice of his calling" }
+  - { from: bittern_hoopoe_hoopoe, to: loc_bittern_hoopoe_barren_hills, label: DRIVES_CATTLE_ONTO,
+      evidence: "The hoopoe drove his cattle on to high barren hills" }
+  - { from: loc_bittern_hoopoe_barren_hills, to: bittern_hoopoe_weak_cows, label: MAKES_CATTLE_WEAK,
+      evidence: "his cows became thin, and got no strength" }
+  - { from: bittern_hoopoe_hoopoe, to: bittern_hoopoe_weak_cows, label: COMMANDS_UP_IN_VAIN,
+      evidence: "they remained lying on the sand" }
+  - { from: moral_moderation_preserves_order, to: bittern_hoopoe_old_cowherd, label: EXPLAINS_COWHERD_RULE,
+      evidence: "That is the way when one has no moderation" }
+  - { from: law_immoderate_pasture_creates_eternal_herding_call, to: bittern_hoopoe_bittern, label: FIXES_HERDING_CALL_AS_SPECIES_VOICE,
+      evidence: "the bittern cries" }
+  - { from: law_immoderate_pasture_creates_eternal_herding_call, to: bittern_hoopoe_hoopoe, label: FIXES_HERDING_CALL_AS_SPECIES_VOICE,
+      evidence: "and the hoopoe" }

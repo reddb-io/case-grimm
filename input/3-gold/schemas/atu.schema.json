@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://reddb.io/grimm/atu.schema.json",
+  "title": "Grimm Gold ATU Catalog",
+  "description": "Separate ATU tale-type catalog. Kept outside ontology.yaml because ATU entries are structural tale-type summaries rather than shared ontological vocabulary.",
+  "type": "object",
+  "required": ["version", "atu_types"],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "ATU catalog schema version. Bumped on structural change."
+    },
+    "atu_types": {
+      "$ref": "#/definitions/atuMap"
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "atuMap": {
+      "type": "object",
+      "patternProperties": {
+        "^atu_[a-z0-9_]+$": {
+          "$ref": "#/definitions/entry"
+        }
+      },
+      "additionalProperties": false
+    },
+    "entry": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Human-readable ATU tale-type name."
+        },
+        "description": {
+          "type": "string",
+          "description": "Prose definition of the tale-type pattern."
+        },
+        "rationale": {
+          "type": "string",
+          "description": "Why this ATU type is useful as a separate catalogue entry."
+        },
+        "tier": {
+          "enum": ["structural"],
+          "description": "ATU entries describe recurring tale structure."
+        },
+        "scope": {
+          "enum": ["tale"],
+          "description": "ATU entries classify a whole tale, not a character or object."
+        },
+        "lens": {
+          "enum": ["atu"],
+          "description": "ATU catalogue lens."
+        },
+        "domains": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          }
+        },
+        "related": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          }
+        },
+        "examples": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

@@ -1,0 +1,8 @@
+slug: gambling-hansel
+khm: 82
+atu: '330'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

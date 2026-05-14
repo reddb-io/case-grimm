@@ -1,0 +1,8 @@
+slug: hans-the-hedgehog
+khm: 108
+atu: '441'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

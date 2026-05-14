@@ -1,0 +1,8 @@
+slug: little-louse-and-little-flea
+khm: 30
+atu: '2022'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

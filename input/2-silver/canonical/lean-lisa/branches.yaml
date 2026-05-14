@@ -1,0 +1,8 @@
+slug: lean-lisa
+khm: 168
+atu: '1430'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

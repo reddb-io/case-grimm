@@ -1,0 +1,314 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-robber-bridegroom
+khm: 40
+atu: '955'
+atu_name: The Robber Bridegroom
+canonical_source: ../../2-silver/canonical/the-robber-bridegroom/canonical.txt
+title: The Robber Bridegroom
+
+
+entities:
+
+  characters:
+
+    robber_bridegroom_miller:
+      name: The Miller
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_promise]
+      traits: [father, marriage-arranger, promise-maker, witness-receiver]
+      evidence: |
+        "If any good suitor comes and asks for her, I will give her to
+        him."
+
+    robber_bridegroom_bride:
+      name: The Miller's Daughter
+      archetypes: [arc_reluctant_bride]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_endurance, agency_speech, agency_object_mediation]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_fear]
+      traits: [betrothed, danger-sensing, trail-maker, hidden-witness, dream-testifier, proof-bearer]
+      evidence: |
+        "Whenever she saw, or thought of him, she felt a secret horror."
+
+    robber_bridegroom_suitor:
+      name: The Robber Bridegroom
+      archetypes: [arc_murderous_bridegroom, arc_predator, arc_disguised_villain]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning, agency_violence]
+      existential_states: [state_disguised]
+      speech_acts_performed: [speech_command]
+      affects: [affect_fear]
+      traits: [rich-seeming-suitor, forest-dweller, cannibal-robber, exposed-murderer, condemned]
+      evidence: |
+        "a suitor came, who appeared to be very rich"
+
+    robber_bridegroom_old_woman:
+      name: The Extremely Aged Woman
+      archetypes: [arc_wise_helper]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_endurance]
+      speech_acts_performed: [speech_warning]
+      affects: [affect_fear]
+      traits: [cellar-captive, danger-reader, bride-hider, robber-distracter, sleeping-draught-user, escape-helper]
+      evidence: |
+        "If I do not have compassion on thee, and save thee, thou art
+        lost."
+
+    robber_bridegroom_band:
+      name: The Robber Band
+      archetypes: [arc_predator]
+      species: sp_human
+      agency_modes: [agency_violence, agency_social_rank]
+      affects: [affect_fear]
+      traits: [godless-crew, drunk, cannibal, corpse-salter, sleeper, executed]
+      evidence: |
+        "they will cut thee to pieces without mercy, will cook thee, and
+        eat thee, for they are eaters of human flesh."
+
+    robber_bridegroom_murdered_girl:
+      name: The Dragged Maiden
+      species: sp_human
+      agency_modes: [agency_endurance]
+      existential_states: [state_liminal_dead]
+      affects: [affect_fear]
+      traits: [abducted-victim, lamenting, wine-killed, dismembered, finger-token-source]
+      evidence: |
+        "They dragged with them another young girl. They were drunk, and
+        paid no heed to her screams and lamentations."
+
+    robber_bridegroom_bird:
+      name: The Caged Warning Bird
+      archetypes: [arc_animal_helper]
+      species: sp_bird
+      agency_modes: [agency_animal_aid, agency_speech]
+      speech_acts_performed: [speech_warning]
+      traits: [caged, wall-hung, warning-voice, danger-namer]
+      evidence: |
+        "Turn back, turn back, young maiden dear,
+        'Tis a murderer’s house you enter here."
+
+    robber_bridegroom_guests:
+      name: The Wedding Guests
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      traits: [relations, friends, public-witnesses, captors, justice-deliverers]
+      evidence: |
+        "the Miller had invited all his relations and friends."
+
+  magic_objects:
+
+    obj_robber_bridegroom_ash_trail:
+      name: The Ashes Trail
+      object_kind: trail
+      attributes:
+        function: bridegroom's intended path-marker through the forest
+      evidence: |
+        "I will strew ashes in order that thou mayst find thy way
+        through the forest."
+
+    obj_robber_bridegroom_pea_lentil_trail:
+      name: The Peas and Lentils Trail
+      object_kind: trail
+      attributes:
+        function: bride's counter-trail that sprouts and guides escape
+      evidence: |
+        "at every step she threw a couple of peas on the ground."
+
+    obj_robber_bridegroom_hogshead:
+      name: The Great Hogshead
+      object_kind: material
+      attributes:
+        function: hides the bride during the murder scene
+      evidence: |
+        "the old woman led her behind a great hogshead where she could
+        not be seen."
+
+    obj_robber_bridegroom_three_wines:
+      name: The Three Lethal Wines
+      instance_of: obj_poisoned_food
+      object_kind: food
+      attributes:
+        count: 3
+        function: kills the dragged maiden before dismemberment
+      evidence: |
+        "three glasses full, one glass of white wine, one glass of red,
+        and a glass of yellow, and with this her heart burst in twain."
+
+    obj_robber_bridegroom_sleeping_wine:
+      name: The Sleeping-Draught Wine
+      instance_of: obj_poisoned_food
+      object_kind: food
+      attributes:
+        function: puts the robbers to sleep so the bride and old woman can escape
+      evidence: |
+        "the old woman poured a sleeping-draught in their wine"
+
+    obj_robber_bridegroom_finger_ring:
+      name: The Severed Finger with the Gold Ring
+      instance_of: obj_forensic_token
+      object_kind: token
+      attributes:
+        source_body: robber_bridegroom_murdered_girl
+        function: proves the bride's dream-testimony before the wedding guests
+      evidence: |
+        "And there is the finger with the ring!"
+
+  locations:
+
+    loc_robber_bridegroom_mill:
+      name: The Miller's Mill
+      instance_of: loc_mill
+      evidence: |
+        "in the morning they arrived at the mill"
+
+    loc_robber_bridegroom_forest:
+      name: The Dark Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "My house is out there in the dark forest."
+
+    loc_robber_bridegroom_murder_house:
+      name: The Solitary Murderer's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        "there stood a solitary house, which she did not like, for it
+        looked so dark and dismal."
+
+    loc_robber_bridegroom_cellar:
+      name: The Murderers' Cellar
+      instance_of: loc_cellar
+      evidence: |
+        "At last she came to the the cellar, and there sat an extremely
+        aged woman"
+
+
+classifications:
+
+  world_laws:
+    - law_promise_binds_reality
+    - law_disguise_alters_social_reality
+    - law_forest_suspends_domestic_order
+    - law_dead_matter_reveals_murder
+    - law_poison_transfers_through_consumption
+
+  moral_regimes:
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_object_mediation
+    - agency_violence
+    - agency_social_rank
+    - agency_endurance
+
+  affects_driving:
+    - affect_fear
+
+  symbol_numbers:
+    - num_3   # three lethal wines: white, red, yellow
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_mediation, order: 1, actor: robber_bridegroom_miller,
+      scene: "miller promises his daughter to the rich-seeming suitor" }
+  - { function: func_trickery, order: 2, actor: robber_bridegroom_suitor,
+      scene: "bridegroom orders the bride to visit his house in the dark forest" }
+  - { function: func_departure, order: 3, actor: robber_bridegroom_bride,
+      scene: "bride enters the forest, following ashes while dropping peas and lentils" }
+  - { function: func_warning, order: 4, actor: robber_bridegroom_bird,
+      scene: "caged bird names the house as a murderer's house" }
+  - { function: func_warning, order: 5, actor: robber_bridegroom_old_woman,
+      scene: "old woman tells the bride she is in a murderer's den and hides her" }
+  - { function: func_villainy, order: 6, actor: robber_bridegroom_band,
+      scene: "robbers kill, dismember, and salt the dragged maiden" }
+  - { function: func_rescue, order: 7, actor: robber_bridegroom_old_woman,
+      scene: "old woman drugs the robbers and escapes with the bride" }
+  - { function: func_return, order: 8, actor: obj_robber_bridegroom_pea_lentil_trail,
+      scene: "sprouted peas and lentils show the way back to the mill in moonlight" }
+  - { function: func_exposure, order: 9, actor: robber_bridegroom_bride,
+      scene: "bride narrates the crime as a dream and shows the severed finger with ring" }
+  - { function: func_punishment, order: 10, actor: robber_bridegroom_guests,
+      scene: "guests hold the bridegroom fast and deliver him to justice" }
+
+
+edges:
+
+  # Betrothal as trap
+  - { from: robber_bridegroom_miller, to: robber_bridegroom_suitor, label: PROMISES_DAUGHTER_TO,
+      evidence: "he promised his daughter to him." }
+  - { from: robber_bridegroom_suitor, to: robber_bridegroom_bride, label: CLAIMS_BETROTHAL,
+      evidence: "Thou art my betrothed" }
+  - { from: robber_bridegroom_suitor, to: loc_robber_bridegroom_forest, label: DWELLS_IN,
+      evidence: "My house is out there in the dark forest." }
+  - { from: robber_bridegroom_suitor, to: robber_bridegroom_bride, label: COMMANDS_VISIT,
+      evidence: "Next Sunday thou must come out there to me" }
+  - { from: robber_bridegroom_suitor, to: obj_robber_bridegroom_ash_trail, label: MARKS_PATH_WITH,
+      evidence: "I will strew ashes" }
+  - { from: robber_bridegroom_bride, to: obj_robber_bridegroom_pea_lentil_trail, label: DROPS_COUNTER_TRAIL,
+      evidence: "at every step she threw a couple of peas on the ground." }
+
+  # Warning and hidden witnessing
+  - { from: loc_robber_bridegroom_forest, to: loc_robber_bridegroom_murder_house, label: CONTAINS,
+      evidence: "the middle of the forest, where it was the darkest, and there stood a solitary house" }
+  - { from: robber_bridegroom_bird, to: robber_bridegroom_bride, label: WARNS,
+      evidence: "’Tis a murderer’s house you enter here." }
+  - { from: loc_robber_bridegroom_murder_house, to: loc_robber_bridegroom_cellar, label: CONTAINS,
+      evidence: "At last she came to the the cellar" }
+  - { from: robber_bridegroom_old_woman, to: robber_bridegroom_bride, label: WARNS,
+      evidence: "Thou art in a murderer’s den." }
+  - { from: robber_bridegroom_old_woman, to: robber_bridegroom_bride, label: HIDES,
+      evidence: "led her behind a great hogshead where she could not be seen." }
+  - { from: robber_bridegroom_bride, to: obj_robber_bridegroom_hogshead, label: HIDES_BEHIND,
+      evidence: "The poor bride behind the cask trembled and shook" }
+
+  # Murder witnessed from hiding
+  - { from: robber_bridegroom_band, to: robber_bridegroom_murdered_girl, label: DRAGS_HOME,
+      evidence: "They dragged with them another young girl." }
+  - { from: obj_robber_bridegroom_three_wines, to: robber_bridegroom_murdered_girl, label: KILLS,
+      evidence: "with this her heart burst in twain." }
+  - { from: robber_bridegroom_band, to: robber_bridegroom_murdered_girl, label: DISMEMBERS,
+      evidence: "cut her beautiful body in pieces and strewed salt thereon." }
+  - { from: robber_bridegroom_band, to: obj_robber_bridegroom_finger_ring, label: CUTS_OFF,
+      evidence: "he took an axe and cut the finger off" }
+  - { from: obj_robber_bridegroom_finger_ring, to: robber_bridegroom_bride, label: FALLS_TO,
+      evidence: "fell straight into the bride’s bosom." }
+
+  # Escape
+  - { from: robber_bridegroom_old_woman, to: robber_bridegroom_band, label: DISTRACTS,
+      evidence: "Come and get something to eat, and leave off looking till the morning" }
+  - { from: robber_bridegroom_old_woman, to: obj_robber_bridegroom_sleeping_wine, label: PREPARES,
+      evidence: "poured a sleeping-draught in their wine" }
+  - { from: obj_robber_bridegroom_sleeping_wine, to: robber_bridegroom_band, label: PUTS_TO_SLEEP,
+      evidence: "they soon lay down in the cellar, and slept and snored." }
+  - { from: robber_bridegroom_old_woman, to: robber_bridegroom_bride, label: RESCUES,
+      evidence: "they hurried out of the murderers’ den" }
+  - { from: obj_robber_bridegroom_pea_lentil_trail, to: loc_robber_bridegroom_mill, label: GUIDES_TO,
+      evidence: "the peas and lentils had sprouted and grown up, and showed them the way" }
+
+  # Dream testimony and judgment
+  - { from: robber_bridegroom_bride, to: robber_bridegroom_miller, label: REPORTS_TO,
+      evidence: "the maiden told her father everything exactly as it had happened." }
+  - { from: robber_bridegroom_bride, to: robber_bridegroom_guests, label: TESTIFIES_BEFORE,
+      evidence: "Then I will relate a dream." }
+  - { from: robber_bridegroom_bride, to: obj_robber_bridegroom_finger_ring, label: PRESENTS_PROOF,
+      evidence: "with these words she drew it forth, and showed it to those present." }
+  - { from: obj_robber_bridegroom_finger_ring, to: robber_bridegroom_suitor, label: EXPOSES,
+      evidence: "The robber, who had during this story become as pale as ashes, leapt up and wanted to escape" }
+  - { from: robber_bridegroom_guests, to: robber_bridegroom_suitor, label: HOLDS_FAST,
+      evidence: "the guests held him fast" }
+  - { from: robber_bridegroom_guests, to: robber_bridegroom_suitor, label: DELIVERS_TO_JUSTICE,
+      evidence: "delivered him over to justice." }
+  - { from: robber_bridegroom_suitor, to: robber_bridegroom_band, label: EXECUTED_WITH,
+      evidence: "Then he and his whole troop were executed for their infamous deeds." }

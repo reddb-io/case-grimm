@@ -1,0 +1,147 @@
+$comment: |
+  Audit log for clusters flagged because Hunt is significantly shorter
+  than another variant. Each entry resolved with either applied merge
+  or documented decision to leave Hunt verbatim.
+
+resolved:
+  - khm: 10
+    slug: the-pack-of-ragamuffins
+    delta: 1059
+    longest_book: pg2591-grimm-taylor
+    resolution: false-positive
+    edits: 0
+    note: |
+      Taylor's 'Chanticleer and Partlet' is a COMPOSITE of three separate
+      Grimm tales (KHM 10 + 41 Herr Korbes + 80 Death of the Little Hen).
+      The delta is content from KHM 41 and KHM 80, not truncation of
+      KHM 10. Hunt's KHM 10 is complete.
+
+  - khm: 37
+    slug: thumbling
+    delta: 285
+    longest_book: pg2591-grimm-taylor
+    resolution: no-merge
+    edits: 0
+    note: |
+      Taylor's 'Tom Thumb' is more verbose throughout (Victorian
+      children's-book elaboration). No factual enrichment over Hunt.
+
+  - khm: 45
+    slug: thumbling-as-journeyman-thumblings-travels
+    delta: 124
+    longest_book: pg11027-grimm-gruelle
+    resolution: no-merge
+    edits: 0
+    note: |
+      Gruelle is translation-style verbose. No factual content Hunt lacks.
+
+  - khm: 50
+    slug: briar-rose
+    delta: 192
+    longest_book: pg2591-grimm-taylor
+    resolution: merged
+    edits: 2
+    note: |
+      Taylor's butler-at-ale scene absorbed into Hunt's sleep tableau
+      and awakening cascade. 1 fork registered (Taylor's fish-rescue
+      alternative).
+
+  - khm: 58
+    slug: the-dog-and-the-sparrow
+    delta: 142
+    longest_book: pg2591-grimm-taylor
+    resolution: no-merge
+    edits: 0
+    note: |
+      Endings substantively identical (waggoner's wife kills him by
+      accident). Taylor adds minor descriptive padding.
+
+  - khm: 63
+    slug: the-three-feathers
+    delta: 210
+    longest_book: pg11027-grimm-gruelle
+    resolution: no-merge
+    edits: 0
+    note: |
+      Gruelle ('Dummling and the Three Feathers') stylistically verbose.
+      Both endings have ring-jumping trial concluding the same way.
+
+  - khm: 64
+    slug: the-golden-goose
+    delta: 494
+    longest_book: pg2591-grimm-taylor
+    resolution: merged
+    edits: 1
+    note: |
+      Major enrichment: Hunt truncated KHM 1857 ending. Taylor's three
+      trials (wine cellar, mountain of bread, ship that sails on land
+      and water) restored via single replace operation.
+
+  - khm: 69
+    slug: jorinda-and-joringel
+    delta: 196
+    longest_book: pg2591-grimm-taylor
+    resolution: merged
+    edits: 1
+    note: |
+      Hunt truncated closing passage. Taylor's full ending (other birds
+      transformed back + marriage + comic coda) restored.
+
+  - khm: 83
+    slug: hans-in-luck
+    delta: 304
+    longest_book: pg2591-grimm-taylor
+    resolution: merged
+    edits: 1
+    note: |
+      Taylor preserves Hans's quatrain on horseback ('No care and no
+      sorrow...'). Restored with 3-word bridge ('And he sang—'). Forks
+      registered for silver-vs-gold and longer grinder song.
+
+  - khm: 93
+    slug: the-raven
+    delta: 151
+    longest_book: pg2591-grimm-taylor
+    resolution: no-merge
+    edits: 0
+    note: |
+      Translation verbosity. Both end identically with ring-recognition
+      + reunion.
+
+  - khm: 97
+    slug: the-water-of-life
+    delta: 503
+    longest_book: pg2591-grimm-taylor
+    resolution: merged
+    edits: 2
+    note: |
+      Hunt truncated wedding closure. Restored dwarf description +
+      wedding-with-dwarf-returning + closing rhyme.
+
+  - khm: 133
+    slug: the-shoes-that-were-danced-to-pieces
+    delta: 137
+    longest_book: pg2591-grimm-taylor
+    resolution: no-merge
+    edits: 0
+    note: |
+      Taylor verbose in dialogue. Notably Hunt has closing beat about
+      princes bewitched as many days as nights danced — Taylor drops
+      this. Hunt is MORE complete despite shorter.
+
+  - khm: 161
+    slug: snow-white-and-rose-red
+    delta: 172
+    longest_book: pg2591-grimm-taylor
+    resolution: false-positive
+    edits: 0
+    note: |
+      Delta is Taylor's editorial appendix biography of the Brothers
+      Grimm at the end of the volume, NOT tale content. Tale endings
+      are functionally identical.
+
+summary:
+  total_flagged: 13
+  merged: 5
+  no_merge_needed: 6
+  false_positives: 2

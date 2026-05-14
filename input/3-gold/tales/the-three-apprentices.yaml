@@ -1,0 +1,542 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-three-apprentices
+khm: 120
+atu: '360'
+atu_name: The Three Apprentices
+canonical_source: ../../2-silver/canonical/the-three-apprentices/canonical.txt
+title: The Three Apprentices
+
+
+entities:
+
+  characters:
+
+    three_apprentices_collective:
+      name: The Three Travelling Apprentices
+      archetypes: [arc_naive_victim]
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance, agency_object_mediation]
+      existential_states: [state_bound_by_promise, state_imprisoned]
+      speech_acts_performed: [speech_bargain, speech_testimony]
+      affects: [affect_fear, affect_joy]
+      traits: [poor-workers, travelling-companions, formula-bound-speakers, framed-murderers, condemned-innocents, released-witnesses, lifelong-money-holders]
+      evidence: |
+        There were once three apprentices, who had agreed to keep always together while travelling
+
+    three_apprentices_first:
+      name: The First Apprentice
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      existential_states: [state_bound_by_promise, state_imprisoned]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_fear]
+      traits: [formula-speaker, all-three-answerer, eldest-final-witness]
+      evidence: |
+        The first was to answer, “All three of us,” to every question
+
+    three_apprentices_second:
+      name: The Second Apprentice
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      existential_states: [state_bound_by_promise, state_imprisoned]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_fear]
+      traits: [formula-speaker, for-money-answerer]
+      evidence: |
+        the second was to say, “For money,”
+
+    three_apprentices_third:
+      name: The Third Apprentice
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      existential_states: [state_bound_by_promise, state_imprisoned]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_fear]
+      traits: [formula-speaker, quite-right-answerer]
+      evidence: |
+        the third, “And quite right too!”
+
+    three_apprentices_devil:
+      name: The Richly-Dressed Devil
+      archetypes: [arc_supernatural_donor]
+      being_type: being_devil
+      agency_modes: [agency_speech, agency_object_mediation, agency_social_rank]
+      speech_acts_performed: [speech_bargain, speech_command, speech_testimony]
+      affects: [affect_greed]
+      traits: [richly-dressed-man, horse-foot-revealed-devil, formula-giver, money-donor, execution-rescuer, pardon-bringer, soul-claimer]
+      evidence: |
+        One of the others had, however, looked at his feet, and when he saw a horse’s foot and a man’s foot
+
+    three_apprentices_innkeeper:
+      name: The Murderous Innkeeper
+      archetypes: [arc_greedy_one]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_cunning, agency_violence, agency_speech]
+      speech_acts_performed: [speech_lie, speech_command]
+      affects: [affect_greed, affect_fear]
+      traits: [host, gold-coveter, merchant-murderer, false-accuser, cellar-killer, executed-criminal, devil-claimed-soul]
+      evidence: |
+        the host said, “The three crazy apprentices have done this;”
+
+    three_apprentices_innkeeper_wife:
+      name: The Innkeeper's Wife
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_violence, agency_cunning]
+      affects: [affect_greed]
+      traits: [murder-accomplice, axe-carrier, night-killer]
+      evidence: |
+        he came with his wife, and they had an axe
+
+    three_apprentices_merchant:
+      name: The Rich Merchant
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      affects: [affect_fear]
+      traits: [money-bearer, inn-guest, theft-fearer, murdered-victim]
+      evidence: |
+        a great merchant came with a large sum of money
+
+    three_apprentices_lodgers:
+      name: The Watching Lodgers
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_testimony]
+      traits: [formula-witnesses, madness-interpreters, false-confirmers]
+      evidence: |
+        The lodgers, who were looking on
+
+    three_apprentices_judge:
+      name: The Judge
+      archetypes: [arc_oath_enforcer]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command, speech_testimony]
+      traits: [interrogator, death-sentencer, proof-sender, innkeeper-executor]
+      evidence: |
+        the judge said, “Are you the murderers?”
+
+    three_apprentices_executioners:
+      name: The Executioner's Men and Headsman
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_violence]
+      traits: [prisoner-handlers, scaffold-guards, cellar-inspectors, beheading-agents]
+      evidence: |
+        the scaffold where the headsman was standing with naked sword
+
+  magic_objects:
+
+    obj_three_apprentices_answer_formula:
+      name: The Three-Part Answer Formula
+      object_kind: token
+      attributes:
+        first: All three of us
+        second: For money
+        third: And quite right too
+        function: keeps the apprentices wealthy and silent until the Devil releases them to testify
+      evidence: |
+        They were always to say this, one after the other, but they were not to say one word more
+
+    obj_three_apprentices_devil_money:
+      name: The Devil's Ever-Full Money
+      object_kind: treasure
+      attributes:
+        function: fills their pockets while they obey the formula
+      evidence: |
+        so long as they observed it, their pockets would always be full
+
+    obj_three_apprentices_merchant_trunk:
+      name: The Merchant's Heavy Money Trunk
+      object_kind: treasure
+      attributes:
+        function: tempts the innkeeper into murder
+      evidence: |
+        he felt that it was heavy with gold
+
+    obj_three_apprentices_murder_axe:
+      name: The Innkeeper's Axe
+      object_kind: weapon
+      attributes:
+        function: murder weapon used by the innkeeper and his wife
+      evidence: |
+        they had an axe and struck the rich merchant dead
+
+    obj_three_apprentices_pardon_handkerchief:
+      name: The White Pardon Handkerchief
+      object_kind: token
+      attributes:
+        function: signals the arriving pardon from the Devil's carriage
+      evidence: |
+        someone made signs from the window with a white handkerchief
+
+    obj_three_apprentices_hidden_corpses:
+      name: The Hidden Cellar Corpses
+      instance_of: obj_forensic_token
+      object_kind: token
+      attributes:
+        function: proves that the innkeeper is a serial murderer
+      evidence: |
+        where many others whom he has killed are still hanging
+
+  locations:
+
+    loc_three_apprentices_road:
+      name: The Work-Seeking Road
+      instance_of: loc_road
+      evidence: |
+        They went forth, and met on the way a richly-dressed man
+
+    loc_three_apprentices_town:
+      name: The Town of the Devil's Inn
+      instance_of: loc_town
+      evidence: |
+        when they got to the town
+
+    loc_three_apprentices_inn:
+      name: The Murderous Inn
+      instance_of: loc_inn
+      threshold_type: threshold_doorway
+      evidence: |
+        told them to go to such and such an inn
+
+    loc_three_apprentices_merchant_room:
+      name: The Merchant's Separate Apartment
+      instance_of: loc_inn
+      threshold_type: threshold_doorway
+      evidence: |
+        the merchant came up-stairs into a separate apartment
+
+    loc_three_apprentices_cellar:
+      name: The Innkeeper's Corpse Cellar
+      instance_of: loc_cellar
+      evidence: |
+        go into his cellar
+
+    loc_three_apprentices_prison:
+      name: The Apprentices' Prison
+      instance_of: loc_dungeon
+      evidence: |
+        They were taken to prison
+
+    loc_three_apprentices_bar:
+      name: The Judgment Bar
+      instance_of: loc_courtyard
+      threshold_type: threshold_gate
+      evidence: |
+        The next morning they were led to the bar
+
+    loc_three_apprentices_scaffold:
+      name: The Scaffold of the Interrupted Execution
+      instance_of: loc_gallows
+      threshold_type: threshold_doorway
+      evidence: |
+        the scaffold where the headsman was standing with naked sword
+
+
+classifications:
+
+  world_laws:
+    - law_restricted_formula_preserves_innocents_until_exposure
+    - law_promise_binds_reality
+
+  moral_regimes:
+    - moral_retributive
+    - moral_trickster_wins
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_object_mediation
+    - agency_social_rank
+    - agency_violence
+    - agency_cunning
+
+  affects_driving:
+    - affect_fear
+    - affect_greed
+    - affect_joy
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_doorway
+    - threshold_gate
+
+
+propp:
+
+  - function: func_initial_situation
+    order: 1
+    actor: three_apprentices_collective
+    scene: Three apprentices stay together until lack of work and poverty force them to travel again.
+    evidence: |
+      their masters had no more work to give them
+
+  - function: func_encounter
+    order: 2
+    actor: three_apprentices_devil
+    scene: A richly-dressed man meets them on the road and offers wealth and status if they obey him.
+    evidence: |
+      you shall not want for gold or for work
+
+  - function: func_infernal_recognition
+    order: 3
+    actor: three_apprentices_first
+    scene: One apprentice notices the horse's foot and man's foot, revealing the Devil.
+    evidence: |
+      he saw a horse’s foot and a man’s foot
+
+  - function: func_bargain
+    order: 4
+    actor: three_apprentices_devil
+    beneficiary: three_apprentices_collective
+    scene: The Devil promises not to claim them, but another soul already half his own.
+    evidence: |
+      I have no designs on you, but on another soul
+
+  - function: func_interdiction
+    order: 5
+    actor: three_apprentices_devil
+    victim: three_apprentices_collective
+    scene: The Devil binds each apprentice to one fixed answer and forbids any other speech.
+    evidence: |
+      they were not to say one word more
+
+  - function: func_reward
+    order: 6
+    actor: three_apprentices_devil
+    beneficiary: three_apprentices_collective
+    scene: The Devil gives them as much money as they can carry and directs them to the inn.
+    evidence: |
+      he at once gave them as much as they could carry
+
+  - function: func_villainy
+    order: 7
+    actor: three_apprentices_innkeeper
+    victim: three_apprentices_merchant
+    scene: The innkeeper and his wife murder the merchant at midnight for his gold.
+    evidence: |
+      struck the rich merchant dead
+
+  - function: func_false_accusation
+    order: 8
+    actor: three_apprentices_innkeeper
+    victim: three_apprentices_collective
+    scene: The innkeeper accuses the three apprentices of the murder.
+    evidence: |
+      The three crazy apprentices have done this
+
+  - function: func_false_confession
+    order: 9
+    actor: obj_three_apprentices_answer_formula
+    victim: three_apprentices_collective
+    scene: Their required answers appear to confess murder for money.
+    evidence: |
+      There now, you hear
+
+  - function: func_imprisonment
+    order: 10
+    actor: three_apprentices_judge
+    victim: three_apprentices_collective
+    scene: The apprentices are imprisoned, tried, and led toward execution.
+    evidence: |
+      They were taken to prison
+
+  - function: func_protection
+    order: 11
+    actor: three_apprentices_devil
+    beneficiary: three_apprentices_collective
+    scene: The Devil tells them to bear one more day and promises no harm will touch them.
+    evidence: |
+      not one hair of your head shall be hurt
+
+  - function: func_pardon_arrival
+    order: 12
+    actor: three_apprentices_devil
+    beneficiary: three_apprentices_collective
+    scene: The Devil arrives as a noble gentleman in a fiery carriage with a pardon signal.
+    evidence: |
+      Pardon! pardon!
+
+  - function: func_exposure
+    order: 13
+    actor: three_apprentices_first
+    victim: three_apprentices_innkeeper
+    scene: Released from the formula, the eldest apprentice names the innkeeper and points to the cellar proof.
+    evidence: |
+      the murderer is standing there in the circle
+
+  - function: func_punishment
+    order: 14
+    actor: three_apprentices_judge
+    victim: three_apprentices_innkeeper
+    scene: The hidden corpses are found and the innkeeper is beheaded.
+    evidence: |
+      his head was cut off
+
+  - function: func_release
+    order: 15
+    actor: three_apprentices_devil
+    beneficiary: three_apprentices_collective
+    scene: The Devil claims the intended soul and leaves the apprentices free and wealthy.
+    evidence: |
+      you are free, and have money for the rest of your lives
+
+
+edges:
+
+  - from: three_apprentices_collective
+    label: AGREES_TO_STAY_TOGETHER
+    to: three_apprentices_collective
+    evidence: |
+      had agreed to keep always together while travelling
+
+  - from: three_apprentices_collective
+    label: LACKS_WORK
+    to: loc_three_apprentices_town
+    evidence: |
+      their masters had no more work to give them
+
+  - from: three_apprentices_devil
+    label: OFFERS_WEALTH_TO
+    to: three_apprentices_collective
+    evidence: |
+      you shall not want for gold or for work
+
+  - from: three_apprentices_first
+    label: RECOGNIZES_FOOT_OF
+    to: three_apprentices_devil
+    evidence: |
+      he saw a horse’s foot and a man’s foot
+
+  - from: three_apprentices_devil
+    label: DENIES_CLAIM_ON
+    to: three_apprentices_collective
+    evidence: |
+      I have no claim on you
+
+  - from: three_apprentices_devil
+    label: CLAIMS_ANOTHER_SOUL
+    to: three_apprentices_innkeeper
+    evidence: |
+      another soul, which is half my own already
+
+  - from: three_apprentices_devil
+    label: COMMANDS_FORMULA
+    to: obj_three_apprentices_answer_formula
+    evidence: |
+      The first was to answer, “All three of us,”
+
+  - from: obj_three_apprentices_answer_formula
+    label: BINDS_SPEECH_OF
+    to: three_apprentices_collective
+    evidence: |
+      they were not to say one word more
+
+  - from: obj_three_apprentices_answer_formula
+    label: PRESERVES
+    to: obj_three_apprentices_devil_money
+    evidence: |
+      their pockets would always be full
+
+  - from: three_apprentices_devil
+    label: GIVES
+    to: obj_three_apprentices_devil_money
+    evidence: |
+      he at once gave them as much as they could carry
+
+  - from: three_apprentices_merchant
+    label: ENTRUSTS_MONEY_TO
+    to: three_apprentices_innkeeper
+    evidence: |
+      take care of my money for me
+
+  - from: obj_three_apprentices_merchant_trunk
+    label: TEMPTS
+    to: three_apprentices_innkeeper
+    evidence: |
+      he felt that it was heavy with gold
+
+  - from: three_apprentices_innkeeper
+    label: MURDERS
+    to: three_apprentices_merchant
+    evidence: |
+      struck the rich merchant dead
+
+  - from: three_apprentices_innkeeper_wife
+    label: ASSISTS_MURDER_OF
+    to: three_apprentices_merchant
+    evidence: |
+      he came with his wife
+
+  - from: three_apprentices_innkeeper
+    label: FALSELY_ACCUSES
+    to: three_apprentices_collective
+    evidence: |
+      The three crazy apprentices have done this
+
+  - from: obj_three_apprentices_answer_formula
+    label: PRODUCES_FALSE_CONFESSION_BY
+    to: three_apprentices_collective
+    evidence: |
+      they confess it themselves
+
+  - from: three_apprentices_judge
+    label: CONDEMNS_TO_DEATH
+    to: three_apprentices_collective
+    evidence: |
+      lead them to death instantly
+
+  - from: three_apprentices_devil
+    label: PROMISES_PROTECTION_TO
+    to: three_apprentices_collective
+    evidence: |
+      not one hair of your head shall be hurt
+
+  - from: three_apprentices_devil
+    label: ARRIVES_WITH
+    to: obj_three_apprentices_pardon_handkerchief
+    evidence: |
+      a white handkerchief
+
+  - from: three_apprentices_devil
+    label: RELEASES_SPEECH_OF
+    to: three_apprentices_collective
+    evidence: |
+      you may now speak
+
+  - from: three_apprentices_first
+    label: ACCUSES
+    to: three_apprentices_innkeeper
+    evidence: |
+      the murderer is standing there in the circle
+
+  - from: obj_three_apprentices_hidden_corpses
+    label: PROVES_GUILT_OF
+    to: three_apprentices_innkeeper
+    evidence: |
+      many others whom he has killed are still hanging
+
+  - from: three_apprentices_executioners
+    label: FINDS
+    to: obj_three_apprentices_hidden_corpses
+    evidence: |
+      they found it was as the apprentices said
+
+  - from: three_apprentices_judge
+    label: EXECUTES
+    to: three_apprentices_innkeeper
+    evidence: |
+      his head was cut off
+
+  - from: three_apprentices_devil
+    label: CLAIMS_SOUL_OF
+    to: three_apprentices_innkeeper
+    evidence: |
+      Now I have got the soul which I wanted to have
+
+  - from: three_apprentices_devil
+    label: FREES
+    to: three_apprentices_collective
+    evidence: |
+      you are free, and have money for the rest of your lives

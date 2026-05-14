@@ -1,0 +1,221 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-ungrateful-son
+khm: 145
+atu: 980A
+atu_name: The Ungrateful Son
+canonical_source: ../../2-silver/canonical/the-ungrateful-son/canonical.txt
+title: The Ungrateful Son
+
+
+entities:
+
+  characters:
+
+    ungrateful_son:
+      name: The Ungrateful Son
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation, agency_speech]
+      existential_states: [state_cursed]
+      affects: [affect_greed, affect_fear]
+      traits: [meal-hoarder, father-excluder, toad-bearer, restless-wanderer]
+      evidence: |
+        for he would not permit him to have any of it
+
+    ungrateful_wife:
+      name: The Ungrateful Son's Wife
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [shared-meal-participant, doorway-householder]
+      evidence: |
+        A man and his wife were once sitting by the door of their house
+
+    ungrateful_aged_father:
+      name: The Aged Father
+      archetypes: [arc_neglected_elder]
+      species: sp_human
+      agency_modes: [agency_endurance]
+      affects: [affect_hunger]
+      traits: [aged-parent, denied-meal-guest, silent-departing-father]
+      evidence: |
+        the man saw that his aged father was coming
+
+    ungrateful_son_face_toad:
+      name: The Face-Clinging Toad
+      species: sp_toad
+      agency_modes: [agency_violence, agency_endurance]
+      existential_states: [state_transformed]
+      traits: [transformed-roasted-chicken, venomous-face-clinger, compulsory-feeding-burden]
+      evidence: |
+        it had become a great toad, which jumped into his face
+
+  magic_objects:
+
+    obj_ungrateful_roasted_chicken:
+      name: The Hidden Roasted Chicken
+      object_kind: food
+      attributes:
+        function: withheld household meal whose concealment from the aged father triggers transformation
+      evidence: |
+        had a roasted chicken set before them
+
+  locations:
+
+    loc_ungrateful_house_door:
+      name: The House Door
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        sitting by the door of their house
+
+
+classifications:
+
+  world_laws:
+    - law_hidden_elder_food_becomes_clinging_burden
+
+  moral_regimes:
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_object_mediation
+    - agency_violence
+    - agency_endurance
+
+  affects_driving:
+    - affect_greed
+    - affect_hunger
+    - affect_fear
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: ungrateful_aged_father
+    scene: The aged father arrives at the son's household as a potential participant in the meal.
+    evidence: |
+      his aged father was coming
+
+  - function: func_villainy
+    order: 2
+    actor: ungrateful_son
+    victim: ungrateful_aged_father
+    scene: The son hides the chicken so his father cannot share it.
+    evidence: |
+      hastily took the chicken and hid it
+
+  - function: func_departure
+    order: 3
+    actor: ungrateful_aged_father
+    scene: The father receives only a drink and leaves the house.
+    evidence: |
+      The old man came, took a drink, and went away.
+
+  - function: func_transfiguration
+    order: 4
+    actor: obj_ungrateful_roasted_chicken
+    beneficiary: ungrateful_son_face_toad
+    scene: The hidden roasted chicken becomes a toad that leaps onto the son's face.
+    evidence: |
+      it had become a great toad, which jumped into his face
+
+  - function: func_punishment
+    order: 5
+    actor: ungrateful_son_face_toad
+    victim: ungrateful_son
+    scene: The toad cannot be removed and must be fed every day.
+    evidence: |
+      the ungrateful son was forced to feed the toad every day
+
+  - function: func_exile
+    order: 6
+    actor: ungrateful_son
+    scene: The son wanders the world without rest under the attached toad.
+    evidence: |
+      went about the world without knowing rest
+
+
+edges:
+
+  - from: ungrateful_son
+    label: SHARES_MEAL_WITH
+    to: ungrateful_wife
+    evidence: |
+      were about to eat it together
+
+  - from: obj_ungrateful_roasted_chicken
+    label: IS_SET_BEFORE
+    to: ungrateful_son
+    evidence: |
+      had a roasted chicken set before them
+
+  - from: ungrateful_aged_father
+    label: APPROACHES
+    to: loc_ungrateful_house_door
+    evidence: |
+      his aged father was coming
+
+  - from: ungrateful_son
+    label: HIDES_FROM
+    to: ungrateful_aged_father
+    evidence: |
+      hastily took the chicken and hid it
+
+  - from: ungrateful_son
+    label: WITHHOLDS
+    to: obj_ungrateful_roasted_chicken
+    evidence: |
+      for he would not permit him to have any of it
+
+  - from: ungrateful_aged_father
+    label: DEPARTS_FROM
+    to: loc_ungrateful_house_door
+    evidence: |
+      took a drink, and went away
+
+  - from: obj_ungrateful_roasted_chicken
+    label: TRANSFORMS_INTO
+    to: ungrateful_son_face_toad
+    evidence: |
+      it had become a great toad
+
+  - from: ungrateful_son_face_toad
+    label: CLINGS_TO
+    to: ungrateful_son
+    evidence: |
+      jumped into his face and sat there and never went away again
+
+  - from: ungrateful_son_face_toad
+    label: THREATENS
+    to: ungrateful_son
+    evidence: |
+      looked venomously at him as if it would jump in his face
+
+  - from: law_hidden_elder_food_becomes_clinging_burden
+    label: PUNISHES
+    to: ungrateful_son
+    evidence: |
+      was forced to feed the toad every day
+
+  - from: ungrateful_son
+    label: FEEDS
+    to: ungrateful_son_face_toad
+    evidence: |
+      forced to feed the toad every day
+
+  - from: ungrateful_son_face_toad
+    label: FEEDS_ON
+    to: ungrateful_son
+    evidence: |
+      or else it fed itself on his face
+
+  - from: ungrateful_son
+    label: WANDERS_WITH
+    to: ungrateful_son_face_toad
+    evidence: |
+      went about the world without knowing rest

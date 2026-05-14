@@ -1,0 +1,176 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: lean-lisa
+khm: 168
+atu: "1430"
+atu_name: Lazy Harry / Lean Lisa
+canonical_source: ../../2-silver/canonical/lean-lisa/canonical.txt
+title: Lean Lisa
+
+
+entities:
+
+  characters:
+
+    lean_lisa:
+      name: Lean Lisa
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_cunning, agency_violence]
+      speech_acts_performed: [speech_bargain, speech_command]
+      affects: [affect_anger, affect_greed]
+      traits: [hyper-laborious-wife, ash-scourer, sleepless-planner, imaginary-cow-manager, milk-refuser, quarrelsome-wife, exhausted-sleeper]
+      evidence: |
+        She scoured everything with ashes, from morning till evening
+
+    lean_lisa_long_laurence:
+      name: Long Laurence / Lenz
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_violence]
+      speech_acts_performed: [speech_bargain, speech_command]
+      affects: [affect_anger, affect_greed]
+      traits: [overburdened-husband, imaginary-florin-giver, milk-desirer, blow-threatener, restraining-husband]
+      evidence: |
+        burdened her husband, Long Laurence, with so much work
+
+    lean_lisa_imagined_cow:
+      name: The Imagined Young Cow
+      species: sp_cattle
+      agency_modes: [agency_domestic_labor]
+      traits: [hypothetical-purchase, future-milk-source, future-calf-mother, argument-object]
+      evidence: |
+        I would buy a young cow
+
+    lean_lisa_imagined_calf:
+      name: The Imagined Calf
+      species: sp_cattle
+      agency_modes: [agency_endurance]
+      traits: [hypothetical-offspring, milk-claimant, fattened-sale-plan, source-of-spousal-conflict]
+      evidence: |
+        if the cow has a calf
+
+  magic_objects:
+
+    obj_lean_lisa_ashes:
+      name: Lisa's Scouring Ashes
+      object_kind: material
+      attributes:
+        function: sign of relentless domestic labour that contrasts Lisa with lazy Harry and fat Trina
+      evidence: |
+        scoured everything with ashes
+
+    obj_lean_lisa_four_florins:
+      name: The Four Hypothetical Florins
+      object_kind: treasure
+      attributes:
+        function: imagined capital assembled from finding, receiving, borrowing, and husbandly gift
+      evidence: |
+        as soon as I had got the four florins together
+
+    obj_lean_lisa_imagined_milk:
+      name: The Imagined Cow's Milk
+      object_kind: food
+      attributes:
+        function: non-existent yield whose ownership triggers the marital quarrel
+      evidence: |
+        thou shouldst not have a drop of the milk
+
+  locations:
+
+    loc_lean_lisa_household:
+      name: Lisa and Laurence's Poor Household
+      instance_of: loc_house
+      evidence: |
+        they had nothing and came to nothing
+
+    loc_lean_lisa_bed:
+      name: The Bed Where Lisa Plans the Cow
+      instance_of: loc_bedchamber
+      evidence: |
+        One night as she lay in bed
+
+
+classifications:
+
+  world_laws:
+    - law_hypothetical_gain_escalates_domestic_quarrel
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_speech
+    - agency_violence
+
+  affects_driving:
+    - affect_anger
+    - affect_greed
+
+  symbol_numbers:
+    - num_4
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: lean_lisa,
+      scene: "Lean Lisa works constantly, burdens Long Laurence, and remains poor" }
+  - { function: func_night_forethought, order: 2, actor: lean_lisa,
+      scene: "Lisa lies awake in bed and begins planning how to assemble four florins" }
+  - { function: func_hypothetical_acquisition, order: 3, actor: lean_lisa,
+      scene: "Lisa imagines buying a young cow with the four florins" }
+  - { function: func_hypothetical_yield, order: 4, actor: lean_lisa_long_laurence,
+      scene: "Laurence imagines a calf and a little milk for refreshment" }
+  - { function: func_refusal, order: 5, actor: lean_lisa,
+      scene: "Lisa refuses Laurence any milk and reserves it for the calf's fattening" }
+  - { function: func_quarrel, order: 6, actor: lean_lisa,
+      scene: "the non-existent cow economy becomes present insult and threat" }
+  - { function: func_restraint, order: 7, actor: lean_lisa_long_laurence,
+      scene: "Laurence restrains Lisa until weariness makes her fall asleep" }
+  - { function: func_open_ending, order: 8, actor: lean_lisa,
+      scene: "the narrator refuses to say whether she kept wrangling or went to seek the florin" }
+
+
+edges:
+
+  # Labour without gain
+  - { from: lean_lisa, to: obj_lean_lisa_ashes, label: SCOURS_WITH,
+      evidence: "scoured everything with ashes" }
+  - { from: lean_lisa, to: lean_lisa_long_laurence, label: BURDENS_WITH_WORK,
+      evidence: "burdened her husband, Long Laurence, with so much work" }
+  - { from: lean_lisa, to: loc_lean_lisa_household, label: REMAINS_POOR_IN,
+      evidence: "they had nothing and came to nothing" }
+  - { from: lean_lisa, to: loc_lean_lisa_bed, label: LIES_AWAKE_IN,
+      evidence: "One night as she lay in bed" }
+  - { from: lean_lisa, to: lean_lisa_long_laurence, label: WAKES_WITH_ELBOWS,
+      evidence: "thrust her elbows into her husband’s side" }
+
+  # Hypothetical cattle economy
+  - { from: lean_lisa, to: obj_lean_lisa_four_florins, label: IMAGINES_ASSEMBLING,
+      evidence: "if I were to find one florin and one was given to me" }
+  - { from: lean_lisa_long_laurence, to: obj_lean_lisa_four_florins, label: ASKED_TO_GIVE,
+      evidence: "thou too shouldst give me another" }
+  - { from: lean_lisa, to: lean_lisa_imagined_cow, label: PLANS_TO_BUY,
+      evidence: "I would buy a young cow" }
+  - { from: lean_lisa_long_laurence, to: lean_lisa_imagined_calf, label: HOPES_FOR,
+      evidence: "if the cow has a calf" }
+  - { from: lean_lisa_long_laurence, to: obj_lean_lisa_imagined_milk, label: WANTS_TO_DRINK,
+      evidence: "I shall often get a drink of milk to refresh me" }
+  - { from: lean_lisa, to: lean_lisa_imagined_calf, label: RESERVES_MILK_FOR,
+      evidence: "we must let the calf suck" }
+  - { from: lean_lisa, to: obj_lean_lisa_imagined_milk, label: DENIES_TO_HUSBAND,
+      evidence: "thou shouldst not have a drop of the milk" }
+
+  # Quarrel materialized from imaginary gain
+  - { from: law_hypothetical_gain_escalates_domestic_quarrel, to: lean_lisa, label: TURNS_PLAN_TO_QUARREL,
+      evidence: "thou threatenest me" }
+  - { from: lean_lisa_long_laurence, to: lean_lisa, label: THREATENS_BLOW,
+      evidence: "I will give thee a blow on thy mouth" }
+  - { from: lean_lisa, to: lean_lisa_long_laurence, label: INSULTS,
+      evidence: "thou glutton, thou rascal, thou lazy Harry!" }
+  - { from: lean_lisa, to: lean_lisa_long_laurence, label: GRABS_HAIR,
+      evidence: "laying hold of his hair" }
+  - { from: lean_lisa_long_laurence, to: lean_lisa, label: RESTRAINS_UNTIL_SLEEP,
+      evidence: "held her until she fell asleep" }

@@ -1,0 +1,10 @@
+slug: the-iron-stove
+khm: 127
+atu: 425A
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg52521-grimm-olcott
+  weight: supplementary
+sections: []

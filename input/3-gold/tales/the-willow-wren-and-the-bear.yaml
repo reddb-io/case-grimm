@@ -1,0 +1,290 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-willow-wren-and-the-bear
+khm: 102
+atu: '222'
+atu_name: The War of the Birds and Quadrupeds
+canonical_source: ../../2-silver/canonical/the-willow-wren-and-the-bear/canonical.txt
+title: The Willow-Wren and the Bear
+
+
+entities:
+
+  characters:
+
+    willow_wren_bear:
+      name: The Bear / Old Growler
+      species: sp_bear
+      agency_modes: [agency_speech, agency_violence, agency_social_rank]
+      affects: [affect_pride, affect_fear]
+      traits: [forest-walker, palace-inspector, nest-insulter, war-defendant, frightened-apologist]
+      evidence: |
+        Once in summer-time the bear and the wolf were walking in the forest
+
+    willow_wren_wolf:
+      name: Brother Wolf
+      species: sp_wolf
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_warning]
+      affects: [affect_fear]
+      traits: [bird-king-knower, etiquette-instructor, restraint-counsellor, uneasy-retreater]
+      evidence: |
+        Brother wolf, what bird is it that sings so well?
+
+    willow_wren_king:
+      name: The Willow-Wren King of Birds
+      species: sp_bird
+      agency_modes: [agency_speech, agency_social_rank, agency_animal_aid, agency_cunning]
+      speech_acts_performed: [speech_command]
+      affects: [affect_anger, affect_pride]
+      traits: [bird-king, nest-father, insult-avenger, army-summoner, spy-sender, victor]
+      evidence: |
+        That is the King of birds
+
+    willow_wren_queen:
+      name: The Willow-Wren Queen
+      species: sp_bird
+      agency_modes: [agency_social_rank, agency_domestic_labor, agency_animal_aid]
+      traits: [food-bearing-mother, nest-feeder, co-avenger, victory-announcer]
+      evidence: |
+        the Queen arrived with some food in her beak
+
+    willow_wren_children:
+      name: The Young Willow-Wrens
+      species: sp_bird
+      agency_modes: [agency_speech, agency_endurance]
+      affects: [affect_anger, affect_pride, affect_hunger]
+      traits: [insulted-young, honor-strikers, food-refusers, apology-demanders, satisfied-feasters]
+      evidence: |
+        saw five or six young ones lying in it
+
+    willow_wren_fox_general:
+      name: The Fox General
+      species: sp_fox
+      agency_modes: [agency_cunning, agency_social_rank, agency_speech]
+      affects: [affect_fear]
+      traits: [four-footed-general, tail-signal-commander, stung-leader, accidental-retreat-signal]
+      evidence: |
+        Fox, thou art the most cunning of all animals
+
+    willow_wren_gnat_spy:
+      name: The Crafty Gnat Spy
+      species: sp_insect
+      agency_modes: [agency_cunning, agency_animal_aid]
+      traits: [spy, leaf-hidden-listener, watchword-thief, minute-reporter]
+      evidence: |
+        The gnat, who was the most crafty
+
+    willow_wren_hornet:
+      name: The Hornet under the Fox's Tail
+      species: sp_insect
+      agency_modes: [agency_violence, agency_animal_aid]
+      traits: [stinging-agent, signal-breaker, small-battle-winner]
+      evidence: |
+        the willow-wren sent down the hornet
+
+    willow_wren_four_footed_army:
+      name: The Four-Footed Animal Army
+      agency_modes: [agency_violence, agency_social_rank]
+      affects: [affect_fear]
+      traits: [summoned-quadrupeds, bear-side-army, signal-dependent, routed-into-holes]
+      evidence: |
+        all four-footed animals were summoned
+
+    willow_wren_flying_army:
+      name: The Birds and Insects of the Air
+      agency_modes: [agency_violence, agency_animal_aid]
+      affects: [affect_anger]
+      traits: [summoned-fliers, birds-large-and-small, midges-hornets-bees-flies, swarming-victors]
+      evidence: |
+        the willow-wren summoned everything which flew in the air
+
+  magic_objects:
+
+    obj_willow_wren_fox_tail_signal:
+      name: The Fox's Tail Battle Signal
+      object_kind: token
+      attributes:
+        signal_up: charge because all is going well
+        signal_down: flee because all is lost
+      evidence: |
+        When I lift my tail up quite high
+
+  locations:
+
+    loc_willow_wren_forest:
+      name: The Forest of the Animal War
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        were walking in the forest
+
+    loc_willow_wren_nest:
+      name: The Willow-Wren Nest / Royal Palace
+      instance_of: loc_nest
+      evidence: |
+        the hole in which was the nest
+
+    loc_willow_wren_bear_cave:
+      name: The Bear's Cave
+      instance_of: loc_cave
+      evidence: |
+        flew with the Queen to the bear
+
+    loc_willow_wren_animal_holes:
+      name: The Animals' Holes
+      instance_of: loc_cave
+      evidence: |
+        went into their holes
+
+    loc_willow_wren_spy_tree:
+      name: The Spy Tree and Leaf
+      instance_of: loc_tree
+      evidence: |
+        hid herself beneath a leaf of the tree
+
+
+classifications:
+
+  world_laws:
+    - law_insulted_small_royalty_summons_total_war
+    - law_tiny_sting_breaks_command_signal
+    - law_collective_noise_magnifies_the_weak
+
+  moral_regimes:
+    - moral_retributive
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_social_rank
+    - agency_cunning
+    - agency_animal_aid
+    - agency_violence
+
+  affects_driving:
+    - affect_pride
+    - affect_anger
+    - affect_fear
+
+  symbol_numbers: []
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: willow_wren_bear,
+      scene: "The bear and wolf walk through the forest and hear the beautiful song of the bird-king.",
+      evidence: "the bear heard a bird singing so beautifully" }
+  - { function: func_misrecognition, order: 2, actor: willow_wren_bear,
+      scene: "The bear wants to inspect the bird-king's royal palace but is told to wait until the queen arrives.",
+      evidence: "I should very much like to see his royal palace" }
+  - { function: func_reconnaissance, order: 3, actor: willow_wren_bear,
+      scene: "After the king and queen fly out, the bear peeps into the nest and sees the young wrens.",
+      evidence: "he peeped in and saw five or six young ones" }
+  - { function: func_villainy, order: 4, actor: willow_wren_bear,
+      scene: "The bear insults the nest as a wretched palace and the young wrens as disreputable children.",
+      evidence: "you are disreputable children" }
+  - { function: func_complaint, order: 5, actor: willow_wren_children,
+      scene: "The young wrens refuse even food until their honor is settled.",
+      evidence: "We will not so much as touch one fly" }
+  - { function: func_declaration_of_war, order: 6, actor: willow_wren_king,
+      scene: "The bird-king declares bloody war on the bear for insulting his children.",
+      evidence: "we will punish thee by a bloody war" }
+  - { function: func_mustering, order: 7, actor: willow_wren_king,
+      scene: "The bear summons all four-footed animals while the willow-wren summons birds and insects.",
+      evidence: "all four-footed animals were summoned" }
+  - { function: func_spying, order: 8, actor: willow_wren_gnat_spy,
+      scene: "The crafty gnat hides under a leaf and learns the fox general's tail signal.",
+      evidence: "hid herself beneath a leaf of the tree" }
+  - { function: func_report, order: 9, actor: willow_wren_gnat_spy,
+      scene: "The gnat reports the enemy's plan to the willow-wren in full detail.",
+      evidence: "revealed everything, with the greatest minuteness" }
+  - { function: func_battle, order: 10, actor: willow_wren_flying_army,
+      scene: "The two animal armies advance, the land animals with earth-shaking noise and the fliers with a frightening swarm.",
+      evidence: "such a humming, and whirring, and swarming" }
+  - { function: func_tactical_attack, order: 11, actor: willow_wren_hornet,
+      scene: "The hornet stings beneath the fox's tail until the commander drops the signal.",
+      evidence: "sting with all his might" }
+  - { function: func_victory, order: 12, actor: willow_wren_flying_army,
+      scene: "The four-footed animals read the lowered tail as defeat, flee into their holes, and the birds win.",
+      evidence: "the birds had won the battle" }
+  - { function: func_unfinished_redress, order: 13, actor: willow_wren_children,
+      scene: "The children still refuse to eat until the bear begs pardon and restores their honor.",
+      evidence: "the bear must come to the nest, and beg for pardon" }
+  - { function: func_submission, order: 14, actor: willow_wren_bear,
+      scene: "The frightened bear creeps to the nest and begs the young wrens' pardon.",
+      evidence: "the bear crept thither in the greatest fear" }
+  - { function: func_feast, order: 15, actor: willow_wren_children,
+      scene: "The young wrens are satisfied, eat, drink, and make merry late into the night.",
+      evidence: "ate and drank, and made merry till quite late into the night" }
+
+
+edges:
+
+  # Insult to the nest-palace
+  - { from: willow_wren_bear, to: willow_wren_wolf, label: ASKS_BIRD_IDENTITY_OF,
+      evidence: "what bird is it that sings so well" }
+  - { from: willow_wren_wolf, to: willow_wren_king, label: IDENTIFIES_AS_KING_OF_BIRDS,
+      evidence: "That is the King of birds" }
+  - { from: willow_wren_wolf, to: willow_wren_bear, label: WARNS_TO_WAIT,
+      evidence: "you must wait until the Queen comes" }
+  - { from: willow_wren_queen, to: loc_willow_wren_nest, label: BRINGS_FOOD_TO,
+      evidence: "arrived with some food in her beak" }
+  - { from: willow_wren_king, to: willow_wren_children, label: FEEDS,
+      evidence: "they began to feed their young ones" }
+  - { from: willow_wren_bear, to: loc_willow_wren_nest, label: PEEPS_INTO,
+      evidence: "he peeped in and saw five or six young ones" }
+  - { from: willow_wren_bear, to: willow_wren_children, label: INSULTS,
+      evidence: "you are disreputable children" }
+  - { from: willow_wren_children, to: willow_wren_bear, label: THREATENS_PAYMENT_FROM,
+      evidence: "Bear, thou wilt have to pay for that" }
+  - { from: willow_wren_children, to: willow_wren_king, label: DEMAND_HONOR_REPAIR_FROM,
+      evidence: "settled whether we are respectable children or not" }
+  - { from: willow_wren_king, to: willow_wren_bear, label: DECLARES_WAR_ON,
+      evidence: "we will punish thee by a bloody war" }
+  - { from: law_insulted_small_royalty_summons_total_war, to: willow_wren_bear, label: PUNISHES_INSULT_BY_WAR,
+      evidence: "the bear has been here and has insulted us" }
+
+  # Mustering and espionage
+  - { from: willow_wren_bear, to: willow_wren_four_footed_army, label: SUMMONS,
+      evidence: "all four-footed animals were summoned" }
+  - { from: willow_wren_king, to: willow_wren_flying_army, label: SUMMONS,
+      evidence: "summoned everything which flew in the air" }
+  - { from: willow_wren_king, to: willow_wren_gnat_spy, label: SENDS_AS_SPY,
+      evidence: "sent out spies to discover" }
+  - { from: willow_wren_gnat_spy, to: loc_willow_wren_spy_tree, label: HIDES_BENEATH_LEAF_AT,
+      evidence: "hid herself beneath a leaf of the tree" }
+  - { from: willow_wren_bear, to: willow_wren_fox_general, label: APPOINTS_GENERAL,
+      evidence: "thou shalt be general and lead us" }
+  - { from: willow_wren_fox_general, to: obj_willow_wren_fox_tail_signal, label: DEFINES,
+      evidence: "what signal shall we agree upon" }
+  - { from: obj_willow_wren_fox_tail_signal, to: willow_wren_four_footed_army, label: COMMANDS_CHARGE_WHEN_RAISED,
+      evidence: "When I lift my tail up quite high" }
+  - { from: obj_willow_wren_fox_tail_signal, to: willow_wren_four_footed_army, label: COMMANDS_FLIGHT_WHEN_DROPPED,
+      evidence: "if I let it hang down, run away as fast as you can" }
+  - { from: willow_wren_gnat_spy, to: willow_wren_king, label: REVEALS_SIGNAL_TO,
+      evidence: "revealed everything, with the greatest minuteness" }
+
+  # Battle and apology
+  - { from: willow_wren_four_footed_army, to: willow_wren_flying_army, label: ADVANCES_AGAINST,
+      evidence: "on both sides they advanced against each other" }
+  - { from: willow_wren_king, to: willow_wren_hornet, label: ORDERS_STING_ATTACK,
+      evidence: "with orders to get beneath the fox" }
+  - { from: willow_wren_hornet, to: willow_wren_fox_general, label: STINGS,
+      evidence: "sting with all his might" }
+  - { from: law_tiny_sting_breaks_command_signal, to: obj_willow_wren_fox_tail_signal, label: BREAKS,
+      evidence: "put his tail between his legs" }
+  - { from: willow_wren_four_footed_army, to: loc_willow_wren_animal_holes, label: FLEES_INTO,
+      evidence: "began to fly, each into his hole" }
+  - { from: willow_wren_flying_army, to: willow_wren_four_footed_army, label: DEFEATS,
+      evidence: "the birds had won the battle" }
+  - { from: willow_wren_children, to: willow_wren_bear, label: DEMAND_APOLOGY_FROM,
+      evidence: "the bear must come to the nest, and beg for pardon" }
+  - { from: willow_wren_king, to: willow_wren_bear, label: THREATENS_RIB_BREAKING,
+      evidence: "every rib of thy body shall be broken" }
+  - { from: willow_wren_bear, to: willow_wren_children, label: BEGS_PARDON_OF,
+      evidence: "begged their pardon" }
+  - { from: willow_wren_children, to: willow_wren_queen, label: ACCEPTS_FOOD_AFTER_HONOR_REPAIR,
+      evidence: "the young wrens were satisfied" }

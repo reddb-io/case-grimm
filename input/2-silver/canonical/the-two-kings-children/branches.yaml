@@ -1,0 +1,8 @@
+slug: the-two-kings-children
+khm: 113
+atu: '313'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

@@ -1,0 +1,112 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: legend-10-the-hazel-branch
+khm: null
+legend_number: 10
+canonical_source: ../../2-silver/canonical/legend-10-the-hazel-branch/canonical.txt
+title: The Hazel-Branch
+
+entities:
+  characters:
+    hazel_branch_our_lady:
+      name: Our Lady
+      species: sp_human
+      being_type: being_divine
+      archetypes: [arc_supernatural_donor]
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_blessing]
+      affects: [affect_joy, affect_fear]
+      traits: [mother, strawberry-gatherer, serpent-threatened, hazel-sheltered, branch-blesser]
+      evidence: |
+        Then his mother came to him
+
+    hazel_branch_christ_child:
+      name: The Sleeping Christ-Child
+      species: sp_human
+      being_type: being_divine
+      affects: [affect_joy]
+      traits: [cradle-sleeping, beloved-child, strawberry-recipient]
+      evidence: |
+        Christ-child had laid himself in his cradle-bed
+
+    hazel_branch_adder:
+      name: The Pursuing Adder
+      species: sp_snake
+      agency_modes: [agency_violence]
+      traits: [grass-hidden, springing, pursuing, creeping-away]
+      evidence: |
+        an adder sprang up out of the grass
+
+  magic_objects:
+    obj_hazel_branch_green_branch:
+      name: The Green Hazel Branch
+      object_kind: relic
+      evidence: |
+        a green hazel-branch has been the safest protection
+
+    obj_hazel_branch_strawberries:
+      name: The Strawberries for the Christ-Child
+      object_kind: food
+      evidence: |
+        fetch thee a handful of strawberries
+
+  locations:
+    loc_hazel_branch_cradle:
+      name: The Christ-Child's Cradle-Bed
+      instance_of: loc_house
+      evidence: |
+        laid himself in his cradle-bed
+
+    loc_hazel_branch_wood:
+      name: The Wood with Strawberries
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        I will go into the wood
+
+    loc_hazel_branch_hazel_bush:
+      name: The Protective Hazel-Bush
+      instance_of: loc_tree
+      evidence: |
+        She hid herself behind a hazel-bush
+
+classifications:
+  world_laws:
+    - law_marian_hazel_branch_protects_against_serpents
+  moral_regimes:
+    - moral_providential_protection
+  agency_modes_dominant: [agency_speech, agency_object_mediation]
+  affects_driving: [affect_joy, affect_fear]
+  symbol_numbers: []
+  threshold_types: [threshold_forest]
+
+propp:
+  - { function: func_maternal_errand, order: 1, actor: hazel_branch_our_lady,
+      scene: "Our Lady goes into the wood to gather strawberries for the sleeping Christ-child" }
+  - { function: func_serpent_threat, order: 2, actor: hazel_branch_adder,
+      victim: hazel_branch_our_lady,
+      scene: "an adder springs from the grass and pursues her" }
+  - { function: func_hazel_shelter, order: 3, actor: loc_hazel_branch_hazel_bush,
+      beneficiary: hazel_branch_our_lady,
+      scene: "Our Lady hides behind the hazel-bush until the adder leaves" }
+  - { function: func_blessing, order: 4, actor: hazel_branch_our_lady,
+      beneficiary: obj_hazel_branch_green_branch,
+      scene: "Our Lady declares the hazel shall protect others in the future" }
+  - { function: func_protective_etiology, order: 5, actor: law_marian_hazel_branch_protects_against_serpents,
+      scene: "green hazel branches become protection against snakes and creeping things" }
+
+edges:
+  - { from: hazel_branch_our_lady, to: obj_hazel_branch_strawberries, label: SEEKS_FOR_CHILD,
+      evidence: "fetch thee a handful of strawberries" }
+  - { from: hazel_branch_adder, to: hazel_branch_our_lady, label: SPRINGS_AT,
+      evidence: "an adder sprang up out of the grass" }
+  - { from: hazel_branch_our_lady, to: loc_hazel_branch_hazel_bush, label: HIDES_BEHIND,
+      evidence: "She hid herself behind a hazel-bush" }
+  - { from: loc_hazel_branch_hazel_bush, to: hazel_branch_our_lady, label: PROTECTS,
+      evidence: "has been my protection this time" }
+  - { from: hazel_branch_our_lady, to: obj_hazel_branch_green_branch, label: BLESSES_AS_PROTECTION,
+      evidence: "it shall in future protect others also" }
+  - { from: obj_hazel_branch_green_branch, to: sp_snake, label: PROTECTS_AGAINST,
+      evidence: "safest protection against adders, snakes" }
+  - { from: obj_hazel_branch_green_branch, to: law_marian_hazel_branch_protects_against_serpents, label: MANIFESTS,
+      evidence: "everything else which creeps on the earth" }

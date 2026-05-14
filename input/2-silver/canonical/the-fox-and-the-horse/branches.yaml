@@ -1,0 +1,10 @@
+slug: the-fox-and-the-horse
+khm: 132
+atu: 47A
+base: pg5314-grimm-hunt
+sources:
+- book: pg2591-grimm-taylor
+  weight: supplementary
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

@@ -1,0 +1,404 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-goose-girl
+khm: 89
+atu: '533'
+atu_name: The Goose Girl
+canonical_source: ../../2-silver/canonical/the-goose-girl/canonical.txt
+title: The Goose Girl
+
+
+entities:
+
+  characters:
+
+    goose_girl_old_queen:
+      name: The Old Queen
+      archetypes: [arc_protective_mother]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_social_rank]
+      affects: [affect_maternal_love, affect_grief]
+      traits: [widowed, royal-mother, dowry-giver, blood-token-maker, daughter-loving]
+      evidence: |
+        she loved her child with all her heart.
+
+    goose_girl_princess:
+      name: The True Bride / Goose-Girl
+      archetypes: [arc_oppressed_maiden]
+      species: sp_human
+      existential_states: [state_hidden_identity, state_bound_by_promise]
+      agency_modes: [agency_endurance, agency_speech, agency_domestic_labor, agency_object_mediation]
+      speech_acts_performed: [speech_command, speech_testimony]
+      affects: [affect_grief, affect_fear, affect_shame]
+      traits: [beautiful, betrothed, humble, oath-bound, displaced, goose-herd, golden-haired, restored-bride]
+      evidence: |
+        Here am I deserted by the whole world, and yet I am a King’s
+        daughter
+
+    goose_girl_waiting_maid:
+      name: The Waiting-Maid / False Bride
+      archetypes: [arc_false_bride]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_violence, agency_social_rank]
+      speech_acts_performed: [speech_lie, speech_command, speech_riddle]
+      affects: [affect_envy, affect_greed, affect_fear]
+      traits: [servant, haughty, coercive, role-usurper, falada-killer, blinded-at-feast, self-condemning]
+      evidence: |
+        a false waiting-maid has by force brought me to such a pass
+
+    goose_girl_falada:
+      name: Falada
+      species: sp_horse
+      existential_states: [state_liminal_dead]
+      agency_modes: [agency_animal_language, agency_speech]
+      speech_acts_performed: [speech_testimony]
+      traits: [speaking-horse, faithful-witness, beheaded, gateway-head, truth-answering]
+      evidence: |
+        the horse of the King’s daughter was called Falada, and could
+        speak.
+
+    goose_girl_young_king:
+      name: The Young King / Bridegroom
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_promise]
+      traits: [distant-prince, deceived-bridegroom, false-bride-promiser, true-bride-husband]
+      evidence: |
+        the prince sprang forward to meet her
+
+    goose_girl_old_king:
+      name: The Aged King
+      archetypes: [arc_wise_helper, arc_oath_enforcer]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning]
+      speech_acts_performed: [speech_command, speech_riddle, speech_testimony]
+      traits: [observer, concealed-witness, stove-listener, identity-restorer, sentence-enforcer]
+      evidence: |
+        the old King looked out of the window and saw her standing in
+        the courtyard
+
+    goose_girl_conrad:
+      name: Conrad the Goose-Boy
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_anger]
+      traits: [goose-boy, hair-coveter, hat-chaser, complaint-bearer, indirect-witness]
+      evidence: |
+        The boy was called Conrad
+
+    goose_girl_knacker:
+      name: The Knacker's Man
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation]
+      traits: [horse-killer, gold-paid, head-nailer]
+      evidence: |
+        The knacker’s man promised to do that
+
+    goose_girl_wind:
+      name: The Gentle Wind
+      being_type: being_wind
+      agency_modes: [agency_object_mediation]
+      traits: [summoned-by-formula, hat-blower, hair-privacy-helper]
+      evidence: |
+        there came such a violent wind
+
+  magic_objects:
+
+    obj_goose_girl_dowry:
+      name: The Royal Dowry
+      object_kind: treasure
+      attributes:
+        function: bride wealth carried toward the distant kingdom
+      evidence: |
+        everything which appertained to a royal dowry
+
+    obj_goose_girl_blood_handkerchief:
+      name: The Three Drops of Blood Handkerchief
+      instance_of: obj_maternal_blood_token
+      object_kind: token
+      attributes:
+        count: 3
+        function: maternal speech-protection lost in the stream
+      evidence: |
+        three drops of blood fall
+
+    obj_goose_girl_golden_cup:
+      name: The Golden Cup
+      object_kind: tool
+      attributes:
+        function: royal drinking object denied by the waiting-maid
+      evidence: |
+        my golden cup
+
+    obj_goose_girl_royal_apparel:
+      name: The Royal Apparel
+      object_kind: garment
+      attributes:
+        function: visible rank stripped from the true bride and restored later
+      evidence: |
+        royal apparel
+
+    obj_goose_girl_shabby_clothes:
+      name: The Waiting-Maid's Shabby Clothes
+      object_kind: garment
+      attributes:
+        function: social demotion garment forced on the true bride
+      evidence: |
+        her own shabby clothes
+
+    obj_goose_girl_falada_head:
+      name: Falada's Head at the Dark Gateway
+      instance_of: obj_forensic_token
+      object_kind: relic
+      attributes:
+        function: dead horse head that speaks the true bride's suffering at the threshold
+      evidence: |
+        nailed it fast beneath the dark gateway
+
+    obj_goose_girl_golden_hair:
+      name: The Goose-Girl's Golden Hair
+      object_kind: material
+      attributes:
+        function: royal beauty sign Conrad tries to seize
+      evidence: |
+        her hair which was like pure gold
+
+    obj_goose_girl_iron_stove:
+      name: The Iron Stove
+      object_kind: tool
+      attributes:
+        function: non-human listener that lets the oath-bound bride speak her story
+      evidence: |
+        tell thy sorrows to the iron-stove
+
+    obj_goose_girl_nail_barrel:
+      name: The Nail-Studded Barrel
+      object_kind: weapon
+      attributes:
+        function: punishment device pronounced by the false bride against herself
+      evidence: |
+        put in a barrel which is studded inside with pointed nails
+
+  locations:
+
+    loc_goose_girl_departure:
+      name: The Queen's Departure Chamber
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        the aged mother went into her bedroom
+
+    loc_goose_girl_stream:
+      name: The Journey Streams
+      instance_of: loc_brook
+      evidence: |
+        get me some water from the stream
+
+    loc_goose_girl_royal_palace:
+      name: The Royal Palace
+      instance_of: loc_castle
+      threshold_type: threshold_gate
+      evidence: |
+        they entered the royal palace
+
+    loc_goose_girl_dark_gateway:
+      name: The Dark Gateway
+      instance_of: loc_gate
+      threshold_type: threshold_gate
+      evidence: |
+        a great dark-looking gateway in the town
+
+    loc_goose_girl_goose_meadow:
+      name: The Goose Meadow
+      instance_of: loc_meadow
+      evidence: |
+        they had come to the meadow
+
+    loc_goose_girl_iron_stove_room:
+      name: The Iron-Stove Room
+      instance_of: loc_house
+      evidence: |
+        was standing outside by the pipe of the stove
+
+
+classifications:
+
+  world_laws:
+    - law_maternal_blood_token_guards_rank
+    - law_dead_matter_reveals_murder
+    - law_object_confession_circumvents_forced_oath
+    - law_self_sentence_punishes_false_bride
+
+  moral_regimes:
+    - moral_retributive
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+    - agency_domestic_labor
+    - agency_social_rank
+    - agency_object_mediation
+
+  affects_driving:
+    - affect_maternal_love
+    - affect_grief
+    - affect_fear
+    - affect_envy
+    - affect_anger
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_doorway
+    - threshold_gate
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: goose_girl_princess,
+      scene: "a princess is betrothed to a distant prince and sent with dowry, maid, and Falada" }
+  - { function: func_departure_token, order: 2, actor: goose_girl_old_queen,
+      scene: "the queen gives her daughter a handkerchief marked with three drops of blood" }
+  - { function: func_service_refusal, order: 3, actor: goose_girl_waiting_maid,
+      scene: "the waiting-maid refuses to serve water to the thirsty princess" }
+  - { function: func_token_loss, order: 4, actor: goose_girl_princess,
+      scene: "the blood handkerchief floats away and the bride becomes powerless" }
+  - { function: func_usurpation, order: 5, actor: goose_girl_waiting_maid,
+      scene: "the maid forces horse, clothes, and bride-role exchange under oath-threat" }
+  - { function: func_false_arrival, order: 6, actor: goose_girl_waiting_maid,
+      scene: "the false bride enters the palace on Falada and is received by the prince" }
+  - { function: func_degradation, order: 7, actor: goose_girl_princess,
+      scene: "the true bride is assigned to tend geese with Conrad" }
+  - { function: func_silencing_of_witness, order: 8, actor: goose_girl_waiting_maid,
+      scene: "the false bride has Falada killed to prevent him from telling" }
+  - { function: func_dead_witness, order: 9, actor: goose_girl_falada,
+      scene: "Falada's head speaks at the dark gateway when the goose-girl passes" }
+  - { function: func_wind_formula, order: 10, actor: goose_girl_princess,
+      scene: "the goose-girl commands the wind to blow Conrad's hat away while she braids her hair" }
+  - { function: func_indirect_testimony, order: 11, actor: goose_girl_conrad,
+      scene: "Conrad reports the horse-head speech and meadow wind to the aged king" }
+  - { function: func_concealed_observation, order: 12, actor: goose_girl_old_king,
+      scene: "the old king observes the gateway speech and meadow hair ritual himself" }
+  - { function: func_object_confession, order: 13, actor: goose_girl_princess,
+      scene: "the oath-bound bride tells her whole story to the iron stove while the king listens" }
+  - { function: func_recognition, order: 14, actor: goose_girl_old_king,
+      scene: "the old king restores royal garments and reveals the false bride to his son" }
+  - { function: func_self_sentence, order: 15, actor: goose_girl_waiting_maid,
+      scene: "the waiting-maid unknowingly pronounces the punishment for her own crime" }
+  - { function: func_punishment, order: 16, actor: goose_girl_old_king,
+      scene: "the false bride's sentence is carried out and the true bride marries the young king" }
+
+
+edges:
+
+  # Departure, blood-token, and failed service
+  - { from: goose_girl_princess, to: goose_girl_young_king, label: BETROTHED_TO,
+      evidence: "betrothed to a prince who lived at a great distance" }
+  - { from: goose_girl_old_queen, to: obj_goose_girl_dowry, label: PACKS,
+      evidence: "everything which appertained to a royal dowry" }
+  - { from: goose_girl_old_queen, to: goose_girl_waiting_maid, label: SENDS_WITH,
+      evidence: "She likewise sent her maid in waiting" }
+  - { from: goose_girl_princess, to: goose_girl_falada, label: RIDES,
+      evidence: "the horse of the King’s daughter was called Falada" }
+  - { from: goose_girl_falada, to: agency_animal_language, label: HAS,
+      evidence: "could speak" }
+  - { from: goose_girl_old_queen, to: obj_goose_girl_blood_handkerchief, label: CREATES,
+      evidence: "cut her finger with it until it bled" }
+  - { from: goose_girl_old_queen, to: goose_girl_princess, label: GIVES_BLOOD_TOKEN,
+      evidence: "preserve this carefully" }
+  - { from: goose_girl_princess, to: goose_girl_waiting_maid, label: REQUESTS_WATER,
+      evidence: "get me some water from the stream" }
+  - { from: goose_girl_waiting_maid, to: goose_girl_princess, label: REFUSES_SERVICE,
+      evidence: "I don’t choose to be your servant" }
+  - { from: obj_goose_girl_blood_handkerchief, to: goose_girl_princess, label: ANSWERS_FOR_MOTHER,
+      evidence: "If thy mother knew, her heart would break." }
+  - { from: obj_goose_girl_blood_handkerchief, to: loc_goose_girl_stream, label: FLOATS_AWAY,
+      evidence: "floated away with the water" }
+
+  # Role theft and hidden identity
+  - { from: goose_girl_waiting_maid, to: goose_girl_princess, label: GAINS_POWER_OVER,
+      evidence: "she had now power over the bride" }
+  - { from: goose_girl_waiting_maid, to: goose_girl_falada, label: TAKES,
+      evidence: "Falada is more suitable for me" }
+  - { from: goose_girl_waiting_maid, to: obj_goose_girl_royal_apparel, label: FORCES_EXCHANGE_OF,
+      evidence: "exchange her royal apparel for her own shabby clothes" }
+  - { from: goose_girl_waiting_maid, to: goose_girl_princess, label: FORCES_OATH_SILENCE,
+      evidence: "she was compelled to swear by the clear sky above her" }
+  - { from: goose_girl_waiting_maid, to: loc_goose_girl_royal_palace, label: ENTERS_AS_FALSE_BRIDE,
+      evidence: "the prince sprang forward to meet her" }
+  - { from: goose_girl_young_king, to: goose_girl_waiting_maid, label: MISTAKES_FOR_CONSORT,
+      evidence: "thought she was his consort" }
+  - { from: goose_girl_princess, to: state_hidden_identity, label: FALLS_INTO,
+      evidence: "the real princess was left standing below" }
+  - { from: goose_girl_old_king, to: goose_girl_princess, label: ASSIGNS_GOOSE_WORK,
+      evidence: "she may help him" }
+  - { from: goose_girl_princess, to: goose_girl_conrad, label: TENDS_GEESE_WITH,
+      evidence: "the true bride had to help him to tend the geese" }
+
+  # Falada as murdered witness
+  - { from: goose_girl_waiting_maid, to: goose_girl_young_king, label: ASKS_FAVOR,
+      evidence: "I beg you to do me a favour" }
+  - { from: goose_girl_waiting_maid, to: goose_girl_falada, label: ORDERS_BEHEADING_OF,
+      evidence: "have the head of the horse on which I rode here cut off" }
+  - { from: goose_girl_waiting_maid, to: goose_girl_falada, label: FEARS_TESTIMONY_FROM,
+      evidence: "afraid that the horse might tell" }
+  - { from: goose_girl_princess, to: goose_girl_knacker, label: SECRETLY_PAYS,
+      evidence: "secretly promised to pay the knacker a piece of gold" }
+  - { from: goose_girl_knacker, to: obj_goose_girl_falada_head, label: NAILS_UP,
+      evidence: "nailed it fast beneath the dark gateway" }
+  - { from: goose_girl_princess, to: obj_goose_girl_falada_head, label: LAMENTS_TO,
+      evidence: "Alas, Falada, hanging there!" }
+  - { from: obj_goose_girl_falada_head, to: goose_girl_princess, label: ANSWERS,
+      evidence: "Alas, young Queen, how ill you fare!" }
+
+  # Meadow hair and wind formula
+  - { from: goose_girl_princess, to: obj_goose_girl_golden_hair, label: UNBINDS,
+      evidence: "unbound her hair which was like pure gold" }
+  - { from: goose_girl_conrad, to: obj_goose_girl_golden_hair, label: WANTS_TO_PLUCK,
+      evidence: "wanted to pluck out a few hairs" }
+  - { from: goose_girl_princess, to: goose_girl_wind, label: COMMANDS,
+      evidence: "Blow, blow, thou gentle wind" }
+  - { from: goose_girl_wind, to: goose_girl_conrad, label: BLOWS_HAT_AWAY,
+      evidence: "blew Conrad’s hat far away" }
+  - { from: goose_girl_conrad, to: goose_girl_old_king, label: COMPLAINS_TO,
+      evidence: "I won’t tend the geese with that girl any longer!" }
+  - { from: goose_girl_conrad, to: goose_girl_old_king, label: TESTIFIES_TO,
+      evidence: "Conrad went on to relate what happened" }
+  - { from: goose_girl_old_king, to: loc_goose_girl_dark_gateway, label: HIDES_BEHIND,
+      evidence: "placed himself behind the dark gateway" }
+  - { from: goose_girl_old_king, to: loc_goose_girl_goose_meadow, label: OBSERVES_IN,
+      evidence: "hid himself in the thicket in the meadow" }
+
+  # Oath-bound truth routed through object
+  - { from: goose_girl_old_king, to: goose_girl_princess, label: ASKS_WHY,
+      evidence: "asked why she did all these things" }
+  - { from: goose_girl_princess, to: state_bound_by_promise, label: CANNOT_TELL_HUMANS,
+      evidence: "I may not tell you that" }
+  - { from: goose_girl_old_king, to: obj_goose_girl_iron_stove, label: DIRECTS_CONFESSION_TO,
+      evidence: "tell thy sorrows to the iron-stove there" }
+  - { from: goose_girl_princess, to: obj_goose_girl_iron_stove, label: LAMENTS_TO,
+      evidence: "began to weep and lament" }
+  - { from: goose_girl_princess, to: goose_girl_waiting_maid, label: ACCUSES_IN_OBJECT_CONFESSION,
+      evidence: "a false waiting-maid has by force brought me to such a pass" }
+  - { from: goose_girl_old_king, to: goose_girl_princess, label: OVERHEARS,
+      evidence: "was listening to what she said" }
+  - { from: goose_girl_old_king, to: obj_goose_girl_royal_apparel, label: RESTORES,
+      evidence: "royal garments were placed on her" }
+  - { from: goose_girl_old_king, to: goose_girl_young_king, label: REVEALS_FALSE_BRIDE,
+      evidence: "revealed to him that he had got the false bride" }
+
+  # Self-sentence and restoration
+  - { from: goose_girl_old_king, to: goose_girl_waiting_maid, label: ASKS_JUDGMENT_RIDDLE,
+      evidence: "what sentence such an one merited?" }
+  - { from: goose_girl_waiting_maid, to: obj_goose_girl_nail_barrel, label: PRONOUNCES_SENTENCE,
+      evidence: "put in a barrel which is studded inside with pointed nails" }
+  - { from: goose_girl_old_king, to: goose_girl_waiting_maid, label: IDENTIFIES_CULPRIT,
+      evidence: "It is thou" }
+  - { from: law_self_sentence_punishes_false_bride, to: goose_girl_waiting_maid, label: PUNISHES,
+      evidence: "thou hast pronounced thine own sentence" }
+  - { from: goose_girl_young_king, to: goose_girl_princess, label: MARRIES_TRUE_BRIDE,
+      evidence: "married his true bride" }
+  - { from: goose_girl_young_king, to: goose_girl_princess, label: REIGNS_WITH,
+      evidence: "reigned over their kingdom in peace and happiness" }

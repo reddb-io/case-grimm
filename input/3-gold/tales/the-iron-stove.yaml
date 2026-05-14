@@ -1,0 +1,471 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-iron-stove
+khm: 127
+atu: 425A
+atu_name: The Iron Stove / Animal as Bridegroom and Lost Husband
+canonical_source: ../../2-silver/canonical/the-iron-stove/canonical.txt
+title: The Iron Stove
+
+
+entities:
+
+  characters:
+
+    iron_stove_princess:
+      name: The King's Daughter / Faithful Seeker
+      archetypes: [arc_reluctant_bride]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_object_mediation, agency_speech, agency_domestic_labor, agency_cunning]
+      existential_states: [state_bound_by_promise, state_forgotten_bride]
+      speech_acts_performed: [speech_promise, speech_bargain, speech_request]
+      affects: [affect_fear, affect_grief, affect_loyalty, affect_hunger, affect_love]
+      traits: [lost-princess, promise-bound, substitute-protected, iron-scraper, speech-limit-breaker, nine-day-seeker, toad-house-guest, impossible-threshold-crosser, scullery-maid, night-bargainer, true-bride]
+      evidence: |
+        a King’s daughter came into the forest, who had lost herself
+
+    iron_stove_old_king:
+      name: The Old King, Her Father
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning]
+      speech_acts_performed: [speech_command]
+      affects: [affect_fear, affect_grief]
+      traits: [one-daughter-father, substitute-sender, promise-evader, later-fetched]
+      evidence: |
+        the old King fell on her neck and kissed her
+
+    iron_stove_prince:
+      name: The King's Son Inside the Iron Stove
+      archetypes: [arc_enchanted_prince]
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank, agency_object_mediation]
+      existential_states: [state_imprisoned, state_forgotten_bride]
+      transformations: [transform_release_by_violence]
+      speech_acts_performed: [speech_promise, speech_command, speech_bargain]
+      affects: [affect_love, affect_grief]
+      traits: [bewitched-prince, stove-prisoner, voice-in-iron, substitute-detector, released-bridegroom, displaced-lover, third-night-recognizer]
+      evidence: |
+        a King’s son was bewitched by an old witch, and shut up in an iron stove
+
+    iron_stove_old_witch:
+      name: The Old Witch Who Bewitched the Prince
+      being_type: being_witch
+      agency_modes: [agency_violence]
+      traits: [offstage-curser, stove-imprisoner]
+      evidence: |
+        bewitched by an old witch
+
+    iron_stove_silent_companion:
+      name: The Silent Homeward Companion
+      archetypes: [arc_wise_helper]
+      agency_modes: [agency_animal_aid, agency_endurance]
+      traits: [silent-guide, two-hour-home-leader]
+      evidence: |
+        a companion who walked near her, but did not speak
+
+    iron_stove_millers_daughter:
+      name: The Miller's Daughter Substitute
+      archetypes: [arc_false_bride]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [beautiful-substitute, iron-scraper, mill-noise-revealer, rejected]
+      evidence: |
+        the miller’s daughter, who was very beautiful
+
+    iron_stove_swineherds_daughter:
+      name: The Swineherd's Daughter Substitute
+      archetypes: [arc_false_bride]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [prettier-substitute, gold-paid, horn-noise-revealer, rejected]
+      evidence: |
+        a swine-herd’s daughter, who was even prettier
+
+    iron_stove_fat_toad:
+      name: The Old Fat Toad Donor
+      archetypes: [arc_supernatural_donor]
+      species: sp_toad
+      agency_modes: [agency_speech, agency_object_mediation, agency_domestic_labor]
+      existential_states: [state_transformed]
+      speech_acts_performed: [speech_command]
+      traits: [old-house-host, box-keeper, food-giver, threshold-tool-donor, disenchanted-royal]
+      evidence: |
+        The fat toad cried
+
+    iron_stove_little_toad:
+      name: The Little Green Waiting-Maid Toad
+      species: sp_toad
+      agency_modes: [agency_domestic_labor, agency_speech]
+      existential_states: [state_transformed]
+      traits: [limping-waiting-maid, door-opener, box-bringer, disenchanted-royal]
+      evidence: |
+        a small toad came walking by and opened the door to her
+
+    iron_stove_toad_household:
+      name: The Toad Household / King's Children
+      species: sp_toad
+      agency_modes: [agency_domestic_labor]
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human]
+      traits: [big-and-little-toads, hospitable-household, disenchanted-kings-children]
+      evidence: |
+        the toads were all disenchanted, and were King’s children
+
+    iron_stove_false_bride:
+      name: The Other Maiden / False Bride
+      archetypes: [arc_false_bride]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_bargain]
+      affects: [affect_greed, affect_envy]
+      traits: [replacement-bride, dress-coveter, sleeping-draught-user, displaced-rival]
+      evidence: |
+        another maiden by his side whom he wanted to marry
+
+    iron_stove_servants:
+      name: The Chamber-Door Servants
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [night-listeners, lament-reporters]
+      evidence: |
+        The servants sat by the chamber-door
+
+  magic_objects:
+
+    obj_iron_stove_prison:
+      name: The Enchanted Iron Stove
+      instance_of: obj_enchanted_iron_stove_prison
+      object_kind: architecture
+      attributes:
+        function: iron prison of the bewitched prince and voice-source of the bargain
+      evidence: |
+        shut up in an iron stove in a forest
+
+    obj_iron_stove_scraping_knife:
+      name: The Knife for Scraping Iron
+      object_kind: tool
+      attributes:
+        function: release tool that scrapes a hole in the iron stove
+      evidence: |
+        bring a knife with thee, and scrape a hole in the iron
+
+    obj_iron_stove_three_needles:
+      name: The Three Large Needles
+      object_kind: tool
+      attributes:
+        count: 3
+        function: grip-tools for crossing the slippery glass mountain
+      evidence: |
+        three large needles
+
+    obj_iron_stove_plough_wheel:
+      name: The Plough-Wheel
+      object_kind: tool
+      attributes:
+        function: rolling vehicle for crossing the three piercing swords
+      evidence: |
+        a plough-wheel
+
+    obj_iron_stove_three_nuts:
+      name: The Three Dress-Nuts
+      object_kind: token
+      attributes:
+        count: 3
+        function: deferred donor-gifts containing royal garments
+      evidence: |
+        three nuts
+
+    obj_iron_stove_royal_garments:
+      name: The Three Royal Garments from the Nuts
+      instance_of: obj_celestial_dresses
+      object_kind: garment
+      attributes:
+        count: 3
+        function: wonder-gifts bartered for three nights near the bridegroom
+      evidence: |
+        there was a stately royal garment in it
+
+    obj_iron_stove_sleeping_draught:
+      name: The Sleeping-Draught in Wine
+      instance_of: obj_sleeping_draught
+      object_kind: food
+      attributes:
+        function: drugged wine that prevents recognition on the first two nights
+      evidence: |
+        a glass of wine in which she had poured a sleeping-draught
+
+  locations:
+
+    loc_iron_stove_forest:
+      name: The Great Wild Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        the great wild forest
+
+    loc_iron_stove_father_castle:
+      name: The Father's Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        there was great joy in the castle
+
+    loc_iron_stove_little_house:
+      name: The Little Old Toad House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        Then she came to a little old house
+
+    loc_iron_stove_glass_mountain:
+      name: The High Glass Mountain
+      instance_of: loc_mountain
+      evidence: |
+        a high glass mountain
+
+    loc_iron_stove_piercing_swords:
+      name: The Three Piercing Swords
+      instance_of: loc_road
+      evidence: |
+        go over three piercing swords
+
+    loc_iron_stove_great_lake:
+      name: The Great Lake Before the Prince's Castle
+      instance_of: loc_lake
+      evidence: |
+        a great lake
+
+    loc_iron_stove_prince_castle:
+      name: The Prince's Castle of the False Bride
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        she came to a large and beautiful castle
+
+    loc_iron_stove_scullery:
+      name: The Low-Wage Scullery
+      instance_of: loc_house
+      evidence: |
+        she was taken as a scullery-maid at low wages
+
+    loc_iron_stove_bridegroom_chamber:
+      name: The Bridegroom's Chamber
+      instance_of: loc_bedchamber
+      threshold_type: threshold_doorway
+      evidence: |
+        sleep one night in her bridegroom’s chamber
+
+    loc_iron_stove_final_castle:
+      name: The Disenchanted Toad Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        it was a great castle
+
+
+classifications:
+
+  world_laws:
+    - law_promise_binds_reality
+    - law_personal_release_promise_rejects_substitutes
+    - law_broken_speech_limit_exiles_released_bridegroom
+    - law_wonder_gifts_purchase_recognition_nights
+    - law_voice_recognizes_forgotten_bride
+
+  moral_regimes:
+    - moral_restorative
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_object_mediation
+    - agency_speech
+    - agency_domestic_labor
+    - agency_cunning
+    - agency_social_rank
+
+  affects_driving:
+    - affect_fear
+    - affect_loyalty
+    - affect_grief
+    - affect_hunger
+    - affect_love
+    - affect_envy
+
+  symbol_numbers:
+    - num_3
+    - num_9
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_villainy
+    order: 1
+    actor: iron_stove_old_witch
+    victim: iron_stove_prince
+    scene: "an old witch imprisons the king's son in an iron stove in the forest"
+    evidence: "bewitched by an old witch, and shut up in an iron stove in a forest"
+
+  - function: func_lack
+    order: 2
+    actor: iron_stove_princess
+    scene: "the king's daughter is lost in the forest and cannot return home"
+    evidence: "I have lost my father’s kingdom, and cannot get home again"
+
+  - function: func_donor_contract
+    order: 3
+    actor: iron_stove_prince
+    beneficiary: iron_stove_princess
+    scene: "the stove promises swift return home if she promises release and marriage"
+    evidence: "if thou wilt promise to do what I desire of thee"
+
+  - function: func_false_solution
+    order: 4
+    actor: iron_stove_old_king
+    scene: "the father sends two beautiful substitutes, but the stove rejects both"
+    evidence: "They therefore resolved they would send, in her place"
+
+  - function: func_difficult_task
+    order: 5
+    actor: iron_stove_princess
+    scene: "the true promised bride scrapes the iron until the prince can emerge"
+    evidence: "she went on scraping, and made the hole so large that he was able to get out"
+
+  - function: func_violation
+    order: 6
+    actor: iron_stove_princess
+    scene: "she speaks more than the permitted three words to her father"
+    evidence: "she spoke more than three words"
+
+  - function: func_departure
+    order: 7
+    actor: iron_stove_princess
+    scene: "she returns to the forest and seeks the vanished stove for nine days"
+    evidence: "For nine days she sought it"
+
+  - function: func_donor_test
+    order: 8
+    actor: iron_stove_fat_toad
+    beneficiary: iron_stove_princess
+    scene: "the toad household feeds, lodges, and equips her for the impossible thresholds"
+    evidence: "the old toad gave her three needles out of the great box"
+
+  - function: func_guidance
+    order: 9
+    actor: obj_iron_stove_three_needles
+    scene: "the donor tools carry her over glass mountain, piercing swords, and lake"
+    evidence: "If she did all this she would get her lover back again"
+
+  - function: func_difficult_task
+    order: 10
+    actor: iron_stove_princess
+    scene: "as a low-wage scullery-maid she barters three nut-dresses for nights in the bridegroom's chamber"
+    evidence: "leave to sleep one night in her bridegroom’s chamber"
+
+  - function: func_recognition
+    order: 11
+    actor: iron_stove_prince
+    scene: "on the third night he hears her lament and recognizes the true bride"
+    evidence: "Thou art the true one, thou art mine, and I am thine."
+
+  - function: func_return
+    order: 12
+    actor: iron_stove_princess
+    scene: "the couple return across lake, swords, and glass mountain to the toad house"
+    evidence: "When they came to the great lake, they sailed across it"
+
+  - function: func_transfiguration
+    order: 13
+    actor: iron_stove_toad_household
+    scene: "the toads are disenchanted as king's children and their house becomes a great castle"
+    evidence: "the toads were all disenchanted, and were King’s children"
+
+  - function: func_wedding
+    order: 14
+    actor: iron_stove_princess
+    scene: "the true couple celebrates the wedding and unites two kingdoms"
+    evidence: "Then the wedding was celebrated"
+
+
+edges:
+
+  - { from: iron_stove_old_witch, to: iron_stove_prince, label: BEWITCHES,
+      evidence: "bewitched by an old witch" }
+  - { from: iron_stove_prince, to: obj_iron_stove_prison, label: IMPRISONED_IN,
+      evidence: "shut up in an iron stove in a forest" }
+  - { from: iron_stove_princess, to: loc_iron_stove_forest, label: GETS_LOST_IN,
+      evidence: "came into the forest, who had lost herself" }
+  - { from: iron_stove_prince, to: iron_stove_princess, label: PROMISES_HELP_TO,
+      evidence: "I will help thee to get home again" }
+  - { from: iron_stove_princess, to: iron_stove_prince, label: PROMISES_TO_RELEASE_AND_MARRY,
+      evidence: "she promised to do as he desired" }
+  - { from: iron_stove_prince, to: obj_iron_stove_scraping_knife, label: REQUIRES,
+      evidence: "bring a knife with thee" }
+  - { from: iron_stove_prince, to: iron_stove_silent_companion, label: SENDS,
+      evidence: "he gave her a companion" }
+  - { from: iron_stove_old_king, to: iron_stove_millers_daughter, label: SENDS_AS_SUBSTITUTE,
+      evidence: "send, in her place, the miller’s daughter" }
+  - { from: iron_stove_old_king, to: iron_stove_swineherds_daughter, label: SENDS_AS_SUBSTITUTE,
+      evidence: "give her a piece of gold to go to the iron stove instead" }
+  - { from: iron_stove_prince, to: iron_stove_millers_daughter, label: REJECTS,
+      evidence: "So thou art a miller’s daughter!" }
+  - { from: iron_stove_prince, to: iron_stove_swineherds_daughter, label: REJECTS,
+      evidence: "Then thou art a swine-herd’s daughter!" }
+  - { from: iron_stove_prince, to: iron_stove_old_king, label: THREATENS_KINGDOM,
+      evidence: "everything in the kingdom shall be ruined and destroyed" }
+  - { from: iron_stove_princess, to: obj_iron_stove_prison, label: SCRAPES_OPEN,
+      evidence: "the iron gave way" }
+  - { from: iron_stove_prince, to: iron_stove_princess, label: CLAIMS_AS_BRIDE,
+      evidence: "Thou art mine, and I am thine; thou art my bride" }
+  - { from: iron_stove_prince, to: iron_stove_princess, label: IMPOSES_SPEECH_LIMIT,
+      evidence: "not to say more to her father than three words" }
+  - { from: iron_stove_princess, to: law_broken_speech_limit_exiles_released_bridegroom, label: VIOLATES,
+      evidence: "she spoke more than three words" }
+  - { from: law_broken_speech_limit_exiles_released_bridegroom, to: obj_iron_stove_prison, label: REMOVES,
+      evidence: "instantly the iron stove disappeared" }
+  - { from: law_broken_speech_limit_exiles_released_bridegroom, to: iron_stove_prince, label: EXILES,
+      evidence: "was taken far away over glass mountains and piercing swords" }
+  - { from: iron_stove_princess, to: loc_iron_stove_little_house, label: REACHES,
+      evidence: "Then she came to a little old house" }
+  - { from: iron_stove_fat_toad, to: iron_stove_princess, label: FEEDS_AND_LODGES,
+      evidence: "they gave her meat and drink, and took her to a well-made bed" }
+  - { from: iron_stove_fat_toad, to: obj_iron_stove_three_needles, label: GIVES,
+      evidence: "gave her three needles" }
+  - { from: iron_stove_fat_toad, to: obj_iron_stove_plough_wheel, label: GIVES,
+      evidence: "a plough-wheel" }
+  - { from: iron_stove_fat_toad, to: obj_iron_stove_three_nuts, label: GIVES,
+      evidence: "three nuts" }
+  - { from: obj_iron_stove_three_needles, to: loc_iron_stove_glass_mountain, label: ENABLES_CROSSING_OF,
+      evidence: "stuck the three needles first behind her feet and then before them" }
+  - { from: obj_iron_stove_plough_wheel, to: loc_iron_stove_piercing_swords, label: ENABLES_CROSSING_OF,
+      evidence: "seated herself on her plough-wheel, and rolled over them" }
+  - { from: iron_stove_princess, to: loc_iron_stove_prince_castle, label: ENTERS_AS_SCULLERY_MAID,
+      evidence: "she was taken as a scullery-maid at low wages" }
+  - { from: obj_iron_stove_three_nuts, to: obj_iron_stove_royal_garments, label: CONTAINS,
+      evidence: "there was a stately royal garment in it" }
+  - { from: iron_stove_false_bride, to: obj_iron_stove_royal_garments, label: WANTS,
+      evidence: "wanted to buy it" }
+  - { from: iron_stove_princess, to: iron_stove_false_bride, label: BARGAINS_WITH,
+      evidence: "if the bride would grant her one thing she should have it" }
+  - { from: iron_stove_false_bride, to: obj_iron_stove_sleeping_draught, label: ADMINISTERS,
+      evidence: "gave him a glass of wine in which she had poured a sleeping-draught" }
+  - { from: obj_iron_stove_sleeping_draught, to: iron_stove_prince, label: PREVENTS_HEARING,
+      evidence: "he slept so soundly that she could not waken him" }
+  - { from: iron_stove_princess, to: iron_stove_prince, label: LAMENTS_TO,
+      evidence: "I set thee free when thou wert in an iron stove in the wild forest" }
+  - { from: iron_stove_servants, to: iron_stove_prince, label: REPORTS_LAMENT,
+      evidence: "in the morning they told it to their lord" }
+  - { from: iron_stove_prince, to: obj_iron_stove_sleeping_draught, label: REJECTS,
+      evidence: "threw the sleeping-draught away" }
+  - { from: iron_stove_prince, to: iron_stove_princess, label: RECOGNIZES,
+      evidence: "Thou art the true one" }
+  - { from: iron_stove_prince, to: iron_stove_false_bride, label: STRIPS_ESCAPE_POWER_FROM,
+      evidence: "took away the false bride’s clothes" }
+  - { from: iron_stove_toad_household, to: transform_animal_human, label: UNDERGOES,
+      evidence: "the toads were all disenchanted" }
+  - { from: iron_stove_prince, to: iron_stove_princess, label: MARRIES,
+      evidence: "Then the wedding was celebrated" }

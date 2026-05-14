@@ -1,0 +1,377 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-twelve-brothers
+khm: 9
+atu: '451'
+atu_name: The Twelve Brothers
+canonical_source: ../../2-silver/canonical/the-twelve-brothers/canonical.txt
+title: The Twelve Brothers
+
+
+entities:
+
+  characters:
+
+    twelve_brothers_father_king:
+      name: The Father King (filicidal dynast)
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_violence, agency_speech]
+      speech_acts_performed: [speech_command, speech_prohibition]
+      affects: [affect_pride]
+      traits: [dynastic, daughter-preferring, secretive, filicidal]
+      evidence: |
+        "If the thirteenth child which thou art about to bring into the
+         world, is a girl, the twelve boys shall die"
+
+    twelve_brothers_mother_queen:
+      name: The Mother Queen (protector of the sons)
+      archetypes: [arc_protective_mother]
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      speech_acts_performed: [speech_prohibition]
+      affects: [affect_maternal_love, affect_grief]
+      traits: [mourning, warning-mother, nightly-prayer]
+      evidence: |
+        "And every night I will rise up and pray for you"
+
+    twelve_brothers_benjamin:
+      name: Benjamin (youngest brother, household mediator)
+      archetypes: [arc_youngest_sibling]
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human]
+      affects: [affect_loyalty]
+      traits: [youngest, weakest, home-keeper, sister-recognizer]
+      evidence: |
+        "I am Benjamin, thy youngest brother." He hides his sister and
+        secures mercy from the other brothers.
+
+    twelve_brothers_eleven_brothers:
+      name: The Eleven Elder Brothers (exiled hunters)
+      species: sp_human
+      agency_modes: [agency_violence, agency_endurance]
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human]
+      affects: [affect_anger, affect_loyalty]
+      traits: [exiled, vengeful-at-first, hunters, reconciled]
+      evidence: |
+        "We swear that we will avenge ourselves!—wheresoever we find a
+         girl, her red blood shall flow."
+
+    twelve_brothers_sister:
+      name: The Sister (star-marked silent bride)
+      archetypes: [arc_silent_bride]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      existential_states: [state_mute]
+      affects: [affect_loyalty, affect_grief]
+      traits: [golden-starred, sister-redeemer, silent-for-seven-years, falsely-accused]
+      evidence: |
+        "I know with certainty that I shall set my brothers free" —
+        she sits in a tree and neither speaks nor laughs for seven years.
+
+    twelve_brothers_ravens:
+      name: The Twelve Ravens (transformed brothers)
+      species: sp_bird
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human]
+      traits: [bird-formed, released-at-seven-year-term, rescuers-at-stake]
+      evidence: |
+        "the twelve brothers were changed into twelve ravens, and flew
+         away over the forest"
+
+    twelve_brothers_old_woman:
+      name: The Old Woman (interpreter of the flower-law)
+      archetypes: [arc_prohibition_giver]
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_prohibition]
+      traits: [sudden-appearing, law-explainer, ordeal-giver]
+      evidence: |
+        "thou must be dumb for seven years, and mayst not speak or
+         laugh"
+
+    twelve_brothers_husband_king:
+      name: The Hunting King (husband of the silent sister)
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_violence]
+      affects: [affect_love_at_first_sight, affect_grief]
+      traits: [beauty-struck, persuadable, tearful-at-execution, later-joyful]
+      evidence: |
+        "he was so charmed with her beauty that he called to ask her if
+         she would be his wife."
+
+    twelve_brothers_mother_in_law:
+      name: The Wicked Mother-in-Law (slanderer)
+      archetypes: [arc_envious_witness]
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_envy]
+      traits: [wicked, slanderous, death-demanding, punished]
+      evidence: |
+        "began to slander the young Queen" and accused her until the
+        King sentenced her to death.
+
+    twelve_brothers_greyhound:
+      name: The King's Greyhound (tree-finder)
+      species: sp_dog
+      agency_modes: [agency_animal_aid]
+      traits: [hunter-dog, finder, barking-revealer]
+      evidence: |
+        "a great greyhound which ran to the tree on which the maiden
+         was sitting, and sprang about it, whining, and barking at her."
+
+  magic_objects:
+
+    obj_twelve_coffins:
+      name: The Twelve Prepared Coffins
+      object_kind: relic
+      attributes:
+        count: 12
+        contents: shavings and little pillows
+        purpose: dynastic death-sentence for sons
+      evidence: |
+        "He caused likewise twelve coffins to be made, which were
+         already filled with shavings"
+
+    obj_red_white_flags:
+      name: The White and Blood-Red Flags
+      object_kind: token
+      attributes:
+        white: son-born; return-permitted
+        red: daughter-born; flee-or-die
+      evidence: |
+        "If I give birth to a little son, I will put up a white flag...
+         but if I bear a daughter, I will hoist a red flag"
+
+    obj_twelve_shirts:
+      name: The Twelve Brothers' Shirts
+      object_kind: garment
+      attributes:
+        count: 12
+        function: proof that the hidden brothers exist
+      evidence: |
+        "she saw twelve men's shirts among the things"
+
+    obj_twelve_lilies:
+      name: The Twelve White Lilies (students)
+      object_kind: material
+      attributes:
+        count: 12
+        effect: plucking transforms brothers into ravens
+      evidence: |
+        "There was, however, a little garden belonging to the bewitched
+         house wherein stood twelve lily flowers"
+
+    obj_execution_fire:
+      name: The Execution Fire at the Stake
+      object_kind: material
+      attributes:
+        function: threatened death from which brothers rescue sister
+      evidence: |
+        "a great fire was lighted in the courtyard in which she was to
+         be burnt"
+
+    obj_punishment_barrel:
+      name: The Barrel of Boiling Oil and Venomous Snakes
+      object_kind: weapon
+      attributes:
+        function: retributive death for the slandering mother-in-law
+      evidence: |
+        "put into a barrel filled with boiling oil and venomous snakes"
+
+  locations:
+
+    loc_castle_twelve_brothers:
+      name: The First Royal Castle
+      instance_of: loc_castle
+      evidence: |
+        "looking towards the tower here in the castle"
+
+    loc_locked_coffin_room:
+      name: The Locked Coffin Room
+      threshold_type: threshold_doorway
+      attributes:
+        contains: [obj_twelve_coffins]
+      evidence: |
+        "he had them taken into a locked-up room, and then he gave the
+         Queen the key of it"
+
+    loc_forest_twelve_brothers:
+      name: The Great Forest of Exile
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "Go forth into the forest with thy eleven brothers"
+
+    loc_bewitched_hut:
+      name: The Little Bewitched Hut
+      instance_of: loc_house
+      attributes:
+        location: darkest midst of the forest
+      evidence: |
+        "they found a little bewitched hut, which was standing empty"
+
+    loc_garden_twelve_brothers:
+      name: The Garden of the Twelve Lilies
+      instance_of: loc_garden
+      attributes:
+        contains: [obj_twelve_lilies]
+      evidence: |
+        "a little garden belonging to the bewitched house wherein stood
+         twelve lily flowers"
+
+    loc_tree_silence:
+      name: The High Tree of Seven-Year Silence
+      instance_of: loc_forest
+      evidence: |
+        "went and sought a high tree and seated herself in it and span,
+         and neither spoke nor laughed."
+
+    loc_second_castle_courtyard:
+      name: The Courtyard of the Execution Fire
+      instance_of: loc_castle
+      evidence: |
+        "a great fire was lighted in the courtyard in which she was to
+         be burnt"
+
+
+classifications:
+
+  world_laws:
+    - law_silent_endurance_redeems
+    - law_curse_requires_counter_condition
+
+  moral_regimes:
+    - moral_silent_endurance
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_speech
+    - agency_social_rank
+
+  affects_driving:
+    - affect_maternal_love
+    - affect_loyalty
+    - affect_anger
+    - affect_grief
+
+  symbol_numbers:
+    - num_12   # twelve sons, coffins, shirts, lilies, ravens
+    - num_13   # thirteenth child displaces the twelve sons
+    - num_7    # seven years of silence
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_interdiction, order: 1, actor: twelve_brothers_father_king,
+      scene: "king's daughter-birth condition threatens the twelve sons with death" }
+  - { function: func_absentation, order: 2, actor: twelve_brothers_benjamin,
+      scene: "brothers flee into the forest after the blood-red flag is raised" }
+  - { function: func_villainy, order: 3, actor: twelve_brothers_eleven_brothers,
+      scene: "brothers swear any maiden they meet shall die" }
+  - { function: func_departure, order: 4, actor: twelve_brothers_sister,
+      scene: "sister takes the twelve shirts and seeks her brothers in the forest" }
+  - { function: func_recognition, order: 5, actor: twelve_brothers_benjamin,
+      scene: "Benjamin recognises sister by her quest and the shirts" }
+  - { function: func_liquidation, order: 6, actor: twelve_brothers_benjamin,
+      scene: "brothers revoke the death-vow and live in harmony with sister" }
+  - { function: func_villainy, order: 7, actor: twelve_brothers_sister,
+      scene: "sister plucks twelve lilies; brothers become twelve ravens" }
+  - { function: func_difficult_task, order: 8, actor: twelve_brothers_old_woman,
+      scene: "old woman sets seven years of no speech and no laughter as release condition" }
+  - { function: func_difficult_task, order: 9, actor: twelve_brothers_sister,
+      scene: "sister endures silence through tree-dwelling, marriage, and slander" }
+  - { function: func_branding, order: 10, actor: twelve_brothers_mother_in_law,
+      scene: "mother-in-law slanders silent queen until king sentences her to death" }
+  - { function: func_rescue, order: 11, actor: twelve_brothers_ravens,
+      scene: "seven years expire; ravens return as brothers and free sister from the fire" }
+  - { function: func_recognition, order: 12, actor: twelve_brothers_sister,
+      scene: "sister speaks and explains her innocence and silence" }
+  - { function: func_punishment, order: 13, actor: twelve_brothers_mother_in_law,
+      scene: "slanderer dies in barrel of boiling oil and venomous snakes" }
+
+
+edges:
+
+  # Dynastic threat and warning
+  - { from: twelve_brothers_father_king, to: twelve_brothers_benjamin, label: THREATENS_DEATH,
+      evidence: "if I bring a little girl into the world, you are all to be killed and buried in them." }
+  - { from: twelve_brothers_father_king, to: twelve_brothers_eleven_brothers, label: THREATENS_DEATH,
+      evidence: "if I bring a little girl into the world, you are all to be killed and buried in them." }
+  - { from: twelve_brothers_father_king, to: obj_twelve_coffins, label: COMMISSIONS,
+      evidence: "He caused likewise twelve coffins to be made" }
+  - { from: twelve_brothers_mother_queen, to: twelve_brothers_benjamin, label: REVEALS_TO,
+      evidence: "she went and unlocked the room, and showed him the twelve coffins" }
+  - { from: twelve_brothers_mother_queen, to: obj_red_white_flags, label: USES,
+      evidence: "if I bear a daughter, I will hoist a red flag" }
+  - { from: obj_red_white_flags, to: twelve_brothers_benjamin, label: WARNS,
+      evidence: "the blood-red flag which announced that they were all to die." }
+
+  # Exile and anti-girl oath
+  - { from: twelve_brothers_benjamin, to: loc_forest_twelve_brothers, label: FLEES_TO,
+      evidence: "Weep not, dear mother, we will save ourselves, and go hence." }
+  - { from: twelve_brothers_eleven_brothers, to: loc_forest_twelve_brothers, label: FLEES_TO,
+      evidence: "they went forth into the forest." }
+  - { from: twelve_brothers_eleven_brothers, to: twelve_brothers_sister, label: VOWS_TO_KILL,
+      evidence: "wheresoever we find a girl, her red blood shall flow." }
+  - { from: twelve_brothers_benjamin, to: loc_bewitched_hut, label: KEEPS_HOUSE_AT,
+      evidence: "thou Benjamin, who art the youngest and weakest, thou shalt stay at home and keep house" }
+
+  # Sister seeks and reunites the brothers
+  - { from: twelve_brothers_sister, to: obj_twelve_shirts, label: CARRIES,
+      evidence: "So she took the twelve shirts and went forth" }
+  - { from: twelve_brothers_sister, to: loc_bewitched_hut, label: VISITS,
+      evidence: "in the evening she came to the bewitched hut." }
+  - { from: twelve_brothers_benjamin, to: twelve_brothers_sister, label: RECOGNIZES,
+      evidence: "Then Benjamin saw that she was his sister" }
+  - { from: twelve_brothers_benjamin, to: twelve_brothers_eleven_brothers, label: NEGOTIATES_MERCY_FROM,
+      evidence: "promise me that the first maiden who meets us shall not be killed." }
+  - { from: twelve_brothers_eleven_brothers, to: twelve_brothers_sister, label: ACCEPTS_AS_KIN,
+      evidence: "they were all rejoiced, and fell on her neck, and kissed and loved her" }
+
+  # Flower transformation and silent condition
+  - { from: twelve_brothers_sister, to: obj_twelve_lilies, label: PLUCKS,
+      evidence: "plucked the twelve flowers, and thought she would present each brother with one" }
+  - { from: obj_twelve_lilies, to: twelve_brothers_ravens, label: TRANSFORMS_INTO,
+      evidence: "the twelve brothers were changed into twelve ravens" }
+  - { from: twelve_brothers_benjamin, to: twelve_brothers_ravens, label: TRANSFORMS_INTO,
+      evidence: "the twelve brothers were changed into twelve ravens" }
+  - { from: twelve_brothers_eleven_brothers, to: twelve_brothers_ravens, label: TRANSFORMS_INTO,
+      evidence: "the twelve brothers were changed into twelve ravens" }
+  - { from: twelve_brothers_old_woman, to: twelve_brothers_sister, label: PROHIBITS,
+      attributes: { term: seven_years, forbidden: [speech, laughter] },
+      evidence: "thou must be dumb for seven years, and mayst not speak or laugh" }
+  - { from: twelve_brothers_sister, to: loc_tree_silence, label: ENDURES_AT,
+      evidence: "seated herself in it and span, and neither spoke nor laughed." }
+
+  # Marriage and slander
+  - { from: twelve_brothers_greyhound, to: twelve_brothers_husband_king, label: REVEALS_TO,
+      evidence: "sprang about it, whining, and barking at her. Then the King came by" }
+  - { from: twelve_brothers_husband_king, to: twelve_brothers_sister, label: MARRIES,
+      evidence: "Then the wedding was solemnized with great magnificence and rejoicing" }
+  - { from: twelve_brothers_mother_in_law, to: twelve_brothers_sister, label: SLANDERS,
+      evidence: "began to slander the young Queen" }
+  - { from: twelve_brothers_mother_in_law, to: twelve_brothers_husband_king, label: DECEIVES,
+      evidence: "the old woman urged this so long, and accused her of so many evil things" }
+  - { from: twelve_brothers_husband_king, to: twelve_brothers_sister, label: SENTENCES_TO_DEATH,
+      evidence: "at last the King let himself be persuaded and sentenced her to death." }
+
+  # Rescue, recognition, punishment
+  - { from: twelve_brothers_ravens, to: twelve_brothers_sister, label: RESCUES,
+      evidence: "They tore the fire asunder, extinguished the flames, set their dear sister free" }
+  - { from: twelve_brothers_ravens, to: twelve_brothers_benjamin, label: RESTORES_TO_HUMAN,
+      evidence: "when they touched the earth they were her twelve brothers" }
+  - { from: twelve_brothers_ravens, to: twelve_brothers_eleven_brothers, label: RESTORES_TO_HUMAN,
+      evidence: "when they touched the earth they were her twelve brothers" }
+  - { from: twelve_brothers_sister, to: twelve_brothers_husband_king, label: REVEALS_TO,
+      evidence: "she told the King why she had been dumb, and had never laughed." }
+  - { from: twelve_brothers_husband_king, to: twelve_brothers_mother_in_law, label: PUNISHES,
+      attributes: { instrument: obj_punishment_barrel },
+      evidence: "put into a barrel filled with boiling oil and venomous snakes, and died an evil death." }

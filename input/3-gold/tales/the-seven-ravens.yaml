@@ -1,0 +1,348 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-seven-ravens
+khm: 25
+atu: '451'
+atu_name: The Brothers Who Were Turned into Birds
+canonical_source: ../../2-silver/canonical/the-seven-ravens/canonical.txt
+title: The Seven Ravens
+
+
+entities:
+
+  characters:
+
+    seven_ravens_father:
+      name: The Impatient Father
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_curse]
+      affects: [affect_longing, affect_fear, affect_anger, affect_grief]
+      traits: [daughter-wisher, baptism-anxious, anger-curser, regretful-parent]
+      evidence: |
+        "in his anger cried, 'I wish the boys were all turned into
+        ravens.'"
+
+    seven_ravens_mother:
+      name: The Mother
+      species: sp_human
+      affects: [affect_maternal_love, affect_grief]
+      traits: [daughter-bearing, son-losing, secret-keeping]
+      evidence: |
+        "The parents could not recall the curse, and however sad they
+        were at the loss of their seven sons"
+
+    seven_ravens_sister:
+      name: The Little Sister
+      archetypes: [arc_youngest_sibling]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_violence]
+      affects: [affect_loyalty, affect_grief, affect_fear]
+      traits: [sickly-child, beautiful-grown, secret-hearer, world-traveller, finger-sacrificer, brother-redeemer]
+      evidence: |
+        "she must deliver her brothers. She had no rest or peace until
+        she set out secretly"
+
+    seven_ravens_brothers_human:
+      name: The Seven Brothers
+      species: sp_human
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_curse, transform_animal_human]
+      affects: [affect_fear]
+      traits: [water-fetchers, jug-losers, home-fearful, cursed-away]
+      evidence: |
+        "the jug fell into the well. There they stood and did not know
+        what to do, and none of them dared to go home."
+
+    seven_ravens_raven_form:
+      name: The Seven Coal-Black Ravens
+      species: sp_bird
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_animal_human]
+      traits: [coal-black, glass-mountain-dwellers, ring-recognizers, restored-brothers]
+      evidence: |
+        "saw seven coal-black ravens flying away."
+
+    seven_ravens_sun:
+      name: The Sun
+      being_type: being_celestial
+      agency_modes: [agency_violence]
+      traits: [too-hot, terrible, child-devouring]
+      evidence: |
+        "the sun... was too hot and terrible, and devoured little
+        children."
+
+    seven_ravens_moon:
+      name: The Moon
+      being_type: being_celestial
+      agency_modes: [agency_speech, agency_violence]
+      speech_acts_performed: [speech_boast]
+      traits: [too-cold, awful, malicious, human-flesh-smelling]
+      evidence: |
+        "it said, 'I smell, I smell the flesh of men.'"
+
+    seven_ravens_stars:
+      name: The Stars
+      archetypes: [arc_supernatural_donor]
+      being_type: being_celestial
+      agency_modes: [agency_speech]
+      traits: [kind, good, chair-seated, cosmic-hosts]
+      evidence: |
+        "came to the stars, which were kind and good to her, and each
+        of them sat on its own particular little chair."
+
+    seven_ravens_morning_star:
+      name: The Morning Star
+      archetypes: [arc_supernatural_donor]
+      being_type: being_celestial
+      agency_modes: [agency_speech]
+      traits: [key-giver, glass-mountain-guide]
+      evidence: |
+        "the morning star arose, and gave her the drumstick of a
+        chicken"
+
+    seven_ravens_dwarf:
+      name: The Glass-Mountain Dwarf
+      being_type: being_dwarf
+      agency_modes: [agency_speech, agency_domestic_labor]
+      traits: [door-greeter, raven-servant, dinner-bearer]
+      evidence: |
+        "a little dwarf came to meet her"
+
+  magic_objects:
+
+    obj_seven_ravens_baptism_jug:
+      name: The Baptism Water Jug
+      object_kind: tool
+      attributes:
+        function: vessel whose loss delays baptism and triggers the father's curse
+      evidence: |
+        "as each of them wanted to be first to fill it, the jug fell
+        into the well."
+
+    obj_seven_ravens_family_ring:
+      name: The Parents' Ring
+      object_kind: token
+      attributes:
+        function: recognition token that reveals the sister's presence
+      evidence: |
+        "a little ring belonging to her parents as a keepsake"
+
+    obj_seven_ravens_travel_bread:
+      name: The Sister's Loaf of Bread
+      object_kind: food
+      attributes:
+        function: provision against hunger
+      evidence: |
+        "a loaf of bread against hunger"
+
+    obj_seven_ravens_travel_pitcher:
+      name: The Sister's Little Pitcher of Water
+      object_kind: tool
+      attributes:
+        function: provision against thirst
+      evidence: |
+        "a little pitcher of water against thirst"
+
+    obj_seven_ravens_little_chair:
+      name: The Sister's Little Chair
+      object_kind: tool
+      attributes:
+        function: provision against weariness
+      evidence: |
+        "a little chair as a provision against weariness."
+
+    obj_seven_ravens_drumstick_key:
+      name: The Morning Star's Chicken Drumstick
+      object_kind: tool
+      attributes:
+        function: key to the Glass mountain before it is lost
+      evidence: |
+        "If you thou hast not that drumstick thou canst not open the
+        Glass mountain"
+
+    obj_seven_ravens_severed_finger:
+      name: The Sister's Severed Little Finger
+      object_kind: relic
+      attributes:
+        function: bodily substitute key to the Glass mountain
+      evidence: |
+        "cut off one of her little fingers, put it in the door, and
+        succeeded in opening it."
+
+    obj_seven_ravens_plates_glasses:
+      name: The Seven Little Plates and Glasses
+      object_kind: tool
+      attributes:
+        count: 7
+        function: dinner vessels through which the sister deposits the recognition ring
+      evidence: |
+        "on seven little plates, and in seven little glasses"
+
+  locations:
+
+    loc_seven_ravens_family_house:
+      name: The Parents' House
+      instance_of: loc_house
+      evidence: |
+        "none of them dared to go home."
+
+    loc_seven_ravens_spring_well:
+      name: The Baptism Spring and Well
+      instance_of: loc_well
+      evidence: |
+        "sent one of the boys in haste to the spring to fetch water...
+        the jug fell into the well."
+
+    loc_seven_ravens_end_world:
+      name: The End of the World
+      evidence: |
+        "far, far to the very end of the world."
+
+    loc_seven_ravens_sun_station:
+      name: The Station of the Sun
+      evidence: |
+        "Then she came to the sun"
+
+    loc_seven_ravens_moon_station:
+      name: The Station of the Moon
+      evidence: |
+        "she ran to the moon"
+
+    loc_seven_ravens_stars_station:
+      name: The Station of the Stars
+      evidence: |
+        "came to the stars"
+
+    loc_seven_ravens_glass_mountain:
+      name: The Glass Mountain
+      instance_of: loc_mountain
+      threshold_type: threshold_doorway
+      evidence: |
+        "in the Glass mountain are thy brothers."
+
+    loc_seven_ravens_raven_hall:
+      name: The Ravens' Hall Inside the Glass Mountain
+      instance_of: loc_house
+      evidence: |
+        "The lord ravens are not at home, but if you will wait here
+        until they come, step in."
+
+
+classifications:
+
+  world_laws:
+    - law_curse_requires_counter_condition
+    - law_body_sacrifice_opens_threshold
+
+  moral_regimes:
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_endurance
+    - agency_social_rank
+    - agency_violence
+
+  affects_driving:
+    - affect_longing
+    - affect_fear
+    - affect_anger
+    - affect_grief
+    - affect_loyalty
+
+  symbol_numbers:
+    - num_7   # seven brothers, ravens, plates, and glasses
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_lack, order: 1, actor: seven_ravens_father,
+      scene: "father has seven sons but longs for a daughter" }
+  - { function: func_mediation, order: 2, actor: seven_ravens_brothers_human,
+      scene: "boys are sent for baptism water while the sickly daughter may die unbaptized" }
+  - { function: func_villainy, order: 3, actor: seven_ravens_father,
+      scene: "angry curse transforms the seven sons into ravens" }
+  - { function: func_absentation, order: 4, actor: seven_ravens_raven_form,
+      scene: "seven coal-black ravens fly away and the family cannot recall the curse" }
+  - { function: func_mediation, order: 5, actor: seven_ravens_sister,
+      scene: "sister learns she is blamed for her brothers' misfortune" }
+  - { function: func_departure, order: 6, actor: seven_ravens_sister,
+      scene: "sister secretly sets out with ring, bread, pitcher, and chair" }
+  - { function: func_donor_test, order: 7, actor: seven_ravens_sun,
+      scene: "sun and moon are dangerous cosmic encounters; stars prove kind" }
+  - { function: func_magical_agent, order: 8, actor: seven_ravens_morning_star,
+      scene: "morning star gives the drumstick needed to open the Glass mountain" }
+  - { function: func_difficult_task, order: 9, actor: seven_ravens_sister,
+      scene: "lost drumstick forces her to cut off a finger and open the mountain door" }
+  - { function: func_recognition, order: 10, actor: seven_ravens_raven_form,
+      scene: "ring in the seventh glass reveals that their sister is present" }
+  - { function: func_liquidation, order: 11, actor: seven_ravens_sister,
+      scene: "sister comes forth and all ravens are restored to human form" }
+  - { function: func_return, order: 12, actor: seven_ravens_brothers_human,
+      scene: "siblings embrace, kiss, and go joyfully home" }
+
+
+edges:
+
+  # Curse and loss
+  - { from: seven_ravens_father, to: seven_ravens_brothers_human, label: SENDS_FOR_BAPTISM_WATER,
+      evidence: "sent one of the boys in haste to the spring to fetch water for the baptism." }
+  - { from: seven_ravens_brothers_human, to: obj_seven_ravens_baptism_jug, label: DROPS,
+      evidence: "the jug fell into the well." }
+  - { from: obj_seven_ravens_baptism_jug, to: loc_seven_ravens_spring_well, label: FALLS_INTO,
+      evidence: "fell into the well." }
+  - { from: seven_ravens_father, to: seven_ravens_brothers_human, label: CURSES,
+      evidence: "I wish the boys were all turned into ravens." }
+  - { from: seven_ravens_brothers_human, to: seven_ravens_raven_form, label: TRANSFORMS_INTO,
+      evidence: "saw seven coal-black ravens flying away." }
+  - { from: speech_curse, to: seven_ravens_raven_form, label: CAUSES_TRANSFORMATION,
+      evidence: "Hardly was the word spoken before he heard a whirring of wings" }
+
+  # Sister's departure and cosmic road
+  - { from: seven_ravens_sister, to: seven_ravens_brothers_human, label: SEEKS_TO_REDEEM,
+      evidence: "thought she must deliver her brothers." }
+  - { from: seven_ravens_sister, to: obj_seven_ravens_family_ring, label: CARRIES,
+      evidence: "a little ring belonging to her parents as a keepsake" }
+  - { from: seven_ravens_sister, to: obj_seven_ravens_travel_bread, label: CARRIES,
+      evidence: "a loaf of bread against hunger" }
+  - { from: seven_ravens_sister, to: obj_seven_ravens_travel_pitcher, label: CARRIES,
+      evidence: "a little pitcher of water against thirst" }
+  - { from: seven_ravens_sister, to: obj_seven_ravens_little_chair, label: CARRIES,
+      evidence: "a little chair as a provision against weariness." }
+  - { from: seven_ravens_sun, to: seven_ravens_sister, label: THREATENS,
+      evidence: "too hot and terrible, and devoured little children." }
+  - { from: seven_ravens_moon, to: seven_ravens_sister, label: THREATENS,
+      evidence: "I smell, I smell the flesh of men." }
+  - { from: seven_ravens_stars, to: seven_ravens_sister, label: SHELTERS,
+      evidence: "the stars... were kind and good to her" }
+  - { from: seven_ravens_morning_star, to: obj_seven_ravens_drumstick_key, label: GIVES,
+      evidence: "gave her the drumstick of a chicken" }
+
+  # Glass mountain entry and recognition
+  - { from: obj_seven_ravens_drumstick_key, to: loc_seven_ravens_glass_mountain, label: OPENS,
+      evidence: "thou hast not that drumstick thou canst not open the Glass mountain" }
+  - { from: seven_ravens_sister, to: obj_seven_ravens_drumstick_key, label: LOSES,
+      evidence: "it was empty, and she had lost the good star's present." }
+  - { from: seven_ravens_sister, to: obj_seven_ravens_severed_finger, label: CUTS_OFF,
+      evidence: "cut off one of her little fingers" }
+  - { from: obj_seven_ravens_severed_finger, to: loc_seven_ravens_glass_mountain, label: OPENS,
+      evidence: "put it in the door, and succeeded in opening it." }
+  - { from: law_body_sacrifice_opens_threshold, to: obj_seven_ravens_severed_finger, label: GOVERNS,
+      evidence: "put it in the door, and succeeded in opening it." }
+  - { from: seven_ravens_dwarf, to: seven_ravens_sister, label: RECEIVES,
+      evidence: "My child, what are you looking for?" }
+  - { from: seven_ravens_dwarf, to: obj_seven_ravens_plates_glasses, label: PREPARES,
+      evidence: "carried the ravens' dinner in, on seven little plates, and in seven little glasses" }
+  - { from: seven_ravens_sister, to: obj_seven_ravens_family_ring, label: DROPS_INTO_GLASS,
+      evidence: "in the last little glass she dropped the ring" }
+  - { from: obj_seven_ravens_family_ring, to: seven_ravens_raven_form, label: REVEALS_KINSHIP_TO,
+      evidence: "saw that it was a ring belonging to his father and mother" }
+  - { from: seven_ravens_raven_form, to: seven_ravens_sister, label: WISHES_FOR,
+      evidence: "God grant that our sister may be here, and then we shall be free." }
+  - { from: seven_ravens_sister, to: seven_ravens_raven_form, label: REDEEMS,
+      evidence: "she came forth, and on this all the ravens were restored to their human form again." }
+  - { from: seven_ravens_raven_form, to: seven_ravens_brothers_human, label: TRANSFORMS_INTO,
+      evidence: "all the ravens were restored to their human form again." }

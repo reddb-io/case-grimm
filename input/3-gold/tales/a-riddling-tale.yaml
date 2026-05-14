@@ -1,0 +1,201 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: a-riddling-tale
+khm: 160
+atu: "407A"
+atu_name: A Riddling Tale
+canonical_source: ../../2-silver/canonical/a-riddling-tale/canonical.txt
+title: A Riddling Tale
+
+
+entities:
+
+  characters:
+
+    riddling_flower_wife:
+      name: The Flower-Changed Wife
+      species: sp_human
+      existential_states: [state_transformed]
+      transformations: [transform_plant_human]
+      agency_modes: [agency_speech, agency_endurance]
+      speech_acts_performed: [speech_request]
+      affects: [affect_love]
+      traits: [flower-wife, night-home-returner, dewless-flower, self-release-instructor]
+      evidence: |
+        one of them was allowed to be in her own home at night
+
+    riddling_husband:
+      name: The Dew-Sign Husband
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_cunning]
+      affects: [affect_love]
+      traits: [husband, flower-gatherer, riddle-solver, dew-sign-reader]
+      evidence: |
+        If thou wilt come this afternoon and gather me
+
+    riddling_flower_companions:
+      name: The Field-Bound Flower Women
+      species: sp_human
+      existential_states: [state_transformed]
+      transformations: [transform_plant_human]
+      agency_modes: [agency_endurance]
+      traits: [flower-transformed-women, field-bound, dew-wet-companions]
+      evidence: |
+        Three women were changed into flowers
+
+  magic_objects:
+
+    obj_riddling_dew:
+      name: The Field Dew
+      object_kind: material
+      attributes:
+        function: marks the flowers that remained in the field and distinguishes the wife by absence
+      evidence: |
+        no dew fell on her as it did on the others
+
+    obj_riddling_identical_flowers:
+      name: The Identical Enchanted Flowers
+      object_kind: creature_object
+      attributes:
+        function: conceal transformed women in matching flower-form until the dew sign reveals one
+      evidence: |
+        the flowers were exactly alike, and without any difference
+
+  locations:
+
+    loc_riddling_field:
+      name: The Flower Field
+      instance_of: loc_field
+      evidence: |
+        flowers which grew in the field
+
+    loc_riddling_home:
+      name: The Wife's Night Home
+      instance_of: loc_house
+      evidence: |
+        in her own home at night
+
+
+classifications:
+
+  world_laws:
+    - law_dewless_flower_reveals_night_homecoming
+
+  moral_regimes:
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_object_mediation
+    - agency_endurance
+
+  affects_driving:
+    - affect_love
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types: []
+
+
+propp:
+
+  - function: func_transformation
+    order: 1
+    actor: riddling_flower_companions
+    scene: Three women are changed into flowers growing in the field.
+    evidence: |
+      Three women were changed into flowers which grew in the field
+
+  - function: func_exception
+    order: 2
+    actor: riddling_flower_wife
+    scene: One flower-woman is permitted to spend nights in her own home.
+    evidence: |
+      one of them was allowed to be in her own home at night
+
+  - function: func_request
+    order: 3
+    actor: riddling_flower_wife
+    scene: The wife tells her husband to gather her in the afternoon so she can stay with him.
+    evidence: |
+      If thou wilt come this afternoon and gather me
+
+  - function: func_riddle
+    order: 4
+    actor: obj_riddling_identical_flowers
+    scene: The tale asks how the husband could know her among identical flowers.
+    evidence: |
+      how did her husband know her
+
+  - function: func_recognition
+    order: 5
+    actor: riddling_husband
+    scene: The husband recognises the wife because no dew fell on the flower that spent the night at home.
+    evidence: |
+      no dew fell on her as it did on the others
+
+  - function: func_release
+    order: 6
+    actor: riddling_husband
+    beneficiary: riddling_flower_wife
+    scene: Gathering the correct flower sets the wife free to remain with him.
+    evidence: |
+      I shall be set free and henceforth stay with thee
+
+
+edges:
+
+  - from: riddling_flower_companions
+    label: TRANSFORMED_INTO
+    to: obj_riddling_identical_flowers
+    evidence: |
+      Three women were changed into flowers
+
+  - from: riddling_flower_wife
+    label: RETURNS_HOME_AT_NIGHT
+    to: loc_riddling_home
+    evidence: |
+      allowed to be in her own home at night
+
+  - from: riddling_flower_wife
+    label: RETURNS_TO_FIELD_AT_DAYBREAK
+    to: loc_riddling_field
+    evidence: |
+      forced to go back to her companions in the field
+
+  - from: riddling_flower_wife
+    label: INSTRUCTS
+    to: riddling_husband
+    evidence: |
+      If thou wilt come this afternoon and gather me
+
+  - from: riddling_husband
+    label: GATHERS_AND_RELEASES
+    to: riddling_flower_wife
+    evidence: |
+      And he did so.
+
+  - from: obj_riddling_identical_flowers
+    label: CONCEAL_IDENTITY_BY_SAMENESS
+    to: riddling_flower_wife
+    evidence: |
+      the flowers were exactly alike, and without any difference
+
+  - from: obj_riddling_dew
+    label: FALLS_ON
+    to: riddling_flower_companions
+    evidence: |
+      as it did on the others
+
+  - from: obj_riddling_dew
+    label: ABSENT_FROM
+    to: riddling_flower_wife
+    evidence: |
+      no dew fell on her
+
+  - from: law_dewless_flower_reveals_night_homecoming
+    label: REVEALS
+    to: riddling_flower_wife
+    evidence: |
+      by this her husband knew her

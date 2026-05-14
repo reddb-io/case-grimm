@@ -1,0 +1,489 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-donkey
+khm: 144
+atu: '430'
+atu_name: The Donkey / Animal Bridegroom with Removable Skin
+canonical_source: ../../2-silver/canonical/the-donkey/canonical.txt
+title: The Donkey
+
+
+entities:
+
+  characters:
+
+    donkey_birth_king:
+      name: The Donkey Prince's Father King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_command, speech_promise]
+      affects: [affect_love, affect_joy]
+      traits: [rich-childless-king, divine-child-acceptor, donkey-heir-defender, throne-promiser]
+      evidence: |
+        since God has sent him he shall be my son and heir
+
+    donkey_birth_queen:
+      name: The Donkey Prince's Mother Queen
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_wish, speech_command]
+      affects: [affect_grief, affect_disgust, affect_shame]
+      traits: [childless-queen, barren-field-lamenter, donkey-child-rejecter, drowning-demanding-mother]
+      evidence: |
+        I am like a field on which nothing grows
+
+    donkey_prince:
+      name: The Donkey Prince
+      archetypes: [arc_hybrid_outcast_bridegroom]
+      species: sp_donkey
+      agency_modes: [agency_music, agency_speech, agency_social_rank, agency_endurance, agency_object_mediation]
+      existential_states: [state_transformed, state_hidden_identity]
+      transformations: [transform_animal_human]
+      speech_acts_performed: [speech_request, speech_command]
+      affects: [affect_shame, affect_grief, affect_love, affect_joy, affect_fear]
+      traits: [royal-donkey-child, lute-student, self-recognizing-outcast, gate-musician, noble-rank-claimer, hidden-human-bridegroom, skin-shedding-youth]
+      evidence: |
+        did not look like a human child, but was a little donkey
+
+    donkey_human_youth:
+      name: The Donkey Prince in Human Form
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      existential_states: [state_hidden_identity]
+      transformations: [transform_animal_human]
+      affects: [affect_fear, affect_grief, affect_joy]
+      traits: [handsome-royal-youth, exposed-true-form, reluctant-to-remain-unhidden, double-kingdom-heir]
+      evidence: |
+        stood there in the form of a handsome royal youth
+
+    donkey_musician:
+      name: The Celebrated Musician
+      species: sp_human
+      agency_modes: [agency_music, agency_speech]
+      speech_acts_performed: [speech_request]
+      traits: [lute-master, reluctant-teacher, animal-student-instructor]
+      evidence: |
+        he went to a celebrated musician and said
+
+    donkey_faithful_companion:
+      name: The Donkey's Faithful Companion
+      archetypes: [arc_faithful_servant]
+      species: sp_human
+      agency_modes: [agency_endurance]
+      traits: [wide-world-companion, loyal-traveller]
+      evidence: |
+        only took with him one faithful companion
+
+    donkey_old_king:
+      name: The Old King of the Second Kingdom
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning, agency_object_mediation, agency_violence]
+      speech_acts_performed: [speech_command, speech_request, speech_promise]
+      affects: [affect_love, affect_joy]
+      traits: [courtly-host, amused-animal-guest-receiver, bride-giver, hidden-witness-user, moonlight-watcher, skin-burner, kingdom-giver]
+      evidence: |
+        I will now give thee half my kingdom
+
+    donkey_princess:
+      name: The Old King's Daughter
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_love, affect_joy]
+      traits: [only-daughter, beautiful-princess, animal-bridegroom-wife, hidden-form-beloved]
+      evidence: |
+        I love him as well as if he were the handsomest in the world
+
+    donkey_doorkeeper:
+      name: The Door-Keeper
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_joy]
+      traits: [gate-witness, lute-playing-donkey-reporter]
+      evidence: |
+        Outside by the gate sits a young donkey which plays the lute
+
+    donkey_hidden_servant:
+      name: The Hidden Servant
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech]
+      speech_acts_performed: [speech_testimony, speech_command]
+      traits: [bedchamber-spy, revelation-witness, skin-burning-adviser]
+      evidence: |
+        ordered a servant to hide himself there
+
+    donkey_court:
+      name: The Laughing Court
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      affects: [affect_joy]
+      traits: [laughing-courtiers, rank-testing-witnesses]
+      evidence: |
+        every one began to laugh at the lute-player
+
+  magic_objects:
+
+    obj_donkey_lute:
+      name: The Donkey's Lute
+      instance_of: obj_lute
+      object_kind: instrument
+      attributes:
+        function: refined musical instrument that opens the gate and legitimates the donkey before court
+      evidence: |
+        took his lute and played it in the most delightful manner
+
+    obj_donkey_ass_skin:
+      name: The Donkey Prince's Ass-Skin
+      instance_of: obj_cast_off_animal_skin
+      object_kind: garment
+      attributes:
+        function: removable animal exterior burned so the hidden human form remains visible
+      evidence: |
+        suddenly threw off his ass’s skin
+
+    obj_donkey_mirror_well_water:
+      name: The Mirror-Clear Well Water
+      object_kind: material
+      attributes:
+        function: reflective water that makes the prince perceive his donkey form as social shame
+      evidence: |
+        in the mirror-clear water saw his donkey’s form
+
+    obj_donkey_skin_fire:
+      name: The Great Fire Outside
+      object_kind: material
+      attributes:
+        function: consumes the ass-skin until return to donkey form is impossible
+      evidence: |
+        had a great fire lighted outside, and threw the skin into it
+
+  locations:
+
+    loc_donkey_birth_castle:
+      name: The Birth Kingdom's Royal House
+      instance_of: loc_castle
+      evidence: |
+        there lived a King and a Queen, who were rich
+
+    loc_donkey_well:
+      name: The Mirror-Clear Well
+      instance_of: loc_well
+      threshold_type: threshold_well
+      evidence: |
+        came to a well, he looked into it
+
+    loc_donkey_wide_world_road:
+      name: The Wide-World Road
+      instance_of: loc_road
+      evidence: |
+        went out into the wide world
+
+    loc_donkey_old_king_gate:
+      name: The Gate of the Old King's Kingdom
+      instance_of: loc_gate
+      threshold_type: threshold_gate
+      evidence: |
+        knocked at the gate, and cried
+
+    loc_donkey_old_king_court:
+      name: The Old King's Court
+      instance_of: loc_castle
+      evidence: |
+        When, however, a donkey came in, every one began to laugh
+
+    loc_donkey_wedding_bedroom:
+      name: The Wedding Bed-Room
+      instance_of: loc_bedchamber
+      threshold_type: threshold_doorway
+      evidence: |
+        the bride and bridegroom were led into their bed-room
+
+    loc_donkey_outside_fire:
+      name: The Outside Fire-Place
+      instance_of: loc_courtyard
+      evidence: |
+        had a great fire lighted outside
+
+
+classifications:
+
+  world_laws:
+    - law_music_attracts
+    - law_burned_animal_skin_releases_human_form
+
+  moral_regimes:
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_music
+    - agency_speech
+    - agency_social_rank
+    - agency_object_mediation
+    - agency_cunning
+
+  affects_driving:
+    - affect_grief
+    - affect_disgust
+    - affect_shame
+    - affect_love
+    - affect_joy
+    - affect_fear
+
+  symbol_numbers:
+    - num_1
+
+  threshold_types:
+    - threshold_well
+    - threshold_gate
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: donkey_birth_queen
+    scene: Royal wealth lacks continuity because the King and Queen have no child.
+    evidence: |
+      had everything they wanted, but no children
+
+  - function: func_wish
+    order: 2
+    actor: donkey_birth_queen
+    beneficiary: donkey_prince
+    scene: The queen's child-wish is granted, but the child arrives as a donkey.
+    evidence: |
+      God gave her her wish
+
+  - function: func_recognition
+    order: 3
+    actor: donkey_birth_king
+    beneficiary: donkey_prince
+    scene: The father recognizes the donkey-child as divinely sent son and heir.
+    evidence: |
+      since God has sent him he shall be my son and heir
+
+  - function: func_acquisition
+    order: 4
+    actor: donkey_prince
+    scene: The donkey masters the lute despite an unsuitable animal body.
+    evidence: |
+      at last learnt to do it as well as the master himself
+
+  - function: func_departure
+    order: 5
+    actor: donkey_prince
+    scene: Reflection in the well turns bodily self-knowledge into exile.
+    evidence: |
+      saw his donkey’s form. He was so distressed about it, that he went out into the wide world
+
+  - function: func_mediation
+    order: 6
+    actor: donkey_prince
+    scene: Lute music at the gate makes the second court admit the uncanny guest.
+    evidence: |
+      played it in the most delightful manner with his two fore-feet
+
+  - function: func_claim
+    order: 7
+    actor: donkey_prince
+    scene: The donkey refuses servant and warrior seating, claiming noble proximity to the king.
+    evidence: |
+      I am no common stable-ass, I am a noble one
+
+  - function: func_wedding
+    order: 8
+    actor: donkey_prince
+    beneficiary: donkey_princess
+    scene: The old king offers his daughter, and the donkey receives the desired marriage.
+    evidence: |
+      Wilt thou have my pretty daughter to wife?
+
+  - function: func_exposure
+    order: 9
+    actor: donkey_hidden_servant
+    scene: A hidden servant witnesses the bridegroom's nightly skin-shedding and reveals it.
+    evidence: |
+      The King was surprised, but the servant who had concealed himself came and revealed everything to him.
+
+  - function: func_transfiguration
+    order: 10
+    actor: donkey_old_king
+    beneficiary: donkey_human_youth
+    scene: The old king burns the ass-skin, forcing the hidden human form to remain.
+    evidence: |
+      threw the skin into it, and remained by it himself until it was all burnt to ashes
+
+  - function: func_reward
+    order: 11
+    actor: donkey_old_king
+    beneficiary: donkey_human_youth
+    scene: The released youth receives half the kingdom and later inherits two kingdoms.
+    evidence: |
+      I will now give thee half my kingdom
+
+
+edges:
+
+  - from: donkey_birth_queen
+    label: LACKS
+    to: donkey_prince
+    evidence: |
+      had everything they wanted, but no children
+
+  - from: donkey_birth_queen
+    label: WISHES_FOR
+    to: donkey_prince
+    evidence: |
+      God gave her her wish
+
+  - from: donkey_birth_queen
+    label: REJECTS
+    to: donkey_prince
+    evidence: |
+      she would far rather have had no child at all than have a donkey
+
+  - from: donkey_birth_king
+    label: RECOGNIZES_AS_HEIR
+    to: donkey_prince
+    evidence: |
+      he shall be my son and heir
+
+  - from: donkey_prince
+    label: LEARNS_FROM
+    to: donkey_musician
+    evidence: |
+      Teach me thine art, that I may play the lute as well as thou dost
+
+  - from: donkey_prince
+    label: PLAYS
+    to: obj_donkey_lute
+    evidence: |
+      plays the lute as well as an experienced master
+
+  - from: donkey_prince
+    label: SEES_REFLECTION_IN
+    to: obj_donkey_mirror_well_water
+    evidence: |
+      in the mirror-clear water saw his donkey’s form
+
+  - from: donkey_prince
+    label: DEPARTS_WITH
+    to: donkey_faithful_companion
+    evidence: |
+      only took with him one faithful companion
+
+  - from: donkey_prince
+    label: ARRIVES_AT
+    to: loc_donkey_old_king_gate
+    evidence: |
+      knocked at the gate, and cried
+
+  - from: obj_donkey_lute
+    label: ATTRACTS
+    to: donkey_doorkeeper
+    evidence: |
+      Then the door-keeper opened his eyes most wonderfully wide
+
+  - from: donkey_doorkeeper
+    label: REPORTS_TO
+    to: donkey_old_king
+    evidence: |
+      ran to the King and said
+
+  - from: donkey_court
+    label: LAUGHS_AT
+    to: donkey_prince
+    evidence: |
+      every one began to laugh at the lute-player
+
+  - from: donkey_prince
+    label: CLAIMS_RANK_BEFORE
+    to: donkey_old_king
+    evidence: |
+      I am no common stable-ass, I am a noble one
+
+  - from: donkey_prince
+    label: DESIRES
+    to: donkey_princess
+    evidence: |
+      I like her above measure
+
+  - from: donkey_old_king
+    label: OFFERS
+    to: donkey_princess
+    evidence: |
+      Wilt thou have my pretty daughter to wife?
+
+  - from: donkey_prince
+    label: MARRIES
+    to: donkey_princess
+    evidence: |
+      a great and splendid wedding was held
+
+  - from: donkey_old_king
+    label: HIDES
+    to: donkey_hidden_servant
+    evidence: |
+      ordered a servant to hide himself there
+
+  - from: donkey_prince
+    label: SHEDS
+    to: obj_donkey_ass_skin
+    evidence: |
+      suddenly threw off his ass’s skin
+
+  - from: donkey_prince
+    label: TRANSFORMS_INTO
+    to: donkey_human_youth
+    evidence: |
+      stood there in the form of a handsome royal youth
+
+  - from: donkey_princess
+    label: LOVES
+    to: donkey_prince
+    evidence: |
+      I love him as well as if he were the handsomest in the world
+
+  - from: donkey_hidden_servant
+    label: REVEALS
+    to: donkey_old_king
+    evidence: |
+      came and revealed everything to him
+
+  - from: donkey_hidden_servant
+    label: ADVISES_BURNING
+    to: obj_donkey_ass_skin
+    evidence: |
+      take his skin away and throw it in the fire
+
+  - from: donkey_old_king
+    label: BURNS
+    to: obj_donkey_ass_skin
+    evidence: |
+      threw the skin into it
+
+  - from: law_burned_animal_skin_releases_human_form
+    label: RELEASES
+    to: donkey_human_youth
+    evidence: |
+      it was all burnt to ashes
+
+  - from: donkey_human_youth
+    label: ATTEMPTS_ESCAPE_FROM
+    to: donkey_old_king
+    evidence: |
+      Now I shall have to contrive to escape
+
+  - from: donkey_old_king
+    label: GIVES_KINGDOM_TO
+    to: donkey_human_youth
+    evidence: |
+      I will now give thee half my kingdom
+
+  - from: donkey_human_youth
+    label: INHERITS
+    to: loc_donkey_birth_castle
+    evidence: |
+      after the death of his father he had another kingdom as well

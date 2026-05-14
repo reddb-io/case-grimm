@@ -1,0 +1,463 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-two-travellers
+khm: 107
+atu: '613'
+atu_name: The Two Travellers
+canonical_source: ../../2-silver/canonical/the-two-travellers/canonical.txt
+title: The Two Travellers
+
+
+entities:
+
+  characters:
+
+    two_travellers_tailor:
+      name: The Merry Little Tailor
+      species: sp_human
+      agency_modes: [agency_speech, agency_music, agency_endurance, agency_object_mediation, agency_animal_aid]
+      existential_states: [state_blind]
+      speech_acts_performed: [speech_prayer]
+      affects: [affect_joy, affect_hunger, affect_pity, affect_grief, affect_courage]
+      traits: [merry-traveller, generous-companion, blinded-tailor, gallows-healed, animal-sparer, court-tailor, impossible-task-survivor, royal-son-bringer, princess-bridegroom]
+      evidence: |
+        The tailor was a handsome little fellow
+
+    two_travellers_shoemaker:
+      name: The Ill-Tempered Shoemaker
+      archetypes: [arc_treacherous_travel_companion]
+      species: sp_human
+      agency_modes: [agency_speech, agency_violence, agency_cunning, agency_object_mediation]
+      speech_acts_performed: [speech_lie, speech_boast]
+      affects: [affect_anger, affect_envy, affect_greed, affect_fear]
+      traits: [surly-companion, bread-hoarder, eye-extorter, blind-man-abandoner, court-shoemaker, false-boast-informer, mirror-punished]
+      evidence: |
+        The shoemaker, however, could not endure a joke
+
+    two_travellers_hanged_men:
+      name: The Two Poor Sinners on the Gallows
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [hanged-men, nocturnal-speakers, dew-remedy-revealers]
+      evidence: |
+        Two poor sinners were hanging on the gallows
+
+    two_travellers_crows:
+      name: The Crows on the Gallows
+      species: sp_bird
+      agency_modes: [agency_violence]
+      traits: [gallows-birds, eye-peckers, retributive-executors]
+      evidence: |
+        a crow sat on the head of each of them
+
+    two_travellers_foal:
+      name: The Brown Foal / Chestnut Horse
+      species: sp_horse
+      agency_modes: [agency_speech, agency_animal_aid, agency_violence]
+      traits: [spared-foal, grown-horse, water-spring-raiser, thunder-hoof-helper]
+      evidence: |
+        a brown foal running about the fields
+
+    two_travellers_stork:
+      name: Cousin Longlegs the Stork
+      species: sp_bird
+      agency_modes: [agency_speech, agency_animal_aid]
+      traits: [sacred-bird, spared-bird, child-bringer, prince-fetcher]
+      evidence: |
+        a stork stepped solemnly over the meadow
+
+    two_travellers_mother_duck:
+      name: The Old Duck and Her Twelve Young Ones
+      species: sp_duck
+      agency_modes: [agency_speech, agency_animal_aid, agency_object_mediation]
+      affects: [affect_maternal_love, affect_fear]
+      traits: [protective-mother, spared-ducklings, underwater-crown-retriever, twelve-young-helper]
+      evidence: |
+        an old duck which was hidden among the reeds
+
+    two_travellers_queen_bee:
+      name: The Queen-Bee and Her Bees
+      species: sp_bee
+      agency_modes: [agency_speech, agency_animal_aid, agency_object_mediation]
+      traits: [nest-guardian, threatened-stinger, wax-palace-maker, palace-inspector]
+      evidence: |
+        the Queen-bee came out
+
+    two_travellers_king:
+      name: The King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_command, speech_promise]
+      affects: [affect_joy, affect_fear]
+      traits: [task-ordering-king, crown-desirer, wax-palace-admirer, water-witness, daughter-giver]
+      evidence: |
+        At last the King appointed him court-tailor
+
+    two_travellers_queen:
+      name: The Queen
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_domestic_labor]
+      affects: [affect_joy]
+      traits: [longing-mother, prince-receiver, sweetmeat-sharer]
+      evidence: |
+        stretched out its little hands to the Queen
+
+    two_travellers_eldest_princess:
+      name: The Eldest Princess
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [marriage-reward, sweetmeat-excluded, tailor-bride]
+      evidence: |
+        thou shalt have my eldest daughter to wife
+
+    two_travellers_baby_prince:
+      name: The Little Prince Brought through the Air
+      species: sp_human
+      agency_modes: [agency_object_mediation]
+      traits: [stork-brought-child, queen-delight, son-answer-to-task]
+      evidence: |
+        He had, moreover, a baby in his beak
+
+  magic_objects:
+
+    obj_two_travellers_bread:
+      name: The Shoemaker's Bread
+      object_kind: food
+      attributes:
+        function: survival food converted into the price of the tailor's eyes
+      evidence: |
+        bread for a week
+
+    obj_two_travellers_sharp_knife:
+      name: The Sharp Knife
+      object_kind: weapon
+      attributes:
+        function: puts out the tailor's right and left eyes
+      evidence: |
+        put out his right eye with a sharp knife
+
+    obj_two_travellers_gallows_dew:
+      name: The Eye-Restoring Gallows Dew
+      instance_of: obj_gallows_dew
+      object_kind: material
+      attributes:
+        function: restores the tailor's eyes when applied with the handkerchief
+      evidence: |
+        the dew which this night has fallen down over us from the gallows
+
+    obj_two_travellers_handkerchief:
+      name: The Tailor's Pocket-Handkerchief
+      object_kind: tool
+      attributes:
+        function: collects healing dew and later carries the recovered crown
+      evidence: |
+        he took his pocket-handkerchief
+
+    obj_two_travellers_needle:
+      name: The Tailor's Needle
+      object_kind: tool
+      attributes:
+        function: proves that restored sight has returned his craft
+      evidence: |
+        He took a needle out of his pocket
+
+    obj_two_travellers_lost_crown:
+      name: The Lost Gold Crown
+      object_kind: treasure
+      attributes:
+        function: first false-boast task; retrieved by the ducks from the pond bottom
+      evidence: |
+        the gold crown back again which was lost in ancient times
+
+    obj_two_travellers_wax_palace:
+      name: The Wax Copy of the Royal Palace
+      object_kind: architecture
+      attributes:
+        function: second false-boast task; made by the bees in exact miniature
+      evidence: |
+        copy in wax the whole of the royal palace
+
+    obj_two_travellers_crystal_water:
+      name: The Crystal Water Spring in the Court-Yard
+      object_kind: material
+      attributes:
+        function: third false-boast task; raised by the horse's thunderous fall
+      evidence: |
+        a jet of water rose as high as a man on horseback
+
+    obj_two_travellers_sweetmeat_bag:
+      name: The Stork's Travelling Bag of Sweetmeats
+      object_kind: food
+      attributes:
+        function: gift to the queen and younger princesses after the prince is delivered
+      evidence: |
+        In it there were little paper parcels with colored sweetmeats
+
+  locations:
+
+    loc_two_travellers_road:
+      name: The Road Where the Travellers Meet
+      instance_of: loc_road
+      evidence: |
+        once met with each other in their travels
+
+    loc_two_travellers_town_work:
+      name: The Work Town
+      instance_of: loc_town
+      evidence: |
+        When they reached a town
+
+    loc_two_travellers_forest:
+      name: The Great Forest on the Way to the Capital
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        they came to a great forest
+
+    loc_two_travellers_oak:
+      name: The Oak-Tree of Counsel
+      instance_of: loc_tree
+      evidence: |
+        seated themselves beneath an oak-tree
+
+    loc_two_travellers_gallows:
+      name: The Gallows with Two Hanged Men
+      instance_of: loc_gallows
+      threshold_type: threshold_grave
+      evidence: |
+        stood the gallows
+
+    loc_two_travellers_royal_city:
+      name: The Great Royal City
+      instance_of: loc_town
+      threshold_type: threshold_gate
+      evidence: |
+        lay the great royal city
+
+    loc_two_travellers_pond:
+      name: The Pond of the Ducks
+      instance_of: loc_pond
+      evidence: |
+        came to the pond
+
+    loc_two_travellers_hollow_tree:
+      name: The Hollow Bee Tree
+      instance_of: loc_tree
+      evidence: |
+        an old tree which was partly hollow
+
+    loc_two_travellers_inn:
+      name: The Inn at Noon
+      instance_of: loc_inn
+      evidence: |
+        all was ready-cooked for him in the inn
+
+    loc_two_travellers_castle_courtyard:
+      name: The Castle Court-Yard
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        in the court-yard of the castle
+
+    loc_two_travellers_palace:
+      name: The Royal Palace
+      instance_of: loc_castle
+      evidence: |
+        the whole of the royal palace
+
+
+classifications:
+
+  world_laws:
+    - law_companion_hunger_extorts_body
+    - law_gallows_dew_restores_stolen_eyes
+    - law_rescued_animals_repay_kindness
+    - law_false_boast_imposes_impossible_task
+
+  moral_regimes:
+    - moral_kindness_rewarded
+    - moral_retributive
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_object_mediation
+    - agency_animal_aid
+    - agency_violence
+    - agency_music
+
+  affects_driving:
+    - affect_hunger
+    - affect_envy
+    - affect_pity
+    - affect_grief
+    - affect_joy
+
+  symbol_numbers:
+    - num_2
+    - num_3
+    - num_4
+    - num_9
+    - num_12
+
+  threshold_types:
+    - threshold_forest
+    - threshold_grave
+    - threshold_gate
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: two_travellers_tailor,
+      scene: "A merry tailor and a surly shoemaker meet on the road and agree to travel together.",
+      evidence: "Shall we travel together?" }
+  - { function: func_companionship, order: 2, actor: two_travellers_tailor,
+      scene: "The tailor gets more work and shares his earnings with the shoemaker.",
+      evidence: "shared all he got with his comrade" }
+  - { function: func_forest_choice, order: 3, actor: two_travellers_shoemaker,
+      scene: "At the forest, the shoemaker chooses bread for seven days and the tailor chooses bread for two.",
+      evidence: "Bread for two days, and that’s enough" }
+  - { function: func_villainy, order: 4, actor: two_travellers_shoemaker,
+      scene: "In the starving forest, the shoemaker sells bread first for the tailor's right eye, then for his left.",
+      evidence: "I shall put out thy other eye for it" }
+  - { function: func_abandonment, order: 5, actor: two_travellers_shoemaker,
+      scene: "The shoemaker leaves the blind tailor alone at the gallows.",
+      evidence: "left him alone and went his way" }
+  - { function: func_overheard_remedy, order: 6, actor: two_travellers_hanged_men,
+      scene: "The hanged men reveal that gallows dew restores eyes.",
+      evidence: "gives every one who washes himself with it his eyes again" }
+  - { function: func_healing, order: 7, actor: two_travellers_tailor,
+      scene: "The tailor washes his eye sockets with dew and receives healthy new eyes.",
+      evidence: "a couple of healthy new eyes filled the sockets" }
+  - { function: func_mercy_foal, order: 8, actor: two_travellers_tailor,
+      scene: "The tailor spares the young foal after it asks not to be ridden yet.",
+      evidence: "let me go till I have grown strong" }
+  - { function: func_mercy_stork, order: 9, actor: two_travellers_tailor,
+      scene: "Though hungry, he spares the sacred stork.",
+      evidence: "Leave me my life, and I may do thee good" }
+  - { function: func_mercy_ducks, order: 10, actor: two_travellers_tailor,
+      scene: "He spares the old duck's young after she invokes his own mother's grief.",
+      evidence: "thou shalt keep thy children" }
+  - { function: func_mercy_bees, order: 11, actor: two_travellers_queen_bee,
+      scene: "The tailor leaves the bees' nest in peace in exchange for promised future service.",
+      evidence: "we will do thee a service for it another time" }
+  - { function: func_ascent, order: 12, actor: two_travellers_tailor,
+      scene: "The tailor enters the town, finds work, becomes famous, and is appointed court-tailor.",
+      evidence: "At last the King appointed him court-tailor" }
+  - { function: func_false_accusation_1, order: 13, actor: two_travellers_shoemaker,
+      scene: "The shoemaker tells the king that the tailor boasted he could recover the lost gold crown.",
+      evidence: "has boasted that he will get the gold crown back again" }
+  - { function: func_animal_aid_1, order: 14, actor: two_travellers_mother_duck,
+      scene: "The old duck and twelve young ones retrieve the crown from the pond.",
+      evidence: "we will soon bring it up again for thee" }
+  - { function: func_false_accusation_2, order: 15, actor: two_travellers_shoemaker,
+      scene: "The shoemaker claims the tailor boasted he could copy the whole royal palace in wax.",
+      evidence: "copy in wax the whole of the royal palace" }
+  - { function: func_animal_aid_2, order: 16, actor: two_travellers_queen_bee,
+      scene: "The bees inspect the palace and model it perfectly in wax.",
+      evidence: "modelled the palace in wax" }
+  - { function: func_false_accusation_3, order: 17, actor: two_travellers_shoemaker,
+      scene: "The shoemaker claims the tailor promised a crystal stream in the court-yard.",
+      evidence: "water will spring up in the court-yard" }
+  - { function: func_animal_aid_3, order: 18, actor: two_travellers_foal,
+      scene: "The grown horse carries the tailor and raises the crystal spring.",
+      evidence: "The time has come" }
+  - { function: func_false_accusation_4, order: 19, actor: two_travellers_shoemaker,
+      scene: "The shoemaker claims the tailor can bring the king a son through the air.",
+      evidence: "a son to be brought to the Lord king through the air" }
+  - { function: func_animal_aid_4, order: 20, actor: two_travellers_stork,
+      scene: "The stork brings a little prince to the queen and sweetmeats for the princesses.",
+      evidence: "a baby in his beak" }
+  - { function: func_wedding, order: 21, actor: two_travellers_tailor,
+      scene: "The tailor receives the eldest princess and dances at the wedding.",
+      evidence: "got the merry tailor for a husband" }
+  - { function: func_punishment, order: 22, actor: two_travellers_crows,
+      scene: "The shoemaker is banished, returns to the gallows, and has his eyes pecked out by the crows.",
+      evidence: "pecked his eyes out" }
+
+
+edges:
+
+  # Travel, sharing, and mutilation
+  - { from: two_travellers_tailor, to: two_travellers_shoemaker, label: INVITES_TO_SHARE_DRINK,
+      evidence: "take a drink, and swallow your anger down" }
+  - { from: two_travellers_tailor, to: two_travellers_shoemaker, label: SHARES_EARNINGS_WITH,
+      evidence: "shared all he got with his comrade" }
+  - { from: two_travellers_shoemaker, to: obj_two_travellers_bread, label: CARRIES_FOR_WEEK,
+      evidence: "I will take with me bread for a week" }
+  - { from: two_travellers_tailor, to: loc_two_travellers_forest, label: ENTERS_WITH_SHOEMAKER,
+      evidence: "tried their luck in the forest" }
+  - { from: two_travellers_shoemaker, to: two_travellers_tailor, label: EXTORTS_RIGHT_EYE_FROM,
+      evidence: "I will put out thy right eye" }
+  - { from: two_travellers_shoemaker, to: obj_two_travellers_sharp_knife, label: USES_TO_BLIND,
+      evidence: "put out his right eye with a sharp knife" }
+  - { from: two_travellers_shoemaker, to: two_travellers_tailor, label: EXTORTS_LEFT_EYE_FROM,
+      evidence: "put out his left eye" }
+  - { from: law_companion_hunger_extorts_body, to: two_travellers_tailor, label: BLINDS,
+      evidence: "I shall put out thy other eye for it" }
+  - { from: two_travellers_shoemaker, to: loc_two_travellers_gallows, label: ABANDONS_BLIND_TAILOR_AT,
+      evidence: "Thither the shoemaker guided the blind tailor" }
+
+  # Gallows healing
+  - { from: two_travellers_hanged_men, to: obj_two_travellers_gallows_dew, label: REVEAL_REMEDY_OF,
+      evidence: "the dew which this night has fallen down over us from the gallows" }
+  - { from: two_travellers_tailor, to: obj_two_travellers_handkerchief, label: COLLECTS_DEW_WITH,
+      evidence: "pressed it on the grass" }
+  - { from: obj_two_travellers_gallows_dew, to: state_blind, label: HEALS,
+      evidence: "gives every one who washes himself with it his eyes again" }
+  - { from: law_gallows_dew_restores_stolen_eyes, to: two_travellers_tailor, label: RESTORES_SIGHT_TO,
+      evidence: "a couple of healthy new eyes filled the sockets" }
+  - { from: two_travellers_tailor, to: obj_two_travellers_needle, label: THREADS_AFTER_HEALING,
+      evidence: "he could thread it as well as ever" }
+  - { from: two_travellers_tailor, to: two_travellers_hanged_men, label: PRAYS_FOR,
+      evidence: "pray for the poor sinners" }
+
+  # Animals spared
+  - { from: two_travellers_tailor, to: two_travellers_foal, label: SPARES,
+      evidence: "let me go till I have grown strong" }
+  - { from: two_travellers_tailor, to: two_travellers_stork, label: SPARES,
+      evidence: "Leave me my life" }
+  - { from: two_travellers_tailor, to: two_travellers_mother_duck, label: SPARES_CHILDREN_OF,
+      evidence: "thou shalt keep thy children" }
+  - { from: two_travellers_queen_bee, to: two_travellers_tailor, label: PROMISES_SERVICE_TO,
+      evidence: "we will do thee a service for it another time" }
+
+  # False boasts and animal repayments
+  - { from: two_travellers_shoemaker, to: two_travellers_king, label: FALSELY_REPORTS_CROWN_BOAST,
+      evidence: "has boasted that he will get the gold crown back again" }
+  - { from: two_travellers_mother_duck, to: obj_two_travellers_lost_crown, label: RETRIEVES_FROM_WATER,
+      evidence: "The crown fell into the water" }
+  - { from: obj_two_travellers_lost_crown, to: two_travellers_king, label: DELIGHTFULLY_RETURNED_TO,
+      evidence: "the King, who was full of joy" }
+  - { from: two_travellers_shoemaker, to: two_travellers_king, label: FALSELY_REPORTS_WAX_PALACE_BOAST,
+      evidence: "he boasts that he will copy in wax the whole of the royal palace" }
+  - { from: two_travellers_queen_bee, to: loc_two_travellers_palace, label: INSPECTS,
+      evidence: "inspected everything most carefully" }
+  - { from: two_travellers_queen_bee, to: obj_two_travellers_wax_palace, label: MODELS,
+      evidence: "modelled the palace in wax" }
+  - { from: two_travellers_shoemaker, to: two_travellers_king, label: FALSELY_REPORTS_WATER_BOAST,
+      evidence: "water will spring up in the court-yard" }
+  - { from: two_travellers_foal, to: obj_two_travellers_crystal_water, label: RAISES_BY_THUNDER_FALL,
+      evidence: "a jet of water rose as high as a man on horseback" }
+  - { from: two_travellers_king, to: two_travellers_tailor, label: EMBRACES_PUBLICLY,
+      evidence: "embraced the tailor in the sight of all men" }
+  - { from: two_travellers_shoemaker, to: two_travellers_king, label: FALSELY_REPORTS_AIRBORNE_SON_BOAST,
+      evidence: "could cause a son to be brought to the Lord king through the air" }
+  - { from: two_travellers_stork, to: two_travellers_baby_prince, label: BRINGS_IN_BEAK,
+      evidence: "a baby in his beak" }
+  - { from: two_travellers_stork, to: obj_two_travellers_sweetmeat_bag, label: GIVES_TO_QUEEN,
+      evidence: "handed it over to the Queen" }
+  - { from: law_rescued_animals_repay_kindness, to: two_travellers_tailor, label: SAVES_REPEATEDLY,
+      evidence: "I will help thee out of thy difficulty" }
+
+  # Marriage and punishment
+  - { from: two_travellers_king, to: two_travellers_tailor, label: GIVES_ELDEST_DAUGHTER_TO,
+      evidence: "thou shalt have my eldest daughter to wife" }
+  - { from: two_travellers_tailor, to: two_travellers_eldest_princess, label: MARRIES,
+      evidence: "got the merry tailor for a husband" }
+  - { from: two_travellers_shoemaker, to: loc_two_travellers_gallows, label: RETURNS_TO,
+      evidence: "The road to the forest led him to the gallows" }
+  - { from: two_travellers_crows, to: two_travellers_shoemaker, label: PECK_OUT_EYES_OF,
+      evidence: "pecked his eyes out" }
+  - { from: two_travellers_shoemaker, to: loc_two_travellers_forest, label: DIES_UNSEEN_IN,
+      evidence: "must have died there of hunger" }

@@ -1,0 +1,310 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-story-of-schlauraffen-land-the-tale-of-cockaigne
+khm: 158
+atu: "1930"
+atu_name: The Tale of Cockaigne
+canonical_source: ../../2-silver/canonical/the-story-of-schlauraffen-land-the-tale-of-cockaigne/canonical.txt
+title: The Story of Schlauraffen Land / The Tale of Cockaigne
+
+
+entities:
+
+  characters:
+
+    cockaigne_narrator:
+      name: The Lying Traveller
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_lie]
+      traits: [first-person-visitor, impossibility-cataloguer, open-liar]
+      evidence: |
+        Have I not told enough lies?
+
+    cockaigne_footless_runner:
+      name: The Man without Feet
+      species: sp_human
+      agency_modes: [agency_extraordinary_body]
+      traits: [footless, horse-outrunning, bodily-contradiction]
+      evidence: |
+        a man without feet who outran a swift horse
+
+    cockaigne_silver_nosed_ass:
+      name: The Young Ass with the Silver Nose
+      species: sp_donkey
+      agency_modes: [agency_extraordinary_body]
+      traits: [silver-nosed, hare-pursuing, predator-prey-inverter]
+      evidence: |
+        a young ass with a silver nose
+
+    cockaigne_lean_goat:
+      name: The Lean Old Goat of Fat and Salt
+      species: sp_goat
+      agency_modes: [agency_extraordinary_body]
+      traits: [lean-old-goat, hundred-fat-load-carrier, sixty-salt-load-carrier]
+      evidence: |
+        a lean old goat which carried about a hundred cart-loads of fat
+
+    cockaigne_animal_workers:
+      name: The Impossible Animal Workers
+      species: sp_bird
+      agency_modes: [agency_domestic_labor, agency_extraordinary_body]
+      traits: [mowing-crows, bridge-building-gnats, wolf-tearing-doves, threshing-frogs, bishop-consecrating-mice, bear-tongue-scratching-cats, stove-heating-goats]
+      evidence: |
+        two crows which were mowing a meadow
+
+    cockaigne_child_thrower:
+      name: The One-Year-Old Millstone Thrower
+      species: sp_human
+      agency_modes: [agency_extraordinary_body]
+      traits: [one-year-old, four-millstone-thrower, impossible-infant]
+      evidence: |
+        a child of one year threw four millstones
+
+    cockaigne_rooster:
+      name: The Closing Cock
+      species: sp_rooster
+      agency_modes: [agency_speech]
+      traits: [cockcrow-closer, nonsense-ending-bird]
+      evidence: |
+        Then a cock crowed, Cock-a-doodle-doo!
+
+  magic_objects:
+
+    obj_cockaigne_silken_thread:
+      name: The Small Silken Thread
+      object_kind: material
+      attributes:
+        function: impossible suspension line holding Rome and the Lateran
+      evidence: |
+        hanging by a small silken thread
+
+    obj_cockaigne_bridge_cutting_sword:
+      name: The Bridge-Cutting Sword
+      object_kind: weapon
+      attributes:
+        function: sharp sword that cuts through architecture rather than bodies
+      evidence: |
+        a keen sharp sword that cut through a bridge
+
+    obj_cockaigne_hot_cake_lime_tree:
+      name: The Hot-Cake Lime-Tree
+      object_kind: food
+      attributes:
+        function: tree on which ready-made hot cakes grow
+      evidence: |
+        a lime-tree that was very large, on which hot cakes were growing
+
+    obj_cockaigne_self_ploughing_plough:
+      name: The Self-Ploughing Plough
+      object_kind: tool
+      attributes:
+        function: agricultural tool working without draught animal
+      evidence: |
+        a plough ploughing without horse or cow
+
+    obj_cockaigne_four_millstones:
+      name: The Four Millstones
+      object_kind: material
+      attributes:
+        function: impossible projectiles thrown by a one-year-old child across cities
+      evidence: |
+        four millstones from Ratisbon to Treves
+
+  locations:
+
+    loc_cockaigne_schlauraffen_land:
+      name: Schlauraffen Land
+      evidence: |
+        In the time of Schlauraffen I went there
+
+    loc_cockaigne_rome_lateran:
+      name: Rome and the Lateran
+      instance_of: loc_town
+      evidence: |
+        Rome and the Lateran
+
+    loc_cockaigne_rhine:
+      name: The Rhine
+      instance_of: loc_river
+      evidence: |
+        swam over the Rhine
+
+    loc_cockaigne_high_mountain_valley:
+      name: The Deep Valley at the Top of a High Mountain
+      instance_of: loc_mountain
+      evidence: |
+        a deep valley at the top of a high mountain
+
+    loc_cockaigne_yard:
+      name: The Threshing Yard
+      evidence: |
+        four horses were standing in the yard
+
+
+classifications:
+
+  world_laws:
+    - law_nonsense_catalogue_suspends_causality
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_extraordinary_body
+    - agency_domestic_labor
+
+  affects_driving: []
+
+  symbol_numbers:
+    - num_2
+    - num_4
+    - num_100
+
+  threshold_types: []
+
+
+propp:
+
+  - function: func_entry
+    order: 1
+    actor: cockaigne_narrator
+    scene: The narrator claims to have gone to Schlauraffen Land.
+    evidence: |
+      I went there
+
+  - function: func_impossibility_catalogue
+    order: 2
+    actor: cockaigne_narrator
+    scene: Rome and the Lateran hang by a silken thread, a footless man outruns a horse, and a sword cuts a bridge.
+    evidence: |
+      Rome and the Lateran hanging by a small silken thread
+
+  - function: func_impossibility_catalogue
+    order: 3
+    actor: cockaigne_silver_nosed_ass
+    scene: A silver-nosed ass pursues fleet hares, and hot cakes grow on a lime-tree.
+    evidence: |
+      pursued two fleet hares
+
+  - function: func_impossibility_catalogue
+    order: 4
+    actor: cockaigne_lean_goat
+    scene: A lean goat carries huge loads of fat and salt.
+    evidence: |
+      sixty loads of salt
+
+  - function: func_lie_marker
+    order: 5
+    actor: cockaigne_narrator
+    scene: The narrator openly marks the catalogue as lies before continuing.
+    evidence: |
+      Have I not told enough lies?
+
+  - function: func_impossibility_catalogue
+    order: 6
+    actor: cockaigne_animal_workers
+    scene: Animals perform impossible human labour, violence, and ecclesiastical acts.
+    evidence: |
+      two mice consecrating a bishop
+
+  - function: func_closure
+    order: 7
+    actor: cockaigne_rooster
+    scene: A cockcrow ends the nonsense catalogue.
+    evidence: |
+      The story is all told,—Cock-a-doodle-doo!
+
+
+edges:
+
+  - from: loc_cockaigne_rome_lateran
+    label: HANGS_BY
+    to: obj_cockaigne_silken_thread
+    evidence: |
+      hanging by a small silken thread
+
+  - from: cockaigne_footless_runner
+    label: OUTRUNS
+    to: sp_horse
+    evidence: |
+      outran a swift horse
+
+  - from: obj_cockaigne_bridge_cutting_sword
+    label: CUTS_THROUGH
+    to: loc_cockaigne_rhine
+    evidence: |
+      cut through a bridge
+
+  - from: cockaigne_silver_nosed_ass
+    label: PURSUES
+    to: sp_hare
+    evidence: |
+      pursued two fleet hares
+
+  - from: obj_cockaigne_hot_cake_lime_tree
+    label: GROWS_FOOD
+    to: obj_cockaigne_hot_cake_lime_tree
+    evidence: |
+      hot cakes were growing
+
+  - from: cockaigne_lean_goat
+    label: CARRIES
+    to: num_100
+    evidence: |
+      about a hundred cart-loads of fat
+
+  - from: obj_cockaigne_self_ploughing_plough
+    label: PLOUGHS_WITHOUT
+    to: sp_cattle
+    evidence: |
+      ploughing without horse or cow
+
+  - from: cockaigne_child_thrower
+    label: THROWS
+    to: obj_cockaigne_four_millstones
+    evidence: |
+      threw four millstones
+
+  - from: sp_fish
+    label: RESOUNDS_TO
+    to: loc_heaven
+    evidence: |
+      it resounded as far as heaven
+
+  - from: loc_cockaigne_high_mountain_valley
+    label: FLOWS_WITH
+    to: obj_cockaigne_hot_cake_lime_tree
+    evidence: |
+      sweet honey flowed like water
+
+  - from: cockaigne_animal_workers
+    label: MOWS_MEADOW
+    to: num_2
+    evidence: |
+      two crows which were mowing a meadow
+
+  - from: cockaigne_animal_workers
+    label: TEARS_TO_PIECES
+    to: sp_wolf
+    evidence: |
+      two doves tore a wolf to pieces
+
+  - from: cockaigne_animal_workers
+    label: CONSECRATES
+    to: loc_church
+    evidence: |
+      two mice consecrating a bishop
+
+  - from: cockaigne_animal_workers
+    label: SCRATCHES_OUT_TONGUE_OF
+    to: sp_bear
+    evidence: |
+      two cats scratching out a bear’s tongue
+
+  - from: cockaigne_rooster
+    label: CLOSES_STORY_WITH
+    to: agency_speech
+    evidence: |
+      Cock-a-doodle-doo!

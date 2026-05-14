@@ -1,0 +1,332 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: simeli-mountain
+khm: 142
+atu: '676'
+atu_name: Open Sesame / Simeli Mountain
+canonical_source: ../../2-silver/canonical/simeli-mountain/canonical.txt
+title: Simeli Mountain
+
+
+entities:
+
+  characters:
+
+    simeli_poor_brother:
+      name: The Poor Brother
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_endurance]
+      speech_acts_performed: [speech_command, speech_lie]
+      affects: [affect_fear, affect_curiosity, affect_joy]
+      traits: [poor-corn-trader, hidden-witness, formula-learner, moderate-treasure-taker, generous-householder]
+      evidence: |
+        the other poor
+
+    simeli_rich_brother:
+      name: The Rich Brother
+      archetypes: [arc_greedy_one]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_object_mediation]
+      existential_states: [state_imprisoned]
+      speech_acts_performed: [speech_request, speech_command]
+      affects: [affect_envy, affect_greed, affect_fear]
+      traits: [ungenerous-brother, pitch-measure-trickster, treasure-seeker, password-forgetter, beheaded-intruder]
+      evidence: |
+        The rich one, however, gave nothing to the poor one
+
+    simeli_wife_children:
+      name: The Poor Brother's Wife and Children
+      species: sp_human
+      affects: [affect_hunger, affect_joy]
+      traits: [hungry-household, breadless-family, gold-supported-family]
+      evidence: |
+        for his wife and children
+
+    simeli_twelve_robbers:
+      name: The Twelve Wild Robbers
+      archetypes: [arc_predator]
+      species: sp_human
+      agency_modes: [agency_speech, agency_violence, agency_object_mediation]
+      speech_acts_performed: [speech_command]
+      affects: [affect_anger]
+      traits: [twelve-wild-men, mountain-password-knowers, sack-carriers, treasure-guards, executioners]
+      evidence: |
+        twelve great, wild men
+
+  magic_objects:
+
+    obj_simeli_barrow:
+      name: The Poor Brother's Barrow
+      object_kind: tool
+      attributes:
+        function: corn-trading vehicle and ordinary-poverty marker
+      evidence: |
+        wheeling a barrow through the forest
+
+    obj_simeli_robber_sacks:
+      name: The Robbers' Heavy Sacks
+      object_kind: tool
+      attributes:
+        function: carry treasure out of the opened mountain
+      evidence: |
+        carrying heavy sacks on their shoulders
+
+    obj_simeli_mountain_treasure:
+      name: The Mountain Treasure
+      object_kind: treasure
+      attributes:
+        contents: [silver, gold, pearls, sparkling jewels]
+        function: hidden hoard accessed by the Semsi formula
+      evidence: |
+        a cavern full of silver and gold
+
+    obj_simeli_gold:
+      name: The Poor Brother's Gold
+      object_kind: treasure
+      attributes:
+        function: moderate treasure used to support the household and help others
+      evidence: |
+        filled his pockets with gold
+
+    obj_simeli_pearls_jewels:
+      name: The Pearls and Sparkling Jewels
+      object_kind: treasure
+      attributes:
+        function: most valuable treasure left by the poor brother and seized by the rich brother
+      evidence: |
+        great piles of pearls and sparkling jewels
+
+    obj_simeli_bushel_measure:
+      name: The Borrowed Bushel Measure
+      object_kind: tool
+      attributes:
+        owner: simeli_rich_brother
+        function: measures borrowed treasure and becomes a trap when lined with pitch
+      evidence: |
+        borrowed a measure that held a bushel
+
+    obj_simeli_pitch:
+      name: The Pitch on the Measure
+      object_kind: material
+      attributes:
+        function: sticky detection device placed by the rich brother
+      evidence: |
+        covered the bottom of the measure with pitch
+
+    obj_simeli_stuck_coin:
+      name: The Coin Stuck in the Measure
+      instance_of: obj_forensic_token
+      object_kind: token
+      attributes:
+        function: exposes that the poor brother has been measuring money rather than grain
+      evidence: |
+        a piece of money was sticking in it
+
+    obj_simeli_rich_brother_carriage:
+      name: The Rich Brother's Carriage
+      object_kind: tool
+      attributes:
+        function: carries the greedy brother to the mountain
+      evidence: |
+        ordered his carriage to be made ready
+
+  locations:
+
+    loc_simeli_poor_house:
+      name: The Poor Brother's House
+      instance_of: loc_house
+      evidence: |
+        went home with his barrow
+
+    loc_simeli_forest:
+      name: The Forest Road to the Mountain
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        through the forest
+
+    loc_simeli_hiding_tree:
+      name: The Tree Where the Poor Brother Hides
+      instance_of: loc_tree
+      threshold_type: threshold_forest
+      evidence: |
+        climbed up a tree
+
+    loc_simeli_mountain:
+      name: Semsi Mountain
+      instance_of: loc_mountain
+      threshold_type: threshold_doorway
+      evidence: |
+        a great, bare, naked-looking mountain
+
+    loc_simeli_treasure_cavern:
+      name: The Treasure Cavern inside the Mountain
+      instance_of: loc_cave
+      threshold_type: threshold_doorway
+      evidence: |
+        the whole mountain was a cavern full of silver and gold
+
+
+classifications:
+
+  world_laws:
+    - law_password_opens_hidden_mountain_treasure
+    - law_promise_binds_reality
+
+  moral_regimes:
+    - moral_retributive
+    - moral_overreach_reversal
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_object_mediation
+    - agency_cunning
+    - agency_violence
+    - agency_endurance
+
+  affects_driving:
+    - affect_greed
+    - affect_envy
+    - affect_fear
+    - affect_curiosity
+
+  symbol_numbers:
+    - num_3
+    - num_12
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_initial_situation
+    order: 1
+    actor: simeli_poor_brother
+    scene: "two brothers are opposed by wealth and poverty; the rich brother gives nothing while the poor trader lacks bread for his family"
+    evidence: "the one rich, the other poor"
+
+  - function: func_discovery
+    order: 2
+    actor: simeli_poor_brother
+    scene: "while wheeling his barrow through the forest, the poor brother sees the strange bare mountain and hides from twelve wild men"
+    evidence: "climbed up a tree"
+
+  - function: func_magic_formula
+    order: 3
+    actor: simeli_twelve_robbers
+    scene: "the twelve men open and shut the mountain with the Semsi formula and carry out heavy sacks"
+    evidence: "Semsi mountain, Semsi mountain, open"
+
+  - function: func_acquisition
+    order: 4
+    actor: simeli_poor_brother
+    beneficiary: simeli_wife_children
+    scene: "the poor brother repeats the formula, enters the treasure cavern, and takes only gold"
+    evidence: "filled his pockets with gold"
+
+  - function: func_prosperity
+    order: 5
+    actor: simeli_poor_brother
+    scene: "the gold removes household anxiety and the poor brother lives uprightly, helps the poor, and does good"
+    evidence: "gave help to the poor"
+
+  - function: func_detection
+    order: 6
+    actor: simeli_rich_brother
+    victim: simeli_poor_brother
+    scene: "the envious rich brother coats the bushel measure with pitch and catches a coin"
+    evidence: "covered the bottom of the measure with pitch"
+
+  - function: func_extorted_disclosure
+    order: 7
+    actor: simeli_rich_brother
+    victim: simeli_poor_brother
+    scene: "the rich brother threatens court accusation until the poor brother tells the whole secret"
+    evidence: "threatened that if he did not tell the truth"
+
+  - function: func_greedy_imitation
+    order: 8
+    actor: simeli_rich_brother
+    scene: "resolved to use the opportunity better, the rich brother drives to the mountain and loads himself with precious stones"
+    evidence: "as many precious stones as he could carry"
+
+  - function: func_failed_formula
+    order: 9
+    actor: simeli_rich_brother
+    scene: "because his heart and soul are full of treasure, he forgets the mountain's name and says Simeli instead of Semsi"
+    evidence: "had forgotten the name of the mountain"
+
+  - function: func_punishment
+    order: 10
+    actor: simeli_twelve_robbers
+    victim: simeli_rich_brother
+    scene: "the robbers return, identify the trapped intruder, reject his blame-shifting, and behead him"
+    evidence: "they cut his head off"
+
+
+edges:
+
+  - { from: simeli_rich_brother, to: simeli_poor_brother, label: REFUSES_AID_TO,
+      evidence: "gave nothing to the poor one" }
+  - { from: simeli_poor_brother, to: simeli_wife_children, label: CANNOT_FEED,
+      evidence: "had no bread for his wife and children" }
+  - { from: simeli_poor_brother, to: obj_simeli_barrow, label: WHEELS,
+      evidence: "wheeling a barrow through the forest" }
+  - { from: simeli_poor_brother, to: loc_simeli_mountain, label: DISCOVERS,
+      evidence: "a great, bare, naked-looking mountain" }
+  - { from: simeli_poor_brother, to: loc_simeli_hiding_tree, label: HIDES_IN,
+      evidence: "climbed up a tree" }
+  - { from: simeli_twelve_robbers, to: loc_simeli_mountain, label: COMMANDS_OPEN,
+      evidence: "Semsi mountain, Semsi mountain, open" }
+  - { from: loc_simeli_mountain, to: loc_simeli_treasure_cavern, label: OPENS_TO_REVEAL,
+      evidence: "the barren mountain opened down the middle" }
+  - { from: simeli_twelve_robbers, to: obj_simeli_robber_sacks, label: CARRY,
+      evidence: "carrying heavy sacks on their shoulders" }
+  - { from: simeli_twelve_robbers, to: loc_simeli_mountain, label: COMMANDS_SHUT,
+      evidence: "Semsi mountain, Semsi mountain, shut thyself" }
+  - { from: simeli_poor_brother, to: loc_simeli_mountain, label: COMMANDS_OPEN,
+      evidence: "Semsi mountain, Semsi mountain, open" }
+  - { from: loc_simeli_treasure_cavern, to: obj_simeli_mountain_treasure, label: CONTAINS,
+      evidence: "a cavern full of silver and gold" }
+  - { from: loc_simeli_treasure_cavern, to: obj_simeli_pearls_jewels, label: CONTAINS,
+      evidence: "great piles of pearls and sparkling jewels" }
+  - { from: simeli_poor_brother, to: obj_simeli_gold, label: TAKES_MODERATELY,
+      evidence: "filled his pockets with gold" }
+  - { from: simeli_poor_brother, to: obj_simeli_pearls_jewels, label: LEAVES,
+      evidence: "left the pearls and precious stones where they were" }
+  - { from: simeli_poor_brother, to: simeli_wife_children, label: SUPPORTS_WITH_GOLD,
+      evidence: "could buy bread for his wife and children with his gold" }
+  - { from: simeli_poor_brother, to: simeli_poor_brother, label: LIVES_UPRIGHTLY,
+      evidence: "lived joyously and uprightly" }
+  - { from: simeli_poor_brother, to: obj_simeli_bushel_measure, label: BORROWS,
+      evidence: "borrowed a measure that held a bushel" }
+  - { from: simeli_rich_brother, to: simeli_poor_brother, label: ENVIES,
+      evidence: "long been envious of his brother’s possessions" }
+  - { from: simeli_rich_brother, to: obj_simeli_bushel_measure, label: COATS_WITH_PITCH,
+      evidence: "covered the bottom of the measure with pitch" }
+  - { from: obj_simeli_pitch, to: obj_simeli_stuck_coin, label: CAPTURES,
+      evidence: "a piece of money was sticking in it" }
+  - { from: simeli_poor_brother, to: simeli_rich_brother, label: LIES_TO,
+      evidence: "Corn and barley" }
+  - { from: simeli_rich_brother, to: simeli_poor_brother, label: EXTORTS_SECRET_FROM,
+      evidence: "if he did not tell the truth" }
+  - { from: simeli_rich_brother, to: obj_simeli_rich_brother_carriage, label: ORDERS_READY,
+      evidence: "ordered his carriage to be made ready" }
+  - { from: simeli_rich_brother, to: loc_simeli_mountain, label: COMMANDS_OPEN,
+      evidence: "Semsi mountain, Semsi mountain, open" }
+  - { from: simeli_rich_brother, to: obj_simeli_pearls_jewels, label: LOADS_GREEDILY,
+      evidence: "as many precious stones as he could carry" }
+  - { from: simeli_rich_brother, to: loc_simeli_mountain, label: MISNAMES_PASSWORD_TO,
+      evidence: "Simeli mountain, Simeli mountain, open" }
+  - { from: loc_simeli_mountain, to: simeli_rich_brother, label: IMPRISONS,
+      evidence: "remained shut" }
+  - { from: simeli_twelve_robbers, to: simeli_rich_brother, label: MOCK_AND_IDENTIFY,
+      evidence: "Bird, have we caught thee at last" }
+  - { from: simeli_rich_brother, to: simeli_poor_brother, label: BLAMES,
+      evidence: "It was not I, it was my brother" }
+  - { from: simeli_twelve_robbers, to: simeli_rich_brother, label: BEHEADS,
+      evidence: "they cut his head off" }
+  - { from: atu_676, to: law_password_opens_hidden_mountain_treasure, label: REALIZED_BY,
+      evidence: "had forgotten the name of the mountain" }

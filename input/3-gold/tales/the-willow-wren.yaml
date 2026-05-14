@@ -1,0 +1,274 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-willow-wren
+khm: 171
+atu: "221"
+atu_name: The Willow-Wren as King of the Birds
+canonical_source: ../../2-silver/canonical/the-willow-wren/canonical.txt
+title: The Willow-Wren
+
+
+entities:
+
+  characters:
+
+    willow_wren_nameless_bird:
+      name: The Nameless Little Bird / Willow-Wren
+      archetypes: [arc_trickster]
+      species: sp_bird
+      agency_modes: [agency_cunning, agency_speech, agency_animal_aid]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_fear, affect_joy]
+      traits: [very-small-bird, hidden-eagle-rider, heaven-reaching-contestant, mouse-hole-descender, escaped-prisoner, hedge-king]
+      evidence: |
+        a very small bird which as yet had no name
+
+    willow_wren_eagle:
+      name: The Eagle
+      species: sp_bird
+      agency_modes: [agency_extraordinary_body, agency_social_rank]
+      affects: [affect_pride]
+      traits: [highest-flyer, presumed-bird-king, sun-near-mounter, tricked-carrier]
+      evidence: |
+        none could equal the eagle
+
+    willow_wren_green_plover:
+      name: The Free Green Plover
+      species: sp_bird
+      agency_modes: [agency_speech, agency_endurance]
+      affects: [affect_fear]
+      traits: [anti-monarchical-bird, freedom-lover, marsh-retreater, absent-dissenter]
+      evidence: |
+        the green plover, was opposed to this
+
+    willow_wren_bird_assembly:
+      name: The Assembly of Birds
+      species: sp_bird
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command]
+      affects: [affect_anger]
+      traits: [king-seeking-flock, contest-setters, angry-electors, imprisoning-collective, mocking-namers]
+      evidence: |
+        the birds also had their own language
+
+    willow_wren_hen:
+      name: The Astonished Hen
+      species: sp_hen
+      agency_modes: [agency_speech]
+      affects: [affect_curiosity]
+      traits: [late-hearer, assembly-questioner, domestic-observer]
+      evidence: |
+        The hen, which by some accident had heard nothing of the whole matter
+
+    willow_wren_cock:
+      name: The Cock
+      species: sp_rooster
+      agency_modes: [agency_speech]
+      traits: [hen-calmer, misleading-explainer, domestic-male-bird]
+      evidence: |
+        the cock calmed his beloved hen
+
+    willow_wren_tree_frog:
+      name: The Warning Tree-Frog
+      species: sp_frog
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_warning]
+      affects: [affect_fear]
+      traits: [bush-sitter, warning-caller, tears-foreseer]
+      evidence: |
+        A tree-frog which was sitting among the bushes
+
+    willow_wren_crow:
+      name: The Crow
+      species: sp_bird
+      agency_modes: [agency_speech]
+      traits: [peace-assurer, warning-dismisser]
+      evidence: |
+        the crow said, “Caw, caw,”
+
+    willow_wren_goose:
+      name: The Goose
+      species: sp_goose
+      agency_modes: [agency_extraordinary_body]
+      traits: [broad-breasted-ground-flapper, depth-contestant]
+      evidence: |
+        the goose did flap about with its broad breast
+
+    willow_wren_duck:
+      name: The Duck
+      species: sp_duck
+      agency_modes: [agency_extraordinary_body, agency_speech]
+      affects: [affect_anger]
+      traits: [ditch-leaper, leg-sprainer, cheating-crier, pond-waddler]
+      evidence: |
+        The duck came off the worst of all
+
+    willow_wren_owl:
+      name: The Owl Sentinel
+      species: sp_bird
+      agency_modes: [agency_endurance, agency_violence]
+      affects: [affect_shame, affect_anger]
+      traits: [mouse-hole-sentinel, failed-watcher, daytime-hider, mouse-hater, nocturnal-pursuer]
+      evidence: |
+        The owl was placed as sentinel
+
+    willow_wren_lark:
+      name: The Happy Lark
+      species: sp_bird
+      agency_modes: [agency_music, agency_speech]
+      affects: [affect_joy]
+      traits: [little-king-resister, high-air-singer, beauty-crier]
+      evidence: |
+        No one, however, was so happy as the lark
+
+  locations:
+
+    loc_willow_wren_marsh:
+      name: The Solitary Unfrequented Marsh
+      instance_of: loc_marsh
+      evidence: |
+        a solitary and unfrequented marsh
+
+    loc_willow_wren_bird_assembly:
+      name: The Woods and Fields Assembly
+      instance_of: loc_field
+      evidence: |
+        all gathered together from the woods and fields
+
+    loc_willow_wren_sky_height:
+      name: The Height Near the Sun
+      instance_of: loc_heaven
+      evidence: |
+        mounted so high that he could have picked the eyes out of the sun
+
+    loc_willow_wren_mouse_hole:
+      name: The Mouse-Hole
+      evidence: |
+        sought out a mouse-hole
+
+    loc_willow_wren_hedges:
+      name: The Hedges of the Wren
+      instance_of: loc_tree
+      evidence: |
+        He steals about in the hedges
+
+
+classifications:
+
+  world_laws:
+    - law_tiny_trickster_wins_animal_kingship_contests
+    - law_failed_sentinel_creates_nocturnal_etiology
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_social_rank
+    - agency_animal_aid
+
+  affects_driving:
+    - affect_pride
+    - affect_anger
+    - affect_fear
+    - affect_joy
+
+  symbol_numbers: []
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_etiological_prelude, order: 1, actor: willow_wren_bird_assembly,
+      scene: "former sounds and bird language still have meaning" }
+  - { function: func_collective_lack, order: 2, actor: willow_wren_bird_assembly,
+      scene: "the birds decide they no longer want to be without a ruler" }
+  - { function: func_dissent, order: 3, actor: willow_wren_green_plover,
+      scene: "the green plover rejects kingship and withdraws to a marsh" }
+  - { function: func_assembly, order: 4, actor: willow_wren_bird_assembly,
+      scene: "birds gather from woods and fields to discuss the matter" }
+  - { function: func_contest_proclamation, order: 5, actor: willow_wren_bird_assembly,
+      scene: "the highest flyer will be king" }
+  - { function: func_trick_victory, order: 6, actor: willow_wren_nameless_bird,
+      scene: "the nameless bird hides in eagle feathers and flies above the eagle" }
+  - { function: func_contest_revision, order: 7, actor: willow_wren_bird_assembly,
+      scene: "the angry birds set a second contest for going lowest into the ground" }
+  - { function: func_trick_victory, order: 8, actor: willow_wren_nameless_bird,
+      scene: "the little bird wins again by slipping into a mouse-hole" }
+  - { function: func_confinement, order: 9, actor: willow_wren_bird_assembly,
+      scene: "the birds imprison him in the hole under owl guard" }
+  - { function: func_escape, order: 10, actor: willow_wren_nameless_bird,
+      scene: "the owl falls asleep and the little bird slips away" }
+  - { function: func_etiology, order: 11, actor: law_failed_sentinel_creates_nocturnal_etiology,
+      scene: "owl nocturnality, mouse hatred, hedge-wren hiding, and lark joy are explained" }
+
+
+edges:
+
+  # Meaningful sound and bird politics
+  - { from: willow_wren_bird_assembly, to: agency_speech, label: SHARES_OLD_LANGUAGE,
+      evidence: "the birds also had their own language which every one understood" }
+  - { from: willow_wren_bird_assembly, to: willow_wren_eagle, label: SEEKS_KING_AMONG,
+      evidence: "would choose one of themselves to be their King" }
+  - { from: willow_wren_green_plover, to: willow_wren_bird_assembly, label: OPPOSES_KINGSHIP_OF,
+      evidence: "He had lived free, and would die free" }
+  - { from: willow_wren_green_plover, to: loc_willow_wren_marsh, label: RETIRES_TO,
+      evidence: "retired into a solitary and unfrequented marsh" }
+  - { from: willow_wren_bird_assembly, to: loc_willow_wren_bird_assembly, label: GATHERS_AT,
+      evidence: "all gathered together from the woods and fields" }
+  - { from: willow_wren_hen, to: willow_wren_cock, label: ASKS_ABOUT_ASSEMBLY,
+      evidence: "What, what, what is going to be done?" }
+  - { from: willow_wren_tree_frog, to: willow_wren_bird_assembly, label: WARNS,
+      evidence: "cried a warning" }
+  - { from: willow_wren_crow, to: willow_wren_tree_frog, label: DISMISSES_WARNING,
+      evidence: "all would pass off peaceably" }
+
+  # Highest-flight contest
+  - { from: willow_wren_bird_assembly, to: willow_wren_eagle, label: SETS_HIGHEST_FLIGHT_CONTEST,
+      evidence: "the one who could fly the highest should be King" }
+  - { from: willow_wren_eagle, to: loc_willow_wren_sky_height, label: MOUNTS_NEAR,
+      evidence: "mounted so high" }
+  - { from: willow_wren_nameless_bird, to: willow_wren_eagle, label: HIDES_IN_FEATHERS_OF,
+      evidence: "had crept into the breast-feathers of the eagle" }
+  - { from: willow_wren_nameless_bird, to: loc_willow_wren_sky_height, label: RISES_ABOVE,
+      evidence: "mounted so high that he reached heaven itself" }
+  - { from: willow_wren_nameless_bird, to: willow_wren_bird_assembly, label: CLAIMS_KINGSHIP_OVER,
+      evidence: "I am King! I am King." }
+  - { from: willow_wren_bird_assembly, to: willow_wren_nameless_bird, label: ACCUSES_CUNNING,
+      evidence: "Thou hast compassed it by trick and cunning!" }
+
+  # Lowest-depth contest and confinement
+  - { from: willow_wren_bird_assembly, to: willow_wren_nameless_bird, label: SETS_LOWEST_DEPTH_CONTEST,
+      evidence: "He should be King who could go down lowest in the ground" }
+  - { from: willow_wren_goose, to: loc_willow_wren_bird_assembly, label: FLAPS_ON_LAND,
+      evidence: "flap about with its broad breast" }
+  - { from: willow_wren_duck, to: loc_willow_wren_bird_assembly, label: SPRAINS_LEGS_IN_DITCH,
+      evidence: "sprained her legs" }
+  - { from: willow_wren_nameless_bird, to: loc_willow_wren_mouse_hole, label: SLIPS_INTO,
+      evidence: "slipped down into it" }
+  - { from: law_tiny_trickster_wins_animal_kingship_contests, to: willow_wren_nameless_bird, label: AWARDS_DOUBLE_CLAIM_TO,
+      evidence: "I am King! I am King!" }
+  - { from: willow_wren_bird_assembly, to: willow_wren_nameless_bird, label: IMPRISONS_IN_HOLE,
+      evidence: "keep him a prisoner in the hole" }
+  - { from: willow_wren_bird_assembly, to: willow_wren_owl, label: APPOINTS_SENTINEL,
+      evidence: "The owl was placed as sentinel" }
+  - { from: willow_wren_owl, to: loc_willow_wren_mouse_hole, label: WATCHES,
+      evidence: "remained standing by the mouse-hole" }
+  - { from: willow_wren_owl, to: willow_wren_nameless_bird, label: FAILS_TO_GUARD,
+      evidence: "she forgot to open the other" }
+  - { from: willow_wren_nameless_bird, to: willow_wren_owl, label: ESCAPES_FROM,
+      evidence: "slipped away" }
+
+  # Etiological aftermath
+  - { from: law_failed_sentinel_creates_nocturnal_etiology, to: willow_wren_owl, label: MAKES_HIDE_BY_DAY,
+      evidence: "has never dared to show herself by daylight" }
+  - { from: willow_wren_owl, to: loc_willow_wren_mouse_hole, label: HATES_BECAUSE_OF,
+      evidence: "hates and pursues mice because they make such ugly holes" }
+  - { from: willow_wren_nameless_bird, to: loc_willow_wren_hedges, label: HIDES_IN,
+      evidence: "steals about in the hedges" }
+  - { from: willow_wren_bird_assembly, to: willow_wren_nameless_bird, label: MOCKS_AS_HEDGE_KING,
+      evidence: "call him in mockery, ‘King of the hedges’" }
+  - { from: willow_wren_lark, to: willow_wren_nameless_bird, label: REJOICES_NOT_TO_OBEY,
+      evidence: "happy as the lark at not having to obey the little King" }

@@ -1,0 +1,394 @@
+book_id: pg22555-grimm-eeden-dutch
+source_file: ../../1-bronze/pg22555.txt
+total: 39
+tales:
+- title: De kleermaker in den hemel
+  slug: de-kleermaker-in-den-hemel
+  body_line: 82
+  khm: 35
+  atu: '800'
+  kind: tale
+  word_count: 729
+  char_count: 4057
+  language: nl
+  title_de: Der Schneider im Himmel
+- title: Tafeltje dek je, Goudezel, en Knuppel uit de zak
+  slug: tafeltje-dek-je-goudezel-en-knuppel-uit-de-zak
+  body_line: 159
+  khm: 36
+  atu: '563'
+  kind: tale
+  word_count: 3587
+  char_count: 19379
+  language: nl
+  title_de: Tischchendeckdich, Goldesel und Knüppel aus dem Sack
+- title: Duimpje
+  slug: duimpje
+  body_line: 528
+  khm: 37
+  atu: '700'
+  kind: tale
+  word_count: 2090
+  char_count: 10951
+  language: nl
+  title_de: Daumesdick
+- title: De bruiloft van vrouw Vos
+  slug: de-bruiloft-van-vrouw-vos
+  body_line: 714
+  khm: 38
+  atu: '65'
+  kind: tale
+  word_count: 711
+  char_count: 4001
+  language: nl
+  title_de: Die Hochzeit der Frau Füchsin
+- title: De Kaboutertjes
+  slug: de-kaboutertjes
+  body_line: 858
+  khm: 39
+  atu: '503'
+  kind: tale
+  word_count: 1090
+  char_count: 6013
+  language: nl
+  title_de: Die Wichtelmänner
+- title: De Rooverbruigom
+  slug: de-rooverbruigom
+  body_line: 982
+  khm: 40
+  atu: '955'
+  kind: tale
+  word_count: 1246
+  char_count: 6731
+  language: nl
+  title_de: Der Räuberbräutigam
+- title: Mijnheer Korbes
+  slug: mijnheer-korbes
+  body_line: 1113
+  khm: 41
+  atu: '210'
+  kind: tale
+  word_count: 351
+  char_count: 1958
+  language: nl
+  title_de: Herr Korbes
+- title: De Peet
+  slug: de-peet
+  body_line: 1164
+  khm: 42
+  atu: '332'
+  kind: tale
+  word_count: 562
+  char_count: 3036
+  language: nl
+  title_de: Der Herr Gevatter
+- title: Vrouw Trude
+  slug: vrouw-trude
+  body_line: 1219
+  khm: 43
+  atu: '334'
+  kind: tale
+  word_count: 280
+  char_count: 1498
+  language: nl
+  title_de: Frau Trude
+- title: Peet de Dood
+  slug: peet-de-dood
+  body_line: 1268
+  khm: 44
+  atu: '332'
+  kind: tale
+  word_count: 1064
+  char_count: 5608
+  language: nl
+  title_de: Der Gevatter Tod
+- title: Hoe Duimpje op reis ging
+  slug: hoe-duimpje-op-reis-ging
+  body_line: 1368
+  khm: 45
+  atu: '700'
+  kind: tale
+  word_count: 1440
+  char_count: 7780
+  language: nl
+  title_de: Daumerlings Wanderschaft
+- title: Fitscher's Vogel
+  slug: fitscher-s-vogel
+  body_line: 1508
+  khm: 46
+  atu: '311'
+  kind: tale
+  word_count: 1148
+  char_count: 6187
+  language: nl
+  title_de: Fitchers Vogel
+- title: Van den Amandelboom
+  slug: van-den-amandelboom
+  body_line: 1627
+  khm: 47
+  atu: '720'
+  kind: tale
+  word_count: 2943
+  char_count: 15813
+  language: nl
+  title_de: Von dem Machandelboom
+- title: De oude Sultan
+  slug: de-oude-sultan
+  body_line: 2010
+  khm: 48
+  atu: '101'
+  kind: tale
+  word_count: 833
+  char_count: 4376
+  language: nl
+  title_de: Der alte Sultan
+- title: De zes Zwanen
+  slug: de-zes-zwanen
+  body_line: 2087
+  khm: 49
+  atu: '451'
+  kind: tale
+  word_count: 1801
+  char_count: 9836
+  language: nl
+  title_de: Die sechs Schwäne
+- title: Doornenroosje
+  slug: doornenroosje
+  body_line: 2256
+  khm: 50
+  atu: '410'
+  kind: tale
+  word_count: 1128
+  char_count: 6341
+  language: nl
+  title_de: Dornröschen
+- title: Vogelbuit
+  slug: vogelbuit
+  body_line: 2363
+  khm: 51
+  atu: '313'
+  kind: tale
+  word_count: 887
+  char_count: 4863
+  language: nl
+  title_de: Fundevogel
+- title: Koning Lijsterbaard
+  slug: koning-lijsterbaard
+  body_line: 2456
+  khm: 52
+  atu: '900'
+  kind: tale
+  word_count: 1482
+  char_count: 8121
+  language: nl
+  title_de: König Drosselbart
+- title: Sneeuwwitje
+  slug: sneeuwwitje
+  body_line: 2617
+  khm: 53
+  atu: '709'
+  kind: tale
+  word_count: 2833
+  char_count: 16016
+  language: nl
+  title_de: Sneewittchen
+- title: De Ransel, het Hoedje en het Hoorntje
+  slug: de-ransel-het-hoedje-en-het-hoorntje
+  body_line: 2952
+  khm: 54
+  atu: '569'
+  kind: tale
+  word_count: 2082
+  char_count: 11444
+  language: nl
+  title_de: Der Ranzen, das Hütlein und das Hörnlein
+- title: Rompelsteeltje
+  slug: rompelsteeltje
+  body_line: 3133
+  khm: 55
+  atu: '500'
+  kind: tale
+  word_count: 917
+  char_count: 5042
+  language: nl
+  title_de: Rumpelstilzchen
+- title: De liefste Roland
+  slug: de-liefste-roland
+  body_line: 3226
+  khm: 56
+  atu: '1119'
+  kind: tale
+  word_count: 1384
+  char_count: 7393
+  language: nl
+  title_de: Der Liebste Roland
+- title: De gouden Vogel
+  slug: de-gouden-vogel
+  body_line: 3353
+  khm: 57
+  atu: '550'
+  kind: tale
+  word_count: 2766
+  char_count: 14854
+  language: nl
+  title_de: Der goldene Vogel
+- title: De Hond en de Musch
+  slug: de-hond-en-de-musch
+  body_line: 3603
+  khm: 58
+  atu: 248A
+  kind: tale
+  word_count: 1121
+  char_count: 5777
+  language: nl
+  title_de: Der Hund und der Sperling
+- title: Frieder en Katerliesje
+  slug: frieder-en-katerliesje
+  body_line: 3705
+  khm: 59
+  atu: '1387'
+  kind: tale
+  word_count: 2390
+  char_count: 12766
+  language: nl
+  title_de: Der Frieder und das Catherlieschen
+- title: De twee Broeders
+  slug: de-twee-broeders
+  body_line: 3912
+  khm: 60
+  atu: '567'
+  kind: tale
+  word_count: 7836
+  char_count: 42062
+  language: nl
+  title_de: Die zwei Brüder
+- title: Het Boerke
+  slug: het-boerke
+  body_line: 4599
+  khm: 61
+  atu: '1535'
+  kind: tale
+  word_count: 1833
+  char_count: 9787
+  language: nl
+  title_de: Das Bürle
+- title: De Bijenkoningin
+  slug: de-bijenkoningin
+  body_line: 4767
+  khm: 62
+  atu: '554'
+  kind: tale
+  word_count: 724
+  char_count: 4083
+  language: nl
+  title_de: Die Bienenkönigin
+- title: De drie Veeren
+  slug: de-drie-veeren
+  body_line: 4838
+  khm: 63
+  atu: '402'
+  kind: tale
+  word_count: 943
+  char_count: 5197
+  language: nl
+  title_de: Die drei Federn
+- title: De gouden Gans
+  slug: de-gouden-gans
+  body_line: 4941
+  khm: 64
+  atu: '571'
+  kind: tale
+  word_count: 1441
+  char_count: 7627
+  language: nl
+  title_de: Die goldene Gans
+- title: Albontje
+  slug: albontje
+  body_line: 5065
+  khm: 65
+  atu: 510B
+  kind: tale
+  word_count: 2016
+  char_count: 10782
+  language: nl
+  title_de: Allerleirauh
+- title: Hazebruidje
+  slug: hazebruidje
+  body_line: 5244
+  khm: 66
+  atu: '311'
+  kind: tale
+  word_count: 419
+  char_count: 2234
+  language: nl
+  title_de: Häsichenbraut
+- title: De twaalf Jagers
+  slug: de-twaalf-jagers
+  body_line: 5291
+  khm: 67
+  atu: '884'
+  kind: tale
+  word_count: 1038
+  char_count: 5702
+  language: nl
+  title_de: Die zwölf Jäger
+- title: De Gauwdief en zijn Meester
+  slug: de-gauwdief-en-zijn-meester
+  body_line: 5391
+  khm: 68
+  atu: '325'
+  kind: tale
+  word_count: 739
+  char_count: 3835
+  language: nl
+  title_de: De Gaudeif un sien Meester
+- title: Jorinde en Joringel
+  slug: jorinde-en-joringel
+  body_line: 5464
+  khm: 69
+  atu: '405'
+  kind: tale
+  word_count: 871
+  char_count: 4782
+  language: nl
+  title_de: Jorinde und Joringel
+- title: De drie Gelukskinderen
+  slug: de-drie-gelukskinderen
+  body_line: 5556
+  khm: 70
+  atu: '1650'
+  kind: tale
+  word_count: 929
+  char_count: 5016
+  language: nl
+  title_de: Die drei Glückskinder
+- title: Hoe er zes door de wereld kwamen
+  slug: hoe-er-zes-door-de-wereld-kwamen
+  body_line: 5645
+  khm: 71
+  atu: 513A
+  kind: tale
+  word_count: 1922
+  char_count: 10244
+  language: nl
+  title_de: Sechse kommen durch die ganze Welt
+- title: De Wolf en de Mensch
+  slug: de-wolf-en-de-mensch
+  body_line: 5825
+  khm: 72
+  atu: '157'
+  kind: tale
+  word_count: 398
+  char_count: 2025
+  language: nl
+  title_de: Der Wolf und der Mensch
+- title: De Wolf en de Vos
+  slug: de-wolf-en-de-vos
+  body_line: 5865
+  khm: 73
+  atu: '41'
+  kind: tale
+  word_count: 780
+  char_count: 4262
+  language: nl
+  title_de: Der Wolf und der Fuchs

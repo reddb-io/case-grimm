@@ -1,0 +1,198 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-old-man-and-his-grandson
+khm: 78
+atu: '980B'
+atu_name: The Wooden Bowl
+canonical_source: ../../2-silver/canonical/the-old-man-and-his-grandson/canonical.txt
+title: The Old Man and His Grandson
+
+
+entities:
+
+  characters:
+
+    old_man_grandfather:
+      name: The Old Grandfather
+      archetypes: [arc_neglected_elder]
+      species: sp_human
+      agency_modes: [agency_endurance]
+      affects: [affect_grief]
+      traits: [dim-eyed, dull-hearing, trembling-kneed, spilling-eater, stove-corner-exiled, underfed, tearful, silent-sigher, table-restored]
+      evidence: |
+        There was once a very old man, whose eyes had become dim, his
+        ears dull of hearing, his knees trembled
+
+    old_man_son:
+      name: The Old Man's Son
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_command]
+      affects: [affect_disgust, affect_shame]
+      traits: [father-excluding, bowl-buyer, child-questioner, shame-reformed, table-restorer]
+      evidence: |
+        His son and his son’s wife were disgusted at this
+
+    old_man_young_wife:
+      name: The Young Wife
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_command]
+      affects: [affect_disgust, affect_shame]
+      traits: [elder-excluding, underfeeding, scolding, shame-reformed, tolerant]
+      evidence: |
+        The young wife scolded him
+
+    old_man_grandson:
+      name: The Little Grandson
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      affects: [affect_pity]
+      traits: [four-years-old, wood-gatherer, future-trough-maker, moral-mirror-child]
+      evidence: |
+        the little grandson of four years old began to gather together
+        some bits of wood upon the ground.
+
+  magic_objects:
+
+    obj_old_man_earthenware_bowl:
+      name: The Earthenware Bowl
+      object_kind: tool
+      attributes:
+        function: first separate eating vessel that marks the grandfather's exclusion
+      evidence: |
+        they gave him his food in an earthenware bowl
+
+    obj_old_man_wooden_bowl:
+      name: The Wooden Bowl
+      instance_of: obj_elder_wooden_bowl
+      object_kind: tool
+      attributes:
+        function: cheap replacement vessel for the excluded grandfather after the first bowl breaks
+      evidence: |
+        they bought him a wooden bowl for a few half-pence
+
+    obj_grandson_little_trough:
+      name: The Grandson's Little Trough
+      instance_of: obj_elder_wooden_bowl
+      object_kind: tool
+      attributes:
+        function: child's future vessel for his parents that reveals the moral consequence of their conduct
+      evidence: |
+        I am making a little trough
+
+  locations:
+
+    loc_old_man_house:
+      name: The Family House
+      instance_of: loc_house
+      evidence: |
+        when he sat at table
+
+    loc_old_man_family_table:
+      name: The Family Table
+      instance_of: loc_house
+      evidence: |
+        when he sat at table he could hardly hold the spoon
+
+    loc_old_man_stove_corner:
+      name: The Corner behind the Stove
+      instance_of: loc_hearth
+      evidence: |
+        had to sit in the corner behind the stove
+
+
+classifications:
+
+  world_laws:
+    - law_child_mirror_reveals_filial_future
+
+  moral_regimes:
+    - moral_filial_reciprocity
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_object_mediation
+    - agency_domestic_labor
+    - agency_social_rank
+    - agency_endurance
+
+  affects_driving:
+    - affect_disgust
+    - affect_shame
+    - affect_grief
+    - affect_pity
+
+  symbol_numbers:
+    - num_4
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: old_man_grandfather,
+      scene: "the grandfather's age makes eating at the family table messy and difficult" }
+  - { function: func_exclusion, order: 2, actor: old_man_son,
+      scene: "the son and wife move the grandfather to the stove corner and feed him separately" }
+  - { function: func_humiliation, order: 3, actor: old_man_young_wife,
+      scene: "after the earthenware bowl breaks, the grandfather is scolded and given a cheap wooden bowl" }
+  - { function: func_moral_mirroring, order: 4, actor: old_man_grandson,
+      scene: "the four-year-old gathers wood to make a future trough for his parents" }
+  - { function: func_recognition, order: 5, actor: old_man_son,
+      scene: "the parents cry when they understand that their conduct will be returned upon them" }
+  - { function: func_restoration, order: 6, actor: old_man_son,
+      scene: "the grandfather is restored to the family table and tolerated even when he spills" }
+
+
+edges:
+
+  # Elder frailty becomes household exclusion
+  - { from: old_man_grandfather, to: affect_grief, label: EMBODIES,
+      evidence: "he used to look towards the table with his eyes full of tears" }
+  - { from: old_man_grandfather, to: loc_old_man_family_table, label: STRUGGLES_AT,
+      evidence: "when he sat at table he could hardly hold the spoon" }
+  - { from: old_man_son, to: affect_disgust, label: FEELS,
+      evidence: "His son and his son’s wife were disgusted at this" }
+  - { from: old_man_young_wife, to: affect_disgust, label: FEELS,
+      evidence: "His son and his son’s wife were disgusted at this" }
+  - { from: old_man_son, to: old_man_grandfather, label: EXCLUDES_FROM_TABLE,
+      evidence: "the old grandfather at last had to sit in the corner behind the stove" }
+  - { from: old_man_grandfather, to: loc_old_man_stove_corner, label: MADE_TO_SIT_IN,
+      evidence: "had to sit in the corner behind the stove" }
+  - { from: old_man_son, to: obj_old_man_earthenware_bowl, label: FEEDS_WITH,
+      evidence: "they gave him his food in an earthenware bowl" }
+  - { from: old_man_son, to: old_man_grandfather, label: UNDERFEEDS,
+      evidence: "and not even enough of it" }
+  - { from: old_man_grandfather, to: obj_old_man_earthenware_bowl, label: BREAKS,
+      evidence: "it fell to the ground and broke" }
+  - { from: old_man_young_wife, to: old_man_grandfather, label: SCOLDS,
+      evidence: "The young wife scolded him" }
+  - { from: old_man_grandfather, to: old_man_young_wife, label: REMAINS_SILENT,
+      evidence: "he said nothing and only sighed" }
+  - { from: old_man_son, to: obj_old_man_wooden_bowl, label: BUYS_FOR_ELDER,
+      evidence: "they bought him a wooden bowl for a few half-pence" }
+  - { from: old_man_grandfather, to: obj_old_man_wooden_bowl, label: FORCED_TO_EAT_FROM,
+      evidence: "out of which he had to eat" }
+
+  # Child's mirror reforms the parents
+  - { from: old_man_grandson, to: num_4, label: AGED_AS,
+      evidence: "four years old" }
+  - { from: old_man_grandson, to: obj_grandson_little_trough, label: MAKES,
+      evidence: "I am making a little trough" }
+  - { from: obj_grandson_little_trough, to: law_child_mirror_reveals_filial_future, label: MATERIALIZES,
+      evidence: "for father and mother to eat out of when I am big" }
+  - { from: old_man_grandson, to: old_man_son, label: MIRRORS_FUTURE_CARE,
+      evidence: "for father and mother to eat out of when I am big" }
+  - { from: old_man_son, to: old_man_young_wife, label: RECOGNIZES_WITH,
+      evidence: "The man and his wife looked at each other for a while" }
+  - { from: old_man_son, to: affect_shame, label: MOVED_TO,
+      evidence: "presently began to cry" }
+  - { from: old_man_young_wife, to: affect_shame, label: MOVED_TO,
+      evidence: "presently began to cry" }
+  - { from: old_man_son, to: old_man_grandfather, label: RESTORES_TO_TABLE,
+      evidence: "Then they took the old grandfather to the table" }
+  - { from: old_man_young_wife, to: old_man_grandfather, label: TOLERATES_SPILLING,
+      evidence: "said nothing if he did spill a little of anything" }
+  - { from: moral_filial_reciprocity, to: old_man_grandfather, label: RESTORES_CARE_FOR,
+      evidence: "henceforth always let him eat with them" }

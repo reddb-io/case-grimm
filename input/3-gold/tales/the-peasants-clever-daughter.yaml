@@ -1,0 +1,363 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-peasants-clever-daughter
+khm: 94
+atu: '875'
+atu_name: The Clever Peasant Girl
+canonical_source: ../../2-silver/canonical/the-peasants-clever-daughter/canonical.txt
+title: The Peasant's Clever Daughter
+
+
+entities:
+
+  characters:
+
+    peasants_clever_daughter:
+      name: The Peasant's Clever Daughter / Queen
+      archetypes: [arc_clever_peasant_bride]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_social_rank, agency_object_mediation]
+      speech_acts_performed: [speech_riddle, speech_command]
+      affects: [affect_love, affect_loyalty, affect_pity]
+      traits: [poor-peasant-daughter, practical-wisdom, riddle-solver, queen, judicial-adviser, literal-command-restorer]
+      evidence: |
+        She at once said yes, she would guess it.
+
+    peasants_clever_father:
+      name: The Poor Peasant Father
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      existential_states: [state_imprisoned]
+      affects: [affect_grief]
+      traits: [landless, grateful-to-king, daughter-disobeyer, prison-regretful, released-father]
+      evidence: |
+        Ah! if I had but listened to my daughter!
+
+    peasants_clever_king:
+      name: The King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_riddle, speech_command]
+      affects: [affect_love, affect_anger, affect_shame]
+      traits: [land-granter, riddle-tester, husband, bad-judge, wife-dismisser, reconciled-king]
+      evidence: |
+        he would set her a riddle, and if she could guess that, he
+        would marry her.
+
+    peasants_clever_servants:
+      name: The King's Servants
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [prison-feeders, report-the-prisoner, carriage-assistants]
+      evidence: |
+        The servants had daily to carry him bread and water
+
+    peasants_clever_wood_peasants:
+      name: The Wood-Selling Peasants
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_violence]
+      traits: [wagon-drivers, parade-blockers, quarrelers, beaten-disputants]
+      evidence: |
+        some peasants who had been selling wood stopped with their
+        waggons before the palace
+
+    peasants_clever_horse_peasant:
+      name: The Peasant with Three Horses
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning]
+      affects: [affect_grief]
+      traits: [foal-owner, wronged-litigant, queen-suppliant, tortured-confessor]
+      evidence: |
+        There was one peasant who had three horses
+
+    peasants_clever_oxen_peasant:
+      name: The Peasant with the Oxen
+      species: sp_human
+      agency_modes: [agency_speech, agency_violence]
+      affects: [affect_greed]
+      existential_states: [state_deceived]
+      traits: [false-foal-claimant, verdict-winner, beneficiary-of-bad-judgment]
+      evidence: |
+        the peasant with the oxen wanted to keep the foal
+
+    peasants_clever_foal:
+      name: The Disputed Foal
+      species: sp_horse
+      traits: [newborn, misplaced-between-oxen, disputed-property, judgment-object]
+      evidence: |
+        one of which was delivered of a young foal
+
+    peasants_clever_oxen:
+      name: The Two Oxen
+      traits: [wagon-yoked, false-parents-in-verdict, absurd-birth-claim]
+      evidence: |
+        two oxen which were in front of the waggon
+
+    peasants_clever_ass:
+      name: The Hired Ass
+      species: sp_donkey
+      traits: [riddle-vehicle, net-dragger, neither-riding-nor-walking-device]
+      evidence: |
+        she hired an ass
+
+  magic_objects:
+
+    obj_peasants_clever_gold_mortar:
+      name: The Pure Gold Mortar
+      object_kind: treasure
+      attributes:
+        function: gift-object that triggers the king's demand for its missing pair
+      evidence: |
+        a mortar made of pure gold
+
+    obj_peasants_clever_missing_pestle:
+      name: The Missing Pestle
+      object_kind: tool
+      attributes:
+        function: absent counterpart demanded by the king
+      evidence: |
+        he must now bring him the pestle
+
+    obj_peasants_clever_fishing_net:
+      name: The Fishing Net
+      object_kind: tool
+      attributes:
+        first_use: clothing-paradox solution
+        second_use: dry-land fishing analogy
+      evidence: |
+        took a great fishing net
+
+    obj_peasants_clever_sleeping_draught:
+      name: The Powerful Sleeping Draught
+      object_kind: food
+      attributes:
+        function: puts the king to sleep so the queen can take him away as her dearest thing
+      evidence: |
+        a powerful sleeping draught
+
+    obj_peasants_clever_white_linen:
+      name: The Fair White Linen Cloth
+      object_kind: material
+      attributes:
+        function: wraps the sleeping king for transport
+      evidence: |
+        took a fair white linen cloth and wrapped the King in it
+
+    obj_peasants_clever_carriage:
+      name: The Carriage before the Door
+      object_kind: tool
+      attributes:
+        function: carries the sleeping king from palace to peasant house
+      evidence: |
+        a carriage that stood before the door
+
+  locations:
+
+    loc_peasants_clever_house:
+      name: The Poor Peasant's Small House
+      instance_of: loc_house
+      evidence: |
+        only a small house
+
+    loc_peasants_clever_cleared_land:
+      name: The Newly-Cleared Land
+      instance_of: loc_field
+      evidence: |
+        a bit of newly-cleared land
+
+    loc_peasants_clever_prison:
+      name: The King's Prison
+      instance_of: loc_dungeon
+      evidence: |
+        he was put in prison
+
+    loc_peasants_clever_palace:
+      name: The Royal Palace
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        before the palace
+
+    loc_peasants_clever_parade_road:
+      name: The Parade Road
+      instance_of: loc_road
+      evidence: |
+        in the middle of the road by which he must pass
+
+    loc_peasants_clever_peasant_hut:
+      name: The Queen's Peasant Hut
+      instance_of: loc_house
+      evidence: |
+        thy peasant’s hut
+
+    loc_peasants_clever_little_bed:
+      name: The Queen's Little Bed
+      instance_of: loc_house
+      evidence: |
+        She laid him in her own little bed
+
+
+classifications:
+
+  world_laws:
+    - law_paradox_condition_proves_wisdom
+    - law_counter_absurdity_exposes_bad_judgment
+    - law_dearest_literalism_restores_marriage
+    - law_promise_binds_reality
+
+  moral_regimes:
+    - moral_restorative
+    - moral_humbling_reform
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_social_rank
+    - agency_object_mediation
+
+  affects_driving:
+    - affect_love
+    - affect_grief
+    - affect_shame
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: peasants_clever_father,
+      scene: "A poor peasant has only a small house and one daughter.",
+      evidence: "There was once a poor peasant who had no land" }
+  - { function: func_donor_gift, order: 2, actor: peasants_clever_king,
+      scene: "The king gives the poor household a piece of newly-cleared land.",
+      evidence: "he presented them with a piece of land" }
+  - { function: func_interdiction, order: 3, actor: peasants_clever_daughter,
+      scene: "The daughter warns that giving the golden mortar will cause a demand for the missing pestle.",
+      evidence: "we shall have to get the pestle" }
+  - { function: func_violation, order: 4, actor: peasants_clever_father,
+      scene: "The father ignores her counsel and gives the king the mortar.",
+      evidence: "He would, however, not obey her" }
+  - { function: func_punishment, order: 5, actor: peasants_clever_king,
+      scene: "The king imprisons the father until he produces the missing pestle.",
+      evidence: "he was put in prison" }
+  - { function: func_mediation, order: 6, actor: peasants_clever_servants,
+      scene: "The servants hear the prisoner's regret and report it to the king.",
+      evidence: "they heard how the man cried out continually" }
+  - { function: func_difficult_task, order: 7, actor: peasants_clever_king,
+      scene: "The king summons the daughter and sets the paradox condition for marriage.",
+      evidence: "Come to me not clothed, not naked, not riding, not walking" }
+  - { function: func_solution, order: 8, actor: peasants_clever_daughter,
+      scene: "She uses the fishing net, ass, ruts, and toe-touch to satisfy every condition.",
+      evidence: "fulfilled all the conditions" }
+  - { function: func_wedding, order: 9, actor: peasants_clever_king,
+      scene: "The father is released, the king marries the clever daughter, and she receives care of royal possessions.",
+      evidence: "took her to wife" }
+  - { function: func_false_claim, order: 10, actor: peasants_clever_oxen_peasant,
+      scene: "A foal lies between oxen, and the oxen's owner claims that an ox gave birth to it.",
+      evidence: "one of the oxen had given birth to it" }
+  - { function: func_bad_judgment, order: 11, actor: peasants_clever_king,
+      scene: "The king gives the foal to the wrong peasant because of where it was found.",
+      evidence: "the foal should stay where it had been found" }
+  - { function: func_countertest, order: 12, actor: peasants_clever_daughter,
+      scene: "The queen instructs the wronged peasant to fish on dry land as a counter-absurdity.",
+      evidence: "fished on dry ground" }
+  - { function: func_exposure, order: 13, actor: peasants_clever_horse_peasant,
+      scene: "The analogy exposes the king's verdict as no less impossible than fishing without water.",
+      evidence: "as easy for me to fish on dry land as it is for an ox to have a foal" }
+  - { function: func_banishment, order: 14, actor: peasants_clever_king,
+      scene: "The king dismisses the queen to her peasant hut but lets her take what is dearest to her.",
+      evidence: "go back to the place from whence thou camest to thy peasant’s hut" }
+  - { function: func_cunning_compliance, order: 15, actor: peasants_clever_daughter,
+      scene: "The queen gives the king a sleeping draught and takes him away as her dearest possession.",
+      evidence: "I have nothing more precious and dear than yourself" }
+  - { function: func_reconciliation, order: 16, actor: peasants_clever_king,
+      scene: "The king recognises the affectionate literalism and restores the marriage.",
+      evidence: "Dear wife, thou shalt be mine and I will be thine" }
+
+
+edges:
+
+  # Mortar, pestle, and first judgment
+  - { from: peasants_clever_daughter, to: peasants_clever_father, label: REQUESTS_LAND_FROM_KING,
+      evidence: "We ought to ask our lord the King for a bit of newly-cleared land." }
+  - { from: peasants_clever_king, to: loc_peasants_clever_cleared_land, label: GRANTS,
+      evidence: "he presented them with a piece of land" }
+  - { from: peasants_clever_father, to: obj_peasants_clever_gold_mortar, label: FINDS,
+      evidence: "they found in the earth a mortar made of pure gold" }
+  - { from: peasants_clever_daughter, to: peasants_clever_father, label: WARNS,
+      evidence: "we shall have to get the pestle" }
+  - { from: peasants_clever_father, to: peasants_clever_king, label: GIVES,
+      evidence: "carried it to the King" }
+  - { from: peasants_clever_king, to: obj_peasants_clever_missing_pestle, label: DEMANDS,
+      evidence: "he must now bring him the pestle" }
+  - { from: peasants_clever_king, to: peasants_clever_father, label: IMPRISONS,
+      evidence: "he was put in prison" }
+  - { from: peasants_clever_father, to: peasants_clever_daughter, label: REGRETS_NOT_LISTENING_TO,
+      evidence: "if I had but listened to my daughter" }
+  - { from: peasants_clever_servants, to: peasants_clever_king, label: REPORT_REGRET_TO,
+      evidence: "he commanded the servants to bring the prisoner before him" }
+
+  # Paradox condition and marriage
+  - { from: peasants_clever_king, to: peasants_clever_daughter, label: SUMMONS,
+      evidence: "let her come here" }
+  - { from: peasants_clever_king, to: peasants_clever_daughter, label: SETS_RIDDLE_FOR,
+      evidence: "Come to me not clothed, not naked, not riding, not walking" }
+  - { from: peasants_clever_daughter, to: obj_peasants_clever_fishing_net, label: WRAPS_SELF_IN,
+      evidence: "wrapped it entirely round and round her" }
+  - { from: peasants_clever_daughter, to: peasants_clever_ass, label: HIRES,
+      evidence: "she hired an ass" }
+  - { from: peasants_clever_ass, to: peasants_clever_daughter, label: DRAGS,
+      evidence: "it was forced to drag her along" }
+  - { from: peasants_clever_daughter, to: loc_peasants_clever_parade_road, label: TOUCHES_WITH_TOE_ONLY,
+      evidence: "only touched the ground with her great toe" }
+  - { from: law_paradox_condition_proves_wisdom, to: peasants_clever_daughter, label: VALIDATES_WISDOM_OF,
+      evidence: "guessed the riddle and fulfilled all the conditions" }
+  - { from: peasants_clever_king, to: peasants_clever_father, label: RELEASES,
+      evidence: "ordered her father to be released from the prison" }
+  - { from: peasants_clever_king, to: peasants_clever_daughter, label: MARRIES,
+      evidence: "took her to wife" }
+  - { from: peasants_clever_king, to: peasants_clever_daughter, label: ENTRUSTS_POSSESSIONS_TO,
+      evidence: "gave into her care all the royal possessions" }
+
+  # Foal verdict and dry-land fishing
+  - { from: peasants_clever_horse_peasant, to: peasants_clever_foal, label: OWNS,
+      evidence: "one of which was delivered of a young foal" }
+  - { from: peasants_clever_foal, to: peasants_clever_oxen, label: LIES_BETWEEN,
+      evidence: "lay down between two oxen" }
+  - { from: peasants_clever_oxen_peasant, to: peasants_clever_foal, label: CLAIMS_FALSELY,
+      evidence: "one of the oxen had given birth to it" }
+  - { from: peasants_clever_king, to: peasants_clever_oxen_peasant, label: AWARDS_FOAL_TO,
+      evidence: "the peasant with the oxen, to whom it did not belong, got it" }
+  - { from: peasants_clever_horse_peasant, to: peasants_clever_daughter, label: PETITIONS,
+      evidence: "begged her to see if she could not help him to get his foal back again" }
+  - { from: peasants_clever_daughter, to: peasants_clever_horse_peasant, label: COMMANDS_DRY_LAND_FISHING,
+      evidence: "take a great fishing-net and pretend to be fishing" }
+  - { from: peasants_clever_horse_peasant, to: loc_peasants_clever_parade_road, label: FISHES_ON_DRY_GROUND,
+      evidence: "stood there, and fished on dry ground" }
+  - { from: peasants_clever_horse_peasant, to: peasants_clever_king, label: ANSWERS_WITH_COUNTER_ABSURDITY,
+      evidence: "It is as easy for me to fish on dry land as it is for an ox to have a foal." }
+  - { from: law_counter_absurdity_exposes_bad_judgment, to: peasants_clever_king, label: EXPOSES_BAD_VERDICT_OF,
+      evidence: "he wanted to know whose it was" }
+  - { from: peasants_clever_horse_peasant, to: peasants_clever_daughter, label: BETRAYS_SOURCE_OF_ADVICE,
+      evidence: "he admitted that he had got the idea from the Queen" }
+
+  # Dismissal, literal dearest thing, and restoration
+  - { from: peasants_clever_king, to: peasants_clever_daughter, label: DISMISSES,
+      evidence: "I will not have thee any longer for a wife" }
+  - { from: peasants_clever_king, to: peasants_clever_daughter, label: ALLOWS_DEAREST_THING,
+      evidence: "she might take with her the one thing that was dearest and best in her eyes" }
+  - { from: peasants_clever_daughter, to: obj_peasants_clever_sleeping_draught, label: ORDERS,
+      evidence: "she ordered a powerful sleeping draught to be brought" }
+  - { from: obj_peasants_clever_sleeping_draught, to: peasants_clever_king, label: PUTS_TO_SLEEP,
+      evidence: "He soon fell into a deep sleep" }
+  - { from: peasants_clever_daughter, to: obj_peasants_clever_white_linen, label: WRAPS_KING_IN,
+      evidence: "wrapped the King in it" }
+  - { from: peasants_clever_daughter, to: peasants_clever_king, label: TAKES_AS_DEAREST,
+      evidence: "I have nothing more precious and dear than yourself" }
+  - { from: law_dearest_literalism_restores_marriage, to: peasants_clever_king, label: RECONCILES,
+      evidence: "Dear wife, thou shalt be mine and I will be thine" }
+  - { from: peasants_clever_king, to: peasants_clever_daughter, label: TAKES_BACK,
+      evidence: "he took her back with him to the royal palace" }

@@ -1,0 +1,153 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-peasant-and-the-devil
+khm: 189
+atu: "1030"
+atu_name: The Crop Division with the Devil
+canonical_source: ../../2-silver/canonical/the-peasant-and-the-devil/canonical.txt
+title: The Peasant and the Devil
+
+entities:
+  characters:
+    peasant_devil_peasant:
+      name: The Crafty Peasant
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_domestic_labor, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_bargain, speech_testimony]
+      affects: [affect_joy]
+      traits: [far-sighted, crafty, field-worker, bargain-maker, crop-switcher, devil-cheater, treasure-taker]
+      evidence: |
+        There was once on a time a far-sighted, crafty peasant
+
+    peasant_devil_devil:
+      name: The Little Black Devil
+      being_type: being_devil
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_bargain, speech_testimony]
+      affects: [affect_greed, affect_anger]
+      traits: [little, black, coal-sitter, treasure-holder, earth-fruit-desirer, literal-bargainer, twice-cheated, furious]
+      evidence: |
+        a little black devil was sitting on the live coals
+
+  magic_objects:
+    obj_peasant_devil_treasure:
+      name: The Field Treasure
+      object_kind: treasure
+      attributes:
+        function: hidden gold and silver claimed through the crop bargain
+      evidence: |
+        a treasure which contains more gold and silver than thou hast ever seen in thy life
+
+    obj_peasant_devil_burning_coals:
+      name: The Burning Coals
+      object_kind: material
+      attributes:
+        function: fiery sign that reveals the devil sitting above the treasure
+      evidence: |
+        a heap of burning coals in the middle of his field
+
+    obj_peasant_devil_turnips:
+      name: The Turnips
+      object_kind: food
+      attributes:
+        function: root crop that lets the peasant keep the underground share
+      evidence: |
+        the cunning peasant had sown turnips
+
+    obj_peasant_devil_wheat:
+      name: The Wheat
+      object_kind: food
+      attributes:
+        function: grain crop that lets the peasant keep the above-ground share
+      evidence: |
+        he did not again sow turnips, but wheat
+
+  locations:
+    loc_peasant_devil_field:
+      name: The Peasant's Field
+      instance_of: loc_field
+      evidence: |
+        in the middle of his field
+
+    loc_peasant_devil_rock_cleft:
+      name: The Cleft in the Rocks
+      instance_of: loc_cave
+      evidence: |
+        down into a cleft in the rocks
+
+classifications:
+  world_laws:
+    - law_top_bottom_crop_bargain_tricks_devil
+  moral_regimes:
+    - moral_trickster_wins
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_domestic_labor
+    - agency_speech
+  affects_driving:
+    - affect_greed
+    - affect_anger
+    - affect_joy
+  symbol_numbers:
+    - num_2
+  threshold_types: []
+
+propp:
+  - { function: func_field_labour, order: 1, actor: peasant_devil_peasant,
+      scene: "the peasant works in his field until twilight" }
+  - { function: func_infernal_discovery, order: 2, actor: peasant_devil_peasant,
+      scene: "he finds the little black devil sitting on live coals over treasure" }
+  - { function: func_bargain, order: 3, actor: peasant_devil_devil,
+      beneficiary: peasant_devil_peasant,
+      scene: "the devil offers the treasure for half of the field produce over two years" }
+  - { function: func_share_clause, order: 4, actor: peasant_devil_peasant,
+      scene: "the peasant divides the harvest by above-ground and under-earth shares" }
+  - { function: func_first_crop_trick, order: 5, actor: peasant_devil_peasant,
+      scene: "turnips make the devil's above-ground share only yellow withered leaves" }
+  - { function: func_terms_reversed, order: 6, actor: peasant_devil_devil,
+      scene: "the devil reverses the shares for the second harvest" }
+  - { function: func_second_crop_trick, order: 7, actor: peasant_devil_peasant,
+      scene: "wheat makes the devil's underground share only stubble" }
+  - { function: func_devil_defeated, order: 8, actor: peasant_devil_devil,
+      scene: "the furious devil goes down into a cleft in the rocks" }
+  - { function: func_treasure_won, order: 9, actor: peasant_devil_peasant,
+      scene: "the peasant fetches away the treasure" }
+
+edges:
+  - { from: peasant_devil_peasant, to: loc_peasant_devil_field, label: WORKS_IN,
+      evidence: "working in his field" }
+  - { from: peasant_devil_peasant, to: obj_peasant_devil_burning_coals, label: FINDS_AT_TWILIGHT,
+      evidence: "he saw a heap of burning coals" }
+  - { from: peasant_devil_devil, to: obj_peasant_devil_burning_coals, label: SITS_ON,
+      evidence: "sitting on the live coals" }
+  - { from: peasant_devil_devil, to: obj_peasant_devil_treasure, label: SITS_UPON,
+      evidence: "Thou dost indeed sit upon a treasure" }
+  - { from: peasant_devil_peasant, to: obj_peasant_devil_treasure, label: CLAIMS_FIELD_OWNERSHIP,
+      evidence: "The treasure lies in my field and belongs to me" }
+  - { from: peasant_devil_devil, to: peasant_devil_peasant, label: OFFERS_TREASURE_FOR_CROP_HALF,
+      evidence: "if thou wilt for two years give me the half of everything thy field produces" }
+  - { from: peasant_devil_devil, to: affect_greed, label: DESIRES_EARTH_FRUITS,
+      evidence: "I have a desire for the fruits of the earth" }
+  - { from: peasant_devil_peasant, to: speech_bargain, label: DIVIDES_ABOVE_AND_BELOW,
+      evidence: "everything that is above ground shall belong to thee, and what is under the earth to me" }
+  - { from: peasant_devil_peasant, to: obj_peasant_devil_turnips, label: SOWS_ROOT_CROP,
+      evidence: "the cunning peasant had sown turnips" }
+  - { from: peasant_devil_devil, to: obj_peasant_devil_turnips, label: RECEIVES_WITHERED_LEAVES,
+      evidence: "nothing but the yellow withered leaves" }
+  - { from: peasant_devil_peasant, to: obj_peasant_devil_turnips, label: DIGS_UP,
+      evidence: "digging up his turnips" }
+  - { from: peasant_devil_devil, to: speech_bargain, label: REVERSES_CROP_SHARES,
+      evidence: "What grows above ground shall be thine, and what is under it, mine" }
+  - { from: peasant_devil_peasant, to: obj_peasant_devil_wheat, label: SOWS_GRAIN_CROP,
+      evidence: "he did not again sow turnips, but wheat" }
+  - { from: peasant_devil_peasant, to: obj_peasant_devil_wheat, label: CUTS_STALKS,
+      evidence: "cut the full stalks down to the ground" }
+  - { from: peasant_devil_devil, to: obj_peasant_devil_wheat, label: RECEIVES_STUBBLE,
+      evidence: "he found nothing but the stubble" }
+  - { from: peasant_devil_devil, to: loc_peasant_devil_rock_cleft, label: FLEES_IN_FURY,
+      evidence: "went away in a fury down into a cleft in the rocks" }
+  - { from: peasant_devil_peasant, to: law_top_bottom_crop_bargain_tricks_devil, label: EXEMPLIFIES,
+      evidence: "That is the way to cheat the Devil" }
+  - { from: peasant_devil_peasant, to: obj_peasant_devil_treasure, label: FETCHES_AWAY,
+      evidence: "fetched away the treasure" }

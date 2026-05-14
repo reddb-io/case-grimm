@@ -1,0 +1,254 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-three-sluggards
+khm: 151
+atu: "1950"
+atu_name: The Three Sluggards
+canonical_source: ../../2-silver/canonical/the-three-sluggards/canonical.txt
+title: The Three Sluggards
+
+
+entities:
+
+  characters:
+
+    sluggards_dying_king:
+      name: The Dying King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_command]
+      affects: [affect_love]
+      traits: [dying-father, equal-son-lover, succession-arbiter, idleness-contest-maker]
+      evidence: |
+        A certain King had three sons who were all equally dear to him
+
+    sluggards_eldest_son:
+      name: The Eldest Son
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_sloth, affect_pride]
+      traits: [first-boaster, eye-drop-idler, sleep-preferring-heir-claimant]
+      evidence: |
+        The eldest said, “Then, father, the kingdom is mine
+
+    sluggards_second_son:
+      name: The Second Son
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_sloth, affect_pride]
+      traits: [second-boaster, heel-burning-idler, warmth-preferring-heir-claimant]
+      evidence: |
+        The second said; “Father, the kingdom belongs to me
+
+    sluggards_third_son:
+      name: The Third Son
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance, agency_social_rank]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_sloth, affect_pride]
+      traits: [third-boaster, hanging-rope-idler, maximal-sluggard, chosen-king]
+      evidence: |
+        The third said, “Father, the kingdom is mine
+
+  magic_objects:
+
+    obj_sluggards_eye_drop:
+      name: The Eye Drop
+      object_kind: material
+      attributes:
+        function: first measure of idleness, testing whether sleep outweighs bodily irritation
+      evidence: |
+        a drop falls in my eye
+
+    obj_sluggards_hearth_fire:
+      name: The Fire That Would Burn the Heel
+      object_kind: material
+      attributes:
+        function: second measure of idleness, converting comfort by the fire into bodily injury
+      evidence: |
+        sitting by the fire warming myself
+
+    obj_sluggards_hanging_rope:
+      name: The Hanging Rope
+      object_kind: tool
+      attributes:
+        function: final measure of idleness, making survival depend on the smallest refused action
+      evidence: |
+        the rope already round my neck
+
+    obj_sluggards_sharp_knife:
+      name: The Sharp Knife
+      object_kind: weapon
+      attributes:
+        function: available means of self-rescue that the laziest son would still refuse to raise
+      evidence: |
+        a sharp knife into my hand
+
+  locations:
+
+    loc_sluggards_deathbed:
+      name: The King's Bedside
+      instance_of: loc_bedchamber
+      evidence: |
+        summoned them to his bedside
+
+    loc_sluggards_hearth:
+      name: The Warming Fire-Side
+      instance_of: loc_hearth
+      evidence: |
+        sitting by the fire warming myself
+
+    loc_sluggards_gallows:
+      name: The Imagined Hanging Place
+      instance_of: loc_gallows
+      evidence: |
+        going to be hanged
+
+
+classifications:
+
+  world_laws:
+    - law_inverted_succession_rewards_extreme_idleness
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_social_rank
+    - agency_speech
+    - agency_endurance
+
+  affects_driving:
+    - affect_love
+    - affect_sloth
+    - affect_pride
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types: []
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: sluggards_dying_king
+    scene: The king loves all three sons equally and lacks a principle for succession.
+    evidence: |
+      did not know which of them to appoint as his successor after his own death
+
+  - function: func_summons
+    order: 2
+    actor: sluggards_dying_king
+    beneficiary: sluggards_eldest_son
+    scene: Near death, the king gathers the sons at his bedside.
+    evidence: |
+      When the time came when he was about to die, he summoned them to his bedside
+
+  - function: func_contest
+    order: 3
+    actor: sluggards_dying_king
+    scene: The king declares that the laziest son will inherit the kingdom.
+    evidence: |
+      whichsoever of you is the laziest shall have the kingdom
+
+  - function: func_boast
+    order: 4
+    actor: sluggards_eldest_son
+    scene: The eldest claims he would not open his eye even if a drop fell into it while he slept.
+    evidence: |
+      if I lie down to rest, and a drop falls in my eye, I will not open it
+
+  - function: func_boast
+    order: 5
+    actor: sluggards_second_son
+    scene: The second claims he would let his heel burn off rather than draw back from the fire.
+    evidence: |
+      I would rather let my heel be burnt off than draw back my leg
+
+  - function: func_boast
+    order: 6
+    actor: sluggards_third_son
+    scene: The third claims he would let himself be hanged rather than raise his hand to cut the rope.
+    evidence: |
+      I would rather let myself be hanged than raise my hand to the rope
+
+  - function: func_reward
+    order: 7
+    actor: sluggards_dying_king
+    beneficiary: sluggards_third_son
+    scene: The father judges the third son to have carried laziness farthest and awards him the kingdom.
+    evidence: |
+      Thou hast carried it the farthest, and shalt be King.
+
+
+edges:
+
+  - from: sluggards_dying_king
+    label: LOVES_EQUALLY
+    to: sluggards_eldest_son
+    evidence: |
+      three sons who were all equally dear to him
+
+  - from: sluggards_dying_king
+    label: LOVES_EQUALLY
+    to: sluggards_second_son
+    evidence: |
+      three sons who were all equally dear to him
+
+  - from: sluggards_dying_king
+    label: LOVES_EQUALLY
+    to: sluggards_third_son
+    evidence: |
+      three sons who were all equally dear to him
+
+  - from: sluggards_dying_king
+    label: SUMMONS_TO_BEDSIDE
+    to: sluggards_eldest_son
+    evidence: |
+      summoned them to his bedside
+
+  - from: sluggards_dying_king
+    label: DECLARES_SUCCESSION_CONTEST
+    to: law_inverted_succession_rewards_extreme_idleness
+    evidence: |
+      whichsoever of you is the laziest shall have the kingdom
+
+  - from: sluggards_eldest_son
+    label: BOASTS_IDLENESS_WITH
+    to: obj_sluggards_eye_drop
+    evidence: |
+      a drop falls in my eye, I will not open it
+
+  - from: sluggards_second_son
+    label: BOASTS_IDLENESS_WITH
+    to: obj_sluggards_hearth_fire
+    evidence: |
+      let my heel be burnt off than draw back my leg
+
+  - from: sluggards_third_son
+    label: BOASTS_IDLENESS_WITH
+    to: obj_sluggards_hanging_rope
+    evidence: |
+      I would rather let myself be hanged than raise my hand to the rope
+
+  - from: obj_sluggards_sharp_knife
+    label: COULD_CUT
+    to: obj_sluggards_hanging_rope
+    evidence: |
+      a sharp knife into my hand with which I might cut the rope
+
+  - from: law_inverted_succession_rewards_extreme_idleness
+    label: REWARDS_MAXIMAL_IDLENESS
+    to: sluggards_third_son
+    evidence: |
+      Thou hast carried it the farthest, and shalt be King.
+
+  - from: sluggards_dying_king
+    label: MAKES_KING
+    to: sluggards_third_son
+    evidence: |
+      shalt be King.

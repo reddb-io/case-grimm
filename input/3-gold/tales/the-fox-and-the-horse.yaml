@@ -1,0 +1,207 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-fox-and-the-horse
+khm: 132
+atu: 47A
+atu_name: The Fox and the Horse
+canonical_source: ../../2-silver/canonical/the-fox-and-the-horse/canonical.txt
+title: The Fox and the Horse
+
+
+entities:
+
+  characters:
+
+    fox_horse_old_horse:
+      name: The Faithful Old Horse
+      archetypes: [arc_discarded_service_animal]
+      species: sp_horse
+      agency_modes: [agency_endurance, agency_domestic_labor, agency_object_mediation]
+      affects: [affect_grief, affect_loyalty]
+      traits: [faithful-service-animal, too-old-to-work, expelled-from-stable, feigned-carcass, lion-dragger]
+      evidence: |
+        A peasant had a faithful horse which had grown old
+
+    fox_horse_peasant_master:
+      name: The Peasant Master
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_promise, speech_command]
+      traits: [utility-judging-master, maintenance-withholder, impossible-condition-setter, restored-feeder]
+      evidence: |
+        his master would no longer give him anything to eat
+
+    fox_horse_fox:
+      name: The Fox Helper
+      archetypes: [arc_trickster]
+      species: sp_fox
+      agency_modes: [agency_cunning, agency_speech]
+      speech_acts_performed: [speech_lie, speech_command]
+      traits: [sympathetic-trickster, death-stager, lion-lurer, tail-binder]
+      evidence: |
+        Then the fox met him
+
+    fox_horse_lion:
+      name: The Lion
+      archetypes: [arc_predator]
+      species: sp_lion
+      agency_modes: [agency_violence, agency_cunning]
+      affects: [affect_hunger, affect_fear]
+      traits: [den-predator, carcass-desiring, bound-by-tail, roaring-captive]
+      evidence: |
+        The lion went with him
+
+  locations:
+
+    loc_fox_horse_stable:
+      name: The Peasant's Stable
+      instance_of: loc_stable
+      evidence: |
+        take thyself away out of my stable
+
+    loc_fox_horse_open_country:
+      name: The Open Country of Exile
+      instance_of: loc_field
+      evidence: |
+        chased him into the open country
+
+    loc_fox_horse_forest:
+      name: The Forest of Protection
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        went to the forest to seek a little protection there from the weather
+
+    loc_fox_horse_lion_den:
+      name: The Lion's Den
+      instance_of: loc_cave
+      evidence: |
+        the lion, who had his den not far off
+
+    loc_fox_horse_master_door:
+      name: The Master's Door
+      instance_of: loc_house
+      evidence: |
+        dragged him over the country to his master’s door
+
+
+classifications:
+
+  world_laws:
+    - law_feigned_carcass_traps_predator_for_restored_service
+    - law_staged_rescue_restores_worth
+
+  moral_regimes:
+    - moral_faithful_service_rewarded
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_endurance
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_grief
+    - affect_loyalty
+    - affect_hunger
+    - affect_fear
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+
+  - function: func_villainy
+    order: 1
+    actor: fox_horse_peasant_master
+    victim: fox_horse_old_horse
+    scene: "the master refuses food to the old horse because it can no longer work"
+    evidence: "could do no more work"
+
+  - function: func_difficult_task
+    order: 2
+    actor: fox_horse_peasant_master
+    beneficiary: fox_horse_old_horse
+    scene: "the master promises maintenance only if the horse can bring him a lion"
+    evidence: "if thou provest thyself still strong enough to bring me a lion"
+
+  - function: func_departure
+    order: 3
+    actor: fox_horse_old_horse
+    scene: "the horse is driven from the stable into open country and forest"
+    evidence: "chased him into the open country"
+
+  - function: func_donor_sequence
+    order: 4
+    actor: fox_horse_fox
+    beneficiary: fox_horse_old_horse
+    scene: "the fox promises help and instructs the horse to lie as if dead"
+    evidence: "I will help thee"
+
+  - function: func_trickery
+    order: 5
+    actor: fox_horse_fox
+    victim: fox_horse_lion
+    scene: "the fox lures the lion to the apparently dead horse as a rich meal"
+    evidence: "A dead horse is lying outside there"
+
+  - function: func_victory
+    order: 6
+    actor: fox_horse_old_horse
+    victim: fox_horse_lion
+    scene: "the horse pulls the lion home after the fox binds the lion's legs to the horse's tail"
+    evidence: "Pull, white horse, pull"
+
+  - function: func_recognition
+    order: 7
+    actor: fox_horse_peasant_master
+    beneficiary: fox_horse_old_horse
+    scene: "the master sees the lion and changes his mind about the horse"
+    evidence: "When the master saw the lion"
+
+  - function: func_reward
+    order: 8
+    actor: fox_horse_peasant_master
+    beneficiary: fox_horse_old_horse
+    scene: "the horse is allowed to stay and is fed for the rest of its life"
+    evidence: "gave him plenty to eat until he died"
+
+
+edges:
+
+  - { from: fox_horse_peasant_master, to: fox_horse_old_horse, label: DISCARDS,
+      evidence: "could do no more work" }
+  - { from: fox_horse_peasant_master, to: fox_horse_old_horse, label: WITHHOLDS_FOOD_FROM,
+      evidence: "would no longer give him anything to eat" }
+  - { from: fox_horse_peasant_master, to: fox_horse_old_horse, label: SETS_CONDITION_FOR_KEEPING,
+      evidence: "bring me a lion here, I will maintain thee" }
+  - { from: fox_horse_peasant_master, to: loc_fox_horse_stable, label: EXPELS_FROM,
+      evidence: "take thyself away out of my stable" }
+  - { from: fox_horse_old_horse, to: loc_fox_horse_forest, label: SEEKS_PROTECTION_IN,
+      evidence: "seek a little protection there from the weather" }
+  - { from: fox_horse_old_horse, to: fox_horse_fox, label: TELLS_INJUSTICE_TO,
+      evidence: "avarice and fidelity do not dwell together in one house" }
+  - { from: fox_horse_fox, to: fox_horse_old_horse, label: PROMISES_HELP_TO,
+      evidence: "I will help thee" }
+  - { from: fox_horse_fox, to: fox_horse_old_horse, label: COMMANDS_FEIGNED_DEATH,
+      evidence: "stretch thyself out, as if thou wert dead" }
+  - { from: fox_horse_fox, to: fox_horse_lion, label: LURES_WITH_CARRION,
+      evidence: "thou canst have a rich meal" }
+  - { from: fox_horse_lion, to: loc_fox_horse_lion_den, label: WANTS_TO_DRAG_MEAL_TO,
+      evidence: "drag it into thy cave, and devour it in peace" }
+  - { from: fox_horse_fox, to: fox_horse_lion, label: BINDS_LEGS_TO_TAIL,
+      evidence: "tied the lion’s legs together with the horse’s tail" }
+  - { from: fox_horse_fox, to: fox_horse_old_horse, label: SIGNALS_PULLING,
+      evidence: "tapped the horse on the shoulder" }
+  - { from: fox_horse_old_horse, to: fox_horse_lion, label: DRAGS_HOME,
+      evidence: "drew him and dragged him over the country" }
+  - { from: fox_horse_lion, to: loc_fox_horse_forest, label: FRIGHTENS_BIRDS_IN,
+      evidence: "all the birds in the forest flew out in terror" }
+  - { from: fox_horse_old_horse, to: law_feigned_carcass_traps_predator_for_restored_service, label: REALIZES,
+      evidence: "drew the lion away with him" }
+  - { from: fox_horse_peasant_master, to: fox_horse_old_horse, label: RESTORES_MAINTENANCE_TO,
+      evidence: "Thou shalt stay with me and fare well" }
+  - { from: fox_horse_peasant_master, to: fox_horse_old_horse, label: FEEDS_UNTIL_DEATH,
+      evidence: "gave him plenty to eat until he died" }

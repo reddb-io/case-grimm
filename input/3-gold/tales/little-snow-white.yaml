@@ -1,0 +1,658 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: little-snow-white
+khm: 53
+atu: '709'
+atu_name: Snow White
+canonical_source: ../../2-silver/canonical/little-snow-white/canonical.txt
+title: Little Snow-white
+
+
+entities:
+
+  characters:
+
+    snow_white_birth_mother:
+      name: Snow-white's Birth Mother
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_longing]
+      traits: [winter-sewing-queen, blood-snow-wisher, ebony-frame-gazer, dying-mother]
+      evidence: |
+        a queen sat at a window sewing, and the frame of the window was
+        made of black ebony.
+
+    snow_white_father_king:
+      name: Snow-white's Father King
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [remarried-king, absent-father]
+      evidence: |
+        After a year had passed the King took to himself another wife.
+
+    snow_white:
+      name: Little Snow-white
+      archetypes: [arc_oppressed_maiden]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_domestic_labor, agency_speech]
+      existential_states: [state_liminal_dead]
+      affects: [affect_fear]
+      traits: [red-white-black-child, seven-year-beauty, forest-fugitive, dwarf-housekeeper, thrice-attacked, glass-coffin-sleeper, revived-bride]
+      evidence: |
+        Soon after that she had a little daughter, who was as white as
+        snow, and as red as blood, and her hair was as black as ebony
+
+    snow_white_stepmother_queen:
+      name: The Wicked Stepmother Queen
+      archetypes: [arc_cruel_stepmother, arc_disguised_villain]
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning, agency_violence]
+      existential_states: [state_disguised]
+      speech_acts_performed: [speech_command, speech_lie]
+      affects: [affect_envy, affect_pride, affect_fear]
+      traits: [beautiful, proud, haughty, mirror-questioner, huntsman-commander, cannibal-deceived, peddler-disguised, comb-enchanter, apple-poisoner, wedding-punished]
+      evidence: |
+        She was a beautiful woman, but proud and haughty, and she could
+        not bear that anyone else should surpass her in beauty.
+
+    snow_white_huntsman:
+      name: The Huntsman Who Spares Snow-white
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech]
+      affects: [affect_fear]
+      traits: [royal-servant, reluctant-killer, pitying-sparesman, boar-heart-substituter]
+      evidence: |
+        the huntsman had pity on her
+
+    snow_white_cook:
+      name: The Cook Who Salts the Boar Heart
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [heart-salter, unwitting-cannibal-meal-preparer]
+      evidence: |
+        The cook had to salt this, and the wicked Queen ate it
+
+    snow_white_seven_dwarfs:
+      name: The Seven Dwarfs
+      archetypes: [arc_supernatural_donor]
+      being_type: being_dwarf
+      agency_modes: [agency_domestic_labor, agency_speech, agency_endurance]
+      speech_acts_performed: [speech_warning]
+      affects: [affect_grief]
+      traits: [ore-miners, seven-householders, refuge-givers, doorway-warners, laces-cutters, comb-removers, glass-coffin-makers, mountain-watchers]
+      evidence: |
+        they were seven dwarfs who dug and delved in the mountains for
+        ore.
+
+    snow_white_prince:
+      name: The King's Son Who Claims the Coffin
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_endurance]
+      affects: [affect_love_at_first_sight]
+      traits: [forest-guest, coffin-seer, gift-beggar, accidental-revival-beneficiary, bridegroom]
+      evidence: |
+        Let me have it as a gift, for I cannot live without seeing
+        Snow-white.
+
+    snow_white_prince_servants:
+      name: The Prince's Coffin-Carrying Servants
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_endurance]
+      traits: [coffin-carriers, tree-stump-stumblers, accidental-revivers]
+      evidence: |
+        carried away by his servants on their shoulders.
+
+    snow_white_mourning_birds:
+      name: The Mourning Birds
+      species: sp_bird
+      agency_modes: [agency_animal_aid]
+      affects: [affect_grief]
+      traits: [owl-raven-dove, coffin-mourners, grief-witnesses]
+      evidence: |
+        And birds came too, and wept for Snow-white; first an owl, then
+        a raven, and last a dove.
+
+  magic_objects:
+
+    obj_snow_white_ebony_window_frame:
+      name: The Black Ebony Window Frame
+      object_kind: material
+      attributes:
+        function: supplies the black term of Snow-white's birth-color formula
+      evidence: |
+        the frame of the window was made of black ebony
+
+    obj_snow_white_three_blood_drops:
+      name: The Three Blood Drops on Snow
+      object_kind: token
+      attributes:
+        count: 3
+        function: materializes the red-white birth wish
+      evidence: |
+        three drops of blood fell upon the snow.
+
+    obj_snow_white_truth_mirror:
+      name: The Wonderful Looking-glass
+      instance_of: obj_truth_mirror
+      object_kind: tool
+      attributes:
+        function: truthfully ranks beauty and reveals Snow-white's survival and location
+      evidence: |
+        Then she was satisfied, for she knew that the looking-glass
+        spoke the truth.
+
+    obj_snow_white_boar_heart:
+      name: The Young Boar's Heart
+      object_kind: food
+      attributes:
+        function: substitute death-token accepted as Snow-white's heart
+        deceives: snow_white_stepmother_queen
+      evidence: |
+        cut out its heart and took it to the Queen as proof that the
+        child was dead.
+
+    obj_snow_white_seven_household_settings:
+      name: The Seven Dwarf Household Settings
+      object_kind: tool
+      attributes:
+        count: 7
+        includes: [plates, spoons, knives, forks, mugs, beds, candles]
+        function: marks the ordered dwarf household Snow-white enters and tends
+      evidence: |
+        seven little plates, and on each plate a little spoon; moreover,
+        there were seven little knives and forks, and seven little mugs.
+
+    obj_snow_white_stay_laces:
+      name: The Bright Silk Stay-laces
+      object_kind: garment
+      attributes:
+        function: first disguised murder instrument; suffocates until cut away
+      evidence: |
+        the old woman laced so quickly and so tightly that Snow-white
+        lost her breath
+
+    obj_snow_white_poisoned_comb:
+      name: The Poisonous Comb
+      object_kind: tool
+      attributes:
+        function: second disguised murder instrument; poisons through the hair until removed
+      evidence: |
+        by the help of witchcraft, which she understood, she made a
+        poisonous comb.
+
+    obj_snow_white_poisoned_apple:
+      name: The Poisoned Red-cheeked Apple
+      instance_of: obj_poisoned_food
+      object_kind: food
+      attributes:
+        function: third murder instrument; poisoned half lodges in Snow-white's throat
+        poisoned_part: red cheek
+      evidence: |
+        The apple was so cunningly made that only the red cheek was
+        poisoned.
+
+    obj_snow_white_glass_coffin:
+      name: The Transparent Glass Coffin
+      instance_of: obj_display_coffin
+      object_kind: architecture
+      attributes:
+        function: preserves Snow-white visibly and keeps her name and royal identity readable
+      evidence: |
+        they had a transparent coffin of glass made, so that she could
+        be seen from all sides
+
+    obj_snow_white_red_hot_iron_slippers:
+      name: The Red-hot Iron Slippers
+      object_kind: weapon
+      attributes:
+        function: retributive wedding punishment for the wicked queen
+      evidence: |
+        she was forced to put on the red-hot shoes, and dance until she
+        dropped down dead.
+
+  locations:
+
+    loc_snow_white_birth_window:
+      name: The Winter Window of the Birth Wish
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        in the middle of winter, when the flakes of snow were falling
+        like feathers from the sky
+
+    loc_snow_white_forest:
+      name: The Great Wild Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        I will run away into the wild forest, and never come home again.
+
+    loc_snow_white_dwarf_cottage:
+      name: The Little Cottage of the Seven Dwarfs
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        she saw a little cottage and went into it to rest herself.
+
+    loc_snow_white_dwarf_mountains:
+      name: The Dwarfs' Ore Mountains
+      instance_of: loc_mountain
+      evidence: |
+        in the mornings they went to the mountains and looked for
+        copper and gold
+
+    loc_snow_white_secret_poison_room:
+      name: The Queen's Secret Poison Room
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        she went into a quite secret, lonely room, where no one ever
+        came
+
+    loc_snow_white_coffin_mountain:
+      name: The Mountain of the Glass Coffin
+      instance_of: loc_mountain
+      evidence: |
+        Then they put the coffin out upon the mountain
+
+    loc_snow_white_wedding_palace:
+      name: The Prince's Father's Palace
+      instance_of: loc_castle
+      evidence: |
+        you shall be my wife.
+
+
+classifications:
+
+  world_laws:
+    - law_truth_mirror_ranks_beauty
+    - law_removable_death_token_restores_life
+    - law_poison_transfers_through_consumption
+    - law_forest_suspends_domestic_order
+
+  moral_regimes:
+    - moral_restorative
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_social_rank
+    - agency_speech
+    - agency_cunning
+    - agency_domestic_labor
+    - agency_violence
+    - agency_endurance
+
+  affects_driving:
+    - affect_envy
+    - affect_pride
+    - affect_fear
+    - affect_grief
+    - affect_love_at_first_sight
+
+  symbol_numbers:
+    - num_3
+    - num_7
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: snow_white_birth_mother
+    beneficiary: snow_white
+    scene: "birth wish forms the red-white-black child before the queen dies"
+    evidence: "Would that I had a child as white as snow, as red as blood, and as black as the wood of the window-frame."
+
+  - function: func_villainy
+    order: 2
+    actor: snow_white_stepmother_queen
+    victim: snow_white
+    scene: "truth mirror ranks Snow-white above the queen, and envy turns to murder"
+    evidence: "more beautiful still is Snow-white"
+
+  - function: func_command
+    order: 3
+    actor: snow_white_stepmother_queen
+    victim: snow_white_huntsman
+    scene: "queen orders huntsman to kill Snow-white and bring back her heart"
+    evidence: "Kill her, and bring me back her heart as a token."
+
+  - function: func_violation
+    order: 4
+    actor: snow_white_huntsman
+    beneficiary: snow_white
+    scene: "huntsman disobeys the queen by sparing Snow-white"
+    evidence: "Run away, then, you poor child."
+
+  - function: func_departure
+    order: 5
+    actor: snow_white
+    scene: "Snow-white runs alone through the forest"
+    evidence: "Then she began to run, and ran over sharp stones and through thorns"
+
+  - function: func_donor_sequence
+    order: 6
+    actor: snow_white_seven_dwarfs
+    beneficiary: snow_white
+    scene: "dwarfs shelter Snow-white in exchange for household work"
+    evidence: "If you will take care of our house, cook, make the beds, wash, sew, and knit"
+
+  - function: func_interdiction
+    order: 7
+    actor: snow_white_seven_dwarfs
+    victim: snow_white
+    scene: "dwarfs warn Snow-white not to admit anyone"
+    evidence: "be sure to let no one come in."
+
+  - function: func_trickery
+    order: 8
+    actor: snow_white_stepmother_queen
+    victim: snow_white
+    scene: "queen enters as peddler-woman and tightens the stay-laces"
+    evidence: "dressed herself like an old peddler-woman"
+
+  - function: func_rescue
+    order: 9
+    actor: snow_white_seven_dwarfs
+    beneficiary: snow_white
+    scene: "dwarfs cut the laces and Snow-white breathes again"
+    evidence: "they cut the laces; then she began to breathe a little"
+
+  - function: func_trickery
+    order: 10
+    actor: snow_white_stepmother_queen
+    victim: snow_white
+    scene: "queen returns disguised with a poisonous comb"
+    evidence: "she made a poisonous comb."
+
+  - function: func_rescue
+    order: 11
+    actor: snow_white_seven_dwarfs
+    beneficiary: snow_white
+    scene: "dwarfs remove the comb and Snow-white comes to herself"
+    evidence: "Scarcely had they taken it out when Snow-white came to herself"
+
+  - function: func_villainy
+    order: 12
+    actor: snow_white_stepmother_queen
+    victim: snow_white
+    scene: "queen poisons Snow-white with the red half of the apple"
+    evidence: "hardly had she a bit of it in her mouth than she fell down dead."
+
+  - function: func_lamentation
+    order: 13
+    actor: snow_white_seven_dwarfs
+    victim: snow_white
+    scene: "dwarfs mourn and place Snow-white in a glass coffin instead of burying her"
+    evidence: "We could not bury her in the dark ground"
+
+  - function: func_mediation
+    order: 14
+    actor: snow_white_prince
+    beneficiary: snow_white
+    scene: "prince sees the coffin and asks to keep it"
+    evidence: "He saw the coffin on the mountain, and the beautiful Snow-white within it"
+
+  - function: func_liquidation
+    order: 15
+    actor: snow_white_prince_servants
+    beneficiary: snow_white
+    scene: "servants stumble, the apple piece comes out, and Snow-white revives"
+    evidence: "the poisonous piece of apple which Snow-white had bitten off came out of her throat."
+
+  - function: func_wedding
+    order: 16
+    actor: snow_white_prince
+    beneficiary: snow_white
+    scene: "Snow-white agrees to go to the prince's palace and marry him"
+    evidence: "Snow-white was willing, and went with him, and their wedding was held"
+
+  - function: func_punishment
+    order: 17
+    actor: obj_snow_white_red_hot_iron_slippers
+    victim: snow_white_stepmother_queen
+    scene: "wicked queen dances in red-hot shoes until dead"
+    evidence: "dance until she dropped down dead."
+
+
+edges:
+
+  # Birth formula and family order
+  - from: snow_white_birth_mother
+    to: obj_snow_white_three_blood_drops
+    label: WISHES_THROUGH
+    evidence: "three drops of blood fell upon the snow."
+
+  - from: obj_snow_white_three_blood_drops
+    to: snow_white
+    label: FORESHADOWS
+    evidence: "a child as white as snow, as red as blood"
+
+  - from: obj_snow_white_ebony_window_frame
+    to: snow_white
+    label: FORESHADOWS
+    evidence: "as black as the wood of the window-frame."
+
+  - from: snow_white_father_king
+    to: snow_white_stepmother_queen
+    label: MARRIES
+    evidence: "After a year had passed the King took to himself another wife."
+
+  # Mirror, envy, and first murder command
+  - from: snow_white_stepmother_queen
+    to: obj_snow_white_truth_mirror
+    label: QUESTIONS
+    evidence: "Who in this land is the fairest of all?"
+
+  - from: obj_snow_white_truth_mirror
+    to: snow_white_stepmother_queen
+    label: TELLS_TRUTH_TO
+    evidence: "she knew that the looking-glass spoke the truth."
+
+  - from: obj_snow_white_truth_mirror
+    to: snow_white
+    label: RANKS_ABOVE
+    evidence: "But more beautiful still is Snow-white"
+
+  - from: snow_white_stepmother_queen
+    to: snow_white_huntsman
+    label: COMMANDS
+    evidence: "Take the child away into the forest"
+
+  - from: snow_white_stepmother_queen
+    to: snow_white
+    label: ORDERS_KILLED
+    evidence: "Kill her, and bring me back her heart as a token."
+
+  - from: snow_white_huntsman
+    to: snow_white
+    label: SPARES
+    evidence: "the huntsman had pity on her"
+
+  - from: snow_white_huntsman
+    to: obj_snow_white_boar_heart
+    label: SUBSTITUTES
+    evidence: "cut out its heart and took it to the Queen as proof"
+
+  - from: obj_snow_white_boar_heart
+    to: snow_white_stepmother_queen
+    label: DECEIVES
+    evidence: "thought she had eaten the heart of Snow-white."
+
+  # Forest refuge and dwarf household
+  - from: snow_white
+    to: loc_snow_white_forest
+    label: FLEES_TO
+    evidence: "I will run away into the wild forest"
+
+  - from: snow_white
+    to: loc_snow_white_dwarf_cottage
+    label: ENTERS
+    evidence: "she saw a little cottage and went into it"
+
+  - from: snow_white
+    to: obj_snow_white_seven_household_settings
+    label: USES
+    evidence: "she ate some vegetables and bread from each plate"
+
+  - from: snow_white_seven_dwarfs
+    to: loc_snow_white_dwarf_mountains
+    label: WORKS_AT
+    evidence: "went to the mountains and looked for copper and gold"
+
+  - from: snow_white_seven_dwarfs
+    to: snow_white
+    label: SHELTERS
+    evidence: "you can stay with us and you shall want for nothing."
+
+  - from: snow_white_seven_dwarfs
+    to: snow_white
+    label: WARNS
+    evidence: "Beware of your step-mother"
+
+  - from: snow_white
+    to: snow_white_seven_dwarfs
+    label: KEEPS_HOUSE_FOR
+    evidence: "She kept the house in order for them"
+
+  # Three disguised attacks
+  - from: obj_snow_white_truth_mirror
+    to: snow_white_stepmother_queen
+    label: REVEALS_LOCATION_TO
+    evidence: "over the hills, where the seven dwarfs dwell"
+
+  - from: snow_white_stepmother_queen
+    to: snow_white
+    label: DISGUISES_TO_DECEIVE
+    evidence: "dressed herself like an old peddler-woman"
+
+  - from: snow_white_stepmother_queen
+    to: obj_snow_white_stay_laces
+    label: SELLS
+    evidence: "stay-laces of all colours"
+
+  - from: obj_snow_white_stay_laces
+    to: snow_white
+    label: SUFFOCATES
+    evidence: "Snow-white lost her breath"
+
+  - from: snow_white_seven_dwarfs
+    to: obj_snow_white_stay_laces
+    label: CUTS_AWAY
+    evidence: "they cut the laces"
+
+  - from: snow_white_stepmother_queen
+    to: obj_snow_white_poisoned_comb
+    label: MAKES_WITH_WITCHCRAFT
+    evidence: "by the help of witchcraft, which she understood"
+
+  - from: obj_snow_white_poisoned_comb
+    to: snow_white
+    label: POISONS
+    evidence: "the poison in it took effect"
+
+  - from: snow_white_seven_dwarfs
+    to: obj_snow_white_poisoned_comb
+    label: REMOVES
+    evidence: "they looked and found the poisoned comb."
+
+  - from: snow_white_stepmother_queen
+    to: loc_snow_white_secret_poison_room
+    label: MAKES_POISON_AT
+    evidence: "she made a very poisonous apple."
+
+  - from: snow_white_stepmother_queen
+    to: obj_snow_white_poisoned_apple
+    label: MAKES
+    evidence: "she made a very poisonous apple."
+
+  - from: snow_white_stepmother_queen
+    to: snow_white
+    label: DECEIVES
+    evidence: "I will cut the apple in two pieces"
+
+  - from: obj_snow_white_poisoned_apple
+    to: snow_white
+    label: KILLS
+    evidence: "she fell down dead."
+
+  # Coffin, revival, marriage, punishment
+  - from: snow_white_seven_dwarfs
+    to: snow_white
+    label: MOURNS
+    evidence: "all seven of them sat round it and wept for her"
+
+  - from: snow_white_seven_dwarfs
+    to: obj_snow_white_glass_coffin
+    label: COMMISSIONS
+    evidence: "they had a transparent coffin of glass made"
+
+  - from: obj_snow_white_glass_coffin
+    to: snow_white
+    label: DISPLAYS
+    evidence: "she could be seen from all sides"
+
+  - from: snow_white_seven_dwarfs
+    to: loc_snow_white_coffin_mountain
+    label: PLACES_AT
+    evidence: "put the coffin out upon the mountain"
+
+  - from: snow_white_mourning_birds
+    to: snow_white
+    label: MOURNS
+    evidence: "birds came too, and wept for Snow-white"
+
+  - from: snow_white_prince
+    to: obj_snow_white_glass_coffin
+    label: ASKS_FOR
+    evidence: "Let me have the coffin"
+
+  - from: snow_white_seven_dwarfs
+    to: snow_white_prince
+    label: GIVES
+    evidence: "gave him the coffin."
+
+  - from: snow_white_prince_servants
+    to: obj_snow_white_glass_coffin
+    label: CARRIES
+    evidence: "carried away by his servants on their shoulders."
+
+  - from: obj_snow_white_poisoned_apple
+    to: snow_white
+    label: DISLODGES_FROM
+    evidence: "came out of her throat."
+
+  - from: snow_white
+    to: state_liminal_dead
+    label: RETURNS_FROM
+    evidence: "was once more alive."
+
+  - from: snow_white_prince
+    to: snow_white
+    label: LOVES
+    evidence: "I love you more than everything in the world"
+
+  - from: snow_white_prince
+    to: snow_white
+    label: MARRIES
+    evidence: "their wedding was held with great show and splendour."
+
+  - from: snow_white
+    to: loc_snow_white_wedding_palace
+    label: GOES_TO
+    evidence: "you shall be my wife."
+
+  - from: obj_snow_white_truth_mirror
+    to: snow_white_stepmother_queen
+    label: REVEALS_RIVAL_TO
+    evidence: "the young Queen is fairer by far"
+
+  - from: obj_snow_white_red_hot_iron_slippers
+    to: snow_white_stepmother_queen
+    label: KILLS
+    evidence: "dance until she dropped down dead."

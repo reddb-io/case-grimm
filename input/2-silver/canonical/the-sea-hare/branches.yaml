@@ -1,0 +1,8 @@
+slug: the-sea-hare
+khm: 191
+atu: '554'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

@@ -1,0 +1,10 @@
+slug: the-turnip
+khm: 146
+atu: 1689A
+base: pg5314-grimm-hunt
+sources:
+- book: pg2591-grimm-taylor
+  weight: supplementary
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

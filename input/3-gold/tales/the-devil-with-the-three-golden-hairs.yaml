@@ -1,0 +1,428 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-devil-with-the-three-golden-hairs
+khm: 29
+atu: '461'
+atu_name: The Devil with the Three Golden Hairs
+canonical_source: ../../2-silver/canonical/the-devil-with-the-three-golden-hairs/canonical.txt
+title: The Devil with the Three Golden Hairs
+
+
+entities:
+
+  characters:
+
+    devil_golden_hairs_luck_child:
+      name: The Luck-Child
+      archetypes: [arc_luck_child]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_cunning]
+      existential_states: [state_hidden_identity, state_transformed]
+      transformations: [transform_animal_human]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_fear, affect_longing]
+      traits: [caul-born, prophesied-bridegroom, water-survivor, foundling, death-letter-carrier, hell-traveller, ant-hidden, answer-bringer]
+      evidence: |
+        "A child has just been born with a caul on; whatever any one so
+        born undertakes turns out well."
+
+    devil_golden_hairs_poor_mother:
+      name: The Poor Mother
+      species: sp_human
+      affects: [affect_maternal_love, affect_fear]
+      traits: [caul-child-mother, gold-persuaded, fate-trusting]
+      evidence: |
+        "when the stranger offered them a large amount of gold for it...
+        they at last consented"
+
+    devil_golden_hairs_king:
+      name: The Bad-Hearted King
+      archetypes: [arc_oath_enforcer]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_cunning, agency_violence, agency_speech]
+      speech_acts_performed: [speech_lie, speech_command]
+      affects: [affect_anger, affect_fear, affect_greed]
+      traits: [prophecy-fearer, child-buyer, box-drowner, death-letter-writer, hell-task-setter, gold-seeker, ferryman-punished]
+      evidence: |
+        "The King, who had a bad heart, and was angry about the prophecy"
+
+    devil_golden_hairs_miller_boy:
+      name: The Miller's Boy
+      species: sp_human
+      agency_modes: [agency_endurance]
+      traits: [box-finder, hook-user, foundling-deliverer]
+      evidence: |
+        "a miller's boy... noticed it and pulled it out with a hook"
+
+    devil_golden_hairs_miller_couple:
+      name: The Childless Miller and Wife
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_endurance]
+      affects: [affect_maternal_love]
+      traits: [childless, adoptive, foundling-raisers, truth-tellers]
+      evidence: |
+        "as they had no children they were glad, and said, 'God has
+        given him to us.'"
+
+    devil_golden_hairs_robbers:
+      name: The Robbers in the Forest
+      archetypes: [arc_predator]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech]
+      affects: [affect_fear]
+      traits: [death-letter-readers, pity-moved, letter-substituters, way-showers]
+      evidence: |
+        "the hard-hearted robbers felt pity, and their leader tore up
+        the letter and wrote another"
+
+    devil_golden_hairs_robber_old_woman:
+      name: The Old Woman in the Robbers' Cottage
+      species: sp_human
+      agency_modes: [agency_speech]
+      affects: [affect_fear]
+      traits: [fire-sitter, danger-warner, pity-speaker]
+      evidence: |
+        "You poor boy... you have come into a den of thieves"
+
+    devil_golden_hairs_queen:
+      name: The Queen
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      traits: [letter-obeyer, wedding-maker, changed-letter-witness]
+      evidence: |
+        "The Queen, when she had received the letter and read it, did
+        as was written in it"
+
+    devil_golden_hairs_princess:
+      name: The King's Daughter
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      affects: [affect_love_at_first_sight]
+      traits: [prophesied-bride, joyfully-married, content-wife]
+      evidence: |
+        "the King's daughter was married to the luck-child"
+
+    devil_golden_hairs_first_watchman:
+      name: The Watchman of the Dry Wine-Fountain Town
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      traits: [gate-questioner, fountain-question-asker, gold-ass-rewarder]
+      evidence: |
+        "tell us why our market-fountain, which once flowed with wine
+        has become dry"
+
+    devil_golden_hairs_second_gatekeeper:
+      name: The Gatekeeper of the Barren Apple-Tree Town
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      traits: [gate-questioner, tree-question-asker, gold-ass-rewarder]
+      evidence: |
+        "why a tree in our town which once bore golden apples now does
+        not even put forth leaves?"
+
+    devil_golden_hairs_ferryman:
+      name: The Bound Ferryman
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      existential_states: [state_bound_by_promise]
+      affects: [affect_longing]
+      traits: [endlessly-rowing, release-seeking, oar-transferer]
+      evidence: |
+        "why I must always be rowing backwards and forwards, and am
+        never set free?"
+
+    devil_golden_hairs_devil_grandmother:
+      name: The Devil's Grandmother
+      archetypes: [arc_supernatural_donor]
+      being_type: being_devil
+      agency_modes: [agency_cunning, agency_speech]
+      speech_acts_performed: [speech_lie]
+      traits: [armchair-sitter, pity-helper, ant-transformer, dream-deceiver, hair-plucker]
+      evidence: |
+        "as I pity you, I will see if I cannot help you."
+
+    devil_golden_hairs_devil:
+      name: The Devil
+      being_type: being_devil
+      agency_modes: [agency_speech, agency_violence]
+      speech_acts_performed: [speech_prophecy]
+      affects: [affect_anger, affect_curiosity]
+      traits: [man-flesh-smeller, golden-haired, sleeper, hidden-cause-knower, ferryman-law-knower]
+      evidence: |
+        "I smell man's flesh"
+
+    devil_golden_hairs_well_toad:
+      name: The Toad Beneath the Fountain Stone
+      traits: [well-blocker, wine-stopper, hidden-cause]
+      evidence: |
+        "there is a toad sitting under a stone in the well"
+
+    devil_golden_hairs_root_mouse:
+      name: The Mouse at the Golden Apple-Tree Root
+      species: sp_mouse
+      traits: [root-gnawer, tree-withering-cause]
+      evidence: |
+        "A mouse is gnawing at the root"
+
+  magic_objects:
+
+    obj_luck_child_caul:
+      name: The Birth Caul
+      object_kind: relic
+      attributes:
+        function: omen of luck and marriage prophecy
+      evidence: |
+        "as he came into the world with a caul on"
+
+    obj_luck_child_water_box:
+      name: The Floating Box
+      object_kind: architecture
+      attributes:
+        function: intended drowning container that becomes boat-cradle
+      evidence: |
+        "The box, however, did not sink, but floated like a boat"
+
+    obj_death_letter_golden_hairs:
+      name: The King's Death-Letter
+      object_kind: token
+      attributes:
+        order: kill and bury the boy before the king returns
+      evidence: |
+        "let him be killed and buried"
+
+    obj_marriage_letter_golden_hairs:
+      name: The Robbers' Marriage-Letter
+      object_kind: token
+      attributes:
+        order: marry the boy at once to the king's daughter
+      evidence: |
+        "as soon as the boy came, he should be married at once"
+
+    obj_devil_three_golden_hairs:
+      name: The Devil's Three Golden Hairs
+      object_kind: relic
+      attributes:
+        count: 3
+        function: impossible-task token demanded by the king
+      evidence: |
+        "fetch me from hell three golden hairs from the head of the devil"
+
+    obj_devil_ferryman_oar:
+      name: The Ferryman's Oar
+      object_kind: tool
+      attributes:
+        function: transfers the endless ferrying burden to whoever receives it
+      evidence: |
+        "put the oar in his hand, and the other man will have to ferry"
+
+    obj_devil_four_gold_asses:
+      name: The Four Asses Laden with Gold
+      object_kind: treasure
+      attributes:
+        source: rewards from the two healed towns
+      evidence: |
+        "the four asses laden with gold"
+
+  locations:
+
+    loc_luck_child_birth_village:
+      name: The Birth Village
+      evidence: |
+        "the King came into the village"
+
+    loc_luck_child_deep_water:
+      name: The Deep Water of the Failed Drowning
+      instance_of: loc_river
+      evidence: |
+        "he came to a deep piece of water; then he threw the box into it"
+
+    loc_luck_child_mill:
+      name: The Mill and Mill-Dam
+      instance_of: loc_mill
+      evidence: |
+        "there was a mill, and it came to a stand-still at the mill-dam"
+
+    loc_luck_child_palace:
+      name: The King's Palace
+      instance_of: loc_castle
+      evidence: |
+        "After some time the King returned to his palace"
+
+    loc_luck_child_forest:
+      name: The Forest of the Changed Letter
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "he lost his way, and in the evening came to a large forest."
+
+    loc_luck_child_robber_cottage:
+      name: The Robbers' Cottage
+      instance_of: loc_house
+      evidence: |
+        "he went towards it and reached a cottage"
+
+    loc_luck_child_wine_fountain_town:
+      name: The Town of the Dry Wine-Fountain
+      evidence: |
+        "our market-fountain, which once flowed with wine has become dry"
+
+    loc_luck_child_golden_apple_town:
+      name: The Town of the Barren Golden Apple-Tree
+      evidence: |
+        "a tree in our town which once bore golden apples"
+
+    loc_luck_child_ferry_river:
+      name: The Wide River and Ferry
+      instance_of: loc_river
+      evidence: |
+        "came to a wide river over which he must go."
+
+    loc_luck_child_hell:
+      name: The Entrance to Hell
+      instance_of: loc_hell
+      threshold_type: threshold_doorway
+      evidence: |
+        "he found the entrance to Hell. It was black and sooty within"
+
+
+classifications:
+
+  world_laws:
+    - law_fated_luck_fulfills_prophecy
+    - law_forest_suspends_domestic_order
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_cunning
+    - agency_speech
+    - agency_social_rank
+
+  affects_driving:
+    - affect_fear
+    - affect_anger
+    - affect_greed
+    - affect_longing
+
+  symbol_numbers:
+    - num_3   # three golden hairs; three questions; three hidden causes
+    - num_4   # four asses laden with gold
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: devil_golden_hairs_luck_child,
+      scene: "caul-born child is prophesied to marry the king's daughter in his fourteenth year" }
+  - { function: func_villainy, order: 2, actor: devil_golden_hairs_king,
+      scene: "king buys the child and throws him boxed into deep water" }
+  - { function: func_rescue, order: 3, actor: devil_golden_hairs_miller_boy,
+      scene: "box floats to mill-dam and child is adopted by miller couple" }
+  - { function: func_trickery, order: 4, actor: devil_golden_hairs_king,
+      scene: "king sends foundling to queen with death-letter" }
+  - { function: func_villainy, order: 5, actor: devil_golden_hairs_robbers,
+      scene: "robbers read the letter but pity the child and substitute marriage-order" }
+  - { function: func_wedding, order: 6, actor: devil_golden_hairs_queen,
+      scene: "queen obeys changed letter and marries luck-child to princess" }
+  - { function: func_difficult_task, order: 7, actor: devil_golden_hairs_king,
+      scene: "king demands three golden hairs from the devil's head" }
+  - { function: func_departure, order: 8, actor: devil_golden_hairs_luck_child,
+      scene: "luck-child sets out for hell and promises answers to two towns and ferryman" }
+  - { function: func_donor_test, order: 9, actor: devil_golden_hairs_devil_grandmother,
+      scene: "devil's grandmother pities him, changes him into an ant, and hides him" }
+  - { function: func_magical_agent, order: 10, actor: devil_golden_hairs_devil_grandmother,
+      scene: "grandmother plucks three golden hairs and extracts three answers through dream-trickery" }
+  - { function: func_return, order: 11, actor: devil_golden_hairs_luck_child,
+      scene: "luck-child leaves hell with hairs and remembered answers" }
+  - { function: func_liquidation, order: 12, actor: devil_golden_hairs_luck_child,
+      scene: "he releases ferryman's knowledge, cures apple-tree town and wine-fountain town, and receives gold" }
+  - { function: func_recognition, order: 13, actor: devil_golden_hairs_king,
+      scene: "king accepts hairs and sees four gold-laden asses" }
+  - { function: func_punishment, order: 14, actor: devil_golden_hairs_ferryman,
+      scene: "greedy king receives the oar and becomes bound to ferry forever" }
+
+
+edges:
+
+  # Prophecy and failed drowning
+  - { from: obj_luck_child_caul, to: devil_golden_hairs_luck_child, label: MARKS_AS_LUCKY,
+      evidence: "whatever any one so born undertakes turns out well." }
+  - { from: speech_prophecy, to: devil_golden_hairs_luck_child, label: FORETELLS_MARRIAGE_FOR,
+      evidence: "in his fourteenth year he would have the King's daughter for his wife." }
+  - { from: devil_golden_hairs_king, to: devil_golden_hairs_poor_mother, label: BUYS_CHILD_FROM,
+      evidence: "offered them a large amount of gold for it" }
+  - { from: devil_golden_hairs_king, to: obj_luck_child_water_box, label: PUTS_CHILD_IN,
+      evidence: "The King put it in a box and rode away with it" }
+  - { from: obj_luck_child_water_box, to: loc_luck_child_deep_water, label: THROWN_INTO,
+      evidence: "he threw the box into it" }
+  - { from: obj_luck_child_water_box, to: loc_luck_child_mill, label: FLOATS_TO,
+      evidence: "it floated to... a mill, and it came to a stand-still at the mill-dam." }
+  - { from: devil_golden_hairs_miller_boy, to: obj_luck_child_water_box, label: PULLS_OUT,
+      evidence: "pulled it out with a hook" }
+  - { from: devil_golden_hairs_miller_couple, to: devil_golden_hairs_luck_child, label: ADOPTS,
+      evidence: "God has given him to us." }
+
+  # Letter substitution and marriage
+  - { from: devil_golden_hairs_king, to: obj_death_letter_golden_hairs, label: WRITES,
+      evidence: "let him be killed and buried" }
+  - { from: devil_golden_hairs_luck_child, to: loc_luck_child_forest, label: LOSES_WAY_IN,
+      evidence: "he lost his way... came to a large forest." }
+  - { from: devil_golden_hairs_robber_old_woman, to: devil_golden_hairs_luck_child, label: WARNS,
+      evidence: "you have come into a den of thieves" }
+  - { from: devil_golden_hairs_robbers, to: obj_death_letter_golden_hairs, label: READS,
+      evidence: "The robbers opened the letter and read it" }
+  - { from: devil_golden_hairs_robbers, to: obj_marriage_letter_golden_hairs, label: SUBSTITUTES_WITH,
+      evidence: "tore up the letter and wrote another" }
+  - { from: devil_golden_hairs_queen, to: devil_golden_hairs_princess, label: MARRIES_TO,
+      evidence: "had a splendid wedding-feast prepared" }
+  - { from: devil_golden_hairs_princess, to: devil_golden_hairs_luck_child, label: MARRIES,
+      evidence: "the King's daughter was married to the luck-child" }
+
+  # Hell quest and answers
+  - { from: devil_golden_hairs_king, to: devil_golden_hairs_luck_child, label: DEMANDS_QUEST_FROM,
+      evidence: "fetch me from hell three golden hairs from the head of the devil" }
+  - { from: devil_golden_hairs_first_watchman, to: devil_golden_hairs_luck_child, label: ASKS_QUESTION_OF,
+      evidence: "why our market-fountain... has become dry" }
+  - { from: devil_golden_hairs_second_gatekeeper, to: devil_golden_hairs_luck_child, label: ASKS_QUESTION_OF,
+      evidence: "why a tree... once bore golden apples now does not even put forth leaves" }
+  - { from: devil_golden_hairs_ferryman, to: devil_golden_hairs_luck_child, label: ASKS_QUESTION_OF,
+      evidence: "why I must always be rowing backwards and forwards" }
+  - { from: devil_golden_hairs_devil_grandmother, to: devil_golden_hairs_luck_child, label: TRANSFORMS_INTO_ANT,
+      evidence: "She changed him into an ant" }
+  - { from: devil_golden_hairs_devil, to: devil_golden_hairs_luck_child, label: SMELLS_FOR,
+      evidence: "I smell man's flesh" }
+  - { from: devil_golden_hairs_devil_grandmother, to: obj_devil_three_golden_hairs, label: PLUCKS,
+      evidence: "took hold of a golden hair, pulled it out" }
+  - { from: devil_golden_hairs_devil, to: devil_golden_hairs_well_toad, label: REVEALS_HIDDEN_CAUSE,
+      evidence: "there is a toad sitting under a stone in the well" }
+  - { from: devil_golden_hairs_devil, to: devil_golden_hairs_root_mouse, label: REVEALS_HIDDEN_CAUSE,
+      evidence: "A mouse is gnawing at the root" }
+  - { from: devil_golden_hairs_devil, to: obj_devil_ferryman_oar, label: REVEALS_RELEASE_MECHANISM,
+      evidence: "put the oar in his hand, and the other man will have to ferry" }
+
+  # Return, rewards, and punishment
+  - { from: devil_golden_hairs_luck_child, to: devil_golden_hairs_ferryman, label: GIVES_RELEASE_ADVICE_TO,
+      evidence: "Next time any one comes... just put the oar in his hand." }
+  - { from: devil_golden_hairs_luck_child, to: devil_golden_hairs_second_gatekeeper, label: ANSWERS,
+      evidence: "Kill the mouse which is gnawing at its root" }
+  - { from: devil_golden_hairs_luck_child, to: devil_golden_hairs_first_watchman, label: ANSWERS,
+      evidence: "A toad is in the well beneath a stone" }
+  - { from: devil_golden_hairs_first_watchman, to: obj_devil_four_gold_asses, label: REWARDS_WITH,
+      evidence: "gave him as a reward two asses laden with gold" }
+  - { from: devil_golden_hairs_second_gatekeeper, to: obj_devil_four_gold_asses, label: REWARDS_WITH,
+      evidence: "also gave him two asses laden with gold." }
+  - { from: devil_golden_hairs_luck_child, to: devil_golden_hairs_king, label: DELIVERS_HAIRS_TO,
+      evidence: "To the King he took what he had asked for, the devil's three golden hairs" }
+  - { from: devil_golden_hairs_luck_child, to: devil_golden_hairs_king, label: DECEIVES_WITH_GOLD_STORY,
+      evidence: "it lies on the shore instead of sand." }
+  - { from: devil_golden_hairs_ferryman, to: devil_golden_hairs_king, label: TRANSFERS_OAR_TO,
+      evidence: "he put the oar in his hand and sprang out." }
+  - { from: obj_devil_ferryman_oar, to: devil_golden_hairs_king, label: BINDS_TO_FERRY,
+      evidence: "from this time forth the King had to ferry" }
+  - { from: law_fated_luck_fulfills_prophecy, to: devil_golden_hairs_luck_child, label: GOVERNS,
+      evidence: "everything must turn out well for it" }

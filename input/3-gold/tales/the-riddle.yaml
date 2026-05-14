@@ -1,0 +1,341 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-riddle
+khm: 22
+atu: '851'
+atu_name: The Riddle
+canonical_source: ../../2-silver/canonical/the-riddle/canonical.txt
+title: The Riddle
+
+
+entities:
+
+  characters:
+
+    riddle_prince:
+      name: The King's Son
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_endurance, agency_social_rank]
+      speech_acts_performed: [speech_riddle]
+      affects: [affect_longing, affect_love_at_first_sight, affect_fear]
+      traits: [world-traveller, witch-shelter-survivor, riddle-poser, night-witness, proof-claimer]
+      evidence: |
+        "One slew none, and yet slew twelve."
+
+    riddle_faithful_servant:
+      name: The Faithful Servant
+      archetypes: [arc_faithful_servant]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_cunning, agency_violence]
+      affects: [affect_loyalty]
+      traits: [saddle-keeper, raven-killer, bed-substitute, mantle-capturer]
+      evidence: |
+        "the clever servant had placed himself in the bed instead of
+        his master"
+
+    riddle_witch:
+      name: The Witch Stepmother
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_cunning, agency_speech, agency_violence]
+      speech_acts_performed: [speech_lie, speech_command]
+      affects: [affect_greed]
+      traits: [red-eyed, false-hospitable, evil-drink-brewer, robber-confederate]
+      evidence: |
+        "My step-mother practises wicked arts"
+
+    riddle_witch_daughter:
+      name: The Witch's Honest Daughter
+      species: sp_human
+      agency_modes: [agency_speech]
+      affects: [affect_fear, affect_shame]
+      traits: [sad-voiced, warning-giver, unwilling-house-member]
+      evidence: |
+        "The daughter warned the two to be prudent, to eat nothing, and
+        drink nothing"
+
+    riddle_horse:
+      name: The Poisoned Horse
+      species: sp_horse
+      traits: [poison-splashed, immediately-dead]
+      evidence: |
+        "the poison spirted on the horse... the animal immediately fell
+        down dead."
+
+    riddle_raven:
+      name: The Poisoned Raven
+      species: sp_bird
+      traits: [horse-eater, poisoned-body, soup-ingredient]
+      evidence: |
+        "a raven was already sitting on it devouring it"
+
+    riddle_innkeeper:
+      name: The Murderous Innkeeper
+      species: sp_human
+      agency_modes: [agency_cunning, agency_violence]
+      traits: [robber-host, poisoned-soup-eater]
+      evidence: |
+        "the innkeeper and the witch sat down with them"
+
+    riddle_twelve_murderers:
+      name: The Twelve Murderers
+      archetypes: [arc_predator]
+      species: sp_human
+      agency_modes: [agency_violence, agency_cunning]
+      affects: [affect_greed]
+      traits: [robbers, night-killers, treasure-hoarders, poisoned-by-raven]
+      evidence: |
+        "twelve of these came, intending to kill the strangers and rob
+        them."
+
+    riddle_innkeepers_daughter:
+      name: The Honest Innkeeper's Daughter
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [honest, door-opener, treasure-shower, nonparticipant]
+      evidence: |
+        "who was honest, and had taken no part in their godless deeds."
+
+    riddle_proud_princess:
+      name: The Proud Riddle Princess
+      archetypes: [arc_proud_task_princess]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning]
+      speech_acts_performed: [speech_riddle, speech_command]
+      affects: [affect_pride, affect_curiosity]
+      traits: [beautiful, clever, head-staking, answer-thief, mantle-proven]
+      evidence: |
+        "whosoever should set her a riddle which she could not guess,
+        that man should be her husband"
+
+    riddle_first_maid:
+      name: The First Maid Spy
+      species: sp_human
+      agency_modes: [agency_cunning]
+      traits: [sleep-chamber-spy, mantle-loser, rod-chased]
+      evidence: |
+        "ordered her maid to creep into the lord's sleeping-chamber"
+
+    riddle_second_maid:
+      name: The Second Maid-in-Waiting Spy
+      species: sp_human
+      agency_modes: [agency_cunning]
+      traits: [second-spy, mantle-loser, rod-chased]
+      evidence: |
+        "sent her maid-in-waiting"
+
+    riddle_twelve_judges:
+      name: The Twelve Judges
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      traits: [riddle-arbiters, proof-demanders, wedding-mantle-orderers]
+      evidence: |
+        "sent for the twelve judges"
+
+  magic_objects:
+
+    obj_witch_parting_draught_riddle:
+      name: The Witch's Parting Draught
+      instance_of: obj_poisoned_food
+      object_kind: food
+      attributes:
+        form: drink in a glass
+        intended_victim: riddle_prince
+        actual_first_victim: riddle_horse
+      evidence: |
+        "I will first hand you a parting draught."
+
+    obj_poisoned_raven_soup:
+      name: The Poisoned Raven Soup
+      instance_of: obj_poisoned_food
+      object_kind: food
+      attributes:
+        ingredient: riddle_raven
+        victims: [riddle_innkeeper, riddle_witch, riddle_twelve_murderers]
+      evidence: |
+        "a dish of soup in which was cut up the flesh of the raven."
+
+    obj_riddle_saddle:
+      name: The Servant's Retrieved Saddle
+      object_kind: tool
+      attributes:
+        function: causes servant to return and discover raven on horse
+      evidence: |
+        "would not leave his saddle behind him, and ran back to fetch it."
+
+    obj_three_mantles_riddle:
+      name: The Three Captured Mantles
+      object_kind: garment
+      attributes:
+        first: maid mantle
+        second: maid-in-waiting mantle
+        third: princess misty-grey mantle
+        function: proof of answer-theft
+      evidence: |
+        "Then were the three mantles brought thither"
+
+    obj_riddle_books:
+      name: The Princess's Riddle-Books
+      object_kind: book
+      attributes:
+        function: fail to contain the prince's private riddle
+      evidence: |
+        "she opened her riddle-books, but it was not in them"
+
+  locations:
+
+    loc_forest_riddle:
+      name: The Great Forest of Night Shelter
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "he came to a great forest, and when darkness overtook him"
+
+    loc_witch_house_riddle:
+      name: The Witch's Little House
+      instance_of: loc_house
+      evidence: |
+        "he saw a girl who was going towards a small house"
+
+    loc_robber_inn_riddle:
+      name: The Robbers' Inn
+      instance_of: loc_inn
+      evidence: |
+        "they found an inn and entered it... a den of murderers"
+
+    loc_riddle_town:
+      name: The Town of the Riddle Princess
+      evidence: |
+        "they came to a town in which was a beautiful but proud princess"
+
+    loc_sleeping_chamber_riddle:
+      name: The Sleeping-Chamber of the Riddle Theft
+      instance_of: loc_castle
+      evidence: |
+        "creep into the lord's sleeping-chamber"
+
+    loc_judgment_hall_riddle:
+      name: The Hall of the Twelve Judges
+      instance_of: loc_castle
+      evidence: |
+        "sent for the twelve judges and expounded it before them."
+
+
+classifications:
+
+  world_laws:
+    - law_poison_transfers_through_consumption
+    - law_promise_binds_reality
+    - law_forest_suspends_domestic_order
+
+  moral_regimes:
+    - moral_retributive
+    - moral_trickster_wins
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_endurance
+    - agency_social_rank
+
+  affects_driving:
+    - affect_fear
+    - affect_love_at_first_sight
+    - affect_pride
+    - affect_greed
+
+  symbol_numbers:
+    - num_3    # three nights / three spying attempts / three mantles
+    - num_12   # twelve murderers and twelve judges
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+  - { function: func_departure, order: 1, actor: riddle_prince,
+      scene: "king's son travels the world with only a faithful servant" }
+  - { function: func_interdiction, order: 2, actor: riddle_witch_daughter,
+      scene: "daughter warns them not to enter, eat, or drink in witch-house" }
+  - { function: func_villainy, order: 3, actor: riddle_witch,
+      scene: "witch's poisoned parting draught kills the horse" }
+  - { function: func_magical_agent, order: 4, actor: riddle_faithful_servant,
+      scene: "servant retrieves saddle, kills poisoned raven, and carries it onward" }
+  - { function: func_punishment, order: 5, actor: obj_poisoned_raven_soup,
+      scene: "poisoned raven soup kills witch, innkeeper, and twelve murderers" }
+  - { function: func_liquidation, order: 6, actor: riddle_innkeepers_daughter,
+      scene: "honest daughter opens doors and reveals treasures; prince refuses them" }
+  - { function: func_mediation, order: 7, actor: riddle_proud_princess,
+      scene: "princess's riddle contest offers marriage or beheading" }
+  - { function: func_difficult_task, order: 8, actor: riddle_prince,
+      scene: "prince poses riddle from the poison-chain adventure" }
+  - { function: func_trickery, order: 9, actor: riddle_proud_princess,
+      scene: "princess sends spies by night to steal the answer" }
+  - { function: func_counteraction, order: 10, actor: riddle_faithful_servant,
+      scene: "servant captures first two mantles while guarding the bed" }
+  - { function: func_exposure, order: 11, actor: riddle_prince,
+      scene: "prince captures princess's mantle and proves answer-theft" }
+  - { function: func_wedding, order: 12, actor: riddle_twelve_judges,
+      scene: "misty-grey mantle is ordered embroidered as wedding mantle" }
+
+
+edges:
+
+  # Witch-house and poison chain
+  - { from: riddle_witch_daughter, to: riddle_prince, label: WARNS,
+      evidence: "Do not go in." }
+  - { from: riddle_witch, to: riddle_prince, label: DECEIVES,
+      evidence: "pretended to be quite friendly." }
+  - { from: riddle_witch, to: obj_witch_parting_draught_riddle, label: BREWS,
+      evidence: "the old woman brewed evil drinks." }
+  - { from: obj_witch_parting_draught_riddle, to: riddle_horse, label: KILLS,
+      evidence: "the poison spirted on the horse... fell down dead." }
+  - { from: riddle_raven, to: riddle_horse, label: EATS,
+      evidence: "a raven was already sitting on it devouring it." }
+  - { from: riddle_faithful_servant, to: riddle_raven, label: KILLS,
+      evidence: "he killed the raven, and took it with him." }
+  - { from: riddle_faithful_servant, to: riddle_innkeeper, label: GIVES_FOOD_TO_PREPARE,
+      evidence: "gave the raven to the innkeeper to make ready for supper." }
+  - { from: riddle_innkeeper, to: obj_poisoned_raven_soup, label: PREPARES,
+      evidence: "a dish of soup in which was cut up the flesh of the raven." }
+  - { from: obj_poisoned_raven_soup, to: riddle_twelve_murderers, label: KILLS,
+      evidence: "they all fell down dead" }
+  - { from: obj_poisoned_raven_soup, to: riddle_witch, label: KILLS,
+      evidence: "the innkeeper and the witch sat down with them" }
+  - { from: obj_poisoned_raven_soup, to: riddle_innkeeper, label: KILLS,
+      evidence: "they all fell down dead" }
+  - { from: riddle_innkeepers_daughter, to: riddle_prince, label: SHOWS_TREASURE_TO,
+      evidence: "opened all doors to the stranger and showed him the heaped-up treasures." }
+
+  # Riddle contest
+  - { from: riddle_proud_princess, to: riddle_prince, label: OFFERS_RIDDLE_CONTEST_TO,
+      attributes: { reward: marriage, penalty: beheading, term_days: 3 },
+      evidence: "if she guessed it, his head must be cut off." }
+  - { from: riddle_prince, to: speech_riddle, label: POSES,
+      evidence: "One slew none, and yet slew twelve." }
+  - { from: riddle_proud_princess, to: obj_riddle_books, label: CONSULTS,
+      evidence: "she opened her riddle-books, but it was not in them" }
+  - { from: riddle_proud_princess, to: riddle_first_maid, label: COMMANDS_SPYING_BY,
+      evidence: "ordered her maid to creep into the lord's sleeping-chamber" }
+  - { from: riddle_faithful_servant, to: riddle_first_maid, label: EXPELS,
+      evidence: "chased her out with rods." }
+  - { from: riddle_faithful_servant, to: obj_three_mantles_riddle, label: CAPTURES,
+      evidence: "he tore off from her the mantle" }
+  - { from: riddle_proud_princess, to: riddle_second_maid, label: COMMANDS_SPYING_BY,
+      evidence: "The second night the King's daughter sent her maid-in-waiting" }
+  - { from: riddle_faithful_servant, to: riddle_second_maid, label: EXPELS,
+      evidence: "hunted her out with rods." }
+  - { from: riddle_proud_princess, to: riddle_prince, label: STEALS_ANSWER_FROM,
+      evidence: "she spoke to him, and hoped that he would answer in his sleep" }
+  - { from: riddle_prince, to: riddle_proud_princess, label: ANSWERS_RIDDLE_FOR,
+      evidence: "A raven, which ate of a dead and poisoned horse" }
+  - { from: riddle_prince, to: obj_three_mantles_riddle, label: CAPTURES,
+      evidence: "he held her mantle so fast that she was forced to leave it behind her." }
+  - { from: riddle_proud_princess, to: riddle_twelve_judges, label: CLAIMS_ANSWER_BEFORE,
+      evidence: "announced that she had guessed the riddle" }
+  - { from: riddle_prince, to: riddle_twelve_judges, label: ACCUSES,
+      evidence: "She stole into my room in the night and questioned me" }
+  - { from: obj_three_mantles_riddle, to: riddle_proud_princess, label: PROVES_DECEPTION_OF,
+      evidence: "the misty-grey one which the King's daughter usually wore" }
+  - { from: riddle_twelve_judges, to: obj_three_mantles_riddle, label: TRANSFORMS_TO_WEDDING_MANTLE,
+      evidence: "Let the mantle be embroidered with gold and silver" }

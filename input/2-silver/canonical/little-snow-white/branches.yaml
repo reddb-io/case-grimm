@@ -1,0 +1,51 @@
+slug: little-snow-white
+khm: 53
+atu: '709'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg2591-grimm-taylor
+  weight: supplementary
+- book: pg11027-grimm-gruelle
+  weight: supplementary
+- book: pg52521-grimm-olcott
+  weight: supplementary
+- book: pg22555-grimm-eeden-dutch
+  weight: supplementary
+sections:
+- id: protagonist-name
+  title: protagonist name
+  canonical:
+    kept: pg5314-grimm-hunt
+    type: translation
+    rationale: 3 of 5 sources use Snow-white; Taylor and one early edition use 'Snowdrop' (a flower).
+- id: huntsman-and-heart-proof
+  title: huntsman and heart-proof
+  canonical:
+    kept: pg5314-grimm-hunt
+    type: factual
+    rationale: '4 of 5 sources agree with Hunt; KHM 1857 has Jäger + Herz-und-Lunge proof. Structural importance: the queen''s false belief that she has eaten the heart is what creates the dramatic vulnerability to the mirror''s later contradiction.'
+- id: awakening-how-apple-piece-is-dislodged
+  title: awakening — how apple piece is dislodged
+  canonical:
+    kept: pg5314-grimm-hunt
+    type: factual
+    rationale: 4 of 5 sources + KHM 1857 'sie stolperten über einen Strauch'. Taylor's prince-lifts-coffin is a simplification.
+- id: stepmother-s-fate
+  title: stepmother's fate
+  canonical:
+    kept: pg5314-grimm-hunt
+    type: conflict
+    rationale: KHM 1857 explicitly has *eiserne Pantoffeln* heated *im Kohlenfeuer*. 3 of 5 sources keep it. ATU 709 motif requires retributive ending — the envious stepmother's compelled-death is the structural moral closure of the tale type. Removing it changes the tale's moral regime from `moral_violent_punishment` to `moral_arbitrary`.
+  branches:
+  - type: fork
+    from: pg2591-grimm-taylor
+    description: queen dies of rage on sight of Snow-white at the wedding — no compelled iron-shoe dance
+    text: When she heard this she started with rage; but her envy and curiosity were so great, that she could not help setting out to see the bride. And when she got there, and saw that it was no other than Snow-white, who, as she thought, had been dead a long while, she choked with rage, and fell down and died.
+    consequences:
+    - 'moral_regime shifts: moral_violent_punishment → moral_arbitrary (self-undoing rather than retributive justice)'
+    - 'no compelled-dance motif: punishment is internal-affective, not externally imposed'
+    - the iron shoes, fire, and tongs as ritual-objects disappear from the tale's object inventory
+    - ATU 709 type-marker (envious-step-mother destroyed by enforced ritual) weakened to type-passive (envy kills its host)
+    plot_breaks: none — the dwarfs and the prince don't need to know about the shoes; ending is self-contained.

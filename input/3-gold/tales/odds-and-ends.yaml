@@ -1,0 +1,243 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: odds-and-ends
+khm: 156
+atu: "1452"
+atu_name: Odds and Ends
+canonical_source: ../../2-silver/canonical/odds-and-ends/canonical.txt
+title: Odds and Ends
+
+
+entities:
+
+  characters:
+
+    odds_lazy_maiden:
+      name: The Pretty Idle Maiden
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_sloth, affect_pride]
+      traits: [pretty-maiden, idle, negligent, out-of-temper-spinner, flax-waster, rejected-bride]
+      evidence: |
+        a maiden who was pretty, but idle and negligent
+
+    odds_industrious_servant:
+      name: The Industrious Servant
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation]
+      affects: [affect_joy]
+      traits: [poor-girl, industrious-servant, flax-saver, fine-spinner, pretty-dress-dancer, chosen-wife]
+      evidence: |
+        she had a servant who was industrious
+
+    odds_young_man:
+      name: The Young Bridegroom
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_request]
+      affects: [affect_love]
+      traits: [wooer, wedding-eve-listener, domestic-evidence-reader, bride-reselector]
+      evidence: |
+        A young man had wooed the lazy girl
+
+  magic_objects:
+
+    obj_odds_flax_knot:
+      name: The Knot in the Flax
+      object_kind: material
+      attributes:
+        function: tiny spinning difficulty that triggers the lazy maiden's excessive waste
+      evidence: |
+        a little knot in the flax
+
+    obj_odds_discarded_flax_bits:
+      name: The Discarded Flax Bits
+      object_kind: material
+      attributes:
+        function: wasted textile material transformed by the servant into proof of industry
+      evidence: |
+        bits of flax which were thrown away
+
+    obj_odds_pretty_dress:
+      name: The Pretty Dress from Odds and Ends
+      object_kind: garment
+      attributes:
+        function: visible product of salvaged flax that exposes the contrast between idleness and industry
+      evidence: |
+        a beautiful gown made out of them for herself
+
+  locations:
+
+    loc_odds_spinning_ground:
+      name: The Ground Beside the Spinner
+      instance_of: loc_house
+      evidence: |
+        strewed it about on the ground beside her
+
+    loc_odds_wedding_eve_house:
+      name: The Wedding-Eve House
+      instance_of: loc_house
+      evidence: |
+        On the eve of the wedding
+
+
+classifications:
+
+  world_laws:
+    - law_discarded_flax_reveals_domestic_industry
+
+  moral_regimes:
+    - moral_prudent_selection
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_object_mediation
+    - agency_speech
+
+  affects_driving:
+    - affect_sloth
+    - affect_pride
+    - affect_love
+    - affect_joy
+
+  symbol_numbers: []
+
+  threshold_types: []
+
+
+propp:
+
+  - function: func_initial_situation
+    order: 1
+    actor: odds_lazy_maiden
+    scene: The pretty maiden is idle and negligent when she has to spin.
+    evidence: |
+      pretty, but idle and negligent
+
+  - function: func_waste
+    order: 2
+    actor: odds_lazy_maiden
+    victim: obj_odds_discarded_flax_bits
+    scene: A small knot makes the maiden pull out heaps of flax and scatter them on the ground.
+    evidence: |
+      she at once pulled out a whole heap of it
+
+  - function: func_salvage
+    order: 3
+    actor: odds_industrious_servant
+    beneficiary: obj_odds_discarded_flax_bits
+    scene: The industrious servant gathers, cleans, and finely spins the discarded flax.
+    evidence: |
+      gathered together the bits of flax which were thrown away, cleaned them, span them fine
+
+  - function: func_transformation
+    order: 4
+    actor: odds_industrious_servant
+    beneficiary: obj_odds_pretty_dress
+    scene: The salvaged flax becomes a beautiful gown for the servant.
+    evidence: |
+      had a beautiful gown made out of them for herself
+
+  - function: func_disclosure
+    order: 5
+    actor: odds_lazy_maiden
+    scene: On the wedding eve, the bride calls the servant's dress her own odds and ends.
+    evidence: |
+      dressed in my odds and ends
+
+  - function: func_recognition
+    order: 6
+    actor: odds_young_man
+    scene: The bridegroom hears the explanation and recognizes the lazy bride and industrious servant.
+    evidence: |
+      saw how idle she was, and how industrious the poor girl was
+
+  - function: func_reselection
+    order: 7
+    actor: odds_young_man
+    beneficiary: odds_industrious_servant
+    scene: The bridegroom gives up the lazy girl and chooses the industrious servant as wife.
+    evidence: |
+      he gave her up and went to the other, and chose her as his wife
+
+
+edges:
+
+  - from: odds_lazy_maiden
+    label: WASTES_FLAX_BECAUSE_OF
+    to: obj_odds_flax_knot
+    evidence: |
+      if there was a little knot in the flax
+
+  - from: odds_lazy_maiden
+    label: THROWS_AWAY
+    to: obj_odds_discarded_flax_bits
+    evidence: |
+      bits of flax which were thrown away
+
+  - from: odds_industrious_servant
+    label: GATHERS
+    to: obj_odds_discarded_flax_bits
+    evidence: |
+      gathered together the bits of flax
+
+  - from: odds_industrious_servant
+    label: SPINS_FINE
+    to: obj_odds_discarded_flax_bits
+    evidence: |
+      cleaned them, span them fine
+
+  - from: obj_odds_discarded_flax_bits
+    label: BECOMES
+    to: obj_odds_pretty_dress
+    evidence: |
+      had a beautiful gown made out of them
+
+  - from: odds_industrious_servant
+    label: DANCES_IN
+    to: obj_odds_pretty_dress
+    evidence: |
+      dancing merrily about in her pretty dress
+
+  - from: odds_lazy_maiden
+    label: DISCLOSES_SOURCE_OF
+    to: obj_odds_pretty_dress
+    evidence: |
+      dressed in my odds and ends
+
+  - from: odds_young_man
+    label: HEARS_DISCLOSURE_FROM
+    to: odds_lazy_maiden
+    evidence: |
+      The bridegroom heard that
+
+  - from: odds_young_man
+    label: RECOGNIZES_IDLENESS_OF
+    to: odds_lazy_maiden
+    evidence: |
+      saw how idle she was
+
+  - from: odds_young_man
+    label: RECOGNIZES_INDUSTRY_OF
+    to: odds_industrious_servant
+    evidence: |
+      how industrious the poor girl was
+
+  - from: odds_young_man
+    label: GIVES_UP
+    to: odds_lazy_maiden
+    evidence: |
+      he gave her up
+
+  - from: odds_young_man
+    label: CHOOSES_AS_WIFE
+    to: odds_industrious_servant
+    evidence: |
+      chose her as his wife
+
+  - from: law_discarded_flax_reveals_domestic_industry
+    label: SELECTS
+    to: odds_industrious_servant
+    evidence: |
+      chose her as his wife

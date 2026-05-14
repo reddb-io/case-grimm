@@ -1,0 +1,392 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: thumbling
+khm: 37
+atu: '700'
+atu_name: Thumbling / Tom Thumb
+canonical_source: ../../2-silver/canonical/thumbling/canonical.txt
+title: Thumbling
+
+
+entities:
+
+  characters:
+
+    thumbling:
+      name: Thumbling
+      archetypes: [arc_tiny_hero, arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_endurance]
+      existential_states: [state_devoured_but_alive]
+      affects: [affect_curiosity, affect_fear]
+      traits: [thumb-sized, wise, nimble, hidden-driver, buyer-escaper, thief-misleader, swallowed-survivor]
+      evidence: |
+        "no longer than a thumb... nevertheless it looked sensibly out
+        of its eyes"
+
+    thumbling_father:
+      name: Thumbling's Father / Poor Peasant
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_violence]
+      affects: [affect_longing, affect_maternal_love, affect_fear]
+      traits: [childless-longing, woodcutter, reluctant-seller, rescuer, wolf-killer]
+      evidence: |
+        "he is the apple of my eye, and all the money in the world
+        cannot buy him from me."
+
+    thumbling_mother:
+      name: Thumbling's Mother
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_longing, affect_maternal_love]
+      traits: [child-wisher, seven-month-mother, horse-harnesser, final-carer]
+      evidence: |
+        "even if we had only one, and it were quite small, and only as
+        big as a thumb"
+
+    thumbling_horse:
+      name: The Harnessed Horse
+      species: sp_horse
+      agency_modes: [agency_endurance]
+      traits: [ear-driven, cart-puller, invisible-driver-vehicle]
+      evidence: |
+        "I shall sit in the horse's ear and call out to him how he is
+        to go."
+
+    thumbling_strangers:
+      name: The Two Strange Men
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning]
+      affects: [affect_greed, affect_curiosity]
+      traits: [showmen, buyer-exploiters, mouse-hole-dupes]
+      evidence: |
+        "the little fellow would make our fortune if we exhibited him
+        in a large town"
+
+    thumbling_thieves:
+      name: The Two Thieves
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech]
+      affects: [affect_greed, affect_fear]
+      traits: [pastor-house-robbers, hidden-voice-dupes, frightened-runners]
+      evidence: |
+        "How shall we contrive to get hold of the rich pastor's silver
+        and gold?"
+
+    thumbling_maid:
+      name: The Pastor's Maid
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_fear]
+      traits: [cow-milker, talking-cow-witness, alarm-raiser]
+      evidence: |
+        "The maid happened to be just then milking the cow"
+
+    thumbling_pastor:
+      name: The Rich Pastor
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      affects: [affect_fear]
+      traits: [robbery-target, talking-cow-investigator, cow-kill-commander]
+      evidence: |
+        "thinking the cow was surely bewitched, told his man to kill
+        her on the spot."
+
+    thumbling_cow:
+      name: The Cow that Swallows Thumbling
+      species: sp_cattle
+      agency_modes: [agency_domestic_labor]
+      traits: [hay-fed, accidental-devourer, mistaken-speaking-cow, slaughtered]
+      evidence: |
+        "the cow had taken Tom up in a mouthful of it."
+
+    thumbling_wolf:
+      name: The Hungry Wolf
+      species: sp_wolf
+      agency_modes: [agency_violence, agency_speech]
+      affects: [affect_greed, affect_fear]
+      traits: [stomach-swallower, pantry-glutton, exit-blocked, killed-rescue-body]
+      evidence: |
+        "A hungry wolf sprang out, and swallowed up the whole stomach,
+        with Tom in it, at one gulp"
+
+  magic_objects:
+
+    obj_thumbling_cart:
+      name: The Wood Cart
+      object_kind: tool
+      attributes:
+        function: cart Thumbling drives from the horse's ear
+      evidence: |
+        "it shall be in the forest at the appointed time."
+
+    obj_thumbling_money:
+      name: The Handsome Bit of Money
+      object_kind: treasure
+      attributes:
+        paid_by: thumbling_strangers
+      evidence: |
+        "the father parted with him to the two men for a handsome bit
+        of money."
+
+    obj_thumbling_hat:
+      name: The Hat Rim
+      object_kind: garment
+      attributes:
+        function: travelling platform for Thumbling
+      evidence: |
+        "just set me on the rim of your hat"
+
+    obj_thumbling_sticks:
+      name: The Sticks Pushed into the Mouse-Hole
+      object_kind: tool
+      attributes:
+        function: failed attempt to recapture Thumbling
+      evidence: |
+        "stuck their sticks into the mouse-hole"
+
+    obj_thumbling_snail_shell:
+      name: The Empty Snail-Shell
+      object_kind: creature_object
+      attributes:
+        function: safe night shelter for tiny body
+      evidence: |
+        "an empty snail-shell. 'Thank God!' said he. 'In that I can pass
+        the night in safety'"
+
+    obj_thumbling_hay:
+      name: The Bundle of Hay
+      object_kind: material
+      attributes:
+        function: carries sleeping Thumbling into the cow's mouth
+      evidence: |
+        "carried away a large bundle of hay, with the little man in the
+        middle of it"
+
+    obj_thumbling_cow_stomach:
+      name: The Cow's Stomach
+      object_kind: creature_object
+      attributes:
+        function: first animal interior containing Thumbling
+      evidence: |
+        "At last down he went into her stomach."
+
+    obj_thumbling_wolf_belly:
+      name: The Wolf's Belly
+      object_kind: creature_object
+      attributes:
+        function: second animal interior from which father rescues him
+      evidence: |
+        "the wolf has swallowed me."
+
+    obj_thumbling_axe:
+      name: The Father's Axe
+      object_kind: weapon
+      attributes:
+        function: kills the wolf to rescue Thumbling
+      evidence: |
+        "the woodman ran for his axe"
+
+  locations:
+
+    loc_thumbling_parent_house:
+      name: The Poor Peasant's House
+      instance_of: loc_house
+      evidence: |
+        "sat in the evening by the hearth"
+
+    loc_thumbling_hearth:
+      name: The Hearth of Childless Longing
+      instance_of: loc_hearth
+      evidence: |
+        "sat in the evening by the hearth and poked the fire"
+
+    loc_thumbling_forest:
+      name: The Wood-Cutting Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "go into the forest to cut wood"
+
+    loc_thumbling_wayside:
+      name: The Wayside Where Thumbling Escapes
+      evidence: |
+        "put the little fellow on the ground by the wayside"
+
+    loc_thumbling_mouse_hole:
+      name: The Mouse-Hole
+      instance_of: loc_cave
+      evidence: |
+        "slipped into a mouse-hole which he had sought out."
+
+    loc_thumbling_pastor_house:
+      name: The Rich Pastor's House
+      instance_of: loc_house
+      evidence: |
+        "the rich pastor's silver and gold"
+
+    loc_thumbling_barn_hayloft:
+      name: The Barn Hay-Loft
+      instance_of: loc_stable
+      evidence: |
+        "Tom had slipped off into the barn"
+
+    loc_thumbling_cowhouse:
+      name: The Cow-House
+      instance_of: loc_stable
+      evidence: |
+        "Scarcely had they set foot on the threshold"
+
+    loc_thumbling_dunghill:
+      name: The Dunghill
+      evidence: |
+        "the stomach, in which Tom lay, was thrown out upon a dunghill."
+
+    loc_thumbling_pantry:
+      name: The Family Pantry
+      instance_of: loc_house
+      evidence: |
+        "there you will find cakes, ham, beef, cold chicken, roast pig,
+        apple-dumplings"
+
+
+classifications:
+
+  world_laws:
+    - law_tiny_body_enables_hidden_agency
+    - law_devouring_can_be_reversed
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_endurance
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_longing
+    - affect_maternal_love
+    - affect_greed
+    - affect_fear
+
+  symbol_numbers:
+    - num_7   # seven-month birth of the thumb-sized child
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+  - { function: func_lack, order: 1, actor: thumbling_father,
+      scene: "poor peasant and wife grieve that they have no children" }
+  - { function: func_magical_birth, order: 2, actor: thumbling_mother,
+      scene: "after seven months she bears a perfect child no longer than a thumb" }
+  - { function: func_difficult_task, order: 3, actor: thumbling,
+      scene: "Thumbling drives the cart to the forest from inside the horse's ear" }
+  - { function: func_trickery, order: 4, actor: thumbling_strangers,
+      scene: "two men buy Thumbling to exhibit him for money" }
+  - { function: func_escape, order: 5, actor: thumbling,
+      scene: "Thumbling slips into a mouse-hole and mocks the buyers" }
+  - { function: func_shelter, order: 6, actor: thumbling,
+      scene: "he sleeps safely in an empty snail-shell" }
+  - { function: func_trickery, order: 7, actor: thumbling,
+      scene: "Thumbling offers to help thieves rob the rich pastor, then exposes them by loud speech" }
+  - { function: func_escape, order: 8, actor: thumbling,
+      scene: "he slips into the barn before the maid can find him" }
+  - { function: func_villainy, order: 9, actor: thumbling_cow,
+      scene: "sleeping Thumbling is carried in hay and swallowed by the cow" }
+  - { function: func_escape, order: 10, actor: thumbling,
+      scene: "his hidden voice makes the cow seem bewitched, and the stomach is thrown out" }
+  - { function: func_villainy, order: 11, actor: thumbling_wolf,
+      scene: "wolf swallows the cow's stomach with Thumbling inside" }
+  - { function: func_trickery, order: 12, actor: thumbling,
+      scene: "Thumbling guides the wolf to his father's pantry and traps him by gluttony" }
+  - { function: func_rescue, order: 13, actor: thumbling_father,
+      scene: "father kills the wolf and cuts Thumbling out alive" }
+  - { function: func_return, order: 14, actor: thumbling,
+      scene: "Thumbling returns home and his parents refuse ever to sell him again" }
+
+
+edges:
+
+  # Birth and tiny scale
+  - { from: thumbling_mother, to: thumbling, label: WISHES_FOR,
+      evidence: "even if we had only one, and it were quite small" }
+  - { from: thumbling_mother, to: thumbling, label: GIVES_BIRTH_TO,
+      evidence: "after seven months gave birth to a child" }
+  - { from: thumbling, to: arc_tiny_hero, label: EMBODIES,
+      evidence: "no longer than a thumb" }
+
+  # Horse-ear driving and sale
+  - { from: thumbling, to: thumbling_horse, label: HIDES_IN_EAR_OF,
+      evidence: "I shall sit in the horse's ear and call out to him" }
+  - { from: thumbling, to: obj_thumbling_cart, label: DRIVES,
+      evidence: "the cart went the right way into the forest." }
+  - { from: thumbling_strangers, to: thumbling, label: BUY,
+      evidence: "Sell us the little man." }
+  - { from: thumbling_strangers, to: obj_thumbling_money, label: PAY_WITH,
+      evidence: "for a handsome bit of money." }
+  - { from: thumbling, to: obj_thumbling_hat, label: RIDES_ON,
+      evidence: "just set me on the rim of your hat" }
+  - { from: thumbling, to: loc_thumbling_mouse_hole, label: ESCAPES_INTO,
+      evidence: "he suddenly slipped into a mouse-hole" }
+  - { from: thumbling_strangers, to: obj_thumbling_sticks, label: USE,
+      evidence: "stuck their sticks into the mouse-hole" }
+  - { from: thumbling, to: obj_thumbling_snail_shell, label: SHELTERS_IN,
+      evidence: "In that I can pass the night in safety" }
+
+  # Thieves and pastor house
+  - { from: thumbling_thieves, to: loc_thumbling_pastor_house, label: PLAN_TO_ROB,
+      evidence: "get hold of the rich pastor's silver and gold" }
+  - { from: thumbling, to: thumbling_thieves, label: OFFERS_HELP_TO,
+      evidence: "Take me with you, and I'll help you." }
+  - { from: thumbling, to: thumbling_thieves, label: FRIGHTENS_BY_SHOUTING,
+      evidence: "called out as loud as he could" }
+  - { from: thumbling, to: loc_thumbling_barn_hayloft, label: HIDES_IN,
+      evidence: "Tom had slipped off into the barn" }
+
+  # Cow interior
+  - { from: thumbling_maid, to: obj_thumbling_hay, label: CARRIES,
+      evidence: "carried away a large bundle of hay" }
+  - { from: thumbling_cow, to: thumbling, label: SWALLOWS,
+      evidence: "the cow had taken Tom up in a mouthful of it." }
+  - { from: thumbling, to: obj_thumbling_cow_stomach, label: TRAPPED_IN,
+      evidence: "At last down he went into her stomach." }
+  - { from: thumbling, to: law_tiny_body_enables_hidden_agency, label: ENACTS,
+      evidence: "Don't bring me any more hay!" }
+  - { from: thumbling_maid, to: thumbling_pastor, label: REPORTS_TO,
+      evidence: "Sir, sir, the cow is talking!" }
+  - { from: thumbling_pastor, to: thumbling_cow, label: ORDERS_KILLED,
+      evidence: "told his man to kill her on the spot." }
+  - { from: obj_thumbling_cow_stomach, to: loc_thumbling_dunghill, label: THROWN_ON,
+      evidence: "was thrown out upon a dunghill." }
+
+  # Wolf interior and return
+  - { from: thumbling_wolf, to: obj_thumbling_cow_stomach, label: SWALLOWS,
+      evidence: "swallowed up the whole stomach" }
+  - { from: thumbling_wolf, to: thumbling, label: SWALLOWS,
+      evidence: "with Tom in it, at one gulp" }
+  - { from: thumbling, to: obj_thumbling_wolf_belly, label: TRAPPED_IN,
+      evidence: "the wolf has swallowed me." }
+  - { from: thumbling, to: thumbling_wolf, label: LURES_TO,
+      attributes: { destination: loc_thumbling_pantry },
+      evidence: "I can show you a famous treat." }
+  - { from: thumbling_wolf, to: loc_thumbling_pantry, label: ENTERS,
+      evidence: "crawled through the drain into the kitchen and then into the pantry" }
+  - { from: thumbling_wolf, to: loc_thumbling_pantry, label: GORGES_IN,
+      evidence: "ate and drank there to his heart's content." }
+  - { from: thumbling, to: thumbling_father, label: CALLS_FROM_INSIDE,
+      evidence: "Father, father! I am here, the wolf has swallowed me." }
+  - { from: thumbling_father, to: obj_thumbling_axe, label: USES,
+      evidence: "the woodman ran for his axe" }
+  - { from: thumbling_father, to: thumbling_wolf, label: KILLS,
+      evidence: "struck the wolf on the head, and killed him on the spot" }
+  - { from: thumbling_father, to: thumbling, label: RESCUES,
+      evidence: "cut open his body, and set Tommy free." }
+  - { from: thumbling_father, to: thumbling, label: REFUSES_FUTURE_SALE_OF,
+      evidence: "we will not sell you again for all the riches in the world." }
+  - { from: thumbling, to: loc_thumbling_parent_house, label: RETURNS_HOME_TO,
+      evidence: "So Master Thumb stayed at home with his father and mother" }

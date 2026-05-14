@@ -1,0 +1,429 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-turnip
+khm: 146
+atu: 1689A
+atu_name: The Turnip
+canonical_source: ../../2-silver/canonical/the-turnip/canonical.txt
+title: The Turnip
+
+
+entities:
+
+  characters:
+
+    turnip_poor_soldier_farmer:
+      name: The Poor Soldier Turned Farmer
+      archetypes: [arc_discharged_soldier, arc_trickster]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation, agency_speech, agency_cunning, agency_endurance]
+      speech_acts_performed: [speech_lie, speech_boast, speech_bargain]
+      affects: [affect_pity, affect_joy, affect_fear]
+      traits: [poor-brother, former-soldier, turnip-grower, royal-gift-bringer, sack-prisoner, wisdom-sack-trickster]
+      evidence: |
+        I am a poor soldier, who because he could no longer support himself hung his soldier’s coat on a nail and took to farming land.
+
+    turnip_rich_brother:
+      name: The Rich Brother
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_speech, agency_cunning, agency_violence]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_envy, affect_greed, affect_anger]
+      traits: [rich-brother, envious-imitator, calculated-gift-giver, ambush-planner, fratricide-attempter]
+      evidence: |
+        When the rich brother heard what the poor one had gained for himself with one single turnip, he envied him
+
+    turnip_king:
+      name: The King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_request, speech_promise]
+      affects: [affect_pity, affect_joy]
+      traits: [marvel-receiver, poor-soldier-benefactor, ironic-countergift-giver]
+      evidence: |
+        Then the King felt compassion for him
+
+    turnip_oxen:
+      name: The Two Oxen
+      species: sp_cattle
+      agency_modes: [agency_domestic_labor]
+      traits: [turnip-cart-drawers, scale-witnesses]
+      evidence: |
+        two oxen were required to draw it
+
+    turnip_hired_murderers:
+      name: The Hired Murderers
+      species: sp_human
+      agency_modes: [agency_violence, agency_cunning, agency_object_mediation]
+      affects: [affect_fear]
+      traits: [ambushers, binding-attackers, frightened-fugitives, sack-hangers]
+      evidence: |
+        He hired murderers, who were to lie in ambush
+
+    turnip_travelling_student:
+      name: The Travelling Student
+      archetypes: [arc_naive_victim]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_request, speech_blessing]
+      affects: [affect_greed, affect_joy]
+      traits: [singing-rider, knowledge-hungry-dupe, sack-substitute, released-after-delay]
+      evidence: |
+        a travelling student, a young fellow who rode on his way through the wood joyously singing his song
+
+  magic_objects:
+
+    obj_turnip_giant_turnip:
+      name: The Giant Turnip
+      instance_of: obj_giant_turnip
+      object_kind: food
+      attributes:
+        function: agrarian marvel whose useless excess becomes a royal gift and then an ironic countergift
+      evidence: |
+        one turnip grew there which became large and vigorous
+
+    obj_turnip_cart:
+      name: The Turnip Cart
+      object_kind: tool
+      attributes:
+        function: transport that proves the turnip's impossible scale before court
+      evidence: |
+        by itself it filled a whole cart
+
+    obj_turnip_royal_gifts:
+      name: The King's Gifts
+      object_kind: treasure
+      attributes:
+        function: gold, lands, meadows, and herds that raise the poor brother above poverty
+      evidence: |
+        much gold, and lands, and meadows, and herds
+
+    obj_turnip_countergift_gold_horses:
+      name: The Rich Brother's Gold and Horses
+      object_kind: treasure
+      attributes:
+        function: calculated countergift offered in expectation of a larger royal return
+      evidence: |
+        took gold and horses and carried them to the King
+
+    obj_turnip_wisdom_sack:
+      name: The Sack of Wisdom
+      object_kind: tool
+      attributes:
+        function: execution sack rhetorically transformed into a false school of total knowledge
+      evidence: |
+        here I sit aloft in the Sack of Wisdom
+
+    obj_turnip_sack_rope:
+      name: The Sack Rope
+      object_kind: tool
+      attributes:
+        function: lets the prisoner be lowered, freed, and replaced by the student
+      evidence: |
+        let it down by the rope
+
+  locations:
+
+    loc_turnip_field:
+      name: The Poor Brother's Turnip Field
+      instance_of: loc_field
+      evidence: |
+        He dug and hoed his bit of land, and sowed it with turnip-seed
+
+    loc_turnip_palace:
+      name: The King's Palace
+      instance_of: loc_castle
+      evidence: |
+        took it to the palace, and presented it to the King
+
+    loc_turnip_ambush_road:
+      name: The Road to the False Treasure
+      instance_of: loc_road
+      evidence: |
+        While they were on their way
+
+    loc_turnip_wood:
+      name: The Wood of the Sack Trick
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        rode on his way through the wood
+
+    loc_turnip_hanging_tree:
+      name: The Hanging Tree
+      instance_of: loc_tree
+      threshold_type: threshold_forest
+      evidence: |
+        would have hanged him to a tree
+
+
+classifications:
+
+  world_laws:
+    - law_marvel_gift_revalues_humble_crop
+    - law_execution_container_invites_place_swap
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_object_mediation
+    - agency_speech
+    - agency_cunning
+    - agency_social_rank
+    - agency_violence
+
+  affects_driving:
+    - affect_envy
+    - affect_greed
+    - affect_anger
+    - affect_fear
+    - affect_pity
+    - affect_joy
+
+  symbol_numbers:
+    - num_2
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: turnip_poor_soldier_farmer
+    scene: The poor soldier leaves military identity because he cannot support himself.
+    evidence: |
+      to escape from his poverty, put off his soldier’s coat, and turned farmer
+
+  - function: func_acquisition
+    order: 2
+    actor: turnip_poor_soldier_farmer
+    beneficiary: obj_turnip_giant_turnip
+    scene: Farming produces one turnip of impossible size and singularity.
+    evidence: |
+      visibly grew bigger and bigger, and seemed as if it would never stop growing
+
+  - function: func_donation
+    order: 3
+    actor: turnip_poor_soldier_farmer
+    beneficiary: turnip_king
+    scene: The farmer chooses gift-exchange with the king over sale or eating.
+    evidence: |
+      it would be better to take it to the King, and make him a present of it
+
+  - function: func_reward
+    order: 4
+    actor: turnip_king
+    beneficiary: turnip_poor_soldier_farmer
+    scene: Royal compassion converts the turnip marvel into wealth and land.
+    evidence: |
+      Thou shalt be raised from thy poverty
+
+  - function: func_imitation
+    order: 5
+    actor: turnip_rich_brother
+    scene: The rich brother imitates the gift structure with calculated treasure.
+    evidence: |
+      he also could get hold of a similar piece of luck
+
+  - function: func_reversal
+    order: 6
+    actor: turnip_king
+    beneficiary: turnip_rich_brother
+    scene: The king returns the marvel itself as the only rarer gift.
+    evidence: |
+      nothing to give him in return that was more rare and excellent than the great turnip
+
+  - function: func_villainy
+    order: 7
+    actor: turnip_rich_brother
+    victim: turnip_poor_soldier_farmer
+    scene: Envy becomes attempted fratricide by ambush and hanging.
+    evidence: |
+      he resolved to kill his brother
+
+  - function: func_rescue
+    order: 8
+    actor: turnip_poor_soldier_farmer
+    beneficiary: turnip_poor_soldier_farmer
+    scene: The sack-prisoner invents the Sack of Wisdom to summon a replacement.
+    evidence: |
+      here I sit aloft in the Sack of Wisdom
+
+  - function: func_trickery
+    order: 9
+    actor: turnip_poor_soldier_farmer
+    victim: turnip_travelling_student
+    scene: The student's desire for total knowledge lets the prisoner trade places.
+    evidence: |
+      his thirst for knowledge was so very great
+
+  - function: func_escape
+    order: 10
+    actor: turnip_poor_soldier_farmer
+    scene: The freed brother rides away on the student's horse.
+    evidence: |
+      he mounted the student’s horse and rode away
+
+
+edges:
+
+  - from: turnip_poor_soldier_farmer
+    label: LEAVES_ROLE
+    to: turnip_poor_soldier_farmer
+    evidence: |
+      put off his soldier’s coat, and turned farmer
+
+  - from: turnip_poor_soldier_farmer
+    label: CULTIVATES
+    to: obj_turnip_giant_turnip
+    evidence: |
+      sowed it with turnip-seed
+
+  - from: obj_turnip_giant_turnip
+    label: GROWS_IN
+    to: loc_turnip_field
+    evidence: |
+      one turnip grew there
+
+  - from: obj_turnip_giant_turnip
+    label: REQUIRES
+    to: turnip_oxen
+    evidence: |
+      two oxen were required to draw it
+
+  - from: obj_turnip_giant_turnip
+    label: FILLS
+    to: obj_turnip_cart
+    evidence: |
+      by itself it filled a whole cart
+
+  - from: turnip_poor_soldier_farmer
+    label: PRESENTS
+    to: turnip_king
+    evidence: |
+      presented it to the King
+
+  - from: turnip_poor_soldier_farmer
+    label: PRESENTS
+    to: obj_turnip_giant_turnip
+    evidence: |
+      make him a present of it
+
+  - from: law_marvel_gift_revalues_humble_crop
+    label: REVALUES
+    to: obj_turnip_giant_turnip
+    evidence: |
+      never such a monster as this
+
+  - from: turnip_king
+    label: REWARDS
+    to: turnip_poor_soldier_farmer
+    evidence: |
+      Thou shalt be raised from thy poverty
+
+  - from: turnip_king
+    label: GIVES
+    to: obj_turnip_royal_gifts
+    evidence: |
+      bestowed on him much gold, and lands, and meadows, and herds
+
+  - from: turnip_rich_brother
+    label: ENVIES
+    to: turnip_poor_soldier_farmer
+    evidence: |
+      he envied him
+
+  - from: turnip_rich_brother
+    label: PRESENTS
+    to: obj_turnip_countergift_gold_horses
+    evidence: |
+      took gold and horses and carried them to the King
+
+  - from: turnip_king
+    label: RETURNS_AS_GIFT
+    to: obj_turnip_giant_turnip
+    evidence: |
+      nothing to give him in return that was more rare and excellent than the great turnip
+
+  - from: turnip_rich_brother
+    label: PLOTS_MURDER_OF
+    to: turnip_poor_soldier_farmer
+    evidence: |
+      he resolved to kill his brother
+
+  - from: turnip_rich_brother
+    label: HIRES
+    to: turnip_hired_murderers
+    evidence: |
+      He hired murderers
+
+  - from: turnip_rich_brother
+    label: LURES_WITH_TREASURE
+    to: turnip_poor_soldier_farmer
+    evidence: |
+      I know of a hidden treasure
+
+  - from: turnip_hired_murderers
+    label: BINDS
+    to: turnip_poor_soldier_farmer
+    evidence: |
+      fell on him, bound him
+
+  - from: turnip_hired_murderers
+    label: HANGS
+    to: obj_turnip_wisdom_sack
+    evidence: |
+      hung it on a branch
+
+  - from: turnip_poor_soldier_farmer
+    label: RENAMES_AS
+    to: obj_turnip_wisdom_sack
+    evidence: |
+      here I sit aloft in the Sack of Wisdom
+
+  - from: obj_turnip_wisdom_sack
+    label: DECEIVES
+    to: turnip_travelling_student
+    evidence: |
+      compared with this all schools are a jest
+
+  - from: turnip_travelling_student
+    label: DESIRES_ENTRY_INTO
+    to: obj_turnip_wisdom_sack
+    evidence: |
+      May not I also enter the sack for a while?
+
+  - from: turnip_travelling_student
+    label: LOWERS
+    to: obj_turnip_wisdom_sack
+    evidence: |
+      So the student let the sack down
+
+  - from: turnip_travelling_student
+    label: RELEASES
+    to: turnip_poor_soldier_farmer
+    evidence: |
+      untied it, and set him free
+
+  - from: law_execution_container_invites_place_swap
+    label: SWAPS_PLACE_WITH
+    to: turnip_travelling_student
+    evidence: |
+      put him upside down into the sack
+
+  - from: turnip_poor_soldier_farmer
+    label: IMPRISONS
+    to: turnip_travelling_student
+    evidence: |
+      fastened it, and drew the disciple of wisdom up the tree
+
+  - from: turnip_poor_soldier_farmer
+    label: RIDES_AWAY_ON
+    to: turnip_travelling_student
+    evidence: |
+      mounted the student’s horse and rode away

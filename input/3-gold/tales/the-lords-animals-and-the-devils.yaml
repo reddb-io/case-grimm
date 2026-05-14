@@ -1,0 +1,293 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-lords-animals-and-the-devils
+khm: 148
+atu: 774E
+atu_name: The Lord's Animals and the Devil's
+canonical_source: ../../2-silver/canonical/the-lords-animals-and-the-devils/canonical.txt
+title: The Lord's Animals and the Devil's
+
+
+entities:
+
+  characters:
+
+    lords_animals_lord_god:
+      name: The Lord God
+      species: sp_human
+      being_type: being_divine
+      agency_modes: [agency_speech, agency_social_rank, agency_object_mediation, agency_cunning]
+      speech_acts_performed: [speech_command, speech_bargain]
+      affects: [affect_pity]
+      traits: [animal-creator, wolf-chooser, merciful-plant-protector, seasonal-debt-deferrer]
+      evidence: |
+        The Lord God had created all animals
+
+    lords_animals_devil:
+      name: The Devil
+      being_type: being_devil
+      agency_modes: [agency_speech, agency_object_mediation, agency_violence, agency_cunning]
+      speech_acts_performed: [speech_bargain, speech_curse]
+      affects: [affect_anger, affect_greed]
+      traits: [infernal-creator, goat-maker, tail-biter, damages-claimant, wilderness-wanderer, devil-eye-giver, goat-shape-assumer]
+      evidence: |
+        Then the Devil made ready and began to create also
+
+    lords_animals_wolves:
+      name: The Lord's Wolves
+      species: sp_wolf
+      agency_modes: [agency_violence, agency_endurance]
+      traits: [lords-dogs, goat-destroyers, divine-enforcement-animals]
+      evidence: |
+        he summoned his wolves
+
+    lords_animals_goats:
+      name: The Devil's Goats
+      species: sp_goat
+      agency_modes: [agency_domestic_labor, agency_violence, agency_endurance]
+      traits: [infernal-creatures, long-tailed-snaggers, crop-harming-grazers, bitten-tail-goats, devil-eyed-goats]
+      evidence: |
+        created goats with fine long tails
+
+  magic_objects:
+
+    obj_lords_goat_tails:
+      name: The Goats' Bitten Tails
+      object_kind: relic
+      attributes:
+        function: visible etiological body-mark left by the Devil's anger at tangled tails
+      evidence: |
+        bit off the tail of every goat
+
+    obj_lords_devil_eyes:
+      name: The Goats' Devil Eyes
+      object_kind: relic
+      attributes:
+        function: infernal eye-mark given after the Devil loses his damages claim
+      evidence: |
+        put out the eyes of all the remaining goats, and put his own in instead
+
+  locations:
+
+    loc_lords_goat_pasture:
+      name: The Goat Pasture
+      instance_of: loc_field
+      evidence: |
+        when they went to pasture
+
+    loc_lords_tail_hedges:
+      name: The Tail-Snaring Hedges
+      instance_of: loc_thorn_thicket
+      evidence: |
+        remained caught in the hedges by their tails
+
+    loc_lords_constantinople_church:
+      name: The Church of Constantinople
+      instance_of: loc_church
+      evidence: |
+        In the church of Constantinople
+
+    loc_lords_constantinople_oak:
+      name: The Leafed Constantinople Oak
+      instance_of: loc_tree
+      evidence: |
+        stands a tall oak-tree which still has all its leaves
+
+    loc_lords_devil_wilderness:
+      name: The Devil's Wilderness Search
+      instance_of: loc_wilderness
+      evidence: |
+        wandered in the wilderness for six months
+
+
+classifications:
+
+  world_laws:
+    - law_infernal_creation_marks_goat_body
+    - law_exceptional_leaf_tree_voids_infernal_debt
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_speech
+    - agency_violence
+    - agency_cunning
+    - agency_social_rank
+
+  affects_driving:
+    - affect_anger
+    - affect_greed
+    - affect_fear
+
+  symbol_numbers:
+    - num_6
+
+
+propp:
+
+  - function: func_creation
+    order: 1
+    actor: lords_animals_lord_god
+    scene: God creates the animals and chooses the wolf as his dog, while the goat remains unmade.
+    evidence: |
+      had created all animals, and had chosen out the wolf to be his dog
+
+  - function: func_counter_creation
+    order: 2
+    actor: lords_animals_devil
+    beneficiary: lords_animals_goats
+    scene: The Devil begins creating and makes goats with long tails.
+    evidence: |
+      began to create also, and created goats with fine long tails
+
+  - function: func_etiological_mark
+    order: 3
+    actor: lords_animals_devil
+    victim: lords_animals_goats
+    scene: The Devil bites off goat tails after repeatedly disentangling them from hedges.
+    evidence: |
+      bit off the tail of every goat, as may be seen to this day by the stump
+
+  - function: func_punishment
+    order: 4
+    actor: lords_animals_lord_god
+    victim: lords_animals_goats
+    scene: God sends wolves to tear apart goats that damage trees and vines.
+    evidence: |
+      he summoned his wolves, who soon tore in pieces the goats
+
+  - function: func_claim
+    order: 5
+    actor: lords_animals_devil
+    scene: The Devil demands damages for the destruction of his creatures.
+    evidence: |
+      thou must pay me heavy damages
+
+  - function: func_delay
+    order: 6
+    actor: lords_animals_lord_god
+    scene: God ties payment to the fall of oak leaves and points to the still-leafed Constantinople oak.
+    evidence: |
+      come then, thy money will then be ready counted out
+
+  - function: func_forfeiture
+    order: 7
+    actor: lords_animals_devil
+    scene: The Devil loses the indemnity after the exceptional oak delays him until all oaks are green again.
+    evidence: |
+      Then he had to forfeit his indemnity
+
+  - function: func_etiology
+    order: 8
+    actor: lords_animals_devil
+    beneficiary: lords_animals_goats
+    scene: The Devil gives goats his eyes, explaining goat eyes, bitten tails, and goat-shaped devils.
+    evidence: |
+      This is why all goats have devil’s eyes
+
+
+edges:
+
+  - from: lords_animals_lord_god
+    label: CREATES
+    to: lords_animals_wolves
+    evidence: |
+      had created all animals
+
+  - from: lords_animals_lord_god
+    label: CHOOSES_AS_DOG
+    to: lords_animals_wolves
+    evidence: |
+      chosen out the wolf to be his dog
+
+  - from: lords_animals_devil
+    label: CREATES
+    to: lords_animals_goats
+    evidence: |
+      created goats with fine long tails
+
+  - from: lords_animals_goats
+    label: SNAG_IN
+    to: loc_lords_tail_hedges
+    evidence: |
+      remained caught in the hedges by their tails
+
+  - from: lords_animals_devil
+    label: BITES_OFF
+    to: obj_lords_goat_tails
+    evidence: |
+      bit off the tail of every goat
+
+  - from: law_infernal_creation_marks_goat_body
+    label: MARKS
+    to: lords_animals_goats
+    evidence: |
+      as may be seen to this day by the stump
+
+  - from: lords_animals_goats
+    label: DAMAGES
+    to: loc_lords_goat_pasture
+    evidence: |
+      gnawed away at a fruitful tree
+
+  - from: lords_animals_lord_god
+    label: SUMMONS
+    to: lords_animals_wolves
+    evidence: |
+      he summoned his wolves
+
+  - from: lords_animals_wolves
+    label: TEAR_IN_PIECES
+    to: lords_animals_goats
+    evidence: |
+      tore in pieces the goats
+
+  - from: lords_animals_devil
+    label: DEMANDS_DAMAGES_FROM
+    to: lords_animals_lord_god
+    evidence: |
+      thou must pay me heavy damages
+
+  - from: lords_animals_lord_god
+    label: DELAYS_PAYMENT_UNTIL
+    to: loc_lords_constantinople_oak
+    evidence: |
+      as soon as the oak leaves fall
+
+  - from: loc_lords_constantinople_oak
+    label: RETAINS_LEAVES_IN
+    to: loc_lords_constantinople_church
+    evidence: |
+      still has all its leaves
+
+  - from: lords_animals_devil
+    label: SEARCHES_IN
+    to: loc_lords_devil_wilderness
+    evidence: |
+      wandered in the wilderness for six months before he found it
+
+  - from: law_exceptional_leaf_tree_voids_infernal_debt
+    label: VOIDS_CLAIM_OF
+    to: lords_animals_devil
+    evidence: |
+      Then he had to forfeit his indemnity
+
+  - from: lords_animals_devil
+    label: IMPLANTS
+    to: obj_lords_devil_eyes
+    evidence: |
+      put his own in instead
+
+  - from: obj_lords_devil_eyes
+    label: MARKS
+    to: lords_animals_goats
+    evidence: |
+      all goats have devil’s eyes
+
+  - from: lords_animals_devil
+    label: ASSUMES_SHAPE_OF
+    to: lords_animals_goats
+    evidence: |
+      he likes to assume their shape

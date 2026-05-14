@@ -1,0 +1,140 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: legend-01-st-joseph-in-the-forest
+khm: null
+legend_number: 1
+canonical_source: ../../2-silver/canonical/legend-01-st-joseph-in-the-forest/canonical.txt
+title: St. Joseph in the Forest
+
+entities:
+  characters:
+    st_joseph_youngest_child:
+      name: The Pious Youngest Daughter
+      species: sp_human
+      archetypes: [arc_pious_orphan]
+      agency_modes: [agency_endurance, agency_domestic_labor, agency_speech]
+      speech_acts_performed: [speech_prayer]
+      affects: [affect_pity, affect_hunger]
+      traits: [pious, good, unloved, forest-sent, root-scraper, food-sharer, straw-bed-offerer, money-rewarded]
+      evidence: |
+        the youngest was a pious, good child
+
+    st_joseph_second_child:
+      name: The Second Daughter
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_pity]
+      traits: [faulted-but-better, partial-sharer, bed-sharer, small-money-rewarded, secret-keeper]
+      evidence: |
+        the second much better, although she had her faults
+
+    st_joseph_eldest_child:
+      name: The Eldest Daughter
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_greed, affect_fear]
+      traits: [rude, wicked, curious, selfish-eater, bed-taker, second-nose-punished, liar, snake-stung]
+      evidence: |
+        the eldest of whom was rude and wicked
+
+    st_joseph_mother:
+      name: The Partial Mother
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      affects: [affect_envy]
+      traits: [eldest-favoring, youngest-rejecting, forest-sender, poorly-raising-mother, foot-stung]
+      evidence: |
+        she could not bear the youngest
+
+    st_joseph:
+      name: St. Joseph
+      species: sp_human
+      being_type: being_divine
+      archetypes: [arc_supernatural_donor]
+      agency_modes: [agency_speech, agency_domestic_labor, agency_object_mediation]
+      speech_acts_performed: [speech_request, speech_command]
+      affects: [affect_pity, affect_hunger]
+      traits: [snow-white-bearded, venerable, hut-dwelling, root-giver, food-tester, bed-tester, rewarder, punisher, merciful-nose-remover]
+      evidence: |
+        he was no other than St. Joseph
+
+  magic_objects:
+    obj_st_joseph_roots_and_soup:
+      name: The Root Soup
+      object_kind: food
+      evidence: |
+        cooked herself a thick soup
+
+    obj_st_joseph_money_bag:
+      name: The Heavy Money Bag
+      object_kind: treasure
+      evidence: |
+        a bag with money so heavy that she could just carry it
+
+    obj_st_joseph_second_nose:
+      name: The Second Nose
+      object_kind: relic
+      evidence: |
+        it was a second nose
+
+  locations:
+    loc_st_joseph_great_forest:
+      name: The Great Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        sent the poor girl out into the great forest
+
+    loc_st_joseph_little_hut:
+      name: St. Joseph's Little Hut
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        came to a little hut
+
+classifications:
+  world_laws:
+    - law_kindness_to_hidden_donors_rewarded
+  moral_regimes:
+    - moral_kindness_rewarded
+    - moral_retributive
+  agency_modes_dominant: [agency_domestic_labor, agency_speech, agency_object_mediation]
+  affects_driving: [affect_pity, affect_greed, affect_hunger]
+  symbol_numbers: [num_3]
+  threshold_types: [threshold_forest, threshold_doorway]
+
+propp:
+  - { function: func_family_partiality, order: 1, actor: st_joseph_mother,
+      scene: "the mother favors the wicked eldest and sends the youngest into the forest" }
+  - { function: func_donor_test, order: 2, actor: st_joseph,
+      scene: "St. Joseph tests each daughter through food-sharing and bed-hospitality" }
+  - { function: func_reward, order: 3, actor: st_joseph,
+      beneficiary: st_joseph_youngest_child,
+      scene: "the pious youngest receives a heavy money bag" }
+  - { function: func_partial_reward, order: 4, actor: st_joseph,
+      beneficiary: st_joseph_second_child,
+      scene: "the mixed second child receives a smaller sack" }
+  - { function: func_punishment, order: 5, actor: st_joseph,
+      victim: st_joseph_eldest_child,
+      scene: "the selfish eldest receives a second nose and then death by reptiles after lying" }
+
+edges:
+  - { from: st_joseph_mother, to: st_joseph_youngest_child, label: SENDS_TO_FOREST,
+      evidence: "sent the poor girl out into the great forest" }
+  - { from: st_joseph, to: obj_st_joseph_roots_and_soup, label: PROVIDES_ROOTS_FOR,
+      evidence: "St. Joseph gave her the roots" }
+  - { from: st_joseph_youngest_child, to: st_joseph, label: SHARES_FOOD_WITH,
+      evidence: "gave him more than she kept for herself" }
+  - { from: st_joseph_youngest_child, to: st_joseph, label: OFFERS_BED_TO,
+      evidence: "stay in your own bed" }
+  - { from: st_joseph, to: obj_st_joseph_money_bag, label: LEAVES_FOR_PIOUS_CHILD,
+      evidence: "it was for the child who had slept there that night" }
+  - { from: st_joseph_eldest_child, to: st_joseph, label: WITHHOLDS_FOOD_FROM,
+      evidence: "Wait until I am satisfied" }
+  - { from: st_joseph_eldest_child, to: obj_st_joseph_second_nose, label: RECEIVES_PUNISHMENT,
+      evidence: "it was a second nose" }
+  - { from: st_joseph_eldest_child, to: st_joseph_mother, label: LIES_TO,
+      evidence: "A great bag of money, but I have lost it on the way" }
+  - { from: st_joseph_eldest_child, to: moral_retributive, label: PUNISHED_BY_REPTILES,
+      evidence: "they stung the wicked child to death" }

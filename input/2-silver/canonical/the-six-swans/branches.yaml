@@ -1,0 +1,14 @@
+slug: the-six-swans
+khm: 49
+atu: '451'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg11027-grimm-gruelle
+  weight: supplementary
+- book: pg52521-grimm-olcott
+  weight: supplementary
+- book: pg22555-grimm-eeden-dutch
+  weight: supplementary
+sections: []

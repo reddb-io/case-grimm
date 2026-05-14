@@ -1,0 +1,8 @@
+slug: the-stolen-farthings
+khm: 154
+atu: '769'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

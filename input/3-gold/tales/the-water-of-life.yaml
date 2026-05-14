@@ -1,0 +1,445 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-water-of-life
+khm: 97
+atu: '551'
+atu_name: The Water of Life
+canonical_source: ../../2-silver/canonical/the-water-of-life/canonical.txt
+title: The Water of Life
+
+
+entities:
+
+  characters:
+
+    water_life_old_king:
+      name: The Sick Old King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      existential_states: [state_deceived]
+      speech_acts_performed: [speech_command]
+      affects: [affect_grief, affect_anger]
+      traits: [dying-father, reluctant-sender, deceived-by-salt-water, son-sentencer, repentant-father, wedding-summoner]
+      evidence: |
+        There was once a King who had an illness
+
+    water_life_eldest_prince:
+      name: The Eldest Prince
+      archetypes: [arc_false_hero]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning]
+      existential_states: [state_trapped]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_pride, affect_envy]
+      traits: [inheritance-seeker, dwarf-insulter, ravine-trapped, released-brother, water-thief, false-deliverer, golden-road-failure, sea-exile]
+      evidence: |
+        If I bring the water, then I shall be best beloved of my
+        father, and shall inherit the kingdom.
+
+    water_life_second_prince:
+      name: The Second Prince
+      archetypes: [arc_false_hero]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning]
+      existential_states: [state_trapped]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_pride, affect_envy]
+      traits: [succession-calculator, dwarf-insulter, ravine-trapped, released-brother, water-thief, false-healer, golden-road-failure, sea-exile]
+      evidence: |
+        If my brother is dead, then the kingdom will fall to me.
+
+    water_life_youngest_prince:
+      name: The Youngest Prince
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_object_mediation, agency_violence, agency_cunning]
+      existential_states: [state_hidden_identity]
+      speech_acts_performed: [speech_command]
+      affects: [affect_grief, affect_loyalty, affect_love]
+      traits: [courteous-son, dwarf-helped-quester, enchanted-castle-deliverer, water-winner, brother-releaser, three-kingdom-helper, betrayed-silent-son, forest-exile, true-deliverer, bridegroom]
+      evidence: |
+        I am seeking the water of life, for my father is sick unto death.
+
+    water_life_dwarf:
+      name: The Dwarf with Sugarloaf Cap and Scarlet Cloak
+      archetypes: [arc_supernatural_donor]
+      species: sp_human
+      being_type: being_dwarf
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_command, speech_warning]
+      affects: [affect_anger]
+      traits: [roadside-tester, haughty-prince-trapper, youngest-prince-helper, brother-releaser, warning-giver, wedding-guest]
+      evidence: |
+        The dwarf had a sugarloaf cap and a scarlet cloak.
+
+    water_life_princess:
+      name: The Delivered Princess
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank, agency_object_mediation]
+      existential_states: [state_cursed]
+      speech_acts_performed: [speech_promise, speech_command]
+      affects: [affect_love, affect_joy]
+      traits: [enchanted-castle-maiden, delivered-bride, kingdom-giver, golden-road-maker, true-wooer-recognizer]
+      evidence: |
+        a beautiful maiden who rejoiced when she saw him
+
+    water_life_two_lions:
+      name: The Two Lions with Gaping Jaws
+      species: sp_lion
+      agency_modes: [agency_violence]
+      traits: [door-guardians, bread-quieted, castle-threshold-threats]
+      evidence: |
+        inside lie two lions with gaping jaws
+
+    water_life_enchanted_princes:
+      name: The Enchanted Princes in the Hall
+      species: sp_human
+      existential_states: [state_cursed]
+      traits: [hall-seated, ring-wearing, enchanted-royals]
+      evidence: |
+        wherein sat some enchanted princes
+
+    water_life_three_grateful_kings:
+      name: The Three Grateful Kings
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      affects: [affect_grief, affect_joy]
+      traits: [war-and-famine-kings, bread-fed, sword-rescued, treasure-senders]
+      evidence: |
+        had now delivered three kingdoms
+
+    water_life_huntsman:
+      name: The Compassionate Huntsman
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_violence]
+      affects: [affect_pity]
+      traits: [execution-agent, sorrowful-confessor, garment-exchanger, prince-sparer, truth-teller]
+      evidence: |
+        indeed I should not have been able to shoot you.
+
+  magic_objects:
+
+    obj_water_life_cup:
+      name: The Cup of Water of Life
+      instance_of: obj_water_of_life
+      object_kind: relic
+      attributes:
+        function: healing remedy for the sick old king
+      evidence: |
+        drew some water in a cup which stood near
+
+    obj_water_life_salt_seawater:
+      name: The Salt Sea-Water Substitution
+      object_kind: material
+      attributes:
+        function: harmful liquid used to frame the youngest prince as poisoner
+      evidence: |
+        into the cup they poured salt sea-water
+
+    obj_water_life_iron_wand:
+      name: The Iron Wand
+      object_kind: tool
+      attributes:
+        function: opens the enchanted castle's iron door at the third stroke
+      evidence: |
+        an iron wand and two small loaves of bread
+
+    obj_water_life_two_loaves:
+      name: The Two Small Loaves
+      object_kind: food
+      attributes:
+        function: quiet the two lions guarding the castle entry
+      evidence: |
+        two small loaves of bread
+
+    obj_water_life_sword:
+      name: The Army-Slaying Sword
+      object_kind: weapon
+      attributes:
+        function: slays whole armies and rescues famine-war kingdoms
+      evidence: |
+        with the sword thou canst slay whole armies
+
+    obj_water_life_inexhaustible_bread:
+      name: The Inexhaustible Bread
+      object_kind: food
+      attributes:
+        function: feeds entire kingdoms without coming to an end
+      evidence: |
+        the bread will never come to an end
+
+    obj_water_life_golden_road:
+      name: The Golden Road to the Princess
+      object_kind: architecture
+      attributes:
+        function: recognizes the true deliverer by whether he rides straight along it
+      evidence: |
+        a road made up to her palace which was quite bright and golden
+
+    obj_water_life_royal_garments:
+      name: The Youngest Prince's Royal Garments
+      object_kind: garment
+      attributes:
+        function: exchanged with the huntsman to escape secret execution
+      evidence: |
+        I give you my royal garments; give me your common ones
+
+  locations:
+
+    loc_water_life_palace_garden:
+      name: The Palace-Garden of Grief
+      instance_of: loc_garden
+      evidence: |
+        went down into the palace-garden and wept
+
+    loc_water_life_dwarf_road:
+      name: The Road of the Dwarf's Test
+      instance_of: loc_road
+      evidence: |
+        a dwarf stood there in the road
+
+    loc_water_life_narrow_ravine:
+      name: The Narrowing Mountain Ravine
+      evidence: |
+        the road became so narrow that he could not advance a step
+        further
+
+    loc_water_life_enchanted_castle:
+      name: The Enchanted Castle of the Water of Life
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        an enchanted castle
+
+    loc_water_life_iron_door:
+      name: The Iron Door of the Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        the iron door of the castle
+
+    loc_water_life_spring:
+      name: The Spring of the Water of Life
+      instance_of: loc_well
+      threshold_type: threshold_well
+      evidence: |
+        the spring of the water of life
+
+    loc_water_life_ship:
+      name: The Ship over the Sea
+      instance_of: loc_ship
+      evidence: |
+        went on board a ship and sailed over the sea
+
+    loc_water_life_forest:
+      name: The Forest of the Secret Execution
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        went further into the forest
+
+    loc_water_life_princess_palace:
+      name: The Princess's Palace
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        her palace
+
+
+classifications:
+
+  world_laws:
+    - law_kindness_to_hidden_donors_rewarded
+    - law_curse_requires_counter_condition
+    - law_stolen_healing_water_frames_true_quester
+    - law_golden_road_recognizes_true_deliverer
+
+  moral_regimes:
+    - moral_restorative
+    - moral_retributive
+    - moral_kindness_rewarded
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_object_mediation
+    - agency_social_rank
+    - agency_endurance
+    - agency_violence
+    - agency_cunning
+
+  affects_driving:
+    - affect_grief
+    - affect_pride
+    - affect_envy
+    - affect_love
+    - affect_pity
+
+  symbol_numbers:
+    - num_3
+    - num_12
+
+  threshold_types:
+    - threshold_doorway
+    - threshold_well
+    - threshold_forest
+
+
+propp:
+  - { function: func_lack, order: 1, actor: water_life_old_king,
+      scene: "The king is deathly ill and no remedy seems to cure him.",
+      evidence: "nothing seemed to cure him" }
+  - { function: func_donor_information, order: 2, actor: water_life_dwarf,
+      scene: "An old man reveals the water of life as the only remaining remedy.",
+      evidence: "I know of one more remedy" }
+  - { function: func_failed_departure, order: 3, actor: water_life_eldest_prince,
+      scene: "The eldest son seeks the water for inheritance and insults the dwarf.",
+      evidence: "Silly shrimp" }
+  - { function: func_punishment, order: 4, actor: water_life_dwarf,
+      scene: "The dwarf traps the haughty eldest prince in a narrowing ravine.",
+      evidence: "he was shut in there as if in prison" }
+  - { function: func_repetition, order: 5, actor: water_life_second_prince,
+      scene: "The second brother repeats the insult and is also trapped.",
+      evidence: "could neither go forwards nor backwards" }
+  - { function: func_donor_test, order: 6, actor: water_life_youngest_prince,
+      scene: "The youngest answers the dwarf courteously and receives the wand, bread, and castle instructions.",
+      evidence: "not haughtily like thy false brothers" }
+  - { function: func_difficult_task, order: 7, actor: water_life_youngest_prince,
+      scene: "The youngest opens the iron door, quiets the lions, and enters the enchanted castle.",
+      evidence: "door sprang open at the third stroke of the wand" }
+  - { function: func_rescue, order: 8, actor: water_life_youngest_prince,
+      scene: "The princess says he has delivered her and promises marriage and kingdom in a year.",
+      evidence: "he had delivered her" }
+  - { function: func_acquisition, order: 9, actor: water_life_youngest_prince,
+      scene: "He wakes before twelve, draws the water of life, and escapes as the door cuts his heel.",
+      evidence: "drew some water in a cup which stood near" }
+  - { function: func_mercy, order: 10, actor: water_life_youngest_prince,
+      scene: "He asks the dwarf to release his two trapped brothers despite the warning about their bad hearts.",
+      evidence: "Beware of them, for they have bad hearts" }
+  - { function: func_auxiliary_rescue, order: 11, actor: water_life_youngest_prince,
+      scene: "With the magic bread and sword he delivers three kingdoms from famine and war.",
+      evidence: "had now delivered three kingdoms" }
+  - { function: func_betrayal, order: 12, actor: water_life_eldest_prince,
+      scene: "The elder brothers steal the true water and replace it with salt sea-water while the youngest sleeps at sea.",
+      evidence: "poured the water of life out of the cup" }
+  - { function: func_false_accusation, order: 13, actor: water_life_eldest_prince,
+      scene: "The elder brothers accuse the youngest of intending to poison the old king.",
+      evidence: "accused the youngest of having intended to poison him" }
+  - { function: func_exile, order: 14, actor: water_life_huntsman,
+      scene: "The huntsman refuses to kill the condemned youngest prince and exchanges clothes with him.",
+      evidence: "I should not have been able to shoot you" }
+  - { function: func_recognition_signal, order: 15, actor: water_life_three_grateful_kings,
+      scene: "Three wagons of treasure arrive, proving the youngest prince's benefactions.",
+      evidence: "three waggons of gold and precious stones" }
+  - { function: func_true_bridegroom_test, order: 16, actor: water_life_princess,
+      scene: "The princess prepares the golden road to admit only the true deliverer.",
+      evidence: "whosoever came riding straight along it to her, would be the right wooer" }
+  - { function: func_recognition, order: 17, actor: water_life_youngest_prince,
+      scene: "The youngest rides straight up the golden road and is received as deliverer and lord.",
+      evidence: "his horse rode onwards up the middle of it" }
+  - { function: func_wedding, order: 18, actor: water_life_princess,
+      scene: "The princess and youngest prince marry; the brothers flee to sea and never return.",
+      evidence: "their wedding was celebrated with great rejoicing" }
+
+
+edges:
+
+  # Remedy quest and donor test
+  - { from: water_life_old_king, to: water_life_youngest_prince, label: FATHER_OF,
+      evidence: "He had three sons" }
+  - { from: water_life_old_king, to: affect_grief, label: CAUSES,
+      evidence: "three sons who were much distressed about it" }
+  - { from: water_life_dwarf, to: obj_water_life_cup, label: NAMES_REMEDY_AS,
+      evidence: "the water of life" }
+  - { from: water_life_eldest_prince, to: water_life_dwarf, label: INSULTS,
+      evidence: "Silly shrimp" }
+  - { from: water_life_dwarf, to: water_life_eldest_prince, label: TRAPS_IN_RAVINE,
+      evidence: "he was shut in there as if in prison" }
+  - { from: water_life_second_prince, to: water_life_dwarf, label: INSULTS,
+      evidence: "Little shrimp" }
+  - { from: water_life_dwarf, to: water_life_second_prince, label: TRAPS_IN_RAVINE,
+      evidence: "could neither go forwards nor backwards" }
+  - { from: water_life_youngest_prince, to: water_life_dwarf, label: EXPLAINS_QUEST_TO,
+      evidence: "I am seeking the water of life, for my father is sick unto death." }
+  - { from: law_kindness_to_hidden_donors_rewarded, to: water_life_youngest_prince, label: REWARDS,
+      evidence: "borne thyself as is seemly" }
+  - { from: water_life_dwarf, to: obj_water_life_iron_wand, label: GIVES,
+      evidence: "an iron wand" }
+  - { from: water_life_dwarf, to: obj_water_life_two_loaves, label: GIVES,
+      evidence: "two small loaves of bread" }
+
+  # Enchanted castle and water
+  - { from: water_life_youngest_prince, to: loc_water_life_iron_door, label: STRIKES_THRICE,
+      evidence: "Strike thrice with the wand on the iron door" }
+  - { from: obj_water_life_iron_wand, to: loc_water_life_iron_door, label: OPENS,
+      evidence: "door sprang open at the third stroke of the wand" }
+  - { from: water_life_youngest_prince, to: water_life_two_lions, label: QUIETS_WITH_BREAD,
+      evidence: "throwest a loaf to each of them" }
+  - { from: water_life_youngest_prince, to: water_life_enchanted_princes, label: TAKES_RINGS_FROM,
+      evidence: "whose rings he drew off their fingers" }
+  - { from: water_life_youngest_prince, to: obj_water_life_sword, label: TAKES,
+      evidence: "A sword and a loaf of bread were lying there" }
+  - { from: water_life_youngest_prince, to: obj_water_life_inexhaustible_bread, label: TAKES,
+      evidence: "A sword and a loaf of bread were lying there" }
+  - { from: water_life_princess, to: water_life_youngest_prince, label: RECOGNIZES_DELIVERER,
+      evidence: "he had delivered her" }
+  - { from: water_life_princess, to: water_life_youngest_prince, label: PROMISES_WEDDING_TO,
+      evidence: "if he would return in a year their wedding should be celebrated" }
+  - { from: water_life_youngest_prince, to: obj_water_life_cup, label: DRAWS_WATER_IN,
+      evidence: "drew some water in a cup which stood near" }
+  - { from: loc_water_life_iron_door, to: water_life_youngest_prince, label: WOUNDS_HEEL_OF,
+      evidence: "carried away a piece of his heel" }
+  - { from: water_life_dwarf, to: water_life_eldest_prince, label: RELEASES_AFTER_PLEA,
+      evidence: "the prince begged until the dwarf released them" }
+  - { from: water_life_dwarf, to: water_life_youngest_prince, label: WARNS_ABOUT_BROTHERS,
+      evidence: "Beware of them, for they have bad hearts" }
+
+  # Three kingdoms and false-hero theft
+  - { from: water_life_youngest_prince, to: water_life_three_grateful_kings, label: FEEDS_KINGDOMS_WITH_BREAD,
+      evidence: "wherewith he fed and satisfied the whole of his kingdom" }
+  - { from: water_life_youngest_prince, to: water_life_three_grateful_kings, label: SAVES_WITH_SWORD,
+      evidence: "wherewith he slew the hosts of his enemies" }
+  - { from: water_life_eldest_prince, to: obj_water_life_cup, label: STEALS_WATER_FROM,
+      evidence: "poured the water of life out of the cup" }
+  - { from: water_life_second_prince, to: obj_water_life_salt_seawater, label: SUBSTITUTES,
+      evidence: "into the cup they poured salt sea-water" }
+  - { from: obj_water_life_salt_seawater, to: water_life_old_king, label: WORSENS,
+      evidence: "he became still worse than before" }
+  - { from: water_life_eldest_prince, to: water_life_youngest_prince, label: FALSELY_ACCUSES,
+      evidence: "accused the youngest of having intended to poison him" }
+  - { from: obj_water_life_cup, to: water_life_old_king, label: HEALS,
+      evidence: "became strong and healthy as in the days of his youth" }
+  - { from: law_stolen_healing_water_frames_true_quester, to: water_life_youngest_prince, label: FRAMES,
+      evidence: "you have had the pain, and we the gain" }
+
+  # Condemnation, spared execution, and recognition
+  - { from: water_life_old_king, to: water_life_youngest_prince, label: SENTENCES_SECRETLY,
+      evidence: "he should be secretly shot" }
+  - { from: water_life_huntsman, to: water_life_youngest_prince, label: REVEALS_EXECUTION_ORDER,
+      evidence: "I am to shoot you dead" }
+  - { from: water_life_youngest_prince, to: obj_water_life_royal_garments, label: EXCHANGES,
+      evidence: "I give you my royal garments; give me your common ones" }
+  - { from: water_life_huntsman, to: water_life_youngest_prince, label: SPARES,
+      evidence: "I could not find it in my heart to carry out your command" }
+  - { from: water_life_three_grateful_kings, to: water_life_old_king, label: SEND_TREASURE_FOR,
+      evidence: "three waggons of gold and precious stones" }
+  - { from: water_life_old_king, to: water_life_youngest_prince, label: PROCLAIMS_RETURN_FOR,
+      evidence: "his son might return and be taken into favour again" }
+
+  # Golden road and restoration
+  - { from: water_life_princess, to: obj_water_life_golden_road, label: BUILDS,
+      evidence: "had a road made up to her palace which was quite bright and golden" }
+  - { from: obj_water_life_golden_road, to: water_life_eldest_prince, label: REJECTS_FALSE_WOOER,
+      evidence: "rode on the right side of it" }
+  - { from: obj_water_life_golden_road, to: water_life_second_prince, label: REJECTS_FALSE_WOOER,
+      evidence: "rode on the left side of it" }
+  - { from: obj_water_life_golden_road, to: water_life_youngest_prince, label: ADMITS_TRUE_WOOER,
+      evidence: "his horse rode onwards up the middle of it" }
+  - { from: water_life_princess, to: water_life_youngest_prince, label: RECEIVES_WITH_JOY,
+      evidence: "the princess received him with joy" }
+  - { from: law_golden_road_recognizes_true_deliverer, to: water_life_youngest_prince, label: RECOGNIZES,
+      evidence: "he was her deliverer, and lord of the kingdom" }
+  - { from: water_life_princess, to: water_life_youngest_prince, label: MARRIES,
+      evidence: "their wedding was celebrated with great rejoicing" }
+  - { from: water_life_youngest_prince, to: water_life_old_king, label: TELLS_BETRAYAL_TO,
+      evidence: "how his brothers had betrayed him" }
+  - { from: water_life_eldest_prince, to: loc_water_life_ship, label: FLEES_TO_SEA,
+      evidence: "they had put to sea, and never came back" }

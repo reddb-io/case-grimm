@@ -1,0 +1,253 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-shepherd-boy
+khm: 152
+atu: "922A"
+atu_name: The Shepherd Boy
+canonical_source: ../../2-silver/canonical/the-shepherd-boy/canonical.txt
+title: The Shepherd Boy
+
+
+entities:
+
+  characters:
+
+    shepherd_boy:
+      name: The Shepherd Boy
+      archetypes: [arc_wise_child]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning]
+      speech_acts_performed: [speech_riddle]
+      affects: []
+      traits: [low-status-shepherd, famous-wise-answerer, cosmic-question-reframer, adopted-royal-child]
+      evidence: |
+        a shepherd boy whose fame spread far and wide because of the wise answers
+
+    shepherd_king:
+      name: The King of the Country
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_riddle, speech_promise]
+      affects: [affect_curiosity]
+      traits: [skeptical-authority, three-question-tester, palace-adopter]
+      evidence: |
+        The King of the country heard of it likewise, but did not believe it
+
+    shepherd_little_bird:
+      name: The Little Bird of the Diamond Mountain
+      species: sp_bird
+      agency_modes: [agency_endurance]
+      traits: [hundred-year-visitor, beak-sharpener, eternity-measurer]
+      evidence: |
+        every hundred years a little bird comes and sharpens its beak on it
+
+  magic_objects:
+
+    obj_shepherd_white_paper:
+      name: The Great Sheet of White Paper
+      object_kind: material
+      attributes:
+        function: visible analogue for the uncountable number of stars
+      evidence: |
+        Give me a great sheet of white paper
+
+    obj_shepherd_pen_points:
+      name: The Fine Points on the Paper
+      object_kind: material
+      attributes:
+        function: tiny marks that make counting the stars formally impossible for the court
+      evidence: |
+        made so many fine points on it with a pen
+
+  locations:
+
+    loc_shepherd_royal_palace:
+      name: The Royal Palace
+      instance_of: loc_castle
+      evidence: |
+        dwell with me in my royal palace
+
+    loc_shepherd_ocean:
+      name: The Ocean
+      evidence: |
+        how many drops of water are there in the ocean
+
+    loc_shepherd_sky:
+      name: The Sky of Stars
+      evidence: |
+        how many stars are there in the sky
+
+    loc_shepherd_diamond_mountain:
+      name: The Diamond Mountain in Lower Pomerania
+      instance_of: loc_mountain
+      evidence: |
+        In Lower Pomerania is the Diamond Mountain
+
+
+classifications:
+
+  world_laws:
+    - law_unanswerable_cosmic_questions_yield_to_reframing
+
+  moral_regimes:
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+    - agency_social_rank
+
+  affects_driving:
+    - affect_curiosity
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types: []
+
+
+propp:
+
+  - function: func_reputation
+    order: 1
+    actor: shepherd_boy
+    scene: The shepherd boy becomes famous for answering every question wisely.
+    evidence: |
+      fame spread far and wide because of the wise answers which he gave to every question
+
+  - function: func_summons
+    order: 2
+    actor: shepherd_king
+    beneficiary: shepherd_boy
+    scene: The skeptical king sends for the boy to test the reported wisdom.
+    evidence: |
+      did not believe it, and sent for the boy
+
+  - function: func_test
+    order: 3
+    actor: shepherd_king
+    scene: The king promises adoption and palace residence if the boy answers three questions.
+    evidence: |
+      If thou canst give me an answer to three questions
+
+  - function: func_answer
+    order: 4
+    actor: shepherd_boy
+    scene: The boy answers the ocean question by making counting depend on damming every river.
+    evidence: |
+      if you will have all the rivers on earth dammed up
+
+  - function: func_answer
+    order: 5
+    actor: shepherd_boy
+    scene: The boy answers the star question by filling paper with uncountable points.
+    evidence: |
+      There are as many stars in the sky as there are points on the paper
+
+  - function: func_answer
+    order: 6
+    actor: shepherd_boy
+    scene: The boy answers eternity by narrating the bird that wears away the Diamond Mountain.
+    evidence: |
+      then the first second of eternity will be over
+
+  - function: func_reward
+    order: 7
+    actor: shepherd_king
+    beneficiary: shepherd_boy
+    scene: The king recognizes the answers as wise and adopts the boy into the palace.
+    evidence: |
+      I will regard thee as my own child
+
+
+edges:
+
+  - from: shepherd_boy
+    label: GAINS_FAME_FOR
+    to: agency_speech
+    evidence: |
+      fame spread far and wide because of the wise answers
+
+  - from: shepherd_king
+    label: DISBELIEVES_FAME_OF
+    to: shepherd_boy
+    evidence: |
+      heard of it likewise, but did not believe it
+
+  - from: shepherd_king
+    label: SUMMONS
+    to: shepherd_boy
+    evidence: |
+      sent for the boy
+
+  - from: shepherd_king
+    label: ASKS_THREE_QUESTIONS
+    to: shepherd_boy
+    evidence: |
+      three questions which I will ask thee
+
+  - from: shepherd_king
+    label: PROMISES_ADOPTION_TO
+    to: shepherd_boy
+    evidence: |
+      I will look on thee as my own child
+
+  - from: shepherd_king
+    label: ASKS_COUNT_OF
+    to: loc_shepherd_ocean
+    evidence: |
+      how many drops of water are there in the ocean
+
+  - from: shepherd_boy
+    label: REFRAMES_COUNT_BY_DAMMING
+    to: loc_shepherd_ocean
+    evidence: |
+      all the rivers on earth dammed up
+
+  - from: shepherd_king
+    label: ASKS_COUNT_OF
+    to: loc_shepherd_sky
+    evidence: |
+      how many stars are there in the sky
+
+  - from: shepherd_boy
+    label: MAKES_UNCOUNTABLE_ANALOGUE_ON
+    to: obj_shepherd_white_paper
+    evidence: |
+      made so many fine points on it with a pen
+
+  - from: obj_shepherd_pen_points
+    label: ANALOGIZES
+    to: loc_shepherd_sky
+    evidence: |
+      as many stars in the sky as there are points on the paper
+
+  - from: shepherd_king
+    label: ASKS_COUNT_OF
+    to: loc_shepherd_diamond_mountain
+    evidence: |
+      how many seconds of time are there in eternity
+
+  - from: shepherd_little_bird
+    label: WEARS_AWAY
+    to: loc_shepherd_diamond_mountain
+    evidence: |
+      sharpens its beak on it
+
+  - from: loc_shepherd_diamond_mountain
+    label: MEASURES_FIRST_SECOND_OF
+    to: law_unanswerable_cosmic_questions_yield_to_reframing
+    evidence: |
+      when the whole mountain is worn away by this, then the first second of eternity will be over
+
+  - from: shepherd_king
+    label: RECOGNIZES_WISDOM_OF
+    to: shepherd_boy
+    evidence: |
+      answered the three questions like a wise man
+
+  - from: shepherd_king
+    label: DWELLS_WITH
+    to: shepherd_boy
+    evidence: |
+      shalt henceforth dwell with me in my royal palace

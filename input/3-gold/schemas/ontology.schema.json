@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://reddb.io/grimm/ontology.schema.json",
+  "title": "Grimm Gold Ontology",
+  "description": "Shared vocabulary for tale-agnostic concepts: archetypes, themes, world laws, etc. Each entry carries the 4 facets (tier/scope/lens/domains) plus cross-references via `related`.",
+  "type": "object",
+  "required": ["version"],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Ontology schema version. Bumped on structural change."
+    },
+    "archetypes":          { "$ref": "#/definitions/entryMap" },
+    "world_laws":          { "$ref": "#/definitions/entryMap" },
+    "agency_modes":        { "$ref": "#/definitions/entryMap" },
+    "existential_states":  { "$ref": "#/definitions/entryMap" },
+    "threshold_types":     { "$ref": "#/definitions/entryMap" },
+    "transformation_modes":{ "$ref": "#/definitions/entryMap" },
+    "speech_acts":         { "$ref": "#/definitions/entryMap" },
+    "moral_regimes":       { "$ref": "#/definitions/entryMap" },
+    "affects":             { "$ref": "#/definitions/entryMap" },
+    "narrative_functions": { "$ref": "#/definitions/entryMap" },
+    "species":             { "$ref": "#/definitions/entryMap" },
+    "being_types":         { "$ref": "#/definitions/entryMap" },
+    "symbol_numbers":      { "$ref": "#/definitions/entryMap" },
+    "locations":           { "$ref": "#/definitions/entryMap" },
+    "magic_objects":       { "$ref": "#/definitions/entryMap" },
+    "edge_labels":         { "$ref": "#/definitions/edgeLabelMap" }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "entryMap": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z][a-z0-9_]*$": { "$ref": "#/definitions/entry" }
+      },
+      "additionalProperties": false
+    },
+    "entry": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Human-readable name for this concept."
+        },
+        "description": {
+          "type": "string",
+          "description": "Prose definition. Multi-line OK (use YAML | block-literal). Answers: WHAT is this concept?"
+        },
+        "rationale": {
+          "type": "string",
+          "description": "Why this entry deserves its OWN slot in the ontology — what it distinguishes from neighbours, what query/insight it enables, why it isn't redundant. Answers: WHY does this exist as a separate node?"
+        },
+        "tier": {
+          "enum": ["phenomenal", "structural", "operational"],
+          "description": "phenomenal=what EXISTS, structural=recurring PATTERNS, operational=RULES of the tale-world."
+        },
+        "scope": {
+          "enum": ["entity", "tale", "world"],
+          "description": "entity=attribute of a character/object, tale=attribute of a story, world=universal rule."
+        },
+        "lens": {
+          "enum": ["propp", "atu", "structural", "cognitive", "material"],
+          "description": "Academic lens that this concept primarily belongs to."
+        },
+        "domains": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "description": "Cross-cutting tags (e.g. violence, forest, speech, kinship, animal-bridegroom). Tags use kebab-case or snake_case freely — they are search facets, not identifiers."
+        },
+        "related": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "description": "Labels of related ontology entries. Powers 'what represents X?' queries."
+        },
+        "examples": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "edgeLabelMap": {
+      "type": "object",
+      "patternProperties": {
+        "^[A-Z][A-Z_]*$": {
+          "type": "object",
+          "required": ["description"],
+          "properties": {
+            "description": { "type": "string" },
+            "from": { "type": "string", "description": "Expected source node_type pattern." },
+            "to":   { "type": "string", "description": "Expected target node_type pattern." },
+            "symmetric": { "type": "boolean", "default": false }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

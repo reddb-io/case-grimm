@@ -1,0 +1,12 @@
+slug: how-six-men-got-on-in-the-world
+khm: 71
+atu: 513A
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg52521-grimm-olcott
+  weight: supplementary
+- book: pg22555-grimm-eeden-dutch
+  weight: supplementary
+sections: []

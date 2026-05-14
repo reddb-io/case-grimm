@@ -1,0 +1,384 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: cinderella
+khm: 21
+atu: 510A
+atu_name: Cinderella
+canonical_source: ../../2-silver/canonical/cinderella/canonical.txt
+title: Cinderella
+
+
+entities:
+
+  characters:
+
+    cinderella:
+      name: Cinderella
+      archetypes: [arc_oppressed_maiden]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_domestic_labor, agency_animal_aid, agency_speech]
+      existential_states: [state_hidden_identity]
+      speech_acts_performed: [speech_wish]
+      affects: [affect_grief, affect_longing, affect_shame]
+      traits: [pious, good, ash-sleeping, lentil-picker, grave-praying, hidden-princess, true-bride]
+      evidence: |
+        "There she had to do hard work from morning till night... and
+        had to sleep by the fireside in the ashes."
+
+    cinderella_dead_mother:
+      name: Cinderella's Dead Mother
+      archetypes: [arc_protective_mother]
+      species: sp_human
+      affects: [affect_maternal_love]
+      traits: [deathbed-counsellor, heaven-watcher, grave-tree-presence]
+      evidence: |
+        "I will look down on thee from heaven and be near thee."
+
+    cinderella_father:
+      name: Cinderella's Father
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      affects: [affect_shame]
+      traits: [rich-man, remarried, hazel-branch-bringer, uncertain-recognizer]
+      evidence: |
+        "Can it be Cinderella?"
+
+    cinderella_stepmother:
+      name: Cinderella's Stepmother
+      archetypes: [arc_cruel_stepmother]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning, agency_violence]
+      speech_acts_performed: [speech_command, speech_lie]
+      affects: [affect_envy, affect_shame, affect_anger]
+      traits: [labour-imposer, festival-excluder, false-promise-maker, mutilation-adviser]
+      evidence: |
+        "All this will not help thee; thou goest not with us"
+
+    cinderella_elder_stepsister:
+      name: The Elder False Sister
+      archetypes: [arc_false_bride]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_cunning, agency_violence]
+      affects: [affect_envy, affect_pride, affect_shame]
+      traits: [fair-faced-black-hearted, mocker, toe-cutting-false-bride, blinded]
+      evidence: |
+        "The maiden cut the toe off, forced the foot into the shoe,
+        swallowed the pain"
+
+    cinderella_younger_stepsister:
+      name: The Younger False Sister
+      archetypes: [arc_false_bride]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_cunning, agency_violence]
+      affects: [affect_envy, affect_pride, affect_shame]
+      traits: [fair-faced-black-hearted, mocker, heel-cutting-false-bride, blinded]
+      evidence: |
+        "The maiden cut a bit off her heel, forced her foot into the
+        shoe, swallowed the pain"
+
+    cinderella_prince:
+      name: The King's Son
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning]
+      speech_acts_performed: [speech_command]
+      affects: [affect_love_at_first_sight, affect_curiosity]
+      traits: [festival-bride-seeker, exclusive-dancer, pitch-strategist, shoe-tester, true-bride-recognizer]
+      evidence: |
+        "No one shall be my wife but she whose foot this golden slipper
+        fits."
+
+    cinderella_king:
+      name: The Festival-Appointing King
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [festival-maker, bride-search-arranger]
+      evidence: |
+        "the King appointed a festival which was to last three days"
+
+    cinderella_tree_bird:
+      name: The Little White Bird at the Hazel-Tree
+      archetypes: [arc_animal_helper]
+      species: sp_bird
+      agency_modes: [agency_animal_aid]
+      traits: [grave-tree-dweller, wish-answerer, dress-giver, garment-keeper]
+      evidence: |
+        "a little white bird always came on the tree, and if Cinderella
+        expressed a wish, the bird threw down to her what she had wished for."
+
+    cinderella_helping_birds:
+      name: The Pigeons, Turtle-Doves, and Birds Under Heaven
+      archetypes: [arc_animal_helper]
+      species: sp_bird
+      agency_modes: [agency_animal_aid]
+      traits: [lentil-sorters, true-bride-witnesses, false-bride-punishers]
+      evidence: |
+        "all the birds beneath the sky... gathered all the good grains
+        into the dish."
+
+  magic_objects:
+
+    obj_hazel_branch_cinderella:
+      name: The Hazel Branch
+      object_kind: material
+      attributes:
+        source: first branch that knocks against father's hat
+        planted_at: loc_mothers_grave_cinderella
+      evidence: |
+        "the first branch which knocks against your hat"
+
+    obj_lentils_ashes_cinderella:
+      name: The Lentils in the Ashes
+      object_kind: material
+      attributes:
+        function: impossible domestic sorting task
+      evidence: |
+        "emptied a dish of lentils into the ashes"
+
+    obj_festival_dresses_cinderella:
+      name: The Three Festival Dresses
+      object_kind: garment
+      attributes:
+        sequence: [gold_and_silver, more_beautiful, most_splendid]
+        source: cinderella_tree_bird
+      evidence: |
+        "the bird threw a gold and silver dress down to her"
+
+    obj_golden_slipper_cinderella:
+      name: The Golden Slipper
+      instance_of: obj_recognition_shoe
+      object_kind: garment
+      attributes:
+        material: gold
+        captured_by: pitch on staircase
+        function: true-bride recognition
+      evidence: |
+        "the maiden's left slipper remained sticking. The King's son
+        picked it up"
+
+    obj_pitch_staircase_cinderella:
+      name: The Pitch on the Palace Staircase
+      object_kind: material
+      attributes:
+        function: captures Cinderella's slipper during third escape
+      evidence: |
+        "caused the whole staircase to be smeared with pitch"
+
+    obj_false_bride_knife_cinderella:
+      name: The Stepmother's Knife
+      object_kind: weapon
+      attributes:
+        function: mutilates feet to force false fit
+      evidence: |
+        "her mother gave her a knife"
+
+  locations:
+
+    loc_rich_house_cinderella:
+      name: The Rich Man's House
+      instance_of: loc_house
+      evidence: |
+        "The woman had brought two daughters into the house with her"
+
+    loc_mothers_grave_cinderella:
+      name: The Mother's Grave
+      instance_of: loc_tomb
+      threshold_type: threshold_grave
+      evidence: |
+        "Every day the maiden went out to her mother's grave"
+
+    loc_hazel_tree_cinderella:
+      name: The Hazel-Tree on the Grave
+      instance_of: loc_tree
+      attributes:
+        rooted_in: loc_mothers_grave_cinderella
+      evidence: |
+        "planted the branch on it... and became a handsome tree."
+
+    loc_kitchen_ashes_cinderella:
+      name: The Kitchen Fireside Ashes
+      instance_of: loc_hearth
+      evidence: |
+        "sleep by the fireside in the ashes."
+
+    loc_palace_festival_cinderella:
+      name: The King's Palace Festival
+      instance_of: loc_castle
+      evidence: |
+        "we are going to the festival at the King's palace."
+
+    loc_pigeon_house_escape_cinderella:
+      name: The Pigeon-House Escape
+      instance_of: loc_house
+      evidence: |
+        "sprang into the pigeon-house."
+
+    loc_pear_tree_escape_cinderella:
+      name: The Pear-Tree Escape
+      instance_of: loc_tree
+      evidence: |
+        "I believe she has climbed up the pear-tree."
+
+    loc_palace_staircase_cinderella:
+      name: The Pitched Palace Staircase
+      instance_of: loc_castle
+      evidence: |
+        "the whole staircase to be smeared with pitch"
+
+    loc_church_wedding_cinderella:
+      name: The Church Wedding Path
+      instance_of: loc_church
+      evidence: |
+        "When the betrothed couple went to church"
+
+
+classifications:
+
+  world_laws:
+    - law_grave_tree_channels_maternal_aid
+    - law_true_fit_reveals_identity
+    - law_kindness_to_hidden_donors_rewarded
+
+  moral_regimes:
+    - moral_kindness_rewarded
+    - moral_retributive
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_domestic_labor
+    - agency_animal_aid
+    - agency_social_rank
+
+  affects_driving:
+    - affect_grief
+    - affect_longing
+    - affect_envy
+    - affect_love_at_first_sight
+
+  symbol_numbers:
+    - num_2   # two false sisters; two pigeons witness and punish
+    - num_3   # three-day festival; three garments; three shoe trials
+
+  threshold_types:
+    - threshold_grave
+
+
+propp:
+  - { function: func_absentation, order: 1, actor: cinderella_dead_mother,
+      scene: "mother dies after giving piety counsel and heavenly protection promise" }
+  - { function: func_villainy, order: 2, actor: cinderella_stepmother,
+      scene: "stepfamily strips Cinderella, lowers her to kitchen labour and ashes" }
+  - { function: func_magical_agent, order: 3, actor: cinderella_tree_bird,
+      scene: "hazel branch grows on mother's grave and bird grants wishes" }
+  - { function: func_interdiction, order: 4, actor: cinderella_stepmother,
+      scene: "Cinderella is denied the three-day royal festival" }
+  - { function: func_difficult_task, order: 5, actor: cinderella_stepmother,
+      scene: "lentils must be picked out of ashes before she may go" }
+  - { function: func_magical_agent, order: 6, actor: cinderella_helping_birds,
+      scene: "birds sort lentils despite the stepmother's bad-faith test" }
+  - { function: func_departure, order: 7, actor: cinderella,
+      scene: "bird grants festival dress and Cinderella appears unknown at palace" }
+  - { function: func_pursuit, order: 8, actor: cinderella_prince,
+      scene: "prince follows her first two escapes to pigeon-house and pear-tree" }
+  - { function: func_branding, order: 9, actor: cinderella_prince,
+      scene: "pitch on staircase captures the golden slipper on the third night" }
+  - { function: func_difficult_task, order: 10, actor: cinderella_prince,
+      scene: "only the woman whose foot fits the slipper may be bride" }
+  - { function: func_false_claims, order: 11, actor: cinderella_elder_stepsister,
+      scene: "elder sister cuts off toe and is exposed by blood in shoe" }
+  - { function: func_false_claims, order: 12, actor: cinderella_younger_stepsister,
+      scene: "younger sister cuts off heel and is exposed by blood in shoe" }
+  - { function: func_recognition, order: 13, actor: cinderella_prince,
+      scene: "Cinderella's foot fits; prince recognises the festival maiden" }
+  - { function: func_wedding, order: 14, actor: cinderella,
+      scene: "true bride rides away with prince and doves on her shoulders" }
+  - { function: func_punishment, order: 15, actor: cinderella_helping_birds,
+      scene: "pigeons blind the two false sisters at the wedding path" }
+
+
+edges:
+
+  # Maternal protection and domestic lowering
+  - { from: cinderella_dead_mother, to: cinderella, label: COUNSELS,
+      evidence: "Dear child, be good and pious" }
+  - { from: cinderella, to: loc_mothers_grave_cinderella, label: MOURNS_AT,
+      evidence: "Every day the maiden went out to her mother's grave, and wept" }
+  - { from: cinderella_father, to: cinderella_stepmother, label: MARRIES,
+      evidence: "the man had taken another wife." }
+  - { from: cinderella_stepmother, to: cinderella, label: DEGRADES,
+      evidence: "out with the kitchen-wench." }
+  - { from: cinderella_elder_stepsister, to: cinderella, label: MOCKS,
+      evidence: "Just look at the proud princess, how decked out she is!" }
+  - { from: cinderella_younger_stepsister, to: cinderella, label: MOCKS,
+      evidence: "they mocked her and emptied her peas and lentils into the ashes" }
+  - { from: cinderella, to: loc_kitchen_ashes_cinderella, label: SLEEPS_AT,
+      evidence: "had to sleep by the fireside in the ashes." }
+
+  # Grave tree and bird aid
+  - { from: cinderella_father, to: obj_hazel_branch_cinderella, label: BRINGS,
+      evidence: "he broke off the branch and took it with him." }
+  - { from: cinderella, to: loc_hazel_tree_cinderella, label: PLANTS_AT,
+      evidence: "went to her mother's grave and planted the branch on it" }
+  - { from: cinderella, to: cinderella_tree_bird, label: WISHES_TO,
+      evidence: "if Cinderella expressed a wish, the bird threw down to her what she had wished for." }
+  - { from: cinderella_tree_bird, to: obj_festival_dresses_cinderella, label: GIVES,
+      evidence: "the bird threw a gold and silver dress down to her" }
+
+  # Lentil tasks and festival
+  - { from: cinderella_stepmother, to: cinderella, label: ASSIGNS_TASK_TO,
+      attributes: { task: pick_lentils_from_ashes },
+      evidence: "if thou hast picked them out again in two hours, thou shalt go" }
+  - { from: cinderella_helping_birds, to: obj_lentils_ashes_cinderella, label: SORTS,
+      evidence: "gathered all the good grains into the dish." }
+  - { from: cinderella_stepmother, to: cinderella, label: BREAKS_PROMISE_TO,
+      evidence: "No, Cinderella, thou hast no clothes and thou canst not dance" }
+  - { from: cinderella, to: loc_palace_festival_cinderella, label: VISITS_DISGUISED,
+      evidence: "thought she must be a foreign princess" }
+  - { from: cinderella_prince, to: cinderella, label: DANCES_ONLY_WITH,
+      evidence: "He would dance with no other maiden" }
+  - { from: cinderella, to: loc_pigeon_house_escape_cinderella, label: ESCAPES_TO,
+      evidence: "sprang into the pigeon-house." }
+  - { from: cinderella, to: loc_pear_tree_escape_cinderella, label: ESCAPES_TO,
+      evidence: "she has climbed up the pear-tree." }
+  - { from: cinderella_prince, to: obj_pitch_staircase_cinderella, label: USES,
+      evidence: "caused the whole staircase to be smeared with pitch" }
+  - { from: obj_pitch_staircase_cinderella, to: obj_golden_slipper_cinderella, label: CAPTURES,
+      evidence: "the maiden's left slipper remained sticking." }
+
+  # Shoe test, false brides, recognition
+  - { from: cinderella_prince, to: obj_golden_slipper_cinderella, label: USES_FOR_RECOGNITION,
+      evidence: "No one shall be my wife but she whose foot this golden slipper fits." }
+  - { from: cinderella_stepmother, to: cinderella_elder_stepsister, label: COMMANDS_MUTILATION_OF,
+      evidence: "Cut the toe off; when thou art Queen thou wilt have no more need to go on foot." }
+  - { from: cinderella_elder_stepsister, to: obj_golden_slipper_cinderella, label: FORCES_FIT_INTO,
+      evidence: "forced the foot into the shoe" }
+  - { from: cinderella_helping_birds, to: cinderella_prince, label: WARNS,
+      evidence: "There's blood within the shoe" }
+  - { from: cinderella_prince, to: cinderella_elder_stepsister, label: REJECTS_FALSE_BRIDE,
+      evidence: "said she was not the true one" }
+  - { from: cinderella_stepmother, to: cinderella_younger_stepsister, label: COMMANDS_MUTILATION_OF,
+      evidence: "Cut a bit off thy heel" }
+  - { from: cinderella_younger_stepsister, to: obj_golden_slipper_cinderella, label: FORCES_FIT_INTO,
+      evidence: "forced her foot into the shoe" }
+  - { from: cinderella_helping_birds, to: cinderella_prince, label: WARNS,
+      evidence: "The shoe is too small for her, The true bride waits for you." }
+  - { from: cinderella_prince, to: cinderella_younger_stepsister, label: REJECTS_FALSE_BRIDE,
+      evidence: "This also is not the right one" }
+  - { from: obj_golden_slipper_cinderella, to: cinderella, label: FITS_TRUE_BRIDE,
+      evidence: "put it into the slipper, which fitted like a glove." }
+  - { from: cinderella_prince, to: cinderella, label: RECOGNIZES,
+      evidence: "That is the true bride!" }
+  - { from: cinderella_helping_birds, to: cinderella, label: CONFIRMS_TRUE_BRIDE,
+      evidence: "The true bride rides with you" }
+
+  # Wedding punishment
+  - { from: cinderella_prince, to: cinderella, label: MARRIES,
+      evidence: "When the wedding with the King's son had to be celebrated" }
+  - { from: cinderella_elder_stepsister, to: cinderella, label: SEEKS_FAVOUR_FROM,
+      evidence: "wanted to get into favour with Cinderella" }
+  - { from: cinderella_younger_stepsister, to: cinderella, label: SEEKS_FAVOUR_FROM,
+      evidence: "share her good fortune." }
+  - { from: cinderella_helping_birds, to: cinderella_elder_stepsister, label: BLINDS,
+      evidence: "the pigeons pecked out one eye of each of them" }
+  - { from: cinderella_helping_birds, to: cinderella_younger_stepsister, label: BLINDS,
+      evidence: "punished with blindness as long as they lived." }

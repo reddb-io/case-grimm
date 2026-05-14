@@ -1,0 +1,460 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: ferdinand-the-faithful
+khm: 126
+atu: '531'
+atu_name: Ferdinand the Faithful
+canonical_source: ../../2-silver/canonical/ferdinand-the-faithful/canonical.txt
+title: Ferdinand the Faithful
+
+
+entities:
+
+  characters:
+
+    ferdinand_faithful_parents:
+      name: Ferdinand's Poor Parents
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      affects: [affect_grief]
+      traits: [formerly-rich, poor-parents, godfather-seekers, key-keepers]
+      evidence: |
+        had no children, but when they were poor they had a little boy
+
+    ferdinand_faithful_godfather:
+      name: The Poor Godfather
+      archetypes: [arc_supernatural_godfather]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_promise, speech_command]
+      traits: [poor-beggar, church-sponsor, name-giver, delayed-key-donor]
+      evidence: |
+        I will be godfather for you
+
+    ferdinand_faithful:
+      name: Ferdinand the Faithful
+      archetypes: [arc_faithful_servant]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_animal_aid, agency_object_mediation, agency_speech]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_request, speech_command]
+      affects: [affect_joy, affect_fear, affect_loyalty, affect_love]
+      traits: [poor-godson, named-faithful, key-inheritor, white-horse-rider, pen-keeper, fish-rescuer, royal-outrider, dangerous-task-bearer, bride-fetcher, writings-fetcher, restored-decapitation-victim, final-bridegroom]
+      evidence: |
+        he gave the child the name of Ferdinand the Faithful
+
+    ferdinand_faithful_white_horse:
+      name: The Speaking White Horse
+      archetypes: [arc_animal_helper, arc_enchanted_prince]
+      species: sp_horse
+      agency_modes: [agency_animal_aid, agency_speech, agency_cunning]
+      existential_states: [state_transformed, state_hidden_identity]
+      transformations: [transform_animal_human]
+      speech_acts_performed: [speech_warning, speech_command]
+      affects: [affect_loyalty]
+      traits: [white-horse, hidden-in-castle, stable-speaker, task-adviser, ship-planner, final-kings-son]
+      evidence: |
+        Dost thou speak, my little white horse
+
+    ferdinand_faithful_fish:
+      name: The Rescued Fish
+      archetypes: [arc_animal_helper]
+      species: sp_fish
+      agency_modes: [agency_animal_aid, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_pity]
+      traits: [mud-stranded, lake-returned, flute-giver, pen-retriever]
+      evidence: |
+        a fish was lying on the bank, gasping and panting for breath
+
+    ferdinand_unfaithful:
+      name: Ferdinand the Unfaithful
+      archetypes: [arc_treacherous_travel_companion, arc_false_hero]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_lie, speech_command]
+      affects: [affect_envy]
+      traits: [wicked-arts-knower, namesake-double, hostile-companion, task-instigator, execution-instigator]
+      evidence: |
+        I am called Ferdinand the Unfaithful
+
+    ferdinand_faithful_inn_girl:
+      name: The Honest Girl at the Inn
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning]
+      speech_acts_performed: [speech_request]
+      affects: [affect_love, affect_fear]
+      traits: [honest, bright-faced, patronage-broker, cautious-helper]
+      evidence: |
+        an honest girl, who had a bright face
+
+    ferdinand_faithful_king:
+      name: The Noseless King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command]
+      affects: [affect_love, affect_fear]
+      traits: [love-lamenting, servant-hiring, death-threatener, no-nose-husband, failed-decapitation-subject]
+      evidence: |
+        The Queen, however, did not love the King because he had no nose
+
+    ferdinand_faithful_princess:
+      name: The Sleeping Princess Who Becomes Queen
+      species: sp_human
+      agency_modes: [agency_speech, agency_violence, agency_cunning]
+      transformations: [transform_decapitation_restoration]
+      speech_acts_performed: [speech_command]
+      affects: [affect_love]
+      traits: [sleeping-bride, writings-claimer, queen, head-restoration-magician, king-remover, ferdinand-bride]
+      evidence: |
+        the princess lies sleeping
+
+    ferdinand_faithful_giants:
+      name: The Lake Giants
+      being_type: being_giant
+      agency_modes: [agency_violence, agency_domestic_labor]
+      affects: [affect_hunger]
+      traits: [lake-dwellers, meat-pacified, bed-carriers, bride-lifters]
+      evidence: |
+        Great giants dwell on the lake
+
+    ferdinand_faithful_large_birds:
+      name: The Large Birds
+      species: sp_bird
+      agency_modes: [agency_violence]
+      affects: [affect_hunger]
+      traits: [eye-pickers, bread-pacified, passage-guards]
+      evidence: |
+        there are the large birds which would pick the eyes out of thy head
+
+    ferdinand_faithful_lords:
+      name: The Lords of the Court
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [court-witnesses, magic-feat-audience]
+      evidence: |
+        when all the lords of the court were together
+
+  magic_objects:
+
+    obj_ferdinand_faithful_key:
+      name: The Godfather's Delayed Key
+      instance_of: obj_delayed_inheritance_key
+      object_kind: token
+      attributes:
+        function: opens the hidden heath-castle when Ferdinand reaches fourteen
+      evidence: |
+        he gave a key to the nurse
+
+    obj_ferdinand_faithful_white_horse:
+      name: The White Horse as Inheritance
+      instance_of: obj_enchanted_helper_horse
+      object_kind: creature_object
+      attributes:
+        function: inherited horse, advisor, mount, and enchanted king's son
+      evidence: |
+        nothing within but a horse, a white one
+
+    obj_ferdinand_faithful_road_pen:
+      name: The Roadside Pen
+      object_kind: tool
+      attributes:
+        function: small object Ferdinand is told by an unseen voice to keep
+      evidence: |
+        a pen was lying on the road
+
+    obj_ferdinand_faithful_flute:
+      name: The Fish's Flute
+      instance_of: obj_animal_helper_flute
+      object_kind: instrument
+      attributes:
+        function: summons the rescued fish when something falls into water
+      evidence: |
+        I will give thee a flute
+
+    obj_ferdinand_faithful_meat_ship:
+      name: The Ship Full of Meat
+      object_kind: food
+      attributes:
+        function: provision that pacifies the lake giants
+      evidence: |
+        a ship full of meat
+
+    obj_ferdinand_faithful_bread_ship:
+      name: The Ship Full of Bread
+      object_kind: food
+      attributes:
+        function: provision that pacifies the large birds
+      evidence: |
+        a ship full of bread
+
+    obj_ferdinand_faithful_writings:
+      name: The Princess's Writings
+      object_kind: book
+      attributes:
+        function: second retrieval object required before the wedding can stand
+      evidence: |
+        must have her writings
+
+  locations:
+
+    loc_ferdinand_faithful_church:
+      name: The Baptism Church
+      instance_of: loc_church
+      threshold_type: threshold_doorway
+      evidence: |
+        come to the church with the child
+
+    loc_ferdinand_faithful_heath:
+      name: The Heath of the Delayed Castle
+      instance_of: loc_meadow
+      evidence: |
+        go on the heath
+
+    loc_ferdinand_faithful_heath_castle:
+      name: The Castle Opened by the Key
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        there stood the castle
+
+    loc_ferdinand_faithful_road:
+      name: The Road of the Pen and Namesake
+      instance_of: loc_road
+      evidence: |
+        a pen was lying on the road
+
+    loc_ferdinand_faithful_lake:
+      name: The Lake of Fish, Giants, and Birds
+      instance_of: loc_lake
+      evidence: |
+        he passed by a lake
+
+    loc_ferdinand_faithful_inn:
+      name: The Inn Where the Ferdinands Meet Service
+      instance_of: loc_inn
+      threshold_type: threshold_doorway
+      evidence: |
+        they both set out to the inn
+
+    loc_ferdinand_faithful_royal_castle:
+      name: The King's Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        So he took the writings to the castle
+
+    loc_ferdinand_faithful_stable:
+      name: The Stable of the White Horse
+      instance_of: loc_stable
+      evidence: |
+        went into the stable to his white horse
+
+    loc_ferdinand_faithful_ship:
+      name: The Provisioned Quest Ships
+      instance_of: loc_ship
+      evidence: |
+        the ships might be filled
+
+    loc_ferdinand_faithful_princess_castle:
+      name: The Sleeping Princess's Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        when thou comest to the castle
+
+    loc_ferdinand_faithful_bedroom:
+      name: The Princess's Bedroom of Writings
+      instance_of: loc_bedchamber
+      threshold_type: threshold_doorway
+      evidence: |
+        on the table in the princess’s bed-room lay the writings
+
+
+classifications:
+
+  world_laws:
+    - law_delayed_godfather_key_reveals_hidden_inheritance
+    - law_rescued_animals_repay_kindness
+    - law_animal_advice_requires_exact_obedience
+    - law_provisioned_passage_pacifies_monsters
+
+  moral_regimes:
+    - moral_kindness_rewarded
+    - moral_restorative
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_animal_aid
+    - agency_object_mediation
+    - agency_speech
+    - agency_cunning
+    - agency_social_rank
+    - agency_violence
+
+  affects_driving:
+    - affect_loyalty
+    - affect_love
+    - affect_envy
+    - affect_fear
+    - affect_hunger
+
+  symbol_numbers:
+    - num_7
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: ferdinand_faithful_parents
+    scene: "poor parents cannot find a godfather for the child"
+    evidence: "so no one would stand as godfather for him"
+
+  - function: func_donor_appearance
+    order: 2
+    actor: ferdinand_faithful_godfather
+    scene: "the poor man agrees to stand as godfather and names the child Ferdinand the Faithful"
+    evidence: "he gave the child the name of Ferdinand the Faithful"
+
+  - function: func_magical_agent
+    order: 3
+    actor: ferdinand_faithful_godfather
+    beneficiary: ferdinand_faithful
+    scene: "the godfather leaves a key that will fit a castle on the heath when Ferdinand is fourteen"
+    evidence: "when he was fourteen years old"
+
+  - function: func_departure
+    order: 4
+    actor: ferdinand_faithful
+    scene: "Ferdinand finds the castle, receives the white horse, and travels"
+    evidence: "Now I have a white horse, and I will travel"
+
+  - function: func_donor_test
+    order: 5
+    actor: ferdinand_faithful_fish
+    beneficiary: ferdinand_faithful
+    scene: "Ferdinand rescues the gasping fish from the bank"
+    evidence: "I will help thee get into the water"
+
+  - function: func_villainy
+    order: 6
+    actor: ferdinand_unfaithful
+    victim: ferdinand_faithful
+    scene: "the unfaithful namesake turns the king's longing into a death-bound bride-fetching task"
+    evidence: "if he does not do it, his head must be struck off"
+
+  - function: func_guidance
+    order: 7
+    actor: ferdinand_faithful_white_horse
+    beneficiary: ferdinand_faithful
+    scene: "the white horse tells Ferdinand to request ships of meat and bread"
+    evidence: "Go thou to the King, and say if he will give thou what thou must have"
+
+  - function: func_difficult_task
+    order: 8
+    actor: ferdinand_faithful
+    scene: "Ferdinand crosses the lake, pacifies giants and birds, and has the princess carried sleeping to the ship"
+    evidence: "they carried the princess in her bed to the King"
+
+  - function: func_difficult_task
+    order: 9
+    actor: ferdinand_faithful
+    scene: "Ferdinand repeats the passage to fetch the princess's writings"
+    evidence: "he must fetch the writings from the castle"
+
+  - function: func_magical_agent
+    order: 10
+    actor: ferdinand_faithful_fish
+    beneficiary: ferdinand_faithful
+    scene: "the fish returns the pen from the lake when Ferdinand plays the flute"
+    evidence: "the fish came with the pen in its mouth"
+
+  - function: func_victory
+    order: 11
+    actor: ferdinand_faithful_princess
+    victim: ferdinand_faithful_king
+    scene: "the queen withholds head-restoration from the noseless king"
+    evidence: "But she cut off his head, and did not put it on again"
+
+  - function: func_wedding
+    order: 12
+    actor: ferdinand_faithful
+    scene: "the queen marries Ferdinand the Faithful"
+    evidence: "she married Ferdinand the Faithful"
+
+  - function: func_transfiguration
+    order: 13
+    actor: ferdinand_faithful_white_horse
+    scene: "the white horse circles the heath and becomes a king's son"
+    evidence: "was changed into a King’s son"
+
+
+edges:
+
+  - { from: ferdinand_faithful_godfather, to: ferdinand_faithful, label: NAMES,
+      evidence: "he gave the child the name of Ferdinand the Faithful" }
+  - { from: ferdinand_faithful_godfather, to: obj_ferdinand_faithful_key, label: GIVES,
+      evidence: "he gave a key to the nurse" }
+  - { from: obj_ferdinand_faithful_key, to: loc_ferdinand_faithful_heath_castle, label: OPENS,
+      evidence: "the key would fit" }
+  - { from: obj_ferdinand_faithful_key, to: law_delayed_godfather_key_reveals_hidden_inheritance, label: REALIZES,
+      evidence: "until the child was fourteen years old" }
+  - { from: loc_ferdinand_faithful_heath_castle, to: obj_ferdinand_faithful_white_horse, label: CONTAINS,
+      evidence: "nothing within but a horse, a white one" }
+  - { from: ferdinand_faithful, to: obj_ferdinand_faithful_road_pen, label: TAKES,
+      evidence: "went back again and picked it up" }
+  - { from: ferdinand_faithful, to: ferdinand_faithful_fish, label: RESCUES,
+      evidence: "I will help thee get into the water" }
+  - { from: ferdinand_faithful_fish, to: obj_ferdinand_faithful_flute, label: GIVES,
+      evidence: "I will give thee a flute" }
+  - { from: ferdinand_unfaithful, to: ferdinand_faithful, label: SHADOWS_AS_NAMESAKE,
+      evidence: "then we have got almost the same name" }
+  - { from: ferdinand_unfaithful, to: ferdinand_faithful, label: KNOWS_BY_WICKED_ARTS,
+      evidence: "by means of all kinds of wicked arts" }
+  - { from: ferdinand_faithful_inn_girl, to: ferdinand_faithful, label: LOVES,
+      evidence: "She fell in love with Ferdinand the Faithful" }
+  - { from: ferdinand_faithful_inn_girl, to: ferdinand_faithful_king, label: RECOMMENDS,
+      evidence: "told him that she knew of an excellent servant for him" }
+  - { from: ferdinand_faithful_king, to: ferdinand_faithful, label: APPOINTS,
+      attributes: { office: outrider },
+      evidence: "so the King made him an outrider" }
+  - { from: ferdinand_unfaithful, to: ferdinand_faithful_king, label: INSTIGATES_TASK,
+      evidence: "send him away to get her" }
+  - { from: ferdinand_faithful_king, to: ferdinand_faithful, label: THREATENS_EXECUTION,
+      evidence: "if he did not do it he should die" }
+  - { from: ferdinand_faithful_white_horse, to: ferdinand_faithful, label: ADVISES,
+      evidence: "canst thou tell me how I am to set about it" }
+  - { from: ferdinand_faithful_white_horse, to: obj_ferdinand_faithful_meat_ship, label: REQUIRES,
+      evidence: "a ship full of meat" }
+  - { from: ferdinand_faithful_white_horse, to: obj_ferdinand_faithful_bread_ship, label: REQUIRES,
+      evidence: "a ship full of bread" }
+  - { from: obj_ferdinand_faithful_meat_ship, to: ferdinand_faithful_giants, label: PACIFIES,
+      evidence: "Ferdinand the Faithful gave the giants" }
+  - { from: obj_ferdinand_faithful_bread_ship, to: ferdinand_faithful_large_birds, label: PACIFIES,
+      evidence: "and the birds what he had brought with him for them" }
+  - { from: ferdinand_faithful, to: ferdinand_faithful_giants, label: SPEAKS_FORMULA_TO,
+      evidence: "Peace, peace, my dear little giants" }
+  - { from: ferdinand_faithful_giants, to: ferdinand_faithful_princess, label: CARRIES,
+      evidence: "the giants must lift her up" }
+  - { from: ferdinand_faithful_princess, to: obj_ferdinand_faithful_writings, label: REQUIRES,
+      evidence: "she must have her writings" }
+  - { from: ferdinand_faithful, to: obj_ferdinand_faithful_writings, label: FETCHES,
+      evidence: "Ferdinand the Faithful went in, and fetched them" }
+  - { from: ferdinand_faithful, to: obj_ferdinand_faithful_road_pen, label: DROPS_INTO_WATER,
+      evidence: "he let his pen fall into the water" }
+  - { from: obj_ferdinand_faithful_flute, to: ferdinand_faithful_fish, label: SUMMONS,
+      evidence: "he remembered his flute, and began to play on it" }
+  - { from: ferdinand_faithful_fish, to: obj_ferdinand_faithful_road_pen, label: RETRIEVES,
+      evidence: "the fish came with the pen in its mouth" }
+  - { from: ferdinand_faithful_princess, to: ferdinand_faithful, label: DECAPITATES_AND_RESTORES,
+      evidence: "she hewed off his head, and put it on again for him" }
+  - { from: ferdinand_faithful_princess, to: ferdinand_faithful_king, label: DECAPITATES_WITHOUT_RESTORING,
+      evidence: "did not put it on again" }
+  - { from: ferdinand_faithful_princess, to: ferdinand_faithful, label: MARRIES,
+      evidence: "she married Ferdinand the Faithful" }
+  - { from: ferdinand_faithful_white_horse, to: transform_animal_human, label: UNDERGOES,
+      evidence: "was changed into a King’s son" }

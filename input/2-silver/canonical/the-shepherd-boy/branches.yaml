@@ -1,0 +1,8 @@
+slug: the-shepherd-boy
+khm: 152
+atu: 922A
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

@@ -1,0 +1,8 @@
+slug: the-crystal-ball
+khm: 197
+atu: 552A
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

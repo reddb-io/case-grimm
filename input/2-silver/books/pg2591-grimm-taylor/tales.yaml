@@ -1,0 +1,635 @@
+book_id: pg2591-grimm-taylor
+source_file: ../../1-bronze/pg2591.txt
+total: 62
+tales:
+- title: THE GOLDEN BIRD
+  slug: the-golden-bird
+  body_line: 126
+  khm: 57
+  atu: '550'
+  kind: tale
+  word_count: 2527
+  char_count: 12491
+  language: en
+  title_de: Der goldene Vogel
+- title: HANS IN LUCK
+  slug: hans-in-luck
+  body_line: 335
+  khm: 83
+  atu: '1415'
+  kind: tale
+  word_count: 2351
+  char_count: 11749
+  language: en
+  title_de: Hans im Glück
+- title: JORINDA AND JORINDEL
+  slug: jorinda-and-jorindel
+  body_line: 540
+  khm: 69
+  atu: '405'
+  kind: tale
+  word_count: 1133
+  char_count: 5880
+  language: en
+  title_de: Jorinde und Joringel
+- title: THE TRAVELLING MUSICIANS
+  slug: the-travelling-musicians
+  body_line: 659
+  khm: 27
+  atu: '130'
+  kind: tale
+  word_count: 1361
+  char_count: 6912
+  language: en
+  title_de: Die Bremer Stadtmusikanten
+- title: OLD SULTAN
+  slug: old-sultan
+  body_line: 774
+  khm: 48
+  atu: '101'
+  kind: tale
+  word_count: 870
+  char_count: 4380
+  language: en
+  title_de: Der alte Sultan
+- title: THE STRAW, THE COAL, AND THE BEAN
+  slug: the-straw-the-coal-and-the-bean
+  body_line: 849
+  khm: 18
+  atu: '295'
+  kind: tale
+  word_count: 503
+  char_count: 2670
+  language: en
+  title_de: Strohhalm, Kohle und Bohne
+- title: BRIAR ROSE
+  slug: briar-rose
+  body_line: 898
+  khm: 50
+  atu: '410'
+  kind: tale
+  word_count: 1510
+  char_count: 7803
+  language: en
+  title_de: Dornröschen
+- title: THE DOG AND THE SPARROW
+  slug: the-dog-and-the-sparrow
+  body_line: 1030
+  khm: 58
+  atu: 248A
+  kind: tale
+  word_count: 1342
+  char_count: 6821
+  language: en
+  title_de: Der Hund und der Sperling
+- title: THE TWELVE DANCING PRINCESSES
+  slug: the-twelve-dancing-princesses
+  body_line: 1135
+  khm: 133
+  atu: '306'
+  kind: tale
+  word_count: 1601
+  char_count: 8335
+  language: en
+  title_de: Die zertanzten Schuhe
+- title: THE FISHERMAN AND HIS WIFE
+  slug: the-fisherman-and-his-wife
+  body_line: 1276
+  khm: 19
+  atu: '555'
+  kind: tale
+  word_count: 2115
+  char_count: 10714
+  language: en
+  title_de: Von dem Fischer un syner Fru
+- title: THE WILLOW-WREN AND THE BEAR
+  slug: the-willow-wren-and-the-bear
+  body_line: 1488
+  khm: 102
+  atu: '222'
+  kind: tale
+  word_count: 908
+  char_count: 4797
+  language: en
+  title_de: Der Zaunkönig und der Bär
+- title: THE FROG-PRINCE
+  slug: the-frog-prince
+  body_line: 1568
+  khm: 1
+  atu: '440'
+  kind: tale
+  word_count: 1192
+  char_count: 6033
+  language: en
+  title_de: Der Froschkönig oder der eiserne Heinrich
+- title: CAT AND MOUSE IN PARTNERSHIP
+  slug: cat-and-mouse-in-partnership
+  body_line: 1684
+  khm: 2
+  atu: '15'
+  kind: tale
+  word_count: 975
+  char_count: 5077
+  language: en
+  title_de: Katze und Maus in Gesellschaft
+- title: THE GOOSE-GIRL
+  slug: the-goose-girl
+  body_line: 1769
+  khm: 89
+  atu: '533'
+  kind: tale
+  word_count: 2220
+  char_count: 11378
+  language: en
+  title_de: Die Gänsemagd
+- title: THE ADVENTURES OF CHANTICLEER AND PARTLET
+  parts:
+  - 1. HOW THEY WENT TO THE MOUNTAINS TO EAT NUTS
+  - 2. HOW CHANTICLEER AND PARTLET WENT TO VISIT MR KORBES
+  - 3. HOW PARTLET DIED AND WAS BURIED, AND HOW CHANTICLEER DIED OF GRIEF
+  slug: the-adventures-of-chanticleer-and-partlet
+  body_line: 2005
+  khm: 10
+  atu: '210'
+  kind: tale
+  composite_khm:
+  - 10
+  - 41
+  - 80
+  word_count: 1871
+  char_count: 9667
+  language: en
+  title_de: Das Lumpengesindel
+- title: RAPUNZEL
+  slug: rapunzel
+  body_line: 2182
+  khm: 12
+  atu: '310'
+  kind: tale
+  word_count: 1401
+  char_count: 7269
+  language: en
+  title_de: Rapunzel
+- title: FUNDEVOGEL
+  slug: fundevogel
+  body_line: 2313
+  khm: 51
+  atu: '313'
+  kind: tale
+  word_count: 938
+  char_count: 4904
+  language: en
+  title_de: Fundevogel
+- title: THE VALIANT LITTLE TAILOR
+  slug: the-valiant-little-tailor
+  body_line: 2396
+  khm: 20
+  atu: '1640'
+  kind: tale
+  word_count: 3336
+  char_count: 17401
+  language: en
+  title_de: Das tapfere Schneiderlein
+- title: HANSEL AND GRETEL
+  slug: hansel-and-gretel
+  body_line: 2665
+  khm: 15
+  atu: 327A
+  kind: tale
+  word_count: 2929
+  char_count: 15390
+  language: en
+  title_de: Hänsel und Gretel
+- title: THE MOUSE, THE BIRD, AND THE SAUSAGE
+  slug: the-mouse-the-bird-and-the-sausage
+  body_line: 2923
+  khm: 23
+  atu: '85'
+  kind: tale
+  word_count: 704
+  char_count: 3644
+  language: en
+  title_de: Von dem Mäuschen, Vögelchen und der Bratwurst
+- title: MOTHER HOLLE
+  slug: mother-holle
+  body_line: 2990
+  khm: 24
+  atu: '480'
+  kind: tale
+  word_count: 1267
+  char_count: 6519
+  language: en
+  title_de: Frau Holle
+- title: LITTLE RED-CAP [LITTLE RED RIDING HOOD]
+  slug: little-red-cap-little-red-riding-hood
+  body_line: 3123
+  khm: 26
+  atu: '333'
+  kind: tale
+  word_count: 1378
+  char_count: 7378
+  language: en
+  title_de: Rotkäppchen
+- title: THE ROBBER BRIDEGROOM
+  slug: the-robber-bridegroom
+  body_line: 3283
+  khm: 40
+  atu: '955'
+  kind: tale
+  word_count: 1474
+  char_count: 7652
+  language: en
+  title_de: Der Räuberbräutigam
+- title: TOM THUMB
+  slug: tom-thumb
+  body_line: 3438
+  khm: 37
+  atu: '700'
+  kind: tale
+  word_count: 2501
+  char_count: 12679
+  language: en
+  title_de: Daumesdick
+- title: RUMPELSTILTSKIN
+  slug: rumpelstiltskin
+  body_line: 3655
+  khm: 55
+  atu: '500'
+  kind: tale
+  word_count: 1138
+  char_count: 5838
+  language: en
+  title_de: Rumpelstilzchen
+- title: CLEVER GRETEL
+  slug: clever-gretel
+  body_line: 3773
+  khm: 77
+  atu: '1741'
+  kind: tale
+  word_count: 932
+  char_count: 4826
+  language: en
+  title_de: Das kluge Gretel
+- title: THE OLD MAN AND HIS GRANDSON
+  slug: the-old-man-and-his-grandson
+  body_line: 3853
+  khm: 78
+  atu: 980B
+  kind: tale
+  word_count: 249
+  char_count: 1274
+  language: en
+  title_de: Der alte Großvater und der Enkel
+- title: THE LITTLE PEASANT
+  slug: the-little-peasant
+  body_line: 3881
+  khm: 61
+  atu: '1535'
+  kind: tale
+  word_count: 2069
+  char_count: 10774
+  language: en
+  title_de: Das Bürle
+- title: FREDERICK AND CATHERINE
+  slug: frederick-and-catherine
+  body_line: 4051
+  khm: 59
+  atu: '1387'
+  kind: tale
+  word_count: 1902
+  char_count: 9712
+  language: en
+  title_de: Der Frieder und das Catherlieschen
+- title: SWEETHEART ROLAND
+  slug: sweetheart-roland
+  body_line: 4216
+  khm: 56
+  atu: '1119'
+  kind: tale
+  word_count: 1473
+  char_count: 7639
+  language: en
+  title_de: Der Liebste Roland
+- title: SNOWDROP
+  slug: snowdrop
+  body_line: 4341
+  khm: 53
+  atu: '709'
+  kind: tale
+  word_count: 2380
+  char_count: 12289
+  language: en
+  title_de: Sneewittchen
+- title: THE PINK
+  slug: the-pink
+  body_line: 4575
+  khm: 76
+  atu: '652'
+  kind: tale
+  word_count: 1799
+  char_count: 9076
+  language: en
+  title_de: Die Nelke
+- title: CLEVER ELSIE
+  slug: clever-elsie
+  body_line: 4716
+  khm: 34
+  atu: '1450'
+  kind: tale
+  word_count: 1335
+  char_count: 6765
+  language: en
+  title_de: Die kluge Else
+- title: THE MISER IN THE BUSH
+  slug: the-miser-in-the-bush
+  body_line: 4822
+  khm: 110
+  atu: '592'
+  kind: tale
+  word_count: 1166
+  char_count: 5973
+  language: en
+  title_de: Der Jude im Dorn
+- title: ASHPUTTEL
+  slug: ashputtel
+  body_line: 4924
+  khm: 21
+  atu: 510A
+  kind: tale
+  word_count: 2563
+  char_count: 13247
+  language: en
+  title_de: Aschenputtel
+- title: THE WHITE SNAKE
+  slug: the-white-snake
+  body_line: 5174
+  khm: 17
+  atu: '673'
+  kind: tale
+  word_count: 1601
+  char_count: 8364
+  language: en
+  title_de: Die weiße Schlange
+- title: THE WOLF AND THE SEVEN LITTLE KIDS
+  slug: the-wolf-and-the-seven-little-kids
+  body_line: 5317
+  khm: 5
+  atu: '123'
+  kind: tale
+  word_count: 1099
+  char_count: 5720
+  language: en
+  title_de: Der Wolf und die sieben jungen Geißlein
+- title: THE QUEEN BEE
+  slug: the-queen-bee
+  body_line: 5417
+  khm: 62
+  atu: '554'
+  kind: tale
+  word_count: 850
+  char_count: 4345
+  language: en
+  title_de: Die Bienenkönigin
+- title: THE ELVES AND THE SHOEMAKER
+  slug: the-elves-and-the-shoemaker
+  body_line: 5499
+  khm: 39
+  atu: '503'
+  kind: tale
+  word_count: 743
+  char_count: 3802
+  language: en
+  title_de: Die Wichtelmänner
+- title: THE JUNIPER-TREE
+  slug: the-juniper-tree
+  body_line: 5573
+  khm: 47
+  atu: '720'
+  kind: tale
+  word_count: 3077
+  char_count: 15993
+  language: en
+  title_de: Von dem Machandelboom
+- title: THE TURNIP
+  slug: the-turnip
+  body_line: 5959
+  khm: 146
+  atu: 1689A
+  kind: tale
+  word_count: 1153
+  char_count: 5915
+  language: en
+  title_de: Die Rübe
+- title: CLEVER HANS
+  slug: clever-hans
+  body_line: 6067
+  khm: 32
+  atu: '1696'
+  kind: tale
+  word_count: 895
+  char_count: 5153
+  language: en
+  title_de: Der gescheite Hans
+- title: THE THREE LANGUAGES
+  slug: the-three-languages
+  body_line: 6163
+  khm: 33
+  atu: '671'
+  kind: tale
+  word_count: 946
+  char_count: 4828
+  language: en
+  title_de: Die drei Sprachen
+- title: THE FOX AND THE CAT
+  slug: the-fox-and-the-cat
+  body_line: 6242
+  khm: 75
+  atu: '105'
+  kind: tale
+  word_count: 292
+  char_count: 1475
+  language: en
+  title_de: Der Fuchs und die Katze
+- title: THE FOUR CLEVER BROTHERS
+  slug: the-four-clever-brothers
+  body_line: 6270
+  khm: 129
+  atu: '653'
+  kind: tale
+  word_count: 1698
+  char_count: 8594
+  language: en
+  title_de: Die vier kunstreichen Brüder
+- title: LILY AND THE LION
+  slug: lily-and-the-lion
+  body_line: 6415
+  khm: 88
+  atu: 425C
+  kind: tale
+  word_count: 2336
+  char_count: 11939
+  language: en
+  title_de: Das singende springende Löweneckerchen
+- title: THE FOX AND THE HORSE
+  slug: the-fox-and-the-horse
+  body_line: 6613
+  khm: 132
+  atu: 47A
+  kind: tale
+  word_count: 490
+  char_count: 2464
+  language: en
+  title_de: Der Fuchs und das Pferd
+- title: THE BLUE LIGHT
+  slug: the-blue-light
+  body_line: 6661
+  khm: 116
+  atu: '562'
+  kind: tale
+  word_count: 1739
+  char_count: 9029
+  language: en
+  title_de: Das blaue Licht
+- title: THE RAVEN
+  slug: the-raven
+  body_line: 6805
+  khm: 93
+  atu: '401'
+  kind: tale
+  word_count: 2412
+  char_count: 12367
+  language: en
+  title_de: Die Rabe
+- title: THE GOLDEN GOOSE
+  slug: the-golden-goose
+  body_line: 7014
+  khm: 64
+  atu: '571'
+  kind: tale
+  word_count: 1582
+  char_count: 8105
+  language: en
+  title_de: Die goldene Gans
+- title: THE WATER OF LIFE
+  slug: the-water-of-life
+  body_line: 7165
+  khm: 97
+  atu: '551'
+  kind: tale
+  word_count: 2822
+  char_count: 14193
+  language: en
+  title_de: Das Wasser des Lebens
+- title: THE TWELVE HUNTSMEN
+  slug: the-twelve-huntsmen
+  body_line: 7398
+  khm: 67
+  atu: '884'
+  kind: tale
+  word_count: 1059
+  char_count: 5641
+  language: en
+  title_de: Die zwölf Jäger
+- title: THE KING OF THE GOLDEN MOUNTAIN
+  slug: the-king-of-the-golden-mountain
+  body_line: 7494
+  khm: 92
+  atu: '400'
+  kind: tale
+  word_count: 2468
+  char_count: 12362
+  language: en
+  title_de: Der König vom goldenen Berg
+- title: DOCTOR KNOWALL
+  slug: doctor-knowall
+  body_line: 7700
+  khm: 98
+  atu: '1641'
+  kind: tale
+  word_count: 778
+  char_count: 4015
+  language: en
+  title_de: Doktor Allwissend
+- title: THE SEVEN RAVENS
+  slug: the-seven-ravens
+  body_line: 7765
+  khm: 25
+  atu: '451'
+  kind: tale
+  word_count: 1008
+  char_count: 5117
+  language: en
+  title_de: Die sieben Raben
+- title: THE WEDDING OF MRS FOX
+  parts:
+  - FIRST STORY
+  - SECOND STORY
+  slug: the-wedding-of-mrs-fox
+  body_line: 7858
+  khm: 38
+  atu: '65'
+  kind: tale
+  word_count: 785
+  char_count: 4086
+  language: en
+  title_de: Die Hochzeit der Frau Füchsin
+- title: THE SALAD
+  slug: the-salad
+  body_line: 7979
+  khm: 122
+  atu: '566'
+  kind: tale
+  word_count: 2189
+  char_count: 10986
+  language: en
+  title_de: Der Krautesel
+- title: THE STORY OF THE YOUTH WHO WENT FORTH TO LEARN WHAT FEAR WAS
+  slug: the-story-of-the-youth-who-went-forth-to-learn-what-fear-was
+  body_line: 8158
+  khm: 4
+  atu: '326'
+  kind: tale
+  word_count: 3780
+  char_count: 19448
+  language: en
+  title_de: Märchen von einem, der auszog, das Fürchten zu lernen
+- title: KING GRISLY-BEARD
+  slug: king-grisly-beard
+  body_line: 8464
+  khm: 52
+  atu: '900'
+  kind: tale
+  word_count: 1469
+  char_count: 7532
+  language: en
+  title_de: König Drosselbart
+- title: IRON HANS
+  slug: iron-hans
+  body_line: 8594
+  khm: 136
+  atu: '502'
+  kind: tale
+  word_count: 3208
+  char_count: 16409
+  language: en
+  title_de: Der Eisenhans
+- title: CAT-SKIN
+  slug: cat-skin
+  body_line: 8851
+  khm: 65
+  atu: 510B
+  kind: tale
+  word_count: 2125
+  char_count: 10587
+  language: en
+  title_de: Allerleirauh
+- title: SNOW-WHITE AND ROSE-RED
+  slug: snow-white-and-rose-red
+  body_line: 9021
+  khm: 161
+  atu: '426'
+  kind: tale
+  word_count: 2607
+  char_count: 13907
+  language: en
+  title_de: Schneeweißchen und Rosenrot

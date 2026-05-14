@@ -1,0 +1,430 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-three-little-birds
+khm: 96
+atu: '707'
+atu_name: The Three Golden Children / The Bird of Truth
+canonical_source: ../../2-silver/canonical/the-three-little-birds/canonical.txt
+title: The Three Little Birds
+
+
+entities:
+
+  characters:
+
+    three_birds_king:
+      name: The King of the Keuterberg
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      existential_states: [state_deceived]
+      speech_acts_performed: [speech_command]
+      affects: [affect_anger, affect_grief]
+      traits: [hunting-king, eavesdropping-bridegroom, deceived-father, queen-imprisoner, bird-truth-hearer, family-restorer]
+      evidence: |
+        one of them who lived on the Keuterberg was very fond of
+        hunting
+
+    three_birds_queen:
+      name: The Flax-Haired Queen
+      species: sp_human
+      agency_modes: [agency_endurance, agency_social_rank]
+      existential_states: [state_imprisoned]
+      affects: [affect_maternal_love, affect_grief]
+      traits: [eldest-cowherd-sister, royal-bride, threefold-mother, falsely-accused, long-imprisoned, fountain-healed]
+      evidence: |
+        especially the Queen, who had hair like flax.
+
+    three_birds_false_sisters:
+      name: The Two False Sisters
+      archetypes: [arc_envious_kin_persecutor]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_violence]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_envy, affect_fear]
+      traits: [childless-sisters, ministers-wives, infant-disposers, animal-birth-liars, terrified-by-bird-song, burnt-persecutors]
+      evidence: |
+        But the two sisters had no children
+
+    three_birds_elder_son:
+      name: The Eldest Star-Born Son
+      archetypes: [arc_foundling_child]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_object_mediation]
+      affects: [affect_grief]
+      traits: [red-star-birth, river-castaway, fisherman-raised, foundling-shamed, father-seeker, lost-brother]
+      evidence: |
+        a little boy who brought a bright red star into the world with
+        him
+
+    three_birds_second_son:
+      name: The Second River-Rescued Son
+      archetypes: [arc_foundling_child]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_music, agency_violence]
+      affects: [affect_loyalty]
+      traits: [second-castaway, fisherman-raised, brother-seeker, hunter, flutist, king-encounterer]
+      evidence: |
+        The fisherman, however, fished this one also out of the water
+
+    three_birds_daughter:
+      name: The River-Rescued Daughter
+      archetypes: [arc_foundling_child]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_command]
+      affects: [affect_grief, affect_loyalty, affect_pity]
+      traits: [third-castaway, brother-seeker, courteous-donor-greeter, wand-carrier, bird-and-water-retriever, dog-prince-releaser, mother-healer, prince-bride]
+      evidence: |
+        she mourned for her brothers so much
+
+    three_birds_fisherman:
+      name: The Old Fisherman
+      archetypes: [arc_wise_helper]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_object_mediation]
+      affects: [affect_pity]
+      traits: [river-dweller, child-rescuer, adoptive-father, truth-witness]
+      evidence: |
+        a fisherman who dwelt near the water fished the little boy out
+        again while he was still alive
+
+    three_birds_fishermans_wife:
+      name: The Fisherman's Wife
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      affects: [affect_maternal_love]
+      traits: [childless-wife, adoptive-mother, foundling-rearer]
+      evidence: |
+        as his wife had no children, they reared him.
+
+    three_birds_old_woman:
+      name: The Old Woman at the Great Water
+      archetypes: [arc_supernatural_donor]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      existential_states: [state_cursed]
+      affects: [affect_pity]
+      traits: [fishing-threshold-guardian, courtesy-tester, water-carrier, wand-giver, freed-helper]
+      evidence: |
+        a great piece of water by the side of which stood an old woman
+        fishing
+
+    three_birds_black_dog_prince:
+      name: The Black Dog / Handsome Prince
+      archetypes: [arc_enchanted_prince]
+      species: sp_dog
+      agency_modes: [agency_endurance]
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_animal_human]
+      traits: [black-dog-threshold, wand-released-prince, daughter-bridegroom]
+      evidence: |
+        it turned into a handsome prince
+
+    three_birds_truth_bird:
+      name: The Truth-Telling Little Bird
+      species: sp_bird
+      agency_modes: [agency_music, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_testimony]
+      traits: [birth-witness, water-casting-singer, caged-castle-marvel, wall-hung-truth-teller, lineage-revealer]
+      evidence: |
+        the little bird on the wall began to sing
+
+  magic_objects:
+
+    obj_three_birds_red_star:
+      name: The Bright Red Birth-Star
+      object_kind: token
+      attributes:
+        bearer: three_birds_elder_son
+        function: marks the first child as wondrous at birth
+      evidence: |
+        brought a bright red star into the world with him
+
+    obj_three_birds_truth_bird:
+      name: The Caged Bird of Truth
+      instance_of: obj_truth_telling_bird
+      object_kind: creature_object
+      attributes:
+        function: reveals the hidden lineage of the three children
+      evidence: |
+        a bird in a cage which you must take down
+
+    obj_three_birds_wand:
+      name: The Old Woman's Wand
+      object_kind: tool
+      attributes:
+        function: threshold token dropped at the castle and later used to release the black dog
+      evidence: |
+        gave her a wand
+
+    obj_three_birds_fountain_water:
+      name: The Water from the Old Fountain
+      instance_of: obj_water_of_life
+      object_kind: material
+      attributes:
+        function: restores the imprisoned queen to strength and health
+      evidence: |
+        Take likewise a glass of water out of the fountain
+
+    obj_three_birds_crossbow:
+      name: The Second Son's Cross-Bow
+      object_kind: weapon
+      attributes:
+        function: hunting object that brings the youth into the king's domain
+      evidence: |
+        took his cross-bow and went a-hunting
+
+    obj_three_birds_flute:
+      name: The Second Son's Flute
+      object_kind: instrument
+      attributes:
+        function: music heard by the hunting king
+      evidence: |
+        took his flute, and made music
+
+  locations:
+
+    loc_three_birds_keuterberg:
+      name: The Keuterberg
+      instance_of: loc_mountain
+      evidence: |
+        lived on the Keuterberg
+
+    loc_three_birds_cow_mountain:
+      name: The Cowherd Mountain
+      instance_of: loc_mountain
+      evidence: |
+        three girls were watching their cows upon the mountain
+
+    loc_three_birds_castle:
+      name: The King's Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        riding forth from his castle
+
+    loc_three_birds_weser:
+      name: The Water / Weser
+      instance_of: loc_river
+      evidence: |
+        I believe it was into the Weser
+
+    loc_three_birds_fisher_house:
+      name: The Fisherman's House
+      instance_of: loc_house
+      evidence: |
+        went to the old fisherman
+
+    loc_three_birds_great_water:
+      name: The Great Piece of Water
+      instance_of: loc_river
+      evidence: |
+        he came to a great piece of water
+
+    loc_three_birds_black_dog_road:
+      name: The Road of the Black Dog
+      instance_of: loc_road
+      evidence: |
+        a great black dog
+
+    loc_three_birds_high_castle:
+      name: The Great High Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        Then you will come to a great high castle
+
+    loc_three_birds_old_fountain:
+      name: The Old Fountain and Tree
+      instance_of: loc_well
+      threshold_type: threshold_well
+      evidence: |
+        an old fountain out of which a large tree has grown
+
+    loc_three_birds_prison:
+      name: The Queen's Prison
+      instance_of: loc_dungeon
+      evidence: |
+        ordered his wife to be cast into prison
+
+
+classifications:
+
+  world_laws:
+    - law_birth_substitution_false_animal_accusation
+    - law_truth_bird_reveals_hidden_lineage
+    - law_kindness_to_hidden_donors_rewarded
+    - law_curse_requires_counter_condition
+
+  moral_regimes:
+    - moral_retributive
+    - moral_restorative
+    - moral_kindness_rewarded
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_object_mediation
+    - agency_music
+    - agency_social_rank
+    - agency_endurance
+    - agency_violence
+
+  affects_driving:
+    - affect_envy
+    - affect_maternal_love
+    - affect_grief
+    - affect_loyalty
+    - affect_anger
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_doorway
+    - threshold_well
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: three_birds_king,
+      scene: "The hunting king sees three cowherd sisters on the mountain.",
+      evidence: "three girls were watching their cows upon the mountain" }
+  - { function: func_marriage, order: 2, actor: three_birds_king,
+      scene: "The eldest sister marries the king and the other sisters marry his ministers.",
+      evidence: "the two ministers married the two sisters" }
+  - { function: func_absentation, order: 3, actor: three_birds_king,
+      scene: "The king repeatedly goes away when the queen is about to bear children.",
+      evidence: "the King was obliged to go from home" }
+  - { function: func_villainy, order: 4, actor: three_birds_false_sisters,
+      scene: "The sisters throw the first star-born boy into the water.",
+      evidence: "they would throw the beautiful boy into the water" }
+  - { function: func_false_claim, order: 5, actor: three_birds_false_sisters,
+      scene: "The sisters tell the king that the queen delivered a dog.",
+      evidence: "the Queen had been delivered of a dog" }
+  - { function: func_rescue, order: 6, actor: three_birds_fisherman,
+      scene: "The fisherman rescues the first boy from the water and raises him.",
+      evidence: "fished the little boy out again while he was still alive" }
+  - { function: func_repetition, order: 7, actor: three_birds_false_sisters,
+      scene: "The sisters repeat the water-casting and animal-birth lie with the second boy and the girl.",
+      evidence: "the false sisters likewise took and threw into the water" }
+  - { function: func_punishment, order: 8, actor: three_birds_king,
+      scene: "After the third false birth report, the king imprisons the queen for many years.",
+      evidence: "ordered his wife to be cast into prison" }
+  - { function: func_departure, order: 9, actor: three_birds_elder_son,
+      scene: "The eldest son, mocked as a foundling, sets out to find his father.",
+      evidence: "Go thy way, foundling" }
+  - { function: func_departure, order: 10, actor: three_birds_second_son,
+      scene: "The second son follows to seek his brother and meets the same water threshold.",
+      evidence: "the second boy set out to seek his brother" }
+  - { function: func_donor_test, order: 11, actor: three_birds_daughter,
+      scene: "The daughter greets the old woman kindly and receives passage, wand, and instructions.",
+      evidence: "May God help you with your fishing" }
+  - { function: func_difficult_task, order: 12, actor: three_birds_daughter,
+      scene: "The daughter must pass the dog, drop the wand, cross the castle, take the bird, and draw fountain water.",
+      evidence: "you must pass it silently and boldly" }
+  - { function: func_liquidation, order: 13, actor: three_birds_daughter,
+      scene: "The daughter retrieves the bird and water, finds her brothers, and releases the black dog into a prince.",
+      evidence: "it turned into a handsome prince" }
+  - { function: func_recognition, order: 14, actor: three_birds_truth_bird,
+      scene: "The truth bird sings that the three youths are the king's children and names the false sisters' crime.",
+      evidence: "These are thy children all" }
+  - { function: func_restoration, order: 15, actor: three_birds_daughter,
+      scene: "The daughter heals the imprisoned queen with the fountain water.",
+      evidence: "she became strong and healthy" }
+  - { function: func_punishment, order: 16, actor: three_birds_king,
+      scene: "The false sisters are burned and the daughter marries the released prince.",
+      evidence: "the two false sisters were burnt" }
+
+
+edges:
+
+  # Marriage wishes and envious birth substitution
+  - { from: three_birds_king, to: loc_three_birds_cow_mountain, label: HUNTS_NEAR,
+      evidence: "riding forth from his castle with his huntsmen" }
+  - { from: three_birds_queen, to: three_birds_king, label: DESIRES_AS_HUSBAND,
+      evidence: "If I do not get that one, I will have none." }
+  - { from: three_birds_king, to: three_birds_queen, label: MARRIES,
+      evidence: "Then she said, “Yes,”" }
+  - { from: three_birds_false_sisters, to: three_birds_queen, label: ENVY_FERTILITY_OF,
+      evidence: "But the two sisters had no children" }
+  - { from: three_birds_queen, to: three_birds_elder_son, label: BEARS,
+      evidence: "She had a little boy" }
+  - { from: three_birds_elder_son, to: obj_three_birds_red_star, label: BIRTH_MARKED_BY,
+      evidence: "brought a bright red star into the world with him" }
+  - { from: three_birds_false_sisters, to: three_birds_elder_son, label: THROWS_INTO_WATER,
+      evidence: "throw the beautiful boy into the water" }
+  - { from: three_birds_truth_bird, to: three_birds_elder_son, label: SINGS_TOMB_PROPHECY_FOR,
+      evidence: "Brave boy, is thy tomb" }
+  - { from: three_birds_false_sisters, to: three_birds_king, label: LIE_ABOUT_DOG_BIRTH,
+      evidence: "the Queen had been delivered of a dog" }
+  - { from: three_birds_king, to: law_birth_substitution_false_animal_accusation, label: ACCEPTS,
+      evidence: "What God does, is well done!" }
+  - { from: three_birds_fisherman, to: three_birds_elder_son, label: RESCUES_FROM_WATER,
+      evidence: "fished the little boy out again while he was still alive" }
+  - { from: three_birds_fisherman, to: three_birds_elder_son, label: RAISES,
+      evidence: "they reared him" }
+  - { from: three_birds_false_sisters, to: three_birds_second_son, label: THROWS_INTO_WATER,
+      evidence: "took and threw into the water" }
+  - { from: three_birds_fisherman, to: three_birds_second_son, label: RESCUES_FROM_WATER,
+      evidence: "fished this one also out of the water" }
+  - { from: three_birds_false_sisters, to: three_birds_daughter, label: THROWS_INTO_WATER,
+      evidence: "whom also the false sisters threw into the water" }
+  - { from: three_birds_false_sisters, to: three_birds_king, label: LIE_ABOUT_CAT_BIRTH,
+      evidence: "the Queen had been delivered of a cat" }
+  - { from: three_birds_king, to: three_birds_queen, label: IMPRISONS,
+      evidence: "ordered his wife to be cast into prison" }
+
+  # Sibling search and donor threshold
+  - { from: three_birds_elder_son, to: three_birds_fisherman, label: ASKS_ORIGIN_OF,
+      evidence: "asked the old fisherman if that was true" }
+  - { from: three_birds_elder_son, to: three_birds_king, label: SEEKS_FATHER,
+      evidence: "he would go forth and seek his father" }
+  - { from: three_birds_old_woman, to: three_birds_elder_son, label: CARRIES_OVER_WATER,
+      evidence: "took him up on her back and carried him through it" }
+  - { from: three_birds_second_son, to: three_birds_elder_son, label: SEEKS_BROTHER,
+      evidence: "set out to seek his brother" }
+  - { from: three_birds_daughter, to: three_birds_elder_son, label: SEEKS_BROTHER,
+      evidence: "go in search of her brothers" }
+  - { from: three_birds_daughter, to: three_birds_old_woman, label: GREETS_WITH_BLESSING,
+      evidence: "May God help you with your fishing" }
+  - { from: law_kindness_to_hidden_donors_rewarded, to: three_birds_daughter, label: REWARDS,
+      evidence: "she became quite friendly" }
+  - { from: three_birds_old_woman, to: obj_three_birds_wand, label: GIVES,
+      evidence: "gave her a wand" }
+  - { from: three_birds_old_woman, to: three_birds_daughter, label: INSTRUCTS,
+      evidence: "pass it silently and boldly" }
+  - { from: three_birds_daughter, to: loc_three_birds_high_castle, label: DROPS_WAND_AT_THRESHOLD,
+      evidence: "on the threshold of which you must let the wand fall" }
+  - { from: three_birds_daughter, to: obj_three_birds_truth_bird, label: TAKES_DOWN,
+      evidence: "a bird in a cage which you must take down" }
+  - { from: three_birds_daughter, to: obj_three_birds_fountain_water, label: TAKES,
+      evidence: "Take likewise a glass of water out of the fountain" }
+  - { from: three_birds_daughter, to: three_birds_black_dog_prince, label: STRIKES_WITH_WAND,
+      evidence: "strike him in the face with it" }
+  - { from: three_birds_black_dog_prince, to: three_birds_daughter, label: TRANSFORMS_FOR,
+      evidence: "turned into a handsome prince" }
+  - { from: three_birds_old_woman, to: state_cursed, label: RELEASED_FROM,
+      evidence: "for now she was freed" }
+
+  # Hunting recognition and restoration
+  - { from: three_birds_second_son, to: obj_three_birds_crossbow, label: TAKES_HUNTING,
+      evidence: "took his cross-bow and went a-hunting" }
+  - { from: three_birds_second_son, to: obj_three_birds_flute, label: MAKES_MUSIC_WITH,
+      evidence: "took his flute, and made music" }
+  - { from: three_birds_king, to: three_birds_second_son, label: HEARS,
+      evidence: "heard that and went thither" }
+  - { from: three_birds_king, to: three_birds_fisherman, label: QUESTIONS,
+      evidence: "questioned the fisherman" }
+  - { from: three_birds_truth_bird, to: three_birds_king, label: SINGS_LINEAGE_TO,
+      evidence: "O King of royal blood, These are thy children all" }
+  - { from: law_truth_bird_reveals_hidden_lineage, to: three_birds_king, label: REVEALS_TO,
+      evidence: "The sisters twain so false" }
+  - { from: three_birds_king, to: three_birds_queen, label: RELEASES_FROM_PRISON,
+      evidence: "ordered the prison to be opened and brought his wife out again" }
+  - { from: three_birds_daughter, to: three_birds_queen, label: HEALS_WITH_WATER,
+      evidence: "gave her some of the water of the fountain to drink" }
+  - { from: obj_three_birds_fountain_water, to: three_birds_queen, label: RESTORES_HEALTH,
+      evidence: "she became strong and healthy" }
+  - { from: three_birds_king, to: three_birds_false_sisters, label: BURNS,
+      evidence: "the two false sisters were burnt" }
+  - { from: three_birds_daughter, to: three_birds_black_dog_prince, label: MARRIES,
+      evidence: "the daughter married the prince" }

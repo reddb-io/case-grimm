@@ -1,0 +1,317 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-three-languages
+khm: 33
+atu: '671'
+atu_name: The Three Languages
+canonical_source: ../../2-silver/canonical/the-three-languages/canonical.txt
+title: The Three Languages
+
+
+entities:
+
+  characters:
+
+    three_languages_son:
+      name: The Count's Son
+      archetypes: [arc_abandoned_child]
+      species: sp_human
+      agency_modes: [agency_animal_language, agency_animal_aid, agency_endurance, agency_social_rank]
+      affects: [affect_grief, affect_shame]
+      traits: [stupid-by-reputation, animal-language-learner, spared-exile, treasure-releaser, pope-elect]
+      evidence: |
+        "Father, I have learnt what the dogs say when they bark."
+
+    three_languages_aged_count:
+      name: The Aged Count
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command]
+      affects: [affect_anger, affect_shame]
+      traits: [father, rank-holder, education-enforcer, disowner, murder-commander]
+      evidence: |
+        "This man is no longer my son, I drive him forth, and command
+        you to take him out into the forest, and kill him."
+
+    three_languages_masters:
+      name: The Three Celebrated Masters
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [teachers, sequential-instructors, dog-bird-frog-language-masters]
+      evidence: |
+        "I will give thee into the care of a celebrated master"
+
+    three_languages_servants:
+      name: The Count's People
+      species: sp_human
+      agency_modes: [agency_violence, agency_endurance]
+      traits: [executioners-by-command, pitying-spares, false-token-bearers]
+      evidence: |
+        "when they should have killed him, they could not do it for
+        pity, and let him go"
+
+    three_languages_deer:
+      name: The Deer Used for False Proof
+      species: sp_deer
+      agency_modes: [agency_endurance]
+      traits: [substitute-victim, eye-and-tongue-token]
+      evidence: |
+        "they cut the eyes and the tongue out of a deer"
+
+    three_languages_castle_lord:
+      name: The Lord of the Castle
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_fear]
+      traits: [tower-warning-host, adoption-promiser, district-liberation-beneficiary]
+      evidence: |
+        "the lord of the castle said he would adopt him as a son if he
+        accomplished it successfully."
+
+    three_languages_wild_dogs:
+      name: The Bewitched Wild Dogs
+      archetypes: [arc_animal_helper]
+      species: sp_dog
+      agency_modes: [agency_animal_aid, agency_speech, agency_violence]
+      existential_states: [state_cursed]
+      traits: [tower-guardians, treasure-bound, man-devourers, language-revealers]
+      evidence: |
+        "They are bewitched, and are obliged to watch over a great
+        treasure which is below in the tower"
+
+    three_languages_frogs:
+      name: The Prophetic Marsh Frogs
+      species: sp_frog
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_prophecy]
+      traits: [marsh-croakers, papacy-prophets, thought-provoking-speakers]
+      evidence: |
+        "he became aware of what they were saying, he grew very
+        thoughtful and sad."
+
+    three_languages_ecclesiastics:
+      name: The Roman Ecclesiastics
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      traits: [pope-electors, sign-interpreters, consecrators]
+      evidence: |
+        "The ecclesiastics recognized therein the token from above"
+
+    three_languages_doves:
+      name: The Two Snow-White Doves
+      archetypes: [arc_animal_helper]
+      species: sp_bird
+      being_type: being_divine
+      agency_modes: [agency_animal_aid, agency_speech]
+      speech_acts_performed: [speech_command]
+      traits: [divine-token, shoulder-perchers, papal-counsellors, mass-prompters]
+      evidence: |
+        "two snow-white doves flew on his shoulders and remained
+        sitting there."
+
+  magic_objects:
+
+    obj_three_languages_deer_token:
+      name: The Deer's Eyes and Tongue
+      object_kind: relic
+      attributes:
+        function: false proof that the son was killed
+      evidence: |
+        "that they might carry them to the old man as a token."
+
+    obj_three_languages_tower_food:
+      name: Food for the Wild Dogs
+      object_kind: food
+      attributes:
+        function: appeases the tower dogs while the son listens
+      evidence: |
+        "give me something that I can throw to them"
+
+    obj_three_languages_gold_chest:
+      name: The Chest Full of Gold
+      object_kind: treasure
+      attributes:
+        effect: releases bewitched dogs and frees the district
+      evidence: |
+        "brought a chest full of gold out with him."
+
+  locations:
+
+    loc_three_languages_count_castle:
+      name: The Aged Count's Castle in Switzerland
+      instance_of: loc_castle
+      evidence: |
+        "An aged count once lived in Switzerland"
+
+    loc_three_languages_school_towns:
+      name: The Three Strange Towns of Instruction
+      evidence: |
+        "The youth was sent into a strange town, and remained a whole
+        year with the master."
+
+    loc_three_languages_forest:
+      name: The Forest of Intended Execution
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "take him out into the forest, and kill him."
+
+    loc_three_languages_fortress:
+      name: The Fortress with the Old Tower
+      instance_of: loc_castle
+      evidence: |
+        "came to a fortress where he begged for a night's lodging."
+
+    loc_three_languages_old_tower:
+      name: The Old Tower Full of Wild Dogs
+      instance_of: loc_tower
+      evidence: |
+        "it is full of wild dogs, which bark and howl without stopping"
+
+    loc_three_languages_marsh:
+      name: The Marsh on the Road to Rome
+      instance_of: loc_marsh
+      evidence: |
+        "On the way he passed by a marsh, in which a number of frogs
+        were sitting croaking."
+
+    loc_three_languages_rome:
+      name: Rome
+      instance_of: loc_rome
+      evidence: |
+        "At last he arrived in Rome"
+
+    loc_three_languages_roman_church:
+      name: The Roman Church of Papal Election
+      instance_of: loc_church
+      evidence: |
+        "the young count entered into the church"
+
+
+classifications:
+
+  world_laws:
+    - law_animal_language_reveals_hidden_order
+    - law_curse_requires_counter_condition
+    - law_divine_token_confers_office
+
+  moral_regimes:
+    - moral_providential_election
+
+  agency_modes_dominant:
+    - agency_animal_language
+    - agency_animal_aid
+    - agency_social_rank
+    - agency_endurance
+
+  affects_driving:
+    - affect_anger
+    - affect_shame
+    - affect_fear
+    - affect_grief
+
+  symbol_numbers:
+    - num_3   # three languages, three masters, three years of learning
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: three_languages_son,
+      scene: "aged count has an only son thought stupid and unable to learn" }
+  - { function: func_departure, order: 2, actor: three_languages_son,
+      scene: "son is sent away for one year to learn from a celebrated master" }
+  - { function: func_magical_agent, order: 3, actor: three_languages_masters,
+      scene: "first master teaches him what dogs say when they bark" }
+  - { function: func_magical_agent, order: 4, actor: three_languages_masters,
+      scene: "second master teaches him what birds say" }
+  - { function: func_magical_agent, order: 5, actor: three_languages_masters,
+      scene: "third master teaches him what frogs croak" }
+  - { function: func_villainy, order: 6, actor: three_languages_aged_count,
+      scene: "father disowns him and commands servants to kill him in the forest" }
+  - { function: func_escape, order: 7, actor: three_languages_servants,
+      scene: "servants spare him and carry deer eyes and tongue as a false token" }
+  - { function: func_donor_test, order: 8, actor: three_languages_castle_lord,
+      scene: "castle lord allows him to risk a night in the dog-haunted tower" }
+  - { function: func_liquidation, order: 9, actor: three_languages_son,
+      scene: "son understands the dogs, removes the treasure, and frees the country" }
+  - { function: func_departure, order: 10, actor: three_languages_son,
+      scene: "son travels toward Rome and hears the frogs' prophecy in the marsh" }
+  - { function: func_recognition, order: 11, actor: three_languages_doves,
+      scene: "two snow-white doves perch on his shoulders as divine token" }
+  - { function: func_transfiguration, order: 12, actor: three_languages_ecclesiastics,
+      scene: "ecclesiastics recognize the sign, anoint him pope, and doves teach the mass" }
+
+
+edges:
+
+  # Failed education as hidden animal-language training
+  - { from: three_languages_aged_count, to: three_languages_son, label: SENDS_TO_LEARN,
+      evidence: "I will give thee into the care of a celebrated master" }
+  - { from: three_languages_masters, to: three_languages_son, label: TEACHES,
+      attributes: { language: dog },
+      evidence: "I have learnt what the dogs say when they bark." }
+  - { from: three_languages_masters, to: three_languages_son, label: TEACHES,
+      attributes: { language: bird },
+      evidence: "I have learnt what the birds say." }
+  - { from: three_languages_masters, to: three_languages_son, label: TEACHES,
+      attributes: { language: frog },
+      evidence: "I have this year learnt what the frogs croak." }
+  - { from: three_languages_son, to: law_animal_language_reveals_hidden_order, label: GAINS_ACCESS_TO,
+      evidence: "learnt what the dogs say... what the birds say... what the frogs croak." }
+
+  # Disowning and spared execution
+  - { from: three_languages_aged_count, to: three_languages_son, label: DISOWNS,
+      evidence: "This man is no longer my son" }
+  - { from: three_languages_aged_count, to: three_languages_servants, label: COMMANDS,
+      evidence: "command you to take him out into the forest, and kill him." }
+  - { from: three_languages_servants, to: three_languages_son, label: SPARES,
+      evidence: "they could not do it for pity, and let him go" }
+  - { from: three_languages_servants, to: three_languages_deer, label: MUTILATES,
+      evidence: "they cut the eyes and the tongue out of a deer" }
+  - { from: three_languages_servants, to: obj_three_languages_deer_token, label: CARRY_AS_TOKEN,
+      evidence: "that they might carry them to the old man as a token." }
+
+  # Dog tower and treasure release
+  - { from: three_languages_castle_lord, to: three_languages_son, label: WARNS,
+      evidence: "it is at the peril of thy life" }
+  - { from: three_languages_castle_lord, to: obj_three_languages_tower_food, label: GIVES,
+      evidence: "they gave him some food for the wild animals" }
+  - { from: three_languages_son, to: loc_three_languages_old_tower, label: ENTERS,
+      evidence: "led him down to the tower." }
+  - { from: three_languages_son, to: three_languages_wild_dogs, label: FEEDS,
+      evidence: "ate what he set before them" }
+  - { from: three_languages_son, to: three_languages_wild_dogs, label: UNDERSTANDS,
+      evidence: "The dogs have revealed to me, in their own language" }
+  - { from: three_languages_wild_dogs, to: obj_three_languages_gold_chest, label: GUARD,
+      evidence: "obliged to watch over a great treasure which is below in the tower" }
+  - { from: three_languages_son, to: obj_three_languages_gold_chest, label: REMOVES,
+      evidence: "brought a chest full of gold out with him." }
+  - { from: obj_three_languages_gold_chest, to: three_languages_wild_dogs, label: RELEASES,
+      evidence: "The howling of the wild dogs was henceforth heard no more; they had disappeared" }
+  - { from: three_languages_castle_lord, to: three_languages_son, label: PROMISES_ADOPTION_TO,
+      evidence: "would adopt him as a son if he accomplished it successfully." }
+
+  # Frog prophecy and papal election
+  - { from: three_languages_son, to: loc_three_languages_rome, label: TRAVELS_TO,
+      evidence: "he would travel to Rome." }
+  - { from: three_languages_son, to: three_languages_frogs, label: UNDERSTANDS,
+      evidence: "he became aware of what they were saying" }
+  - { from: three_languages_frogs, to: three_languages_son, label: PROPHESY_TO,
+      evidence: "that he was to be his Holiness the Pope." }
+  - { from: three_languages_doves, to: three_languages_son, label: PERCH_ON,
+      evidence: "two snow-white doves flew on his shoulders" }
+  - { from: three_languages_doves, to: law_divine_token_confers_office, label: MANIFEST,
+      evidence: "The ecclesiastics recognized therein the token from above" }
+  - { from: three_languages_ecclesiastics, to: three_languages_son, label: ELECT,
+      evidence: "asked him on the spot if he would be pope." }
+  - { from: three_languages_doves, to: three_languages_son, label: COUNSEL,
+      evidence: "the doves counselled him to do it" }
+  - { from: three_languages_ecclesiastics, to: three_languages_son, label: CONSECRATE,
+      evidence: "Then was he anointed and consecrated" }
+  - { from: three_languages_doves, to: three_languages_son, label: DICTATE_MASS_TO,
+      evidence: "said it all in his ear." }
+  - { from: three_languages_son, to: moral_providential_election, label: EMBODIES,
+      evidence: "thus was fulfilled what he had heard from the frogs" }

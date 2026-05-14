@@ -1,0 +1,51 @@
+slug: briar-rose
+khm: 50
+atu: '410'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg2591-grimm-taylor
+  weight: supplementary
+- book: pg11027-grimm-gruelle
+  weight: supplementary
+- book: pg52521-grimm-olcott
+  weight: supplementary
+- book: pg22555-grimm-eeden-dutch
+  weight: supplementary
+sections:
+- id: animal-that-announces-the-birth
+  title: animal that announces the birth
+  canonical:
+    kept: pg5314-grimm-hunt + pg52521-grimm-olcott + pg22555-grimm-eeden-dutch
+    type: conflict
+    rationale: Three of five sources use frog; final KHM 1857 text uses *Frosch*. Hunt is canonical voice.
+  branches:
+  - type: fork
+    from: pg2591-grimm-taylor
+    description: fish (rescued by queen from riverbank) replaces frog as birth-announcer
+    text: But one day as the queen was walking by the side of the river, at the bottom of the garden, she saw a poor little fish, that had thrown itself out of the water, and lay gasping and nearly dead on the bank. Then the queen took pity on the little fish, and threw it back again into the river; and before it swam away it lifted its head out of the water and said, “I know what your wish is, and it shall be fulfilled, in return for your kindness to me—you will soon have a daughter.”
+    consequences:
+    - 'introduces kindness-reciprocity motif: queen''s compassion → supernatural blessing'
+    - activates law_kindness_invokes_hidden_aid as a tale-level world law (absent in canonical)
+    - queen's character gains agency_virtue (rescuing weak creature) before pregnancy
+    - 'announcer species shifts: amphibian-liminal (frog) → fish (water-creature, often soul-symbol in folklore)'
+    plot_breaks: none — no later scene references the announcer's species or the rescue.
+- id: thirteen-wise-women
+  title: thirteen wise women
+  canonical:
+    kept: pg5314-grimm-hunt
+    type: terminological
+    rationale: Hunt and Olcott (English) plus Dutch ('wijze vrouwen') agree. 'Fairies' (Taylor/Gruelle) modernises and softens the term, losing the occult older sense.
+- id: sleep-tableau-butler
+  title: sleep tableau — butler
+  canonical:
+    kept: pg5314-grimm-hunt + pg2591-grimm-taylor
+    type: enrichment
+    rationale: Taylor's butler-tasting-ale is a vivid frozen-action detail consistent with the universal-stillness motif. Hunt omits it; restoring it enriches the tableau without changing facts. The butler also reappears in §7 awakening, mirroring the structure.
+- id: awakening-cascade
+  title: awakening cascade
+  canonical:
+    kept: pg5314-grimm-hunt + pg2591-grimm-taylor
+    type: enrichment
+    rationale: Structural consistency — if the butler slept in §5, he must wake here.

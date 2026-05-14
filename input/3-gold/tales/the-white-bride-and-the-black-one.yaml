@@ -1,0 +1,465 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-white-bride-and-the-black-one
+khm: 135
+atu: '403'
+atu_name: The Three Little Men in the Forest
+canonical_source: ../../2-silver/canonical/the-white-bride-and-the-black-one/canonical.txt
+title: The White Bride and the Black One
+
+
+entities:
+
+  characters:
+
+    white_bride_lord:
+      name: The Lord in the Form of a Poor Man
+      archetypes: [arc_supernatural_donor]
+      being_type: being_divine
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_command, speech_wish]
+      traits: [poor-man-disguise, path-asker, blessing-donor, curse-giver]
+      evidence: |
+        the Lord came walking towards them in the form of a poor man
+
+    white_bride_stepdaughter:
+      name: The White Bride
+      archetypes: [arc_oppressed_maiden]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_object_mediation]
+      existential_states: [state_hidden_identity]
+      speech_acts_performed: [speech_request, speech_wish, speech_testimony]
+      affects: [affect_love, affect_grief]
+      traits: [kind-guide, blessed-beauty, inexhaustible-purse-bearer, rightful-bride, betrayed-sister, restored-queen]
+      evidence: |
+        the step-daughter was white and beautiful
+
+    white_bride_stepmother:
+      name: The Old Witch Stepmother
+      archetypes: [arc_cruel_stepmother]
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_cunning, agency_speech, agency_violence, agency_social_rank]
+      speech_acts_performed: [speech_lie, speech_command]
+      affects: [affect_envy, affect_anger]
+      traits: [unkind-path-refuser, blackened-witch, coachman-blinder, bride-deceiver, bridge-murderer, self-sentencing-criminal]
+      evidence: |
+        When the step-mother came home with her daughter
+
+    white_bride_black_daughter:
+      name: The Black Maiden / False Bride
+      archetypes: [arc_false_bride, arc_envious_kin_persecutor]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_social_rank]
+      existential_states: [state_deceived]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_envy, affect_anger]
+      traits: [unkind-daughter, blackened-ugly, jealous-rival, golden-dress-usurper, false-queen]
+      evidence: |
+        the black maiden was jealous of her good fortune
+
+    white_bride_reginer:
+      name: Reginer the Brother-Coachman
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_object_mediation]
+      existential_states: [state_blind, state_deceived, state_imprisoned]
+      affects: [affect_love, affect_grief]
+      traits: [loving-brother, portrait-painter, royal-coachman, half-blinded-driver, snake-pit-prisoner, rewarded-faithful-kin]
+      evidence: |
+        had a brother called Reginer, whom she loved much
+
+    white_bride_king:
+      name: The Widowed King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence, agency_object_mediation]
+      speech_acts_performed: [speech_command, speech_request]
+      affects: [affect_grief, affect_love_at_first_sight, affect_anger, affect_joy]
+      traits: [widower, portrait-lover, deceived-bridegroom, duck-restorer, self-sentence-judge, true-bride-husband]
+      evidence: |
+        the King whom he served, had just lost his wife
+
+    white_bride_court_attendants:
+      name: The Jealous Court Attendants
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      affects: [affect_envy]
+      traits: [portrait-informers, coachman-jealous]
+      evidence: |
+        attendants about the court, however, remarked
+
+    white_bride_duck:
+      name: The Snow-White Duck Form of the Bride
+      species: sp_duck
+      agency_modes: [agency_speech, agency_endurance]
+      existential_states: [state_liminal_dead, state_transformed]
+      speech_acts_performed: [speech_request, speech_testimony]
+      affects: [affect_grief]
+      traits: [water-emergent-bride, kitchen-visitor, three-night-questioner, hearth-warmed-witness, neck-cut-restored]
+      evidence: |
+        a snow-white duck arose out of the mirror-smooth water
+
+    white_bride_kitchen_boy:
+      name: The Kitchen-Boy / Scullery-Boy
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      speech_acts_performed: [speech_testimony]
+      traits: [hearth-lighter, duck-witness, king-informer]
+      evidence: |
+        said to the kitchen-boy
+
+    white_bride_snakes:
+      name: The Adders and Snakes in the Pit
+      species: sp_snake
+      agency_modes: [agency_violence]
+      traits: [punitive-pit-creatures, reginer-prison-danger]
+      evidence: |
+        adders and nests of snakes
+
+  magic_objects:
+
+    obj_white_bride_inexhaustible_purse:
+      name: The Never-Empty Purse
+      object_kind: treasure
+      attributes:
+        granted_by: white_bride_lord
+        function: second divine wish granted to the stepdaughter
+      evidence: |
+        a purse of money which would never grow empty
+
+    obj_white_bride_portrait:
+      name: Reginer's Portrait of His Sister
+      instance_of: obj_dangerous_portrait
+      object_kind: token
+      attributes:
+        maker: white_bride_reginer
+        function: causes the widowed king to seek the white bride
+      evidence: |
+        he painted his sister and hung up the picture in his room
+
+    obj_white_bride_carriage:
+      name: The Royal Carriage and Horses
+      object_kind: tool
+      attributes:
+        function: bridal-fetching vehicle and murder-stage
+      evidence: |
+        gave him a carriage and horses
+
+    obj_white_bride_golden_dress:
+      name: The Golden Dress and Hood
+      object_kind: garment
+      attributes:
+        function: transferred from the true bride to the false bride through misheard commands
+      evidence: |
+        take off your golden dress and give it to your sister
+
+    obj_white_bride_grey_gown:
+      name: The Shabby Grey Gown
+      object_kind: garment
+      attributes:
+        function: degradation garment given to the true bride before murder
+      evidence: |
+        a shabby grey gown
+
+    obj_white_bride_sword:
+      name: The King's Sword
+      object_kind: weapon
+      attributes:
+        function: cuts the duck's neck and releases the bride's human form
+      evidence: |
+        he took his sword and cut through her neck
+
+    obj_white_bride_nail_barrel:
+      name: The Barrel with Nails
+      object_kind: material
+      attributes:
+        function: self-sentenced punishment for the witch and false bride
+      evidence: |
+        a barrel with nails
+
+  locations:
+
+    loc_white_bride_unenclosed_land:
+      name: The Unenclosed Fodder Land
+      instance_of: loc_field
+      evidence: |
+        going about the unenclosed land
+
+    loc_white_bride_village:
+      name: The Village
+      instance_of: loc_village
+      evidence: |
+        the way into the village
+
+    loc_white_bride_king_palace:
+      name: The King's Palace
+      instance_of: loc_castle
+      evidence: |
+        he, however, dwelt in the King’s palace
+
+    loc_white_bride_carriage_bridge:
+      name: The Bridge over Deep Water
+      instance_of: loc_bridge
+      threshold_type: threshold_river
+      evidence: |
+        a bridge, which crossed deep water
+
+    loc_white_bride_river:
+      name: The River of the Snow-White Duck
+      instance_of: loc_river
+      threshold_type: threshold_river
+      evidence: |
+        swam down the river
+
+    loc_white_bride_kitchen_hearth:
+      name: The Kitchen Hearth
+      instance_of: loc_hearth
+      evidence: |
+        lighted a fire on the hearth
+
+    loc_white_bride_sink:
+      name: The Sink and Gutter Passage
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        swam forth by the sink
+
+    loc_white_bride_snake_pit:
+      name: The Pit of Adders and Snakes
+      instance_of: loc_dungeon
+      evidence: |
+        a pit which was full of adders and nests of snakes
+
+    loc_white_bride_punishment_road:
+      name: The Road of the Nail-Barrel Punishment
+      instance_of: loc_road
+      evidence: |
+        sent all over the world
+
+
+classifications:
+
+  world_laws:
+    - law_kindness_to_hidden_donors_rewarded
+    - law_drowned_bride_returns_as_white_duck
+    - law_self_sentence_punishes_false_bride
+    - law_true_fit_reveals_identity
+
+  moral_regimes:
+    - moral_kindness_rewarded
+    - moral_retributive
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+    - agency_social_rank
+    - agency_violence
+    - agency_object_mediation
+
+  affects_driving:
+    - affect_envy
+    - affect_grief
+    - affect_love_at_first_sight
+    - affect_anger
+    - affect_joy
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_river
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_donor_sequence
+    order: 1
+    actor: white_bride_lord
+    beneficiary: white_bride_stepdaughter
+    scene: "the Lord appears as a poor man, tests the three women, curses the unkind mother and daughter, and grants the kind stepdaughter three wishes"
+    evidence: "Choose three things for thyself"
+
+  - function: func_transfiguration
+    order: 2
+    actor: white_bride_lord
+    beneficiary: white_bride_stepdaughter
+    scene: "the stepdaughter becomes white and fair, receives an inexhaustible purse, and chooses heaven after death"
+    evidence: "white and fair as day"
+
+  - function: func_mediation
+    order: 3
+    actor: white_bride_reginer
+    scene: "Reginer paints his sister's likeness and the portrait reaches the widowed king"
+    evidence: "he painted his sister"
+
+  - function: func_departure
+    order: 4
+    actor: white_bride_reginer
+    scene: "the king sends Reginer with carriage, horses, and gold garments to fetch his chosen bride"
+    evidence: "sent him forth to fetch his chosen bride"
+
+  - function: func_trickery
+    order: 5
+    actor: white_bride_stepmother
+    victim: white_bride_reginer
+    scene: "the witch half-blinds Reginer and half-deafens the bride to enable garment substitution"
+    evidence: "he was half-blind"
+
+  - function: func_substitution
+    order: 6
+    actor: white_bride_black_daughter
+    victim: white_bride_stepdaughter
+    scene: "the true bride gives golden dress and hood to the black maiden because the witch falsifies Reginer's words"
+    evidence: "give it to your sister"
+
+  - function: func_villainy
+    order: 7
+    actor: white_bride_stepmother
+    victim: white_bride_stepdaughter
+    scene: "at the bridge, the witch and daughter push the white bride into deep water"
+    evidence: "they both pushed her out"
+
+  - function: func_transformation
+    order: 8
+    actor: white_bride_stepdaughter
+    scene: "as the bride sinks, a snow-white duck rises and swims down the river"
+    evidence: "a snow-white duck arose"
+
+  - function: func_false_claims
+    order: 9
+    actor: white_bride_black_daughter
+    scene: "Reginer unknowingly presents the black maiden as his sister and the witch secures the false marriage"
+    evidence: "thought she really was so"
+
+  - function: func_recurring_testimony
+    order: 10
+    actor: white_bride_duck
+    scene: "for three nights the duck comes to the kitchen, warms herself, and asks after Reginer and the black witch"
+    evidence: "The next night she came again"
+
+  - function: func_recognition
+    order: 11
+    actor: white_bride_king
+    beneficiary: white_bride_stepdaughter
+    scene: "the king sees the duck, cuts through her neck, and restores the beautiful maiden"
+    evidence: "she changed into a most beautiful maiden"
+
+  - function: func_rescue
+    order: 12
+    actor: white_bride_king
+    beneficiary: white_bride_reginer
+    scene: "the true bride first asks that Reginer be brought out of the snake pit"
+    evidence: "her first request was that her brother should be brought forth"
+
+  - function: func_punishment
+    order: 13
+    actor: white_bride_stepmother
+    victim: white_bride_stepmother
+    scene: "the witch unknowingly pronounces the nail-barrel punishment applied to herself and her daughter"
+    evidence: "She deserves to be stripped naked"
+
+  - function: func_wedding
+    order: 14
+    actor: white_bride_king
+    beneficiary: white_bride_stepdaughter
+    scene: "the king marries the white bride and rewards Reginer"
+    evidence: "married the white and beautiful bride"
+
+
+edges:
+
+  - { from: white_bride_lord, to: white_bride_stepmother, label: TESTS,
+      evidence: "Which is the way into the village?" }
+  - { from: white_bride_stepmother, to: white_bride_lord, label: REFUSES_GUIDANCE_TO,
+      evidence: "seek it for yourself" }
+  - { from: white_bride_black_daughter, to: white_bride_lord, label: REFUSES_GUIDANCE_TO,
+      evidence: "take a guide with you" }
+  - { from: white_bride_stepdaughter, to: white_bride_lord, label: GUIDES,
+      evidence: "I will take you there" }
+  - { from: white_bride_lord, to: white_bride_stepmother, label: CURSES_BLACKNESS_ON,
+      evidence: "become as black as night and as ugly as sin" }
+  - { from: white_bride_lord, to: white_bride_stepdaughter, label: GRANTS_THREE_WISHES_TO,
+      evidence: "Choose three things for thyself" }
+  - { from: white_bride_lord, to: obj_white_bride_inexhaustible_purse, label: GIVES,
+      evidence: "That the Lord gave her also" }
+  - { from: white_bride_stepmother, to: white_bride_stepdaughter, label: ENVIES_AND_PLOTS_AGAINST,
+      evidence: "thought of nothing else but how they could do her an injury" }
+  - { from: white_bride_reginer, to: obj_white_bride_portrait, label: PAINTS,
+      evidence: "he painted his sister" }
+  - { from: white_bride_reginer, to: obj_white_bride_portrait, label: HONORS_DAILY,
+      evidence: "stood before the picture" }
+  - { from: white_bride_court_attendants, to: white_bride_reginer, label: INFORM_AGAINST,
+      evidence: "they informed the King" }
+  - { from: white_bride_king, to: obj_white_bride_portrait, label: FALLS_IN_LOVE_WITH,
+      evidence: "fell mortally in love with it" }
+  - { from: white_bride_king, to: white_bride_reginer, label: SENDS_TO_FETCH_BRIDE,
+      evidence: "sent him forth to fetch his chosen bride" }
+  - { from: white_bride_black_daughter, to: white_bride_stepdaughter, label: ENVIES,
+      evidence: "jealous of her good fortune" }
+  - { from: white_bride_stepmother, to: white_bride_reginer, label: HALF_BLINDS,
+      evidence: "he was half-blind" }
+  - { from: white_bride_stepmother, to: white_bride_stepdaughter, label: HALF_DEAFENS,
+      evidence: "she stopped the ears of the white maiden" }
+  - { from: white_bride_reginer, to: white_bride_stepdaughter, label: PROTECTIVELY_CALLS_TO,
+      evidence: "Cover thee well, my sister dear" }
+  - { from: white_bride_stepmother, to: white_bride_stepdaughter, label: MISREPORTS_SPEECH_TO,
+      evidence: "he says that you ought to take off your golden dress" }
+  - { from: white_bride_stepdaughter, to: obj_white_bride_golden_dress, label: GIVES_UP,
+      evidence: "Then she took it off" }
+  - { from: white_bride_black_daughter, to: obj_white_bride_golden_dress, label: WEARS_USURPED,
+      evidence: "put it on the black maiden" }
+  - { from: white_bride_black_daughter, to: obj_white_bride_grey_gown, label: GIVES_IN_EXCHANGE,
+      evidence: "gave her in exchange for it a shabby grey gown" }
+  - { from: white_bride_stepmother, to: loc_white_bride_carriage_bridge, label: STAGES_MURDER_AT,
+      evidence: "They were, however, just on a bridge" }
+  - { from: white_bride_stepmother, to: white_bride_stepdaughter, label: PUSHES_INTO_WATER,
+      evidence: "they both pushed her out" }
+  - { from: white_bride_black_daughter, to: white_bride_stepdaughter, label: PUSHES_INTO_WATER,
+      evidence: "fell into the middle of the water" }
+  - { from: white_bride_stepdaughter, to: white_bride_duck, label: TRANSFORMS_INTO,
+      evidence: "a snow-white duck arose" }
+  - { from: white_bride_duck, to: loc_white_bride_river, label: SWIMS_DOWN,
+      evidence: "swam down the river" }
+  - { from: white_bride_reginer, to: white_bride_black_daughter, label: PRESENTS_AS_SISTER,
+      evidence: "thought she really was so" }
+  - { from: white_bride_king, to: white_bride_reginer, label: IMPRISONS_IN_SNAKE_PIT,
+      evidence: "ordered the coachman to be thrown into a pit" }
+  - { from: white_bride_stepmother, to: white_bride_king, label: DECEIVES_EYES_OF,
+      evidence: "deceive his eyes by her arts" }
+  - { from: white_bride_king, to: white_bride_black_daughter, label: MARRIES_FALSE_BRIDE,
+      evidence: "he really married her" }
+  - { from: white_bride_duck, to: white_bride_kitchen_boy, label: REQUESTS_FIRE_FROM,
+      evidence: "Boy, light a fire" }
+  - { from: white_bride_kitchen_boy, to: loc_white_bride_kitchen_hearth, label: LIGHTS_FIRE_AT,
+      evidence: "lighted a fire on the hearth" }
+  - { from: white_bride_duck, to: white_bride_reginer, label: ASKS_AFTER,
+      evidence: "What is my brother Reginer doing?" }
+  - { from: white_bride_duck, to: white_bride_black_daughter, label: ASKS_AFTER_FALSE_BRIDE,
+      evidence: "What is the black witch doing in the house?" }
+  - { from: white_bride_kitchen_boy, to: white_bride_king, label: REPORTS_DUCK_TO,
+      evidence: "went to the King and discovered all to him" }
+  - { from: white_bride_king, to: obj_white_bride_sword, label: USES_TO_RESTORE,
+      evidence: "took his sword and cut through her neck" }
+  - { from: white_bride_duck, to: white_bride_stepdaughter, label: RESTORES_AS,
+      evidence: "changed into a most beautiful maiden" }
+  - { from: white_bride_stepdaughter, to: white_bride_king, label: TESTIFIES_BETRAYAL_TO,
+      evidence: "betrayed by cunning and falsehood" }
+  - { from: white_bride_stepdaughter, to: white_bride_reginer, label: REQUESTS_RELEASE_OF,
+      evidence: "her brother should be brought forth" }
+  - { from: white_bride_king, to: white_bride_reginer, label: RESCUES,
+      evidence: "brought forth from the pit of snakes" }
+  - { from: white_bride_king, to: white_bride_stepmother, label: ASKS_SELF_SENTENCE_OF,
+      evidence: "What does she deserve who does this and that?" }
+  - { from: white_bride_stepmother, to: obj_white_bride_nail_barrel, label: SENTENCES_HERSELF_TO,
+      evidence: "put into a barrel with nails" }
+  - { from: obj_white_bride_nail_barrel, to: white_bride_stepmother, label: PUNISHES,
+      evidence: "All of which was done to her" }
+  - { from: obj_white_bride_nail_barrel, to: white_bride_black_daughter, label: PUNISHES,
+      evidence: "and to her black daughter" }
+  - { from: white_bride_king, to: white_bride_stepdaughter, label: MARRIES_TRUE_BRIDE,
+      evidence: "married the white and beautiful bride" }
+  - { from: white_bride_king, to: white_bride_reginer, label: REWARDS,
+      evidence: "made him a rich and distinguished man" }
+  - { from: white_bride_duck, to: law_drowned_bride_returns_as_white_duck, label: REALIZES,
+      evidence: "The next night she came again and put the same questions" }

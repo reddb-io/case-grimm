@@ -1,0 +1,287 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: clever-elsie
+khm: 34
+atu: '1450'
+atu_name: Clever Elsie
+canonical_source: ../../2-silver/canonical/clever-elsie/canonical.txt
+title: Clever Elsie
+
+
+entities:
+
+  characters:
+
+    clever_elsie:
+      name: Clever Elsie
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor, agency_endurance]
+      existential_states: [state_self_unrecognized, state_disguised]
+      affects: [affect_fear, affect_grief, affect_shame]
+      traits: [forethought-fool, cellar-lamenter, failed-field-worker, self-doubter, vanished-wife]
+      evidence: |
+        "Then she was alarmed, and became uncertain whether she really
+        was Clever Elsie or not, and said, 'Is it I, or is it not I?'"
+
+    clever_elsie_hans:
+      name: Hans
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_domestic_labor]
+      speech_acts_performed: [speech_promise, speech_command, speech_lie]
+      traits: [distant-suitor, wisdom-tester, husband, bell-net-trickster, identity-denier]
+      evidence: |
+        "'Yes,' answered Hans, 'she is within.'"
+
+    clever_elsie_father:
+      name: Elsie's Father
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      affects: [affect_grief]
+      traits: [marriage-arranger, daughter-praiser, cellar-lamenter]
+      evidence: |
+        "'Oh,' said the father, 'she's sharp enough'"
+
+    clever_elsie_mother:
+      name: Elsie's Mother
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_command]
+      affects: [affect_grief]
+      traits: [beer-fetch-commander, daughter-praiser, cellar-lamenter]
+      evidence: |
+        "Elsie, go into the cellar and fetch some beer."
+
+    clever_elsie_maid:
+      name: The Servant Maid
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      affects: [affect_grief]
+      traits: [cellar-scout, lament-contagion-participant]
+      evidence: |
+        "What a clever Elsie we have! and sat down beside her and began
+        loudly to weep"
+
+    clever_elsie_boy:
+      name: The Servant Boy
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      affects: [affect_grief]
+      traits: [cellar-scout, lament-contagion-participant]
+      evidence: |
+        "Then said the boy, 'What a clever Elsie we have!' and sat down
+        by her"
+
+    clever_elsie_imagined_child:
+      name: Elsie's Imagined Future Child
+      species: sp_human
+      traits: [hypothetical, future-son, imagined-pickaxe-victim]
+      evidence: |
+        "If I get Hans, and we have a child, and he grows big... the
+        pick-axe will fall on his head and kill him."
+
+    clever_elsie_villagers:
+      name: The Village Neighbours
+      species: sp_human
+      agency_modes: [agency_speech]
+      affects: [affect_fear]
+      traits: [door-closers, bell-frightened, non-recognizers]
+      evidence: |
+        "when the people heard the jingling of the bells they would not
+        open it"
+
+  magic_objects:
+
+    obj_clever_elsie_pitcher:
+      name: The Beer Pitcher
+      object_kind: tool
+      attributes:
+        task: fetch beer from the cellar
+      evidence: |
+        "Clever Elsie took the pitcher from the wall"
+
+    obj_clever_elsie_beer_barrel:
+      name: The Cellar Beer Barrel
+      object_kind: architecture
+      attributes:
+        function: barrel Elsie taps while foreseeing disaster
+      evidence: |
+        "set it before the barrel"
+
+    obj_clever_elsie_pickaxe:
+      name: The Pickaxe above the Barrel
+      object_kind: tool
+      attributes:
+        imagined_hazard: future child killed while drawing beer
+      evidence: |
+        "saw a pick-axe exactly above her"
+
+    obj_clever_elsie_broth:
+      name: Elsie's Good Broth
+      object_kind: food
+      attributes:
+        function: eaten before the field labour can begin
+      evidence: |
+        "she cooked herself some good broth and took it into the field
+        with her."
+
+    obj_clever_elsie_corn:
+      name: The Uncut Corn
+      object_kind: material
+      attributes:
+        task: cut for bread
+      evidence: |
+        "go into the field and cut the corn that we may have some bread."
+
+    obj_clever_elsie_bell_net:
+      name: The Fowler's Net with Little Bells
+      object_kind: instrument
+      attributes:
+        effect: noisy surface disguise that causes self-unrecognition
+      evidence: |
+        "brought a fowler's net with little bells and hung it round
+        about her"
+
+  locations:
+
+    loc_clever_elsie_house:
+      name: Elsie's Household
+      instance_of: loc_house
+      evidence: |
+        "When they were sitting at dinner and had eaten"
+
+    loc_clever_elsie_cellar:
+      name: The Beer Cellar
+      instance_of: loc_cellar
+      evidence: |
+        "go into the cellar and fetch some beer"
+
+    loc_clever_elsie_field:
+      name: The Corn Field
+      instance_of: loc_field
+      evidence: |
+        "go into the field and cut the corn"
+
+    loc_clever_elsie_village:
+      name: The Village of Closed Doors
+      evidence: |
+        "Then she ran out of the village, and no one has seen her since."
+
+
+classifications:
+
+  world_laws:
+    - law_hypothetical_fear_contagion
+    - law_disguise_alters_social_reality
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_domestic_labor
+    - agency_cunning
+
+  affects_driving:
+    - affect_fear
+    - affect_grief
+    - affect_shame
+
+  symbol_numbers: []
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: clever_elsie_father,
+      scene: "parents seek a husband for grown Clever Elsie and praise her wisdom" }
+  - { function: func_donor_test, order: 2, actor: clever_elsie_hans,
+      scene: "Hans will marry Elsie only if she is really wise" }
+  - { function: func_interdiction, order: 3, actor: clever_elsie_mother,
+      scene: "mother sends Elsie to the cellar to fetch beer" }
+  - { function: func_mediation, order: 4, actor: clever_elsie,
+      scene: "Elsie sees the pickaxe and imagines a future child killed by it" }
+  - { function: func_chain_reaction, order: 5, actor: clever_elsie_maid,
+      scene: "maid hears the hypothetical disaster and joins Elsie's weeping" }
+  - { function: func_chain_reaction, order: 6, actor: clever_elsie_boy,
+      scene: "boy hears the same imagined future and joins the lament" }
+  - { function: func_chain_reaction, order: 7, actor: clever_elsie_mother,
+      scene: "mother descends, accepts the reason, and weeps too" }
+  - { function: func_chain_reaction, order: 8, actor: clever_elsie_father,
+      scene: "father descends and joins the cellar lament" }
+  - { function: func_wedding, order: 9, actor: clever_elsie_hans,
+      scene: "Hans accepts the lament as sufficient wisdom and marries Elsie" }
+  - { function: func_interdiction, order: 10, actor: clever_elsie_hans,
+      scene: "Hans tells Elsie to cut corn in the field for bread" }
+  - { function: func_violation, order: 11, actor: clever_elsie,
+      scene: "Elsie eats broth, sleeps, and cuts no corn" }
+  - { function: func_trickery, order: 12, actor: clever_elsie_hans,
+      scene: "Hans hangs a bell-net around sleeping Elsie and locks the house" }
+  - { function: func_recognition_failure, order: 13, actor: clever_elsie,
+      scene: "Elsie wakes jingling and cannot decide whether she is herself" }
+  - { function: func_exile, order: 14, actor: clever_elsie,
+      scene: "Hans says Elsie is inside; neighbours will not open; Elsie leaves the village forever" }
+
+
+edges:
+
+  # Courtship setup
+  - { from: clever_elsie_father, to: clever_elsie, label: PRAISES,
+      evidence: "she's sharp enough" }
+  - { from: clever_elsie_mother, to: clever_elsie, label: PRAISES,
+      evidence: "she can see the wind coming up the street, and hear the flies coughing." }
+  - { from: clever_elsie_hans, to: clever_elsie, label: TESTS_WISDOM_OF,
+      evidence: "if she is not really wise, I won't have her." }
+  - { from: clever_elsie_mother, to: clever_elsie, label: COMMANDS,
+      evidence: "Elsie, go into the cellar and fetch some beer." }
+  - { from: clever_elsie, to: obj_clever_elsie_pitcher, label: TAKES,
+      evidence: "took the pitcher from the wall" }
+
+  # Hypothetical disaster and contagious lament
+  - { from: clever_elsie, to: obj_clever_elsie_pickaxe, label: NOTICES,
+      evidence: "saw a pick-axe exactly above her" }
+  - { from: clever_elsie, to: clever_elsie_imagined_child, label: IMAGINES_DEATH_OF,
+      evidence: "the pick-axe will fall on his head and kill him." }
+  - { from: clever_elsie, to: law_hypothetical_fear_contagion, label: INITIATES,
+      evidence: "Then she sat and wept and screamed with all the strength of her body" }
+  - { from: clever_elsie_maid, to: clever_elsie, label: JOINS_LAMENT_AFTER,
+      evidence: "sat down beside her and began loudly to weep" }
+  - { from: clever_elsie_boy, to: clever_elsie_maid, label: JOINS_LAMENT_AFTER,
+      evidence: "and likewise began to howl loudly." }
+  - { from: clever_elsie_mother, to: clever_elsie_boy, label: JOINS_LAMENT_AFTER,
+      evidence: "sat down and wept with them." }
+  - { from: clever_elsie_father, to: clever_elsie_mother, label: JOINS_LAMENT_AFTER,
+      evidence: "sat down, and likewise wept with them." }
+  - { from: clever_elsie_hans, to: clever_elsie, label: MARRIES,
+      evidence: "I will have thee... and married her." }
+
+  # Field labour failure
+  - { from: clever_elsie_hans, to: clever_elsie, label: ASSIGNS_TASK_TO,
+      attributes: { task: cut_corn_for_bread },
+      evidence: "go into the field and cut the corn that we may have some bread." }
+  - { from: clever_elsie, to: obj_clever_elsie_broth, label: EATS,
+      evidence: "Oh, I will eat first." }
+  - { from: clever_elsie, to: obj_clever_elsie_corn, label: FAILS_TO_CUT,
+      evidence: "nothing was cut, and she was lying among the corn asleep." }
+  - { from: clever_elsie, to: loc_clever_elsie_field, label: SLEEPS_IN,
+      evidence: "Then she lay down among the corn and fell asleep." }
+
+  # Bell-net identity collapse
+  - { from: clever_elsie_hans, to: obj_clever_elsie_bell_net, label: HANGS_AROUND,
+      evidence: "brought a fowler's net with little bells and hung it round about her" }
+  - { from: obj_clever_elsie_bell_net, to: clever_elsie, label: DISGUISES,
+      evidence: "there was a jingling all round about her" }
+  - { from: obj_clever_elsie_bell_net, to: law_disguise_alters_social_reality, label: ACTIVATES,
+      evidence: "became uncertain whether she really was Clever Elsie or not" }
+  - { from: clever_elsie, to: state_self_unrecognized, label: ENTERS_STATE,
+      evidence: "Is it I, or is it not I?" }
+  - { from: clever_elsie, to: clever_elsie_hans, label: ASKS_IDENTITY_OF,
+      evidence: "Hans, is Elsie within?" }
+  - { from: clever_elsie_hans, to: clever_elsie, label: LIES_TO,
+      evidence: "Yes... she is within." }
+  - { from: clever_elsie, to: loc_clever_elsie_house, label: EXCLUDED_FROM,
+      evidence: "She ran to the door of her own house, but it was shut" }
+  - { from: clever_elsie_villagers, to: clever_elsie, label: REFUSE_ENTRY_TO,
+      evidence: "they would not open it, and she could get in nowhere." }
+  - { from: clever_elsie, to: loc_clever_elsie_village, label: LEAVES,
+      evidence: "Then she ran out of the village, and no one has seen her since." }

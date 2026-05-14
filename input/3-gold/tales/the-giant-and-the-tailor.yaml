@@ -1,0 +1,189 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-giant-and-the-tailor
+khm: 183
+atu: "1049"
+atu_name: The Giant and the Tailor
+canonical_source: ../../2-silver/canonical/the-giant-and-the-tailor/canonical.txt
+title: The Giant and the Tailor
+
+
+entities:
+
+  characters:
+
+    giant_tailor_tailor:
+      name: The Boasting Tailor
+      archetypes: [arc_trickster, arc_fool]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_domestic_labor, agency_endurance]
+      speech_acts_performed: [speech_boast, speech_testimony]
+      affects: [affect_curiosity, affect_fear, affect_pride]
+      traits: [boastful, poor-at-doing, wandering, curious, tiny-to-giant, servant-by-necessity, task-exaggerator, sorcerer-misread, willow-branch-flung]
+      evidence: |
+        great at boasting but ill at doing
+
+    giant_tailor_giant:
+      name: The Giant / Old Hans
+      being_type: being_giant
+      agency_modes: [agency_extraordinary_body, agency_speech, agency_violence, agency_domestic_labor]
+      existential_states: [state_deceived]
+      speech_acts_performed: [speech_command, speech_testimony]
+      affects: [affect_fear, affect_anger]
+      traits: [cloud-tower-like, forest-master, thunder-voiced, clownish, stupid, credulous, wizard-fearing, servant-dismissal-plotter, willow-test-setter]
+      evidence: |
+        all powerful giant
+
+  magic_objects:
+
+    obj_giant_tailor_pitcher:
+      name: The Water Pitcher
+      object_kind: tool
+      attributes:
+        function: small service vessel rhetorically inflated into well-and-spring carrying
+      evidence: |
+        went with the pitcher to the water
+
+    obj_giant_tailor_goose_iron:
+      name: The Tailor's Goose Iron
+      object_kind: tool
+      attributes:
+        function: absent tailor's weight that would have kept him from being flung away
+      evidence: |
+        he had not put his goose in his pocket
+
+  locations:
+
+    loc_giant_tailor_workshop:
+      name: The Tailor's Workshop
+      instance_of: loc_house
+      evidence: |
+        he left his workshop
+
+    loc_giant_tailor_road:
+      name: The Wandering Road over Hill and Dale
+      instance_of: loc_road
+      evidence: |
+        wandered on his way, over hill and dale
+
+    loc_giant_tailor_steep_hill:
+      name: The Steep Hill
+      instance_of: loc_mountain
+      evidence: |
+        a steep hill
+
+    loc_giant_tailor_dark_forest:
+      name: The Wild Dark Forest
+      instance_of: loc_forest
+      evidence: |
+        a wild dark forest
+
+    loc_giant_tailor_marsh:
+      name: The Marsh with Willow-Trees
+      instance_of: loc_marsh
+      evidence: |
+        went to a marsh
+
+    loc_giant_tailor_willow_tree:
+      name: The Willow-Branch
+      instance_of: loc_tree
+      evidence: |
+        one of the willow-branches
+
+
+classifications:
+
+  world_laws:
+    - law_boast_generates_reputation
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+    - agency_extraordinary_body
+
+  affects_driving:
+    - affect_curiosity
+    - affect_fear
+    - affect_pride
+
+  symbol_numbers: []
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_initial_wandering, order: 1, actor: giant_tailor_tailor,
+      scene: "the boasting tailor leaves his workshop to look about the world" }
+  - { function: func_marvel_misrecognized, order: 2, actor: giant_tailor_tailor,
+      scene: "the tailor first sees the giant as a tower reaching to the clouds" }
+  - { function: func_giant_encounter, order: 3, actor: giant_tailor_giant,
+      scene: "the giant challenges the tiny stranger in a thunderous voice" }
+  - { function: func_service_contract, order: 4, actor: giant_tailor_giant,
+      beneficiary: giant_tailor_tailor,
+      scene: "the giant gives the tailor a place with him" }
+  - { function: func_boasted_task_answer, order: 5, actor: giant_tailor_tailor,
+      scene: "the tailor answers water-fetching with a boast about bringing the well and spring" }
+  - { function: func_fearful_misrecognition, order: 6, actor: giant_tailor_giant,
+      scene: "the giant thinks the tailor has a wizard in his body" }
+  - { function: func_repeated_boast, order: 7, actor: giant_tailor_tailor,
+      scene: "the tailor answers wood and boar tasks with forest and thousand-boar boasts" }
+  - { function: func_escape_plot, order: 8, actor: giant_tailor_giant,
+      scene: "the giant spends the night thinking how to get rid of the sorcerer-servant" }
+  - { function: func_body_test, order: 9, actor: giant_tailor_giant,
+      victim: giant_tailor_tailor,
+      scene: "the giant asks the tailor to sit on a willow branch and bend it down" }
+  - { function: func_comic_backfire, order: 10, actor: giant_tailor_tailor,
+      scene: "the tailor is flung so high into the air that he is never seen again" }
+
+
+edges:
+
+  - { from: giant_tailor_tailor, to: loc_giant_tailor_workshop, label: LEAVES,
+      evidence: "he left his workshop" }
+  - { from: giant_tailor_tailor, to: loc_giant_tailor_road, label: WANDERS_OVER,
+      evidence: "over hill and dale" }
+  - { from: giant_tailor_tailor, to: loc_giant_tailor_steep_hill, label: SEES_IN_DISTANCE,
+      evidence: "a steep hill" }
+  - { from: giant_tailor_tailor, to: loc_giant_tailor_dark_forest, label: APPROACHES_OUT_OF_CURIOSITY,
+      evidence: "goaded by curiosity" }
+  - { from: giant_tailor_giant, to: loc_giant_tailor_steep_hill, label: LEAPS_OVER,
+      evidence: "leapt in one bound over the steep hill" }
+  - { from: giant_tailor_giant, to: giant_tailor_tailor, label: INSULTS_AS_TINY,
+      evidence: "thou tiny fly’s leg" }
+  - { from: giant_tailor_tailor, to: giant_tailor_giant, label: ASKS_FOR_BREAD_WORK,
+      evidence: "earn a bit of bread for myself" }
+  - { from: giant_tailor_giant, to: giant_tailor_tailor, label: HIRES_AS_SERVANT,
+      evidence: "thou mayst have a place with me" }
+  - { from: giant_tailor_giant, to: obj_giant_tailor_pitcher, label: COMMANDS_WATER_FETCH,
+      evidence: "fetch me a jug of water" }
+  - { from: giant_tailor_tailor, to: law_boast_generates_reputation, label: INFLATES_WATER_TASK_BY_BOAST,
+      evidence: "bring the well itself at once" }
+  - { from: giant_tailor_giant, to: giant_tailor_tailor, label: MISREADS_BOAST_AS_WIZARDRY,
+      evidence: "he has a wizard in his body" }
+  - { from: giant_tailor_giant, to: giant_tailor_tailor, label: COMMANDS_WOOD_FETCH,
+      evidence: "cut a couple of blocks of wood" }
+  - { from: giant_tailor_tailor, to: law_boast_generates_reputation, label: INFLATES_WOOD_TASK_BY_BOAST,
+      evidence: "the whole forest, at once" }
+  - { from: giant_tailor_giant, to: affect_fear, label: BECOMES_MORE_TERRIFIED,
+      evidence: "was still more terrified" }
+  - { from: giant_tailor_giant, to: giant_tailor_tailor, label: COMMANDS_BOAR_HUNT,
+      evidence: "shoot two or three wild boars for supper" }
+  - { from: giant_tailor_tailor, to: law_boast_generates_reputation, label: INFLATES_HUNT_BY_BOAST,
+      evidence: "a thousand at one shot" }
+  - { from: giant_tailor_giant, to: state_deceived, label: FEARS_ACCUSSED_SORCERER_SERVANT,
+      evidence: "this accursed sorcerer of a servant" }
+  - { from: giant_tailor_giant, to: loc_giant_tailor_marsh, label: LEADS_TO_MARSH_TEST,
+      evidence: "went to a marsh" }
+  - { from: giant_tailor_giant, to: loc_giant_tailor_willow_tree, label: SETS_WILLOW_BRANCH_TEST,
+      evidence: "seat thyself on one of the willow-branches" }
+  - { from: giant_tailor_tailor, to: loc_giant_tailor_willow_tree, label: BENDS_BRANCH_BY_HOLDING_BREATH,
+      evidence: "holding his breath" }
+  - { from: giant_tailor_tailor, to: obj_giant_tailor_goose_iron, label: LACKS_WEIGHTING_TOOL,
+      evidence: "had not put his goose in his pocket" }
+  - { from: loc_giant_tailor_willow_tree, to: giant_tailor_tailor, label: FLINGS_INTO_AIR,
+      evidence: "so high into the air" }
+  - { from: giant_tailor_giant, to: giant_tailor_tailor, label: GETS_RID_OF_BOASTER,
+      evidence: "to the great delight of the giant" }

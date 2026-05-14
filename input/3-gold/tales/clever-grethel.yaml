@@ -1,0 +1,240 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: clever-grethel
+khm: 77
+atu: '1741'
+atu_name: Trickster Wives and Maids
+canonical_source: ../../2-silver/canonical/clever-grethel/canonical.txt
+title: Clever Grethel
+
+
+entities:
+
+  characters:
+
+    clever_grethel:
+      name: Clever Grethel
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_cunning, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_pride, affect_hunger, affect_greed]
+      traits: [red-rosette-shoed, self-admiring, wine-drinking, food-tasting, fowl-cooking, cellar-running, chicken-eating, guest-frightening, theft-blaming]
+      evidence: |
+        There was once a cook named Grethel, who wore shoes with red
+        rosettes
+
+    grethel_master:
+      name: Grethel's Master
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_object_mediation]
+      existential_states: [state_deceived]
+      speech_acts_performed: [speech_command]
+      affects: [affect_hunger]
+      traits: [guest-inviter, fowl-orderer, guest-fetcher, table-checker, knife-sharpener, chicken-lamenter, pursuit-confirming]
+      evidence: |
+        the master one day said to her, “Grethel, there is a guest
+        coming this evening; prepare me two fowls very daintily.”
+
+    grethel_guest:
+      name: The Supper Guest
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      existential_states: [state_deceived]
+      affects: [affect_fear]
+      traits: [invited-supper-guest, polite-knocker, ear-threatened, knife-hearer, fleeing]
+      evidence: |
+        Presently the guest came, and knocked politely and courteously
+        at the house-door.
+
+  magic_objects:
+
+    obj_grethel_red_shoes:
+      name: Grethel's Red-Rosette Shoes
+      object_kind: garment
+      attributes:
+        function: vanity object that marks Grethel's self-regard before the food trick
+      evidence: |
+        shoes with red rosettes
+
+    obj_grethel_two_fowls:
+      name: The Two Roast Fowls
+      object_kind: food
+      attributes:
+        function: master's supper food eaten by Grethel and blamed on the guest
+      evidence: |
+        prepare me two fowls very daintily.
+
+    obj_grethel_wine:
+      name: Grethel's Wine Draughts
+      object_kind: food
+      attributes:
+        function: drink that excites appetite and licenses further eating
+      evidence: |
+        as wine excites a desire to eat
+
+    obj_grethel_spit:
+      name: The Roasting Spit
+      object_kind: tool
+      attributes:
+        function: cooking tool holding the fowls before Grethel eats them
+      evidence: |
+        put them on the spit
+
+    obj_grethel_great_knife:
+      name: The Great Carving Knife
+      object_kind: weapon
+      attributes:
+        function: ordinary carving tool misread by the guest as an ear-cutting threat
+      evidence: |
+        took the great knife, wherewith he was going to carve the chickens
+
+  locations:
+
+    loc_grethel_house:
+      name: Grethel's Master's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        Presently the guest came, and knocked politely and courteously
+        at the house-door.
+
+    loc_grethel_hearth:
+      name: The Roasting Fire
+      instance_of: loc_hearth
+      evidence: |
+        set them before the fire, that they might roast.
+
+    loc_grethel_cellar:
+      name: The Wine Cellar
+      instance_of: loc_cellar
+      evidence: |
+        I will run into the cellar, and take a drink.
+
+    loc_grethel_steps:
+      name: The Knife-Sharpening Steps
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        sharpened it on the steps.
+
+
+classifications:
+
+  world_laws:
+    - law_stolen_food_redirected_by_threat_lie
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_cunning
+    - agency_speech
+    - agency_object_mediation
+    - agency_social_rank
+
+  affects_driving:
+    - affect_hunger
+    - affect_greed
+    - affect_pride
+    - affect_fear
+
+  symbol_numbers:
+    - num_2
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: clever_grethel,
+      scene: "Grethel is introduced as a vain cook whose wine drinking leads to tasting whatever she cooks" }
+  - { function: func_command, order: 2, actor: grethel_master,
+      scene: "the master orders Grethel to prepare two fowls for an evening guest" }
+  - { function: func_preparation, order: 3, actor: clever_grethel,
+      scene: "Grethel kills, plucks, spits, and roasts the two fowls" }
+  - { function: func_delay, order: 4, actor: grethel_guest,
+      scene: "the guest does not arrive, giving Grethel time to drink and taste the roast meat" }
+  - { function: func_theft, order: 5, actor: clever_grethel,
+      scene: "Grethel eats the wings, then one whole chicken, then the second chicken" }
+  - { function: func_false_warning, order: 6, actor: clever_grethel,
+      scene: "Grethel warns the guest that the master means to cut off his ears" }
+  - { function: func_false_accusation, order: 7, actor: clever_grethel,
+      scene: "Grethel tells the master that the guest has stolen both chickens" }
+  - { function: func_pursuit, order: 8, actor: grethel_master,
+      scene: "the master chases the guest with the knife, asking for one chicken back" }
+  - { function: func_escape, order: 9, actor: grethel_guest,
+      scene: "the guest interprets the pursuit as ear-cutting danger and runs away with both ears" }
+
+
+edges:
+
+  # Appetite and domestic setup
+  - { from: clever_grethel, to: obj_grethel_red_shoes, label: WEARS,
+      evidence: "wore shoes with red rosettes" }
+  - { from: clever_grethel, to: affect_pride, label: EMBODIES,
+      evidence: "You certainly are a pretty girl!" }
+  - { from: clever_grethel, to: obj_grethel_wine, label: DRINKS,
+      evidence: "she drank, in her gladness of heart, a draught of wine" }
+  - { from: obj_grethel_wine, to: affect_hunger, label: EXCITES,
+      evidence: "as wine excites a desire to eat" }
+  - { from: clever_grethel, to: agency_domestic_labor, label: JUSTIFIES_TASTING_AS,
+      evidence: "The cook must know what the food is like." }
+  - { from: grethel_master, to: clever_grethel, label: COMMANDS,
+      evidence: "prepare me two fowls very daintily" }
+  - { from: grethel_master, to: grethel_guest, label: INVITES,
+      evidence: "there is a guest coming this evening" }
+  - { from: grethel_master, to: obj_grethel_two_fowls, label: ORDERS_PREPARED,
+      evidence: "prepare me two fowls very daintily" }
+  - { from: obj_grethel_two_fowls, to: num_2, label: NUMBERED_AS,
+      evidence: "two fowls" }
+  - { from: clever_grethel, to: obj_grethel_two_fowls, label: KILLS_AND_PLUCKS,
+      evidence: "She killed two fowls, scalded them, plucked them" }
+  - { from: clever_grethel, to: obj_grethel_spit, label: USES,
+      evidence: "put them on the spit" }
+  - { from: obj_grethel_two_fowls, to: loc_grethel_hearth, label: ROASTS_AT,
+      evidence: "set them before the fire, that they might roast" }
+
+  # Eating the evidence
+  - { from: clever_grethel, to: loc_grethel_cellar, label: RUNS_TO_DRINK,
+      evidence: "I will run into the cellar, and take a drink" }
+  - { from: clever_grethel, to: obj_grethel_wine, label: TAKES_HEARTY_DRAUGHT,
+      evidence: "took yet another hearty draught" }
+  - { from: clever_grethel, to: obj_grethel_two_fowls, label: TASTES,
+      evidence: "Something might be wrong, it ought to be tasted!" }
+  - { from: clever_grethel, to: obj_grethel_two_fowls, label: EATS_WINGS,
+      evidence: "So she cut it off, ate it, and enjoyed it" }
+  - { from: clever_grethel, to: obj_grethel_two_fowls, label: EATS_FIRST_CHICKEN,
+      evidence: "ate up the one chicken in great glee" }
+  - { from: clever_grethel, to: obj_grethel_two_fowls, label: EATS_SECOND_CHICKEN,
+      evidence: "let the second chicken rejoin the first" }
+  - { from: clever_grethel, to: affect_greed, label: EMBODIES,
+      evidence: "Where one is, the other should be likewise" }
+
+  # Two lies redirect the missing chickens
+  - { from: grethel_master, to: obj_grethel_great_knife, label: SHARPENS,
+      evidence: "sharpened it on the steps" }
+  - { from: grethel_guest, to: loc_grethel_house, label: KNOCKS_AT_DOOR,
+      evidence: "knocked politely and courteously at the house-door" }
+  - { from: clever_grethel, to: grethel_guest, label: WARNS_FALSELY,
+      evidence: "his intention is to cut off your two ears" }
+  - { from: obj_grethel_great_knife, to: grethel_guest, label: CONFIRMS_FALSE_THREAT,
+      evidence: "Just listen how he is sharpening the knife for it!" }
+  - { from: grethel_guest, to: affect_fear, label: FLEES_IN,
+      evidence: "hurried down the steps again as fast as he could" }
+  - { from: clever_grethel, to: grethel_master, label: FALSELY_ACCUSES_GUEST,
+      evidence: "he has taken the chickens which I was just going to serve up" }
+  - { from: clever_grethel, to: law_stolen_food_redirected_by_threat_lie, label: ENACTS,
+      evidence: "he has taken the chickens which I was just going to serve up, off the dish, and has run away with them" }
+  - { from: grethel_master, to: obj_grethel_two_fowls, label: LAMENTS_LOSS_OF,
+      evidence: "lamented the fine chickens" }
+  - { from: grethel_master, to: grethel_guest, label: PURSUES_WITH_KNIFE,
+      evidence: "Then he ran after him with the knife still in his hand" }
+  - { from: grethel_master, to: obj_grethel_two_fowls, label: ASKS_FOR_ONE,
+      evidence: "meaning that the guest should leave him just one chicken" }
+  - { from: grethel_guest, to: grethel_master, label: MISREADS_AS_EAR_THREAT,
+      evidence: "thought no otherwise than that he was to give up one of his ears" }
+  - { from: grethel_guest, to: loc_grethel_house, label: ESCAPES_FROM,
+      evidence: "ran as if fire were burning under him" }

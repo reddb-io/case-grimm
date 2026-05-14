@@ -1,0 +1,193 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-fox-and-his-cousin
+khm: 74
+atu: '3*'
+atu_name: The Fox and His Cousin / Gossip Wolf and the Fox
+canonical_source: ../../2-silver/canonical/the-fox-and-his-cousin/canonical.txt
+title: The Fox and His Cousin
+
+
+entities:
+
+  characters:
+
+    fox_cousin_fox:
+      name: The Fox
+      archetypes: [arc_trickster]
+      species: sp_fox
+      agency_modes: [agency_cunning, agency_speech]
+      speech_acts_performed: [speech_lie, speech_bargain]
+      affects: [affect_greed]
+      traits: [near-relative, godfather, seemingly-honest, feast-goer, sheepfold-informer, chicken-pretext-maker, false-invalid, mocker]
+      evidence: |
+        he has a good understanding, and much talent
+
+    fox_cousin_she_wolf:
+      name: Gossip Wolf
+      archetypes: [arc_naive_victim]
+      species: sp_wolf
+      agency_modes: [agency_speech, agency_violence, agency_endurance]
+      speech_acts_performed: [speech_bargain]
+      affects: [affect_pity, affect_fear]
+      traits: [new-mother, godfather-inviter, kinship-truster, farmyard-follower, scalded, concerned-carrier, mocked]
+      evidence: |
+        The she-wolf brought forth a young one, and invited the fox to
+        be godfather.
+
+    fox_cousin_wolf_cub:
+      name: The Young Wolf
+      species: sp_wolf
+      traits: [newborn, godchild, child-to-be-instructed]
+      evidence: |
+        she-wolf brought forth a young one
+
+    fox_cousin_dog:
+      name: The Dog in the Stable
+      species: sp_dog
+      agency_modes: [agency_speech, agency_violence]
+      traits: [stable-guard, alarm-raiser, peasant-summoner]
+      evidence: |
+        A dog was lying there, and it made such a noise
+
+    fox_cousin_peasants:
+      name: The Peasants
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_violence]
+      traits: [farmyard-defenders, wash-pourers, wolf-scalders]
+      evidence: |
+        the peasants came running out
+
+  magic_objects:
+
+    obj_fox_cousin_burning_wash:
+      name: The Burning Washing Mixture
+      object_kind: material
+      attributes:
+        function: prepared washing liquid poured over the she-wolf as punishment
+      evidence: |
+        a strong burning mixture, which had been prepared for washing
+
+  locations:
+
+    loc_fox_cousin_she_wolf_house:
+      name: Gossip Wolf's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        slowly carried him perfectly safe and sound to her house.
+
+    loc_fox_cousin_forest_entrance:
+      name: The Entrance to the Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        sat down at the entrance to the forest
+
+    loc_fox_cousin_farmyard:
+      name: The Farm-Yard
+      evidence: |
+        she went out with the fox to the farm-yard.
+
+    loc_fox_cousin_sheepfold:
+      name: The Sheep-Fold
+      instance_of: loc_stable
+      threshold_type: threshold_doorway
+      evidence: |
+        I know a sheep-fold from which we might fetch a nice morsel.
+
+
+classifications:
+
+  world_laws:
+    - law_feigned_injury_compels_care
+    - law_forest_suspends_domestic_order
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_naive_punished
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_violence
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_pity
+    - affect_fear
+    - affect_greed
+
+  symbol_numbers: []
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: fox_cousin_she_wolf,
+      scene: "the she-wolf gives birth and invites the fox to be godfather because he is kin and clever" }
+  - { function: func_deceptive_acceptance, order: 2, actor: fox_cousin_fox,
+      scene: "the fox accepts the honour and promises conduct that will repay it" }
+  - { function: func_trickery, order: 3, actor: fox_cousin_fox,
+      scene: "after the feast, the fox proposes fetching food for the child from a sheepfold" }
+  - { function: func_complicity, order: 4, actor: fox_cousin_she_wolf,
+      scene: "the she-wolf follows the fox to the farmyard and creeps into the stable" }
+  - { function: func_villainy, order: 5, actor: fox_cousin_peasants,
+      scene: "the dog raises alarm and the peasants pour burning wash over the she-wolf" }
+  - { function: func_trickery, order: 6, actor: fox_cousin_fox,
+      scene: "the fox pretends that the peasants have broken all his limbs" }
+  - { function: func_helper_exploitation, order: 7, actor: fox_cousin_she_wolf,
+      scene: "the injured she-wolf carries the healthy fox home out of concern" }
+  - { function: func_escape, order: 8, actor: fox_cousin_fox,
+      scene: "the fox mocks the she-wolf's roasting and bounds away" }
+
+
+edges:
+
+  # Godparental trust
+  - { from: fox_cousin_she_wolf, to: fox_cousin_fox, label: INVITES_AS_GODFATHER,
+      evidence: "invited the fox to be godfather" }
+  - { from: fox_cousin_she_wolf, to: fox_cousin_fox, label: IDENTIFIES_AS_RELATIVE,
+      evidence: "he is a near relative of ours" }
+  - { from: fox_cousin_she_wolf, to: fox_cousin_fox, label: TRUSTS_TALENT_OF,
+      evidence: "he has a good understanding, and much talent" }
+  - { from: fox_cousin_fox, to: fox_cousin_she_wolf, label: PROMISES_REPAYMENT,
+      evidence: "you shall be repaid for it" }
+  - { from: fox_cousin_fox, to: fox_cousin_wolf_cub, label: CLAIMS_DUTY_TO_FEED,
+      evidence: "it is our duty to take care of the child" }
+
+  # Sheepfold deception
+  - { from: fox_cousin_fox, to: loc_fox_cousin_sheepfold, label: KNOWS,
+      evidence: "I know a sheep-fold" }
+  - { from: fox_cousin_fox, to: fox_cousin_she_wolf, label: DIRECTS_INTO_FOLD,
+      evidence: "You will be able to creep in there without being seen" }
+  - { from: fox_cousin_fox, to: loc_fox_cousin_forest_entrance, label: RESTS_AT,
+      evidence: "sat down at the entrance to the forest" }
+  - { from: fox_cousin_she_wolf, to: loc_fox_cousin_sheepfold, label: CREEPS_INTO,
+      evidence: "The she-wolf crept into the stable." }
+  - { from: fox_cousin_dog, to: fox_cousin_peasants, label: SUMMONS_WITH_NOISE,
+      evidence: "it made such a noise that the peasants came running out" }
+  - { from: fox_cousin_peasants, to: fox_cousin_she_wolf, label: CATCH,
+      evidence: "caught Gossip Wolf" }
+  - { from: fox_cousin_peasants, to: obj_fox_cousin_burning_wash, label: POUR,
+      evidence: "poured a strong burning mixture" }
+  - { from: obj_fox_cousin_burning_wash, to: fox_cousin_she_wolf, label: SCALDS,
+      evidence: "poured a strong burning mixture, which had been prepared for washing, over her skin" }
+
+  # Feigned injury and carried escape
+  - { from: fox_cousin_fox, to: fox_cousin_she_wolf, label: PRETENDS_INJURY_TO,
+      evidence: "pretended to be full of complaints" }
+  - { from: fox_cousin_fox, to: fox_cousin_she_wolf, label: CLAIMS_BROKEN_LIMBS,
+      evidence: "the peasants have fallen on me, and have broken every limb I have" }
+  - { from: law_feigned_injury_compels_care, to: fox_cousin_she_wolf, label: COMPELS_CARE_FROM,
+      evidence: "she was in such concern about the fox" }
+  - { from: fox_cousin_she_wolf, to: fox_cousin_fox, label: CARRIES,
+      evidence: "she took him on her back" }
+  - { from: fox_cousin_she_wolf, to: loc_fox_cousin_she_wolf_house, label: CARRIES_TO,
+      evidence: "carried him perfectly safe and sound to her house" }
+  - { from: fox_cousin_fox, to: fox_cousin_she_wolf, label: MOCKS,
+      evidence: "may the roasting you have had do you good" }
+  - { from: fox_cousin_fox, to: loc_fox_cousin_forest_entrance, label: BOUNDS_AWAY_FROM,
+      evidence: "laughed heartily at her, and bounded off." }

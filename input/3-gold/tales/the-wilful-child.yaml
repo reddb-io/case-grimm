@@ -1,0 +1,232 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-wilful-child
+khm: 117
+atu: '779'
+atu_name: The Wilful Child
+canonical_source: ../../2-silver/canonical/the-wilful-child/canonical.txt
+title: The Wilful Child
+
+
+entities:
+
+  characters:
+
+    wilful_child:
+      name: The Wilful Child
+      archetypes: [arc_willful_child]
+      species: sp_human
+      existential_states: [state_liminal_dead]
+      agency_modes: [agency_endurance]
+      affects: [affect_pride]
+      traits: [willful-child, mother-disobeyer, divinely-disfavoured, incurably-ill, grave-restless, rod-quieted]
+      evidence: |
+        a child who was willful
+
+    wilful_child_mother:
+      name: The Mother
+      archetypes: [arc_protective_mother]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_violence, agency_speech]
+      speech_acts_performed: [speech_command]
+      traits: [disobeyed-mother, grave-visitor, rod-striker, final-corrector]
+      evidence: |
+        the mother herself was obliged to go to the grave
+
+    wilful_child_god:
+      name: God
+      being_type: being_divine
+      agency_modes: [agency_social_rank]
+      affects: [affect_anger]
+      traits: [divine-displeasure, illness-permitter, obedience-enforcer]
+      evidence: |
+        God had no pleasure in her
+
+    wilful_child_doctors:
+      name: The Doctors
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [unable-healers, failed-physicians]
+      evidence: |
+        no doctor could do her any good
+
+  magic_objects:
+
+    obj_wilful_child_restless_arm:
+      name: The Restless Arm from the Grave
+      object_kind: relic
+      attributes:
+        function: posthumous body-sign of continuing disobedience
+      evidence: |
+        her arm came out again
+
+    obj_wilful_child_rod:
+      name: The Mother's Rod
+      instance_of: obj_maternal_discipline_rod
+      object_kind: weapon
+      attributes:
+        function: final disciplinary instrument that makes the dead child's arm withdraw
+      evidence: |
+        strike the arm with a rod
+
+  locations:
+
+    loc_wilful_child_deathbed:
+      name: The Child's Death-Bed
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        she lay on her death-bed
+
+    loc_wilful_child_grave:
+      name: The Child's Grave
+      instance_of: loc_tomb
+      threshold_type: threshold_grave
+      evidence: |
+        lowered into her grave
+
+
+classifications:
+
+  world_laws:
+    - law_maternal_rod_quiets_posthumous_disobedience
+
+  moral_regimes:
+    - moral_disobedience_punished
+
+  agency_modes_dominant:
+    - agency_social_rank
+    - agency_violence
+    - agency_endurance
+
+  affects_driving:
+    - affect_pride
+    - affect_anger
+
+  symbol_numbers: []
+
+  threshold_types:
+    - threshold_doorway
+    - threshold_grave
+
+
+propp:
+
+  - function: func_initial_situation
+    order: 1
+    actor: wilful_child
+    scene: The child is willful and refuses to do what her mother wishes.
+    evidence: |
+      would not do at her mother wished
+
+  - function: func_punishment
+    order: 2
+    actor: wilful_child_god
+    victim: wilful_child
+    scene: God has no pleasure in the child and lets her become incurably ill.
+    evidence: |
+      God had no pleasure in her
+
+  - function: func_death
+    order: 3
+    actor: wilful_child
+    scene: The doctors cannot help, and the child soon lies on her death-bed.
+    evidence: |
+      no doctor could do her any good
+
+  - function: func_restless_dead
+    order: 4
+    actor: obj_wilful_child_restless_arm
+    scene: After burial, the child's arm keeps rising out of the grave.
+    evidence: |
+      the arm always came out again
+
+  - function: func_correction
+    order: 5
+    actor: wilful_child_mother
+    victim: obj_wilful_child_restless_arm
+    scene: The mother strikes the arm with a rod.
+    evidence: |
+      strike the arm with a rod
+
+  - function: func_rest
+    order: 6
+    actor: wilful_child
+    scene: After the maternal blow, the arm withdraws and the child rests underground.
+    evidence: |
+      at last the child had rest beneath the ground
+
+
+edges:
+
+  - from: wilful_child
+    label: DISOBEYS
+    to: wilful_child_mother
+    evidence: |
+      would not do at her mother wished
+
+  - from: wilful_child_god
+    label: HAS_NO_PLEASURE_IN
+    to: wilful_child
+    evidence: |
+      God had no pleasure in her
+
+  - from: wilful_child_god
+    label: LETS_BECOME_ILL
+    to: wilful_child
+    evidence: |
+      let her become ill
+
+  - from: wilful_child_doctors
+    label: CANNOT_HEAL
+    to: wilful_child
+    evidence: |
+      no doctor could do her any good
+
+  - from: wilful_child
+    label: LIES_ON
+    to: loc_wilful_child_deathbed
+    evidence: |
+      she lay on her death-bed
+
+  - from: wilful_child
+    label: LOWERED_INTO
+    to: loc_wilful_child_grave
+    evidence: |
+      lowered into her grave
+
+  - from: obj_wilful_child_restless_arm
+    label: RISES_FROM
+    to: loc_wilful_child_grave
+    evidence: |
+      her arm came out again
+
+  - from: obj_wilful_child_restless_arm
+    label: PERSISTS_AFTER_REBURIAL
+    to: loc_wilful_child_grave
+    evidence: |
+      the arm always came out again
+
+  - from: wilful_child_mother
+    label: GOES_TO
+    to: loc_wilful_child_grave
+    evidence: |
+      obliged to go to the grave
+
+  - from: wilful_child_mother
+    label: STRIKES_WITH
+    to: obj_wilful_child_rod
+    evidence: |
+      strike the arm with a rod
+
+  - from: obj_wilful_child_rod
+    label: QUIETS
+    to: obj_wilful_child_restless_arm
+    evidence: |
+      it was drawn in
+
+  - from: law_maternal_rod_quiets_posthumous_disobedience
+    label: GRANTS_REST_TO
+    to: wilful_child
+    evidence: |
+      the child had rest beneath the ground

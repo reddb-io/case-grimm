@@ -1,0 +1,191 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-old-beggar-woman
+khm: 150
+canonical_source: ../../2-silver/canonical/the-old-beggar-woman/canonical.txt
+title: The Old Beggar-Woman
+
+
+entities:
+
+  characters:
+
+    old_beggar_woman:
+      name: The Old Beggar-Woman
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      speech_acts_performed: [speech_blessing]
+      affects: [affect_pity]
+      traits: [old-beggar, god-reward-blesser, shivering-door-guest, unaware-burning-woman]
+      evidence: |
+        This woman begged likewise, and when she got anything she said, “May God reward you.”
+
+    old_beggar_boy:
+      name: The Friendly Rogue of a Boy
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_request]
+      affects: [affect_pity]
+      traits: [fire-warming-boy, kindly-inviter, passive-witness, failed-extinguisher]
+      evidence: |
+        a friendly rogue of a boy was standing warming himself
+
+  magic_objects:
+
+    obj_old_beggar_burning_rags:
+      name: The Burning Old Rags
+      object_kind: material
+      attributes:
+        function: vulnerable clothing whose catching fire turns kindness into an obligation to act
+      evidence: |
+        her old rags began to burn
+
+    obj_old_beggar_tears_streams:
+      name: The Two Pretty Tear-Streams
+      object_kind: material
+      attributes:
+        function: imagined substitute water the boy ought to supply if no ordinary water is available
+      evidence: |
+        two pretty streams with which to extinguish them
+
+  locations:
+
+    loc_old_beggar_house_door:
+      name: The Door Where the Beggar Stands
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        came to a door
+
+    loc_old_beggar_fire:
+      name: The Warming Fire
+      instance_of: loc_hearth
+      evidence: |
+        there by the fire
+
+
+classifications:
+
+  world_laws:
+    - law_witnessed_fire_demands_compassionate_extinguishing
+
+  moral_regimes:
+    - moral_compassionate_aid
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_object_mediation
+    - agency_endurance
+
+  affects_driving:
+    - affect_pity
+
+  symbol_numbers:
+    - num_2
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_arrival
+    order: 1
+    actor: old_beggar_woman
+    scene: The old woman comes begging to a doorway and blesses those who give.
+    evidence: |
+      The beggar-woman came to a door
+
+  - function: func_hospitality
+    order: 2
+    actor: old_beggar_boy
+    beneficiary: old_beggar_woman
+    scene: The boy kindly invites the shivering woman to warm herself by the fire.
+    evidence: |
+      Come, old mother, and warm yourself.
+
+  - function: func_danger
+    order: 3
+    actor: obj_old_beggar_burning_rags
+    victim: old_beggar_woman
+    scene: The old woman stands too close to the fire and her rags begin to burn without her noticing.
+    evidence: |
+      her old rags began to burn, and she was not aware of it
+
+  - function: func_failed_aid
+    order: 4
+    actor: old_beggar_boy
+    victim: old_beggar_woman
+    scene: The boy watches the burning but does not extinguish it.
+    evidence: |
+      The boy stood and saw that, but he ought to have put the flames out.
+
+  - function: func_moral_address
+    order: 5
+    actor: law_witnessed_fire_demands_compassionate_extinguishing
+    scene: The narrator insists that even tears should have become water for the rescue.
+    evidence: |
+      should he have wept all the water in his body out of his eyes
+
+
+edges:
+
+  - from: old_beggar_woman
+    label: BEGS_AT
+    to: loc_old_beggar_house_door
+    evidence: |
+      came to a door
+
+  - from: old_beggar_woman
+    label: BLESSES_GIVERS_WITH
+    to: speech_blessing
+    evidence: |
+      May God reward you.
+
+  - from: old_beggar_boy
+    label: WARMS_AT
+    to: loc_old_beggar_fire
+    evidence: |
+      standing warming himself
+
+  - from: old_beggar_boy
+    label: INVITES
+    to: old_beggar_woman
+    evidence: |
+      Come, old mother, and warm yourself.
+
+  - from: old_beggar_woman
+    label: STANDS_TOO_NEAR
+    to: loc_old_beggar_fire
+    evidence: |
+      stood too near the fire
+
+  - from: obj_old_beggar_burning_rags
+    label: BURNS_ON
+    to: old_beggar_woman
+    evidence: |
+      her old rags began to burn
+
+  - from: old_beggar_boy
+    label: WITNESSES
+    to: obj_old_beggar_burning_rags
+    evidence: |
+      stood and saw that
+
+  - from: old_beggar_boy
+    label: FAILS_TO_EXTINGUISH
+    to: obj_old_beggar_burning_rags
+    evidence: |
+      he ought to have put the flames out
+
+  - from: law_witnessed_fire_demands_compassionate_extinguishing
+    label: REQUIRES_AID_FROM
+    to: old_beggar_boy
+    evidence: |
+      Is it not true that he ought to have put them out?
+
+  - from: obj_old_beggar_tears_streams
+    label: WOULD_EXTINGUISH
+    to: obj_old_beggar_burning_rags
+    evidence: |
+      two pretty streams with which to extinguish them

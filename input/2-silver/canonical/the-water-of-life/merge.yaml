@@ -1,0 +1,26 @@
+slug: the-water-of-life
+khm: 97
+base:
+  book: pg5314-grimm-hunt
+edits:
+- id: 1
+  op: insert_after
+  from: pg2591-grimm-taylor
+  anchor: |
+    a dwarf stood
+    there in the road who called to him and said,
+  text: ' The dwarf had a sugarloaf cap and a scarlet cloak.'
+  label: §1 dwarf's first appearance
+- id: 2
+  op: insert_after
+  from: pg2591-grimm-taylor
+  anchor: they had put to sea, and never came back as long as they lived.
+  text: |2
+
+
+    And now the old king gathered together his court, and asked all his kingdom to come and celebrate the wedding of his son and the princess. And young and old, noble and squire, gentle and simple, came at once on the summons; and among the rest came the friendly dwarf, with the sugarloaf hat, and a new scarlet cloak.
+
+      And the wedding was held, and the merry bells run.
+      And all the good people they danced and they sung,
+      And feasted and frolick'd I can't tell how long.
+  label: §8 wedding celebration + closing rhyme

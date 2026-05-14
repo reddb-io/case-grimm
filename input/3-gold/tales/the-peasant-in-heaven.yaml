@@ -1,0 +1,159 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-peasant-in-heaven
+khm: 167
+atu: "802"
+atu_name: The Peasant in Heaven
+canonical_source: ../../2-silver/canonical/the-peasant-in-heaven/canonical.txt
+title: The Peasant in Heaven
+
+
+entities:
+
+  characters:
+
+    peasant_heaven_peasant:
+      name: The Poor Pious Peasant
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_envy, affect_joy]
+      traits: [poor, pious, dead-soul, heaven-gate-waiter, partiality-complainer, equally-dear-blessed]
+      evidence: |
+        a poor pious peasant died
+
+    peasant_heaven_rich_lord:
+      name: The Very Rich Lord
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      affects: [affect_joy]
+      traits: [very-rich, dead-soul, rare-rich-saved-man, musically-welcomed]
+      evidence: |
+        a very rich, rich lord came there
+
+    peasant_heaven_saint_peter:
+      name: Saint Peter
+      being_type: being_divine
+      agency_modes: [agency_social_rank, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_testimony]
+      traits: [heaven-gatekeeper, key-holder, sequential-admitter, class-paradox-interpreter]
+      evidence: |
+        Saint Peter came with the key
+
+    peasant_heaven_angels:
+      name: The Angels
+      being_type: being_divine
+      agency_modes: [agency_social_rank, agency_music]
+      affects: [affect_joy]
+      traits: [heavenly-welcomers, affectionate-receivers, music-makers]
+      evidence: |
+        the angels came to meet him
+
+  magic_objects:
+
+    obj_peasant_heaven_key:
+      name: Saint Peter's Key
+      object_kind: token
+      attributes:
+        function: opens the gate of heaven and marks Saint Peter's gatekeeping office
+      evidence: |
+        Saint Peter came with the key
+
+  locations:
+
+    loc_peasant_heaven_gate:
+      name: The Gate of Heaven
+      instance_of: loc_heaven
+      threshold_type: threshold_doorway
+      evidence: |
+        arrived before the gate of heaven
+
+    loc_peasant_heaven_inside:
+      name: Heaven Within the Gate
+      instance_of: loc_heaven
+      evidence: |
+        how they were making music, and singing within
+
+
+classifications:
+
+  world_laws:
+    - law_heavenly_rejoicing_marks_rare_rich_salvation
+
+  moral_regimes:
+    - moral_heavenly_equality
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_social_rank
+    - agency_music
+    - agency_object_mediation
+
+  affects_driving:
+    - affect_joy
+    - affect_envy
+
+  symbol_numbers:
+    - num_100
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: peasant_heaven_peasant,
+      scene: "a poor pious peasant dies and arrives at heaven's gate" }
+  - { function: func_arrival, order: 2, actor: peasant_heaven_rich_lord,
+      scene: "a very rich lord arrives at the gate at the same time" }
+  - { function: func_admission, order: 3, actor: peasant_heaven_saint_peter,
+      beneficiary: peasant_heaven_rich_lord, scene: "Saint Peter opens the door and lets the rich man in first" }
+  - { function: func_delay, order: 4, actor: peasant_heaven_saint_peter,
+      victim: peasant_heaven_peasant, scene: "Saint Peter apparently does not see the peasant and shuts the door again" }
+  - { function: func_celebration, order: 5, actor: peasant_heaven_angels,
+      beneficiary: peasant_heaven_rich_lord, scene: "heaven receives the rich man with music and singing" }
+  - { function: func_admission, order: 6, actor: peasant_heaven_saint_peter,
+      beneficiary: peasant_heaven_peasant, scene: "Saint Peter opens the gate again and admits the peasant" }
+  - { function: func_complaint, order: 7, actor: peasant_heaven_peasant,
+      scene: "the peasant says heaven seems as partial as earth" }
+  - { function: func_explanation, order: 8, actor: peasant_heaven_saint_peter,
+      scene: "Saint Peter explains that poor people enter daily, but a rich man only once in a hundred years" }
+
+
+edges:
+
+  # Arrival at the heavenly gate
+  - { from: peasant_heaven_peasant, to: loc_peasant_heaven_gate, label: ARRIVES_AT,
+      evidence: "arrived before the gate of heaven" }
+  - { from: peasant_heaven_rich_lord, to: loc_peasant_heaven_gate, label: ARRIVES_AT,
+      evidence: "came there who also wanted to get into heaven" }
+  - { from: peasant_heaven_saint_peter, to: obj_peasant_heaven_key, label: CARRIES,
+      evidence: "Saint Peter came with the key" }
+  - { from: peasant_heaven_saint_peter, to: loc_peasant_heaven_gate, label: OPENS,
+      evidence: "opened the door" }
+  - { from: peasant_heaven_saint_peter, to: peasant_heaven_rich_lord, label: ADMITS_FIRST,
+      evidence: "let the great man in" }
+  - { from: peasant_heaven_saint_peter, to: peasant_heaven_peasant, label: DELAYS_ADMISSION_OF,
+      evidence: "apparently did not see the peasant" }
+
+  # Music, quiet admission, and the class complaint
+  - { from: peasant_heaven_angels, to: peasant_heaven_rich_lord, label: RECEIVE_WITH_REJOICING,
+      evidence: "received in heaven with all kinds of rejoicing" }
+  - { from: peasant_heaven_angels, to: peasant_heaven_rich_lord, label: MAKE_MUSIC_FOR,
+      evidence: "they were making music, and singing within" }
+  - { from: peasant_heaven_saint_peter, to: peasant_heaven_peasant, label: ADMITS_AFTER_QUIET,
+      evidence: "opened the gate of heaven, and let the peasant in" }
+  - { from: peasant_heaven_angels, to: peasant_heaven_peasant, label: RECEIVE_WITH_AFFECTION,
+      evidence: "he was received with great affection" }
+  - { from: peasant_heaven_peasant, to: peasant_heaven_saint_peter, label: ASKS_ABOUT_SILENCE,
+      evidence: "asked Saint Peter how it was that they did not sing for him" }
+  - { from: peasant_heaven_peasant, to: loc_peasant_heaven_inside, label: ACCUSES_OF_PARTIALITY,
+      evidence: "there in heaven things were done with just as much partiality as on earth" }
+
+  # Heavenly equality and comic rarity
+  - { from: peasant_heaven_saint_peter, to: peasant_heaven_peasant, label: DENIES_PARTIALITY,
+      evidence: "By no means, thou art just as dear to us as any one else" }
+  - { from: moral_heavenly_equality, to: peasant_heaven_peasant, label: ASSURES_EQUAL_DELIGHT,
+      evidence: "wilt enjoy every heavenly delight that the rich man enjoys" }
+  - { from: law_heavenly_rejoicing_marks_rare_rich_salvation, to: peasant_heaven_rich_lord, label: EXPLAINS_REJOICING_FOR,
+      evidence: "a rich man like this does not come more than once in a hundred years" }

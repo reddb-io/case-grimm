@@ -1,0 +1,256 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: faithful-john
+khm: 6
+atu: '516'
+atu_name: Faithful John (the Servant Turned to Stone)
+canonical_source: ../../2-silver/canonical/faithful-john/canonical.txt
+title: Faithful John
+
+
+entities:
+
+  characters:
+
+    faithful_john:
+      name: Faithful John (Treue Johannes)
+      archetypes: [arc_faithful_servant]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_cunning]
+      existential_states: [state_petrified]
+      transformations: [transform_petrification, transform_resurrection_by_blood]
+      speech_acts_performed: [speech_promise, speech_prophecy]
+      affects: [affect_loyalty, affect_grief]
+      traits: [loyal-unto-death, silent-under-suspicion, prophet-overhearer]
+      evidence: |
+        "'I will not forsake him, and will serve him with fidelity,
+         even if it should cost me my life.'"
+
+    faithful_john_old_king:
+      name: The Old King (dying father)
+      archetypes: [arc_oath_enforcer, arc_prohibition_giver]
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      speech_acts_performed: [speech_command, speech_prohibition]
+      traits: [foreseeing, deathbed-binding]
+      evidence: |
+        "'thou shalt show him the whole castle... but the last chamber
+         in the long gallery, in which is the picture of the princess
+         of the Golden Dwelling, shalt thou not show.'"
+
+    faithful_john_young_king:
+      name: The Young King (son)
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      affects: [affect_love_at_first_sight, affect_grief]
+      traits: [curious, love-stricken, slow-to-trust-then-grateful]
+      evidence: |
+        "when he saw the portrait of the maiden... he fell fainting
+         to the ground."
+
+    faithful_john_princess:
+      name: The Princess of the Golden Dwelling
+      species: sp_human
+      affects: [affect_curiosity, affect_fear]
+      traits: [gold-loving, abducted-then-consenting]
+
+    faithful_john_ravens:
+      name: The Three Ravens (prophetic speakers)
+      species: sp_bird
+      being_type: being_spirit
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_prophecy]
+      traits: [overheard, three-voiced]
+      evidence: |
+        "Faithful John, who was sitting on the fore part of the
+         vessel, making music, saw three ravens in the air"
+
+    faithful_john_attendants:
+      name: The Attendants (envious courtiers)
+      archetypes: [arc_envious_witness]
+      species: sp_human
+      affects: [affect_envy]
+      traits: [misinterpreting, accusatory]
+      evidence: |
+        "the other attendants of the King, who after all were not
+         very fond of Faithful John, cried, 'How shameful!'"
+
+    faithful_john_first_son:
+      name: First Son (sacrificed for John's revival)
+      species: sp_human
+
+    faithful_john_second_son:
+      name: Second Son (sacrificed for John's revival)
+      species: sp_human
+
+    faithful_john_waiting_maid:
+      name: The Princess's Waiting-Maid (introduces merchant John)
+      species: sp_human
+
+  magic_objects:
+
+    obj_portrait_princess:
+      name: Portrait of the Princess of the Golden Dwelling
+      instance_of: obj_dangerous_portrait
+      object_kind: token
+      attributes:
+        material: gold + precious stones
+        effect: induces violent love at first sight
+      evidence: |
+        "it was so admirably painted that it seemed to breathe and live"
+
+    obj_golden_wares:
+      name: Five Tons of Gold Goldsmith's Work (lure for the princess)
+      object_kind: treasure
+
+    obj_chestnut_horse:
+      name: The Treacherous Chestnut Horse (would carry the king into the air)
+      object_kind: creature_object
+      attributes:
+        danger: would rise into the air carrying the king away
+      evidence: |
+        "a chestnut horse will leap forward to meet him, and the prince
+         will want to mount it, but if he does that, it will run away
+         with him, and rise up into the air"
+
+    obj_treacherous_bridal_garment:
+      name: The Treacherous Bridal Garment (sulphur and pitch in disguise)
+      object_kind: garment
+      attributes:
+        appearance: woven of gold and silver
+        substance: sulphur and pitch
+        danger: burns wearer to bone
+
+  locations:
+
+    loc_castle_faithful_john:
+      name: The King's Castle (with forbidden chamber)
+      instance_of: loc_castle
+      attributes:
+        forbidden_chamber: last room in the long gallery
+
+    loc_ship_faithful_john:
+      name: The Merchant's Ship (the abduction vessel)
+      instance_of: loc_ship
+
+    loc_sea_faithful_john:
+      name: The Sea (where the ravens fly above)
+      instance_of: loc_sea
+
+    loc_palace_golden_dwelling:
+      name: The Palace of the Princess of the Golden Dwelling
+      instance_of: loc_castle
+
+
+classifications:
+
+  world_laws:
+    - law_promise_binds_reality
+    - law_prohibition_invites_violation
+    - law_prophecy_compels_sacrifice
+    - law_blood_restores_petrified
+
+  moral_regimes:
+    - moral_reciprocal_sacrifice
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_cunning
+
+  affects_driving:
+    - affect_loyalty
+    - affect_love_at_first_sight
+
+  symbol_numbers:
+    - num_3   # three ravens, three dangers, three petrification-stages, three sacrifices
+
+
+propp:
+  - { function: func_interdiction, order: 1, actor: faithful_john_old_king,
+      scene: "deathbed prohibition: do not show the forbidden picture" }
+  - { function: func_violation, order: 2, actor: faithful_john_young_king,
+      scene: "demands the forbidden door opened; sees portrait; faints" }
+  - { function: func_lack, order: 3, victim: faithful_john_young_king,
+      scene: "lacks the princess; will go any distance to win her" }
+  - { function: func_departure, order: 4, actor: faithful_john_young_king,
+      scene: "sails with John, disguised as merchants, to the Golden Dwelling" }
+  - { function: func_difficult_task, order: 5, actor: faithful_john,
+      scene: "lure princess aboard the ship; carry her off across the sea" }
+  - { function: func_donor_test, order: 6, actor: faithful_john_ravens,
+      scene: "ravens prophesy three dangers + three release-paths with petrification cost" }
+  - { function: func_struggle, order: 7, actor: faithful_john,
+      scene: "kills chestnut horse; burns bridal garment; sucks three drops of blood from queen" }
+  - { function: func_branding, order: 8, victim: faithful_john,
+      scene: "courtiers misread acts; king orders execution" }
+  - { function: func_recognition, order: 9, actor: faithful_john,
+      scene: "from gallows, John reveals the prophecies — and turns to stone" }
+  - { function: func_difficult_task, order: 10, actor: faithful_john_young_king,
+      scene: "must sacrifice his two children's heads to revive John" }
+  - { function: func_victory, order: 11, scene: "John is revived; restores the children; mutual loyalty proven" }
+
+
+edges:
+
+  # The deathbed oath
+  - { from: faithful_john_old_king, to: faithful_john, label: COMMANDS,
+      attributes: { duty: foster-father, condition: silence-on-portrait },
+      evidence: "'If thou dost not promise me to teach him everything that he ought to know...'" }
+  - { from: faithful_john, to: faithful_john_old_king, label: PROMISES_TO,
+      evidence: "'I will not forsake him, and will serve him with fidelity, even if it should cost me my life.'" }
+  - { from: faithful_john_old_king, to: faithful_john, label: PROHIBITS,
+      attributes: { object: obj_portrait_princess },
+      evidence: "'the last chamber... shalt thou not show.'" }
+
+  # The violation
+  - { from: faithful_john_young_king, to: obj_portrait_princess, label: FALLS_IN_LOVE_AT_SIGHT,
+      evidence: "he fell fainting to the ground" }
+
+  # The bride-quest by abduction
+  - { from: faithful_john, to: faithful_john_princess, label: ABDUCTS,
+      attributes: { method: merchant-disguise, vessel: loc_ship_faithful_john },
+      evidence: "'I am betrayed! I am carried away'" }
+  - { from: faithful_john_princess, to: faithful_john_young_king, label: MARRIES,
+      attributes: { after: kidnapping-then-consent },
+      evidence: "she willingly consented to be his wife" }
+
+  # The prophetic overhearing
+  - { from: faithful_john_ravens, to: faithful_john, label: PROPHESIES,
+      attributes: { dangers: 3, cost-of-revealing: petrification },
+      evidence: "Faithful John... saw three ravens in the air, which came flying towards them" }
+  - { from: faithful_john, to: faithful_john_ravens, label: OVERHEARS }
+
+  # The three saving acts (each provokes courtiers' suspicion)
+  - { from: faithful_john, to: obj_chestnut_horse, label: KILLS,
+      evidence: "drew the pistol out of the holster, and shot the horse" }
+  - { from: faithful_john, to: obj_treacherous_bridal_garment, label: USES,
+      attributes: { action: burned-in-fire-with-gloves },
+      evidence: "seized it with gloves on, carried it quickly to the fire and burnt it" }
+  - { from: faithful_john, to: faithful_john_princess, label: RESCUES,
+      attributes: { method: sucked-three-drops-of-blood },
+      evidence: "knelt and sucked the three drops of blood from her right breast" }
+
+  # The accusation
+  - { from: faithful_john_attendants, to: faithful_john, label: ACCUSES,
+      evidence: "'How shameful to kill the beautiful animal'" }
+  - { from: faithful_john_young_king, to: faithful_john, label: COMMANDS,
+      attributes: { command: execution },
+      evidence: "'Throw him into a dungeon.'" }
+
+  # The revelation and petrification
+  - { from: faithful_john, to: faithful_john_young_king, label: REVEALS_TO,
+      attributes: { content: ravens-prophecies },
+      evidence: "he related how he had hearkened to the conversation of the ravens" }
+  - { from: faithful_john, to: speech_prophecy, label: PETRIFIES_BY,
+      evidence: "as Faithful John spoke the last word he had fallen down lifeless and become a stone." }
+
+  # The sacrifice and revival
+  - { from: faithful_john_young_king, to: faithful_john_first_son, label: SACRIFICES,
+      attributes: { purpose: revive-John },
+      evidence: "drew his sword, and with his own hand cut off the children's heads" }
+  - { from: faithful_john_young_king, to: faithful_john_second_son, label: SACRIFICES }
+  - { from: faithful_john_young_king, to: faithful_john, label: REVIVES_BY_BLOOD,
+      evidence: "when he had smeared the stone with their blood, life returned to it" }
+  - { from: faithful_john, to: faithful_john_first_son, label: RESTORES_TO,
+      attributes: { method: head-replaced-with-blood },
+      evidence: "took the heads of the children, put them on again, and rubbed the wounds with their blood" }
+  - { from: faithful_john, to: faithful_john_second_son, label: RESTORES_TO }

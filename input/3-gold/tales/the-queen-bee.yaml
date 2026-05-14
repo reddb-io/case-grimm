@@ -1,0 +1,293 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-queen-bee
+khm: 62
+atu: '554'
+atu_name: The Grateful Animals
+canonical_source: ../../2-silver/canonical/the-queen-bee/canonical.txt
+title: The Queen Bee
+
+
+entities:
+
+  characters:
+
+    queen_bee_simpleton:
+      name: Simpleton
+      archetypes: [arc_youngest_sibling]
+      species: sp_human
+      agency_modes: [agency_animal_aid, agency_speech, agency_endurance]
+      speech_acts_performed: [speech_command]
+      affects: [affect_pity, affect_grief]
+      traits: [youngest-brother, mocked-simpleton, animal-protector, weeping-task-hero, rightful-bride-chooser, future-king]
+      evidence: |
+        Leave the creatures in peace; I will not allow you to disturb
+        them.
+
+    queen_bee_eldest_brother:
+      name: The Eldest King's Son
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech]
+      existential_states: [state_petrified]
+      traits: [adventure-seeker, disorderly, mocker, animal-threatener, failed-pearl-seeker, stone-transformed]
+      evidence: |
+        he had only found one hundred, and what was written on the
+        table came to pass, and he was changed into stone.
+
+    queen_bee_second_brother:
+      name: The Second King's Son
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech]
+      existential_states: [state_petrified]
+      traits: [adventure-seeker, disorderly, mocker, animal-threatener, failed-pearl-seeker, stone-transformed]
+      evidence: |
+        he did not find more than two hundred pearls, and was changed
+        to stone.
+
+    queen_bee_ant_king:
+      name: The King of the Ants and His People
+      archetypes: [arc_animal_helper]
+      species: sp_ant
+      agency_modes: [agency_animal_aid, agency_endurance]
+      traits: [spared-ant-hill, collective-pearl-gatherer, first-task-helper]
+      evidence: |
+        the King of the ants whose life he had once saved, came with
+        five thousand ants
+
+    queen_bee_ducks:
+      name: The Saved Ducks
+      archetypes: [arc_animal_helper]
+      species: sp_duck
+      agency_modes: [agency_animal_aid]
+      traits: [lake-swimmers, spared-roasting-victims, diving-key-retrievers]
+      evidence: |
+        the ducks which he had saved, swam up to him, dived down
+
+    queen_bee_queen_bee:
+      name: The Queen of the Bees
+      archetypes: [arc_animal_helper]
+      species: sp_bee
+      agency_modes: [agency_animal_aid]
+      traits: [spared-from-fire, honey-knower, lip-taster, bride-identifier]
+      evidence: |
+        the Queen of the bees, which Simpleton had protected from the
+        fire
+
+    queen_bee_little_grey_man:
+      name: The Little Grey Man
+      archetypes: [arc_supernatural_donor]
+      being_type: being_dwarf
+      agency_modes: [agency_speech, agency_social_rank]
+      traits: [silent-host, locked-room-dweller, task-table-guide, enchantment-custodian]
+      evidence: |
+        a little grey man, who was sitting at a table.
+
+    queen_bee_youngest_princess:
+      name: The Youngest and Sweetest Princess
+      species: sp_human
+      existential_states: [state_enchanted_sleep]
+      agency_modes: [agency_social_rank]
+      traits: [sleeping-daughter, honey-eater, true-bride, dearest-princess]
+      evidence: |
+        the youngest a spoonful of honey.
+
+    queen_bee_elder_princesses:
+      name: The Two Elder Sleeping Princesses
+      species: sp_human
+      existential_states: [state_enchanted_sleep]
+      agency_modes: [agency_social_rank]
+      traits: [sleeping-daughters, sugar-eater, syrup-eater, sisters-brides]
+      evidence: |
+        the eldest a bit of sugar; the second a little syrup
+
+  magic_objects:
+
+    obj_queen_bee_princess_pearls:
+      name: The Thousand Princess Pearls
+      object_kind: treasure
+      attributes:
+        count: 1000
+        task: gather from beneath the moss before sunset
+      evidence: |
+        lay the princess’s pearls, a thousand in number
+
+    obj_queen_bee_bedchamber_key:
+      name: The King's Daughter's Bed-Chamber Key
+      object_kind: token
+      attributes:
+        task: retrieve from the lake
+      evidence: |
+        fetch out of the lake the key of the King’s daughter’s
+        bed-chamber.
+
+    obj_queen_bee_sweetmeats:
+      name: The Three Princess Sweetmeats
+      object_kind: food
+      attributes:
+        eldest: sugar
+        second: syrup
+        youngest: honey
+        function: taste-mark for identifying the youngest princess
+      evidence: |
+        were only to be distinguished by their having eaten different
+        sweetmeats
+
+    obj_queen_bee_stone_table:
+      name: The Stone Table of Three Tasks
+      object_kind: relic
+      attributes:
+        function: inscribed task-table that governs petrification or release
+      evidence: |
+        a stone table, on which were inscribed three tasks
+
+    obj_queen_bee_three_locked_door:
+      name: The Door with Three Locks and a Pane
+      object_kind: architecture
+      attributes:
+        function: final castle door behind which the little grey man sits
+      evidence: |
+        a door in which were three locks.
+
+    obj_queen_bee_stone_horses:
+      name: The Stone Horses in the Stables
+      object_kind: creature_object
+      attributes:
+        function: visible sign of the castle enchantment
+      evidence: |
+        stone horses were standing in the stables
+
+  locations:
+
+    loc_queen_bee_road:
+      name: The Brothers' Adventure Road
+      instance_of: loc_road
+      evidence: |
+        They all three travelled away together
+
+    loc_queen_bee_ant_hill:
+      name: The Ant-Hill
+      evidence: |
+        came to an ant-hill.
+
+    loc_queen_bee_lake:
+      name: The Lake of the Bed-Chamber Key
+      instance_of: loc_pond
+      evidence: |
+        came to a lake, on which a great number of ducks were swimming.
+
+    loc_queen_bee_bee_tree:
+      name: The Bee Tree
+      instance_of: loc_tree
+      evidence: |
+        the trunk of the tree where it was.
+
+    loc_queen_bee_enchanted_castle:
+      name: The Enchanted Castle of Stone and Sleep
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        arrived at a castle where stone horses were standing in the
+        stables
+
+    loc_queen_bee_forest:
+      name: The Mossy Forest of Pearls
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        in the forest, beneath the moss
+
+
+classifications:
+
+  world_laws:
+    - law_rescued_animals_repay_kindness
+    - law_curse_requires_counter_condition
+
+  moral_regimes:
+    - moral_kindness_rewarded
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_animal_aid
+    - agency_speech
+    - agency_endurance
+
+  affects_driving:
+    - affect_pity
+    - affect_grief
+
+  symbol_numbers:
+    - num_3
+    - num_7
+
+  threshold_types:
+    - threshold_doorway
+    - threshold_forest
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: queen_bee_eldest_brother,
+      scene: "two elder king's sons seek adventures and fall into disorderly living" }
+  - { function: func_departure, order: 2, actor: queen_bee_simpleton,
+      scene: "youngest son Simpleton sets out to seek his brothers" }
+  - { function: func_donor_test, order: 3, actor: queen_bee_simpleton,
+      scene: "Simpleton prevents his brothers from destroying ants, killing ducks, and burning bees" }
+  - { function: func_arrival, order: 4, actor: queen_bee_little_grey_man,
+      scene: "brothers enter enchanted castle and are hosted by the little grey man" }
+  - { function: func_difficult_task, order: 5, actor: queen_bee_eldest_brother,
+      scene: "eldest fails to find the thousand pearls and turns to stone" }
+  - { function: func_difficult_task, order: 6, actor: queen_bee_second_brother,
+      scene: "second brother finds only two hundred pearls and turns to stone" }
+  - { function: func_helper_intervention, order: 7, actor: queen_bee_ant_king,
+      scene: "ants gather all the pearls for Simpleton" }
+  - { function: func_helper_intervention, order: 8, actor: queen_bee_ducks,
+      scene: "ducks dive down and retrieve the bed-chamber key" }
+  - { function: func_helper_intervention, order: 9, actor: queen_bee_queen_bee,
+      scene: "queen bee tastes the princesses' lips and marks the honey-eating youngest" }
+  - { function: func_liquidation, order: 10, actor: queen_bee_simpleton,
+      scene: "enchantment ends; sleepers wake and petrified figures regain natural forms" }
+  - { function: func_wedding, order: 11, actor: queen_bee_simpleton,
+      scene: "Simpleton marries the youngest princess and later becomes king" }
+
+
+edges:
+
+  # Animal mercy
+  - { from: queen_bee_eldest_brother, to: queen_bee_ant_king, label: THREATENS,
+      evidence: "wanted to destroy it, to see the little ants creeping about in their terror" }
+  - { from: queen_bee_simpleton, to: queen_bee_ant_king, label: PROTECTS,
+      evidence: "Leave the creatures in peace; I will not allow you to disturb them." }
+  - { from: queen_bee_eldest_brother, to: queen_bee_ducks, label: THREATENS,
+      evidence: "wanted to catch a couple and roast them" }
+  - { from: queen_bee_simpleton, to: queen_bee_ducks, label: PROTECTS,
+      evidence: "Leave the creatures in peace, I will not suffer you to kill them." }
+  - { from: queen_bee_eldest_brother, to: queen_bee_queen_bee, label: THREATENS,
+      evidence: "make a fire beneath the tree, and suffocate the bees" }
+  - { from: queen_bee_simpleton, to: queen_bee_queen_bee, label: PROTECTS,
+      evidence: "Leave the creatures in peace, I will not allow you to burn them." }
+
+  # Castle tasks and failures
+  - { from: queen_bee_little_grey_man, to: obj_queen_bee_stone_table, label: SHOWS,
+      evidence: "conducted him to a stone table" }
+  - { from: obj_queen_bee_stone_table, to: queen_bee_eldest_brother, label: PETRIFIES_ON_FAILURE,
+      evidence: "he was changed into stone." }
+  - { from: obj_queen_bee_stone_table, to: queen_bee_second_brother, label: PETRIFIES_ON_FAILURE,
+      evidence: "was changed to stone." }
+  - { from: queen_bee_ant_king, to: obj_queen_bee_princess_pearls, label: GATHERS,
+      evidence: "got all the pearls together, and laid them in a heap." }
+  - { from: queen_bee_ducks, to: obj_queen_bee_bedchamber_key, label: RETRIEVES,
+      evidence: "dived down, and brought the key out of the water." }
+  - { from: queen_bee_queen_bee, to: queen_bee_youngest_princess, label: IDENTIFIES,
+      evidence: "remained sitting on the mouth which had eaten honey" }
+  - { from: queen_bee_queen_bee, to: obj_queen_bee_sweetmeats, label: READS_TASTE_OF,
+      evidence: "came and tasted the lips of all three" }
+
+  # Release and marriage
+  - { from: law_rescued_animals_repay_kindness, to: queen_bee_simpleton, label: ENABLES_SUCCESS_OF,
+      evidence: "which Simpleton had protected from the fire" }
+  - { from: loc_queen_bee_enchanted_castle, to: state_enchanted_sleep, label: RELEASES_FROM,
+      evidence: "everything was released from sleep" }
+  - { from: queen_bee_eldest_brother, to: state_petrified, label: RELEASED_FROM,
+      evidence: "those who had been turned to stone received once more their natural forms." }
+  - { from: queen_bee_simpleton, to: queen_bee_youngest_princess, label: MARRIES,
+      evidence: "Simpleton married the youngest and sweetest princess" }

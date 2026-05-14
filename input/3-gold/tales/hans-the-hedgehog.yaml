@@ -1,0 +1,556 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: hans-the-hedgehog
+khm: 108
+atu: '441'
+atu_name: Hans the Hedgehog
+canonical_source: ../../2-silver/canonical/hans-the-hedgehog/canonical.txt
+title: Hans the Hedgehog
+
+
+entities:
+
+  characters:
+
+    hans_hedgehog_form:
+      name: Hans the Hedgehog
+      archetypes: [arc_hybrid_outcast_bridegroom]
+      species: sp_hedgehog
+      being_type: being_animal_human_hybrid
+      agency_modes: [agency_music, agency_speech, agency_object_mediation, agency_endurance, agency_violence]
+      existential_states: [state_hidden_identity, state_transformed]
+      transformations: [transform_animal_human]
+      speech_acts_performed: [speech_bargain, speech_promise]
+      affects: [affect_joy, affect_anger]
+      traits: [half-hedgehog-half-boy, stove-outcast, bagpipe-player, rooster-rider, forest-herdsman, way-shower, promise-claimer, false-princess-punisher, skin-shed-bridegroom]
+      evidence: |
+        a child, that was a hedgehog in the upper part of his body, and a boy in the lower
+
+    hans_human_form:
+      name: Hans in Human Form
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_object_mediation]
+      existential_states: [state_hidden_identity]
+      affects: [affect_joy]
+      traits: [released-bridegroom, handsome-young-man, kingdom-heir, recognized-son]
+      evidence: |
+        he was delivered, and lay there in bed in human form
+
+    hans_countryman_father:
+      name: Hans's Countryman Father
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank, agency_object_mediation]
+      speech_acts_performed: [speech_wish, speech_command]
+      affects: [affect_anger, affect_shame, affect_joy]
+      traits: [rich-childless-peasant, mocked-father, angry-wisher, hedgehog-child-rejecter, forge-sender, final-recognizer]
+      evidence: |
+        I will have a child, even if it be a hedgehog
+
+    hans_mother:
+      name: Hans's Mother
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_fear, affect_maternal_love]
+      traits: [terrified-mother, unable-to-suckle-spiny-child, household-provisioner]
+      evidence: |
+        His mother could not suckle him, for he would have pricked her with his quills.
+
+    hans_rooster_mount:
+      name: The Shod Cock / Rooster Mount
+      species: sp_rooster
+      agency_modes: [agency_animal_aid, agency_object_mediation]
+      traits: [shod-cock, impossible-mount, tree-flyer, gate-leaper]
+      evidence: |
+        Hans the Hedgehog got on it, and rode away
+
+    hans_livestock_herd:
+      name: Hans's Swine and Asses
+      species: sp_pig
+      agency_modes: [agency_domestic_labor]
+      traits: [forest-herd, multiplying-property, village-slaughter-herd]
+      evidence: |
+        took swine and asses with him which he intended to keep in the forest
+
+    hans_first_king:
+      name: The First Lost King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning, agency_object_mediation]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_promise, speech_lie, speech_command]
+      affects: [affect_fear, affect_joy]
+      traits: [lost-king, false-bond-writer, daughter-withholder, gate-defender, coerced-promise-keeper]
+      evidence: |
+        instead of writing that he should have what he wanted, he had written that he should not have it
+
+    hans_first_princess:
+      name: The First King's Daughter
+      archetypes: [arc_reluctant_bride]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_disgust, affect_fear, affect_shame]
+      traits: [homecoming-daughter, false-promise-beneficiary, white-dressed-bride, wounded-returnee, disgraced-princess]
+      evidence: |
+        she never would have gone away with the Hedgehog
+
+    hans_second_king:
+      name: The Second Lost King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_object_mediation]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_promise, speech_command]
+      affects: [affect_fear, affect_grief, affect_joy]
+      traits: [lost-aged-king, honest-promise-writer, daughter-giver, watchmen-appointing-father, kingdom-giver]
+      evidence: |
+        wrote a promise to Hans the Hedgehog that he should have this
+
+    hans_second_princess:
+      name: The Second King's Daughter
+      archetypes: [arc_reluctant_bride]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_endurance, agency_speech]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_fear, affect_love, affect_joy]
+      traits: [filial-promise-keeper, frightened-bride, hedgehog-bride, human-hans-wife]
+      evidence: |
+        for love of her father, she would willingly go with this Hans if he came
+
+    hans_second_watchmen:
+      name: The Four Chamber Watchmen
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_object_mediation, agency_violence]
+      traits: [door-watchers, fire-keepers, skin-burners, release-assistants]
+      evidence: |
+        appoint four men to watch by the door of the chamber, and light a great fire
+
+    hans_physician:
+      name: The King's Physician
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_domestic_labor]
+      traits: [salve-healer, blackened-body-washer, human-form-restorer]
+      evidence: |
+        The King sent for his physician who washed him with precious salves
+
+  magic_objects:
+
+    obj_hans_bagpipes:
+      name: Hans's Bagpipes
+      instance_of: obj_bagpipes
+      object_kind: instrument
+      attributes:
+        function: draws the lost kings' attention to the hidden tree-top herdsman
+      evidence: |
+        do bring me bagpipes
+
+    obj_hans_written_false_bond:
+      name: The First King's False Written Bond
+      object_kind: token
+      attributes:
+        function: written evasion that tries to void the first-homecoming promise
+      evidence: |
+        I can write what I like
+
+    obj_hans_written_true_promise:
+      name: The Second King's Written Promise
+      object_kind: token
+      attributes:
+        function: binding document granting Hans whatever first meets the king at the palace
+      evidence: |
+        wrote a promise to Hans the Hedgehog that he should have this
+
+    obj_hans_hedgehog_skin:
+      name: Hans's Cast-Off Hedgehog Skin
+      instance_of: obj_cast_off_animal_skin
+      object_kind: garment
+      attributes:
+        function: removable animal exterior burned so Hans remains human
+      evidence: |
+        creep out of his hedgehog’s skin and leave it lying there by the bedside
+
+    obj_hans_chamber_fire:
+      name: The Chamber Fire
+      object_kind: material
+      attributes:
+        function: consumes the cast-off hedgehog skin before it can return
+      evidence: |
+        throw it in the fire, and stay by it until it was consumed
+
+    obj_hans_precious_salves:
+      name: The Physician's Precious Salves
+      object_kind: material
+      attributes:
+        function: washes the blackened released body into handsome human form
+      evidence: |
+        washed him with precious salves, and anointed him
+
+    obj_hans_first_princess_carriage:
+      name: The First Princess's Carriage and Six Horses
+      object_kind: creature_object
+      attributes:
+        function: royal marriage convoy that cannot overcome the false promise behind it
+      evidence: |
+        a carriage with six horses and magnificent attendants together with gold and possessions
+
+  locations:
+
+    loc_hans_countryman_house:
+      name: The Countryman's House
+      instance_of: loc_house
+      evidence: |
+        when he got home
+
+    loc_hans_stove_straw:
+      name: The Straw Behind the Stove
+      instance_of: loc_hearth
+      evidence: |
+        a little straw was put behind the stove, and Hans the Hedgehog was laid on it
+
+    loc_hans_town_fair:
+      name: The Town Fair
+      instance_of: loc_marketplace
+      evidence: |
+        there was a fair in the town
+
+    loc_hans_forge:
+      name: The Forge Where the Cock Is Shod
+      instance_of: loc_forge
+      evidence: |
+        do go to the forge and get the cock shod
+
+    loc_hans_forest:
+      name: The Great Forest of Hans's Herds
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        he intended to keep in the forest
+
+    loc_hans_tree_perch:
+      name: The High Tree Perch
+      instance_of: loc_tree
+      threshold_type: threshold_forest
+      evidence: |
+        he made the cock fly on to a high tree with him
+
+    loc_hans_first_courtyard:
+      name: The First King's Royal Courtyard
+      instance_of: loc_courtyard
+      threshold_type: threshold_gate
+      evidence: |
+        whatever he first met in the royal courtyard
+
+    loc_hans_second_courtyard:
+      name: The Second King's Royal Courtyard
+      instance_of: loc_courtyard
+      threshold_type: threshold_gate
+      evidence: |
+        whatsoever first met him in front of his royal palace
+
+    loc_hans_first_palace_gate:
+      name: The Guarded Gate of the First Kingdom
+      instance_of: loc_gate
+      threshold_type: threshold_gate
+      evidence: |
+        he spurred the cock and it flew up over the gate
+
+    loc_hans_second_palace:
+      name: The Second King's Palace
+      instance_of: loc_castle
+      evidence: |
+        lead him to the royal palace
+
+    loc_hans_second_bedchamber:
+      name: The Second Princess's Wedding Chamber
+      instance_of: loc_bedchamber
+      threshold_type: threshold_doorway
+      evidence: |
+        watch by the door of the chamber
+
+
+classifications:
+
+  world_laws:
+    - law_angry_wish_literalizes_birth
+    - law_first_homecoming_claims_promised_child
+    - law_promise_binds_reality
+    - law_burned_animal_skin_releases_human_form
+    - law_music_attracts
+
+  moral_regimes:
+    - moral_retributive
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_music
+    - agency_speech
+    - agency_object_mediation
+    - agency_social_rank
+    - agency_violence
+
+  affects_driving:
+    - affect_anger
+    - affect_disgust
+    - affect_fear
+    - affect_joy
+    - affect_love
+    - affect_shame
+
+  symbol_numbers:
+    - num_2
+    - num_4
+    - num_6
+
+  threshold_types:
+    - threshold_forest
+    - threshold_gate
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: hans_countryman_father
+    scene: Childlessness makes wealth incomplete and exposes the father to mockery.
+    evidence: |
+      one thing was still wanting in his happiness he had no children
+
+  - function: func_wish
+    order: 2
+    actor: hans_countryman_father
+    scene: The father's angry wish literally shapes the child as hedgehog and boy.
+    evidence: |
+      I will have a child, even if it be a hedgehog.
+
+  - function: func_departure
+    order: 3
+    actor: hans_hedgehog_form
+    scene: Hans takes bagpipes, has the cock shod, and leaves the parental house.
+    evidence: |
+      then I will ride away, and never come back again
+
+  - function: func_mediation
+    order: 4
+    actor: hans_hedgehog_form
+    scene: Beautiful bagpipe music attracts lost kings to the tree-top herdsman.
+    evidence: |
+      heard the music. He was astonished at it
+
+  - function: func_bargain
+    order: 5
+    actor: hans_hedgehog_form
+    scene: Hans offers each lost king the road home for a first-homecoming promise.
+    evidence: |
+      if he would give him for his own whatsoever first met him in front of his royal palace
+
+  - function: func_deception
+    order: 6
+    actor: hans_first_king
+    scene: The first king writes a false bond to evade the promise.
+    evidence: |
+      he had written that he should not have it
+
+  - function: func_claim
+    order: 7
+    actor: hans_hedgehog_form
+    scene: Hans returns from the forest herd to claim the promised daughters.
+    evidence: |
+      the King must give him what he had promised
+
+  - function: func_punishment
+    order: 8
+    actor: hans_hedgehog_form
+    victim: hans_first_princess
+    scene: The false promise is answered by bodily disgrace rather than marriage.
+    evidence: |
+      That is the reward of your falseness
+
+  - function: func_wedding
+    order: 9
+    actor: hans_second_princess
+    beneficiary: hans_hedgehog_form
+    scene: The second princess keeps the paternal promise despite fear.
+    evidence: |
+      She remembered however, that she could not change her mind
+
+  - function: func_transfiguration
+    order: 10
+    actor: hans_hedgehog_form
+    beneficiary: hans_human_form
+    scene: Watchmen burn the cast-off skin, and Hans is delivered into human form.
+    evidence: |
+      when the fire had consumed it, he was delivered
+
+  - function: func_recognition
+    order: 11
+    actor: hans_human_form
+    beneficiary: hans_countryman_father
+    scene: Hans returns as human son and receives paternal recognition.
+    evidence: |
+      Then Hans made himself known, and the old father rejoiced
+
+
+edges:
+
+  - from: hans_countryman_father
+    label: WISHES_FOR
+    to: hans_hedgehog_form
+    evidence: |
+      I will have a child, even if it be a hedgehog.
+
+  - from: law_angry_wish_literalizes_birth
+    label: REALIZED_BY
+    to: hans_hedgehog_form
+    evidence: |
+      a child, that was a hedgehog in the upper part of his body, and a boy in the lower
+
+  - from: hans_hedgehog_form
+    label: RESTS_AT
+    to: loc_hans_stove_straw
+    evidence: |
+      he lay there behind the stove for eight years
+
+  - from: hans_countryman_father
+    label: GIVES
+    to: obj_hans_bagpipes
+    evidence: |
+      gave Hans the Hedgehog the bagpipes
+
+  - from: hans_rooster_mount
+    label: IS_PREPARED_AT
+    to: loc_hans_forge
+    evidence: |
+      get the cock shod
+
+  - from: hans_hedgehog_form
+    label: RIDES
+    to: hans_rooster_mount
+    evidence: |
+      Hans the Hedgehog got on it, and rode away
+
+  - from: hans_hedgehog_form
+    label: HERDS
+    to: hans_livestock_herd
+    evidence: |
+      watched his asses and swine until the herd was quite large
+
+  - from: hans_hedgehog_form
+    label: PLAYS
+    to: obj_hans_bagpipes
+    evidence: |
+      he played his bagpipes, and made music which was very beautiful
+
+  - from: obj_hans_bagpipes
+    label: ATTRACTS
+    to: hans_first_king
+    evidence: |
+      a King came travelling by who had lost his way and heard the music
+
+  - from: obj_hans_bagpipes
+    label: ATTRACTS
+    to: hans_second_king
+    evidence: |
+      He likewise heard the beautiful music from a distance
+
+  - from: hans_hedgehog_form
+    label: GUIDES
+    to: hans_first_king
+    evidence: |
+      Hans the Hedgehog showed him the way, and he got safely home
+
+  - from: hans_hedgehog_form
+    label: GUIDES
+    to: hans_second_king
+    evidence: |
+      Hans rode on before him on the cock, and pointed out the way
+
+  - from: hans_first_king
+    label: PROMISES_TO
+    to: hans_hedgehog_form
+    evidence: |
+      promise him whatever he first met in the royal courtyard
+
+  - from: hans_first_king
+    label: DECEIVES
+    to: hans_hedgehog_form
+    evidence: |
+      instead of writing that he should have what he wanted, he had written that he should not have it
+
+  - from: hans_second_king
+    label: PROMISES_TO
+    to: hans_hedgehog_form
+    evidence: |
+      wrote a promise to Hans the Hedgehog that he should have this
+
+  - from: law_first_homecoming_claims_promised_child
+    label: CLAIMS
+    to: hans_first_princess
+    evidence: |
+      his daughter, when she saw him from afar, was so overjoyed that she ran to meet him
+
+  - from: law_first_homecoming_claims_promised_child
+    label: CLAIMS
+    to: hans_second_princess
+    evidence: |
+      she ran to meet him, threw her arms round his neck
+
+  - from: hans_hedgehog_form
+    label: WOUNDS
+    to: hans_first_princess
+    evidence: |
+      pierced her with his hedgehog’s skin until she bled all over
+
+  - from: hans_hedgehog_form
+    label: REJECTS
+    to: hans_first_princess
+    evidence: |
+      go your way, I will not have you!
+
+  - from: hans_second_princess
+    label: MARRIES
+    to: hans_hedgehog_form
+    evidence: |
+      Hans the Hedgehog was welcomed by her, and married to her
+
+  - from: hans_hedgehog_form
+    label: SHEDS
+    to: obj_hans_hedgehog_skin
+    evidence: |
+      stripped off the hedgehog’s skin, and left it lying by the bed
+
+  - from: hans_second_watchmen
+    label: BURNS
+    to: obj_hans_hedgehog_skin
+    evidence: |
+      threw it in the fire
+
+  - from: law_burned_animal_skin_releases_human_form
+    label: RELEASES
+    to: hans_human_form
+    evidence: |
+      when the fire had consumed it, he was delivered, and lay there in bed in human form
+
+  - from: hans_physician
+    label: HEALS
+    to: hans_human_form
+    evidence: |
+      washed him with precious salves, and anointed him
+
+  - from: hans_hedgehog_form
+    label: TRANSFORMS_INTO
+    to: hans_human_form
+    evidence: |
+      he became white, and was a handsome young man
+
+  - from: hans_human_form
+    label: INHERITS
+    to: loc_hans_second_palace
+    evidence: |
+      Hans the Hedgehog received the kingdom from the aged King
+
+  - from: hans_human_form
+    label: REVEALS_IDENTITY_TO
+    to: hans_countryman_father
+    evidence: |
+      Then Hans made himself known

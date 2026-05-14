@@ -1,0 +1,8 @@
+slug: the-devils-sooty-brother
+khm: 100
+atu: '475'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

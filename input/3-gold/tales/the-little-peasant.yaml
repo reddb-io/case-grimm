@@ -1,0 +1,344 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-little-peasant
+khm: 61
+atu: '1535/1737'
+atu_name: The Rich Peasant and the Poor Peasant / Trading Places with the Trickster in a Sack
+canonical_source: ../../2-silver/canonical/the-little-peasant/canonical.txt
+title: The Little Peasant
+
+
+entities:
+
+  characters:
+
+    little_peasant:
+      name: The Little Peasant
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_lie, speech_bargain]
+      affects: [affect_pity]
+      traits: [poor-villager, wooden-calf-maker, compensation-winner, false-oracle-owner, cowhide-profit-liar, barrel-escape-trickster, sole-heir]
+      evidence: |
+        There was a certain village wherein no one lived but really
+        rich peasants, and just one poor one
+
+    little_peasant_wife:
+      name: The Little Peasant's Wife
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      traits: [cow-wisher, wooden-calf-approver, household-partner]
+      evidence: |
+        The woman also liked the idea
+
+    little_peasant_carpenter:
+      name: The Gossip Carpenter
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [wooden-calf-maker, painter, gossip]
+      evidence: |
+        their gossip the carpenter cut and planed the calf
+
+    little_peasant_cowherd:
+      name: The Cow-Herd
+      archetypes: [arc_naive_victim]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [wooden-calf-carrier, pasture-leaver, legally-condemned]
+      evidence: |
+        condemned him to give the peasant a cow for the calf
+
+    little_peasant_mayor:
+      name: The Mayor
+      archetypes: [arc_naive_victim]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      affects: [affect_greed]
+      traits: [judge, servant-sender, death-sentencer, first-drowner]
+      evidence: |
+        The Mayor, however, said, “But my servant must go first.”
+
+    little_peasant_rich_peasants:
+      name: The Rich Peasants
+      archetypes: [arc_naive_victim]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_violence, agency_speech]
+      affects: [affect_greed, affect_anger]
+      traits: [wealthy-villagers, cow-killers, vengeance-seekers, sheep-underwater-believers, drowned-crowd]
+      evidence: |
+        Then the entire village was dead
+
+    little_peasant_millers_wife:
+      name: The Miller's Wife
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_cunning, agency_speech]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_fear]
+      traits: [secret-feaster, parson-hider, keys-keeper, exposed-adulteress]
+      evidence: |
+        The miller’s wife was alone in the house
+
+    little_peasant_miller:
+      name: The Miller
+      archetypes: [arc_naive_victim]
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      affects: [affect_curiosity]
+      traits: [returning-husband, oracle-believer, hidden-food-finder, fifth-prophecy-buyer]
+      evidence: |
+        The miller was curious, and said, “Let him foretell something
+        for once.”
+
+    little_peasant_parson:
+      name: The Parson in the Cupboard
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      affects: [affect_fear]
+      traits: [secret-guest, black-rascal-misrecognized, cupboard-prisoner, barrel-release-beneficiary]
+      evidence: |
+        the parson in the cupboard in the entrance.
+
+    little_peasant_shepherd:
+      name: The Ambitious Shepherd
+      archetypes: [arc_naive_victim]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_greed]
+      traits: [flock-owner, mayor-wisher, barrel-substitute, drowned-dupe]
+      evidence: |
+        the very shepherd who as the peasant knew had long been wishing
+        to be Mayor
+
+    little_peasant_raven:
+      name: The Broken-Winged Raven
+      species: sp_bird
+      agency_modes: [agency_object_mediation]
+      traits: [injured, wrapped-in-skin, pinched-to-croak, false-oracle-body]
+      evidence: |
+        there sat a raven with broken wings
+
+  magic_objects:
+
+    obj_little_peasant_wooden_calf:
+      name: The Painted Wooden Calf
+      object_kind: creature_object
+      attributes:
+        function: fake calf that produces legal compensation as a cow
+      evidence: |
+        make us a wooden calf, and paint it brown
+
+    obj_little_peasant_compensation_cow:
+      name: The Compensation Cow
+      object_kind: creature_object
+      attributes:
+        function: cow awarded by the mayor for the missing wooden calf
+      evidence: |
+        give the peasant a cow for the calf
+
+    obj_little_peasant_cow_skin:
+      name: The Cow Skin
+      object_kind: material
+      attributes:
+        function: wraps the raven and becomes the alleged profitable skin
+      evidence: |
+        wanted to sell the skin there
+
+    obj_little_peasant_raven:
+      name: The Raven-Oracle Bundle
+      instance_of: obj_false_oracle_raven
+      object_kind: creature_object
+      attributes:
+        function: fake soothsayer made to reveal hidden feast and parson
+      evidence: |
+        I have a soothsayer inside it.
+
+    obj_little_peasant_hidden_feast:
+      name: The Hidden Feast
+      object_kind: food
+      attributes:
+        contents: [wine, roast_meat, salad, cakes]
+        function: concealed evidence revealed by the false oracle
+      evidence: |
+        roast meat, salad, cakes, and wine.
+
+    obj_little_peasant_keys:
+      name: The Miller's Wife's Keys
+      object_kind: token
+      attributes:
+        function: keys surrendered to open the cupboard after the devil prophecy
+      evidence: |
+        went to bed and took all the keys with her.
+
+    obj_little_peasant_holey_barrel:
+      name: The Pierced Drowning Barrel
+      object_kind: material
+      attributes:
+        function: execution container used for the shepherd place-swap
+      evidence: |
+        a barrel pierced full of holes.
+
+    obj_little_peasant_sheep_flock:
+      name: The Shepherd's Flock of Sheep
+      object_kind: creature_object
+      attributes:
+        function: flock gained through the barrel substitution
+      evidence: |
+        with a flock of sheep
+
+  locations:
+
+    loc_little_peasant_village:
+      name: The Village of Rich Peasants
+      evidence: |
+        no one lived but really rich peasants
+
+    loc_little_peasant_pasture:
+      name: The Pasture of the Wooden Calf
+      instance_of: loc_meadow
+      evidence: |
+        carried it to the pasture
+
+    loc_little_peasant_mill:
+      name: The Miller's House
+      instance_of: loc_mill
+      evidence: |
+        he passed by a mill
+
+    loc_little_peasant_cupboard:
+      name: The Entrance Cupboard
+      instance_of: loc_house
+      evidence: |
+        the cupboard in the entrance
+
+    loc_little_peasant_town_merchant:
+      name: The Town Skin-Merchant
+      instance_of: loc_marketplace
+      evidence: |
+        When she came to the merchant in the town
+
+    loc_little_peasant_water:
+      name: The Drowning Water
+      instance_of: loc_brook
+      evidence: |
+        rolled the barrel down into the water.
+
+
+classifications:
+
+  world_laws:
+    - law_false_oracle_exposes_hidden_goods
+    - law_fatal_imitation_of_trickster_profit
+    - law_execution_container_invites_place_swap
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_object_mediation
+    - agency_social_rank
+
+  affects_driving:
+    - affect_greed
+    - affect_curiosity
+    - affect_fear
+    - affect_anger
+
+  symbol_numbers: []
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_lack, order: 1, actor: little_peasant,
+      scene: "poor peasant and wife lack a cow and have a wooden calf made" }
+  - { function: func_trickery, order: 2, actor: little_peasant,
+      scene: "wooden calf is placed with the herd and treated as a missing animal" }
+  - { function: func_gain, order: 3, actor: little_peasant,
+      scene: "mayor condemns the cow-herd to compensate the peasant with a real cow" }
+  - { function: func_departure, order: 4, actor: little_peasant,
+      scene: "after killing the cow, the peasant carries its skin toward town" }
+  - { function: func_donor_encounter, order: 5, actor: little_peasant_raven,
+      scene: "peasant pities broken-winged raven and wraps it in the cow skin" }
+  - { function: func_trickery, order: 6, actor: little_peasant,
+      scene: "peasant uses raven croaks as false prophecy to reveal hidden feast and parson" }
+  - { function: func_gain, order: 7, actor: little_peasant,
+      scene: "miller pays three hundred thalers for the fifth prophecy" }
+  - { function: func_false_report, order: 8, actor: little_peasant,
+      scene: "peasant says he sold the cow skin in town for three hundred thalers" }
+  - { function: func_punishment_reversed, order: 9, actor: little_peasant_rich_peasants,
+      scene: "rich peasants kill their cows and fail to sell the skins profitably" }
+  - { function: func_villainy, order: 10, actor: little_peasant_rich_peasants,
+      scene: "peasants sentence the little peasant to be drowned in a pierced barrel" }
+  - { function: func_trickery, order: 11, actor: little_peasant,
+      scene: "peasant persuades the ambitious shepherd that the barrel makes one mayor" }
+  - { function: func_escape, order: 12, actor: little_peasant,
+      scene: "shepherd takes the barrel and the peasant escapes with the flock" }
+  - { function: func_false_report, order: 13, actor: little_peasant,
+      scene: "peasant says he found sheep beneath the water" }
+  - { function: func_victory, order: 14, actor: little_peasant,
+      scene: "mayor and rich peasants drown themselves seeking underwater sheep; peasant inherits village" }
+
+
+edges:
+
+  # Wooden calf compensation
+  - { from: little_peasant, to: obj_little_peasant_wooden_calf, label: COMMISSIONS,
+      evidence: "make us a wooden calf, and paint it brown" }
+  - { from: little_peasant_carpenter, to: obj_little_peasant_wooden_calf, label: MAKES,
+      evidence: "cut and planed the calf, and painted it" }
+  - { from: little_peasant_cowherd, to: obj_little_peasant_wooden_calf, label: CARRIES_TO_PASTURE,
+      evidence: "carried it to the pasture" }
+  - { from: little_peasant, to: little_peasant_cowherd, label: ACCUSES,
+      evidence: "I must have my beast back again." }
+  - { from: little_peasant_mayor, to: little_peasant_cowherd, label: CONDEMNS_TO_COMPENSATE,
+      evidence: "condemned him to give the peasant a cow" }
+
+  # False oracle at the mill
+  - { from: little_peasant, to: little_peasant_raven, label: RESCUES,
+      evidence: "out of pity he took him and wrapped him in the skin." }
+  - { from: little_peasant_millers_wife, to: little_peasant_parson, label: HIDES,
+      evidence: "the parson in the cupboard in the entrance." }
+  - { from: little_peasant_millers_wife, to: obj_little_peasant_hidden_feast, label: HIDES,
+      evidence: "the wine under the pillow, the salad on the bed, the cakes under it" }
+  - { from: little_peasant, to: obj_little_peasant_raven, label: STAGES_AS_ORACLE,
+      evidence: "I have a soothsayer inside it." }
+  - { from: obj_little_peasant_raven, to: obj_little_peasant_hidden_feast, label: FALSELY_REVEALS,
+      evidence: "there is some wine hidden under the pillow." }
+  - { from: obj_little_peasant_raven, to: little_peasant_parson, label: FALSELY_REVEALS_AS_DEVIL,
+      evidence: "the Devil is hiding outside there in the cupboard" }
+  - { from: little_peasant_miller, to: little_peasant, label: PAYS_FOR_PROPHECY,
+      evidence: "until they agreed on three hundred thalers." }
+  - { from: little_peasant_parson, to: loc_little_peasant_cupboard, label: FLEES_FROM,
+      evidence: "The parson ran out as fast as he could" }
+
+  # Fatal imitation of profit
+  - { from: little_peasant, to: little_peasant_mayor, label: LIES_TO,
+      evidence: "I sold my cow’s skin in the town, for three hundred thalers." }
+  - { from: little_peasant_rich_peasants, to: law_fatal_imitation_of_trickster_profit, label: ENACTS,
+      evidence: "killed all their cows, and stripped off their skins" }
+  - { from: little_peasant_rich_peasants, to: little_peasant, label: SENTENCES_TO_DROWN,
+      evidence: "sentenced to death, and was to be rolled into the water" }
+
+  # Barrel exchange and water-lambs
+  - { from: little_peasant, to: little_peasant_parson, label: ASKS_RELEASE_FROM,
+      evidence: "I set you free from the cupboard, set me free from the barrel." }
+  - { from: little_peasant, to: little_peasant_shepherd, label: DECEIVES,
+      evidence: "They want to make me Mayor, if I will but put myself in the barrel" }
+  - { from: little_peasant_shepherd, to: obj_little_peasant_holey_barrel, label: ENTERS,
+      evidence: "The shepherd was willing, and got in" }
+  - { from: little_peasant, to: obj_little_peasant_sheep_flock, label: TAKES,
+      evidence: "then he took the shepherd’s flock for himself" }
+  - { from: little_peasant_rich_peasants, to: little_peasant_shepherd, label: DROWNS_IN_PLACE_OF,
+      evidence: "they rolled the barrel down into the water." }
+  - { from: little_peasant, to: little_peasant_rich_peasants, label: LURES_TO_DROWN,
+      evidence: "there were pretty meadows on which a number of lambs were feeding" }
+  - { from: little_peasant_mayor, to: loc_little_peasant_water, label: JUMPS_INTO,
+      evidence: "So he jumped in; splash! went the water" }
+  - { from: little_peasant_rich_peasants, to: loc_little_peasant_water, label: DROWNS_IN,
+      evidence: "the whole crowd plunged in after him as one man." }
+  - { from: little_peasant, to: loc_little_peasant_village, label: INHERITS,
+      evidence: "as sole heir, became a rich man." }

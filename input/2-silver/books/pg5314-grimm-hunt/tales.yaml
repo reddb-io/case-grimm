@@ -1,0 +1,2305 @@
+book_id: pg5314-grimm-hunt
+source_file: ../../1-bronze/pg5314.txt
+total: 211
+tales:
+- khm: 1
+  khm_variant: false
+  title: The Frog King, or Iron Henry
+  title_de: Der Froschkönig oder der eiserne Heinrich
+  slug: the-frog-king-or-iron-henry
+  body_title: The Frog-King, or Iron Henry
+  kind: tale
+  atu: '440'
+  word_count: 1410
+  char_count: 7304
+  language: en
+- khm: 2
+  khm_variant: false
+  title: Cat and Mouse in Partnership
+  title_de: Katze und Maus in Gesellschaft
+  slug: cat-and-mouse-in-partnership
+  body_title: Cat and Mouse in Partnership
+  kind: tale
+  atu: '15'
+  word_count: 975
+  char_count: 5065
+  language: en
+- khm: 3
+  khm_variant: false
+  title: Our Lady’s Child
+  title_de: Marienkind
+  slug: our-ladys-child
+  body_title: Our Lady’s Child
+  kind: tale
+  atu: '710'
+  word_count: 1899
+  char_count: 9859
+  language: en
+- khm: 4
+  khm_variant: false
+  title: The Story of the Youth Who Went Forth to Learn What Fear Was
+  title_de: Märchen von einem, der auszog, das Fürchten zu lernen
+  slug: the-story-of-the-youth-who-went-forth-to-learn-what-fear-was
+  body_title: The Story of the Youth Who Went Forth to Learn What Fear Was
+  kind: tale
+  atu: '326'
+  word_count: 3800
+  char_count: 19560
+  language: en
+- khm: 5
+  khm_variant: false
+  title: The Wolf and the Seven Young Kids
+  title_de: Der Wolf und die sieben jungen Geißlein
+  slug: the-wolf-and-the-seven-young-kids
+  body_title: The Wolf and the Seven Little Kids
+  kind: tale
+  atu: '123'
+  word_count: 1107
+  char_count: 5737
+  language: en
+- khm: 6
+  khm_variant: false
+  title: Faithful John
+  title_de: Der treue Johannes
+  slug: faithful-john
+  body_title: Faithful John
+  kind: tale
+  atu: '516'
+  word_count: 3128
+  char_count: 16475
+  language: en
+- khm: 7
+  khm_variant: false
+  title: The Good Bargain
+  title_de: Der gute Handel
+  slug: the-good-bargain
+  body_title: The Good Bargain
+  kind: tale
+  atu: '1642'
+  word_count: 1709
+  char_count: 8887
+  language: en
+- khm: 8
+  khm_variant: false
+  title: The Strange Musician
+  title_de: Der wunderliche Spielmann
+  slug: the-strange-musician
+  body_title: The Wonderful Musician
+  kind: tale
+  atu: '151'
+  word_count: 1062
+  char_count: 5587
+  language: en
+- khm: 9
+  khm_variant: false
+  title: The Twelve Brothers
+  title_de: Die zwölf Brüder
+  slug: the-twelve-brothers
+  body_title: The Twelve Brothers
+  kind: tale
+  atu: '451'
+  word_count: 1975
+  char_count: 10511
+  language: en
+- khm: 10
+  khm_variant: false
+  title: The Pack of Ragamuffins
+  title_de: Das Lumpengesindel
+  slug: the-pack-of-ragamuffins
+  body_title: The Pack of Ragamuffins
+  kind: tale
+  atu: '210'
+  word_count: 812
+  char_count: 4109
+  language: en
+- khm: 11
+  khm_variant: false
+  title: Little Brother and Little Sister
+  title_de: Brüderchen und Schwesterchen
+  slug: little-brother-and-little-sister
+  body_title: Little Brother and Little Sister
+  kind: tale
+  atu: '450'
+  word_count: 2420
+  char_count: 12209
+  language: en
+- khm: 12
+  khm_variant: false
+  title: Rapunzel
+  title_de: Rapunzel
+  slug: rapunzel
+  body_title: Rapunzel
+  kind: tale
+  atu: '310'
+  word_count: 1433
+  char_count: 7444
+  language: en
+- khm: 13
+  khm_variant: false
+  title: The Three Little Men in the Forest
+  title_de: Die drei Männlein im Walde
+  slug: the-three-little-men-in-the-forest
+  body_title: The Three Little Men in the Wood
+  kind: tale
+  atu: '403'
+  word_count: 2035
+  char_count: 10605
+  language: en
+- khm: 14
+  khm_variant: false
+  title: The Three Spinning Women
+  title_de: Die drei Spinnerinnen
+  slug: the-three-spinning-women
+  body_title: The Three Spinners
+  kind: tale
+  atu: '501'
+  word_count: 907
+  char_count: 4783
+  language: en
+- khm: 15
+  khm_variant: false
+  title: Hansel and Gretel
+  title_de: Hänsel und Gretel
+  slug: hansel-and-gretel
+  body_title: Hansel and Grethel
+  kind: tale
+  atu: 327A
+  word_count: 2946
+  char_count: 15488
+  language: en
+- khm: 16
+  khm_variant: false
+  title: The Three Snake-Leaves
+  title_de: Die drei Schlangenblätter
+  slug: the-three-snake-leaves
+  body_title: The Three Snake-Leaves
+  kind: tale
+  atu: '612'
+  word_count: 1437
+  char_count: 7364
+  language: en
+- khm: 17
+  khm_variant: false
+  title: The White Snake
+  title_de: Die weiße Schlange
+  slug: the-white-snake
+  body_title: The White Snake
+  kind: tale
+  atu: '673'
+  word_count: 1601
+  char_count: 8364
+  language: en
+- khm: 18
+  khm_variant: false
+  title: Straw, Coal, and Bean
+  title_de: Strohhalm, Kohle und Bohne
+  slug: straw-coal-and-bean
+  body_title: The Straw, the Coal, and the Bean
+  kind: tale
+  atu: '295'
+  word_count: 504
+  char_count: 2669
+  language: en
+- khm: 19
+  khm_variant: false
+  title: The Fisherman and His Wife
+  title_de: Von dem Fischer un syner Fru
+  slug: the-fisherman-and-his-wife
+  body_title: The Fisherman and His Wife
+  kind: tale
+  atu: '555'
+  word_count: 3061
+  char_count: 15628
+  language: en
+- khm: 20
+  khm_variant: false
+  title: The Brave Little Tailor
+  title_de: Das tapfere Schneiderlein
+  slug: the-brave-little-tailor
+  body_title: The Valiant Little Tailor
+  kind: tale
+  atu: '1640'
+  word_count: 3345
+  char_count: 17497
+  language: en
+- khm: 21
+  khm_variant: false
+  title: Cinderella
+  title_de: Aschenputtel
+  slug: cinderella
+  body_title: Cinderella
+  kind: tale
+  atu: 510A
+  word_count: 2632
+  char_count: 14006
+  language: en
+- khm: 22
+  khm_variant: false
+  title: The Riddle
+  title_de: Das Rätsel
+  slug: the-riddle
+  body_title: The Riddle
+  kind: tale
+  atu: '851'
+  word_count: 1147
+  char_count: 6091
+  language: en
+- khm: 23
+  khm_variant: false
+  title: The Mouse, the Bird, and the Sausage
+  title_de: Von dem Mäuschen, Vögelchen und der Bratwurst
+  slug: the-mouse-the-bird-and-the-sausage
+  body_title: The Mouse, the Bird, and the Sausage
+  kind: tale
+  atu: '85'
+  word_count: 629
+  char_count: 3263
+  language: en
+- khm: 24
+  khm_variant: false
+  title: Frau Holle
+  title_de: Frau Holle
+  slug: frau-holle
+  body_title: Mother Holle
+  kind: tale
+  atu: '480'
+  word_count: 1194
+  char_count: 6030
+  language: en
+- khm: 25
+  khm_variant: false
+  title: The Seven Ravens
+  title_de: Die sieben Raben
+  slug: the-seven-ravens
+  body_title: The Seven Ravens
+  kind: tale
+  atu: '451'
+  word_count: 944
+  char_count: 4928
+  language: en
+- khm: 26
+  khm_variant: false
+  title: Little Red-Cap
+  title_de: Rotkäppchen
+  slug: little-red-cap
+  body_title: Little Red-Cap
+  kind: tale
+  atu: '333'
+  word_count: 1383
+  char_count: 7414
+  language: en
+- khm: 27
+  khm_variant: false
+  title: The Bremen Town Musicians
+  title_de: Die Bremer Stadtmusikanten
+  slug: the-bremen-town-musicians
+  body_title: The Bremen Town-Musicians
+  kind: tale
+  atu: '130'
+  word_count: 1263
+  char_count: 6528
+  language: en
+- khm: 28
+  khm_variant: false
+  title: The Singing Bone
+  title_de: Der singende Knochen
+  slug: the-singing-bone
+  body_title: The Singing Bone
+  kind: tale
+  atu: '780'
+  word_count: 738
+  char_count: 3827
+  language: en
+- khm: 29
+  khm_variant: false
+  title: The Devil with the Three Golden Hairs
+  title_de: Der Teufel mit den drei goldenen Haaren
+  slug: the-devil-with-the-three-golden-hairs
+  body_title: The Devil With the Three Golden Hairs
+  kind: tale
+  atu: '461'
+  word_count: 2539
+  char_count: 13045
+  language: en
+- khm: 30
+  khm_variant: false
+  title: Little Louse and Little Flea
+  title_de: Läuschen und Flöhchen
+  slug: little-louse-and-little-flea
+  body_title: The Louse and the Flea
+  kind: tale
+  atu: '2022'
+  word_count: 455
+  char_count: 2597
+  language: en
+- khm: 31
+  khm_variant: false
+  title: The Girl without Hands
+  title_de: Das Mädchen ohne Hände
+  slug: the-girl-without-hands
+  body_title: The Girl Without Hands
+  kind: tale
+  atu: '706'
+  word_count: 2332
+  char_count: 11930
+  language: en
+- khm: 32
+  khm_variant: false
+  title: Clever Hans
+  title_de: Der gescheite Hans
+  slug: clever-hans
+  body_title: Clever Hans
+  kind: tale
+  atu: '1696'
+  word_count: 893
+  char_count: 5282
+  language: en
+- khm: 33
+  khm_variant: false
+  title: The Three Languages
+  title_de: Die drei Sprachen
+  slug: the-three-languages
+  body_title: The Three Languages
+  kind: tale
+  atu: '671'
+  word_count: 946
+  char_count: 4844
+  language: en
+- khm: 34
+  khm_variant: false
+  title: Clever Elsie
+  title_de: Die kluge Else
+  slug: clever-elsie
+  body_title: Clever Elsie
+  kind: tale
+  atu: '1450'
+  word_count: 1332
+  char_count: 6768
+  language: en
+- khm: 35
+  khm_variant: false
+  title: The Tailor in Heaven
+  title_de: Der Schneider im Himmel
+  slug: the-tailor-in-heaven
+  body_title: The Tailor in Heaven
+  kind: tale
+  atu: '800'
+  word_count: 774
+  char_count: 4066
+  language: en
+- khm: 36
+  khm_variant: false
+  title: The Wishing-table, the Gold-ass, and the Cudgel in the Sack
+  title_de: Tischchendeckdich, Goldesel und Knüppel aus dem Sack
+  slug: the-wishing-table-the-gold-ass-and-the-cudgel-in-the-sack
+  body_title: The Wishing-Table, the Gold-Ass, and the Cudgel in the Sack
+  kind: tale
+  atu: '563'
+  word_count: 3815
+  char_count: 20171
+  language: en
+- khm: 37
+  khm_variant: false
+  title: Thumbling
+  title_de: Daumesdick
+  slug: thumbling
+  body_title: Thumbling
+  kind: tale
+  atu: '700'
+  word_count: 2216
+  char_count: 11456
+  language: en
+- khm: 38
+  khm_variant: false
+  title: The Wedding of Mrs. Fox
+  title_de: Die Hochzeit der Frau Füchsin
+  slug: the-wedding-of-mrs-fox
+  body_title: The Wedding of Mrs. Fox
+  kind: tale
+  atu: '65'
+  word_count: 787
+  char_count: 4067
+  language: en
+- khm: 39
+  khm_variant: false
+  title: The Elves
+  title_de: Die Wichtelmänner
+  slug: the-elves
+  body_title: The Elves
+  kind: tale
+  atu: '503'
+  word_count: 1173
+  char_count: 6139
+  language: en
+- khm: 40
+  khm_variant: false
+  title: The Robber Bridegroom
+  title_de: Der Räuberbräutigam
+  slug: the-robber-bridegroom
+  body_title: The Robber Bridegroom
+  kind: tale
+  atu: '955'
+  word_count: 1384
+  char_count: 7217
+  language: en
+- khm: 41
+  khm_variant: false
+  title: Herr Korbes
+  title_de: Herr Korbes
+  slug: herr-korbes
+  body_title: Herr Korbes
+  kind: tale
+  atu: '210'
+  word_count: 391
+  char_count: 1975
+  language: en
+- khm: 42
+  khm_variant: false
+  title: The Godfather
+  title_de: Der Herr Gevatter
+  slug: the-godfather
+  body_title: The Godfather
+  kind: tale
+  atu: '332'
+  word_count: 626
+  char_count: 3267
+  language: en
+- khm: 43
+  khm_variant: false
+  title: Frau Trude
+  title_de: Frau Trude
+  slug: frau-trude
+  body_title: Frau Trude
+  kind: tale
+  atu: '334'
+  word_count: 301
+  char_count: 1540
+  language: en
+- khm: 44
+  khm_variant: false
+  title: Godfather Death
+  title_de: Der Gevatter Tod
+  slug: godfather-death
+  body_title: Godfather Death
+  kind: tale
+  atu: '332'
+  word_count: 1224
+  char_count: 6306
+  language: en
+- khm: 45
+  khm_variant: false
+  title: Thumbling as Journeyman [Thumbling’s Travels]
+  title_de: Daumerlings Wanderschaft
+  slug: thumbling-as-journeyman-thumblings-travels
+  body_title: Thumbling as Journeyman
+  kind: tale
+  atu: '700'
+  word_count: 1614
+  char_count: 8564
+  language: en
+- khm: 46
+  khm_variant: false
+  title: Fitcher’s Bird [Fowler’s Fowl]
+  title_de: Fitchers Vogel
+  slug: fitchers-bird-fowlers-fowl
+  body_title: Fitcher’s Bird
+  kind: tale
+  atu: '311'
+  word_count: 1404
+  char_count: 7233
+  language: en
+- khm: 47
+  khm_variant: false
+  title: The Juniper-Tree
+  title_de: Von dem Machandelboom
+  slug: the-juniper-tree
+  body_title: The Juniper-Tree
+  kind: tale
+  atu: '720'
+  word_count: 3076
+  char_count: 16019
+  language: en
+- khm: 48
+  khm_variant: false
+  title: Old Sultan
+  title_de: Der alte Sultan
+  slug: old-sultan
+  body_title: Old Sultan
+  kind: tale
+  atu: '101'
+  word_count: 864
+  char_count: 4316
+  language: en
+- khm: 49
+  khm_variant: false
+  title: The Six Swans
+  title_de: Die sechs Schwäne
+  slug: the-six-swans
+  body_title: The Six Swans
+  kind: tale
+  atu: '451'
+  word_count: 1987
+  char_count: 10298
+  language: en
+- khm: 50
+  khm_variant: false
+  title: Little Briar-Rose
+  title_de: Dornröschen
+  slug: little-briar-rose
+  body_title: Briar-Rose
+  kind: tale
+  atu: '410'
+  word_count: 1318
+  char_count: 6942
+  language: en
+- khm: 51
+  khm_variant: false
+  title: Foundling-Bird
+  title_de: Fundevogel
+  slug: foundling-bird
+  body_title: Fundevogel (Bird-foundling)
+  kind: tale
+  atu: '313'
+  word_count: 956
+  char_count: 5003
+  language: en
+- khm: 52
+  khm_variant: false
+  title: King Thrushbeard
+  title_de: König Drosselbart
+  slug: king-thrushbeard
+  body_title: King Thrushbeard
+  kind: tale
+  atu: '900'
+  word_count: 1641
+  char_count: 8554
+  language: en
+- khm: 53
+  khm_variant: false
+  title: Little Snow-White
+  title_de: Sneewittchen
+  slug: little-snow-white
+  body_title: Little Snow-white
+  kind: tale
+  atu: '709'
+  word_count: 3102
+  char_count: 16362
+  language: en
+- khm: 54
+  khm_variant: false
+  title: The Knapsack, the Hat, and the Horn
+  title_de: Der Ranzen, das Hütlein und das Hörnlein
+  slug: the-knapsack-the-hat-and-the-horn
+  body_title: The Knapsack, the Hat, and the Horn
+  kind: tale
+  atu: '569'
+  word_count: 2324
+  char_count: 12286
+  language: en
+- khm: 55
+  khm_variant: false
+  title: Rumpelstiltskin
+  title_de: Rumpelstilzchen
+  slug: rumpelstiltskin
+  body_title: Rumpelstiltskin
+  kind: tale
+  atu: '500'
+  word_count: 1084
+  char_count: 5599
+  language: en
+- khm: 56
+  khm_variant: false
+  title: Sweetheart Roland
+  title_de: Der Liebste Roland
+  slug: sweetheart-roland
+  body_title: Sweetheart Roland
+  kind: tale
+  atu: '1119'
+  word_count: 1479
+  char_count: 7653
+  language: en
+- khm: 57
+  khm_variant: false
+  title: The Golden Bird
+  title_de: Der goldene Vogel
+  slug: the-golden-bird
+  body_title: The Golden Bird
+  kind: tale
+  atu: '550'
+  word_count: 3081
+  char_count: 15568
+  language: en
+- khm: 58
+  khm_variant: false
+  title: The Dog and the Sparrow
+  title_de: Der Hund und der Sperling
+  slug: the-dog-and-the-sparrow
+  body_title: The Dog and the Sparrow
+  kind: tale
+  atu: 248A
+  word_count: 1200
+  char_count: 6293
+  language: en
+- khm: 59
+  khm_variant: false
+  title: Frederick and Catherine
+  title_de: Der Frieder und das Catherlieschen
+  slug: frederick-and-catherine
+  body_title: Frederick and Catherine
+  kind: tale
+  atu: '1387'
+  word_count: 2573
+  char_count: 13532
+  language: en
+- khm: 60
+  khm_variant: false
+  title: The Two Brothers
+  title_de: Die zwei Brüder
+  slug: the-two-brothers
+  body_title: The Two Brothers
+  kind: tale
+  atu: '567'
+  word_count: 8568
+  char_count: 44522
+  language: en
+- khm: 61
+  khm_variant: false
+  title: The Little Peasant
+  title_de: Das Bürle
+  slug: the-little-peasant
+  body_title: The Little Peasant
+  kind: tale
+  atu: '1535'
+  word_count: 2076
+  char_count: 10839
+  language: en
+- khm: 62
+  khm_variant: false
+  title: The Queen Bee
+  title_de: Die Bienenkönigin
+  slug: the-queen-bee
+  body_title: The Queen Bee
+  kind: tale
+  atu: '554'
+  word_count: 808
+  char_count: 4323
+  language: en
+- khm: 63
+  khm_variant: false
+  title: The Three Feathers
+  title_de: Die drei Federn
+  slug: the-three-feathers
+  body_title: The Three Feathers
+  kind: tale
+  atu: '402'
+  word_count: 1016
+  char_count: 5453
+  language: en
+- khm: 64
+  khm_variant: false
+  title: The Golden Goose
+  title_de: Die goldene Gans
+  slug: the-golden-goose
+  body_title: The Golden Goose
+  kind: tale
+  atu: '571'
+  word_count: 1088
+  char_count: 5616
+  language: en
+- khm: 65
+  khm_variant: false
+  title: Allerleirauh [All-Kinds-Of-Fur]
+  title_de: Allerleirauh
+  slug: allerleirauh-all-kinds-of-fur
+  body_title: Allerleirauh
+  kind: tale
+  atu: 510B
+  word_count: 2176
+  char_count: 11234
+  language: en
+- khm: 66
+  khm_variant: false
+  title: The Hare’s Bride
+  title_de: Häsichenbraut
+  slug: the-hares-bride
+  body_title: The Hare’s Bride
+  kind: tale
+  atu: '311'
+  word_count: 483
+  char_count: 2590
+  language: en
+- khm: 67
+  khm_variant: false
+  title: The Twelve Huntsmen
+  title_de: Die zwölf Jäger
+  slug: the-twelve-huntsmen
+  body_title: The Twelve Huntsmen
+  kind: tale
+  atu: '884'
+  word_count: 1084
+  char_count: 5770
+  language: en
+- khm: 68
+  khm_variant: false
+  title: The Thief and His Master
+  title_de: De Gaudeif un sien Meester
+  slug: the-thief-and-his-master
+  body_title: The Thief and his Master
+  kind: tale
+  atu: '325'
+  word_count: 799
+  char_count: 4022
+  language: en
+- khm: 69
+  khm_variant: false
+  title: Jorinde and Joringel
+  title_de: Jorinde und Joringel
+  slug: jorinde-and-joringel
+  body_title: Jorinda and Joringel
+  kind: tale
+  atu: '405'
+  word_count: 937
+  char_count: 4929
+  language: en
+- khm: 70
+  khm_variant: false
+  title: The Three Children of Fortune
+  title_de: Die drei Glückskinder
+  slug: the-three-children-of-fortune
+  body_title: The Three Sons of Fortune
+  kind: tale
+  atu: '1650'
+  word_count: 982
+  char_count: 5154
+  language: en
+- khm: 71
+  khm_variant: false
+  title: How Six Men Got On in the World
+  title_de: Sechse kommen durch die ganze Welt
+  slug: how-six-men-got-on-in-the-world
+  body_title: How Six Men Got on in the World
+  kind: tale
+  atu: 513A
+  word_count: 2071
+  char_count: 10606
+  language: en
+- khm: 72
+  khm_variant: false
+  title: The Wolf and the Man
+  title_de: Der Wolf und der Mensch
+  slug: the-wolf-and-the-man
+  body_title: The Wolf and the Man
+  kind: tale
+  atu: '157'
+  word_count: 406
+  char_count: 2066
+  language: en
+- khm: 73
+  khm_variant: false
+  title: The Wolf and the Fox
+  title_de: Der Wolf und der Fuchs
+  slug: the-wolf-and-the-fox
+  body_title: The Wolf and the Fox
+  kind: tale
+  atu: '41'
+  word_count: 717
+  char_count: 3693
+  language: en
+- khm: 74
+  khm_variant: false
+  title: The Fox and His Cousin
+  title_de: Der Fuchs und die Frau Gevatterin
+  slug: the-fox-and-his-cousin
+  body_title: The Fox and His Cousin
+  kind: tale
+  atu: '65'
+  word_count: 374
+  char_count: 1943
+  language: en
+- khm: 75
+  khm_variant: false
+  title: The Fox and the Cat
+  title_de: Der Fuchs und die Katze
+  slug: the-fox-and-the-cat
+  body_title: The Fox and the Cat
+  kind: tale
+  atu: '105'
+  word_count: 288
+  char_count: 1489
+  language: en
+- khm: 76
+  khm_variant: false
+  title: The Pink
+  title_de: Die Nelke
+  slug: the-pink
+  body_title: The Pink
+  kind: tale
+  atu: '652'
+  word_count: 1800
+  char_count: 9100
+  language: en
+- khm: 77
+  khm_variant: false
+  title: Clever Grethel
+  title_de: Das kluge Gretel
+  slug: clever-grethel
+  body_title: Clever Grethel
+  kind: tale
+  atu: '1741'
+  word_count: 919
+  char_count: 4777
+  language: en
+- khm: 78
+  khm_variant: false
+  title: The Old Man and His Grandson
+  title_de: Der alte Großvater und der Enkel
+  slug: the-old-man-and-his-grandson
+  body_title: The Old Man and His Grandson
+  kind: tale
+  atu: 980B
+  word_count: 249
+  char_count: 1272
+  language: en
+- khm: 79
+  khm_variant: false
+  title: The Water-Nix
+  title_de: Die Wassernixe
+  slug: the-water-nix
+  body_title: The Water-Nix
+  kind: tale
+  atu: '313'
+  word_count: 301
+  char_count: 1569
+  language: en
+- khm: 80
+  khm_variant: false
+  title: The Death of the Little Hen
+  title_de: Von dem Tode des Hühnchens
+  slug: the-death-of-the-little-hen
+  body_title: The Death of the Little Hen
+  kind: tale
+  atu: '2021'
+  word_count: 668
+  char_count: 3376
+  language: en
+- khm: 81
+  khm_variant: false
+  title: Brother Lustig
+  title_de: Bruder Lustig
+  slug: brother-lustig
+  body_title: Brother Lustig
+  kind: tale
+  atu: '785'
+  word_count: 4142
+  char_count: 21542
+  language: en
+- khm: 82
+  khm_variant: false
+  title: Gambling Hansel
+  title_de: De Spielhansl
+  slug: gambling-hansel
+  body_title: Gambling Hansel
+  kind: tale
+  atu: '330'
+  word_count: 981
+  char_count: 5078
+  language: en
+- khm: 83
+  khm_variant: false
+  title: Hans in Luck
+  title_de: Hans im Glück
+  slug: hans-in-luck
+  body_title: Hans in Luck
+  kind: tale
+  atu: '1415'
+  word_count: 2047
+  char_count: 10252
+  language: en
+- khm: 84
+  khm_variant: false
+  title: Hans Married
+  title_de: Hans heiratet
+  slug: hans-married
+  body_title: Hans Married
+  kind: tale
+  atu: '859'
+  word_count: 443
+  char_count: 2295
+  language: en
+- khm: 85
+  khm_variant: false
+  title: The Gold-Children
+  title_de: Die Goldkinder
+  slug: the-gold-children
+  body_title: The Gold-Children
+  kind: tale
+  atu: '555'
+  word_count: 1928
+  char_count: 10032
+  language: en
+- khm: 86
+  khm_variant: false
+  title: The Fox and the Geese
+  title_de: Der Fuchs und die Gänse
+  slug: the-fox-and-the-geese
+  body_title: The Fox and the Geese
+  kind: tale
+  atu: '227'
+  word_count: 229
+  char_count: 1181
+  language: en
+- khm: 87
+  khm_variant: false
+  title: The Poor Man and the Rich Man
+  title_de: Der Arme und der Reiche
+  slug: the-poor-man-and-the-rich-man
+  body_title: The Poor Man and the Rich Man
+  kind: tale
+  atu: 750A
+  word_count: 1729
+  char_count: 8696
+  language: en
+- khm: 88
+  khm_variant: false
+  title: The Singing, Springing Lark
+  title_de: Das singende springende Löweneckerchen
+  slug: the-singing-springing-lark
+  body_title: The Singing, Springing Lark
+  kind: tale
+  atu: 425C
+  word_count: 2338
+  char_count: 12154
+  language: en
+- khm: 89
+  khm_variant: false
+  title: The Goose-Girl
+  title_de: Die Gänsemagd
+  slug: the-goose-girl
+  body_title: The Goose-Girl
+  kind: tale
+  atu: '533'
+  word_count: 2212
+  char_count: 11598
+  language: en
+- khm: 90
+  khm_variant: false
+  title: The Young Giant
+  title_de: Der junge Riese
+  slug: the-young-giant
+  body_title: The Young Giant
+  kind: tale
+  atu: 650A
+  word_count: 3091
+  char_count: 15836
+  language: en
+- khm: 91
+  khm_variant: false
+  title: The Gnome
+  title_de: Dat Erdmänneken
+  slug: the-gnome
+  body_title: The Gnome
+  kind: tale
+  atu: '301'
+  word_count: 1854
+  char_count: 9489
+  language: en
+- khm: 92
+  khm_variant: false
+  title: The King of the Golden Mountain
+  title_de: Der König vom goldenen Berg
+  slug: the-king-of-the-golden-mountain
+  body_title: The King of the Golden Mountain
+  kind: tale
+  atu: '400'
+  word_count: 2429
+  char_count: 12490
+  language: en
+- khm: 93
+  khm_variant: false
+  title: The Raven
+  title_de: Die Rabe
+  slug: the-raven
+  body_title: The Raven
+  kind: tale
+  atu: '401'
+  word_count: 2261
+  char_count: 11355
+  language: en
+- khm: 94
+  khm_variant: false
+  title: The Peasant’s Clever Daughter
+  title_de: Die kluge Bauerntochter
+  slug: the-peasants-clever-daughter
+  body_title: The Peasant’s Wise Daughter
+  kind: tale
+  atu: '875'
+  word_count: 1425
+  char_count: 7152
+  language: en
+- khm: 95
+  khm_variant: false
+  title: Old Hildebrand
+  title_de: Der alte Hildebrand
+  slug: old-hildebrand
+  body_title: Old Hildebrand
+  kind: tale
+  atu: 1360C
+  word_count: 1323
+  char_count: 6935
+  language: en
+- khm: 96
+  khm_variant: false
+  title: The Three Little Birds
+  title_de: De drei Vügelkens
+  slug: the-three-little-birds
+  body_title: The Three Little Birds
+  kind: tale
+  atu: '707'
+  word_count: 1440
+  char_count: 7394
+  language: en
+- khm: 97
+  khm_variant: false
+  title: The Water of Life
+  title_de: Das Wasser des Lebens
+  slug: the-water-of-life
+  body_title: The Water of Life
+  kind: tale
+  atu: '551'
+  word_count: 2319
+  char_count: 11931
+  language: en
+- khm: 98
+  khm_variant: false
+  title: Dr. Know-All
+  title_de: Doktor Allwissend
+  slug: dr-know-all
+  body_title: Doctor Knowall
+  kind: tale
+  atu: '1641'
+  word_count: 771
+  char_count: 3973
+  language: en
+- khm: 99
+  khm_variant: false
+  title: The Spirit in the Bottle
+  title_de: Der Geist im Glas
+  slug: the-spirit-in-the-bottle
+  body_title: The Spirit in the Bottle
+  kind: tale
+  atu: '331'
+  word_count: 1786
+  char_count: 9185
+  language: en
+- khm: 100
+  khm_variant: false
+  title: The Devil’s Sooty Brother
+  title_de: Des Teufels rußiger Bruder
+  slug: the-devils-sooty-brother
+  body_title: The Devil’s Sooty Brother
+  kind: tale
+  atu: '475'
+  word_count: 1263
+  char_count: 6465
+  language: en
+- khm: 101
+  khm_variant: false
+  title: Bearskin
+  title_de: Der Bärenhäuter
+  slug: bearskin
+  body_title: Bearskin
+  kind: tale
+  atu: '361'
+  word_count: 1980
+  char_count: 10272
+  language: en
+- khm: 102
+  khm_variant: false
+  title: The Willow-Wren and the Bear
+  title_de: Der Zaunkönig und der Bär
+  slug: the-willow-wren-and-the-bear
+  body_title: The Willow-Wren and the Bear
+  kind: tale
+  atu: '222'
+  word_count: 913
+  char_count: 4818
+  language: en
+- khm: 103
+  khm_variant: false
+  title: Sweet Porridge
+  title_de: Der süße Brei
+  slug: sweet-porridge
+  body_title: Sweet Porridge
+  kind: tale
+  atu: '565'
+  word_count: 245
+  char_count: 1252
+  language: en
+- khm: 104
+  khm_variant: false
+  title: Wise Folks
+  title_de: Die klugen Leute
+  slug: wise-folks
+  body_title: Wise Folks
+  kind: tale
+  atu: '1450'
+  word_count: 1582
+  char_count: 8044
+  language: en
+- khm: 105
+  khm_variant: false
+  title: Stories about Snakes
+  title_de: Märchen von der Unke
+  slug: stories-about-snakes
+  body_title: Stories about Snakes
+  kind: tale
+  atu: 285A
+  word_count: 518
+  char_count: 2764
+  language: en
+- khm: 106
+  khm_variant: false
+  title: The Poor Miller’s Boy and the Cat
+  title_de: Der arme Müllerbursch und das Kätzchen
+  slug: the-poor-millers-boy-and-the-cat
+  body_title: The Poor Miller’s Boy and the Cat
+  kind: tale
+  atu: 545B
+  word_count: 1398
+  char_count: 7140
+  language: en
+- khm: 107
+  khm_variant: false
+  title: The Two Travellers
+  title_de: Die beiden Wanderer
+  slug: the-two-travellers
+  body_title: The Two Travellers
+  kind: tale
+  atu: '613'
+  word_count: 4176
+  char_count: 21643
+  language: en
+- khm: 108
+  khm_variant: false
+  title: Hans the Hedgehog
+  title_de: Hans mein Igel
+  slug: hans-the-hedgehog
+  body_title: Hans the Hedgehog
+  kind: tale
+  atu: '441'
+  word_count: 2118
+  char_count: 10854
+  language: en
+- khm: 109
+  khm_variant: false
+  title: The Shroud
+  title_de: Das Totenhemdchen
+  slug: the-shroud
+  body_title: The Shroud
+  kind: tale
+  atu: '769'
+  word_count: 256
+  char_count: 1320
+  language: en
+- khm: 110
+  khm_variant: false
+  title: The Jew among Thorns
+  title_de: Der Jude im Dorn
+  slug: the-jew-among-thorns
+  body_title: The Jew Among Thorns
+  kind: tale
+  atu: '592'
+  word_count: 1792
+  char_count: 9210
+  language: en
+- khm: 111
+  khm_variant: false
+  title: The Skilful Huntsman
+  title_de: Der gelernte Jäger
+  slug: the-skilful-huntsman
+  body_title: The Skilful Huntsman
+  kind: tale
+  atu: '304'
+  word_count: 2349
+  char_count: 11966
+  language: en
+- khm: 112
+  khm_variant: false
+  title: The Flail from Heaven
+  title_de: Der Dreschflegel vom Himmel
+  slug: the-flail-from-heaven
+  body_title: The Flail From Heaven
+  kind: tale
+  atu: 1889K
+  word_count: 396
+  char_count: 1947
+  language: en
+- khm: 113
+  khm_variant: false
+  title: The Two Kings’ Children
+  title_de: De beiden Künigeskinner
+  slug: the-two-kings-children
+  body_title: The Two Kings’ Children
+  kind: tale
+  atu: '313'
+  word_count: 3418
+  char_count: 17559
+  language: en
+- khm: 114
+  khm_variant: false
+  title: The Cunning Little Tailor
+  title_de: Vom klugen Schneiderlein
+  slug: the-cunning-little-tailor
+  body_title: The Cunning Little Tailor
+  kind: tale
+  atu: '850'
+  word_count: 1216
+  char_count: 6254
+  language: en
+- khm: 115
+  khm_variant: false
+  title: The Bright Sun Brings It to Light
+  title_de: Die klare Sonne bringt’s an den Tag
+  slug: the-bright-sun-brings-it-to-light
+  body_title: The Bright Sun Brings It to Light
+  kind: tale
+  atu: '960'
+  word_count: 541
+  char_count: 2740
+  language: en
+- khm: 116
+  khm_variant: false
+  title: The Blue Light
+  title_de: Das blaue Licht
+  slug: the-blue-light
+  body_title: The Blue Light
+  kind: tale
+  atu: '562'
+  word_count: 1750
+  char_count: 9106
+  language: en
+- khm: 117
+  khm_variant: false
+  title: The Wilful Child
+  title_de: Das eigensinnige Kind
+  slug: the-wilful-child
+  body_title: The Wilful Child
+  kind: tale
+  atu: '779'
+  word_count: 142
+  char_count: 688
+  language: en
+- khm: 118
+  khm_variant: false
+  title: The Three Army Surgeons
+  title_de: Die drei Feldscherer
+  slug: the-three-army-surgeons
+  body_title: The Three Army-Surgeons
+  kind: tale
+  atu: '660'
+  word_count: 1087
+  char_count: 5599
+  language: en
+- khm: 119
+  khm_variant: false
+  title: The Seven Swabians
+  title_de: Die sieben Schwaben
+  slug: the-seven-swabians
+  body_title: The Seven Swabians
+  kind: tale
+  atu: '1297'
+  word_count: 1021
+  char_count: 5538
+  language: en
+- khm: 120
+  khm_variant: false
+  title: The Three Apprentices
+  title_de: Die drei Handwerksburschen
+  slug: the-three-apprentices
+  body_title: The Three Apprentices
+  kind: tale
+  atu: '360'
+  word_count: 1165
+  char_count: 6093
+  language: en
+- khm: 121
+  khm_variant: false
+  title: The King’s Son Who Feared Nothing
+  title_de: Der Königssohn, der sich vor nichts fürchtet
+  slug: the-kings-son-who-feared-nothing
+  body_title: The King’s Son Who Feared Nothing
+  kind: tale
+  atu: 590A
+  word_count: 2138
+  char_count: 10953
+  language: en
+- khm: 122
+  khm_variant: false
+  title: Donkey Cabbages
+  title_de: Der Krautesel
+  slug: donkey-cabbages
+  body_title: Donkey Cabbages
+  kind: tale
+  atu: '566'
+  word_count: 2634
+  char_count: 13611
+  language: en
+- khm: 123
+  khm_variant: false
+  title: The Old Woman in the Wood
+  title_de: Die Alte im Wald
+  slug: the-old-woman-in-the-wood
+  body_title: The Old Woman in the Wood
+  kind: tale
+  atu: '442'
+  word_count: 916
+  char_count: 4650
+  language: en
+- khm: 124
+  khm_variant: false
+  title: The Three Brothers
+  title_de: Die drei Brüder
+  slug: the-three-brothers
+  body_title: The Three Brothers
+  kind: tale
+  atu: '654'
+  word_count: 659
+  char_count: 3425
+  language: en
+- khm: 125
+  khm_variant: false
+  title: The Devil and His Grandmother
+  title_de: Der Teufel und seine Großmutter
+  slug: the-devil-and-his-grandmother
+  body_title: The Devil and his Grandmother
+  kind: tale
+  atu: '812'
+  word_count: 1248
+  char_count: 6518
+  language: en
+- khm: 126
+  khm_variant: false
+  title: Ferdinand the Faithful
+  title_de: Ferenand getrü un Ferenand ungetrü
+  slug: ferdinand-the-faithful
+  body_title: Ferdinand the Faithful
+  kind: tale
+  atu: '531'
+  word_count: 1991
+  char_count: 9953
+  language: en
+- khm: 127
+  khm_variant: false
+  title: The Iron Stove
+  title_de: Der Eisenofen
+  slug: the-iron-stove
+  body_title: The Iron Stove
+  kind: tale
+  atu: 425A
+  word_count: 2201
+  char_count: 11390
+  language: en
+- khm: 128
+  khm_variant: false
+  title: The Lazy Spinner
+  title_de: Die faule Spinnerin
+  slug: the-lazy-spinner
+  body_title: The Lazy Spinner
+  kind: tale
+  atu: '1405'
+  word_count: 767
+  char_count: 3803
+  language: en
+- khm: 129
+  khm_variant: false
+  title: The Four Skilful Brothers
+  title_de: Die vier kunstreichen Brüder
+  slug: the-four-skilful-brothers
+  body_title: The Four Skilful Brothers
+  kind: tale
+  atu: '653'
+  word_count: 1663
+  char_count: 8664
+  language: en
+- khm: 130
+  khm_variant: false
+  title: One-Eye, Two-Eyes, and Three-Eyes
+  title_de: Einäuglein, Zweiäuglein und Dreiäuglein
+  slug: one-eye-two-eyes-and-three-eyes
+  body_title: One-eye, Two-eyes, and Three-eyes
+  kind: tale
+  atu: '511'
+  word_count: 2641
+  char_count: 14189
+  language: en
+- khm: 131
+  khm_variant: false
+  title: Fair Katrinelje and Pif Paf Poltrie
+  title_de: Die schöne Katrinelje und Pif Paf Poltrie
+  slug: fair-katrinelje-and-pif-paf-poltrie
+  body_title: Fair Katrinelje and Pif-Paf-Poltrie
+  kind: tale
+  atu: '2019'
+  word_count: 304
+  char_count: 2022
+  language: en
+- khm: 132
+  khm_variant: false
+  title: The Fox and the Horse
+  title_de: Der Fuchs und das Pferd
+  slug: the-fox-and-the-horse
+  body_title: The Fox and the Horse
+  kind: tale
+  atu: 47A
+  word_count: 481
+  char_count: 2396
+  language: en
+- khm: 133
+  khm_variant: false
+  title: The Shoes that Were Danced to Pieces
+  title_de: Die zertanzten Schuhe
+  slug: the-shoes-that-were-danced-to-pieces
+  body_title: The Shoes That Were Danced to Pieces
+  kind: tale
+  atu: '306'
+  word_count: 1464
+  char_count: 7759
+  language: en
+- khm: 134
+  khm_variant: false
+  title: The Six Servants
+  title_de: Die sechs Diener
+  slug: the-six-servants
+  body_title: The Six Servants
+  kind: tale
+  atu: 513A
+  word_count: 2706
+  char_count: 13929
+  language: en
+- khm: 135
+  khm_variant: false
+  title: The White Bride and the Black One
+  title_de: Die weiße und die schwarze Braut
+  slug: the-white-bride-and-the-black-one
+  body_title: The White Bride and the Black One
+  kind: tale
+  atu: '403'
+  word_count: 1545
+  char_count: 8160
+  language: en
+- khm: 136
+  khm_variant: false
+  title: Iron John
+  title_de: Der Eisenhans
+  slug: iron-john
+  body_title: Iron John
+  kind: tale
+  atu: '502'
+  word_count: 3221
+  char_count: 16544
+  language: en
+- khm: 137
+  khm_variant: false
+  title: The Three Black Princesses
+  title_de: De drei schwatten Prinzessinnen
+  slug: the-three-black-princesses
+  body_title: The Three Black Princesses
+  kind: tale
+  atu: '870'
+  word_count: 710
+  char_count: 3595
+  language: en
+- khm: 138
+  khm_variant: false
+  title: Knoist and His Three Sons
+  title_de: Knoist un sine dre Sühne
+  slug: knoist-and-his-three-sons
+  body_title: Knoist and his Three Sons
+  kind: tale
+  atu: '1965'
+  word_count: 152
+  char_count: 754
+  language: en
+- khm: 139
+  khm_variant: false
+  title: The Maid of Brakel
+  title_de: Dat Mäken von Brakel
+  slug: the-maid-of-brakel
+  body_title: The Maid of Brakel
+  kind: tale
+  atu: '1476'
+  word_count: 133
+  char_count: 693
+  language: en
+- khm: 140
+  khm_variant: false
+  title: Domestic Servants
+  title_de: Das Hausgesinde
+  slug: domestic-servants
+  body_title: Domestic Servants
+  kind: tale
+  atu: '1940'
+  word_count: 147
+  char_count: 819
+  language: en
+- khm: 141
+  khm_variant: false
+  title: The Lambkin and the Little Fish
+  title_de: Das Lämmchen und Fischchen
+  slug: the-lambkin-and-the-little-fish
+  body_title: The Lambkin and the Little Fish
+  kind: tale
+  atu: '450'
+  word_count: 640
+  char_count: 3297
+  language: en
+- khm: 142
+  khm_variant: false
+  title: Simeli Mountain
+  title_de: Simeliberg
+  slug: simeli-mountain
+  body_title: Simeli Mountain
+  kind: tale
+  atu: '676'
+  word_count: 851
+  char_count: 4577
+  language: en
+- khm: 143
+  khm_variant: false
+  title: Going A-Travelling
+  title_de: Up Reisen gohn
+  slug: going-a-travelling
+  body_title: Going A-Travelling
+  kind: tale
+  atu: '1696'
+  word_count: 424
+  char_count: 2096
+  language: en
+- khm: 144
+  khm_variant: false
+  title: The Donkey
+  title_de: Das Eselein
+  slug: the-donkey
+  body_title: The Donkey
+  kind: tale
+  atu: '430'
+  word_count: 1296
+  char_count: 6678
+  language: en
+- khm: 145
+  khm_variant: false
+  title: The Ungrateful Son
+  title_de: Der undankbare Sohn
+  slug: the-ungrateful-son
+  body_title: The Ungrateful Son
+  kind: tale
+  atu: 980A
+  word_count: 168
+  char_count: 813
+  language: en
+- khm: 146
+  khm_variant: false
+  title: The Turnip
+  title_de: Die Rübe
+  slug: the-turnip
+  body_title: The Turnip
+  kind: tale
+  atu: 1689A
+  word_count: 1155
+  char_count: 5890
+  language: en
+- khm: 147
+  khm_variant: false
+  title: The Old Man Made Young Again
+  title_de: Das junggeglühte Männlein
+  slug: the-old-man-made-young-again
+  body_title: The Old Man Made Young Again
+  kind: tale
+  atu: '753'
+  word_count: 543
+  char_count: 2863
+  language: en
+- khm: 148
+  khm_variant: false
+  title: The Lord’s Animals and the Devil’s
+  title_de: Des Herrn und des Teufels Getier
+  slug: the-lords-animals-and-the-devils
+  body_title: The Lord’s Animals and the Devil’s
+  kind: tale
+  atu: 774E
+  word_count: 365
+  char_count: 1917
+  language: en
+- khm: 149
+  khm_variant: false
+  title: The Beam
+  title_de: Der Hahnenbalken
+  slug: the-beam
+  body_title: The Beam
+  kind: tale
+  atu: '987'
+  word_count: 282
+  char_count: 1462
+  language: en
+- khm: 150
+  khm_variant: false
+  title: The Old Beggar-Woman
+  title_de: Die alte Bettelfrau
+  slug: the-old-beggar-woman
+  body_title: The Old Beggar-Woman
+  kind: tale
+  atu: null
+  word_count: 164
+  char_count: 823
+  language: en
+- khm: 151
+  khm_variant: false
+  title: The Three Sluggards
+  title_de: Die drei Faulen
+  slug: the-three-sluggards
+  body_title: The Three Sluggards
+  kind: tale
+  atu: '1950'
+  word_count: 224
+  char_count: 1100
+  language: en
+- khm: 151
+  khm_variant: true
+  title: The Twelve Idle Servants
+  title_de: Die zwölf faulen Knechte
+  slug: the-twelve-idle-servants
+  body_title: The Twelve Idle Servants
+  kind: tale
+  atu: '1951'
+  word_count: 1112
+  char_count: 5341
+  language: en
+- khm: 152
+  khm_variant: false
+  title: The Shepherd Boy
+  title_de: Das Hirtenbüblein
+  slug: the-shepherd-boy
+  body_title: The Shepherd Boy
+  kind: tale
+  atu: 922A
+  word_count: 363
+  char_count: 1810
+  language: en
+- khm: 153
+  khm_variant: false
+  title: The Star-Money
+  title_de: Die Sterntaler
+  slug: the-star-money
+  body_title: The Star-Money
+  kind: tale
+  atu: '779'
+  word_count: 337
+  char_count: 1662
+  language: en
+- khm: 154
+  khm_variant: false
+  title: The Stolen Farthings
+  title_de: Der gestohlene Heller
+  slug: the-stolen-farthings
+  body_title: The Stolen Farthings
+  kind: tale
+  atu: '769'
+  word_count: 350
+  char_count: 1802
+  language: en
+- khm: 155
+  khm_variant: false
+  title: Brides on their Trial
+  title_de: Die Brautschau
+  slug: brides-on-their-trial
+  body_title: Brides On Their Trial
+  kind: tale
+  atu: '1452'
+  word_count: 155
+  char_count: 813
+  language: en
+- khm: 156
+  khm_variant: false
+  title: Odds and Ends
+  title_de: Die Schlickerlinge
+  slug: odds-and-ends
+  body_title: Odds And Ends
+  kind: tale
+  atu: '1452'
+  word_count: 205
+  char_count: 1029
+  language: en
+- khm: 157
+  khm_variant: false
+  title: The Sparrow and His Four Children
+  title_de: Der Sperling und seine vier Kinder
+  slug: the-sparrow-and-his-four-children
+  body_title: The Sparrow And His Four Children
+  kind: tale
+  atu: 157A
+  word_count: 929
+  char_count: 5094
+  language: en
+- khm: 158
+  khm_variant: false
+  title: The Story of Schlauraffen Land [The Tale of Cockaigne]
+  title_de: Das Märchen vom Schlauraffenland
+  slug: the-story-of-schlauraffen-land-the-tale-of-cockaigne
+  body_title: The Story of Schlauraffen Land
+  kind: tale
+  atu: '1930'
+  word_count: 333
+  char_count: 1770
+  language: en
+- khm: 159
+  khm_variant: false
+  title: The Ditmarsh Tale of Wonders
+  title_de: Das Diethmarsische Lügenmärchen
+  slug: the-ditmarsh-tale-of-wonders
+  body_title: The Ditmarsch Tale of Wonders
+  kind: tale
+  atu: '1930'
+  word_count: 209
+  char_count: 1064
+  language: en
+- khm: 160
+  khm_variant: false
+  title: A Riddling Tale
+  title_de: Rätselmärchen
+  slug: a-riddling-tale
+  body_title: A Riddling Tale
+  kind: tale
+  atu: 407A
+  word_count: 131
+  char_count: 653
+  language: en
+- khm: 161
+  khm_variant: false
+  title: Snow-White and Rose-Red
+  title_de: Schneeweißchen und Rosenrot
+  slug: snow-white-and-rose-red
+  body_title: Snow-White and Rose-Red
+  kind: tale
+  atu: '426'
+  word_count: 2435
+  char_count: 12815
+  language: en
+- khm: 162
+  khm_variant: false
+  title: The Wise Servant
+  title_de: Der kluge Knecht
+  slug: the-wise-servant
+  body_title: The Wise Servant
+  kind: tale
+  atu: '1009'
+  word_count: 252
+  char_count: 1301
+  language: en
+- khm: 163
+  khm_variant: false
+  title: The Glass Coffin
+  title_de: Der gläserne Sarg
+  slug: the-glass-coffin
+  body_title: The Glass Coffin
+  kind: tale
+  atu: '410'
+  word_count: 2372
+  char_count: 12480
+  language: en
+- khm: 164
+  khm_variant: false
+  title: Lazy Harry
+  title_de: Der faule Heinz
+  slug: lazy-harry
+  body_title: Lazy Harry
+  kind: tale
+  atu: '1430'
+  word_count: 996
+  char_count: 5200
+  language: en
+- khm: 165
+  khm_variant: false
+  title: The Griffin
+  title_de: Der Vogel Greif
+  slug: the-griffin
+  body_title: The Griffin
+  kind: tale
+  atu: '610'
+  word_count: 2807
+  char_count: 14419
+  language: en
+- khm: 166
+  khm_variant: false
+  title: Strong Hans
+  title_de: Der starke Hans
+  slug: strong-hans
+  body_title: Strong Hans
+  kind: tale
+  atu: 301B
+  word_count: 2632
+  char_count: 13710
+  language: en
+- khm: 167
+  khm_variant: false
+  title: The Peasant in Heaven
+  title_de: Das Bürle im Himmel
+  slug: the-peasant-in-heaven
+  body_title: The Peasant in Heaven
+  kind: tale
+  atu: '802'
+  word_count: 256
+  char_count: 1309
+  language: en
+- khm: 168
+  khm_variant: false
+  title: Lean Lisa
+  title_de: Die hagere Liese
+  slug: lean-lisa
+  body_title: Lean Lisa
+  kind: tale
+  atu: '1430'
+  word_count: 458
+  char_count: 2328
+  language: en
+- khm: 169
+  khm_variant: false
+  title: The Hut in the Forest
+  title_de: Das Waldhaus
+  slug: the-hut-in-the-forest
+  body_title: The Hut in the Forest
+  kind: tale
+  atu: '431'
+  word_count: 1892
+  char_count: 9790
+  language: en
+- khm: 170
+  khm_variant: false
+  title: Sharing Joy and Sorrow
+  title_de: Lieb und Leid teilen
+  slug: sharing-joy-and-sorrow
+  body_title: Sharing Joy and Sorrow
+  kind: tale
+  atu: '1408'
+  word_count: 377
+  char_count: 1968
+  language: en
+- khm: 171
+  khm_variant: false
+  title: The Willow-Wren
+  title_de: Der Zaunkönig
+  slug: the-willow-wren
+  body_title: The Willow-Wren
+  kind: tale
+  atu: '221'
+  word_count: 1142
+  char_count: 6106
+  language: en
+- khm: 172
+  khm_variant: false
+  title: The Sole [The Flounder]
+  title_de: Die Scholle
+  slug: the-sole-the-flounder
+  body_title: The Sole
+  kind: tale
+  atu: '250'
+  word_count: 240
+  char_count: 1284
+  language: en
+- khm: 173
+  khm_variant: false
+  title: The Bittern and Hoopoe
+  title_de: Rohrdommel und Wiedehopf
+  slug: the-bittern-and-hoopoe
+  body_title: The Bittern and the Hoopoe
+  kind: tale
+  atu: '236'
+  word_count: 236
+  char_count: 1252
+  language: en
+- khm: 174
+  khm_variant: false
+  title: The Owl
+  title_de: Die Eule
+  slug: the-owl
+  body_title: The Owl
+  kind: tale
+  atu: '1281'
+  word_count: 840
+  char_count: 4488
+  language: en
+- khm: 175
+  khm_variant: false
+  title: The Moon
+  title_de: Der Mond
+  slug: the-moon
+  body_title: The Moon
+  kind: tale
+  atu: '1174'
+  word_count: 779
+  char_count: 4144
+  language: en
+- khm: 176
+  khm_variant: false
+  title: The Duration of Life
+  title_de: Die Lebenszeit
+  slug: the-duration-of-life
+  body_title: The Duration of Life
+  kind: tale
+  atu: '173'
+  word_count: 576
+  char_count: 3009
+  language: en
+- khm: 177
+  khm_variant: false
+  title: Death’s Messengers
+  title_de: Die Boten des Todes
+  slug: deaths-messengers
+  body_title: Death’s Messengers
+  kind: tale
+  atu: '335'
+  word_count: 585
+  char_count: 3081
+  language: en
+- khm: 178
+  khm_variant: false
+  title: Master Pfriem
+  title_de: Meister Pfriem
+  slug: master-pfriem
+  body_title: Master Pfriem (Master Cobbler’s Awl)
+  kind: tale
+  atu: '801'
+  word_count: 1439
+  char_count: 7554
+  language: en
+- khm: 179
+  khm_variant: false
+  title: The Goose-Girl at the Well
+  title_de: Die Gänsehirtin am Brunnen
+  slug: the-goose-girl-at-the-well
+  body_title: The Goose-Girl at the Well
+  kind: tale
+  atu: '923'
+  word_count: 3875
+  char_count: 20247
+  language: en
+- khm: 180
+  khm_variant: false
+  title: Eve’s Various Children
+  title_de: Die ungleichen Kinder Evas
+  slug: eves-various-children
+  body_title: Eve’s Various Children
+  kind: tale
+  atu: '758'
+  word_count: 677
+  char_count: 3727
+  language: en
+- khm: 181
+  khm_variant: false
+  title: The Nixie of the Mill-Pond
+  title_de: Die Nixe im Teich
+  slug: the-nixie-of-the-mill-pond
+  body_title: The Nix of the Mill-Pond
+  kind: tale
+  atu: '316'
+  word_count: 2125
+  char_count: 11231
+  language: en
+- khm: 182
+  khm_variant: false
+  title: The Little Folks’ Presents
+  title_de: Die Geschenke des kleinen Volkes
+  slug: the-little-folks-presents
+  body_title: The Little Folks’ Presents
+  kind: tale
+  atu: '503'
+  word_count: 981
+  char_count: 5200
+  language: en
+- khm: 183
+  khm_variant: false
+  title: The Giant and the Tailor
+  title_de: Der Riese und der Schneider
+  slug: the-giant-and-the-tailor
+  body_title: The Giant and the Tailor
+  kind: tale
+  atu: '1049'
+  word_count: 726
+  char_count: 3752
+  language: en
+- khm: 184
+  khm_variant: false
+  title: The Nail
+  title_de: Der Nagel
+  slug: the-nail
+  body_title: The Nail
+  kind: tale
+  atu: '760'
+  word_count: 265
+  char_count: 1362
+  language: en
+- khm: 185
+  khm_variant: false
+  title: The Poor Boy in the Grave
+  title_de: Der arme Junge im Grab
+  slug: the-poor-boy-in-the-grave
+  body_title: The Poor Boy in the Grave
+  kind: tale
+  atu: '1577'
+  word_count: 1265
+  char_count: 6401
+  language: en
+- khm: 186
+  khm_variant: false
+  title: The True Sweetheart [The True Bride]
+  title_de: Die wahre Braut
+  slug: the-true-sweetheart-the-true-bride
+  body_title: The True Sweethearts
+  kind: tale
+  atu: '313'
+  word_count: 2665
+  char_count: 14073
+  language: en
+- khm: 187
+  khm_variant: false
+  title: The Hare and the Hedgehog
+  title_de: Der Hase und der Igel
+  slug: the-hare-and-the-hedgehog
+  body_title: The Hare and the Hedgehog
+  kind: tale
+  atu: 275A
+  word_count: 1360
+  char_count: 7147
+  language: en
+- khm: 188
+  khm_variant: false
+  title: The Spindle, the Shuttle, and the Needle
+  title_de: Spindel, Weberschiffchen und Nadel
+  slug: the-spindle-the-shuttle-and-the-needle
+  body_title: The Spindle, The Shuttle, and the Needle
+  kind: tale
+  atu: '585'
+  word_count: 1099
+  char_count: 5817
+  language: en
+- khm: 189
+  khm_variant: false
+  title: The Peasant and the Devil
+  title_de: Der Bauer und der Teufel
+  slug: the-peasant-and-the-devil
+  body_title: The Peasant and the Devil
+  kind: tale
+  atu: '1030'
+  word_count: 376
+  char_count: 1976
+  language: en
+- khm: 190
+  khm_variant: false
+  title: The Crumbs on the Table
+  title_de: Die Brosamen auf dem Tisch
+  slug: the-crumbs-on-the-table
+  body_title: The Crumbs on the Table
+  kind: tale
+  atu: 1373A
+  word_count: 181
+  char_count: 974
+  language: en
+- khm: 191
+  khm_variant: false
+  title: The Sea-Hare
+  title_de: Das Meerhäschen
+  slug: the-sea-hare
+  body_title: The Sea-Hare
+  kind: tale
+  atu: '554'
+  word_count: 1310
+  char_count: 6709
+  language: en
+- khm: 192
+  khm_variant: false
+  title: The Master Thief
+  title_de: Der Meisterdieb
+  slug: the-master-thief
+  body_title: The Master-Thief
+  kind: tale
+  atu: 1525A
+  word_count: 3069
+  char_count: 15821
+  language: en
+- khm: 193
+  khm_variant: false
+  title: The Drummer
+  title_de: Der Trommler
+  slug: the-drummer
+  body_title: The Drummer
+  kind: tale
+  atu: '400'
+  word_count: 3823
+  char_count: 19838
+  language: en
+- khm: 194
+  khm_variant: false
+  title: The Ear of Corn
+  title_de: Die Kornähre
+  slug: the-ear-of-corn
+  body_title: The Ear of Corn
+  kind: tale
+  atu: '779'
+  word_count: 240
+  char_count: 1270
+  language: en
+- khm: 195
+  khm_variant: false
+  title: The Grave Mound
+  title_de: Der Grabhügel
+  slug: the-grave-mound
+  body_title: The Grave-Mound
+  kind: tale
+  atu: '815'
+  word_count: 1483
+  char_count: 7689
+  language: en
+- khm: 196
+  khm_variant: false
+  title: Old Rinkrank
+  title_de: Oll Rinkrank
+  slug: old-rinkrank
+  body_title: Old Rinkrank
+  kind: tale
+  atu: '311'
+  word_count: 764
+  char_count: 3911
+  language: en
+- khm: 197
+  khm_variant: false
+  title: The Crystal Ball
+  title_de: Die Kristallkugel
+  slug: the-crystal-ball
+  body_title: The Crystal Ball
+  kind: tale
+  atu: 552A
+  word_count: 1079
+  char_count: 5525
+  language: en
+- khm: 198
+  khm_variant: false
+  title: Maid Maleen
+  title_de: Jungfrau Maleen
+  slug: maid-maleen
+  body_title: Maid Maleen
+  kind: tale
+  atu: '870'
+  word_count: 1977
+  char_count: 10532
+  language: en
+- khm: 199
+  khm_variant: false
+  title: The Boot of Buffalo Leather
+  title_de: Der Stiefel von Büffelleder
+  slug: the-boot-of-buffalo-leather
+  body_title: The Boots of Buffalo-Leather
+  kind: tale
+  atu: '952'
+  word_count: 1461
+  char_count: 7629
+  language: en
+- khm: 200
+  khm_variant: false
+  title: The Golden Key
+  title_de: Der goldene Schlüssel
+  slug: the-golden-key
+  body_title: The Golden Key
+  kind: tale
+  atu: '2260'
+  word_count: 184
+  char_count: 908
+  language: en
+- legend_number: 1
+  title: St. Joseph in the Forest
+  title_de: Der heilige Joseph im Walde
+  slug: legend-01-st-joseph-in-the-forest
+  body_title: St. Joseph in the Forest
+  kind: legend
+  word_count: 1161
+  char_count: 5897
+  language: en
+- legend_number: 2
+  title: The Twelve Apostles
+  title_de: Die zwölf Apostel
+  slug: legend-02-the-twelve-apostles
+  body_title: The Twelve Apostles
+  kind: legend
+  word_count: 405
+  char_count: 2118
+  language: en
+- legend_number: 3
+  title: The Rose
+  title_de: Die Rose
+  slug: legend-03-the-rose
+  body_title: The Rose
+  kind: legend
+  word_count: 157
+  char_count: 791
+  language: en
+- legend_number: 4
+  title: Poverty and Humility Lead to Heaven
+  title_de: Armut und Demut führen zum Himmel
+  slug: legend-04-poverty-and-humility-lead-to-heaven
+  body_title: Poverty and Humility Lead to Heaven
+  kind: legend
+  word_count: 492
+  char_count: 2507
+  language: en
+- legend_number: 5
+  title: God’s Food
+  title_de: Gottes Speise
+  slug: legend-05-gods-food
+  body_title: God’s Food
+  kind: legend
+  word_count: 243
+  char_count: 1279
+  language: en
+- legend_number: 6
+  title: The Three Green Twigs
+  title_de: Die drei grünen Zweige
+  slug: legend-06-the-three-green-twigs
+  body_title: The Three Green Twigs
+  kind: legend
+  word_count: 964
+  char_count: 4919
+  language: en
+- legend_number: 7
+  title: Our Lady’s Little Glass
+  title_de: Muttergottesgläschen
+  slug: legend-07-our-ladys-little-glass
+  body_title: Our Lady’s Little Glass
+  kind: legend
+  word_count: 160
+  char_count: 828
+  language: en
+- legend_number: 8
+  title: The Aged Mother
+  title_de: Die alte Mütterchen
+  slug: legend-08-the-aged-mother
+  body_title: The Aged Mother
+  kind: legend
+  word_count: 341
+  char_count: 1770
+  language: en
+- legend_number: 9
+  title: The Heavenly Wedding
+  title_de: Die himmlische Hochzeit
+  slug: legend-09-the-heavenly-wedding
+  body_title: The Heavenly Wedding
+  kind: legend
+  word_count: 517
+  char_count: 2636
+  language: en
+- legend_number: 10
+  title: The Hazel Branch
+  title_de: Die Haselrute
+  slug: legend-10-the-hazel-branch
+  body_title: The Hazel-Branch
+  kind: legend
+  word_count: 204
+  char_count: 1141
+  language: en

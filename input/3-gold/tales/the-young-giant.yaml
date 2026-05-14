@@ -1,0 +1,407 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-young-giant
+khm: 90
+atu: 650A
+atu_name: The Young Giant / Strong Boy
+canonical_source: ../../2-silver/canonical/the-young-giant/canonical.txt
+title: The Young Giant
+
+
+entities:
+
+  characters:
+
+    young_giant_thumbling:
+      name: Thumbling / The Young Giant
+      archetypes: [arc_superstrong_youth]
+      species: sp_human
+      agency_modes: [agency_extraordinary_body, agency_domestic_labor, agency_violence, agency_cunning]
+      affects: [affect_hunger]
+      traits: [thumb-sized-child, giant-nurtured, superstrong, unrecognized-son, plough-puller, smith-apprentice, head-servant, haunted-mill-survivor, wandering]
+      evidence: |
+        Thumbling grew and became tall and strong after the manner of
+        giants.
+
+    young_giant_father:
+      name: The Countryman Father
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_fear]
+      traits: [ploughman, thumb-child-father, giant-frightened, son-denying, staff-provider]
+      evidence: |
+        Once on a time a countryman had a son who was as big as a thumb
+
+    young_giant_mother:
+      name: The Mother
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_fear]
+      traits: [son-nonrecognizer, meal-maker, giant-appetite-feeder]
+      evidence: |
+        Who is that horrible tall man?
+
+    young_giant_old_giant:
+      name: The Old Giant
+      being_type: being_giant
+      agency_modes: [agency_extraordinary_body, agency_domestic_labor]
+      traits: [abductor, giant-nurse, strength-tester, forest-trainer, returner]
+      evidence: |
+        The giant, however, carried him home, suckled him
+
+    young_giant_smith:
+      name: The Greedy Smith
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_greed, affect_anger]
+      traits: [greedy, unkind, wage-saver, overpowered-master, kicked-over-hay]
+      evidence: |
+        a smith who was a greedy fellow
+
+    young_giant_bailiff:
+      name: The Covetous Bailiff
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_cunning]
+      affects: [affect_greed, affect_fear]
+      traits: [covetous, wage-saver, head-servant-employer, murder-plotter, delayed-payer, kicked-into-air]
+      evidence: |
+        the bailiff was satisfied, for he, too, was a covetous fellow
+
+    young_giant_bailiff_wife:
+      name: The Bailiff's Wife
+      species: sp_human
+      agency_modes: [agency_speech]
+      affects: [affect_fear]
+      traits: [second-blow-recipient, lighter-than-husband, air-hovering]
+      evidence: |
+        If he does not come back, you must take the other blow.
+
+    young_giant_servants:
+      name: The Other Servants
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [woodcutters, early-risers, barricade-blocked, cart-stuck]
+      evidence: |
+        all the servants were to go into the wood
+
+    young_giant_clerks:
+      name: The Bailiff's Clerks
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech]
+      traits: [advisers, murder-planners, well-plotters, haunted-mill-plotters]
+      evidence: |
+        The bailiff summoned all his clerks together
+
+    young_giant_miller:
+      name: The Haunted Mill Miller
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      traits: [danger-warner, spell-release-witness, reward-offerer]
+      evidence: |
+        The miller told him that he could grind there very well by day
+
+    young_giant_mill_spirits:
+      name: The Haunted Mill Invisible Ones
+      being_type: being_spirit
+      agency_modes: [agency_violence, agency_domestic_labor]
+      traits: [invisible-diners, boxers, spell-bound, defeated-by-returned-blows]
+      evidence: |
+        with this exception he saw nothing.
+
+  magic_objects:
+
+    obj_young_giant_plough:
+      name: The Plough and Harrows
+      object_kind: tool
+      attributes:
+        function: farm tools overpowered and carried by the young giant
+      evidence: |
+        took the plough
+
+    obj_young_giant_oak_trees:
+      name: The Uprooted Oak-Trees
+      object_kind: material
+      attributes:
+        function: strength-test trees and carrying poles for farm tools and horses
+      evidence: |
+        pulled up two oak-trees
+
+    obj_young_giant_iron_staffs:
+      name: The Iron Staffs
+      object_kind: weapon
+      attributes:
+        function: unsuccessfully strong bars tested against the young giant's knees
+      evidence: |
+        get me an iron staff
+
+    obj_young_giant_anvil:
+      name: The Smith's Anvil
+      instance_of: obj_anvil
+      object_kind: tool
+      attributes:
+        function: work block sunk into the ground by one blow
+      evidence: |
+        the anvil sank so deep into the earth
+
+    obj_young_giant_iron_bar:
+      name: The Thickest Iron Bar
+      object_kind: weapon
+      attributes:
+        function: walking stick taken from the smithy after the smith is kicked away
+      evidence: |
+        the thickest iron bar in the smithy
+
+    obj_young_giant_millstone:
+      name: The Largest Mill-Stone
+      object_kind: material
+      attributes:
+        function: failed murder weapon turned into a necktie
+      evidence: |
+        the largest mill-stone
+
+    obj_young_giant_corn:
+      name: The Eight Bushels of Corn
+      object_kind: food
+      attributes:
+        count: 8
+        function: haunted mill task load
+      evidence: |
+        take eight bushels of corn to the mill
+
+    obj_young_giant_haunted_feast:
+      name: The Haunted Mill Feast
+      object_kind: food
+      attributes:
+        function: self-moving table of food shared with invisible beings
+      evidence: |
+        wine and roasted meats placed themselves
+
+  locations:
+
+    loc_young_giant_field:
+      name: The Plough Field
+      instance_of: loc_field
+      evidence: |
+        set him in a freshly-cut furrow
+
+    loc_young_giant_forest:
+      name: The Giant's Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        the old giant took him into the forest
+
+    loc_young_giant_parent_house:
+      name: The Parents' House
+      instance_of: loc_house
+      evidence: |
+        to his parents’ house
+
+    loc_young_giant_smithy:
+      name: The Smithy
+      evidence: |
+        went into the smithy
+
+    loc_young_giant_small_farm:
+      name: The Small Farm
+      instance_of: loc_field
+      evidence: |
+        he came to a small farm
+
+    loc_young_giant_wood_ravine:
+      name: The Wood Ravine
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        Not far from the wood was a ravine
+
+    loc_young_giant_well:
+      name: The Well
+      instance_of: loc_well
+      threshold_type: threshold_well
+      evidence: |
+        make him get into the well and clean it
+
+    loc_young_giant_haunted_mill:
+      name: The Haunted Mill
+      instance_of: loc_mill
+      evidence: |
+        the haunted mill
+
+
+classifications:
+
+  world_laws:
+    - law_giant_nurture_magnifies_body
+    - law_blow_wage_reverses_greedy_employer
+    - law_specialized_companions_solve_impossible_tasks
+
+  moral_regimes:
+    - moral_retributive
+    - moral_comic_inversion
+    - moral_trickster_wins
+
+  agency_modes_dominant:
+    - agency_extraordinary_body
+    - agency_domestic_labor
+    - agency_violence
+    - agency_cunning
+
+  affects_driving:
+    - affect_greed
+    - affect_fear
+    - affect_hunger
+    - affect_anger
+
+  symbol_numbers:
+    - num_2
+    - num_4
+    - num_8
+
+  threshold_types:
+    - threshold_forest
+    - threshold_well
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: young_giant_thumbling,
+      scene: "a countryman's son remains thumb-sized and useless for field work" }
+  - { function: func_abduction, order: 2, actor: young_giant_old_giant,
+      scene: "a giant silently carries Thumbling away from the furrow" }
+  - { function: func_growth_training, order: 3, actor: young_giant_old_giant,
+      scene: "the giant suckles and tests him until he can tear up the strongest oak" }
+  - { function: func_return_unrecognized, order: 4, actor: young_giant_thumbling,
+      scene: "the young giant returns to his parents but they deny he is their son" }
+  - { function: func_strength_display, order: 5, actor: young_giant_thumbling,
+      scene: "he ploughs, harrows, carries horses and tools, eats beyond the household's capacity" }
+  - { function: func_departure, order: 6, actor: young_giant_thumbling,
+      scene: "after breaking all iron staffs, he leaves home with an iron bar" }
+  - { function: func_labor_bargain, order: 7, actor: young_giant_smith,
+      scene: "the greedy smith accepts labour for no wages except two blows" }
+  - { function: func_first_employer_punishment, order: 8, actor: young_giant_thumbling,
+      scene: "one blow ruins the smithy and one kick sends the smith over hay" }
+  - { function: func_second_labor_bargain, order: 9, actor: young_giant_bailiff,
+      scene: "the covetous bailiff hires him for three annual blows" }
+  - { function: func_forest_labor_excess, order: 10, actor: young_giant_thumbling,
+      scene: "he blocks the ravine, loads two trees, and pulls cart and horses through" }
+  - { function: func_murder_attempt, order: 11, actor: young_giant_clerks,
+      scene: "the clerks advise throwing a millstone on him while he cleans the well" }
+  - { function: func_failed_murder, order: 12, actor: young_giant_thumbling,
+      scene: "he treats the millstone as a necktie and asks for his wages again" }
+  - { function: func_haunted_ordeal, order: 13, actor: young_giant_thumbling,
+      scene: "he grinds by night in the haunted mill and returns every blow" }
+  - { function: func_final_payment, order: 14, actor: young_giant_thumbling,
+      scene: "he kicks the bailiff and wife out through the windows as the agreed blows" }
+  - { function: func_departure, order: 15, actor: young_giant_thumbling,
+      scene: "the young giant takes up his iron bar and goes on his way" }
+
+
+edges:
+
+  # Tiny child becomes giant-scaled
+  - { from: young_giant_father, to: young_giant_thumbling, label: HAS_THUMB_SIZED_SON,
+      evidence: "a son who was as big as a thumb" }
+  - { from: young_giant_father, to: loc_young_giant_field, label: TAKES_TO_FIELD,
+      evidence: "put him in his pocket" }
+  - { from: young_giant_old_giant, to: young_giant_thumbling, label: CARRIES_AWAY,
+      evidence: "went away with him" }
+  - { from: young_giant_old_giant, to: young_giant_thumbling, label: SUCKLES,
+      evidence: "suckled him" }
+  - { from: law_giant_nurture_magnifies_body, to: young_giant_thumbling, label: MAGNIFIES,
+      evidence: "became tall and strong after the manner of giants" }
+  - { from: young_giant_old_giant, to: loc_young_giant_forest, label: TESTS_IN,
+      evidence: "took him into the forest" }
+  - { from: young_giant_thumbling, to: obj_young_giant_oak_trees, label: TEARS_UP,
+      evidence: "tore up the strongest oak-tree from the earth" }
+  - { from: young_giant_old_giant, to: loc_young_giant_field, label: RETURNS_TO,
+      evidence: "took him back to the field from whence he had brought him" }
+
+  # Family cannot contain the new body
+  - { from: young_giant_thumbling, to: young_giant_father, label: CLAIMS_SONSHIP,
+      evidence: "what a fine man his son has grown into" }
+  - { from: young_giant_father, to: young_giant_thumbling, label: DENIES_SONSHIP,
+      evidence: "No, thou art not my son" }
+  - { from: young_giant_thumbling, to: obj_young_giant_plough, label: PRESSES,
+      evidence: "just pressed it with one hand" }
+  - { from: young_giant_thumbling, to: obj_young_giant_plough, label: DRAWS_SELF,
+      evidence: "drew the plough himself" }
+  - { from: young_giant_thumbling, to: obj_young_giant_plough, label: CARRIES_WITH_HORSES,
+      evidence: "carried all as if it had been a bundle of straw" }
+  - { from: young_giant_mother, to: young_giant_thumbling, label: FAILS_TO_RECOGNIZE,
+      evidence: "Who is that horrible tall man?" }
+  - { from: young_giant_thumbling, to: affect_hunger, label: EMBODIES,
+      evidence: "it was still not sufficient to appease his hunger" }
+  - { from: young_giant_father, to: obj_young_giant_iron_staffs, label: FETCHES,
+      evidence: "fetched from the smith a staff" }
+  - { from: young_giant_thumbling, to: obj_young_giant_iron_staffs, label: BREAKS,
+      evidence: "he broke it in two in the middle like a bean-stalk" }
+
+  # Smith contract
+  - { from: young_giant_thumbling, to: young_giant_smith, label: OFFERS_NO_WAGES,
+      evidence: "I don’t want any at all" }
+  - { from: young_giant_thumbling, to: young_giant_smith, label: RESERVES_TWO_BLOWS,
+      evidence: "I will give thee two blows" }
+  - { from: young_giant_smith, to: affect_greed, label: EMBODIES,
+      evidence: "thought he would thus save much money" }
+  - { from: young_giant_thumbling, to: obj_young_giant_anvil, label: SINKS,
+      evidence: "the anvil sank so deep into the earth" }
+  - { from: young_giant_thumbling, to: young_giant_smith, label: KICKS_OVER_HAY,
+      evidence: "he flew away over four loads of hay" }
+  - { from: young_giant_thumbling, to: obj_young_giant_iron_bar, label: TAKES_AS_STICK,
+      evidence: "took it as a stick in his hand" }
+
+  # Bailiff contract and forest labour
+  - { from: young_giant_thumbling, to: young_giant_bailiff, label: OFFERS_NO_WAGES,
+      evidence: "he wanted no wages at all" }
+  - { from: young_giant_thumbling, to: young_giant_bailiff, label: RESERVES_THREE_BLOWS,
+      evidence: "every year he would give him three blows" }
+  - { from: young_giant_bailiff, to: affect_greed, label: EMBODIES,
+      evidence: "he, too, was a covetous fellow" }
+  - { from: young_giant_thumbling, to: young_giant_servants, label: OUTPACES_AFTER_SLEEPING,
+      evidence: "I shall be back again before any of you" }
+  - { from: young_giant_thumbling, to: loc_young_giant_wood_ravine, label: BARRICADES,
+      evidence: "made a great barricade" }
+  - { from: young_giant_thumbling, to: obj_young_giant_oak_trees, label: LOADS_CART_WITH,
+      evidence: "tore two of the very largest trees of all out of the earth" }
+  - { from: young_giant_thumbling, to: young_giant_servants, label: BLOCKS,
+      evidence: "not able to get through" }
+  - { from: young_giant_thumbling, to: obj_young_giant_plough, label: PULLS_CART_AND_HORSES,
+      evidence: "pulled it all through" }
+
+  # Murder attempts and haunted mill
+  - { from: young_giant_clerks, to: young_giant_bailiff, label: ADVISE_WELL_MURDER,
+      evidence: "throw it on his head" }
+  - { from: young_giant_thumbling, to: loc_young_giant_well, label: DESCENDS_INTO,
+      evidence: "standing down below at the bottom" }
+  - { from: young_giant_clerks, to: obj_young_giant_millstone, label: ROLL_DOWN,
+      evidence: "rolled down the largest mill-stone" }
+  - { from: young_giant_thumbling, to: obj_young_giant_millstone, label: WEARS_AS_NECKTIE,
+      evidence: "what a beautiful neck-tie I have on" }
+  - { from: young_giant_clerks, to: loc_young_giant_haunted_mill, label: ADVISE_HAUNTED_MILL,
+      evidence: "send the head-servant to the haunted mill" }
+  - { from: young_giant_bailiff, to: obj_young_giant_corn, label: ORDERS_GRINDING_OF,
+      evidence: "take eight bushels of corn to the mill" }
+  - { from: young_giant_miller, to: young_giant_thumbling, label: WARNS,
+      evidence: "the mill was haunted" }
+  - { from: young_giant_mill_spirits, to: obj_young_giant_haunted_feast, label: PRODUCE,
+      evidence: "everything came of itself" }
+  - { from: young_giant_mill_spirits, to: young_giant_thumbling, label: STRIKE,
+      evidence: "he felt something like a box on the ear" }
+  - { from: young_giant_thumbling, to: young_giant_mill_spirits, label: REPAYS_BLOWS,
+      evidence: "repaid everything with interest" }
+  - { from: young_giant_thumbling, to: loc_young_giant_haunted_mill, label: RELEASES_FROM_SPELL,
+      evidence: "the mill was now released from the spell" }
+
+  # Blow-wage paid
+  - { from: young_giant_bailiff, to: affect_fear, label: FEELS,
+      evidence: "seriously alarmed and quite beside himself" }
+  - { from: law_blow_wage_reverses_greedy_employer, to: young_giant_bailiff, label: PUNISHES,
+      evidence: "he flew through the window out into the air" }
+  - { from: law_blow_wage_reverses_greedy_employer, to: young_giant_bailiff_wife, label: PUNISHES,
+      evidence: "she, too, flew out" }
+  - { from: young_giant_bailiff, to: young_giant_bailiff_wife, label: HOVERS_APART_FROM,
+      evidence: "could not get to each other" }
+  - { from: young_giant_thumbling, to: obj_young_giant_iron_bar, label: TAKES_UP,
+      evidence: "took up his iron bar" }
+  - { from: young_giant_thumbling, to: young_giant_thumbling, label: GOES_ON_WAY,
+      evidence: "went on his way" }

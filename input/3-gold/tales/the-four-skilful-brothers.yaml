@@ -1,0 +1,411 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-four-skilful-brothers
+khm: 129
+atu: '653'
+atu_name: The Four Skilful Brothers
+canonical_source: ../../2-silver/canonical/the-four-skilful-brothers/canonical.txt
+title: The Four Skilful Brothers
+
+
+entities:
+
+  characters:
+
+    four_skilful_poor_father:
+      name: The Poor Father of Four Sons
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_command]
+      affects: [affect_joy]
+      traits: [poor-father, apprenticeship-sender, craft-tester, equal-praise-judge]
+      evidence: |
+        There was once a poor man who had four sons
+
+    four_skilful_brothers:
+      name: The Four Skilful Brothers
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation, agency_cunning, agency_violence, agency_speech]
+      affects: [affect_joy, affect_loyalty]
+      traits: [four-brothers, four-year-apprentices, crossroad-returners, cooperative-rescuers, equal-reward-sharers]
+      evidence: |
+        the four brothers arrived at the same time at the cross-roads
+
+    four_skilful_thief:
+      name: The Eldest Brother, Accomplished Thief
+      species: sp_human
+      agency_modes: [agency_cunning, agency_domestic_labor]
+      traits: [eldest, reputable-theft-apprentice, egg-lifter, princess-stealer]
+      evidence: |
+        became an accomplished thief
+
+    four_skilful_astronomer:
+      name: The Second Brother, Skillful Astronomer
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_speech]
+      traits: [far-seer, telescope-bearer, egg-counter, princess-locator]
+      evidence: |
+        became such a skillful astronomer
+
+    four_skilful_huntsman:
+      name: The Third Brother, Experienced Hunter
+      species: sp_human
+      agency_modes: [agency_violence, agency_object_mediation]
+      traits: [experienced-hunter, never-miss-gun-bearer, five-egg-shooter, dragon-killer]
+      evidence: |
+        he became an experienced hunter
+
+    four_skilful_tailor:
+      name: The Youngest Brother, Wondrous Tailor
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation]
+      traits: [youngest, needle-bearer, egg-and-bird-mender, ship-repairer]
+      evidence: |
+        The youngest brother
+
+    four_skilful_thief_master:
+      name: The Thief-Master
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_promise]
+      traits: [trade-reframer, gallows-reassurer]
+      evidence: |
+        Come with me, and be a thief
+
+    four_skilful_astronomer_master:
+      name: The Astronomer-Master
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_promise]
+      traits: [far-sight-teacher, telescope-giver]
+      evidence: |
+        come with me, and be an astronomer
+
+    four_skilful_huntsman_master:
+      name: The Huntsman-Master
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation]
+      traits: [hunter-trainer, gun-giver]
+      evidence: |
+        A huntsman took the third brother into training
+
+    four_skilful_tailor_master:
+      name: The Tailor-Master
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor, agency_object_mediation]
+      traits: [tailoring-reframer, needle-giver]
+      evidence: |
+        learn a very different kind of tailoring
+
+    four_skilful_king:
+      name: The King Whose Daughter Is Carried Off
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_promise, speech_command]
+      affects: [affect_grief, affect_joy]
+      traits: [troubled-father, bride-reward-promiser, equal-right-judge, half-kingdom-divider]
+      evidence: |
+        the King’s daughter was carried off by a dragon
+
+    four_skilful_princess:
+      name: The King's Daughter on the Sea-Rock
+      species: sp_human
+      agency_modes: [agency_endurance]
+      traits: [dragon-captive, sea-rock-princess, rescued-maiden, disputed-reward]
+      evidence: |
+        on a rock in the sea
+
+    four_skilful_dragon:
+      name: The Dragon That Carries Off the Princess
+      being_type: being_dragon
+      agency_modes: [agency_violence]
+      affects: [affect_anger]
+      traits: [princess-abductor, sea-rock-guardian, sleeping-monster, ship-shatterer, heart-shot]
+      evidence: |
+        the dragon is beside her watching her
+
+    four_skilful_chaffinch:
+      name: The Hatching Chaffinch
+      species: sp_bird
+      agency_modes: [agency_endurance]
+      traits: [nesting-bird, unaware-egg-keeper, red-necked-young-mother]
+      evidence: |
+        the bird which is sitting hatching them
+
+  magic_objects:
+
+    obj_four_skilful_telescope:
+      name: The Astronomer's Telescope
+      instance_of: obj_far_seeing_telescope
+      object_kind: tool
+      attributes:
+        function: sees everything on earth or in heaven, including princess and nest
+      evidence: |
+        his master gave him a telescope
+
+    obj_four_skilful_never_fail_gun:
+      name: The Huntsman's Never-Failing Gun
+      instance_of: obj_never_miss_gun
+      object_kind: weapon
+      attributes:
+        function: hits eggs through the middle and shoots the dragon to the heart
+      evidence: |
+        It will never fail you
+
+    obj_four_skilful_wondrous_needle:
+      name: The Tailor's Wondrous Needle
+      instance_of: obj_needle_thread
+      object_kind: tool
+      attributes:
+        function: sews eggs, young birds, planks, and ship fragments without visible seam
+      evidence: |
+        With this you can sew together whatever is given you
+
+    obj_four_skilful_five_eggs:
+      name: The Five Chaffinch Eggs
+      object_kind: creature_object
+      attributes:
+        count: 5
+        function: father's integrated test of seeing, stealing, shooting, and sewing
+      evidence: |
+        There are five
+
+    obj_four_skilful_ship:
+      name: The King's Ship
+      object_kind: architecture
+      attributes:
+        function: sea-vessel for reaching the princess and returning after repair
+      evidence: |
+        asked for a ship for himself and his brothers
+
+    obj_four_skilful_planks:
+      name: The Planks and Ship Fragments
+      object_kind: material
+      attributes:
+        function: wreckage sewn back into a seaworthy ship
+      evidence: |
+        laid hold of a couple of planks
+
+  locations:
+
+    loc_four_skilful_father_house:
+      name: The Father's House
+      instance_of: loc_house
+      evidence: |
+        returned home to their father
+
+    loc_four_skilful_town_gate:
+      name: The Town-Gate of Departure
+      instance_of: loc_gate
+      threshold_type: threshold_gate
+      evidence: |
+        went through the town-gate together
+
+    loc_four_skilful_crossroads:
+      name: The Four-Way Crossroads
+      instance_of: loc_road
+      evidence: |
+        a cross-way which branched off in four different directions
+
+    loc_four_skilful_test_tree:
+      name: The Large Tree Before the House
+      instance_of: loc_tree
+      evidence: |
+        sitting just in front of the house under a large tree
+
+    loc_four_skilful_sea_rock:
+      name: The Sea-Rock of the Captive Princess
+      instance_of: loc_island
+      evidence: |
+        on a rock in the sea
+
+    loc_four_skilful_open_sea:
+      name: The Open Sea of Pursuit and Shipwreck
+      instance_of: loc_sea
+      evidence: |
+        steered out into the open sea
+
+    loc_four_skilful_ship:
+      name: The Ship in the Wide Sea
+      instance_of: loc_ship
+      evidence: |
+        sailed with them over the sea
+
+
+classifications:
+
+  world_laws:
+    - law_coordinated_crafts_complete_rescue
+    - law_craft_masterpiece_arbitrates_inheritance
+    - law_specialized_companions_solve_impossible_tasks
+
+  moral_regimes:
+    - moral_restorative
+    - moral_faithful_service_rewarded
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_object_mediation
+    - agency_cunning
+    - agency_violence
+    - agency_social_rank
+
+  affects_driving:
+    - affect_loyalty
+    - affect_grief
+    - affect_joy
+    - affect_anger
+
+  symbol_numbers:
+    - num_4
+
+  threshold_types:
+    - threshold_gate
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: four_skilful_poor_father
+    scene: "the poor father has nothing to give his four sons and sends them to learn trades"
+    evidence: "I have nothing to give you"
+
+  - function: func_departure
+    order: 2
+    actor: four_skilful_brothers
+    scene: "the four brothers depart together and separate at a four-way crossroads"
+    evidence: "Here we must separate"
+
+  - function: func_magical_agent
+    order: 3
+    actor: four_skilful_astronomer_master
+    beneficiary: four_skilful_astronomer
+    scene: "the astronomer receives a telescope that reveals all distant things"
+    evidence: "nothing can remain concealed from thee"
+
+  - function: func_magical_agent
+    order: 4
+    actor: four_skilful_huntsman_master
+    beneficiary: four_skilful_huntsman
+    scene: "the huntsman receives a gun that never misses"
+    evidence: "whatsoever you aim at, you are certain to hit"
+
+  - function: func_magical_agent
+    order: 5
+    actor: four_skilful_tailor_master
+    beneficiary: four_skilful_tailor
+    scene: "the tailor receives a needle that sews anything seamlessly"
+    evidence: "no seam will be visible"
+
+  - function: func_return
+    order: 6
+    actor: four_skilful_brothers
+    scene: "after four years the brothers return together to their father"
+    evidence: "When the appointed four years were over"
+
+  - function: func_difficult_task
+    order: 7
+    actor: four_skilful_poor_father
+    scene: "the father tests the four crafts on the chaffinch nest and five eggs"
+    evidence: "I will put you all to the test"
+
+  - function: func_villainy
+    order: 8
+    actor: four_skilful_dragon
+    victim: four_skilful_princess
+    scene: "a dragon carries off the king's daughter"
+    evidence: "the King’s daughter was carried off by a dragon"
+
+  - function: func_difficult_task
+    order: 9
+    actor: four_skilful_brothers
+    scene: "the four brothers combine far-sight, theft, marksmanship, and sewing to rescue the princess"
+    evidence: "This would be a fine opportunity for us to show what we can do"
+
+  - function: func_victory
+    order: 10
+    actor: four_skilful_huntsman
+    victim: four_skilful_dragon
+    scene: "the huntsman shoots the pursuing dragon to the heart"
+    evidence: "shot him to the heart"
+
+  - function: func_rescue
+    order: 11
+    actor: four_skilful_tailor
+    scene: "the tailor sews the planks and ship fragments back into a seaworthy vessel"
+    evidence: "the ship was once more seaworthy"
+
+  - function: func_recognition
+    order: 12
+    actor: four_skilful_king
+    scene: "the king judges that each brother has an equal right"
+    evidence: "Each of you has an equal right"
+
+  - function: func_reward
+    order: 13
+    actor: four_skilful_king
+    scene: "instead of marrying one brother to the princess, the king gives each half a kingdom"
+    evidence: "I will give to each of you, as a reward, half a kingdom"
+
+
+edges:
+
+  - { from: four_skilful_poor_father, to: four_skilful_brothers, label: SENDS_TO_LEARN_TRADES,
+      evidence: "learn a trade, and see how you can make your way" }
+  - { from: four_skilful_brothers, to: loc_four_skilful_crossroads, label: SEPARATE_AT,
+      evidence: "branched off in four different directions" }
+  - { from: four_skilful_thief_master, to: four_skilful_thief, label: TRAINS,
+      evidence: "be a thief" }
+  - { from: four_skilful_astronomer_master, to: four_skilful_astronomer, label: TRAINS,
+      evidence: "be an astronomer" }
+  - { from: four_skilful_huntsman_master, to: four_skilful_huntsman, label: TRAINS,
+      evidence: "took the third brother into training" }
+  - { from: four_skilful_tailor_master, to: four_skilful_tailor, label: TRAINS,
+      evidence: "learnt his art from the very beginning" }
+  - { from: four_skilful_astronomer_master, to: obj_four_skilful_telescope, label: GIVES,
+      evidence: "his master gave him a telescope" }
+  - { from: four_skilful_huntsman_master, to: obj_four_skilful_never_fail_gun, label: GIVES,
+      evidence: "his master gave him a gun" }
+  - { from: four_skilful_tailor_master, to: obj_four_skilful_wondrous_needle, label: GIVES,
+      evidence: "the man gave the youth a needle" }
+  - { from: four_skilful_astronomer, to: obj_four_skilful_telescope, label: USES,
+      evidence: "The astronomer took his glass" }
+  - { from: four_skilful_astronomer, to: obj_four_skilful_five_eggs, label: COUNTS,
+      evidence: "There are five" }
+  - { from: four_skilful_thief, to: obj_four_skilful_five_eggs, label: STEALS_WITHOUT_NOTICE,
+      evidence: "took the five eggs from beneath the bird" }
+  - { from: four_skilful_huntsman, to: obj_four_skilful_five_eggs, label: SHOOTS_IN_TWO,
+      evidence: "shot the eggs, all five" }
+  - { from: four_skilful_tailor, to: obj_four_skilful_five_eggs, label: SEWS_TOGETHER,
+      evidence: "sewed them as his father wished" }
+  - { from: four_skilful_thief, to: four_skilful_chaffinch, label: RESTORES_EGGS_UNNOTICED,
+      evidence: "put them back again under the bird without her being aware of it" }
+  - { from: four_skilful_dragon, to: four_skilful_princess, label: CARRIES_OFF,
+      evidence: "King’s daughter was carried off by a dragon" }
+  - { from: four_skilful_king, to: four_skilful_princess, label: OFFERS_AS_REWARD,
+      evidence: "whosoever brought her back should have her to wife" }
+  - { from: four_skilful_astronomer, to: four_skilful_princess, label: LOCATES,
+      evidence: "I see her already" }
+  - { from: four_skilful_king, to: obj_four_skilful_ship, label: PROVIDES,
+      evidence: "asked for a ship for himself and his brothers" }
+  - { from: four_skilful_brothers, to: loc_four_skilful_sea_rock, label: SAILS_TO,
+      evidence: "sailed with them over the sea until they came to the rock" }
+  - { from: four_skilful_thief, to: four_skilful_princess, label: STEALS_AWAY_FROM_DRAGON,
+      evidence: "stole her away from under the dragon" }
+  - { from: four_skilful_dragon, to: obj_four_skilful_ship, label: PURSUES,
+      evidence: "followed them, and came snorting angrily through the air" }
+  - { from: four_skilful_huntsman, to: four_skilful_dragon, label: KILLS,
+      evidence: "shot him to the heart" }
+  - { from: four_skilful_dragon, to: obj_four_skilful_ship, label: SHATTERS,
+      evidence: "his fall shattered the whole ship" }
+  - { from: four_skilful_tailor, to: obj_four_skilful_planks, label: SEWS_TOGETHER,
+      evidence: "with a few stitches sewed the planks together" }
+  - { from: four_skilful_tailor, to: obj_four_skilful_ship, label: REPAIRS,
+      evidence: "the ship was once more seaworthy" }
+  - { from: four_skilful_brothers, to: law_coordinated_crafts_complete_rescue, label: REALIZE,
+      evidence: "all your arts would have been useless" }
+  - { from: four_skilful_king, to: four_skilful_brothers, label: JUDGES_EQUAL_RIGHT,
+      evidence: "Each of you has an equal right" }
+  - { from: four_skilful_king, to: four_skilful_brothers, label: REWARDS_WITH_HALF_KINGDOMS,
+      evidence: "give to each of you, as a reward, half a kingdom" }

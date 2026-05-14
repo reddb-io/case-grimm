@@ -1,0 +1,551 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: iron-john
+khm: 136
+atu: '502'
+atu_name: The Wild Man as Helper / Iron John
+canonical_source: ../../2-silver/canonical/iron-john/canonical.txt
+title: Iron John
+
+
+entities:
+
+  characters:
+
+    iron_john_father_king:
+      name: The King Whose Forest Is Dangerous
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command, speech_prohibition]
+      affects: [affect_fear, affect_grief]
+      traits: [forest-owning-king, huntsman-sender, cage-prohibitor, grieving-father]
+      evidence: |
+        a King who had a great forest near his palace
+
+    iron_john_queen_mother:
+      name: The Queen Who Keeps the Key
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_object_mediation]
+      traits: [key-keeper, absent-knowledge-mother]
+      evidence: |
+        the Queen herself was to take the key into her keeping
+
+    iron_john_strange_huntsman:
+      name: The Fearless Strange Huntsman
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech, agency_cunning]
+      affects: [affect_curiosity]
+      traits: [situation-seeker, forest-venturer, pool-drainer, wild-man-capturer]
+      evidence: |
+        a strange huntsman announced himself to the King
+
+    iron_john_wild_man:
+      name: Iron John
+      archetypes: [arc_wild_man_donor, arc_enchanted_prince]
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech, agency_object_mediation, agency_social_rank]
+      existential_states: [state_cursed, state_imprisoned, state_transformed]
+      speech_acts_performed: [speech_command, speech_promise]
+      affects: [affect_pity, affect_loyalty]
+      traits: [rusty-iron-body, pool-captive, caged-wild-man, golden-well-guardian, war-donor, disenchantment-king]
+      evidence: |
+        a wild man whose body was brown like rusty iron
+
+    iron_john_prince:
+      name: The King's Son with Golden Hair
+      archetypes: [arc_youngest_sibling]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_object_mediation, agency_violence, agency_social_rank]
+      existential_states: [state_hidden_identity, state_disguised]
+      speech_acts_performed: [speech_request, speech_lie, speech_command]
+      affects: [affect_fear, affect_shame, affect_love]
+      traits: [eight-year-old-releaser, failed-well-guardian, golden-haired-exile, kitchen-servant, gardener-boy, anonymous-knight, apple-catcher]
+      evidence: |
+        The King had a son of eight years
+
+    iron_john_second_king:
+      name: The King of the Great City
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command, speech_promise]
+      affects: [affect_anger, affect_joy]
+      traits: [palace-employer, war-threatened-king, festival-proclaimer, proof-asker, bride-giving-father]
+      evidence: |
+        At length he went to the palace
+
+    iron_john_cook:
+      name: The Palace Cook
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [wood-water-master, pitying-exchanger]
+      evidence: |
+        the cook took him into his service
+
+    iron_john_gardener:
+      name: The Gardener
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [garden-supervisor, mocking-witness, children's-ducat-recipient]
+      evidence: |
+        exchanged him for the gardener’s boy
+
+    iron_john_princess:
+      name: The King's Daughter Who Sees the Golden Hair
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_command, speech_request]
+      affects: [affect_love, affect_curiosity, affect_joy]
+      traits: [bedroom-witness, cap-snatcher, ducat-giver, golden-apple-thrower, recognizer-bride]
+      evidence: |
+        the King’s daughter
+
+    iron_john_iron_soldiers:
+      name: The Iron Soldiers
+      species: sp_human
+      agency_modes: [agency_violence, agency_social_rank]
+      traits: [forest-summoned-troops, iron-equipped-army, enemy-breakers]
+      evidence: |
+        a great troop of soldiers entirely equipped in iron
+
+    iron_john_enemy_army:
+      name: The Enemy Army
+      species: sp_human
+      agency_modes: [agency_violence]
+      traits: [superior-strength-invaders, routed-enemies]
+      evidence: |
+        the enemy, who was superior in strength
+
+    iron_john_king_attendants:
+      name: The King's Attendants
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech]
+      traits: [festival-pursuers, leg-wounders, golden-hair-witnesses]
+      evidence: |
+        the King’s attendants pursued him
+
+  magic_objects:
+
+    obj_iron_john_golden_ball:
+      name: The Prince's Golden Ball
+      instance_of: obj_golden_ball
+      object_kind: token
+      attributes:
+        function: falls into the cage and enables Iron John's release bargain
+      evidence: |
+        his golden ball fell into the cage
+
+    obj_iron_john_cage:
+      name: Iron John's Iron Cage
+      object_kind: architecture
+      attributes:
+        location: loc_iron_john_courtyard
+        prohibition: door not to be opened on pain of death
+      evidence: |
+        an iron cage in his court-yard
+
+    obj_iron_john_key:
+      name: The Cage Key under the Queen's Pillow
+      object_kind: token
+      attributes:
+        hidden_at: queen_mothers_pillow
+        function: releases Iron John from the cage
+      evidence: |
+        It lies under thy mother’s pillow
+
+    obj_iron_john_cap:
+      name: The Little Cap Hiding Golden Hair
+      object_kind: garment
+      attributes:
+        function: conceals the prince's golden hair during kitchen, garden, and court service
+      evidence: |
+        he kept his little cap on
+
+    obj_iron_john_three_legged_horse:
+      name: The Three-Legged Horse
+      object_kind: creature_object
+      attributes:
+        function: comic low-status mount exchanged for Iron John's war horse
+      evidence: |
+        it was lame of one foot
+
+    obj_iron_john_war_horse:
+      name: Iron John's Strong War Horse
+      object_kind: creature_object
+      attributes:
+        source: iron_john_wild_man
+        function: battle mount for the anonymous victory
+      evidence: |
+        led a horse that snorted with its nostrils
+
+    obj_iron_john_colored_armor:
+      name: The Red, White, and Black Armour
+      object_kind: garment
+      attributes:
+        sequence: [red, white, black]
+        function: hides the hero as three different festival knights
+      evidence: |
+        a suit of red armour
+
+    obj_iron_john_golden_apples:
+      name: The Three Golden Apples
+      object_kind: treasure
+      attributes:
+        count: 3
+        function: festival tokens caught by the hidden knight and returned as proof
+      evidence: |
+        the three golden apples
+
+    obj_iron_john_wound:
+      name: The Leg Wound
+      object_kind: relic
+      attributes:
+        function: bodily proof that the gardener's boy was the third festival knight
+      evidence: |
+        the wound which your people gave me
+
+  locations:
+
+    loc_iron_john_forest:
+      name: The Dangerous Royal Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        the dangerous forest
+
+    loc_iron_john_deep_pool:
+      name: The Deep Pool in the Forest
+      instance_of: loc_pond
+      threshold_type: threshold_well
+      evidence: |
+        it stood before a deep pool
+
+    loc_iron_john_courtyard:
+      name: The Castle Courtyard
+      instance_of: loc_courtyard
+      evidence: |
+        in his court-yard
+
+    loc_iron_john_golden_well:
+      name: The Gold Well
+      instance_of: loc_well
+      threshold_type: threshold_well
+      evidence: |
+        the gold well is as bright and clear as crystal
+
+    loc_iron_john_great_city:
+      name: The Great City
+      instance_of: loc_town
+      evidence: |
+        he reached a great city
+
+    loc_iron_john_palace_kitchen:
+      name: The Palace Kitchen Service
+      instance_of: loc_hearth
+      evidence: |
+        carry wood and water, and rake the cinders together
+
+    loc_iron_john_palace_garden:
+      name: The Palace Garden
+      instance_of: loc_garden
+      evidence: |
+        plant and water the garden
+
+    loc_iron_john_princess_bedroom:
+      name: The Princess's Bedroom
+      instance_of: loc_castle
+      evidence: |
+        the bed-room of the King’s daughter
+
+    loc_iron_john_stable:
+      name: The Palace Stable
+      instance_of: loc_stable
+      evidence: |
+        he went into the stable
+
+    loc_iron_john_battlefield:
+      name: The Battlefield
+      instance_of: loc_field
+      evidence: |
+        When he got near the battle-field
+
+    loc_iron_john_festival:
+      name: The Three-Day Recognition Feast
+      instance_of: loc_castle
+      evidence: |
+        a great feast that shall last for three days
+
+    loc_iron_john_wedding_hall:
+      name: The Marriage Feast Hall
+      instance_of: loc_castle
+      evidence: |
+        sitting at the marriage-feast
+
+
+classifications:
+
+  world_laws:
+    - law_prohibition_invites_violation
+    - law_golden_well_marks_failed_guardianship
+    - law_disguise_alters_social_reality
+    - law_promise_binds_reality
+
+  moral_regimes:
+    - moral_restorative
+    - moral_humbling_reform
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_object_mediation
+    - agency_violence
+    - agency_social_rank
+    - agency_endurance
+
+  affects_driving:
+    - affect_curiosity
+    - affect_fear
+    - affect_shame
+    - affect_love
+    - affect_joy
+
+  symbol_numbers:
+    - num_3
+    - num_7
+
+  threshold_types:
+    - threshold_forest
+    - threshold_well
+
+
+propp:
+
+  - function: func_initial_situation
+    order: 1
+    actor: iron_john_father_king
+    scene: "the king's forest becomes dangerous after huntsmen and hounds disappear"
+    evidence: "no one would any longer venture into the forest"
+
+  - function: func_capture
+    order: 2
+    actor: iron_john_strange_huntsman
+    victim: iron_john_wild_man
+    scene: "the strange huntsman drains the deep pool and captures the rusty wild man"
+    evidence: "bale out the water"
+
+  - function: func_interdiction
+    order: 3
+    actor: iron_john_father_king
+    scene: "the king cages Iron John and forbids the door to be opened on pain of death"
+    evidence: "forbade the door to be opened on pain of death"
+
+  - function: func_violation
+    order: 4
+    actor: iron_john_prince
+    scene: "the prince steals the key from under his mother's pillow and releases Iron John to recover the golden ball"
+    evidence: "The door opened with difficulty"
+
+  - function: func_abduction
+    order: 5
+    actor: iron_john_wild_man
+    beneficiary: iron_john_prince
+    scene: "Iron John carries the frightened boy into the forest to protect him after the release"
+    evidence: "set him on his shoulder"
+
+  - function: func_donor_sequence
+    order: 6
+    actor: iron_john_wild_man
+    beneficiary: iron_john_prince
+    scene: "Iron John tests the boy as guardian of the gold well across three contacts"
+    evidence: "take care that nothing falls into it"
+
+  - function: func_branding
+    order: 7
+    actor: loc_iron_john_golden_well
+    beneficiary: iron_john_prince
+    scene: "finger, hair, and then the whole head are gilded, leaving the prince with hidden golden hair"
+    evidence: "the whole of the hair of his head was already golden"
+
+  - function: func_exile
+    order: 8
+    actor: iron_john_wild_man
+    beneficiary: iron_john_prince
+    scene: "after the failed trial, Iron John sends the prince into the world to learn poverty but grants future help"
+    evidence: "there thou wilt learn what poverty is"
+
+  - function: func_unrecognized_service
+    order: 9
+    actor: iron_john_prince
+    scene: "the prince serves first in the kitchen and then as the gardener's boy while hiding his golden hair"
+    evidence: "exchanged him for the gardener’s boy"
+
+  - function: func_recognition_attempt
+    order: 10
+    actor: iron_john_princess
+    beneficiary: iron_john_prince
+    scene: "the princess glimpses his shining hair, demands flowers, pulls off his cap, and gives ducats"
+    evidence: "his golden hair rolled down on his shoulders"
+
+  - function: func_helper_intervention
+    order: 11
+    actor: iron_john_wild_man
+    beneficiary: iron_john_prince
+    scene: "Iron John supplies a strong horse and iron soldiers for war"
+    evidence: "a great troop of soldiers entirely equipped in iron"
+
+  - function: func_victory
+    order: 12
+    actor: iron_john_prince
+    victim: iron_john_enemy_army
+    scene: "the hidden prince defeats the enemy army and returns the horse and troops to Iron John"
+    evidence: "there was not a single man left"
+
+  - function: func_difficult_task
+    order: 13
+    actor: iron_john_second_king
+    scene: "the king proclaims a three-day feast where the princess will throw a golden apple to find the unknown knight"
+    evidence: "thou shalt throw a golden apple"
+
+  - function: func_helper_intervention
+    order: 14
+    actor: iron_john_wild_man
+    beneficiary: iron_john_prince
+    scene: "Iron John equips the prince in red, white, and black armour for the three apple-catching days"
+    evidence: "Iron John equipped him as a white knight"
+
+  - function: func_branding
+    order: 15
+    actor: iron_john_king_attendants
+    beneficiary: iron_john_prince
+    scene: "on the third day the pursuing attendants wound his leg and see the golden hair"
+    evidence: "wounded the youth’s leg"
+
+  - function: func_recognition
+    order: 16
+    actor: iron_john_second_king
+    beneficiary: iron_john_prince
+    scene: "golden hair, three apples, and the wound prove that the gardener's boy is the victorious knight"
+    evidence: "Art thou the knight who came every day to the festival"
+
+  - function: func_wedding
+    order: 17
+    actor: iron_john_prince
+    beneficiary: iron_john_princess
+    scene: "the prince asks for the king's daughter, she recognizes his worth, and the wedding is celebrated"
+    evidence: "Give me your daughter to wife"
+
+  - function: func_disenchantment
+    order: 18
+    actor: iron_john_wild_man
+    scene: "Iron John appears as a stately king, reveals that the prince freed him from enchantment, and gives him treasure"
+    evidence: "was by enchantment a wild man"
+
+
+edges:
+
+  - { from: iron_john_father_king, to: loc_iron_john_forest, label: OWNS,
+      evidence: "had a great forest near his palace" }
+  - { from: iron_john_father_king, to: iron_john_strange_huntsman, label: WARNS,
+      evidence: "It is not safe in there" }
+  - { from: iron_john_strange_huntsman, to: loc_iron_john_deep_pool, label: DISCOVERS,
+      evidence: "stood before a deep pool" }
+  - { from: loc_iron_john_deep_pool, to: iron_john_wild_man, label: CONTAINS,
+      evidence: "there lay a wild man" }
+  - { from: iron_john_strange_huntsman, to: iron_john_wild_man, label: BINDS_AND_CAPTURES,
+      evidence: "They bound him with cords" }
+  - { from: iron_john_father_king, to: obj_iron_john_cage, label: IMPRISONS_IN,
+      evidence: "put in an iron cage" }
+  - { from: iron_john_father_king, to: obj_iron_john_cage, label: PROHIBITS_OPENING,
+      evidence: "forbade the door to be opened on pain of death" }
+  - { from: iron_john_queen_mother, to: obj_iron_john_key, label: KEEPS,
+      evidence: "take the key into her keeping" }
+  - { from: iron_john_prince, to: obj_iron_john_golden_ball, label: LOSES_INTO_CAGE,
+      evidence: "his golden ball fell into the cage" }
+  - { from: iron_john_wild_man, to: iron_john_prince, label: BARGAINS_RELEASE_WITH,
+      evidence: "Not till thou hast opened the door for me" }
+  - { from: iron_john_wild_man, to: obj_iron_john_key, label: REVEALS_LOCATION_OF,
+      evidence: "It lies under thy mother’s pillow" }
+  - { from: iron_john_prince, to: obj_iron_john_key, label: STEALS,
+      evidence: "brought the key" }
+  - { from: iron_john_prince, to: iron_john_wild_man, label: RELEASES,
+      evidence: "The door opened with difficulty" }
+  - { from: iron_john_wild_man, to: obj_iron_john_golden_ball, label: RETURNS,
+      evidence: "gave him the golden ball" }
+  - { from: iron_john_wild_man, to: iron_john_prince, label: CARRIES_INTO_FOREST,
+      evidence: "set him on his shoulder" }
+  - { from: iron_john_wild_man, to: loc_iron_john_golden_well, label: ASSIGNS_GUARDIANSHIP_OF,
+      evidence: "take care that nothing falls into it" }
+  - { from: loc_iron_john_golden_well, to: iron_john_prince, label: GILDS_FINGER_OF,
+      evidence: "it was quite gilded" }
+  - { from: loc_iron_john_golden_well, to: iron_john_prince, label: GILDS_HAIR_OF,
+      evidence: "already quite gilded" }
+  - { from: loc_iron_john_golden_well, to: iron_john_prince, label: GILDS_WHOLE_HEAD_OF,
+      evidence: "shone like the sun" }
+  - { from: iron_john_prince, to: obj_iron_john_cap, label: HIDES_HAIR_WITH,
+      evidence: "tied it round his head" }
+  - { from: iron_john_wild_man, to: iron_john_prince, label: EXILES_TO_LEARN_POVERTY,
+      evidence: "there thou wilt learn what poverty is" }
+  - { from: iron_john_wild_man, to: iron_john_prince, label: PROMISES_HELP_TO,
+      evidence: "come to the forest and cry, ‘Iron John,’" }
+  - { from: iron_john_cook, to: iron_john_prince, label: TAKES_INTO_SERVICE,
+      evidence: "the cook took him into his service" }
+  - { from: iron_john_prince, to: obj_iron_john_cap, label: KEEPS_ON_AT_TABLE,
+      evidence: "he kept his little cap on" }
+  - { from: iron_john_cook, to: iron_john_gardener, label: EXCHANGES_PRINCE_TO,
+      evidence: "exchanged him for the gardener’s boy" }
+  - { from: iron_john_prince, to: loc_iron_john_palace_garden, label: WORKS_IN,
+      evidence: "plant and water the garden" }
+  - { from: iron_john_princess, to: iron_john_prince, label: GLIMPSES_GOLDEN_HAIR_OF,
+      evidence: "the rays fell into the bed-room" }
+  - { from: iron_john_princess, to: iron_john_prince, label: REQUESTS_FLOWERS_FROM,
+      evidence: "Boy, bring me a wreath of flowers" }
+  - { from: iron_john_princess, to: obj_iron_john_cap, label: PULLS_OFF,
+      evidence: "caught at his cap and pulled it off" }
+  - { from: iron_john_princess, to: iron_john_prince, label: GIVES_DUCATS_TO,
+      evidence: "gave him a handful of ducats" }
+  - { from: iron_john_prince, to: iron_john_gardener, label: GIVES_DUCATS_TO_CHILDREN_OF,
+      evidence: "present them to thy children" }
+  - { from: iron_john_second_king, to: iron_john_enemy_army, label: FACES,
+      evidence: "enemy, who was superior in strength" }
+  - { from: iron_john_prince, to: obj_iron_john_three_legged_horse, label: RIDES,
+      evidence: "it was lame of one foot" }
+  - { from: iron_john_prince, to: iron_john_wild_man, label: CALLS_THREE_TIMES,
+      evidence: "called “Iron John,” three times" }
+  - { from: iron_john_wild_man, to: obj_iron_john_war_horse, label: PROVIDES,
+      evidence: "That thou shalt have, and still more than thou askest for" }
+  - { from: iron_john_wild_man, to: iron_john_iron_soldiers, label: PROVIDES,
+      evidence: "a great troop of soldiers entirely equipped in iron" }
+  - { from: iron_john_prince, to: iron_john_enemy_army, label: DEFEATS,
+      evidence: "beat down all who opposed him" }
+  - { from: iron_john_prince, to: obj_iron_john_war_horse, label: RETURNS,
+      evidence: "Take back thy horse and thy troops" }
+  - { from: iron_john_second_king, to: loc_iron_john_festival, label: PROCLAIMS,
+      evidence: "a great feast that shall last for three days" }
+  - { from: iron_john_princess, to: obj_iron_john_golden_apples, label: THROWS,
+      evidence: "thou shalt throw a golden apple" }
+  - { from: iron_john_wild_man, to: obj_iron_john_colored_armor, label: PROVIDES_RED_ARMOR,
+      evidence: "a suit of red armour" }
+  - { from: iron_john_wild_man, to: obj_iron_john_colored_armor, label: PROVIDES_WHITE_ARMOR,
+      evidence: "equipped him as a white knight" }
+  - { from: iron_john_wild_man, to: obj_iron_john_colored_armor, label: PROVIDES_BLACK_ARMOR,
+      evidence: "a suit of black armour" }
+  - { from: iron_john_prince, to: obj_iron_john_golden_apples, label: CATCHES_THREE_TIMES,
+      evidence: "caught the three golden apples" }
+  - { from: iron_john_king_attendants, to: iron_john_prince, label: WOUNDS_LEG_OF,
+      evidence: "wounded the youth’s leg" }
+  - { from: iron_john_king_attendants, to: iron_john_prince, label: SEES_GOLDEN_HAIR_OF,
+      evidence: "they could see that he had golden hair" }
+  - { from: iron_john_princess, to: obj_iron_john_cap, label: REMOVES_FOR_RECOGNITION,
+      evidence: "took it off" }
+  - { from: iron_john_prince, to: obj_iron_john_golden_apples, label: RETURNS_AS_PROOF,
+      evidence: "here the apples are" }
+  - { from: iron_john_prince, to: obj_iron_john_wound, label: SHOWS_AS_PROOF,
+      evidence: "you may see the wound" }
+  - { from: iron_john_prince, to: iron_john_second_king, label: REQUESTS_DAUGHTER_FROM,
+      evidence: "Give me your daughter to wife" }
+  - { from: iron_john_princess, to: iron_john_prince, label: KISSES,
+      evidence: "she went and kissed him" }
+  - { from: iron_john_wild_man, to: iron_john_prince, label: REVEALS_DISENCHANTMENT_TO,
+      evidence: "I am Iron John, and was by enchantment a wild man" }
+  - { from: iron_john_wild_man, to: iron_john_prince, label: GIVES_TREASURE_TO,
+      evidence: "all the treasures which I possess, shall be thy property" }
+  - { from: loc_iron_john_golden_well, to: law_golden_well_marks_failed_guardianship, label: REALIZES,
+      evidence: "the whole of the hair of his head was already golden" }

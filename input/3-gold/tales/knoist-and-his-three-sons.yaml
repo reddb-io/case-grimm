@@ -1,0 +1,238 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: knoist-and-his-three-sons
+khm: 138
+atu: '1965'
+atu_name: Knoist and His Three Sons
+canonical_source: ../../2-silver/canonical/knoist-and-his-three-sons/canonical.txt
+title: Knoist and His Three Sons
+
+
+entities:
+
+  characters:
+
+    knoist_father:
+      name: Knoist
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [father-between-werrel-and-soist, named-nonsense-householder]
+      evidence: |
+        a man whose name was Knoist
+
+    knoist_blind_son:
+      name: The Blind Son
+      species: sp_human
+      existential_states: [state_blind]
+      agency_modes: [agency_violence]
+      traits: [blind-hunter, contradiction-actor]
+      evidence: |
+        One was blind
+
+    knoist_lame_son:
+      name: The Lame Son
+      species: sp_human
+      existential_states: [state_maimed]
+      agency_modes: [agency_violence, agency_endurance]
+      traits: [lame-runner, hare-catcher, contradiction-actor]
+      evidence: |
+        the other lame
+
+    knoist_naked_son:
+      name: The Stark-Naked Son
+      species: sp_human
+      agency_modes: [agency_object_mediation]
+      traits: [stark-naked, pocket-bearer-without-clothes, contradiction-actor]
+      evidence: |
+        the third stark-naked
+
+    knoist_hare:
+      name: The Hare
+      species: sp_hare
+      agency_modes: [agency_endurance]
+      traits: [impossible-prey, shot-caught-pocketed]
+      evidence: |
+        they saw a hare
+
+    knoist_beechwood_sexton:
+      name: The Beech-Wood Sexton
+      being_type: being_animated_object
+      agency_modes: [agency_violence, agency_domestic_labor]
+      traits: [wooden-cleric, chapel-attendant, cudgel-holy-water-dealer]
+      evidence: |
+        a sexton made of beech-wood
+
+    knoist_boxwood_parson:
+      name: The Box-Wood Parson
+      being_type: being_animated_object
+      agency_modes: [agency_violence, agency_speech]
+      traits: [wooden-cleric, parson, cudgel-holy-water-dealer]
+      evidence: |
+        a box-wood parson
+
+  magic_objects:
+
+    obj_knoist_bottomless_boat:
+      name: The Boat with No Bottom
+      object_kind: tool
+      attributes:
+        function: impossible vessel boarded by all three sons
+      evidence: |
+        the one with no bottom to it
+
+    obj_knoist_cudgels:
+      name: The Cudgels Used as Holy-Water
+      object_kind: weapon
+      attributes:
+        function: parody of clerical holy-water distribution
+      evidence: |
+        dealt out holy-water with cudgels
+
+    obj_knoist_holy_water:
+      name: The Cudgel-Dealt Holy Water
+      object_kind: relic
+      attributes:
+        function: comic sacred object converted into bodily threat
+      evidence: |
+        holy-water with cudgels
+
+  locations:
+
+    loc_knoist_between_werrel_soist:
+      name: Between Werrel and Soist
+      instance_of: loc_road
+      evidence: |
+        Between Werrel and Soist
+
+    loc_knoist_field:
+      name: The Field of the Hare
+      instance_of: loc_field
+      evidence: |
+        they went into a field
+
+    loc_knoist_big_lake:
+      name: The Mighty Big Lake
+      instance_of: loc_lake
+      threshold_type: threshold_river
+      evidence: |
+        a mighty big lake
+
+    loc_knoist_big_forest:
+      name: The Mighty Big Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        a mighty big forest
+
+    loc_knoist_big_tree:
+      name: The Mighty Big Tree
+      instance_of: loc_tree
+      evidence: |
+        a mighty big tree
+
+    loc_knoist_tree_chapel:
+      name: The Chapel inside the Tree
+      instance_of: loc_church
+      evidence: |
+        in the tree was a mighty big chapel
+
+
+classifications:
+
+  world_laws:
+    - law_nonsense_catalogue_suspends_causality
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_violence
+    - agency_object_mediation
+    - agency_domestic_labor
+    - agency_speech
+
+  affects_driving:
+    - affect_fear
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_river
+    - threshold_forest
+
+
+propp:
+
+  - function: func_initial_situation
+    order: 1
+    actor: knoist_father
+    scene: "Knoist is introduced between Werrel and Soist with three sons marked by bodily contradiction"
+    evidence: "he had three sons"
+
+  - function: func_impossible_hunt
+    order: 2
+    actor: knoist_blind_son
+    victim: knoist_hare
+    scene: "the blind son shoots the hare, the lame son catches it, and the naked son pockets it"
+    evidence: "The blind one shot it"
+
+  - function: func_impossible_water_crossing
+    order: 3
+    actor: knoist_blind_son
+    scene: "the three sons board the boat with no bottom and cross the mighty big lake"
+    evidence: "They all three got into the one with no bottom to it"
+
+  - function: func_impossible_nested_space
+    order: 4
+    actor: loc_knoist_big_tree
+    scene: "inside the mighty big forest stands a mighty big tree, and inside the tree stands a chapel"
+    evidence: "in the tree was a mighty big chapel"
+
+  - function: func_comic_benediction
+    order: 5
+    actor: knoist_boxwood_parson
+    scene: "wooden clergy distribute holy water with cudgels, and the closing verse blesses the one who can run from it"
+    evidence: "Who can from holy water run"
+
+
+edges:
+
+  - { from: knoist_father, to: knoist_blind_son, label: FATHERS,
+      evidence: "he had three sons" }
+  - { from: knoist_father, to: knoist_lame_son, label: FATHERS,
+      evidence: "he had three sons" }
+  - { from: knoist_father, to: knoist_naked_son, label: FATHERS,
+      evidence: "he had three sons" }
+  - { from: knoist_blind_son, to: knoist_hare, label: SEES_CONTRADICTORILY,
+      evidence: "there they saw a hare" }
+  - { from: knoist_blind_son, to: knoist_hare, label: SHOOTS,
+      evidence: "The blind one shot it" }
+  - { from: knoist_lame_son, to: knoist_hare, label: CATCHES,
+      evidence: "the lame one caught it" }
+  - { from: knoist_naked_son, to: knoist_hare, label: POCKETS,
+      evidence: "the naked one put it in his pocket" }
+  - { from: knoist_blind_son, to: obj_knoist_bottomless_boat, label: BOARDS,
+      evidence: "They all three got into the one with no bottom to it" }
+  - { from: knoist_lame_son, to: obj_knoist_bottomless_boat, label: BOARDS,
+      evidence: "They all three got into the one with no bottom to it" }
+  - { from: knoist_naked_son, to: obj_knoist_bottomless_boat, label: BOARDS,
+      evidence: "They all three got into the one with no bottom to it" }
+  - { from: loc_knoist_big_lake, to: obj_knoist_bottomless_boat, label: CONTAINS_IMPOSSIBLE_VESSEL,
+      evidence: "there were three boats" }
+  - { from: loc_knoist_big_forest, to: loc_knoist_big_tree, label: CONTAINS,
+      evidence: "in which there was a mighty big tree" }
+  - { from: loc_knoist_big_tree, to: loc_knoist_tree_chapel, label: CONTAINS,
+      evidence: "in the tree was a mighty big chapel" }
+  - { from: loc_knoist_tree_chapel, to: knoist_beechwood_sexton, label: CONTAINS,
+      evidence: "in the chapel was a sexton made of beech-wood" }
+  - { from: loc_knoist_tree_chapel, to: knoist_boxwood_parson, label: CONTAINS,
+      evidence: "a box-wood parson" }
+  - { from: knoist_beechwood_sexton, to: obj_knoist_cudgels, label: DEALS_HOLY_WATER_WITH,
+      evidence: "dealt out holy-water with cudgels" }
+  - { from: knoist_boxwood_parson, to: obj_knoist_cudgels, label: DEALS_HOLY_WATER_WITH,
+      evidence: "dealt out holy-water with cudgels" }
+  - { from: obj_knoist_cudgels, to: obj_knoist_holy_water, label: PARODIES,
+      evidence: "holy-water with cudgels" }
+  - { from: atu_1965, to: law_nonsense_catalogue_suspends_causality, label: REALIZED_BY,
+      evidence: "The blind one shot it" }

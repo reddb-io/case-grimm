@@ -1,0 +1,471 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-brave-little-tailor
+khm: 20
+atu: '1640'
+atu_name: The Brave Little Tailor
+canonical_source: ../../2-silver/canonical/the-brave-little-tailor/canonical.txt
+title: The Brave Little Tailor
+
+
+entities:
+
+  characters:
+
+    brave_tailor_little_tailor:
+      name: The Brave Little Tailor
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_endurance, agency_domestic_labor]
+      speech_acts_performed: [speech_boast, speech_lie]
+      affects: [affect_pride, affect_fear]
+      traits: [little, nimble, boastful, ambiguity-exploiting, low-born-tailor, self-made-king]
+      evidence: |
+        "The whole world shall hear of it!" and he embroidered
+        "Seven at one stroke!"
+
+    brave_tailor_jam_woman:
+      name: The Peasant Woman Selling Jam
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      affects: [affect_anger]
+      traits: [street-vendor, heavy-basket-carrier, disappointed-seller]
+      evidence: |
+        "The woman who had hoped to find a good sale... went away quite
+        angry and grumbling."
+
+    brave_tailor_seven_flies:
+      name: The Seven Flies
+      species: sp_fly
+      traits: [jam-attracted, uninvited, killed-at-one-stroke]
+      evidence: |
+        "there lay before him no fewer than seven, dead and with legs
+        stretched out."
+
+    brave_tailor_mountain_giant:
+      name: The Mountain Giant
+      species: sp_human
+      being_type: being_giant
+      agency_modes: [agency_violence, agency_speech]
+      existential_states: [state_deceived]
+      affects: [affect_pride, affect_fear]
+      traits: [contemptuous, strength-testing, cheese-duped, bird-duped, tree-carrying-dupe, later-fearful]
+      evidence: |
+        "The giant read, 'Seven at one stroke,' and thought that they
+        had been men whom the tailor had killed"
+
+    brave_tailor_cavern_giants:
+      name: The Giants in the Cavern
+      species: sp_human
+      being_type: being_giant
+      agency_modes: [agency_violence]
+      existential_states: [state_deceived]
+      affects: [affect_fear]
+      traits: [sheep-eaters, bed-smashers, terrified-by-tailor]
+      evidence: |
+        "The giants were terrified, they were afraid that he would
+        strike them all dead"
+
+    brave_tailor_king:
+      name: The King
+      archetypes: [arc_oath_enforcer]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning]
+      speech_acts_performed: [speech_promise, speech_command]
+      existential_states: [state_deceived]
+      affects: [affect_fear, affect_shame]
+      traits: [reputation-fearing, promise-making, reward-evading, ordeal-assigning]
+      evidence: |
+        "he dreaded lest he should strike him and all his people dead"
+
+    brave_tailor_princess:
+      name: The King's Daughter / Young Queen
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning]
+      affects: [affect_shame, affect_anger, affect_fear]
+      traits: [reluctant-bride, status-discoverer, father-appealer]
+      evidence: |
+        "begged him to help her to get rid of her husband, who was
+        nothing else but a tailor."
+
+    brave_tailor_soldiers:
+      name: The King's Soldiers
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech]
+      existential_states: [state_deceived]
+      affects: [affect_fear]
+      traits: [tailor-fearing, dismissal-demanding, reputation-believing]
+      evidence: |
+        "not one of us can stand against him."
+
+    brave_tailor_horsemen:
+      name: The Hundred Horsemen
+      species: sp_human
+      agency_modes: [agency_violence]
+      existential_states: [state_deceived]
+      traits: [assistants-left-outside, post-fact-witnesses]
+      evidence: |
+        "one hundred horsemen should go with him to assist him."
+
+    brave_tailor_two_giants:
+      name: The Two Forest Giants
+      species: sp_human
+      being_type: being_giant
+      agency_modes: [agency_violence]
+      existential_states: [state_deceived]
+      affects: [affect_anger]
+      traits: [sleeping, mutually-duped, tree-weapon-fighters, self-destroying]
+      evidence: |
+        "they tore up trees and belabored each other so long, that at
+        last they both fell down dead"
+
+    brave_tailor_unicorn:
+      name: The Forest Unicorn
+      species: sp_unicorn
+      agency_modes: [agency_violence]
+      traits: [harmful, charging, horn-trapped, rope-led]
+      evidence: |
+        "struck its horn so fast in the trunk that it had not strength
+        enough to draw it out again"
+
+    brave_tailor_wild_boar:
+      name: The Wild Boar
+      species: sp_boar
+      agency_modes: [agency_violence]
+      traits: [forest-havoc-maker, foaming-mouth, whetted-tusks, chapel-trapped]
+      evidence: |
+        "it ran on him with foaming mouth and whetted tusks"
+
+    brave_tailor_huntsmen:
+      name: The Huntsmen
+      species: sp_human
+      agency_modes: [agency_violence]
+      affects: [affect_fear]
+      traits: [boar-fearing, outside-waiting, prisoner-witnesses]
+      evidence: |
+        "the wild boar had several times received them in such a
+        manner that they had no inclination to lie in wait for him."
+
+    brave_tailor_armour_bearer:
+      name: The King's Armour-Bearer
+      species: sp_human
+      agency_modes: [agency_speech]
+      affects: [affect_loyalty]
+      traits: [friendly-to-tailor, plot-overhearer, warning-giver]
+      evidence: |
+        "was friendly with the young lord, and informed him of the
+        whole plot."
+
+    brave_tailor_ambushers:
+      name: The King's Bedroom Ambushers
+      species: sp_human
+      agency_modes: [agency_violence]
+      existential_states: [state_deceived]
+      affects: [affect_fear]
+      traits: [ship-exile-plotters, door-waiters, boast-frightened]
+      evidence: |
+        "they were overcome by a great dread, and ran"
+
+  magic_objects:
+
+    obj_jam_bread_brave_tailor:
+      name: The Jam Bread
+      object_kind: food
+      attributes:
+        function: attracts the seven flies that launch the boast
+      evidence: |
+        "spread the jam over it"
+
+    obj_seven_at_one_stroke_girdle:
+      name: The 'Seven at One Stroke' Girdle
+      instance_of: obj_boast_girdle
+      object_kind: garment
+      attributes:
+        inscription: Seven at one stroke
+        literal_referent: brave_tailor_seven_flies
+        inferred_referent: slain men
+      evidence: |
+        "embroidered on it in large letters, 'Seven at one stroke!'"
+
+    obj_old_cheese_brave_tailor:
+      name: The Old Cheese
+      object_kind: food
+      attributes:
+        function: squeezed as if stronger than a stone
+      evidence: |
+        "brought out the soft cheese, and pressed it until the liquid
+        ran out of it."
+
+    obj_pocket_bird_brave_tailor:
+      name: The Pocket Bird
+      object_kind: creature_object
+      attributes:
+        function: thrown as if a stone that never comes down
+      evidence: |
+        "took out the bird, and threw it into the air."
+
+    obj_stones_giant_trick:
+      name: The Stones Dropped on the Sleeping Giants
+      object_kind: weapon
+      attributes:
+        function: provoke mutual violence between the two giants
+      evidence: |
+        "let one stone after another fall on the breast of one of the
+        giants."
+
+    obj_rope_axe_unicorn:
+      name: The Rope and Axe for the Unicorn
+      object_kind: tool
+      attributes:
+        function: binds the trapped unicorn and frees horn from tree
+      evidence: |
+        "put the rope round its neck, and then with his axe he hewed
+        the horn out of the tree"
+
+    obj_tailor_yard_measure:
+      name: The Tailor's Yard-Measure
+      object_kind: tool
+      attributes:
+        function: dream-speech reveals tailoring trade
+      evidence: |
+        "I will rap the yard-measure over thine ears."
+
+  locations:
+
+    loc_tailor_workshop_brave_tailor:
+      name: The Tailor's Workshop by the Window
+      instance_of: loc_house
+      evidence: |
+        "a little tailor was sitting on his table by the window"
+
+    loc_mountain_brave_tailor:
+      name: The Mountain Summit
+      instance_of: loc_mountain
+      evidence: |
+        "the road led him up a mountain"
+
+    loc_giant_cavern_brave_tailor:
+      name: The Giants' Cavern
+      instance_of: loc_cave
+      evidence: |
+        "come with me into our cavern and spend the night with us."
+
+    loc_palace_courtyard_brave_tailor:
+      name: The Royal Palace Courtyard
+      instance_of: loc_castle
+      evidence: |
+        "he came to the courtyard of a royal palace"
+
+    loc_forest_giants_brave_tailor:
+      name: The Forest of the Two Giants
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "In a forest of his country lived two giants"
+
+    loc_giant_tree_brave_tailor:
+      name: The Tree Above the Sleeping Giants
+      instance_of: loc_tree
+      evidence: |
+        "climbed up the tree... just above the sleepers"
+
+    loc_unicorn_tree_brave_tailor:
+      name: The Tree That Traps the Unicorn
+      instance_of: loc_tree
+      evidence: |
+        "sprang nimbly behind the tree."
+
+    loc_chapel_boar_trap_brave_tailor:
+      name: The Chapel Used as Boar Trap
+      instance_of: loc_church
+      evidence: |
+        "sprang into a chapel which was near"
+
+    loc_bedroom_plot_brave_tailor:
+      name: The Royal Bedroom of the Final Plot
+      instance_of: loc_castle
+      evidence: |
+        "Leave thy bed-room door open this night"
+
+    loc_exile_ship_brave_tailor:
+      name: The Planned Exile Ship
+      instance_of: loc_ship
+      evidence: |
+        "take him on board a ship which shall carry him into the wide
+        world."
+
+
+classifications:
+
+  world_laws:
+    - law_boast_generates_reputation
+    - law_promise_binds_reality
+    - law_forest_suspends_domestic_order
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_social_rank
+    - agency_violence
+
+  affects_driving:
+    - affect_pride
+    - affect_fear
+    - affect_shame
+
+  symbol_numbers:
+    - num_7   # seven flies reinterpreted as seven men
+    - num_2   # two forest giants
+    - num_3   # three royal ordeals: giants, unicorn, boar
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+  - { function: func_lack, order: 1, actor: brave_tailor_little_tailor,
+      scene: "tailor's workshop is too small for his new valour" }
+  - { function: func_victory, order: 2, actor: brave_tailor_little_tailor,
+      scene: "kills seven flies at one stroke" }
+  - { function: func_branding, order: 3, actor: brave_tailor_little_tailor,
+      scene: "embroidered girdle advertises 'Seven at one stroke'" }
+  - { function: func_departure, order: 4, actor: brave_tailor_little_tailor,
+      scene: "sets out into the world with cheese and bird" }
+  - { function: func_donor_test, order: 5, actor: brave_tailor_mountain_giant,
+      scene: "giant tests him with squeezing and throwing contests" }
+  - { function: func_trickery, order: 6, actor: brave_tailor_little_tailor,
+      scene: "cheese and bird counterfeit superior strength" }
+  - { function: func_trickery, order: 7, actor: brave_tailor_little_tailor,
+      scene: "tailor rides the tree the giant thinks he helps carry" }
+  - { function: func_villainy, order: 8, actor: brave_tailor_cavern_giants,
+      scene: "giant smashes the bed at night to kill him" }
+  - { function: func_rescue, order: 9, actor: brave_tailor_little_tailor,
+      scene: "tailor survives by sleeping in a corner and terrifies the giants" }
+  - { function: func_mediation, order: 10, actor: brave_tailor_king,
+      scene: "king takes the reputation as military usefulness and threat" }
+  - { function: func_difficult_task, order: 11, actor: brave_tailor_king,
+      scene: "king promises princess and half kingdom for killing two giants" }
+  - { function: func_victory, order: 12, actor: brave_tailor_little_tailor,
+      scene: "tailor tricks the two giants into killing each other" }
+  - { function: func_difficult_task, order: 13, actor: brave_tailor_king,
+      scene: "king delays reward by demanding capture of the unicorn" }
+  - { function: func_victory, order: 14, actor: brave_tailor_little_tailor,
+      scene: "tailor traps unicorn horn in a tree and leads it away" }
+  - { function: func_difficult_task, order: 15, actor: brave_tailor_king,
+      scene: "king delays reward by demanding capture of the wild boar" }
+  - { function: func_victory, order: 16, actor: brave_tailor_little_tailor,
+      scene: "tailor traps boar inside a chapel" }
+  - { function: func_wedding, order: 17, actor: brave_tailor_king,
+      scene: "king gives daughter and half kingdom; tailor becomes king" }
+  - { function: func_exposure, order: 18, actor: brave_tailor_princess,
+      scene: "queen hears dream-speech revealing he was born a tailor" }
+  - { function: func_trickery, order: 19, actor: brave_tailor_little_tailor,
+      scene: "tailor frightens bedroom ambushers by pretending to sleep-boast" }
+  - { function: func_liquidation, order: 20, actor: brave_tailor_little_tailor,
+      scene: "no one ventures against him again; he remains king" }
+
+
+edges:
+
+  # Flies, boast, and departure
+  - { from: brave_tailor_jam_woman, to: obj_jam_bread_brave_tailor, label: SELLS_INGREDIENT_FOR,
+      evidence: "Good jams, cheap! Good jams, cheap!" }
+  - { from: obj_jam_bread_brave_tailor, to: brave_tailor_seven_flies, label: ATTRACTS,
+      evidence: "the smell of the sweet jam... attracted" }
+  - { from: brave_tailor_little_tailor, to: brave_tailor_seven_flies, label: KILLS,
+      evidence: "there lay before him no fewer than seven, dead" }
+  - { from: brave_tailor_little_tailor, to: obj_seven_at_one_stroke_girdle, label: MAKES,
+      evidence: "cut himself a girdle, stitched it, and embroidered on it" }
+  - { from: obj_seven_at_one_stroke_girdle, to: brave_tailor_little_tailor, label: ADVERTISES_REPUTATION_OF,
+      evidence: "The whole world shall hear of it!" }
+  - { from: brave_tailor_little_tailor, to: loc_tailor_workshop_brave_tailor, label: LEAVES,
+      evidence: "resolved to go forth into the world" }
+
+  # First giant's tests
+  - { from: brave_tailor_mountain_giant, to: obj_seven_at_one_stroke_girdle, label: READS,
+      evidence: "The giant read, 'Seven at one stroke'" }
+  - { from: obj_seven_at_one_stroke_girdle, to: brave_tailor_mountain_giant, label: DECEIVES,
+      evidence: "thought that they had been men whom the tailor had killed" }
+  - { from: brave_tailor_mountain_giant, to: brave_tailor_little_tailor, label: TESTS_STRENGTH_OF,
+      evidence: "he wished to try him first" }
+  - { from: brave_tailor_little_tailor, to: obj_old_cheese_brave_tailor, label: USES,
+      evidence: "pressed it until the liquid ran out of it" }
+  - { from: brave_tailor_little_tailor, to: obj_pocket_bird_brave_tailor, label: USES,
+      evidence: "threw it into the air... and did not come back." }
+  - { from: brave_tailor_little_tailor, to: brave_tailor_mountain_giant, label: RIDES_UNSEEN_BY,
+      evidence: "the tailor seated himself on a branch" }
+  - { from: brave_tailor_mountain_giant, to: brave_tailor_little_tailor, label: ATTEMPTS_TO_KILL,
+      evidence: "cut through the bed with one blow" }
+  - { from: brave_tailor_little_tailor, to: brave_tailor_cavern_giants, label: FRIGHTENS,
+      evidence: "all at once he walked up to them quite merrily and boldly." }
+
+  # Court reputation and royal tasks
+  - { from: obj_seven_at_one_stroke_girdle, to: brave_tailor_soldiers, label: DECEIVES,
+      evidence: "What does the great warrior here in the midst of peace?" }
+  - { from: brave_tailor_king, to: brave_tailor_little_tailor, label: HIRES,
+      evidence: "offer him military service" }
+  - { from: brave_tailor_soldiers, to: brave_tailor_king, label: FEARFULLY_PETITIONS,
+      evidence: "begged for their dismissal" }
+  - { from: brave_tailor_king, to: brave_tailor_little_tailor, label: PROMISES_TO,
+      attributes: { reward: [princess, half_kingdom], first_task: kill_two_giants },
+      evidence: "he would give him his only daughter to wife, and half of his kingdom" }
+  - { from: brave_tailor_king, to: brave_tailor_little_tailor, label: ASSIGNS_TASK_TO,
+      evidence: "two giants who caused great mischief" }
+  - { from: brave_tailor_little_tailor, to: brave_tailor_horsemen, label: DISMISSES_HELP,
+      evidence: "Just stay waiting here, I alone will soon finish off the giants." }
+
+  # Two giants tricked into self-destruction
+  - { from: brave_tailor_little_tailor, to: obj_stones_giant_trick, label: USES,
+      evidence: "gathered two pocketsful of stones" }
+  - { from: brave_tailor_little_tailor, to: brave_tailor_two_giants, label: DECEIVES,
+      evidence: "Why art thou pelting me? I am not pelting thee" }
+  - { from: brave_tailor_two_giants, to: brave_tailor_two_giants, label: KILLS_EACH_OTHER,
+      evidence: "they both fell down dead on the ground at the same time." }
+  - { from: brave_tailor_little_tailor, to: brave_tailor_two_giants, label: CLAIMS_KILL,
+      evidence: "I have given both of them their finishing stroke" }
+
+  # Unicorn and boar
+  - { from: brave_tailor_king, to: brave_tailor_little_tailor, label: ASSIGNS_TASK_TO,
+      attributes: { task: catch_unicorn },
+      evidence: "thou must catch it first." }
+  - { from: brave_tailor_unicorn, to: brave_tailor_little_tailor, label: CHARGES,
+      evidence: "rushed directly on the tailor" }
+  - { from: brave_tailor_little_tailor, to: loc_unicorn_tree_brave_tailor, label: USES_AS_TRAP,
+      evidence: "sprang nimbly behind the tree." }
+  - { from: loc_unicorn_tree_brave_tailor, to: brave_tailor_unicorn, label: TRAPS,
+      evidence: "struck its horn so fast in the trunk" }
+  - { from: brave_tailor_little_tailor, to: brave_tailor_unicorn, label: CAPTURES,
+      evidence: "put the rope round its neck" }
+  - { from: brave_tailor_king, to: brave_tailor_little_tailor, label: ASSIGNS_TASK_TO,
+      attributes: { task: catch_wild_boar },
+      evidence: "catch him a wild boar that made great havoc" }
+  - { from: brave_tailor_wild_boar, to: brave_tailor_little_tailor, label: CHARGES,
+      evidence: "it ran on him with foaming mouth and whetted tusks" }
+  - { from: brave_tailor_little_tailor, to: loc_chapel_boar_trap_brave_tailor, label: USES_AS_TRAP,
+      evidence: "sprang into a chapel which was near" }
+  - { from: brave_tailor_little_tailor, to: brave_tailor_wild_boar, label: CAPTURES,
+      evidence: "ran round outside and shut the door behind it" }
+  - { from: brave_tailor_huntsmen, to: brave_tailor_wild_boar, label: WITNESSES_CAPTURE_OF,
+      evidence: "that they might see the prisoner with their own eyes." }
+
+  # Wedding and final exposure plot
+  - { from: brave_tailor_king, to: brave_tailor_little_tailor, label: GIVES_REWARD_TO,
+      evidence: "gave him his daughter and the half of his kingdom." }
+  - { from: brave_tailor_princess, to: brave_tailor_little_tailor, label: MARRIES,
+      evidence: "The wedding was held with great magnificence and small joy" }
+  - { from: brave_tailor_little_tailor, to: obj_tailor_yard_measure, label: DREAM_SPEAKS_OF,
+      evidence: "I will rap the yard-measure over thine ears." }
+  - { from: brave_tailor_princess, to: brave_tailor_little_tailor, label: DISCOVERS_STATUS_OF,
+      evidence: "discovered in what state of life the young lord had been born" }
+  - { from: brave_tailor_king, to: brave_tailor_ambushers, label: COMMANDS,
+      evidence: "go in, bind him, and take him on board a ship" }
+  - { from: brave_tailor_armour_bearer, to: brave_tailor_little_tailor, label: WARNS,
+      evidence: "informed him of the whole plot." }
+  - { from: brave_tailor_little_tailor, to: brave_tailor_ambushers, label: FRIGHTENS,
+      evidence: "am I to fear those who are standing outside the room." }
+  - { from: brave_tailor_little_tailor, to: loc_palace_courtyard_brave_tailor, label: RULES_FROM,
+      evidence: "was a king and remained one, to the end of his life." }

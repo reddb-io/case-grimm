@@ -1,0 +1,314 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: lazy-harry
+khm: 164
+atu: "1430"
+atu_name: Lazy Harry
+canonical_source: ../../2-silver/canonical/lazy-harry/canonical.txt
+title: Lazy Harry
+
+
+entities:
+
+  characters:
+
+    lazy_harry:
+      name: Lazy Harry
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor, agency_object_mediation]
+      speech_acts_performed: [speech_bargain, speech_boast]
+      affects: [affect_sloth, affect_joy]
+      traits: [lazy-husband, goat-burden-complainer, marriage-as-labour-transfer-planner, honey-saver, contented-loss-reframer]
+      evidence: |
+        Harry was lazy
+
+    lazy_harry_trina:
+      name: Fat Trina
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor, agency_object_mediation]
+      speech_acts_performed: [speech_bargain, speech_boast]
+      affects: [affect_sloth, affect_anger]
+      traits: [lazy-wife, goat-herder-by-marriage, beehive-proposer, hypothetical-child-disciplinarian, honey-pitcher-breaker]
+      evidence: |
+        fat Trina was no less idle
+
+    lazy_harry_trina_parents:
+      name: Trina's Parents
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      traits: [marriage-consent-givers, like-matches-like-judges]
+      evidence: |
+        The parents did not reflect long.
+
+    lazy_harry_neighbor:
+      name: The Neighbor Who Takes the Goats
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation]
+      traits: [goat-buyer, beehive-exchanger]
+      evidence: |
+        The neighbor willingly gave a beehive for the two goats.
+
+    lazy_harry_two_goats:
+      name: The Two Goats
+      species: sp_goat
+      agency_modes: [agency_domestic_labor]
+      traits: [pasture-requiring-livestock, bleating-sleep-disturbers, exchanged-care-burden]
+      evidence: |
+        give the two goats
+
+    lazy_harry_bees:
+      name: The Tireless Bees
+      species: sp_insect
+      agency_modes: [agency_domestic_labor, agency_extraordinary_body]
+      traits: [self-working-insects, honey-makers, no-herding-needed]
+      evidence: |
+        The bees flew in and out from early morning till late evening
+
+    lazy_harry_hypothetical_child:
+      name: The Hypothetical Disobedient Child
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [imagined-child, goose-keeper-problem, discipline-target]
+      evidence: |
+        not before we have a child to take care of them
+
+    lazy_harry_imagined_goose:
+      name: The Imagined Goose and Gosling
+      species: sp_goose
+      agency_modes: [agency_endurance]
+      traits: [planned-exchange-object, future-care-burden, lost-before-acquired]
+      evidence: |
+        exchange it for a goose with a young gosling
+
+  magic_objects:
+
+    obj_lazy_harry_beehive:
+      name: The Self-Working Beehive
+      object_kind: material
+      attributes:
+        function: replaces goat-herding with passive honey production by bees that find their own way home
+      evidence: |
+        he will give us a beehive for them
+
+    obj_lazy_harry_honey_pitcher:
+      name: The Pitcherful of Honey
+      object_kind: food
+      attributes:
+        function: stored yield from the beehive, destroyed by Trina's imagined child discipline
+      evidence: |
+        a whole pitcherful out of it
+
+    obj_lazy_harry_hazel_stick:
+      name: The Stout Hazel-Stick
+      object_kind: weapon
+      attributes:
+        function: mouse-driving tool reused in imagination as child-beating stick and accidentally swung into the honey pitcher
+      evidence: |
+        Trina brought in a stout hazel-stick
+
+  locations:
+
+    loc_lazy_harry_goat_field:
+      name: The Goat Field
+      instance_of: loc_field
+      evidence: |
+        drive a goat into the field
+
+    loc_lazy_harry_trina_house:
+      name: Trina's Parents' House
+      instance_of: loc_house
+      evidence: |
+        to where the parents of fat Trina lived
+
+    loc_lazy_harry_bedroom:
+      name: The Bedroom with the Honey Pitcher
+      instance_of: loc_bedchamber
+      evidence: |
+        fixed to the wall of their bed-room
+
+
+classifications:
+
+  world_laws:
+    - law_labor_avoidance_exchange_converts_care_to_loss
+
+  moral_regimes:
+    - moral_comic_inversion
+    - moral_contentment_over_possession
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_domestic_labor
+    - agency_object_mediation
+
+  affects_driving:
+    - affect_sloth
+    - affect_joy
+
+  symbol_numbers: []
+
+  threshold_types: []
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: lazy_harry
+    scene: Harry treats driving one goat to pasture as an intolerable burden.
+    evidence: |
+      Harry was lazy, and although he had nothing else to do but drive his goat daily to pasture
+
+  - function: func_plan
+    order: 2
+    actor: lazy_harry
+    scene: Harry decides to marry Trina so she can take his goat out with hers.
+    evidence: |
+      I will marry fat Trina who has also a goat
+
+  - function: func_marriage
+    order: 3
+    actor: lazy_harry_trina_parents
+    beneficiary: lazy_harry
+    scene: Trina's parents consent to the marriage because like goes with like.
+    evidence: |
+      Birds of a feather, flock together
+
+  - function: func_labor_transfer
+    order: 4
+    actor: lazy_harry_trina
+    scene: Trina leads out both goats while Harry enjoys having no work.
+    evidence: |
+      led out both the goats
+
+  - function: func_exchange
+    order: 5
+    actor: lazy_harry_trina
+    scene: Trina proposes exchanging the two goats for a beehive that will work without care.
+    evidence: |
+      give the two goats which disturb us every morning in our sweetest sleep
+
+  - function: func_passive_yield
+    order: 6
+    actor: lazy_harry_bees
+    beneficiary: lazy_harry
+    scene: The bees work tirelessly and fill the hive with honey.
+    evidence: |
+      filled the hive with the most beautiful honey
+
+  - function: func_hypothetical_care
+    order: 7
+    actor: lazy_harry_trina
+    scene: Trina refuses the goose exchange until they have a child to care for the geese.
+    evidence: |
+      not before we have a child to take care of them
+
+  - function: func_accidental_loss
+    order: 8
+    actor: lazy_harry_trina
+    scene: While demonstrating punishment for the imagined child, Trina hits and breaks the honey pitcher.
+    evidence: |
+      unhappily hit the honey-pitcher above the bed
+
+  - function: func_comic_acceptance
+    order: 9
+    actor: lazy_harry
+    scene: Harry treats the lost honey, goose, and gosling as no longer needing care.
+    evidence: |
+      There lie the goose and the young gosling
+
+  - function: func_closing_maxim
+    order: 10
+    actor: lazy_harry_trina
+    scene: Trina closes with the snail proverb that speed does no good.
+    evidence: |
+      Speed does no good.
+
+
+edges:
+
+  - from: lazy_harry
+    label: COMPLAINS_ABOUT
+    to: lazy_harry_two_goats
+    evidence: |
+      a wearisome employment to drive a goat into the field
+
+  - from: lazy_harry
+    label: SEEKS_LABOR_TRANSFER_BY_MARRIAGE
+    to: lazy_harry_trina
+    evidence: |
+      can take mine out with hers
+
+  - from: lazy_harry_trina
+    label: LEADS_OUT
+    to: lazy_harry_two_goats
+    evidence: |
+      led out both the goats
+
+  - from: lazy_harry_trina
+    label: PROPOSES_EXCHANGE_OF
+    to: lazy_harry_two_goats
+    evidence: |
+      give the two goats
+
+  - from: lazy_harry_neighbor
+    label: EXCHANGES_FOR
+    to: obj_lazy_harry_beehive
+    evidence: |
+      gave a beehive for the two goats
+
+  - from: lazy_harry_bees
+    label: FILL
+    to: obj_lazy_harry_beehive
+    evidence: |
+      filled the hive with the most beautiful honey
+
+  - from: obj_lazy_harry_beehive
+    label: PRODUCES
+    to: obj_lazy_harry_honey_pitcher
+    evidence: |
+      take a whole pitcherful out of it
+
+  - from: obj_lazy_harry_hazel_stick
+    label: PLACED_BESIDE
+    to: loc_lazy_harry_bedroom
+    evidence: |
+      put it beside her bed
+
+  - from: lazy_harry
+    label: PROPOSES_EXCHANGE_FOR
+    to: lazy_harry_imagined_goose
+    evidence: |
+      exchange it for a goose with a young gosling
+
+  - from: lazy_harry_trina
+    label: IMAGINES_CHILD_CARING_FOR
+    to: lazy_harry_imagined_goose
+    evidence: |
+      child to take care of them
+
+  - from: lazy_harry_trina
+    label: THREATENS_HYPOTHETICAL_CHILD
+    to: lazy_harry_hypothetical_child
+    evidence: |
+      this one shall fare badly if he does not do what I say
+
+  - from: obj_lazy_harry_hazel_stick
+    label: BREAKS
+    to: obj_lazy_harry_honey_pitcher
+    evidence: |
+      hit the honey-pitcher above the bed
+
+  - from: law_labor_avoidance_exchange_converts_care_to_loss
+    label: DESTROYS_STORED_GAIN
+    to: obj_lazy_harry_honey_pitcher
+    evidence: |
+      the fine honey streamed down on the ground
+
+  - from: lazy_harry
+    label: REFRAMES_LOSS_AS_REST
+    to: moral_contentment_over_possession
+    evidence: |
+      We have all reason to be satisfied with our lot.

@@ -1,0 +1,8 @@
+slug: old-hildebrand
+khm: 95
+atu: 1360C
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

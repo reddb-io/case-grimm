@@ -1,0 +1,8 @@
+slug: hans-married
+khm: 84
+atu: '859'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

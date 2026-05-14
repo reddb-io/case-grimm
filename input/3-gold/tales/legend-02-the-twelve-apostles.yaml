@@ -1,0 +1,108 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: legend-02-the-twelve-apostles
+khm: null
+legend_number: 2
+canonical_source: ../../2-silver/canonical/legend-02-the-twelve-apostles/canonical.txt
+title: The Twelve Apostles
+
+entities:
+  characters:
+    apostles_poor_mother:
+      name: The Poor Mother of Twelve Sons
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_prayer]
+      affects: [affect_hunger]
+      traits: [poor, needy, twelve-son-mother, redeemer-desiring, bread-seeking-sender]
+      evidence: |
+        a mother who had twelve sons
+
+    apostles_peter:
+      name: Peter
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      affects: [affect_hunger]
+      traits: [eldest-son, bread-seeker, forest-lost, death-near, apostle-to-be]
+      evidence: |
+        The eldest was called Peter
+
+    apostles_twelve_brothers:
+      name: The Twelve Sleeping Brothers
+      species: sp_human
+      agency_modes: [agency_endurance]
+      existential_states: [state_liminal_dead]
+      traits: [twelve-sons, cradle-sleepers, three-hundred-year-sleepers, future-apostles]
+      evidence: |
+        all twelve lay there sleeping in the golden cradles
+
+    apostles_little_angel:
+      name: The Bright Little Angel
+      being_type: being_divine
+      archetypes: [arc_supernatural_donor]
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_command]
+      traits: [small-boy-form, shining, beautiful, kind, cavern-guide, cradle-rocker]
+      evidence: |
+        a small boy who shone with brightness
+
+  magic_objects:
+    obj_apostles_golden_cradles:
+      name: The Twelve Golden Cradles
+      object_kind: architecture
+      evidence: |
+        twelve cradles were standing side by side
+
+  locations:
+    loc_apostles_great_forest:
+      name: The Great Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        he came into a great forest
+
+    loc_apostles_golden_cavern:
+      name: The Golden Cavern
+      instance_of: loc_cave
+      evidence: |
+        led him between some cliffs to a great cavern
+
+classifications:
+  world_laws:
+    - law_otherworld_time_displaces_human_time
+  moral_regimes:
+    - moral_providential_election
+  agency_modes_dominant: [agency_speech, agency_endurance, agency_object_mediation]
+  affects_driving: [affect_hunger]
+  symbol_numbers: [num_12]
+  threshold_types: [threshold_forest]
+
+propp:
+  - { function: func_prayer_for_redeemer, order: 1, actor: apostles_poor_mother,
+      scene: "the poor mother prays that all twelve sons may be on earth with the promised Redeemer" }
+  - { function: func_forest_lack, order: 2, actor: apostles_peter,
+      scene: "Peter seeks bread, becomes lost in the forest, and nearly dies of hunger" }
+  - { function: func_angel_guidance, order: 3, actor: apostles_little_angel,
+      beneficiary: apostles_peter,
+      scene: "the bright child leads Peter into the golden cavern" }
+  - { function: func_otherworld_sleep, order: 4, actor: apostles_little_angel,
+      beneficiary: apostles_twelve_brothers,
+      scene: "all twelve brothers are rocked to sleep in golden cradles for three hundred years" }
+  - { function: func_sacred_awakening, order: 5, actor: apostles_twelve_brothers,
+      scene: "they awake on the night when the Saviour is born and become the apostles" }
+
+edges:
+  - { from: apostles_poor_mother, to: speech_prayer, label: PRAYS_DAILY,
+      evidence: "She prayed to God daily" }
+  - { from: apostles_poor_mother, to: apostles_peter, label: SENDS_FOR_BREAD,
+      evidence: "sent one of them after the other out into the world to seek bread" }
+  - { from: apostles_peter, to: loc_apostles_great_forest, label: GETS_LOST_IN,
+      evidence: "came into a great forest" }
+  - { from: apostles_little_angel, to: apostles_peter, label: LEADS_TO_CAVERN,
+      evidence: "Come with me, and thy wish shall be fulfilled" }
+  - { from: apostles_little_angel, to: obj_apostles_golden_cradles, label: ROCKS_SLEEPERS_IN,
+      evidence: "I will rock thee" }
+  - { from: apostles_twelve_brothers, to: law_otherworld_time_displaces_human_time, label: SLEEP_THROUGH,
+      evidence: "They slept, however, three hundred years" }
+  - { from: apostles_twelve_brothers, to: moral_providential_election, label: BECOME_APOSTLES,
+      evidence: "were called the twelve apostles" }

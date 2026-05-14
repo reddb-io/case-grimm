@@ -1,0 +1,190 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: eves-various-children
+khm: 180
+atu: "758"
+atu_name: Eve's Various Children
+canonical_source: ../../2-silver/canonical/eves-various-children/canonical.txt
+title: Eve's Various Children
+
+
+entities:
+
+  characters:
+
+    eves_children_god:
+      name: God / The Heavenly Father
+      being_type: being_divine
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_blessing, speech_command]
+      traits: [heavenly-father, household-inspector, rank-and-trade-distributor, social-body-explainer]
+      evidence: |
+        the Heavenly Father entered
+
+    eves_children_angel:
+      name: The Angel
+      being_type: being_divine
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_testimony]
+      traits: [divine-messenger, household-visit-announcer]
+      evidence: |
+        God sent an angel to them
+
+    eves_children_adam:
+      name: Adam
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_social_rank]
+      traits: [paradise-exile, ground-digger, respectful-door-opener]
+      evidence: |
+        Adam dug up the land
+
+    eves_children_eve:
+      name: Eve
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_command, speech_testimony]
+      affects: [affect_pride, affect_shame]
+      traits: [paradise-exile, spinner, yearly-mother, household-preparer, pretty-child-presenter, ugly-child-hider, equality-complainer, forgiven-speaker]
+      evidence: |
+        Eve span
+
+    eves_children_pretty_children:
+      name: Eve's Pretty Children
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      speech_acts_performed: [speech_testimony]
+      traits: [washed, bathed, combed, clean-raiment, decorous, high-estate-blessed, eightfold-row]
+      evidence: |
+        only the beautiful ones
+
+    eves_children_hidden_children:
+      name: Eve's Hidden Ill-Favoured Children
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [ill-favoured, concealed, coarse-dirty-shabby, sooty-band, labour-estate-blessed, twelvefold-band]
+      evidence: |
+        The ugly children were, however, not to let themselves be seen
+
+  magic_objects: {}
+
+  locations:
+
+    loc_eves_children_unfruitful_ground:
+      name: The Unfruitful Ground
+      instance_of: loc_field
+      evidence: |
+        on unfruitful ground
+
+    loc_eves_children_house:
+      name: Adam and Eve's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        build a house for themselves
+
+    loc_eves_children_hiding_places:
+      name: The Domestic Hiding Places
+      instance_of: loc_house
+      evidence: |
+        beneath the hay, another under the roof, a third in the straw
+
+
+classifications:
+
+  world_laws:
+    - law_divine_estate_distribution_orders_social_body
+
+  moral_regimes:
+    - moral_divine_social_interdependence
+
+  agency_modes_dominant:
+    - agency_social_rank
+    - agency_speech
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_pride
+    - affect_shame
+
+  symbol_numbers:
+    - num_8
+    - num_12
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_exile_condition, order: 1, actor: eves_children_adam,
+      scene: "Adam and Eve live by labour after expulsion from Paradise" }
+  - { function: func_divine_visit_announced, order: 2, actor: eves_children_angel,
+      scene: "an angel announces that God will inspect the household" }
+  - { function: func_household_preparation, order: 3, actor: eves_children_eve,
+      scene: "Eve cleans and decorates the house for the Lord's arrival" }
+  - { function: func_selective_presentation, order: 4, actor: eves_children_eve,
+      beneficiary: eves_children_pretty_children,
+      scene: "Eve presents only the beautiful children" }
+  - { function: func_concealment, order: 5, actor: eves_children_eve,
+      victim: eves_children_hidden_children,
+      scene: "Eve hides the ugly children throughout the house" }
+  - { function: func_blessing_of_estates, order: 6, actor: eves_children_god,
+      beneficiary: eves_children_pretty_children,
+      scene: "God blesses the beautiful children into high ranks" }
+  - { function: func_hidden_group_revealed, order: 7, actor: eves_children_eve,
+      beneficiary: eves_children_hidden_children,
+      scene: "Eve brings out the hidden ill-favoured children" }
+  - { function: func_blessing_of_trades, order: 8, actor: eves_children_god,
+      beneficiary: eves_children_hidden_children,
+      scene: "God blesses the hidden children into trades and service roles" }
+  - { function: func_moral_objection, order: 9, actor: eves_children_eve,
+      scene: "Eve challenges the unequal division of gifts" }
+  - { function: func_etiological_explanation, order: 10, actor: eves_children_god,
+      scene: "God explains that each estate supports the others like limbs of one body" }
+  - { function: func_acceptance_of_divine_will, order: 11, actor: eves_children_eve,
+      scene: "Eve asks forgiveness and accepts divine will for her children" }
+
+
+edges:
+
+  - { from: eves_children_adam, to: loc_eves_children_unfruitful_ground, label: EXILED_TO_LABOR_ON,
+      evidence: "driven out of Paradise" }
+  - { from: eves_children_adam, to: agency_domestic_labor, label: DIGS_LAND,
+      evidence: "Adam dug up the land" }
+  - { from: eves_children_eve, to: agency_domestic_labor, label: SPINS_IN_EXILE,
+      evidence: "Eve span" }
+  - { from: eves_children_eve, to: eves_children_pretty_children, label: BEARS_CHILDREN_YEARLY,
+      evidence: "Every year Eve brought a child into the world" }
+  - { from: eves_children_angel, to: eves_children_eve, label: ANNOUNCES_DIVINE_INSPECTION,
+      evidence: "to announce that he was coming to inspect their household" }
+  - { from: eves_children_eve, to: loc_eves_children_house, label: PREPARES_FOR_DIVINE_VISIT,
+      evidence: "cleaned her house diligently, decked it with flowers" }
+  - { from: eves_children_eve, to: eves_children_pretty_children, label: PRESENTS_SELECTIVELY,
+      evidence: "only the beautiful ones" }
+  - { from: eves_children_eve, to: eves_children_hidden_children, label: HIDES_FROM_DIVINE_SIGHT,
+      evidence: "The ugly children were, however, not to let themselves be seen" }
+  - { from: eves_children_hidden_children, to: loc_eves_children_hiding_places, label: CONCEALED_IN_DOMESTIC_PLACES,
+      evidence: "the eleventh and twelfth under the leather" }
+  - { from: eves_children_god, to: threshold_doorway, label: ENTERS_THROUGH_HOUSE_DOOR,
+      evidence: "Adam opened the door respectfully" }
+  - { from: eves_children_pretty_children, to: eves_children_god, label: PERFORM_MODEST_REVERENCE,
+      evidence: "bowed before him, held out their hands, and knelt down" }
+  - { from: eves_children_god, to: eves_children_pretty_children, label: BLESSES_WITH_HIGH_ESTATES,
+      evidence: "He bestowed upon them also all his richest blessings" }
+  - { from: eves_children_pretty_children, to: agency_social_rank, label: RECEIVE_RANKS_AND_LEARNING,
+      evidence: "Thou shalt be a powerful king" }
+  - { from: eves_children_eve, to: eves_children_hidden_children, label: BRINGS_HIDDEN_CHILDREN_OUT,
+      evidence: "brought them out of the hay, the straw, the stove" }
+  - { from: eves_children_god, to: eves_children_hidden_children, label: BLESSES_WITH_LABOUR_ESTATES,
+      evidence: "I will bless these also" }
+  - { from: eves_children_hidden_children, to: agency_domestic_labor, label: RECEIVE_TRADES_AND_SERVICE,
+      evidence: "Thou shalt be a peasant" }
+  - { from: eves_children_eve, to: eves_children_god, label: OBJECTS_TO_UNEQUAL_GIFTS,
+      evidence: "how unequally thou dividest thy gifts" }
+  - { from: eves_children_god, to: law_divine_estate_distribution_orders_social_body, label: EXPLAINS_NECESSARY_SOCIAL_DISTRIBUTION,
+      evidence: "It is right and necessary that the entire world should be supplied" }
+  - { from: law_divine_estate_distribution_orders_social_body, to: moral_divine_social_interdependence, label: GROUNDS_MORAL_OF_MUTUAL_SUPPORT,
+      evidence: "Each shall have his own place" }
+  - { from: moral_divine_social_interdependence, to: eves_children_hidden_children, label: MAKES_LOWLY_OFFICES_NECESSARY,
+      evidence: "all shall be fed like the limbs of one body" }
+  - { from: eves_children_eve, to: eves_children_god, label: ASKS_FORGIVENESS_AND_ACCEPTS_WILL,
+      evidence: "forgive me, I was too quick in speaking to thee" }

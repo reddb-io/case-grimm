@@ -1,0 +1,164 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-ear-of-corn
+khm: 194
+atu: "779"
+atu_name: Divine Rewards and Punishments
+canonical_source: ../../2-silver/canonical/the-ear-of-corn/canonical.txt
+title: The Ear of Corn
+
+entities:
+  characters:
+    ear_corn_lord:
+      name: The Lord / God Walking the Earth
+      being_type: being_divine
+      agency_modes: [agency_speech, agency_domestic_labor, agency_object_mediation]
+      speech_acts_performed: [speech_command, speech_testimony]
+      affects: [affect_anger, affect_pity]
+      traits: [earth-walking, abundance-giver, waste-witness, angry-judge, bird-pitying, crop-reducer]
+      evidence: |
+        God himself still walked the earth
+
+    ear_corn_mother:
+      name: The Careless Mother
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation]
+      traits: [cornfield-passer, child-carer, wasteful-cleaner, blessing-undervaluer]
+      evidence: |
+        a woman was passing by a corn-field
+
+    ear_corn_child:
+      name: The Little Child
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [running-beside-mother, puddle-fallen, frock-dirtied]
+      evidence: |
+        her little child, who was running beside her
+
+    ear_corn_bystanders:
+      name: The Terrified Bystanders
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_prayer, speech_request]
+      affects: [affect_fear, affect_pity]
+      traits: [curse-hearers, knee-fallers, bird-advocates, mercy-requesters]
+      evidence: |
+        The by-standers who heard this
+
+    ear_corn_birds:
+      name: The Innocent Birds
+      species: sp_bird
+      agency_modes: [agency_domestic_labor]
+      affects: [affect_hunger]
+      traits: [innocent, grain-dependent, spared-by-prayer]
+      evidence: |
+        the innocent birds which would otherwise have to starve
+
+  magic_objects:
+    obj_ear_corn_ancient_abundant_ears:
+      name: The Ancient Abundant Ears of Corn
+      object_kind: food
+      attributes:
+        function: former divine abundance that filled the whole stalk with grain
+        former_yield: four_or_five_hundred_fold
+      evidence: |
+        four or five hundred-fold
+
+    obj_ear_corn_dirty_frock:
+      name: The Child's Dirtied Frock
+      object_kind: garment
+      attributes:
+        function: domestic problem that triggers the mother's misuse of corn
+      evidence: |
+        dirtied her frock
+
+    obj_ear_corn_reduced_ears:
+      name: The Reduced Ears of Corn
+      object_kind: food
+      attributes:
+        function: present form of corn left after divine punishment is mitigated
+      evidence: |
+        the ears were left as they now grow
+
+  locations:
+    loc_ear_corn_earth:
+      name: The Former Earth
+      instance_of: loc_field
+      evidence: |
+        walked the earth
+
+    loc_ear_corn_cornfield:
+      name: The Corn-Field
+      instance_of: loc_field
+      evidence: |
+        passing by a corn-field
+
+    loc_ear_corn_puddle:
+      name: The Puddle
+      instance_of: loc_brook
+      evidence: |
+        fell into a puddle
+
+classifications:
+  world_laws:
+    - law_wasted_grain_reduces_divine_abundance
+  moral_regimes:
+    - moral_moderation_preserves_order
+    - moral_mercy_over_judgment
+  agency_modes_dominant:
+    - agency_speech
+    - agency_domestic_labor
+    - agency_object_mediation
+  affects_driving:
+    - affect_anger
+    - affect_fear
+    - affect_pity
+  symbol_numbers: []
+  threshold_types: []
+
+propp:
+  - { function: func_primeval_abundance, order: 1, actor: obj_ear_corn_ancient_abundant_ears,
+      scene: "in former times corn bore hundreds-fold and filled the stalk from bottom to top" }
+  - { function: func_moral_decline, order: 2, actor: ear_corn_mother,
+      scene: "human plenty produces indifference toward blessings from God" }
+  - { function: func_food_waste, order: 3, actor: ear_corn_mother,
+      victim: obj_ear_corn_ancient_abundant_ears,
+      scene: "the mother tears up beautiful ears of corn to clean the child's frock" }
+  - { function: func_divine_punishment, order: 4, actor: ear_corn_lord,
+      scene: "the Lord angrily declares that corn stalks shall bear no more ears" }
+  - { function: func_intercession, order: 5, actor: ear_corn_bystanders,
+      beneficiary: ear_corn_birds,
+      scene: "the terrified bystanders pray for some grain to remain for innocent birds" }
+  - { function: func_mitigated_etiology, order: 6, actor: ear_corn_lord,
+      beneficiary: ear_corn_birds,
+      scene: "the Lord pities the birds and leaves ears of corn as they now grow" }
+
+edges:
+  - { from: ear_corn_lord, to: loc_ear_corn_earth, label: WALKS_EARTH_IN_FORMER_TIMES,
+      evidence: "God himself still walked the earth" }
+  - { from: obj_ear_corn_ancient_abundant_ears, to: loc_ear_corn_cornfield, label: GROWS_IN,
+      evidence: "the fruitfulness of the soil was much greater" }
+  - { from: obj_ear_corn_ancient_abundant_ears, to: law_wasted_grain_reduces_divine_abundance, label: FORMER_ABUNDANCE_BEFORE,
+      evidence: "did not bear fifty or sixty, but four or five hundred-fold" }
+  - { from: obj_ear_corn_ancient_abundant_ears, to: loc_ear_corn_cornfield, label: FILLED_STALK,
+      evidence: "from the bottom to the very top o f the stalk" }
+  - { from: ear_corn_child, to: loc_ear_corn_puddle, label: FALLS_INTO,
+      evidence: "fell into a puddle" }
+  - { from: ear_corn_child, to: obj_ear_corn_dirty_frock, label: DIRTIES,
+      evidence: "dirtied her frock" }
+  - { from: ear_corn_mother, to: obj_ear_corn_ancient_abundant_ears, label: TEARS_UP_FOR_CLEANING,
+      evidence: "tore up a handful of the beautiful ears of corn" }
+  - { from: ear_corn_mother, to: obj_ear_corn_dirty_frock, label: CLEANS_WITH_CORN,
+      evidence: "cleaned the frock with them" }
+  - { from: ear_corn_lord, to: affect_anger, label: ANGERED_BY_WASTE,
+      evidence: "he was angry" }
+  - { from: ear_corn_lord, to: obj_ear_corn_ancient_abundant_ears, label: CURTAILS_EARS,
+      evidence: "Henceforth shall the stalks of corn bear no more ears" }
+  - { from: ear_corn_bystanders, to: ear_corn_lord, label: PRAY_FOR_REMAINDER,
+      evidence: "fell on their knees and prayed" }
+  - { from: ear_corn_bystanders, to: ear_corn_birds, label: INTERCEDE_FOR,
+      evidence: "for the sake of the innocent birds" }
+  - { from: ear_corn_lord, to: ear_corn_birds, label: HAS_PITY_ON,
+      evidence: "foresaw their suffering, had pity on them" }
+  - { from: ear_corn_lord, to: obj_ear_corn_reduced_ears, label: LEAVES_PRESENT_FORM,
+      evidence: "So the ears were left as they now grow" }

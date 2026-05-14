@@ -1,0 +1,12 @@
+slug: the-brave-little-tailor
+khm: 20
+atu: '1640'
+base: pg5314-grimm-hunt
+sources:
+- book: pg2591-grimm-taylor
+  weight: supplementary
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg11027-grimm-gruelle
+  weight: supplementary
+sections: []

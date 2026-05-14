@@ -1,0 +1,231 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: brides-on-their-trial
+khm: 155
+atu: "1452"
+atu_name: Brides on Their Trial
+canonical_source: ../../2-silver/canonical/brides-on-their-trial/canonical.txt
+title: Brides on Their Trial
+
+
+entities:
+
+  characters:
+
+    brides_trial_shepherd:
+      name: The Young Shepherd
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_request]
+      affects: [affect_love]
+      traits: [marriage-seeker, undecided-suitor, maternal-advice-follower, contented-husband]
+      evidence: |
+        a young shepherd who wished much to marry
+
+    brides_trial_mother:
+      name: The Shepherd's Mother
+      archetypes: [arc_wise_helper]
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_command]
+      traits: [marriage-adviser, cheese-test-designer, bride-choice-interpreter]
+      evidence: |
+        Then he asked his mother for advice
+
+    brides_trial_first_sister:
+      name: The First Sister
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation]
+      traits: [pretty-sister, rind-swallower, imprudent-eater, rejected-bride-candidate]
+      evidence: |
+        the first, however, swallowed the cheese with the rind on
+
+    brides_trial_second_sister:
+      name: The Second Sister
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation]
+      traits: [pretty-sister, hasty-rind-cutter, wasteful-eater, rejected-bride-candidate]
+      evidence: |
+        the second hastily cut the rind off the cheese
+
+    brides_trial_third_sister:
+      name: The Third Sister
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation]
+      traits: [pretty-sister, careful-rind-peeler, measured-eater, chosen-wife]
+      evidence: |
+        the third peeled the rind off carefully
+
+  magic_objects:
+
+    obj_brides_trial_cheese:
+      name: The Cheese
+      object_kind: food
+      attributes:
+        function: ordinary table food converted into a diagnostic object for choosing a wife
+      evidence: |
+        set some cheese before them
+
+    obj_brides_trial_rind:
+      name: The Cheese Rind
+      object_kind: material
+      attributes:
+        function: boundary between waste and excess whose handling reveals proportionate household judgment
+      evidence: |
+        the rind off the cheese
+
+  locations:
+
+    loc_brides_trial_house:
+      name: The Cheese Trial Household
+      instance_of: loc_house
+      evidence: |
+        Invite all three
+
+
+classifications:
+
+  world_laws:
+    - law_cheese_rind_test_reveals_domestic_measure
+
+  moral_regimes:
+    - moral_prudent_selection
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_social_rank
+    - agency_object_mediation
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_love
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types: []
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: brides_trial_shepherd
+    scene: The shepherd wants to marry but cannot choose among three equally pretty sisters.
+    evidence: |
+      it was difficult to him to make a choice
+
+  - function: func_consultation
+    order: 2
+    actor: brides_trial_shepherd
+    beneficiary: brides_trial_mother
+    scene: The shepherd asks his mother for advice about choosing.
+    evidence: |
+      he asked his mother for advice
+
+  - function: func_test_instruction
+    order: 3
+    actor: brides_trial_mother
+    scene: The mother tells him to invite all three sisters, set cheese before them, and watch them eat.
+    evidence: |
+      Invite all three, and set some cheese before them, and watch how they eat it.
+
+  - function: func_trial
+    order: 4
+    actor: brides_trial_first_sister
+    scene: The first sister swallows the cheese with the rind still on.
+    evidence: |
+      swallowed the cheese with the rind on
+
+  - function: func_trial
+    order: 5
+    actor: brides_trial_second_sister
+    scene: The second sister cuts hastily and wastes good cheese with the rind.
+    evidence: |
+      she left much good cheese with it, and threw that away also
+
+  - function: func_trial
+    order: 6
+    actor: brides_trial_third_sister
+    scene: The third sister removes the rind carefully, cutting neither too much nor too little.
+    evidence: |
+      cut neither too much nor too little
+
+  - function: func_judgment
+    order: 7
+    actor: brides_trial_mother
+    beneficiary: brides_trial_third_sister
+    scene: The mother interprets the test and tells the shepherd to marry the third sister.
+    evidence: |
+      Take the third for thy wife.
+
+  - function: func_marriage
+    order: 8
+    actor: brides_trial_shepherd
+    beneficiary: brides_trial_third_sister
+    scene: The shepherd marries the third sister and lives happily with her.
+    evidence: |
+      This he did, and lived contentedly and happily with her.
+
+
+edges:
+
+  - from: brides_trial_shepherd
+    label: WISHES_TO_MARRY
+    to: brides_trial_third_sister
+    evidence: |
+      wished much to marry
+
+  - from: brides_trial_shepherd
+    label: CANNOT_CHOOSE_AMONG
+    to: num_3
+    evidence: |
+      acquainted with three sisters who were all equally pretty
+
+  - from: brides_trial_shepherd
+    label: ASKS_ADVICE_FROM
+    to: brides_trial_mother
+    evidence: |
+      asked his mother for advice
+
+  - from: brides_trial_mother
+    label: INSTRUCTS_CHEESE_TEST
+    to: obj_brides_trial_cheese
+    evidence: |
+      set some cheese before them, and watch how they eat it
+
+  - from: brides_trial_first_sister
+    label: SWALLOWS_WITH_RIND
+    to: obj_brides_trial_cheese
+    evidence: |
+      swallowed the cheese with the rind on
+
+  - from: brides_trial_second_sister
+    label: WASTES_GOOD_CHEESE_WITH
+    to: obj_brides_trial_rind
+    evidence: |
+      left much good cheese with it, and threw that away also
+
+  - from: brides_trial_third_sister
+    label: PEELS_RIND_CAREFULLY
+    to: obj_brides_trial_rind
+    evidence: |
+      peeled the rind off carefully
+
+  - from: law_cheese_rind_test_reveals_domestic_measure
+    label: SELECTS
+    to: brides_trial_third_sister
+    evidence: |
+      Take the third for thy wife.
+
+  - from: brides_trial_shepherd
+    label: MARRIES
+    to: brides_trial_third_sister
+    evidence: |
+      This he did
+
+  - from: brides_trial_shepherd
+    label: LIVES_HAPPILY_WITH
+    to: brides_trial_third_sister
+    evidence: |
+      lived contentedly and happily with her

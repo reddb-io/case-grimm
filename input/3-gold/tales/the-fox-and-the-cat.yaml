@@ -1,0 +1,160 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-fox-and-the-cat
+khm: 75
+atu: '105'
+atu_name: The Fox and the Cat
+canonical_source: ../../2-silver/canonical/the-fox-and-the-cat/canonical.txt
+title: The Fox and the Cat
+
+
+entities:
+
+  characters:
+
+    fox_cat_cat:
+      name: The Cat
+      species: sp_cat
+      agency_modes: [agency_cunning, agency_endurance, agency_speech]
+      speech_acts_performed: [speech_warning]
+      affects: [affect_fear]
+      traits: [modest, friendly, one-art-knower, tree-climber, concealed-survivor, fox-rebuker]
+      evidence: |
+        I understand but one,” replied the cat, modestly.
+
+    fox_cat_fox:
+      name: Mr. Fox
+      archetypes: [arc_trickster]
+      species: sp_fox
+      agency_modes: [agency_speech, agency_cunning]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_pride]
+      traits: [clever-reputation, arrogant, insulting, hundred-arts-master, sackful-of-cunning-boaster, hound-caught]
+      evidence: |
+        The fox, full of all kinds of arrogance, looked at the cat from
+        head to foot
+
+    fox_cat_hunter:
+      name: The Hunter
+      species: sp_human
+      agency_modes: [agency_violence, agency_object_mediation]
+      traits: [hound-master, sudden-arrival, fox-pursuer]
+      evidence: |
+        Just then came a hunter with four dogs.
+
+    fox_cat_hounds:
+      name: The Four Hounds
+      species: sp_dog
+      agency_modes: [agency_violence]
+      traits: [hunter-dogs, fox-seizers, pursuit-pack]
+      evidence: |
+        four dogs
+
+  locations:
+
+    loc_fox_cat_forest:
+      name: The Forest Meeting Place
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        the cat met the fox in a forest
+
+    loc_fox_cat_escape_tree:
+      name: The Cat's Escape Tree
+      instance_of: loc_tree
+      evidence: |
+        I can spring into a tree and save myself.
+
+
+classifications:
+
+  world_laws:
+    - law_single_escape_skill_beats_boasted_arts
+    - law_forest_suspends_domestic_order
+
+  moral_regimes:
+    - moral_prudential_retreat
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_endurance
+    - agency_violence
+
+  affects_driving:
+    - affect_pride
+    - affect_fear
+
+  symbol_numbers:
+    - num_4
+    - num_100
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: fox_cat_cat,
+      scene: "the cat meets the esteemed fox in the forest and greets him politely" }
+  - { function: func_mockery, order: 2, actor: fox_cat_fox,
+      scene: "the arrogant fox insults the cat and asks how many arts she knows" }
+  - { function: func_self_description, order: 3, actor: fox_cat_cat,
+      scene: "the cat admits she understands only one art: climbing a tree when hounds pursue" }
+  - { function: func_boast, order: 4, actor: fox_cat_fox,
+      scene: "the fox boasts of one hundred arts and a sackful of cunning" }
+  - { function: func_danger_arrival, order: 5, actor: fox_cat_hunter,
+      scene: "a hunter with four dogs suddenly arrives" }
+  - { function: func_escape, order: 6, actor: fox_cat_cat,
+      scene: "the cat springs into a tree and is concealed by branches and foliage" }
+  - { function: func_punishment, order: 7, actor: fox_cat_hounds,
+      scene: "the dogs seize the fox before he can open his sack of cunning" }
+  - { function: func_moral_rebuke, order: 8, actor: fox_cat_cat,
+      scene: "the cat tells the fox that one climbing skill would have saved his life" }
+
+
+edges:
+
+  # Courtesy met by arrogance
+  - { from: fox_cat_cat, to: fox_cat_fox, label: MEETS,
+      evidence: "the cat met the fox in a forest" }
+  - { from: fox_cat_cat, to: fox_cat_fox, label: ESTEEMS,
+      evidence: "He is clever and full of experience, and much esteemed in the world" }
+  - { from: fox_cat_cat, to: fox_cat_fox, label: GREETS_FRIENDLY,
+      evidence: "she spoke to him in a friendly way" }
+  - { from: fox_cat_fox, to: affect_pride, label: EMBODIES,
+      evidence: "full of all kinds of arrogance" }
+  - { from: fox_cat_fox, to: fox_cat_cat, label: INSULTS,
+      evidence: "thou wretched beard-cleaner, thou piebald fool, thou hungry mouse-hunter" }
+  - { from: fox_cat_fox, to: fox_cat_cat, label: QUESTIONS_SKILL_COUNT,
+      evidence: "How many arts dost thou understand?" }
+
+  # One art versus one hundred arts
+  - { from: fox_cat_cat, to: law_single_escape_skill_beats_boasted_arts, label: EMBODIES,
+      evidence: "I understand but one" }
+  - { from: fox_cat_cat, to: loc_fox_cat_escape_tree, label: CAN_ESCAPE_INTO,
+      evidence: "I can spring into a tree and save myself." }
+  - { from: fox_cat_fox, to: num_100, label: BOASTS_OF_ARTS,
+      evidence: "I am master of a hundred arts" }
+  - { from: fox_cat_fox, to: agency_cunning, label: BOASTS_SACKFUL_OF,
+      evidence: "a sackful of cunning" }
+  - { from: fox_cat_fox, to: fox_cat_cat, label: OFFERS_TO_TEACH,
+      evidence: "I will teach thee how people get away from the hounds." }
+
+  # Sudden danger and proof
+  - { from: fox_cat_hunter, to: fox_cat_hounds, label: ARRIVES_WITH,
+      evidence: "Just then came a hunter with four dogs." }
+  - { from: fox_cat_hounds, to: num_4, label: NUMBERED_AS,
+      evidence: "four dogs" }
+  - { from: fox_cat_cat, to: loc_fox_cat_escape_tree, label: SPRINGS_UP,
+      evidence: "The cat sprang nimbly up a tree" }
+  - { from: loc_fox_cat_escape_tree, to: fox_cat_cat, label: CONCEALS,
+      evidence: "the branches and foliage quite concealed her" }
+  - { from: fox_cat_hounds, to: fox_cat_fox, label: SEIZE,
+      evidence: "the dogs had already seized him" }
+  - { from: fox_cat_hounds, to: fox_cat_fox, label: HOLD_FAST,
+      evidence: "were holding him fast" }
+  - { from: fox_cat_cat, to: fox_cat_fox, label: REBUKES,
+      evidence: "You with your hundred arts are left in the lurch!" }
+  - { from: law_single_escape_skill_beats_boasted_arts, to: fox_cat_cat, label: SAVES,
+      evidence: "Had you been able to climb like me, you would not have lost your life." }

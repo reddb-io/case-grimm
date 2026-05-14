@@ -1,0 +1,24 @@
+{
+  "name": "ex-grimms-fairy-tales",
+  "version": "0.0.0",
+  "description": "Grimms' Fairy Tales — bronze/silver/gold knowledge graph pipeline.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate_gold.mjs",
+    "validate:ontology": "node scripts/validate_gold.mjs ontology",
+    "validate:atu": "node scripts/validate_gold.mjs atu",
+    "validate:corpus": "node scripts/validate_gold.mjs corpus",
+    "build:corpus": "node scripts/build_gold_corpus.mjs",
+    "validate:tales": "node scripts/validate_gold.mjs tales",
+    "export:docs": "./grimm export docs",
+    "build:docs-data": "node scripts/build-docs-data.mjs",
+    "docs:serve": "./grimm docs serve"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "glob": "^11.0.0",
+    "js-yaml": "^4.1.0"
+  }
+}

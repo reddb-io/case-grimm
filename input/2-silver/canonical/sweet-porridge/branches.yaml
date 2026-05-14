@@ -1,0 +1,10 @@
+slug: sweet-porridge
+khm: 103
+atu: '565'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg52521-grimm-olcott
+  weight: supplementary
+sections: []

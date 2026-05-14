@@ -1,0 +1,8 @@
+slug: the-fox-and-his-cousin
+khm: 74
+atu: '65'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

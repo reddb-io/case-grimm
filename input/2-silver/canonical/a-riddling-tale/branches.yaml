@@ -1,0 +1,8 @@
+slug: a-riddling-tale
+khm: 160
+atu: 407A
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

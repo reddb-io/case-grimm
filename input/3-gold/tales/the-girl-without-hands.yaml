@@ -1,0 +1,416 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-girl-without-hands
+khm: 31
+atu: '706'
+atu_name: The Girl Without Hands
+canonical_source: ../../2-silver/canonical/the-girl-without-hands/canonical.txt
+title: The Girl Without Hands
+
+
+entities:
+
+  characters:
+
+    girl_without_hands_miller:
+      name: The Poor Miller
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank, agency_violence]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_fear, affect_shame]
+      traits: [poverty-stricken, devil-bargainer, mistaken-apple-tree-promiser, water-remover, hand-cutter, remorseful-provider]
+      evidence: |
+        "I, in return, have promised him what stands behind the mill"
+
+    girl_without_hands_millers_wife:
+      name: The Miller's Terrified Wife
+      species: sp_human
+      agency_modes: [agency_speech]
+      affects: [affect_fear, affect_maternal_love]
+      traits: [bargain-interpreter, devil-recognizer, daughter-warner]
+      evidence: |
+        "He did not mean the apple-tree, but our daughter"
+
+    girl_without_hands_queen:
+      name: The Pious Girl / Queen Without Hands
+      archetypes: [arc_oppressed_maiden]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      existential_states: [state_maimed, state_hidden_identity]
+      affects: [affect_fear, affect_grief, affect_longing]
+      traits: [pious, sinless, tear-washed, handless, pear-eater, silver-handed-bride, exiled-mother, restored-hands, recognised-wife]
+      evidence: |
+        "The miller's daughter was a beautiful, pious girl, and lived
+        through the three years in the fear of God and without sin."
+
+    girl_without_hands_devil:
+      name: The Evil-One / Devil
+      being_type: being_devil
+      agency_modes: [agency_cunning, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command, speech_lie]
+      affects: [affect_anger]
+      traits: [mocking-bargainer, purity-blocked, mutilation-instigator, letter-forger, queen-persecutor]
+      evidence: |
+        "The devil appeared quite early, but he could not come near to her."
+
+    girl_without_hands_angel:
+      name: The Angel of the Lord / Snow-White Maiden
+      archetypes: [arc_supernatural_donor]
+      being_type: being_divine
+      agency_modes: [agency_speech, agency_social_rank]
+      traits: [moat-drier, garden-guide, wilderness-shelterer, queen-child-guardian, reunion-mediator]
+      evidence: |
+        "I am an angel sent by God, to watch over thee and thy child."
+
+    girl_without_hands_king:
+      name: The King Husband
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_endurance]
+      affects: [affect_love_at_first_sight, affect_grief, affect_loyalty]
+      traits: [garden-watcher, handless-maiden-recognizer, silver-hands-provider, war-absent, seven-year-seeker, reunited-husband]
+      evidence: |
+        "If thou art forsaken by all the world, yet will I not forsake thee."
+
+    girl_without_hands_gardener:
+      name: The Royal Gardener
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      affects: [affect_fear]
+      traits: [pear-counter-witness, angel-fearer, spirit-misrecognizer]
+      evidence: |
+        "The gardener was watching; but as the angel was standing by,
+        he was afraid"
+
+    girl_without_hands_priest:
+      name: The Priest Who Questions the Spirit
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [midnight-questioner, human-spirit-discerner]
+      evidence: |
+        "brought a priest with him, who was to speak to the spirit."
+
+    girl_without_hands_aged_mother:
+      name: The King's Aged Mother
+      archetypes: [arc_protective_mother]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_social_rank]
+      affects: [affect_maternal_love, affect_grief]
+      traits: [queen-guardian, letter-receiver, false-command-doubter, hind-token-substituter, exile-sender, truth-teller]
+      evidence: |
+        "I cannot have thee killed as the King commands"
+
+    girl_without_hands_messenger:
+      name: The Sleeping Messenger
+      species: sp_human
+      agency_modes: [agency_endurance]
+      traits: [letter-carrier, brook-sleeper, devil-intercepted]
+      evidence: |
+        "the messenger rested by a brook on the way... he fell asleep."
+
+    girl_without_hands_child:
+      name: The Son Called Sorrowful
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [fine-boy, exiled-child, prayer-taught, father-doubter, handkerchief-coverer]
+      evidence: |
+        "her son, whom she usually called 'Sorrowful'"
+
+    girl_without_hands_hind:
+      name: The Substitute Hind
+      species: sp_deer
+      traits: [night-killed, tongue-and-eye-token-source]
+      evidence: |
+        "had a hind brought by night and cut out her tongue and eyes"
+
+  magic_objects:
+
+    obj_girl_without_hands_written_promise:
+      name: The Written Promise to the Stranger
+      object_kind: token
+      attributes:
+        promised_object: what stands behind the mill
+      evidence: |
+        "gave a written promise to the stranger."
+
+    obj_girl_without_hands_chalk_circle:
+      name: The Chalk Circle of Clean Protection
+      object_kind: material
+      attributes:
+        function: protective boundary around the pious girl
+      evidence: |
+        "washed herself clean, and made a circle round herself with chalk."
+
+    obj_girl_without_hands_severed_hands:
+      name: The Severed Hands
+      object_kind: relic
+      attributes:
+        function: bodily wound that still fails to give the devil power
+      evidence: |
+        "she laid down both her hands, and let them be cut off."
+
+    obj_girl_without_hands_pears:
+      name: The Counted Garden Pears
+      object_kind: food
+      attributes:
+        function: one pear eaten by mouth reveals the handless maiden
+      evidence: |
+        "they were all counted... ate one with her mouth from the tree"
+
+    obj_girl_without_hands_silver_hands:
+      name: The Silver Hands
+      instance_of: obj_prosthetic_hands
+      object_kind: relic
+      attributes:
+        material: silver
+        function: royal prostheses and later recognition proof
+      evidence: |
+        "had silver hands made for her"
+
+    obj_girl_without_hands_true_birth_letter:
+      name: The True Birth Letter
+      object_kind: token
+      attributes:
+        message: queen has borne a fine boy
+      evidence: |
+        "write and announce the joyful news to him."
+
+    obj_girl_without_hands_false_monster_letter:
+      name: The False Monster-Birth Letter
+      object_kind: token
+      attributes:
+        forged_by: girl_without_hands_devil
+      evidence: |
+        "the Queen had brought a monster into the world."
+
+    obj_girl_without_hands_false_death_letter:
+      name: The False Death-Command Letter
+      object_kind: token
+      attributes:
+        forged_by: girl_without_hands_devil
+        demanded_tokens: tongue and eyes
+      evidence: |
+        "they were to put the Queen and her child to death."
+
+    obj_girl_without_hands_hind_tokens:
+      name: The Hind's Tongue and Eyes
+      object_kind: relic
+      attributes:
+        function: substitute evidence of obedience to forged command
+      evidence: |
+        "took these tokens from it"
+
+    obj_girl_without_hands_handkerchief:
+      name: The King's Handkerchief
+      object_kind: garment
+      attributes:
+        function: recognition scene prop between child, mother, and sleeping king
+      evidence: |
+        "put a handkerchief over his face."
+
+  locations:
+
+    loc_girl_without_hands_mill:
+      name: The Miller's Mill
+      instance_of: loc_mill
+      evidence: |
+        "nothing left but his mill and a large apple-tree behind it."
+
+    loc_girl_without_hands_forest_bargain:
+      name: The Forest of the Devil's Bargain
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "gone into the forest to fetch wood"
+
+    loc_girl_without_hands_apple_tree_yard:
+      name: The Apple-Tree Behind the Mill
+      instance_of: loc_tree
+      evidence: |
+        "our daughter, who was standing behind the mill sweeping the yard."
+
+    loc_girl_without_hands_royal_garden:
+      name: The Royal Garden with the Moat
+      instance_of: loc_garden
+      evidence: |
+        "she came to a royal garden... but she could not enter, for
+        there was much water round about it."
+
+    loc_girl_without_hands_pear_tree:
+      name: The Counted Pear Tree
+      instance_of: loc_tree
+      evidence: |
+        "She saw a tree covered with beautiful pears"
+
+    loc_girl_without_hands_palace:
+      name: The King's Royal Palace
+      instance_of: loc_castle
+      evidence: |
+        "He took her with him into his royal palace"
+
+    loc_girl_without_hands_brook_letters:
+      name: The Brook Where the Messenger Sleeps
+      instance_of: loc_brook
+      evidence: |
+        "the messenger rested by a brook on the way"
+
+    loc_girl_without_hands_wild_forest:
+      name: The Great Wild Forest of Exile
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "She came into a great wild forest"
+
+    loc_girl_without_hands_free_house:
+      name: The Little House Where All Dwell Free
+      instance_of: loc_house
+      evidence: |
+        "a little house on which was a sign with the words, 'Here all
+        dwell free.'"
+
+
+classifications:
+
+  world_laws:
+    - law_promise_binds_reality
+    - law_purity_blocks_infernal_claim
+    - law_false_letters_exile_innocent
+
+  moral_regimes:
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_speech
+    - agency_cunning
+    - agency_social_rank
+
+  affects_driving:
+    - affect_fear
+    - affect_grief
+    - affect_maternal_love
+    - affect_love_at_first_sight
+
+  symbol_numbers:
+    - num_3   # three years before devil returns; devil's three attempts
+    - num_7   # queen's seven years of angelic exile; king's seven-year search
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+  - { function: func_lack, order: 1, actor: girl_without_hands_miller,
+      scene: "miller falls into poverty with only mill and apple-tree left" }
+  - { function: func_trickery, order: 2, actor: girl_without_hands_devil,
+      scene: "devil offers wealth for what stands behind the mill" }
+  - { function: func_villainy, order: 3, actor: girl_without_hands_miller,
+      scene: "written promise unknowingly gives the daughter to the devil" }
+  - { function: func_struggle, order: 4, actor: girl_without_hands_queen,
+      scene: "cleanliness, tears, and piety keep devil from approaching her across three attempts" }
+  - { function: func_villainy, order: 5, actor: girl_without_hands_miller,
+      scene: "father cuts off his daughter's hands under devil's threat" }
+  - { function: func_departure, order: 6, actor: girl_without_hands_queen,
+      scene: "handless girl leaves home at sunrise to live by compassion" }
+  - { function: func_magical_agent, order: 7, actor: girl_without_hands_angel,
+      scene: "angel dries the garden moat so she can eat one counted pear" }
+  - { function: func_recognition, order: 8, actor: girl_without_hands_king,
+      scene: "king and priest discover she is an unhappy mortal, not a spirit" }
+  - { function: func_wedding, order: 9, actor: girl_without_hands_king,
+      scene: "king gives her silver hands and marries her" }
+  - { function: func_absentation, order: 10, actor: girl_without_hands_king,
+      scene: "king goes to war and asks his mother to write when the queen gives birth" }
+  - { function: func_trickery, order: 11, actor: girl_without_hands_devil,
+      scene: "devil repeatedly substitutes false letters while messenger sleeps by brook" }
+  - { function: func_villainy, order: 12, actor: girl_without_hands_aged_mother,
+      scene: "aged mother must exile queen and child, substituting hind tongue and eyes for execution proof" }
+  - { function: func_rescue, order: 13, actor: girl_without_hands_angel,
+      scene: "angel shelters queen and child in the house where all dwell free" }
+  - { function: func_liquidation, order: 14, actor: girl_without_hands_queen,
+      scene: "after seven years her natural hands grow again by God's grace" }
+  - { function: func_departure, order: 15, actor: girl_without_hands_king,
+      scene: "king refuses food and drink and seeks wife and child for seven years" }
+  - { function: func_recognition, order: 16, actor: girl_without_hands_king,
+      scene: "silver hands and restored natural hands prove the queen's identity" }
+  - { function: func_wedding, order: 17, actor: girl_without_hands_queen,
+      scene: "king and queen return home, are married again, and live contentedly" }
+
+
+edges:
+
+  # Devil's bargain and failed infernal claim
+  - { from: girl_without_hands_devil, to: girl_without_hands_miller, label: BARGAINS_WITH,
+      evidence: "I will make thee rich, if thou wilt promise me what is standing behind thy mill" }
+  - { from: girl_without_hands_miller, to: obj_girl_without_hands_written_promise, label: GIVES_WRITTEN_PROMISE,
+      evidence: "gave a written promise to the stranger." }
+  - { from: obj_girl_without_hands_written_promise, to: girl_without_hands_queen, label: BINDS_AGAINST,
+      evidence: "He did not mean the apple-tree, but our daughter" }
+  - { from: girl_without_hands_queen, to: obj_girl_without_hands_chalk_circle, label: MAKES_PROTECTION_WITH,
+      evidence: "made a circle round herself with chalk." }
+  - { from: law_purity_blocks_infernal_claim, to: girl_without_hands_devil, label: BLOCKS,
+      evidence: "he could not come near to her." }
+  - { from: girl_without_hands_devil, to: girl_without_hands_miller, label: COMMANDS_MUTILATION,
+      evidence: "Cut her hands off, or else I cannot get the better of her." }
+  - { from: girl_without_hands_miller, to: obj_girl_without_hands_severed_hands, label: CUTS_OFF,
+      evidence: "she laid down both her hands, and let them be cut off." }
+  - { from: girl_without_hands_queen, to: obj_girl_without_hands_severed_hands, label: WEEPS_ON,
+      evidence: "she had wept so long and so much on the stumps" }
+  - { from: girl_without_hands_devil, to: girl_without_hands_queen, label: LOSES_CLAIM_TO,
+      evidence: "he had to give in, and had lost all right over her." }
+
+  # Garden, marriage, and silver hands
+  - { from: girl_without_hands_queen, to: loc_girl_without_hands_royal_garden, label: ENTERS_BY_DIVINE_AID,
+      evidence: "an angel came towards her, who made a dam in the water" }
+  - { from: girl_without_hands_queen, to: obj_girl_without_hands_pears, label: EATS,
+      evidence: "ate one with her mouth from the tree, but no more." }
+  - { from: girl_without_hands_gardener, to: girl_without_hands_queen, label: MISRECOGNIZES_AS_SPIRIT,
+      evidence: "thought the maiden was a spirit" }
+  - { from: girl_without_hands_priest, to: girl_without_hands_queen, label: QUESTIONS,
+      evidence: "Comest thou from heaven or from earth? Art thou a spirit, or a human being?" }
+  - { from: girl_without_hands_queen, to: girl_without_hands_priest, label: REVEALS_HUMANITY_TO,
+      evidence: "I am no spirit, but an unhappy mortal deserted by all but God." }
+  - { from: girl_without_hands_king, to: obj_girl_without_hands_silver_hands, label: PROVIDES,
+      evidence: "had silver hands made for her" }
+  - { from: girl_without_hands_king, to: girl_without_hands_queen, label: MARRIES,
+      evidence: "took her to wife." }
+
+  # False letters and exile
+  - { from: girl_without_hands_aged_mother, to: obj_girl_without_hands_true_birth_letter, label: WRITES,
+      evidence: "made haste to write and announce the joyful news" }
+  - { from: girl_without_hands_messenger, to: loc_girl_without_hands_brook_letters, label: SLEEPS_AT,
+      evidence: "rested by a brook on the way... he fell asleep." }
+  - { from: girl_without_hands_devil, to: obj_girl_without_hands_false_monster_letter, label: SUBSTITUTES,
+      evidence: "exchanged the letter for another" }
+  - { from: girl_without_hands_devil, to: obj_girl_without_hands_false_death_letter, label: SUBSTITUTES,
+      evidence: "put a different letter in his pocket" }
+  - { from: law_false_letters_exile_innocent, to: obj_girl_without_hands_false_death_letter, label: GOVERNS,
+      evidence: "in the last letter it was also written that she was to preserve the Queen's tongue and eyes" }
+  - { from: girl_without_hands_aged_mother, to: girl_without_hands_hind, label: KILLS_AS_SUBSTITUTE,
+      evidence: "had a hind brought by night and cut out her tongue and eyes" }
+  - { from: girl_without_hands_aged_mother, to: obj_girl_without_hands_hind_tokens, label: PRESERVES_AS_TOKENS,
+      evidence: "took these tokens from it" }
+  - { from: girl_without_hands_aged_mother, to: girl_without_hands_queen, label: EXILES,
+      evidence: "Go forth into the wide world with thy child, and never come here again." }
+
+  # Angelic shelter and restoration
+  - { from: girl_without_hands_angel, to: loc_girl_without_hands_free_house, label: LEADS_TO,
+      evidence: "led her to a little house" }
+  - { from: girl_without_hands_angel, to: girl_without_hands_queen, label: PROTECTS,
+      evidence: "to watch over thee and thy child." }
+  - { from: girl_without_hands_queen, to: girl_without_hands_child, label: MOTHERS_IN_EXILE,
+      evidence: "tied her child on her back, and went away" }
+  - { from: girl_without_hands_queen, to: state_maimed, label: RESTORED_FROM,
+      evidence: "her hands which had been cut off, grew once more." }
+
+  # Recognition and return
+  - { from: girl_without_hands_king, to: girl_without_hands_aged_mother, label: LEARNS_TRUTH_FROM,
+      evidence: "she showed him the two letters which the Evil-one had forged" }
+  - { from: girl_without_hands_king, to: loc_girl_without_hands_free_house, label: FINDS,
+      evidence: "found therein the little house whose sign was, 'Here all dwell free.'" }
+  - { from: girl_without_hands_child, to: obj_girl_without_hands_handkerchief, label: REPLACES,
+      evidence: "pick up thy father's handkerchief, and cover his face again." }
+  - { from: girl_without_hands_queen, to: girl_without_hands_king, label: REVEALS_IDENTITY_TO,
+      evidence: "I am thy wife, and that is thy son, Sorrowful." }
+  - { from: obj_girl_without_hands_silver_hands, to: girl_without_hands_queen, label: PROVES_IDENTITY_OF,
+      evidence: "the angel... brought the silver hands, and showed them to him." }
+  - { from: girl_without_hands_king, to: girl_without_hands_queen, label: RECOGNIZES,
+      evidence: "he knew for a certainty that it was his dear wife" }

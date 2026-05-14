@@ -1,0 +1,284 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-water-nix
+khm: 79
+atu: '313A'
+atu_name: The Girl Helps the Hero Flee / Transformation Chase
+canonical_source: ../../2-silver/canonical/the-water-nix/canonical.txt
+title: The Water-Nix
+
+
+entities:
+
+  characters:
+
+    water_nix_sister:
+      name: The Little Sister
+      species: sp_human
+      agency_modes: [agency_endurance, agency_cunning, agency_object_mediation]
+      affects: [affect_fear]
+      traits: [well-fallen, nix-captive, dirty-flax-spinner, holed-bucket-water-fetcher, sunday-escape-planner, brush-thrower, mirror-thrower]
+      evidence: |
+        A little brother and sister were once playing by a well
+
+    water_nix_brother:
+      name: The Little Brother
+      species: sp_human
+      agency_modes: [agency_endurance, agency_cunning, agency_object_mediation]
+      affects: [affect_fear]
+      traits: [well-fallen, nix-captive, blunt-axe-tree-hewer, sunday-fugitive, comb-thrower, escaped-child]
+      evidence: |
+        A little brother and sister were once playing by a well
+
+    water_nix_nix:
+      name: The Water-Nix
+      being_type: being_water_nix
+      agency_modes: [agency_speech, agency_violence, agency_domestic_labor]
+      speech_acts_performed: [speech_command]
+      affects: [affect_anger]
+      traits: [well-dweller, child-captor, hard-work-master, church-goer, great-stride-pursuer, obstacle-scrambler, glass-hill-blocked]
+      evidence: |
+        A water-nix lived down below
+
+  magic_objects:
+
+    obj_water_nix_dirty_flax:
+      name: The Dirty Tangled Flax
+      object_kind: material
+      attributes:
+        function: impossible or humiliating spinning labour imposed on the sister
+      evidence: |
+        dirty tangled flax to spin
+
+    obj_water_nix_holed_bucket:
+      name: The Bucket with a Hole
+      object_kind: tool
+      attributes:
+        function: futile water-fetching tool imposed on the sister
+      evidence: |
+        fetch water in a bucket with a hole in it
+
+    obj_water_nix_blunt_axe:
+      name: The Blunt Axe
+      object_kind: tool
+      attributes:
+        function: ineffective tree-cutting tool imposed on the brother
+      evidence: |
+        hew down a tree with a blunt axe
+
+    obj_water_nix_stone_dumplings:
+      name: The Stone-Hard Dumplings
+      object_kind: food
+      attributes:
+        function: deprivation food given to the captive children
+      evidence: |
+        dumplings as hard as stones
+
+    obj_water_nix_brush:
+      name: The Brush that Becomes a Bristle Hill
+      object_kind: tool
+      attributes:
+        function: thrown obstacle that raises an immense hill of bristles
+      evidence: |
+        the girl threw a brush behind her
+
+    obj_water_nix_comb:
+      name: The Comb that Becomes a Hill of Teeth
+      object_kind: tool
+      attributes:
+        function: thrown obstacle that raises a great hill of combs and teeth
+      evidence: |
+        the boy threw behind him a comb
+
+    obj_water_nix_looking_glass:
+      name: The Looking-Glass that Becomes a Mirror Hill
+      object_kind: tool
+      attributes:
+        function: final thrown obstacle whose slippery glass the nix cannot cross
+      evidence: |
+        the girl threw behind her a looking-glass
+
+    obj_water_nix_axe:
+      name: The Nix's Axe
+      object_kind: tool
+      attributes:
+        function: tool fetched too late to cut through the glass hill
+      evidence: |
+        fetch my axe, and cut the hill of glass in half
+
+  locations:
+
+    loc_water_nix_well:
+      name: The Well
+      instance_of: loc_well
+      threshold_type: threshold_well
+      evidence: |
+        playing by a well
+
+    loc_water_nix_below:
+      name: The Nix's Below-Well Domain
+      instance_of: loc_well
+      evidence: |
+        A water-nix lived down below
+
+    loc_water_nix_church:
+      name: The Church Away from the Well
+      instance_of: loc_church
+      threshold_type: threshold_doorway
+      evidence: |
+        one Sunday, when the nix was at church
+
+    loc_water_nix_bristle_hill:
+      name: The Hill of Bristles
+      instance_of: loc_mountain
+      evidence: |
+        an immense hill of bristles
+
+    loc_water_nix_comb_hill:
+      name: The Hill of Combs
+      instance_of: loc_mountain
+      evidence: |
+        a great hill of combs with a thousand times a thousand teeth
+
+    loc_water_nix_mirror_hill:
+      name: The Hill of Mirrors
+      instance_of: loc_mountain
+      evidence: |
+        a hill of mirrors
+
+
+classifications:
+
+  world_laws:
+    - law_thrown_objects_raise_pursuit_obstacles
+
+  moral_regimes:
+    - moral_prudential_retreat
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_cunning
+    - agency_endurance
+    - agency_speech
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_fear
+    - affect_anger
+
+  symbol_numbers: []
+
+  threshold_types:
+    - threshold_well
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: water_nix_sister,
+      scene: "the brother and sister play by a well and fall in" }
+  - { function: func_capture, order: 2, actor: water_nix_nix,
+      scene: "the water-nix seizes the children below the well and carries them off" }
+  - { function: func_servitude, order: 3, actor: water_nix_nix,
+      scene: "the nix imposes futile labour and stone-hard food on the children" }
+  - { function: func_escape, order: 4, actor: water_nix_sister,
+      scene: "the children wait until Sunday while the nix is at church and run away" }
+  - { function: func_pursuit, order: 5, actor: water_nix_nix,
+      scene: "the nix discovers the escape and follows with great strides" }
+  - { function: func_obstacle, order: 6, actor: water_nix_sister,
+      scene: "the sister throws a brush that becomes a hill of bristles" }
+  - { function: func_obstacle, order: 7, actor: water_nix_brother,
+      scene: "the brother throws a comb that becomes a hill of combs and teeth" }
+  - { function: func_final_obstacle, order: 8, actor: water_nix_sister,
+      scene: "the sister throws a looking-glass that becomes an uncrossable mirror hill" }
+  - { function: func_victory, order: 9, actor: water_nix_sister,
+      scene: "the children gain enough distance that the nix must return to her well" }
+
+
+edges:
+
+  # Fall into the water-being's domain
+  - { from: water_nix_sister, to: loc_water_nix_well, label: PLAYS_BY,
+      evidence: "playing by a well" }
+  - { from: water_nix_brother, to: loc_water_nix_well, label: PLAYS_BY,
+      evidence: "playing by a well" }
+  - { from: water_nix_sister, to: loc_water_nix_well, label: FALLS_INTO,
+      evidence: "they both fell in" }
+  - { from: water_nix_brother, to: loc_water_nix_well, label: FALLS_INTO,
+      evidence: "they both fell in" }
+  - { from: water_nix_nix, to: loc_water_nix_below, label: LIVES_IN,
+      evidence: "A water-nix lived down below" }
+  - { from: water_nix_nix, to: water_nix_sister, label: CAPTURES,
+      evidence: "Now I have got you" }
+  - { from: water_nix_nix, to: water_nix_brother, label: CAPTURES,
+      evidence: "Now I have got you" }
+  - { from: water_nix_nix, to: water_nix_sister, label: COMMANDS_LABOR,
+      evidence: "now you shall work hard for me!" }
+  - { from: water_nix_nix, to: water_nix_brother, label: COMMANDS_LABOR,
+      evidence: "now you shall work hard for me!" }
+  - { from: water_nix_nix, to: water_nix_sister, label: CARRIES_OFF,
+      evidence: "carried them off with her" }
+  - { from: water_nix_nix, to: water_nix_brother, label: CARRIES_OFF,
+      evidence: "carried them off with her" }
+
+  # Captive labour
+  - { from: water_nix_nix, to: obj_water_nix_dirty_flax, label: ASSIGNS,
+      evidence: "She gave the girl dirty tangled flax to spin" }
+  - { from: water_nix_sister, to: obj_water_nix_dirty_flax, label: MUST_SPIN,
+      evidence: "dirty tangled flax to spin" }
+  - { from: water_nix_sister, to: obj_water_nix_holed_bucket, label: MUST_FETCH_WITH,
+      evidence: "she had to fetch water in a bucket with a hole in it" }
+  - { from: water_nix_brother, to: obj_water_nix_blunt_axe, label: MUST_HEW_WITH,
+      evidence: "the boy had to hew down a tree with a blunt axe" }
+  - { from: water_nix_nix, to: obj_water_nix_stone_dumplings, label: FEEDS_CAPTIVES_WITH,
+      evidence: "they got nothing to eat but dumplings as hard as stones" }
+  - { from: water_nix_sister, to: obj_water_nix_stone_dumplings, label: EATS_ONLY,
+      evidence: "nothing to eat but dumplings as hard as stones" }
+  - { from: water_nix_brother, to: obj_water_nix_stone_dumplings, label: EATS_ONLY,
+      evidence: "nothing to eat but dumplings as hard as stones" }
+
+  # Sunday escape and pursuit
+  - { from: water_nix_nix, to: loc_water_nix_church, label: GOES_TO,
+      evidence: "the nix was at church" }
+  - { from: water_nix_sister, to: water_nix_nix, label: WAITS_FOR_ABSENCE_OF,
+      evidence: "they waited until one Sunday, when the nix was at church" }
+  - { from: water_nix_sister, to: water_nix_brother, label: RUNS_AWAY_WITH,
+      evidence: "ran away" }
+  - { from: water_nix_nix, to: water_nix_sister, label: PURSUES,
+      evidence: "followed them with great strides" }
+  - { from: water_nix_nix, to: water_nix_brother, label: PURSUES,
+      evidence: "followed them with great strides" }
+
+  # Object-obstacle magic flight
+  - { from: water_nix_sister, to: obj_water_nix_brush, label: THROWS_BEHIND,
+      evidence: "the girl threw a brush behind her" }
+  - { from: obj_water_nix_brush, to: loc_water_nix_bristle_hill, label: BECOMES,
+      evidence: "formed an immense hill of bristles" }
+  - { from: obj_water_nix_brush, to: law_thrown_objects_raise_pursuit_obstacles, label: ENACTS,
+      evidence: "formed an immense hill of bristles" }
+  - { from: loc_water_nix_bristle_hill, to: water_nix_nix, label: DELAYS,
+      evidence: "over which the nix was forced to scramble with great difficulty" }
+  - { from: water_nix_brother, to: obj_water_nix_comb, label: THROWS_BEHIND,
+      evidence: "the boy threw behind him a comb" }
+  - { from: obj_water_nix_comb, to: loc_water_nix_comb_hill, label: BECOMES,
+      evidence: "made a great hill of combs with a thousand times a thousand teeth" }
+  - { from: obj_water_nix_comb, to: law_thrown_objects_raise_pursuit_obstacles, label: ENACTS,
+      evidence: "made a great hill of combs with a thousand times a thousand teeth" }
+  - { from: water_nix_sister, to: obj_water_nix_looking_glass, label: THROWS_BEHIND,
+      evidence: "the girl threw behind her a looking-glass" }
+  - { from: obj_water_nix_looking_glass, to: loc_water_nix_mirror_hill, label: BECOMES,
+      evidence: "formed a hill of mirrors" }
+  - { from: obj_water_nix_looking_glass, to: law_thrown_objects_raise_pursuit_obstacles, label: ENACTS,
+      evidence: "formed a hill of mirrors" }
+  - { from: loc_water_nix_mirror_hill, to: water_nix_nix, label: BLOCKS,
+      evidence: "it was impossible for the nix to cross it" }
+  - { from: water_nix_nix, to: obj_water_nix_axe, label: FETCHES_TO_CUT,
+      evidence: "I will go home quickly and fetch my axe" }
+  - { from: water_nix_nix, to: loc_water_nix_mirror_hill, label: HEWS_THROUGH_TOO_LATE,
+      evidence: "had hewn through the glass" }
+  - { from: water_nix_sister, to: water_nix_nix, label: ESCAPES_FROM,
+      evidence: "the children had escaped to a great distance" }
+  - { from: water_nix_brother, to: water_nix_nix, label: ESCAPES_FROM,
+      evidence: "the children had escaped to a great distance" }
+  - { from: water_nix_nix, to: loc_water_nix_well, label: RETURNS_TO,
+      evidence: "the water-nix was obliged to betake herself to her well again" }

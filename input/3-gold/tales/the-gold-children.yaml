@@ -1,0 +1,405 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-gold-children
+khm: 85
+atu: '555/303'
+atu_name: The Fisherman and His Wife / The Twin or Blood Brothers
+canonical_source: ../../2-silver/canonical/the-gold-children/canonical.txt
+title: The Gold-Children
+
+
+entities:
+
+  characters:
+
+    gold_children_fisherman:
+      name: The Poor Fisherman
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_domestic_labor, agency_endurance]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_fear, affect_anger]
+      traits: [poor-fisher, golden-fish-catcher, secret-keeper-failed, castle-loser, fish-cutter, anxious-father, lily-watcher]
+      evidence: |
+        earned their bread by fishing, and always lived from hand to
+        mouth.
+
+    gold_children_wife:
+      name: The Fisherman's Wife
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      affects: [affect_greed, affect_curiosity]
+      traits: [poverty-sharer, castle-delighted, questioner, secret-extractor, gold-child-mother]
+      evidence: |
+        she never rested day or night
+
+    gold_children_fish:
+      name: The Golden Fish
+      species: sp_fish
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_command]
+      traits: [entirely-gold, speaking, castle-granter, secrecy-condition-setter, fate-accepting, body-blessing-source]
+      evidence: |
+        he drew out a fish entirely of gold.
+
+    gold_children_first_brother:
+      name: The First Gold-Child / Younger Traveller
+      archetypes: [arc_wondrous_twin]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_violence, agency_endurance]
+      existential_states: [state_hidden_identity, state_petrified]
+      transformations: [transform_petrification]
+      affects: [affect_shame, affect_fear, affect_love_at_first_sight]
+      traits: [golden-bodied, golden-horse-rider, mocked-at-inn, bear-skin-disguised, robber-avoider, bridegroom, stag-dreamer, witch-petrified, brother-rescued]
+      evidence: |
+        The children grew up, became tall and handsome
+
+    gold_children_second_brother:
+      name: The Second Gold-Child / Rescuing Brother
+      archetypes: [arc_wondrous_twin]
+      species: sp_human
+      agency_modes: [agency_speech, agency_violence, agency_object_mediation, agency_endurance]
+      affects: [affect_loyalty, affect_fear]
+      traits: [golden-bodied, mockery-shamed, home-returned, lily-watcher, brother-rescuer, witch-threatener, father-returner]
+      evidence: |
+        one of them heard the mocking he felt ashamed and would not go
+        out into the world
+
+    gold_children_father_in_law:
+      name: The Bride's Father
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      affects: [affect_anger]
+      traits: [late-returning-father, bear-skin-misreader, murder-intending, appeased, golden-son-in-law-recognizer]
+      evidence: |
+        home came the father of the bride
+
+    gold_children_bride:
+      name: The Beautiful Maiden / Bride
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      affects: [affect_love_at_first_sight, affect_fear, affect_loyalty]
+      traits: [village-maiden, whole-heart-beloved, faithful-wife, father-pleader, anxious-hunt-warning]
+      evidence: |
+        I will be thy wife, and be true to thee my whole life long.
+
+    gold_children_witch:
+      name: The Forest Witch
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_speech, agency_violence, agency_object_mediation]
+      transformations: [transform_petrification]
+      affects: [affect_anger, affect_fear]
+      traits: [forest-house-dweller, stag-knower, dog-owner, angry-petrifier, unwilling-restorer]
+      evidence: |
+        he was standing before a little house, wherein was a witch.
+
+    gold_children_witch_dog:
+      name: The Witch's Little Dog
+      species: sp_dog
+      agency_modes: [agency_violence]
+      traits: [barking, witch-protected, threat-trigger]
+      evidence: |
+        a little dog which had come out of the house with her, barked
+        at the man violently.
+
+    gold_children_robbers:
+      name: The Forest Robbers
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech]
+      affects: [affect_greed]
+      traits: [forest-hidden, gold-seeking, bear-skin-deceived, non-attacking]
+      evidence: |
+        the wood is full of robbers
+
+  magic_objects:
+
+    obj_gold_children_castle_cupboard:
+      name: The Castle and Abundance Cupboard
+      object_kind: architecture
+      attributes:
+        function: first and second conditional fish-gift that disappears when its source is disclosed
+      evidence: |
+        a cupboard in the castle
+
+    obj_gold_children_fish_pieces:
+      name: The Six Pieces of the Golden Fish
+      object_kind: relic
+      attributes:
+        function: distributed body portions that generate gold children, foals, and lilies
+      evidence: |
+        cut me into six pieces
+
+    obj_gold_children_lilies:
+      name: The Two Golden Lilies
+      instance_of: obj_life_reporting_plant
+      object_kind: material
+      attributes:
+        function: life-tokens reporting the absent brothers' health, illness, death, and restoration
+      evidence: |
+        two golden lilies sprang up
+
+    obj_gold_children_gold_foals:
+      name: The Two Golden Foals / Steeds
+      object_kind: creature_object
+      attributes:
+        function: golden mounts generated from the fish pieces fed to the horse
+      evidence: |
+        the horse had two golden foals
+
+    obj_gold_children_bear_skins:
+      name: The Bear-Skin Disguise
+      object_kind: garment
+      attributes:
+        function: covers the gold-child and his horse so robbers and in-laws misrecognise his wealth
+      evidence: |
+        he took bear-skins and covered himself and his horse with them
+
+    obj_gold_children_stag:
+      name: The Splendid Stag
+      object_kind: creature_object
+      attributes:
+        function: dream quarry that lures the gold-child into the witch's forest house
+      evidence: |
+        he rode out to hunt a splendid stag
+
+  locations:
+
+    loc_gold_children_cottage:
+      name: The Poor Cottage / Fisherman's Hut
+      instance_of: loc_house
+      evidence: |
+        nothing but a little cottage
+
+    loc_gold_children_waterside:
+      name: The Water-Side Fishing Place
+      instance_of: loc_river
+      evidence: |
+        sitting by the water-side
+
+    loc_gold_children_castle:
+      name: The Fish-Gift Castle
+      instance_of: loc_castle
+      evidence: |
+        now stood a great castle
+
+    loc_gold_children_inn:
+      name: The Mocking Inn
+      instance_of: loc_inn
+      threshold_type: threshold_doorway
+      evidence: |
+        came to an inn, in which were many people
+
+    loc_gold_children_robber_forest:
+      name: The Great Robber Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        reached a great forest
+
+    loc_gold_children_bride_village:
+      name: The Bride's Village
+      instance_of: loc_village
+      evidence: |
+        One day he entered a village
+
+    loc_gold_children_witch_house:
+      name: The Witch's Little House in the Forest
+      instance_of: loc_witch_house
+      threshold_type: threshold_doorway
+      evidence: |
+        a little house, wherein was a witch
+
+
+classifications:
+
+  world_laws:
+    - law_secret_breach_reverts_fish_gift
+    - law_divided_magic_body_generates_gold_triplets
+    - law_forest_suspends_domestic_order
+
+  moral_regimes:
+    - moral_restorative
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_speech
+    - agency_violence
+    - agency_endurance
+    - agency_cunning
+
+  affects_driving:
+    - affect_greed
+    - affect_curiosity
+    - affect_shame
+    - affect_fear
+    - affect_loyalty
+    - affect_love_at_first_sight
+
+  symbol_numbers:
+    - num_2
+    - num_3
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: gold_children_fisherman,
+      scene: "poor fishing couple lives from hand to mouth in a cottage" }
+  - { function: func_donor_encounter, order: 2, actor: gold_children_fish,
+      scene: "the golden fish promises castle and food if released and kept secret" }
+  - { function: func_interdiction, order: 3, actor: gold_children_fish,
+      scene: "the fish forbids disclosure of the source of the good luck" }
+  - { function: func_violation, order: 4, actor: gold_children_wife,
+      scene: "the wife presses until the fisherman reveals the fish-source and the gift disappears" }
+  - { function: func_repetition, order: 5, actor: gold_children_fish,
+      scene: "the same conditional castle gift is granted and lost a second time" }
+  - { function: func_magical_birth, order: 6, actor: gold_children_fish,
+      scene: "the fish orders its body divided into six pieces, producing golden children, foals, and lilies" }
+  - { function: func_departure, order: 7, actor: gold_children_first_brother,
+      scene: "the golden brothers set out with golden horses, leaving lilies as life tokens" }
+  - { function: func_separation, order: 8, actor: gold_children_second_brother,
+      scene: "one brother turns back under mockery while the other rides into the world" }
+  - { function: func_disguise, order: 9, actor: gold_children_first_brother,
+      scene: "the travelling brother covers himself and his horse with bear-skins to pass robbers safely" }
+  - { function: func_wedding, order: 10, actor: gold_children_first_brother,
+      scene: "the gold-child marries the beautiful maiden after her father is appeased" }
+  - { function: func_danger, order: 11, actor: gold_children_first_brother,
+      scene: "the dream stag leads him into the witch's forest and he is petrified" }
+  - { function: func_life_token_warning, order: 12, actor: gold_children_second_brother,
+      scene: "the drooping lily reveals the brother's misfortune" }
+  - { function: func_rescue, order: 13, actor: gold_children_second_brother,
+      scene: "the second brother threatens the witch and compels her to restore the petrified brother" }
+  - { function: func_return, order: 14, actor: gold_children_first_brother,
+      scene: "the brothers ride out of the forest, one to his bride and one to his father" }
+
+
+edges:
+
+  # Conditional fish gift and secrecy failure
+  - { from: gold_children_fisherman, to: loc_gold_children_waterside, label: FISHES_AT,
+      evidence: "sitting by the water-side" }
+  - { from: gold_children_fisherman, to: gold_children_fish, label: CATCHES,
+      evidence: "he drew out a fish entirely of gold" }
+  - { from: gold_children_fish, to: gold_children_fisherman, label: PROMISES_CASTLE_FOR_RELEASE,
+      evidence: "I will change your little hut into a splendid castle" }
+  - { from: gold_children_fish, to: obj_gold_children_castle_cupboard, label: PROMISES_ABUNDANCE,
+      evidence: "there will be a cupboard in the castle" }
+  - { from: gold_children_fish, to: gold_children_fisherman, label: SETS_SECRECY_CONDITION,
+      evidence: "you shall disclose to no one in the world" }
+  - { from: gold_children_fisherman, to: gold_children_fish, label: RELEASES,
+      evidence: "threw the wonderful fish back again into the water" }
+  - { from: gold_children_fish, to: loc_gold_children_castle, label: CREATES,
+      evidence: "now stood a great castle" }
+  - { from: obj_gold_children_castle_cupboard, to: gold_children_wife, label: PROVIDES_FOOD_FOR,
+      evidence: "there stood cakes, meat, fruit, wine" }
+  - { from: gold_children_wife, to: gold_children_fisherman, label: QUESTIONS_SOURCE,
+      evidence: "whence come all these riches?" }
+  - { from: gold_children_wife, to: gold_children_fisherman, label: GOADS_TO_REVEAL,
+      evidence: "she goaded her husband" }
+  - { from: gold_children_fisherman, to: gold_children_wife, label: REVEALS_SECRET,
+      evidence: "he revealed that all was owing to a wonderful golden fish" }
+  - { from: law_secret_breach_reverts_fish_gift, to: loc_gold_children_castle, label: COLLAPSES,
+      evidence: "the splendid castle with the cupboard immediately disappeared" }
+  - { from: gold_children_fish, to: law_secret_breach_reverts_fish_gift, label: ENACTS,
+      evidence: "if you speak but one single word, all will be over" }
+  - { from: gold_children_fisherman, to: gold_children_fish, label: CATCHES_THIRD_TIME,
+      evidence: "for a third time" }
+
+  # Fish body creates golden doubles
+  - { from: gold_children_fish, to: obj_gold_children_fish_pieces, label: COMMANDS_BODY_DIVISION,
+      evidence: "cut me into six pieces" }
+  - { from: obj_gold_children_fish_pieces, to: law_divided_magic_body_generates_gold_triplets, label: ENACTS,
+      evidence: "take me home and cut me into six pieces" }
+  - { from: obj_gold_children_fish_pieces, to: gold_children_wife, label: EATEN_BY,
+      evidence: "give your wife two of them to eat" }
+  - { from: obj_gold_children_fish_pieces, to: obj_gold_children_gold_foals, label: GENERATES,
+      evidence: "the horse had two golden foals" }
+  - { from: obj_gold_children_fish_pieces, to: obj_gold_children_lilies, label: GENERATES,
+      evidence: "two golden lilies sprang up" }
+  - { from: gold_children_wife, to: gold_children_first_brother, label: BEARS,
+      evidence: "bore two children who were made entirely of gold" }
+  - { from: gold_children_wife, to: gold_children_second_brother, label: BEARS,
+      evidence: "bore two children who were made entirely of gold" }
+  - { from: obj_gold_children_lilies, to: num_2, label: NUMBERED_AS,
+      evidence: "two golden lilies" }
+  - { from: obj_gold_children_gold_foals, to: num_2, label: NUMBERED_AS,
+      evidence: "two golden foals" }
+  - { from: gold_children_first_brother, to: obj_gold_children_lilies, label: LEAVES_LIFE_TOKEN,
+      evidence: "The two golden lilies remain here" }
+  - { from: obj_gold_children_lilies, to: gold_children_first_brother, label: REPORTS_FATE_OF,
+      evidence: "if they are fresh, then we are in health" }
+
+  # Departure, mockery, forest disguise
+  - { from: gold_children_first_brother, to: obj_gold_children_gold_foals, label: RIDES,
+      evidence: "mount our golden steeds" }
+  - { from: gold_children_second_brother, to: obj_gold_children_gold_foals, label: RIDES,
+      evidence: "mount our golden steeds" }
+  - { from: gold_children_first_brother, to: loc_gold_children_inn, label: ARRIVES_AT,
+      evidence: "came to an inn" }
+  - { from: gold_children_second_brother, to: affect_shame, label: FEELS,
+      evidence: "felt ashamed" }
+  - { from: gold_children_second_brother, to: gold_children_fisherman, label: RETURNS_HOME_TO,
+      evidence: "turned back and went home again to his father" }
+  - { from: gold_children_first_brother, to: loc_gold_children_robber_forest, label: ENTERS,
+      evidence: "reached a great forest" }
+  - { from: gold_children_robbers, to: loc_gold_children_robber_forest, label: INFEST,
+      evidence: "the wood is full of robbers" }
+  - { from: gold_children_first_brother, to: obj_gold_children_bear_skins, label: DISGUISES_WITH,
+      evidence: "covered himself and his horse with them" }
+  - { from: obj_gold_children_bear_skins, to: gold_children_robbers, label: PREVENTS_RECOGNITION_BY,
+      evidence: "the gold was no more to be seen" }
+  - { from: gold_children_robbers, to: gold_children_first_brother, label: SPARES_AS_POOR,
+      evidence: "what should we gain from him?" }
+
+  # Marriage and misrecognition
+  - { from: gold_children_first_brother, to: gold_children_bride, label: LOVES,
+      evidence: "I love thee with my whole heart" }
+  - { from: gold_children_bride, to: gold_children_first_brother, label: ACCEPTS_MARRIAGE,
+      evidence: "Yes, I will be thy wife" }
+  - { from: gold_children_bride, to: affect_loyalty, label: PROMISES,
+      evidence: "be true to thee my whole life long" }
+  - { from: gold_children_father_in_law, to: gold_children_first_brother, label: MISRECOGNIZES_AS_VAGABOND,
+      evidence: "A vagabond shall never have my daughter!" }
+  - { from: gold_children_father_in_law, to: gold_children_first_brother, label: WOULD_KILL,
+      evidence: "was about to kill him" }
+  - { from: gold_children_bride, to: gold_children_father_in_law, label: PLEADS_FOR_HUSBAND,
+      evidence: "He is my husband, and I love him with all my heart!" }
+  - { from: gold_children_father_in_law, to: gold_children_first_brother, label: RECOGNIZES_GOLDEN_FORM,
+      evidence: "he saw a magnificent golden man in the bed" }
+
+  # Witch petrification and brother rescue
+  - { from: gold_children_first_brother, to: obj_gold_children_stag, label: DREAMS_OF_HUNTING,
+      evidence: "dreamed that he rode out to hunt a splendid stag" }
+  - { from: gold_children_bride, to: gold_children_first_brother, label: WARNS_AGAINST_HUNT,
+      evidence: "You might easily meet with a great misfortune" }
+  - { from: obj_gold_children_stag, to: loc_gold_children_witch_house, label: LURES_TO,
+      evidence: "the stag vanished from his sight" }
+  - { from: gold_children_witch, to: loc_gold_children_witch_house, label: DWELLS_IN,
+      evidence: "a little house, wherein was a witch" }
+  - { from: gold_children_witch_dog, to: gold_children_first_brother, label: BARKS_AT,
+      evidence: "barked at the man violently" }
+  - { from: gold_children_first_brother, to: gold_children_witch_dog, label: THREATENS_TO_SHOOT,
+      evidence: "I will shoot thee dead" }
+  - { from: gold_children_witch, to: gold_children_first_brother, label: PETRIFIES,
+      evidence: "immediately transformed him, so that he lay like a stone" }
+  - { from: obj_gold_children_lilies, to: gold_children_second_brother, label: WARNS_BY_DROOPING,
+      evidence: "one of them suddenly drooped" }
+  - { from: gold_children_second_brother, to: affect_loyalty, label: ACTS_FROM,
+      evidence: "I must away to see if I can possibly rescue him" }
+  - { from: gold_children_second_brother, to: loc_gold_children_robber_forest, label: RIDES_TO,
+      evidence: "entered the great forest" }
+  - { from: gold_children_second_brother, to: gold_children_witch, label: THREATENS,
+      evidence: "I will shoot you" }
+  - { from: gold_children_witch, to: gold_children_first_brother, label: RESTORES_FROM_STONE,
+      evidence: "he was immediately restored to his human shape" }
+  - { from: gold_children_first_brother, to: gold_children_second_brother, label: REJOICES_WITH,
+      evidence: "rejoiced when they saw each other again" }
+  - { from: obj_gold_children_lilies, to: gold_children_fisherman, label: REPORTS_RESTORATION,
+      evidence: "the golden lily suddenly rose up and blossomed out again" }
+  - { from: gold_children_first_brother, to: gold_children_bride, label: RETURNS_TO,
+      evidence: "the one home to his bride" }
+  - { from: gold_children_second_brother, to: gold_children_fisherman, label: RETURNS_TO,
+      evidence: "the other to his father" }

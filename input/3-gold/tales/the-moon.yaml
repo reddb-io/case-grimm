@@ -1,0 +1,258 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-moon
+khm: 175
+atu: "1174"
+atu_name: The Moon
+canonical_source: ../../2-silver/canonical/the-moon/canonical.txt
+title: The Moon
+
+
+entities:
+
+  characters:
+
+    moon_travellers:
+      name: The Moon-Stealing Travellers
+      species: sp_human
+      agency_modes: [agency_cunning, agency_object_mediation, agency_domestic_labor]
+      affects: [affect_joy]
+      traits: [dark-country-travellers, moon-thieves, lamp-keepers, weekly-thaler-receivers, burial-share-claimants]
+      evidence: |
+        The four took care that the moon was provided with oil
+
+    moon_countryman:
+      name: The Countryman with the Cart
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_testimony]
+      traits: [moon-explainer, civic-maintenance-witness, cart-driver]
+      evidence: |
+        asked a countryman who was driving past with his cart
+
+    moon_foreign_mayor:
+      name: The Mayor Who Bought the Moon
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_domestic_labor, agency_object_mediation]
+      traits: [moon-buyer, oil-pourer, wick-cleaner, weekly-paid-caretaker]
+      evidence: |
+        our mayor bought it for three thalers
+
+    moon_home_people:
+      name: The People of the Dark Land
+      species: sp_human
+      agency_modes: [agency_object_mediation]
+      affects: [affect_joy]
+      traits: [formerly-dark, moonlit-households, rejoicing-community, darkness-returners]
+      evidence: |
+        Old and young rejoiced
+
+    moon_dwarfs:
+      name: The Dwarfs from the Rocks
+      being_type: being_dwarf
+      agency_modes: [agency_music]
+      affects: [affect_joy]
+      traits: [rock-cave-dwellers, moonlight-emergent, meadow-dancers]
+      evidence: |
+        The dwarfs came forth from their caves in the rocks
+
+    moon_elves:
+      name: The Tiny Red-Coated Elves
+      being_type: being_fairy
+      agency_modes: [agency_music]
+      affects: [affect_joy]
+      traits: [tiny, red-coated, moonlight-dancers, meadow-ring-dancers]
+      evidence: |
+        the tiny elves in their little red coats danced in rings on the meadows
+
+    moon_dead:
+      name: The Awakened Dead
+      species: sp_human
+      existential_states: [state_liminal_dead]
+      agency_modes: [agency_speech, agency_violence]
+      affects: [affect_joy, affect_anger]
+      traits: [moonlight-wakened, weak-eyed, merry, tavern-going, drunken-brawlers, subdued-back-to-graves]
+      evidence: |
+        the dead became restless and awoke from their sleep
+
+    moon_saint_peter:
+      name: Saint Peter
+      being_type: being_divine
+      agency_modes: [agency_social_rank, agency_speech, agency_violence, agency_object_mediation]
+      speech_acts_performed: [speech_command]
+      traits: [heaven-gate-guard, heavenly-commander, mounted-underworld-descender, moon-restorer]
+      evidence: |
+        Saint Peter who guards the gate of heaven
+
+  magic_objects:
+
+    obj_moon_shining_globe:
+      name: The Shining Moon-Globe
+      instance_of: obj_portable_celestial_light
+      object_kind: material
+      attributes:
+        payment: three thalers
+        maintenance: oil and cleaning
+        shares: four quarters
+        final_position: heaven
+      evidence: |
+        a shining globe was placed on an oak-tree
+
+  locations:
+
+    loc_moon_dark_land:
+      name: The Land of Dark Nights
+      evidence: |
+        there was a land where the nights were always dark
+
+    loc_moon_foreign_kingdom:
+      name: The Moonlit Foreign Kingdom
+      evidence: |
+        arrived in another kingdom
+
+    loc_moon_foreign_oak:
+      name: The Foreign Moon Oak
+      instance_of: loc_tree
+      evidence: |
+        a shining globe was placed on an oak-tree
+
+    loc_moon_home_oak:
+      name: The Home Oak for the Stolen Moon
+      instance_of: loc_tree
+      evidence: |
+        placed it on a high oak
+
+    loc_moon_graves:
+      name: The Travellers' Graves
+      instance_of: loc_tomb
+      evidence: |
+        be laid in the grave with him
+
+    loc_moon_world_below:
+      name: The World Below
+      instance_of: loc_world_below
+      evidence: |
+        in the world below, where darkness had always prevailed
+
+    loc_moon_heaven_gate:
+      name: The Gate of Heaven
+      instance_of: loc_heaven
+      threshold_type: threshold_gate
+      evidence: |
+        guards the gate of heaven
+
+    loc_moon_heaven:
+      name: Heaven
+      instance_of: loc_heaven
+      evidence: |
+        hung it up in heaven
+
+
+classifications:
+
+  world_laws:
+    - law_celestial_light_displaced_unsettles_dead
+
+  moral_regimes:
+    - moral_cosmic_order_restored
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_cunning
+    - agency_social_rank
+
+  affects_driving:
+    - affect_joy
+    - affect_anger
+
+  symbol_numbers:
+    - num_4
+
+  threshold_types:
+    - threshold_gate
+
+
+propp:
+  - { function: func_primordial_lack, order: 1, actor: loc_moon_dark_land,
+      scene: "the home land has dark nights because no moon or star shines there" }
+  - { function: func_celestial_discovery, order: 2, actor: moon_travellers,
+      scene: "travellers discover a moon-lamp in another kingdom" }
+  - { function: func_theft, order: 3, actor: moon_travellers,
+      scene: "the travellers lower the moon into a cart and hide the theft under a cloth" }
+  - { function: func_communal_illumination, order: 4, actor: obj_moon_shining_globe,
+      scene: "the stolen moon lights the dark land and releases rejoicing and dancing" }
+  - { function: func_funeral_partition, order: 5, actor: moon_travellers,
+      scene: "each old traveller takes a quarter of the moon into the grave" }
+  - { function: func_darkness_returns, order: 6, actor: loc_moon_dark_land,
+      scene: "after the fourth burial the old state of darkness returns" }
+  - { function: func_underworld_awakening, order: 7, actor: moon_dead,
+      scene: "the reunited moon pieces wake the dead in the world below" }
+  - { function: func_afterlife_disorder, order: 8, actor: moon_dead,
+      scene: "the dead drink, dance, brawl, and make noise that reaches heaven" }
+  - { function: func_divine_descent, order: 9, actor: moon_saint_peter,
+      scene: "Saint Peter rides through heaven's gate into the world below" }
+  - { function: func_cosmic_restoration, order: 10, actor: moon_saint_peter,
+      scene: "Saint Peter subdues the dead, orders them to their graves, and hangs the moon in heaven" }
+
+
+edges:
+
+  - { from: loc_moon_dark_land, to: obj_moon_shining_globe, label: LACKS,
+      evidence: "the moon never rose" }
+  - { from: obj_moon_shining_globe, to: loc_moon_foreign_oak, label: HANGS_ON,
+      evidence: "a shining globe was placed on an oak-tree" }
+  - { from: moon_countryman, to: obj_moon_shining_globe, label: IDENTIFIES_AS_MOON,
+      evidence: "That is the moon" }
+  - { from: moon_foreign_mayor, to: obj_moon_shining_globe, label: BUYS_AND_MAINTAINS,
+      evidence: "our mayor bought it for three thalers" }
+  - { from: moon_foreign_mayor, to: obj_moon_shining_globe, label: OILS_AND_CLEANS,
+      evidence: "pour oil into it daily, and to keep it clean" }
+  - { from: moon_travellers, to: obj_moon_shining_globe, label: PLAN_TO_CARRY_AWAY,
+      evidence: "carry away the moon" }
+  - { from: moon_travellers, to: obj_moon_shining_globe, label: LOWERS_WITH_ROPE,
+      evidence: "bored a hole in the moon, passed a rope through it" }
+  - { from: moon_travellers, to: obj_moon_shining_globe, label: HIDES_THEFT_WITH_CLOTH,
+      evidence: "covered it over with a cloth" }
+  - { from: moon_travellers, to: loc_moon_home_oak, label: INSTALLS_ON,
+      evidence: "placed it on a high oak" }
+  - { from: moon_home_people, to: obj_moon_shining_globe, label: REJOICES_IN_LIGHT_OF,
+      evidence: "Old and young rejoiced" }
+  - { from: moon_dwarfs, to: obj_moon_shining_globe, label: EMERGE_BY_LIGHT_OF,
+      evidence: "The dwarfs came forth from their caves in the rocks" }
+  - { from: moon_elves, to: loc_meadow, label: DANCE_ON,
+      evidence: "danced in rings on the meadows" }
+  - { from: moon_travellers, to: obj_moon_shining_globe, label: MAINTAINS_FOR_PAYMENT,
+      evidence: "provided with oil, cleaned the wick, and received their weekly thaler" }
+  - { from: moon_travellers, to: obj_moon_shining_globe, label: CLAIMS_QUARTERS_AS_PROPERTY,
+      evidence: "one quarter of the moon" }
+  - { from: obj_moon_shining_globe, to: loc_moon_graves, label: IS_BURIED_IN_QUARTERS,
+      evidence: "this was placed in his coffin" }
+  - { from: loc_moon_dark_land, to: affect_fear, label: RETURNS_TO_DARK_COLLISIONS,
+      evidence: "they knocked their heads together" }
+  - { from: obj_moon_shining_globe, to: loc_moon_world_below, label: REUNITES_IN,
+      evidence: "united themselves together again in the world below" }
+  - { from: obj_moon_shining_globe, to: moon_dead, label: AWAKENS,
+      evidence: "the dead became restless and awoke from their sleep" }
+  - { from: moon_dead, to: affect_joy, label: BECOME_MERRY,
+      evidence: "They rose up and were merry" }
+  - { from: moon_dead, to: agency_violence, label: BRAWL_AND_BEAT_EACH_OTHER,
+      evidence: "took up cudgels, and belabored each other" }
+  - { from: moon_dead, to: loc_moon_heaven, label: NOISE_REACHES,
+      evidence: "at last reached even to heaven" }
+  - { from: moon_saint_peter, to: loc_moon_heaven_gate, label: GUARDS,
+      evidence: "Saint Peter who guards the gate of heaven" }
+  - { from: moon_saint_peter, to: loc_moon_world_below, label: RIDES_DOWN_INTO,
+      evidence: "rode through the gate of heaven, down into the world below" }
+  - { from: moon_saint_peter, to: moon_dead, label: REDUCES_TO_SUBJECTION,
+      evidence: "reduced the dead to subjection" }
+  - { from: moon_saint_peter, to: moon_dead, label: COMMANDS_BACK_TO_GRAVES,
+      evidence: "bade them lie down in their graves again" }
+  - { from: moon_saint_peter, to: obj_moon_shining_globe, label: TAKES_AWAY,
+      evidence: "took the moon away with him" }
+  - { from: moon_saint_peter, to: loc_moon_heaven, label: HANGS_MOON_IN,
+      evidence: "hung it up in heaven" }
+  - { from: law_celestial_light_displaced_unsettles_dead, to: moon_dead, label: WAKES_DEAD_BY_MISPLACED_LIGHT,
+      evidence: "the moonlight was quite sufficient for them" }
+  - { from: moral_cosmic_order_restored, to: obj_moon_shining_globe, label: RESTORES_TO_PROPER_REALM,
+      evidence: "took the moon away with him, and hung it up in heaven" }

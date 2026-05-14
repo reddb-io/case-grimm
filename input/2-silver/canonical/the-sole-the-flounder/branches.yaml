@@ -1,0 +1,8 @@
+slug: the-sole-the-flounder
+khm: 172
+atu: '250'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

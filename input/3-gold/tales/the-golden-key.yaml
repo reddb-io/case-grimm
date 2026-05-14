@@ -1,0 +1,114 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-golden-key
+khm: 200
+atu: "2260"
+atu_name: The Golden Key
+canonical_source: ../../2-silver/canonical/the-golden-key/canonical.txt
+title: The Golden Key
+
+entities:
+  characters:
+    golden_key_poor_boy:
+      name: The Poor Boy in the Snow
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation, agency_speech]
+      speech_acts_performed: [speech_wish, speech_testimony]
+      affects: [affect_curiosity]
+      traits: [poor, winter-wood-fetcher, frozen, fire-maker, key-finder, chest-digger, patient-unlocker]
+      evidence: |
+        a poor boy was forced to go out on a sledge to fetch wood
+
+  magic_objects:
+    obj_golden_key_sledge:
+      name: The Wood Sledge
+      object_kind: tool
+      attributes:
+        function: winter labour vehicle used to fetch and pack wood
+      evidence: |
+        forced to go out on a sledge to fetch wood
+
+    obj_golden_key_firewood:
+      name: The Gathered Wood
+      object_kind: material
+      attributes:
+        function: work burden and fuel context for the warming fire
+      evidence: |
+        When he had gathered it together, and packed it
+
+    obj_golden_key_tiny_key:
+      name: The Tiny Golden Key
+      object_kind: token
+      attributes:
+        function: buried discovery that implies the hidden lock and chest
+      evidence: |
+        he found a tiny, gold key
+
+    obj_golden_key_iron_chest:
+      name: The Iron Chest
+      object_kind: treasure
+      attributes:
+        function: unopened container whose contents are withheld by the tale ending
+      evidence: |
+        dug in the ground and found an iron chest
+
+  locations:
+    loc_golden_key_winter_ground:
+      name: The Deep Snow Ground
+      instance_of: loc_field
+      evidence: |
+        when deep snow lay on the ground
+
+    loc_golden_key_fire_place:
+      name: The Cleared Place for the Fire
+      evidence: |
+        he scraped away the snow
+
+classifications:
+  world_laws:
+    - law_unopened_treasure_suspends_reader_desire
+  moral_regimes:
+    - moral_open_ended_wonder
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_object_mediation
+  affects_driving:
+    - affect_curiosity
+  symbol_numbers: []
+  threshold_types: []
+
+propp:
+  - { function: func_winter_labour, order: 1, actor: golden_key_poor_boy,
+      scene: "a poor boy goes into deep winter snow to fetch wood" }
+  - { function: func_warming_delay, order: 2, actor: golden_key_poor_boy,
+      scene: "frozen with cold, he clears the snow to light a fire" }
+  - { function: func_key_discovery, order: 3, actor: golden_key_poor_boy,
+      scene: "while clearing the ground he finds a tiny golden key" }
+  - { function: func_lock_inference, order: 4, actor: golden_key_poor_boy,
+      scene: "he reasons that where there is a key, there must also be a lock" }
+  - { function: func_chest_discovery, order: 5, actor: golden_key_poor_boy,
+      scene: "he digs up an iron chest and finds its nearly invisible keyhole" }
+  - { function: func_suspended_opening, order: 6, actor: law_unopened_treasure_suspends_reader_desire,
+      scene: "the key fits and turns, but the narrator stops before the lid opens" }
+
+edges:
+  - { from: golden_key_poor_boy, to: obj_golden_key_sledge, label: GOES_OUT_WITH,
+      evidence: "forced to go out on a sledge to fetch wood" }
+  - { from: golden_key_poor_boy, to: obj_golden_key_firewood, label: GATHERS_AND_PACKS,
+      evidence: "gathered it together, and packed it" }
+  - { from: golden_key_poor_boy, to: loc_golden_key_fire_place, label: CLEARS_SNOW_AT,
+      evidence: "he scraped away the snow" }
+  - { from: golden_key_poor_boy, to: obj_golden_key_tiny_key, label: FINDS,
+      evidence: "he found a tiny, gold key" }
+  - { from: obj_golden_key_tiny_key, to: obj_golden_key_iron_chest, label: IMPLIES_LOCK_FOR,
+      evidence: "where the key was, the lock must be also" }
+  - { from: golden_key_poor_boy, to: obj_golden_key_iron_chest, label: DIGS_UP,
+      evidence: "dug in the ground and found an iron chest" }
+  - { from: golden_key_poor_boy, to: obj_golden_key_iron_chest, label: SEARCHES_FOR_KEYHOLE,
+      evidence: "He searched, but no keyhole was there" }
+  - { from: obj_golden_key_tiny_key, to: obj_golden_key_iron_chest, label: FITS_EXACTLY,
+      evidence: "the key fitted it exactly" }
+  - { from: golden_key_poor_boy, to: obj_golden_key_iron_chest, label: TURNS_KEY_ONCE,
+      evidence: "Then he turned it once round" }
+  - { from: law_unopened_treasure_suspends_reader_desire, to: obj_golden_key_iron_chest, label: WITHHOLDS_OPENING_OF,
+      evidence: "now we must wait until he has quite unlocked it and opened the lid" }

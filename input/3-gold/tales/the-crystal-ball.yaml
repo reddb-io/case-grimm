@@ -1,0 +1,306 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-crystal-ball
+khm: 197
+atu: "552A"
+atu_name: The Crystal Ball
+canonical_source: ../../2-silver/canonical/the-crystal-ball/canonical.txt
+title: The Crystal Ball
+
+entities:
+  characters:
+    crystal_ball_enchantress:
+      name: The Enchantress Mother
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_cunning, agency_speech, agency_violence]
+      transformations: [transform_animal_human]
+      speech_acts_performed: [speech_command]
+      affects: [affect_fear]
+      traits: [old-woman, suspicious-mother, power-guarding, son-transforming, mistrustful]
+      evidence: |
+        There was once an enchantress, who had three sons
+
+    crystal_ball_eldest_eagle_brother:
+      name: The Eldest Brother in Eagle Form
+      archetypes: [arc_animal_helper]
+      species: sp_bird
+      agency_modes: [agency_animal_aid, agency_extraordinary_body]
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human]
+      traits: [eldest-son, eagle-transformed, mountain-dweller, two-hours-human, fiery-bird-hunter, brother-helper]
+      evidence: |
+        she changed the eldest into an eagle
+
+    crystal_ball_second_whale_brother:
+      name: The Second Brother in Whale Form
+      archetypes: [arc_animal_helper]
+      species: sp_whale
+      agency_modes: [agency_animal_aid, agency_extraordinary_body]
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human]
+      traits: [second-son, whale-transformed, deep-sea-dweller, two-hours-human, wave-raiser, fire-quencher, brother-helper]
+      evidence: |
+        The second, she changed into a whale
+
+    crystal_ball_youngest_son:
+      name: The Fearless Youngest Son
+      archetypes: [arc_youngest_sibling]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_violence, agency_object_mediation, agency_endurance]
+      existential_states: [state_fearless]
+      speech_acts_performed: [speech_wish, speech_bargain, speech_request]
+      affects: [affect_love, affect_fear]
+      traits: [third-son, flight-from-mother, fearless-rescuer, forest-lost, giant-arbitrator, wishing-cap-taker, bull-slayer, crystal-ball-winner, golden-sun-king]
+      evidence: |
+        The third son, who was afraid she might change him
+
+    crystal_ball_princess:
+      name: The King's Daughter in the Castle of the Golden Sun
+      archetypes: [arc_imprisoned_maiden]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      existential_states: [state_cursed, state_imprisoned]
+      speech_acts_performed: [speech_testimony, speech_warning, speech_command]
+      affects: [affect_grief, affect_love, affect_joy]
+      traits: [bewitched-princess, golden-sun-captive, ugly-to-human-eyes, true-beauty-hidden, quest-instructor, danger-warner, restored-bride]
+      evidence: |
+        a King’s daughter who was bewitched, was imprisoned in the Castle of the Golden Sun
+
+    crystal_ball_two_giants:
+      name: The Two Quarreling Giants
+      being_type: being_giant
+      agency_modes: [agency_speech, agency_violence, agency_object_mediation]
+      speech_acts_performed: [speech_request, speech_bargain, speech_testimony]
+      affects: [affect_anger]
+      traits: [cap-quarrelers, equally-strong, small-man-arbitration-seekers, tricked-owners]
+      evidence: |
+        two giants, who made a sign to him with their hands
+
+    crystal_ball_wild_bull:
+      name: The Wild Bull by the Spring
+      species: sp_cattle
+      agency_modes: [agency_violence, agency_extraordinary_body]
+      traits: [snorting, bellowing, spring-guardian, crystal-chain-container, slain-beast]
+      evidence: |
+        a wild bull will stand below by a spring
+
+    crystal_ball_fiery_bird:
+      name: The Fiery Bird
+      species: sp_bird
+      agency_modes: [agency_extraordinary_body]
+      traits: [bull-born, fire-bearing, egg-carrier, flight-risk, eagle-hunted]
+      evidence: |
+        a fiery bird will spring out of it
+
+    crystal_ball_enchanter:
+      name: The Enchanter
+      species: sp_human
+      being_type: being_wizard
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_testimony]
+      traits: [power-holder, crystal-ball-defeated, golden-sun-kingdom-yielder]
+      evidence: |
+        the youth went to the enchanter
+
+  magic_objects:
+    obj_crystal_ball_wishing_cap:
+      name: The Wishing-Cap
+      instance_of: obj_wishing_cap
+      object_kind: garment
+      attributes:
+        function: transports the wearer to the place he wishes to reach
+      evidence: |
+        It is a wishing-cap
+
+    obj_crystal_ball_truth_mirror:
+      name: The Princess's Truth Mirror
+      instance_of: obj_truth_mirror
+      object_kind: tool
+      attributes:
+        function: reveals the princess's true beauty beneath the curse
+      evidence: |
+        the mirror it does not let itself be misled
+
+    obj_crystal_ball_burning_egg:
+      name: The Burning Egg
+      object_kind: relic
+      attributes:
+        function: fiery animal-body container that holds the crystal ball like a yolk
+      evidence: |
+        a burning egg, and in the egg the crystal ball lies like a yolk
+
+    obj_crystal_ball_power_token:
+      name: The Crystal Ball
+      instance_of: obj_crystal_ball
+      object_kind: token
+      attributes:
+        function: destroys the enchanter's power and restores the princess and brothers
+      evidence: |
+        He who gets the crystal ball, and holds it before the enchanter, will destroy his power with it
+
+    obj_crystal_ball_sword:
+      name: The Youth's Sword
+      object_kind: weapon
+      attributes:
+        function: kills the wild bull and releases the fiery bird
+      evidence: |
+        he plunged his sword in the animal’s body
+
+  locations:
+    loc_crystal_ball_rocky_mountains:
+      name: The Rocky Mountains of the Eagle
+      instance_of: loc_mountain
+      evidence: |
+        forced to dwell in the rocky mountains
+
+    loc_crystal_ball_deep_sea:
+      name: The Deep Sea of the Whale
+      instance_of: loc_sea
+      evidence: |
+        lived in the deep sea
+
+    loc_crystal_ball_great_forest:
+      name: The Great Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        came by chance into a great forest
+
+    loc_crystal_ball_golden_sun_castle:
+      name: The Castle of the Golden Sun
+      instance_of: loc_castle
+      evidence: |
+        the Castle of the Golden Sun
+
+    loc_crystal_ball_high_mountain:
+      name: The High Mountain Before the Castle Gate
+      instance_of: loc_mountain
+      evidence: |
+        standing on a high mountain before the gate of the castle
+
+    loc_crystal_ball_spring:
+      name: The Spring Below the Mountain
+      evidence: |
+        the spring, where the bull snorted and bellowed
+
+    loc_crystal_ball_fishermans_hut:
+      name: The Fisherman's Hut on the Shore
+      instance_of: loc_house
+      evidence: |
+        a fisherman’s hut which stood on the shore
+
+classifications:
+  world_laws:
+    - law_quarreling_giants_lose_magic_objects
+    - law_nested_animal_body_yields_crystal_power_object
+    - law_curse_requires_counter_condition
+  moral_regimes:
+    - moral_restorative
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_violence
+    - agency_object_mediation
+    - agency_animal_aid
+  affects_driving:
+    - affect_fear
+    - affect_love
+    - affect_grief
+    - affect_joy
+  symbol_numbers:
+    - num_3
+  threshold_types:
+    - threshold_forest
+
+propp:
+  - { function: func_family_threat, order: 1, actor: crystal_ball_enchantress,
+      victim: crystal_ball_eldest_eagle_brother,
+      scene: "the enchantress distrusts her sons and transforms the elder two" }
+  - { function: func_departure, order: 2, actor: crystal_ball_youngest_son,
+      scene: "the youngest secretly flees before he can be changed into a beast" }
+  - { function: func_rescue_lack, order: 3, actor: crystal_ball_princess,
+      scene: "the bewitched princess waits for deliverance in the Castle of the Golden Sun" }
+  - { function: func_magic_object_arbitration, order: 4, actor: crystal_ball_youngest_son,
+      scene: "he tricks two quarreling giants out of the wishing-cap" }
+  - { function: func_transport, order: 5, actor: obj_crystal_ball_wishing_cap,
+      beneficiary: crystal_ball_youngest_son,
+      scene: "his wish carries him to the high mountain before the castle gate" }
+  - { function: func_true_form_revelation, order: 6, actor: obj_crystal_ball_truth_mirror,
+      beneficiary: crystal_ball_youngest_son,
+      scene: "the mirror shows the princess's true beauty beneath the curse" }
+  - { function: func_task_disclosure, order: 7, actor: crystal_ball_princess,
+      scene: "she explains the bull, fiery bird, burning egg, and crystal ball sequence" }
+  - { function: func_combat, order: 8, actor: crystal_ball_youngest_son,
+      victim: crystal_ball_wild_bull,
+      scene: "the youth fights and kills the wild bull by the spring" }
+  - { function: func_animal_helper_pursuit, order: 9, actor: crystal_ball_eldest_eagle_brother,
+      scene: "the eagle brother hunts the fiery bird until it drops the egg" }
+  - { function: func_animal_helper_cooling, order: 10, actor: crystal_ball_second_whale_brother,
+      scene: "the whale brother raises waves that put out the egg's fire" }
+  - { function: func_magical_agent_acquired, order: 11, actor: crystal_ball_youngest_son,
+      scene: "the youth takes the crystal ball unhurt from the cooled broken egg" }
+  - { function: func_victory, order: 12, actor: obj_crystal_ball_power_token,
+      victim: crystal_ball_enchanter,
+      scene: "the crystal ball destroys the enchanter's power" }
+  - { function: func_restoration, order: 13, actor: crystal_ball_youngest_son,
+      beneficiary: crystal_ball_princess,
+      scene: "the princess regains her true beauty and the brothers can regain human form" }
+  - { function: func_betrothal, order: 14, actor: crystal_ball_youngest_son,
+      beneficiary: crystal_ball_princess,
+      scene: "the restored pair exchange rings" }
+
+edges:
+  - { from: crystal_ball_enchantress, to: crystal_ball_eldest_eagle_brother, label: TRANSFORMS_INTO_EAGLE,
+      evidence: "she changed the eldest into an eagle" }
+  - { from: crystal_ball_enchantress, to: crystal_ball_second_whale_brother, label: TRANSFORMS_INTO_WHALE,
+      evidence: "The second, she changed into a whale" }
+  - { from: crystal_ball_eldest_eagle_brother, to: loc_crystal_ball_rocky_mountains, label: DWELLS_IN,
+      evidence: "forced to dwell in the rocky mountains" }
+  - { from: crystal_ball_second_whale_brother, to: loc_crystal_ball_deep_sea, label: LIVES_IN,
+      evidence: "lived in the deep sea" }
+  - { from: crystal_ball_youngest_son, to: crystal_ball_enchantress, label: FLEES_FROM,
+      evidence: "went secretly away" }
+  - { from: crystal_ball_princess, to: loc_crystal_ball_golden_sun_castle, label: IMPRISONED_IN,
+      evidence: "was imprisoned in the Castle of the Golden Sun" }
+  - { from: crystal_ball_youngest_son, to: loc_crystal_ball_great_forest, label: GETS_LOST_IN,
+      evidence: "came by chance into a great forest, and did not know the way out of it" }
+  - { from: crystal_ball_two_giants, to: obj_crystal_ball_wishing_cap, label: QUARREL_OVER,
+      evidence: "We are quarrelling about a cap" }
+  - { from: crystal_ball_youngest_son, to: crystal_ball_two_giants, label: TRICKS_WITH_RACE,
+      evidence: "when I call you, you must run a race" }
+  - { from: obj_crystal_ball_wishing_cap, to: loc_crystal_ball_golden_sun_castle, label: TRANSPORTS_TO,
+      evidence: "if I were but at the Castle of the Golden Sun" }
+  - { from: crystal_ball_princess, to: obj_crystal_ball_truth_mirror, label: GIVES_TO_REVEAL_TRUE_FORM,
+      evidence: "look in the mirror it does not let itself be misled" }
+  - { from: obj_crystal_ball_truth_mirror, to: crystal_ball_princess, label: SHOWS_TRUE_BEAUTY_OF,
+      evidence: "the likeness of the most beautiful maiden on earth" }
+  - { from: crystal_ball_princess, to: obj_crystal_ball_power_token, label: IDENTIFIES_RELEASE_OBJECT,
+      evidence: "He who gets the crystal ball, and holds it before the enchanter, will destroy his power with it" }
+  - { from: crystal_ball_princess, to: crystal_ball_wild_bull, label: DIRECTS_HERO_TO_FIGHT,
+      evidence: "a wild bull will stand below by a spring, and thou must fight with it" }
+  - { from: crystal_ball_youngest_son, to: crystal_ball_wild_bull, label: KILLS,
+      evidence: "he plunged his sword in the animal’s body" }
+  - { from: crystal_ball_wild_bull, to: crystal_ball_fiery_bird, label: RELEASES,
+      evidence: "Instantly a fiery bird arose from it" }
+  - { from: crystal_ball_fiery_bird, to: obj_crystal_ball_burning_egg, label: BEARS_IN_BODY,
+      evidence: "which bears in its body a burning egg" }
+  - { from: obj_crystal_ball_burning_egg, to: obj_crystal_ball_power_token, label: CONTAINS,
+      evidence: "in the egg the crystal ball lies like a yolk" }
+  - { from: crystal_ball_eldest_eagle_brother, to: crystal_ball_fiery_bird, label: HUNTS_AND_STRIKES,
+      evidence: "swooped down, hunted it away to the sea, and struck it with his beak" }
+  - { from: crystal_ball_fiery_bird, to: obj_crystal_ball_burning_egg, label: DROPS,
+      evidence: "it let the egg fall" }
+  - { from: obj_crystal_ball_burning_egg, to: loc_crystal_ball_fishermans_hut, label: FALLS_ON,
+      evidence: "on a fisherman’s hut which stood on the shore" }
+  - { from: crystal_ball_second_whale_brother, to: obj_crystal_ball_burning_egg, label: COOLS_WITH_WAVES,
+      evidence: "the whale, had come swimming to them, and had driven the water up on high" }
+  - { from: crystal_ball_youngest_son, to: obj_crystal_ball_power_token, label: TAKES_UNHURT,
+      evidence: "he could take out the crystal ball unhurt" }
+  - { from: obj_crystal_ball_power_token, to: crystal_ball_enchanter, label: DESTROYS_POWER_OF,
+      evidence: "My power is destroyed" }
+  - { from: obj_crystal_ball_power_token, to: crystal_ball_eldest_eagle_brother, label: CAN_RESTORE_HUMAN_FORM_TO,
+      evidence: "give back to thy brothers their human form" }
+  - { from: crystal_ball_princess, to: state_cursed, label: RELEASED_FROM,
+      evidence: "she was standing there in the full splendour of her beauty" }
+  - { from: crystal_ball_youngest_son, to: crystal_ball_princess, label: EXCHANGES_RINGS_WITH,
+      evidence: "joyfully they exchanged rings with each other" }

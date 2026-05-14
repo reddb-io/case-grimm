@@ -1,0 +1,187 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-hare-and-the-hedgehog
+khm: 187
+atu: "275A"
+atu_name: The Race between the Hare and the Hedgehog
+canonical_source: ../../2-silver/canonical/the-hare-and-the-hedgehog/canonical.txt
+title: The Hare and the Hedgehog
+
+entities:
+  characters:
+    hare_hedgehog_husband:
+      name: The Hedgehog Husband
+      archetypes: [arc_trickster]
+      species: sp_hedgehog
+      agency_modes: [agency_cunning, agency_speech, agency_endurance]
+      speech_acts_performed: [speech_bargain, speech_command, speech_testimony]
+      affects: [affect_anger, affect_pride, affect_joy]
+      traits: [sunday-singer, turnip-owner, friendly-greeter, crooked-legged, insulted, wager-maker, furrow-trickster, endpoint-caller, brandy-and-gold-winner]
+      evidence: |
+        the hedgehog was happy too
+
+    hare_hedgehog_wife:
+      name: The Hedgehog Wife
+      species: sp_hedgehog
+      agency_modes: [agency_cunning, agency_speech, agency_endurance]
+      speech_acts_performed: [speech_testimony]
+      traits: [child-washer, reluctant-helper, lookalike-spouse, lower-furrow-double, endpoint-caller]
+      evidence: |
+        his wife was washing and drying the children
+
+    hare_hedgehog_hare:
+      name: The Hare
+      species: sp_hare
+      agency_modes: [agency_endurance, agency_speech]
+      speech_acts_performed: [speech_boast, speech_bargain, speech_testimony]
+      affects: [affect_pride, affect_anger, affect_shame]
+      traits: [distinguished-gentleman, haughty, long-legged, cabbage-visitor, contemptuous, wager-acceptor, deceived-runner, repetition-demanding, exhausted-to-death]
+      evidence: |
+        the hare, who was in his own way a distinguished gentleman
+
+  magic_objects:
+    obj_hare_hedgehog_turnips:
+      name: The Hedgehog's Turnips
+      object_kind: food
+      attributes:
+        function: field crop that brings the hedgehog to the encounter
+      evidence: |
+        see how his turnips were going on
+
+    obj_hare_hedgehog_cabbages:
+      name: The Hare's Cabbages
+      object_kind: food
+      attributes:
+        function: field crop that brings the hare to the same morning path
+      evidence: |
+        to visit his cabbages
+
+    obj_hare_hedgehog_wager:
+      name: The Gold Louis-d'Or and Bottle of Brandy
+      object_kind: treasure
+      attributes:
+        function: wager prize won by the hedgehog pair's race trick
+      evidence: |
+        A golden louis-d’or and a bottle of brandy
+
+  locations:
+    loc_hare_hedgehog_house:
+      name: The Hedgehog's House
+      instance_of: loc_house
+      evidence: |
+        shut the house-door behind him
+
+    loc_hare_hedgehog_turnip_field:
+      name: The Turnip-Field
+      instance_of: loc_field
+      evidence: |
+        the turnip-field
+
+    loc_hare_hedgehog_cabbage_field:
+      name: The Hare's Cabbage Field
+      instance_of: loc_field
+      evidence: |
+        to visit his cabbages
+
+    loc_hare_hedgehog_race_furrows:
+      name: The Long Field Furrows
+      instance_of: loc_field
+      evidence: |
+        I will make the long field our race-course
+
+    loc_hare_hedgehog_buxtehude_heath:
+      name: The Buxtehuder Heath
+      instance_of: loc_meadow
+      evidence: |
+        on the Buxtehuder heath
+
+classifications:
+  world_laws:
+    - law_positional_spouse_double_wins_repeated_race
+  moral_regimes:
+    - moral_trickster_wins
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_endurance
+  affects_driving:
+    - affect_pride
+    - affect_anger
+    - affect_shame
+  symbol_numbers:
+    - num_2
+    - num_74
+  threshold_types: []
+
+propp:
+  - { function: func_sunday_setting, order: 1, actor: hare_hedgehog_husband,
+      scene: "the hedgehog leaves his house on a happy harvest Sunday morning" }
+  - { function: func_insult, order: 2, actor: hare_hedgehog_hare,
+      victim: hare_hedgehog_husband,
+      scene: "the haughty hare mocks the hedgehog's legs" }
+  - { function: func_wager, order: 3, actor: hare_hedgehog_husband,
+      beneficiary: hare_hedgehog_hare,
+      scene: "the hedgehog wagers gold and brandy on a race" }
+  - { function: func_trick_planned, order: 4, actor: hare_hedgehog_husband,
+      beneficiary: hare_hedgehog_wife,
+      scene: "the hedgehog stations his wife at the lower furrow to act as his double" }
+  - { function: func_race_begins, order: 5, actor: hare_hedgehog_hare,
+      scene: "the hare runs like a whirlwind while the hedgehog hides after three paces" }
+  - { function: func_false_arrival, order: 6, actor: hare_hedgehog_wife,
+      scene: "the wife cries that the hedgehog is already there at the lower endpoint" }
+  - { function: func_repeated_race, order: 7, actor: hare_hedgehog_hare,
+      scene: "the angry hare demands the race again and runs endpoint to endpoint" }
+  - { function: func_exhaustion_death, order: 8, actor: hare_hedgehog_hare,
+      scene: "on the seventy-fourth run the hare falls dead in the field" }
+  - { function: func_trickster_reward, order: 9, actor: hare_hedgehog_husband,
+      scene: "the hedgehog takes the gold and brandy and goes home with his wife" }
+  - { function: func_moral_coda, order: 10, actor: law_positional_spouse_double_wins_repeated_race,
+      scene: "the narrator warns great folk not to mock those beneath them and hedgehogs to marry hedgehogs" }
+
+edges:
+  - { from: hare_hedgehog_husband, to: loc_hare_hedgehog_house, label: LEAVES_HOME,
+      evidence: "shut the house-door behind him" }
+  - { from: hare_hedgehog_husband, to: obj_hare_hedgehog_turnips, label: GOES_TO_INSPECT,
+      evidence: "see how his turnips were going on" }
+  - { from: hare_hedgehog_hare, to: obj_hare_hedgehog_cabbages, label: GOES_TO_INSPECT,
+      evidence: "to visit his cabbages" }
+  - { from: hare_hedgehog_husband, to: hare_hedgehog_hare, label: GREETS_FRIENDLY,
+      evidence: "bade him a friendly good morning" }
+  - { from: hare_hedgehog_hare, to: hare_hedgehog_husband, label: MOCKS_SHORT_LEGS,
+      evidence: "You with your short legs" }
+  - { from: hare_hedgehog_husband, to: affect_anger, label: ANGERED_BY_LEG_ATTACK,
+      evidence: "made the hedgehog furiously angry" }
+  - { from: hare_hedgehog_husband, to: obj_hare_hedgehog_wager, label: WAGERS,
+      evidence: "A golden louis-d’or and a bottle of brandy" }
+  - { from: hare_hedgehog_hare, to: obj_hare_hedgehog_wager, label: ACCEPTS_WAGER,
+      evidence: "Done" }
+  - { from: hare_hedgehog_husband, to: hare_hedgehog_wife, label: COMMANDS_AS_RACE_DOUBLE,
+      evidence: "thou must go out to the field with me" }
+  - { from: hare_hedgehog_husband, to: loc_hare_hedgehog_race_furrows, label: DEFINES_RACE_COURSE,
+      evidence: "the long field our race-course" }
+  - { from: hare_hedgehog_wife, to: loc_hare_hedgehog_race_furrows, label: STATIONED_AT_LOWER_ENDPOINT,
+      evidence: "place thyself here below in the furrow" }
+  - { from: hare_hedgehog_wife, to: hare_hedgehog_husband, label: LOOKS_JUST_LIKE,
+      evidence: "looked just like her husband" }
+  - { from: hare_hedgehog_hare, to: loc_hare_hedgehog_race_furrows, label: RUNS_LIKE_WHIRLWIND,
+      evidence: "went off like a whirlwind" }
+  - { from: hare_hedgehog_husband, to: loc_hare_hedgehog_race_furrows, label: HIDES_AFTER_THREE_PACES,
+      evidence: "only ran about three paces" }
+  - { from: hare_hedgehog_wife, to: hare_hedgehog_hare, label: CLAIMS_ALREADY_ARRIVED,
+      evidence: "I am here already" }
+  - { from: hare_hedgehog_hare, to: state_deceived, label: MISREADS_WIFE_AS_HUSBAND,
+      evidence: "thought no other than that it was the hedgehog himself" }
+  - { from: hare_hedgehog_hare, to: hare_hedgehog_husband, label: DEMANDS_RACE_AGAIN,
+      evidence: "It must be run again" }
+  - { from: hare_hedgehog_husband, to: law_positional_spouse_double_wins_repeated_race, label: REPEATS_ENDPOINT_DECEPTION,
+      evidence: "either the hedgehog or his wife said" }
+  - { from: hare_hedgehog_hare, to: num_74, label: DIES_ON_SEVENTY_FOURTH_RUN,
+      evidence: "At the seventy-fourth time" }
+  - { from: hare_hedgehog_hare, to: loc_hare_hedgehog_race_furrows, label: FALLS_DEAD_IN_FIELD,
+      evidence: "he lay dead on the spot" }
+  - { from: hare_hedgehog_husband, to: obj_hare_hedgehog_wager, label: TAKES_WINNINGS,
+      evidence: "took the louis-d’or which he had won" }
+  - { from: hare_hedgehog_husband, to: hare_hedgehog_wife, label: RETURNS_HOME_WITH,
+      evidence: "both went home together in great delight" }
+  - { from: law_positional_spouse_double_wins_repeated_race, to: loc_hare_hedgehog_buxtehude_heath, label: EXPLAINS_NO_HARE_RACES_HEDGEHOGS_THERE,
+      evidence: "no hare has ever had any fancy for running races" }

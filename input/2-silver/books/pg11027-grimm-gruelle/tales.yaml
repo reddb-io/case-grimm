@@ -1,0 +1,254 @@
+book_id: pg11027-grimm-gruelle
+source_file: ../../1-bronze/pg11027.txt
+total: 25
+tales:
+- title: THE GOOSE-GIRL
+  slug: the-goose-girl
+  body_line: 119
+  khm: 89
+  atu: '533'
+  kind: tale
+  word_count: 2089
+  char_count: 10825
+  language: en
+  title_de: Die Gänsemagd
+- title: THE LITTLE BROTHER AND SISTER
+  slug: the-little-brother-and-sister
+  body_line: 362
+  khm: 11
+  atu: '450'
+  kind: tale
+  word_count: 2146
+  char_count: 11200
+  language: en
+  title_de: Brüderchen und Schwesterchen
+- title: HANSEL AND GRETHEL
+  slug: hansel-and-grethel
+  body_line: 556
+  khm: 15
+  atu: 327A
+  kind: tale
+  word_count: 2794
+  char_count: 14614
+  language: en
+  title_de: Hänsel und Gretel
+- title: OH, IF I COULD BUT SHIVER!
+  slug: oh-if-i-could-but-shiver
+  body_line: 803
+  khm: 4
+  atu: '326'
+  kind: tale
+  word_count: 3614
+  char_count: 18711
+  language: en
+  title_de: Märchen von einem, der auszog, das Fürchten zu lernen
+- title: DUMMLING AND THE THREE FEATHERS
+  slug: dummling-and-the-three-feathers
+  body_line: 1129
+  khm: 63
+  atu: '402'
+  kind: tale
+  word_count: 1226
+  char_count: 6836
+  language: en
+  title_de: Die drei Federn
+- title: LITTLE SNOW-WHITE
+  slug: little-snow-white
+  body_line: 1290
+  khm: 53
+  atu: '709'
+  kind: tale
+  word_count: 2255
+  char_count: 11815
+  language: en
+  title_de: Sneewittchen
+- title: CATHERINE AND FREDERICK
+  slug: catherine-and-frederick
+  body_line: 1499
+  khm: 59
+  atu: '1387'
+  kind: tale
+  word_count: 2516
+  char_count: 13226
+  language: en
+  title_de: Der Frieder und das Catherlieschen
+- title: THE VALIANT LITTLE TAILOR
+  slug: the-valiant-little-tailor
+  body_line: 1763
+  khm: 20
+  atu: '1640'
+  kind: tale
+  word_count: 3246
+  char_count: 17028
+  language: en
+  title_de: Das tapfere Schneiderlein
+- title: LITTLE RED-CAP
+  slug: little-red-cap
+  body_line: 2059
+  khm: 26
+  atu: '333'
+  kind: tale
+  word_count: 1102
+  char_count: 5874
+  language: en
+  title_de: Rotkäppchen
+- title: THE GOLDEN GOOSE
+  slug: the-golden-goose
+  body_line: 2191
+  khm: 64
+  atu: '571'
+  kind: tale
+  word_count: 1086
+  char_count: 5594
+  language: en
+  title_de: Die goldene Gans
+- title: BEARSKIN
+  slug: bearskin
+  body_line: 2294
+  khm: 101
+  atu: '361'
+  kind: tale
+  word_count: 1959
+  char_count: 10375
+  language: en
+  title_de: Der Bärenhäuter
+- title: CINDERELLA
+  slug: cinderella
+  body_line: 2468
+  khm: 21
+  atu: 510A
+  kind: tale
+  word_count: 1977
+  char_count: 10112
+  language: en
+  title_de: Aschenputtel
+- title: FAITHFUL JOHN
+  slug: faithful-john
+  body_line: 2652
+  khm: 6
+  atu: '516'
+  kind: tale
+  word_count: 3077
+  char_count: 16096
+  language: en
+  title_de: Der treue Johannes
+- title: THE WATER OF LIFE
+  slug: the-water-of-life
+  body_line: 2912
+  khm: 97
+  atu: '551'
+  kind: tale
+  word_count: 2329
+  char_count: 12115
+  language: en
+  title_de: Das Wasser des Lebens
+- title: THUMBLING
+  slug: thumbling
+  body_line: 3106
+  khm: 37
+  atu: '700'
+  kind: tale
+  word_count: 2194
+  char_count: 11338
+  language: en
+  title_de: Daumesdick
+- title: BRIAR ROSE
+  slug: briar-rose
+  body_line: 3287
+  khm: 50
+  atu: '410'
+  kind: tale
+  word_count: 1168
+  char_count: 6122
+  language: en
+  title_de: Dornröschen
+- title: THE SIX SWANS
+  slug: the-six-swans
+  body_line: 3406
+  khm: 49
+  atu: '451'
+  kind: tale
+  word_count: 1871
+  char_count: 9872
+  language: en
+  title_de: Die sechs Schwäne
+- title: RAPUNZEL
+  slug: rapunzel
+  body_line: 3573
+  khm: 12
+  atu: '310'
+  kind: tale
+  word_count: 1421
+  char_count: 7379
+  language: en
+  title_de: Rapunzel
+- title: MOTHER HOLLE
+  slug: mother-holle
+  body_line: 3706
+  khm: 24
+  atu: '480'
+  kind: tale
+  word_count: 1183
+  char_count: 5967
+  language: en
+  title_de: Frau Holle
+- title: THE FROG PRINCE
+  slug: the-frog-prince
+  body_line: 3818
+  khm: 1
+  atu: '440'
+  kind: tale
+  word_count: 1360
+  char_count: 7208
+  language: en
+  title_de: Der Froschkönig oder der eiserne Heinrich
+- title: THE TRAVELS OF TOM THUMB
+  slug: the-travels-of-tom-thumb
+  body_line: 3958
+  khm: 45
+  atu: '700'
+  kind: tale
+  word_count: 1738
+  char_count: 9283
+  language: en
+  title_de: Daumerlings Wanderschaft
+- title: SNOW-WHITE AND ROSE-RED
+  slug: snow-white-and-rose-red
+  body_line: 4187
+  khm: 161
+  atu: '426'
+  kind: tale
+  word_count: 2601
+  char_count: 14212
+  language: en
+  title_de: Schneeweißchen und Rosenrot
+- title: THE THREE LITTLE MEN IN THE WOOD
+  slug: the-three-little-men-in-the-wood
+  body_line: 4459
+  khm: 13
+  atu: '403'
+  kind: tale
+  word_count: 2020
+  char_count: 10374
+  language: en
+  title_de: Die drei Männlein im Walde
+- title: RUMPELSTILTSKIN
+  slug: rumpelstiltskin
+  body_line: 4649
+  khm: 55
+  atu: '500'
+  kind: tale
+  word_count: 1083
+  char_count: 5697
+  language: en
+  title_de: Rumpelstilzchen
+- title: LITTLE ONE-EYE, TWO-EYES AND THREE-EYES
+  slug: little-one-eye-two-eyes-and-three-eyes
+  body_line: 4764
+  khm: 130
+  atu: '511'
+  kind: tale
+  word_count: 2389
+  char_count: 13056
+  language: en
+  title_de: Einäuglein, Zweiäuglein und Dreiäuglein

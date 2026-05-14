@@ -1,0 +1,408 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-glass-coffin
+khm: 163
+atu: "410"
+atu_name: Sleeping Beauty / Enchanted Sleeping Maiden
+canonical_source: ../../2-silver/canonical/the-glass-coffin/canonical.txt
+title: The Glass Coffin
+
+
+entities:
+
+  characters:
+
+    glass_coffin_tailor:
+      name: The Lucky Tailor's Apprentice
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_request]
+      affects: [affect_fear, affect_love_at_first_sight, affect_joy]
+      traits: [poor-tailor, forest-lost-traveller, tree-sleeper, glass-coffin-deliverer, heaven-chosen-bridegroom]
+      evidence: |
+        A civil, adroit tailor’s apprentice once went out travelling
+
+    glass_coffin_old_man:
+      name: The Hoary Old Man of the Reed Hut
+      archetypes: [arc_supernatural_donor]
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_command]
+      traits: [surly-host, softened-hut-keeper, food-giver, bed-giver]
+      evidence: |
+        a little hoary old man who wore a coat made of bits of colored stuff
+
+    glass_coffin_maiden:
+      name: The Maiden in the Glass Coffin
+      archetypes: [arc_imprisoned_maiden]
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank, agency_object_mediation]
+      existential_states: [state_imprisoned, state_enchanted_sleep]
+      speech_acts_performed: [speech_request, speech_command, speech_testimony, speech_promise]
+      affects: [affect_grief, affect_love, affect_joy]
+      traits: [count-daughter, glass-coffin-captive, breathing-sleeper, testimony-giver, estate-restorer, promised-bride]
+      evidence: |
+        a maiden of the greatest beauty
+
+    glass_coffin_brother_stag:
+      name: The Brother Changed into a Stag
+      archetypes: [arc_animal_helper]
+      species: sp_deer
+      agency_modes: [agency_animal_aid, agency_violence, agency_object_mediation]
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_animal_human]
+      traits: [count-brother, tearful-stag, bull-slayer, rock-door-opener, restored-human]
+      evidence: |
+        he had changed my brother into a stag
+
+    glass_coffin_magician:
+      name: The Stranger Magician
+      species: sp_human
+      being_type: being_wizard
+      agency_modes: [agency_speech, agency_violence, agency_object_mediation]
+      transformations: [transform_shapeshift_duel]
+      speech_acts_performed: [speech_request, speech_curse]
+      affects: [affect_anger]
+      traits: [castle-guest, rejected-suitor, fastenings-forcer, stag-transformer, glass-prisoner-maker, bull-form-villain]
+      evidence: |
+        by magic arts which were at his command
+
+    glass_coffin_smoke_people:
+      name: The People Turned into Smoke
+      species: sp_human
+      agency_modes: [agency_endurance, agency_domestic_labor]
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_punitive_objectification]
+      traits: [castle-people, smoke-transformed, bottle-confined, restored-servants]
+      evidence: |
+        my people, who were all turned into smoke
+
+  magic_objects:
+
+    obj_glass_coffin_maiden_prison:
+      name: The Glass Coffin
+      instance_of: obj_enchanted_glass_coffin_prison
+      object_kind: architecture
+      attributes:
+        function: transparent prison holding the living maiden until the tailor pushes back the bolt
+      evidence: |
+        pushest back the bolt of this glass coffin
+
+    obj_glass_coffin_miniature_estate_chest:
+      name: The Glass Chest Holding the Miniature Estate
+      object_kind: architecture
+      attributes:
+        function: contains the castle, farm-buildings, stables, barns, and goods in diminished form
+      evidence: |
+        a handsome structure like a castle surrounded by farm-buildings
+
+    obj_glass_coffin_smoke_bottles:
+      name: The Glass Bottles of Smoke-People
+      object_kind: material
+      attributes:
+        function: confine the transformed people as blue smoke until opened by the maiden
+      evidence: |
+        vessels which were filled with smoke
+
+    obj_glass_coffin_polished_letter_stones:
+      name: The Polished Letter Stones
+      object_kind: material
+      attributes:
+        function: mark the magical underground halls and conceal the central sinking stone
+      evidence: |
+        shining polished square stones
+
+    obj_glass_coffin_central_lift_stone:
+      name: The Sinking and Rising Stone
+      object_kind: material
+      attributes:
+        function: carries the tailor downward and later raises the restored estate objects upward
+      evidence: |
+        The stone began to give way under his feet
+
+  locations:
+
+    loc_glass_coffin_great_forest:
+      name: The Great Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        came into a great forest
+
+    loc_glass_coffin_high_oak:
+      name: The High Oak
+      instance_of: loc_tree
+      evidence: |
+        He sought out a high oak
+
+    loc_glass_coffin_reed_hut:
+      name: The Reed and Rush Hut
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        a small hut that was woven together of reeds and rushes
+
+    loc_glass_coffin_rock_door:
+      name: The Iron Door in the Rock
+      instance_of: loc_cave
+      threshold_type: threshold_doorway
+      evidence: |
+        went through the iron-door into a large spacious hall
+
+    loc_glass_coffin_underground_halls:
+      name: The Underground Glass Halls
+      instance_of: loc_cave
+      evidence: |
+        in this underground cave in a glass coffin
+
+    loc_glass_coffin_count_castle:
+      name: The Restored Count's Castle
+      instance_of: loc_castle
+      evidence: |
+        came riding to our castle
+
+
+classifications:
+
+  world_laws:
+    - law_forest_suspends_domestic_order
+    - law_glass_coffin_bolt_releases_living_maiden
+    - law_opened_enchantment_vessels_restore_household
+
+  moral_regimes:
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_speech
+    - agency_animal_aid
+    - agency_violence
+
+  affects_driving:
+    - affect_fear
+    - affect_love_at_first_sight
+    - affect_grief
+    - affect_joy
+
+  symbol_numbers: []
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_departure
+    order: 1
+    actor: glass_coffin_tailor
+    scene: The tailor travels into a great forest and loses his way.
+    evidence: |
+      went out travelling, and came into a great forest
+
+  - function: func_shelter
+    order: 2
+    actor: glass_coffin_old_man
+    beneficiary: glass_coffin_tailor
+    scene: The old man is softened by the tailor's pleading and gives food and a bed.
+    evidence: |
+      was at last softened, and took him into the hut
+
+  - function: func_combat
+    order: 3
+    actor: glass_coffin_brother_stag
+    victim: glass_coffin_magician
+    scene: A stag defeats the black bull in violent combat near the hut.
+    evidence: |
+      the stag thrust his horns into his adversary’s body
+
+  - function: func_transport
+    order: 4
+    actor: glass_coffin_brother_stag
+    beneficiary: glass_coffin_tailor
+    scene: The stag catches the tailor on his horns and carries him to the rock wall.
+    evidence: |
+      caught him up on his great horns
+
+  - function: func_threshold_opening
+    order: 5
+    actor: glass_coffin_brother_stag
+    scene: The stag opens the door in the rock with his horns.
+    evidence: |
+      pushed its horns with such force against a door which was in the rock
+
+  - function: func_guidance
+    order: 6
+    actor: glass_coffin_maiden
+    beneficiary: glass_coffin_tailor
+    scene: A voice from the rock tells the tailor to enter without fear and step on the central stone.
+    evidence: |
+      Enter without fear, no evil shall befall you thee.
+
+  - function: func_discovery
+    order: 7
+    actor: glass_coffin_tailor
+    scene: The tailor discovers the miniature castle in one glass chest and the sleeping maiden in the other.
+    evidence: |
+      On the floor of the hall two great glass chests stood opposite to each other
+
+  - function: func_release
+    order: 8
+    actor: glass_coffin_tailor
+    beneficiary: glass_coffin_maiden
+    scene: The tailor pushes back the bolt of the glass coffin and frees the living maiden.
+    evidence: |
+      if thou pushest back the bolt of this glass coffin, then I shall be free
+
+  - function: func_testimony
+    order: 9
+    actor: glass_coffin_maiden
+    scene: The maiden tells how the magician transformed her brother, castle, and people.
+    evidence: |
+      Seat thyself, and listen to the story of my life
+
+  - function: func_restoration
+    order: 10
+    actor: glass_coffin_maiden
+    scene: The maiden opens the glass chest and restores the castle and farm buildings to their natural size.
+    evidence: |
+      stretched themselves out and grew to their natural size
+
+  - function: func_restoration
+    order: 11
+    actor: glass_coffin_maiden
+    beneficiary: glass_coffin_smoke_people
+    scene: The maiden opens the smoke-filled bottles and restores her people.
+    evidence: |
+      the blue smoke rushed out and changed itself into living men
+
+  - function: func_wedding
+    order: 12
+    actor: glass_coffin_maiden
+    beneficiary: glass_coffin_tailor
+    scene: On the same day, the restored maiden marries the lucky tailor.
+    evidence: |
+      gave her hand at the altar to the lucky tailor
+
+
+edges:
+
+  - from: glass_coffin_tailor
+    label: LOSES_WAY_IN
+    to: loc_glass_coffin_great_forest
+    evidence: |
+      as he did not know the way, he lost himself
+
+  - from: glass_coffin_tailor
+    label: SLEEPS_IN
+    to: loc_glass_coffin_high_oak
+    evidence: |
+      spend the night in a tree
+
+  - from: glass_coffin_tailor
+    label: REQUESTS_SHELTER_FROM
+    to: glass_coffin_old_man
+    evidence: |
+      I earnestly beg you to take me into your hut until morning.
+
+  - from: glass_coffin_brother_stag
+    label: KILLS_BULL_FORM_OF
+    to: glass_coffin_magician
+    evidence: |
+      killed the magician in the form of the bull
+
+  - from: glass_coffin_brother_stag
+    label: CARRIES
+    to: glass_coffin_tailor
+    evidence: |
+      caught him up on his great horns
+
+  - from: glass_coffin_brother_stag
+    label: OPENS_ROCK_DOOR
+    to: loc_glass_coffin_rock_door
+    evidence: |
+      a door which was in the rock, that it sprang open
+
+  - from: obj_glass_coffin_central_lift_stone
+    label: LOWERS
+    to: glass_coffin_tailor
+    evidence: |
+      sank slowly down into the depths
+
+  - from: obj_glass_coffin_maiden_prison
+    label: IMPRISONS
+    to: glass_coffin_maiden
+    evidence: |
+      in this underground cave in a glass coffin
+
+  - from: glass_coffin_tailor
+    label: OPENS
+    to: obj_glass_coffin_maiden_prison
+    evidence: |
+      The tailor obeyed without delay
+
+  - from: law_glass_coffin_bolt_releases_living_maiden
+    label: RELEASES
+    to: glass_coffin_maiden
+    evidence: |
+      then I shall be free
+
+  - from: glass_coffin_magician
+    label: TRANSFORMS
+    to: glass_coffin_brother_stag
+    evidence: |
+      he had changed my brother into a stag
+
+  - from: glass_coffin_magician
+    label: MINIATURIZES_CASTLE_IN
+    to: obj_glass_coffin_miniature_estate_chest
+    evidence: |
+      my castle with all that belonged to it, diminished in size by his arts
+
+  - from: glass_coffin_magician
+    label: TURNS_PEOPLE_INTO_SMOKE
+    to: glass_coffin_smoke_people
+    evidence: |
+      my people, who were all turned into smoke
+
+  - from: obj_glass_coffin_smoke_bottles
+    label: CONFINES
+    to: glass_coffin_smoke_people
+    evidence: |
+      he had confined in glass bottles
+
+  - from: glass_coffin_maiden
+    label: OPENS
+    to: obj_glass_coffin_miniature_estate_chest
+    evidence: |
+      Here the maiden opened the lid
+
+  - from: law_opened_enchantment_vessels_restore_household
+    label: RESTORES
+    to: loc_glass_coffin_count_castle
+    evidence: |
+      grew to their natural size
+
+  - from: glass_coffin_maiden
+    label: OPENS
+    to: obj_glass_coffin_smoke_bottles
+    evidence: |
+      The maiden had scarcely opened the bottles
+
+  - from: law_opened_enchantment_vessels_restore_household
+    label: RESTORES
+    to: glass_coffin_smoke_people
+    evidence: |
+      changed itself into living men
+
+  - from: glass_coffin_brother_stag
+    label: RETURNS_TO_HUMAN_FORM
+    to: glass_coffin_maiden
+    evidence: |
+      came out of the forest towards them in his human form
+
+  - from: glass_coffin_maiden
+    label: MARRIES
+    to: glass_coffin_tailor
+    evidence: |
+      gave her hand at the altar to the lucky tailor

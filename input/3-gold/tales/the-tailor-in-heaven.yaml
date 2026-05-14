@@ -1,0 +1,240 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-tailor-in-heaven
+khm: 35
+atu: '800'
+atu_name: The Tailor in Heaven
+canonical_source: ../../2-silver/canonical/the-tailor-in-heaven/canonical.txt
+title: The Tailor in Heaven
+
+
+entities:
+
+  characters:
+
+    tailor_heaven_tailor:
+      name: The Poor Lame Tailor
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_violence]
+      affects: [affect_curiosity, affect_anger, affect_shame]
+      traits: [light-fingered, lame, mercy-pleader, curious-intruder, improper-judge, expelled-sinner]
+      evidence: |
+        "I threw it in my anger down to earth at an old woman whom I
+        saw stealing two veils at the washing."
+
+    tailor_heaven_god:
+      name: The Lord / Good God
+      being_type: being_divine
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_command]
+      traits: [heavenly-master, garden-walker, divine-judge, mercy-teacher]
+      evidence: |
+        "No one shall give punishment here, but I alone, the Lord."
+
+    tailor_heaven_saint_peter:
+      name: Saint Peter
+      being_type: being_divine
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_command]
+      affects: [affect_fear]
+      traits: [heaven-gatekeeper, pity-moved, reluctant-admitter, expulsion-agent]
+      evidence: |
+        "The Lord had commanded him to let no one in during his absence"
+
+    tailor_heaven_saints:
+      name: The Apostles and Saints
+      being_type: being_divine
+      agency_modes: [agency_social_rank]
+      traits: [heavenly-companions, garden-party, absent-witnesses]
+      evidence: |
+        "took all the apostles and saints with him"
+
+    tailor_heaven_old_woman:
+      name: The Old Woman Washing by the Stream
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_cunning]
+      traits: [washerwoman, cloth-thief, target-of-tailor-judgment]
+      evidence: |
+        "an ugly old woman who was standing washing by the side of a
+        stream, secretly laying two veils on one side for herself."
+
+  magic_objects:
+
+    obj_tailor_heaven_lords_seat:
+      name: The Lord's Golden Seat
+      object_kind: architecture
+      attributes:
+        function: divine vantage point from which all earth is visible
+      evidence: |
+        "the seat on which the Lord sat when he was at home, and from
+        which he could see everything which happened on earth."
+
+    obj_tailor_heaven_golden_footstool:
+      name: The Golden Footstool
+      object_kind: treasure
+      attributes:
+        misused_as: projectile of unauthorized judgment
+      evidence: |
+        "he laid hold of the golden footstool, and threw it down to
+        earth"
+
+    obj_tailor_heaven_stolen_veils:
+      name: The Two Stolen Veils
+      object_kind: garment
+      attributes:
+        stolen_by: tailor_heaven_old_woman
+      evidence: |
+        "secretly laying two veils on one side for herself."
+
+    obj_tailor_heaven_stick:
+      name: The Tailor's Stick
+      object_kind: tool
+      attributes:
+        function: support after expulsion from heaven
+      evidence: |
+        "he took a stick in his hand"
+
+  locations:
+
+    loc_tailor_heaven_gate:
+      name: The Door of Heaven
+      instance_of: loc_heaven
+      threshold_type: threshold_doorway
+      evidence: |
+        "Peter stood by the door and kept watch."
+
+    loc_tailor_heaven_corner:
+      name: The Corner Behind the Door
+      instance_of: loc_heaven
+      evidence: |
+        "sit down in a corner behind the door"
+
+    loc_tailor_heaven_garden:
+      name: The Heavenly Garden
+      instance_of: loc_heaven
+      evidence: |
+        "the good God wished to enjoy himself in the heavenly garden"
+
+    loc_tailor_heaven_throne_place:
+      name: The Place of the Golden Seat
+      instance_of: loc_heaven
+      evidence: |
+        "many beautiful and delightful chairs were standing, and in the
+        midst was a seat all of gold"
+
+    loc_tailor_heaven_stream:
+      name: The Earthly Washing Stream
+      instance_of: loc_river
+      evidence: |
+        "standing washing by the side of a stream"
+
+    loc_tailor_heaven_wait_a_bit:
+      name: Wait-a-bit
+      evidence: |
+        "went to 'Wait-a-bit,' where the good soldiers sit and make
+        merry."
+
+
+classifications:
+
+  world_laws:
+    - law_divine_punishment_reserved
+    - law_prohibition_invites_violation
+
+  moral_regimes:
+    - moral_mercy_over_judgment
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_social_rank
+    - agency_cunning
+    - agency_violence
+
+  affects_driving:
+    - affect_curiosity
+    - affect_anger
+    - affect_fear
+
+  symbol_numbers: []
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_absentation, order: 1, actor: tailor_heaven_god,
+      scene: "God goes to the heavenly garden with apostles and saints" }
+  - { function: func_interdiction, order: 2, actor: tailor_heaven_god,
+      scene: "God commands Saint Peter to let no one into heaven while He is away" }
+  - { function: func_trickery, order: 3, actor: tailor_heaven_tailor,
+      scene: "lame tailor pleads mercy and promises rough work until Peter admits him" }
+  - { function: func_interdiction, order: 4, actor: tailor_heaven_saint_peter,
+      scene: "Peter orders him to sit quietly behind the door" }
+  - { function: func_violation, order: 5, actor: tailor_heaven_tailor,
+      scene: "tailor explores heaven, climbs onto God's seat, and sees earth" }
+  - { function: func_villainy, order: 6, actor: tailor_heaven_old_woman,
+      scene: "old woman secretly sets aside two veils while washing" }
+  - { function: func_punishment_attempt, order: 7, actor: tailor_heaven_tailor,
+      scene: "tailor throws God's golden footstool down at the woman in anger" }
+  - { function: func_exposure, order: 8, actor: tailor_heaven_god,
+      scene: "God returns, finds the footstool missing, and exposes the tailor" }
+  - { function: func_punishment, order: 9, actor: tailor_heaven_god,
+      scene: "God rebukes the tailor's judgment and expels him from heaven" }
+
+
+edges:
+
+  # Heavenly absence and forbidden admission
+  - { from: tailor_heaven_god, to: loc_tailor_heaven_garden, label: GOES_TO,
+      evidence: "wished to enjoy himself in the heavenly garden" }
+  - { from: tailor_heaven_god, to: tailor_heaven_saints, label: TAKES_WITH,
+      evidence: "took all the apostles and saints with him" }
+  - { from: tailor_heaven_god, to: tailor_heaven_saint_peter, label: COMMANDS,
+      evidence: "commanded him to let no one in during his absence" }
+  - { from: tailor_heaven_saint_peter, to: tailor_heaven_tailor, label: REFUSES_ENTRY_TO,
+      evidence: "Thou wilt not get into heaven." }
+  - { from: tailor_heaven_tailor, to: tailor_heaven_saint_peter, label: PLEADS_FOR_MERCY_FROM,
+      evidence: "Come, do be merciful" }
+  - { from: tailor_heaven_saint_peter, to: tailor_heaven_tailor, label: ADMITS,
+      evidence: "let himself be moved by pity, and opened the door of heaven" }
+  - { from: tailor_heaven_saint_peter, to: tailor_heaven_tailor, label: COMMANDS,
+      evidence: "was to stay quietly and peaceably there" }
+
+  # Curiosity at the divine seat
+  - { from: tailor_heaven_tailor, to: loc_tailor_heaven_throne_place, label: EXPLORES,
+      evidence: "went round about into every corner of heaven" }
+  - { from: tailor_heaven_tailor, to: obj_tailor_heaven_lords_seat, label: SITS_ON,
+      evidence: "climbed up and seated himself in the chair." }
+  - { from: obj_tailor_heaven_lords_seat, to: tailor_heaven_old_woman, label: REVEALS_EARTHLY_ACT_OF,
+      evidence: "from which he could see everything which happened on earth." }
+  - { from: tailor_heaven_old_woman, to: obj_tailor_heaven_stolen_veils, label: STEALS,
+      evidence: "secretly laying two veils on one side for herself." }
+
+  # Unauthorized punishment
+  - { from: tailor_heaven_tailor, to: obj_tailor_heaven_golden_footstool, label: THROWS,
+      evidence: "threw it down to earth through heaven" }
+  - { from: tailor_heaven_tailor, to: tailor_heaven_old_woman, label: PUNISHES_WITH,
+      attributes: { object: obj_tailor_heaven_golden_footstool },
+      evidence: "at the old thief." }
+  - { from: tailor_heaven_tailor, to: law_divine_punishment_reserved, label: VIOLATES,
+      evidence: "I threw it in my anger down to earth" }
+  - { from: tailor_heaven_tailor, to: loc_tailor_heaven_corner, label: HIDES_AT,
+      evidence: "seated himself in his place behind the door" }
+
+  # Divine rebuke and expulsion
+  - { from: tailor_heaven_god, to: obj_tailor_heaven_golden_footstool, label: NOTICES_MISSING,
+      evidence: "the footstool was missing." }
+  - { from: tailor_heaven_god, to: tailor_heaven_tailor, label: SUMMONS,
+      evidence: "Then the Lord had the tailor brought before him" }
+  - { from: tailor_heaven_god, to: tailor_heaven_tailor, label: REBUKES,
+      evidence: "were I to judge as thou judgest, how dost thou think thou couldst have escaped so long?" }
+  - { from: tailor_heaven_god, to: law_divine_punishment_reserved, label: DECLARES,
+      evidence: "No one shall give punishment here, but I alone, the Lord." }
+  - { from: tailor_heaven_god, to: tailor_heaven_tailor, label: EXPELS,
+      evidence: "Henceforth thou canst stay no longer in heaven" }
+  - { from: tailor_heaven_saint_peter, to: tailor_heaven_tailor, label: TAKES_OUT,
+      evidence: "Peter was obliged to take the tailor out of heaven again" }
+  - { from: tailor_heaven_tailor, to: obj_tailor_heaven_stick, label: TAKES,
+      evidence: "he took a stick in his hand" }
+  - { from: tailor_heaven_tailor, to: loc_tailor_heaven_wait_a_bit, label: GOES_TO,
+      evidence: "went to 'Wait-a-bit,' where the good soldiers sit and make merry." }

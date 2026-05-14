@@ -1,0 +1,262 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-lazy-spinner
+khm: 128
+atu: '1405'
+atu_name: The Lazy Spinner
+canonical_source: ../../2-silver/canonical/the-lazy-spinner/canonical.txt
+title: The Lazy Spinner
+
+
+entities:
+
+  characters:
+
+    lazy_spinner_wife:
+      name: The Lazy Spinner Wife
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_lie, speech_command]
+      affects: [affect_fear]
+      traits: [idle-wife, tangled-yarn-maker, reel-avoider, forest-voice-trickster, kettle-tow-trickster, odious-woman]
+      evidence: |
+        the wife was so idle that she would never work at anything
+
+    lazy_spinner_husband:
+      name: The Husband Who Wants the Yarn Finished
+      archetypes: [arc_naive_victim]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      speech_acts_performed: [speech_command]
+      affects: [affect_fear, affect_shame]
+      traits: [scolding-husband, reel-wood-cutter, false-omen-dupe, yarn-boiling-dupe, self-blaming]
+      evidence: |
+        If the man scolded her
+
+    lazy_spinner_cock:
+      name: The Cock Whose Crow Is Made into a Deadline
+      species: sp_rooster
+      agency_modes: [agency_speech]
+      traits: [ordinary-cock, false-crow-deadline]
+      evidence: |
+        if the cock should happen to crow
+
+  magic_objects:
+
+    obj_lazy_spinner_entangled_yarn:
+      name: The Entangled Spun Yarn
+      instance_of: obj_spinning_wheel
+      object_kind: material
+      attributes:
+        function: unfinished textile labour whose disorder triggers the husband's complaints
+      evidence: |
+        let it all remain entangled in a heap
+
+    obj_lazy_spinner_reel:
+      name: The Missing Reel
+      instance_of: obj_spinning_wheel
+      object_kind: tool
+      attributes:
+        function: absent winding tool used as the wife's first excuse
+      evidence: |
+        when I have no reel
+
+    obj_lazy_spinner_axe:
+      name: The Husband's Axe
+      object_kind: weapon
+      attributes:
+        function: tool for cutting reel-wood, stopped by the false death omen
+      evidence: |
+        he again seized the axe
+
+    obj_lazy_spinner_kettle:
+      name: The Kettle on the Fire
+      object_kind: tool
+      attributes:
+        function: site where tow is substituted for yarn
+      evidence: |
+        put the kettle on
+
+    obj_lazy_spinner_tow:
+      name: The Lump of Tow
+      object_kind: material
+      attributes:
+        function: substitute material boiled in place of yarn to create false guilt
+      evidence: |
+        she put in a lump of tow
+
+  locations:
+
+    loc_lazy_spinner_village:
+      name: The Certain Village
+      instance_of: loc_village
+      evidence: |
+        In a certain village
+
+    loc_lazy_spinner_forest:
+      name: The Forest of the False Reel-Omen
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        go into the forest and get me one
+
+    loc_lazy_spinner_tree:
+      name: The Tree for Cutting Reel-Wood
+      instance_of: loc_tree
+      evidence: |
+        climbed into a tree to choose and cut the wood
+
+    loc_lazy_spinner_thicket:
+      name: The Hidden Thicket Below the Tree
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        crept into the thicket below
+
+    loc_lazy_spinner_parlour:
+      name: The Parlour of Innocent Return
+      instance_of: loc_house
+      evidence: |
+        when he entered the parlour
+
+    loc_lazy_spinner_loft:
+      name: The Loft for Throwing Yarn
+      instance_of: loc_house
+      evidence: |
+        go you up into the loft
+
+    loc_lazy_spinner_fire_kettle:
+      name: The Hearth with the Kettle
+      instance_of: loc_hearth
+      evidence: |
+        the kettle on the fire
+
+
+classifications:
+
+  world_laws:
+    - law_fake_domestic_omens_suspend_labor
+    - law_forest_suspends_domestic_order
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_fear
+    - affect_shame
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: lazy_spinner_husband
+    scene: "the wife leaves the spun yarn tangled and lacks a reel for winding"
+    evidence: "whatever her husband gave her to spin, she did not get done"
+
+  - function: func_trick
+    order: 2
+    actor: lazy_spinner_wife
+    scene: "she makes the missing reel the excuse for not winding"
+    evidence: "how should I wind it, when I have no reel"
+
+  - function: func_departure
+    order: 3
+    actor: lazy_spinner_husband
+    scene: "the husband goes to the forest to cut wood for reels"
+    evidence: "I will go into the forest, and get some wood for making reels"
+
+  - function: func_deception
+    order: 4
+    actor: lazy_spinner_wife
+    scene: "hidden below the tree, she cries the false death-omen three times"
+    evidence: "He who cuts wood for reels shall die"
+
+  - function: func_victory
+    order: 5
+    actor: lazy_spinner_wife
+    scene: "the frightened husband gives up the reel and leaves her in peace"
+    evidence: "from that time forth left her in peace about it"
+
+  - function: func_repetition
+    order: 6
+    actor: lazy_spinner_husband
+    scene: "the husband later complains again about the entangled yarn"
+    evidence: "the man again began to complain of the disorder in the house"
+
+  - function: func_trick
+    order: 7
+    actor: lazy_spinner_wife
+    scene: "she proposes throwing the yarn between loft and floor to make a skein"
+    evidence: "so we shall get a skein after all"
+
+  - function: func_deception
+    order: 8
+    actor: lazy_spinner_wife
+    scene: "she boils tow instead of yarn and invents a cock-crow condition"
+    evidence: "only instead of the yarn, she put in a lump of tow"
+
+  - function: func_victory
+    order: 9
+    actor: lazy_spinner_wife
+    scene: "the husband blames himself and stops speaking about yarn and spinning"
+    evidence: "in future said no more about yarn and spinning"
+
+
+edges:
+
+  - { from: lazy_spinner_husband, to: lazy_spinner_wife, label: ASSIGNS_SPINNING_TO,
+      evidence: "whatever her husband gave her to spin" }
+  - { from: lazy_spinner_wife, to: obj_lazy_spinner_entangled_yarn, label: LEAVES_ENTANGLED,
+      evidence: "let it all remain entangled in a heap" }
+  - { from: lazy_spinner_husband, to: lazy_spinner_wife, label: SCOLDS,
+      evidence: "If the man scolded her" }
+  - { from: lazy_spinner_wife, to: obj_lazy_spinner_reel, label: EXCUSES_LABOR_BY_LACK_OF,
+      evidence: "when I have no reel" }
+  - { from: lazy_spinner_husband, to: loc_lazy_spinner_forest, label: GOES_TO,
+      evidence: "go into the forest" }
+  - { from: lazy_spinner_husband, to: obj_lazy_spinner_axe, label: USES,
+      evidence: "he again seized the axe" }
+  - { from: lazy_spinner_wife, to: loc_lazy_spinner_thicket, label: HIDES_IN,
+      evidence: "crept into the thicket below" }
+  - { from: lazy_spinner_wife, to: lazy_spinner_husband, label: DECEIVES_WITH_OMEN,
+      evidence: "He who cuts wood for reels shall die" }
+  - { from: lazy_spinner_wife, to: law_fake_domestic_omens_suspend_labor, label: ENACTS,
+      evidence: "And he who winds, shall perish" }
+  - { from: lazy_spinner_husband, to: obj_lazy_spinner_axe, label: ABANDONS,
+      evidence: "all inclination had departed from him" }
+  - { from: lazy_spinner_wife, to: loc_lazy_spinner_parlour, label: RETURNS_FIRST_BY_BYWAYS,
+      evidence: "ran as fast as she could by by-ways so as to get home first" }
+  - { from: lazy_spinner_wife, to: lazy_spinner_husband, label: FEIGNS_INNOCENCE,
+      evidence: "put on an innocent look as if nothing had happened" }
+  - { from: lazy_spinner_husband, to: lazy_spinner_wife, label: STOPS_PRESSING_REEL,
+      evidence: "left her in peace about it" }
+  - { from: lazy_spinner_husband, to: obj_lazy_spinner_entangled_yarn, label: COMPLAINS_ABOUT,
+      evidence: "the spun yarn should lie there all entangled" }
+  - { from: lazy_spinner_wife, to: loc_lazy_spinner_loft, label: PROPOSES_THROWING_YARN_TO,
+      evidence: "go you up into the loft" }
+  - { from: lazy_spinner_wife, to: obj_lazy_spinner_kettle, label: PREPARES,
+      evidence: "lighted a fire, and put the kettle on" }
+  - { from: lazy_spinner_wife, to: obj_lazy_spinner_tow, label: SUBSTITUTES_FOR_YARN,
+      evidence: "instead of the yarn, she put in a lump of tow" }
+  - { from: lazy_spinner_wife, to: lazy_spinner_husband, label: COMMANDS_TO_WATCH,
+      evidence: "you must get up and look after the yarn" }
+  - { from: lazy_spinner_wife, to: lazy_spinner_cock, label: MAKES_CROW_CONDITION_OF,
+      evidence: "if the cock should happen to crow" }
+  - { from: obj_lazy_spinner_tow, to: lazy_spinner_husband, label: SHAMES,
+      evidence: "thinking he had neglected it, and was to blame" }
+  - { from: lazy_spinner_husband, to: agency_domestic_labor, label: CEASES_DEMANDING,
+      evidence: "said no more about yarn and spinning" }

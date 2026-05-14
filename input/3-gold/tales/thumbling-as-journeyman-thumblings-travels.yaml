@@ -1,0 +1,408 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: thumbling-as-journeyman-thumblings-travels
+khm: 45
+atu: '700'
+atu_name: Thumbling / Tom Thumb
+canonical_source: ../../2-silver/canonical/thumbling-as-journeyman-thumblings-travels/canonical.txt
+title: Thumbling as Journeyman [Thumbling's Travels]
+
+
+entities:
+
+  characters:
+
+    thumbling_journeyman:
+      name: Thumbling the Little Tailor
+      archetypes: [arc_tiny_hero, arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_endurance, agency_object_mediation]
+      existential_states: [state_devoured_but_alive]
+      affects: [affect_curiosity, affect_fear]
+      traits: [thumb-sized, courageous, miniature-tailor, world-traveller, keyhole-thief-helper, hidden-witness, cow-survivor, black-pudding-escapee, fox-bargainer, returning-son]
+      evidence: |
+        "who happened to be small, and no bigger than a Thumb"
+
+    thumbling_journeyman_father:
+      name: Thumbling's Tailor Father
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_maternal_love]
+      traits: [tailor, journey-blesser, needle-sword-maker, fowl-payer, child-preferring-father]
+      evidence: |
+        "A certain tailor had a son"
+
+    thumbling_journeyman_mother:
+      name: Thumbling's Mother
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_maternal_love]
+      traits: [last-meal-cook, hearth-householder]
+      evidence: |
+        "what his lady mother had cooked for the last time."
+
+    thumbling_journeyman_mistress:
+      name: The Angry Mistress
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_violence]
+      affects: [affect_anger]
+      traits: [poor-feeder, potato-king-target, dishcloth-attacker, thimble-searcher, house-expeller]
+      evidence: |
+        "What wouldst thou have forsooth, grasshopper?"
+
+    thumbling_journeyman_robbers:
+      name: The Band of Robbers
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech]
+      affects: [affect_greed]
+      traits: [treasure-thieves, tiny-picklock-recruiters, compliment-givers, captain-offerers]
+      evidence: |
+        "a band of robbers who had a design to steal the King’s treasure"
+
+    thumbling_journeyman_sentries:
+      name: The Two Treasure Sentries
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      affects: [affect_fear]
+      traits: [treasure-guards, spider-misrecognizers, hidden-thief-chasers, mocked-watchmen]
+      evidence: |
+        "one of the two sentries who stood before the door"
+
+    thumbling_journeyman_king:
+      name: The Treasure-Chamber King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      traits: [treasure-owner, missing-thaler-observer, watch-orderer]
+      evidence: |
+        "he heard the King coming to inspect his treasure-chamber"
+
+    thumbling_journeyman_maids:
+      name: The Inn Maids
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_cunning, agency_violence]
+      affects: [affect_anger]
+      traits: [secret-plate-takers, cellar-thieves, revenge-plotters, mower-trappers]
+      evidence: |
+        "The maids, however, could not endure him"
+
+    thumbling_journeyman_master:
+      name: The Inn Master
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      affects: [affect_fear]
+      traits: [cow-byre-speaker, hidden-voice-hearer, cow-killing-orderer]
+      evidence: |
+        "the master of the house came into the cow-byre"
+
+    thumbling_journeyman_black_cow:
+      name: The Great Black Cow
+      species: sp_cattle
+      agency_modes: [agency_domestic_labor]
+      traits: [grass-eater, accidental-devourer, milking-song-container, slaughtered]
+      evidence: |
+        "a great black one, who swallowed him down without hurting him."
+
+    thumbling_journeyman_butcher:
+      name: The Butcher
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_violence]
+      traits: [chopping-knife-worker, black-pudding-maker]
+      evidence: |
+        "when the butcher came in and began his work"
+
+    thumbling_journeyman_fox:
+      name: The Fox
+      species: sp_fox
+      agency_modes: [agency_violence, agency_speech, agency_cunning]
+      affects: [affect_greed]
+      traits: [open-country-snapper, throat-holder, bargain-maker, fowl-eater, home-carrier]
+      evidence: |
+        "he met with a fox who snapped him up"
+
+  magic_objects:
+
+    obj_thumbling_journeyman_needle_sword:
+      name: The Darning-Needle Sword
+      object_kind: weapon
+      attributes:
+        maker: thumbling_journeyman_father
+        function: miniature sword for the journey
+      evidence: |
+        "took a long darning-needle and made a knob of sealing-wax on it"
+
+    obj_thumbling_journeyman_thimble:
+      name: The Thimble Shelter
+      object_kind: tool
+      attributes:
+        function: temporary hiding-place under attack
+      evidence: |
+        "crept nimbly under a thimble"
+
+    obj_thumbling_journeyman_thalers:
+      name: The King's Thalers
+      object_kind: treasure
+      attributes:
+        owner: thumbling_journeyman_king
+        stolen_for: thumbling_journeyman_robbers
+      evidence: |
+        "threw out to them one thaler after another."
+
+    obj_thumbling_journeyman_kreuzer:
+      name: The Travel Kreuzer
+      object_kind: treasure
+      attributes:
+        kept_by: thumbling_journeyman
+        function: proof of travel earnings
+      evidence: |
+        "only asked for a kreuzer because he could not carry more."
+
+    obj_thumbling_journeyman_grass_cloth:
+      name: The Grass Bundle in the Cloth
+      object_kind: material
+      attributes:
+        function: carries Thumbling to the cows
+      evidence: |
+        "mowed him up quickly with the grass, tied all in a great cloth"
+
+    obj_thumbling_journeyman_black_pudding:
+      name: The Black-Pudding
+      object_kind: food
+      attributes:
+        function: smoked food-interior containing Thumbling
+      evidence: |
+        "thrust into a black-pudding with the bits of bacon."
+
+    obj_thumbling_journeyman_fox_throat:
+      name: The Fox's Throat
+      object_kind: creature_object
+      attributes:
+        holder: thumbling_journeyman_fox
+        function: final animal interior before home-return bargain
+      evidence: |
+        "it is I who am sticking in your throat"
+
+  locations:
+
+    loc_thumbling_journeyman_tailor_home:
+      name: The Tailor Household
+      instance_of: loc_house
+      evidence: |
+        "A certain tailor had a son"
+
+    loc_thumbling_journeyman_hearth_chimney:
+      name: The Hearth and Chimney
+      instance_of: loc_hearth
+      evidence: |
+        "the dish stood on the hearth"
+
+    loc_thumbling_journeyman_master_house:
+      name: The Master's House
+      instance_of: loc_house
+      evidence: |
+        "I will write with chalk on the door of your house"
+
+    loc_thumbling_journeyman_forest:
+      name: The Robber Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "came to a great forest"
+
+    loc_thumbling_journeyman_treasure_chamber:
+      name: The King's Treasure-Chamber
+      instance_of: loc_castle
+      evidence: |
+        "went with them to the treasure-chamber"
+
+    loc_thumbling_journeyman_road:
+      name: The Open Road
+      evidence: |
+        "took to the road."
+
+    loc_thumbling_journeyman_inn:
+      name: The Inn
+      instance_of: loc_inn
+      evidence: |
+        "hired himself as man-servant in an inn."
+
+    loc_thumbling_journeyman_garden:
+      name: The Inn Garden
+      instance_of: loc_garden
+      evidence: |
+        "one of the maids was mowing in the garden"
+
+    loc_thumbling_journeyman_cow_byre:
+      name: The Cow-Byre
+      instance_of: loc_stable
+      evidence: |
+        "came into the cow-byre"
+
+    loc_thumbling_journeyman_smoking_chimney:
+      name: The Smoking Chimney
+      instance_of: loc_hearth
+      evidence: |
+        "hung up in the chimney to be smoked"
+
+    loc_thumbling_journeyman_open_country:
+      name: The Open Country
+      evidence: |
+        "In the open country he met with a fox"
+
+    loc_thumbling_journeyman_father_yard:
+      name: The Father's Fowl-Yard
+      instance_of: loc_house
+      evidence: |
+        "the fowls in thy father’s yard"
+
+
+classifications:
+
+  world_laws:
+    - law_tiny_body_enables_hidden_agency
+    - law_devouring_can_be_reversed
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_object_mediation
+    - agency_endurance
+    - agency_violence
+
+  affects_driving:
+    - affect_curiosity
+    - affect_greed
+    - affect_fear
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: thumbling_journeyman,
+      scene: "tailor's thumb-sized son receives a needle sword and insists on going into the world" }
+  - { function: func_departure, order: 2, actor: thumbling_journeyman,
+      scene: "steam carries him up the chimney and outside into the wide world" }
+  - { function: func_testing, order: 3, actor: thumbling_journeyman_mistress,
+      scene: "mistress attacks him after he complains about poor food" }
+  - { function: func_escape, order: 4, actor: thumbling_journeyman,
+      scene: "he hides under thimble, cloth, table crevice, and drawer until expelled" }
+  - { function: func_trickery, order: 5, actor: thumbling_journeyman_robbers,
+      scene: "robbers recruit him as tiny picklock for the king's treasure-chamber" }
+  - { function: func_difficult_task, order: 6, actor: thumbling_journeyman,
+      scene: "he slips through the treasure-door crack and throws thalers out" }
+  - { function: func_escape, order: 7, actor: thumbling_journeyman,
+      scene: "he mocks sentries from under thalers and escapes with the last coin" }
+  - { function: func_rejection, order: 8, actor: thumbling_journeyman,
+      scene: "he refuses the robbers' captaincy and takes only a kreuzer" }
+  - { function: func_villainy, order: 9, actor: thumbling_journeyman_maids,
+      victim: thumbling_journeyman,
+      scene: "maids mow him into grass and secretly throw him to the cows" }
+  - { function: func_escape, order: 10, actor: thumbling_journeyman,
+      scene: "he survives cow, chopping-knife, black-pudding, and smoking chimney" }
+  - { function: func_villainy, order: 11, actor: thumbling_journeyman_fox,
+      victim: thumbling_journeyman,
+      scene: "fox snaps him up in the open country" }
+  - { function: func_bargain, order: 12, actor: thumbling_journeyman,
+      scene: "he bargains his father's fowls for release from the fox's throat" }
+  - { function: func_return, order: 13, actor: thumbling_journeyman_fox,
+      beneficiary: thumbling_journeyman,
+      scene: "fox carries him home, where father trades fowls for the son's safe return" }
+
+
+edges:
+
+  # Departure from home and first household
+  - { from: thumbling_journeyman, to: loc_thumbling_journeyman_tailor_home, label: BORN_IN,
+      evidence: "A certain tailor had a son" }
+  - { from: thumbling_journeyman, to: arc_tiny_hero, label: EMBODIES,
+      evidence: "no bigger than a Thumb" }
+  - { from: thumbling_journeyman, to: loc_thumbling_journeyman_road, label: INSISTS_ON_DEPARTURE,
+      evidence: "I must and will go out into the world." }
+  - { from: thumbling_journeyman_father, to: obj_thumbling_journeyman_needle_sword, label: MAKES,
+      evidence: "took a long darning-needle and made a knob of sealing-wax on it" }
+  - { from: thumbling_journeyman_father, to: thumbling_journeyman, label: GIVES_WEAPON_TO,
+      evidence: "there is a sword for thee to take with thee" }
+  - { from: thumbling_journeyman, to: loc_thumbling_journeyman_hearth_chimney, label: PEEPS_FROM,
+      evidence: "jumped on to the hearth, and peeped into the dish" }
+  - { from: loc_thumbling_journeyman_hearth_chimney, to: thumbling_journeyman, label: CARRIES_UP_CHIMNEY,
+      evidence: "carried him up the chimney" }
+  - { from: thumbling_journeyman, to: thumbling_journeyman_mistress, label: MOCKS_FOOD_OF,
+      evidence: "Too many potatoes, too little meat!" }
+  - { from: thumbling_journeyman_mistress, to: thumbling_journeyman, label: TRIES_TO_STRIKE,
+      evidence: "was just going to strike him" }
+  - { from: thumbling_journeyman, to: obj_thumbling_journeyman_thimble, label: HIDES_UNDER,
+      evidence: "crept nimbly under a thimble" }
+  - { from: thumbling_journeyman_mistress, to: thumbling_journeyman, label: DRIVES_OUT,
+      evidence: "drove him out of the house." }
+
+  # Robber treasure-chamber episode
+  - { from: thumbling_journeyman, to: loc_thumbling_journeyman_forest, label: ENTERS,
+      evidence: "came to a great forest" }
+  - { from: thumbling_journeyman_robbers, to: thumbling_journeyman, label: RECRUIT_AS_PICKLOCK,
+      evidence: "serve as picklock to us." }
+  - { from: thumbling_journeyman, to: loc_thumbling_journeyman_treasure_chamber, label: ENTERS_THROUGH_CRACK,
+      evidence: "got safely through the crevice into the treasure-chamber" }
+  - { from: thumbling_journeyman, to: obj_thumbling_journeyman_thalers, label: THROWS_OUT,
+      evidence: "threw out to them one thaler after another." }
+  - { from: thumbling_journeyman_sentries, to: thumbling_journeyman, label: MISRECOGNIZE_AS_SPIDER,
+      evidence: "What an ugly spider is creeping there" }
+  - { from: thumbling_journeyman_king, to: loc_thumbling_journeyman_treasure_chamber, label: INSPECTS,
+      evidence: "King coming to inspect his treasure-chamber" }
+  - { from: thumbling_journeyman, to: thumbling_journeyman_sentries, label: MOCKS,
+      evidence: "Ho, ho, here am I!" }
+  - { from: thumbling_journeyman, to: obj_thumbling_journeyman_thalers, label: RIDES_DOWN_ON,
+      evidence: "hopped nimbly upon it, and flew down with it through the window." }
+  - { from: thumbling_journeyman_robbers, to: thumbling_journeyman, label: OFFER_CAPTAINCY_TO,
+      evidence: "wilt thou be our captain?" }
+  - { from: thumbling_journeyman, to: obj_thumbling_journeyman_kreuzer, label: TAKES_ONLY,
+      evidence: "only asked for a kreuzer because he could not carry more." }
+
+  # Inn, cow, black-pudding
+  - { from: thumbling_journeyman, to: loc_thumbling_journeyman_inn, label: HIRES_AT,
+      evidence: "hired himself as man-servant in an inn." }
+  - { from: thumbling_journeyman, to: thumbling_journeyman_maids, label: EXPOSES_SECRET_THEFTS_OF,
+      evidence: "he told their master and mistress what they had taken off the plates" }
+  - { from: thumbling_journeyman_maids, to: thumbling_journeyman, label: PLOT_AGAINST,
+      evidence: "arranged with each other to play him a trick." }
+  - { from: thumbling_journeyman_maids, to: obj_thumbling_journeyman_grass_cloth, label: MOW_INTO,
+      evidence: "mowed him up quickly with the grass, tied all in a great cloth" }
+  - { from: obj_thumbling_journeyman_grass_cloth, to: thumbling_journeyman_black_cow, label: THROWN_TO,
+      evidence: "secretly threw it to the cows." }
+  - { from: thumbling_journeyman_black_cow, to: thumbling_journeyman, label: SWALLOWS,
+      evidence: "swallowed him down without hurting him." }
+  - { from: thumbling_journeyman, to: thumbling_journeyman_black_cow, label: SPEAKS_FROM_INSIDE,
+      evidence: "Let me out first, for I am shut up inside her." }
+  - { from: thumbling_journeyman_master, to: thumbling_journeyman_black_cow, label: ORDERS_KILLED,
+      evidence: "That cow shall be killed to-morrow." }
+  - { from: thumbling_journeyman_butcher, to: thumbling_journeyman, label: ALMOST_CHOPS,
+      evidence: "Don’t chop too deep, don’t chop too deep, I am amongst it." }
+  - { from: thumbling_journeyman, to: obj_thumbling_journeyman_black_pudding, label: TRAPPED_IN,
+      evidence: "thrust into a black-pudding with the bits of bacon." }
+  - { from: obj_thumbling_journeyman_black_pudding, to: loc_thumbling_journeyman_smoking_chimney, label: HUNG_IN,
+      evidence: "hung up in the chimney to be smoked" }
+  - { from: thumbling_journeyman, to: obj_thumbling_journeyman_black_pudding, label: ESCAPES_FROM,
+      evidence: "cleared a passage for himself, and jumped out." }
+
+  # Fox bargain and return home
+  - { from: thumbling_journeyman, to: loc_thumbling_journeyman_open_country, label: TRAVELS_THROUGH,
+      evidence: "In the open country he met with a fox" }
+  - { from: thumbling_journeyman_fox, to: thumbling_journeyman, label: SNAPS_UP,
+      evidence: "snapped him up in a fit of absence." }
+  - { from: thumbling_journeyman, to: obj_thumbling_journeyman_fox_throat, label: STICKS_IN,
+      evidence: "it is I who am sticking in your throat" }
+  - { from: thumbling_journeyman, to: thumbling_journeyman_fox, label: PROMISES_FOWLS_TO,
+      evidence: "Thou shalt have all the cocks and hens" }
+  - { from: thumbling_journeyman_fox, to: thumbling_journeyman, label: RELEASES,
+      evidence: "Then the fox let him go again" }
+  - { from: thumbling_journeyman_fox, to: loc_thumbling_journeyman_tailor_home, label: CARRIES_HOME,
+      evidence: "himself carried him home." }
+  - { from: thumbling_journeyman_father, to: thumbling_journeyman_fox, label: GIVES_FOWLS_TO,
+      evidence: "willingly gave the fox all the fowls" }
+  - { from: thumbling_journeyman, to: thumbling_journeyman_father, label: GIVES_KREUZER_TO,
+      evidence: "gave his father the kreuzer which he earned on his travels." }
+  - { from: thumbling_journeyman, to: moral_restorative, label: RETURNS_HOME_UNHARMED,
+      evidence: "your father would surely love his child far more than the fowls in the yard!" }

@@ -1,0 +1,8 @@
+slug: eves-various-children
+khm: 180
+atu: '758'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

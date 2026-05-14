@@ -1,0 +1,586 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-two-brothers
+khm: 60
+atu: '567/300/303'
+atu_name: The Magic Bird Heart / The Dragon-Slayer / The Twin or Blood Brothers
+canonical_source: ../../2-silver/canonical/the-two-brothers/canonical.txt
+title: The Two Brothers
+
+
+entities:
+
+  characters:
+
+    two_brothers_rich_goldsmith:
+      name: The Rich Goldsmith
+      archetypes: [arc_greedy_one]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_lie, speech_command]
+      affects: [affect_greed, affect_envy]
+      traits: [rich-brother, evil-hearted, bird-power-knower, organ-loser, false-devil-accuser]
+      evidence: |
+        The goldsmith was crafty and cunning, and knew very well what
+        kind of a bird it was.
+
+    two_brothers_poor_broommaker:
+      name: The Poor Broom-Maker
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_violence]
+      affects: [affect_fear, affect_grief]
+      traits: [poor-brother, father-of-twins, golden-bird-finder, deceived-exposer]
+      evidence: |
+        The poor one supported himself by making brooms, and was good
+        and honourable.
+
+    two_brothers_goldsmith_wife:
+      name: The Goldsmith's Wife
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_cunning]
+      affects: [affect_fear]
+      traits: [bird-roaster, organ-substituter, cock-heart-replacer]
+      evidence: |
+        she quickly killed a young cock, took out his heart and liver
+
+    two_brothers_younger_huntsman:
+      name: The Younger Twin Huntsman / Young King
+      archetypes: [arc_dragon_slayer]
+      species: sp_human
+      agency_modes: [agency_violence, agency_animal_aid, agency_object_mediation, agency_speech, agency_social_rank]
+      transformations: [transform_resurrection_by_remedy]
+      affects: [affect_loyalty, affect_love_at_first_sight, affect_fear, affect_anger]
+      traits: [gold-producing-child, abandoned-twin, trained-huntsman, west-going-brother, animal-keeper, dragon-slayer, murdered-sleeper, revived-with-root, true-bridegroom, enchanted-forest-victim, jealous-fratricide, repentant]
+      evidence: |
+        he showed her the dragon all cut to pieces, and told her that
+        she was now delivered.
+
+    two_brothers_elder_huntsman:
+      name: The Other Twin Huntsman / Rescuing Brother
+      species: sp_human
+      agency_modes: [agency_violence, agency_animal_aid, agency_cunning, agency_endurance]
+      transformations: [transform_resurrection_by_remedy]
+      affects: [affect_loyalty]
+      traits: [gold-producing-child, abandoned-twin, trained-huntsman, east-going-brother, fate-knife-reader, mistaken-for-king, chaste-substitute, witch-shooter, brother-rescuer, wrongly-killed, revived-with-root]
+      evidence: |
+        he laid a two-edged sword between him and the young Queen
+
+    two_brothers_foster_huntsman:
+      name: The Foster-Huntsman
+      archetypes: [arc_wise_helper]
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor, agency_object_mediation]
+      traits: [adoptive-father, trainer, trial-shot-master, fate-knife-giver]
+      evidence: |
+        I will be your father, and bring you up till you are big.
+
+    two_brothers_hare:
+      name: The Hare Helper
+      archetypes: [arc_animal_helper]
+      species: sp_hare
+      agency_modes: [agency_animal_aid, agency_endurance, agency_speech]
+      traits: [spared-animal, food-fetcher, life-root-fetcher, watch-chain-last]
+      evidence: |
+        Kill me not, I will bring our master to life again.
+
+    two_brothers_fox:
+      name: The Fox Helper
+      archetypes: [arc_animal_helper]
+      species: sp_fox
+      agency_modes: [agency_animal_aid, agency_cunning, agency_speech]
+      traits: [spared-animal, village-guide, poultry-knower, roast-meat-fetcher]
+      evidence: |
+        Hark ye, cunning fellows, provide us with something to eat.
+
+    two_brothers_wolf:
+      name: The Wolf Helper
+      archetypes: [arc_animal_helper]
+      species: sp_wolf
+      agency_modes: [agency_animal_aid, agency_violence, agency_speech]
+      traits: [spared-animal, vegetable-fetcher, fearless-palace-runner]
+      evidence: |
+        Then the wolf went straight to the palace, as he feared no one
+
+    two_brothers_bear:
+      name: The Bear Helper
+      archetypes: [arc_animal_helper]
+      species: sp_bear
+      agency_modes: [agency_animal_aid, agency_violence, agency_speech]
+      traits: [spared-animal, confectionery-fetcher, guard-scatterer]
+      evidence: |
+        gave them a few boxes on the ears, right and left
+
+    two_brothers_lion:
+      name: The Lion Helper
+      archetypes: [arc_animal_helper]
+      species: sp_lion
+      agency_modes: [agency_animal_aid, agency_violence, agency_speech]
+      traits: [spared-animal, clasp-bearer, wine-fetcher, head-rejoiner, recognition-animal]
+      evidence: |
+        the lion received the golden clasp.
+
+    two_brothers_humble_bee:
+      name: The Humble-Bee
+      species: sp_bee
+      agency_modes: [agency_violence]
+      traits: [hare-waker, third-sting-trigger]
+      evidence: |
+        came for the third time, and stung his nose so that he awoke.
+
+    two_brothers_king:
+      name: The King of the Dragon Town
+      archetypes: [arc_oath_enforcer]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_promise, speech_command]
+      affects: [affect_grief]
+      traits: [daughter-father, dragon-tribute-ruler, bride-reward-promiser, proof-judge, viceroy-maker]
+      evidence: |
+        The King has promised that he who conquers the dragon shall
+        have his daughter to wife
+
+    two_brothers_princess:
+      name: The King's Daughter / Young Queen
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank, agency_object_mediation]
+      speech_acts_performed: [speech_promise, speech_testimony]
+      affects: [affect_fear, affect_love_at_first_sight, affect_loyalty]
+      traits: [dragon-tribute-maiden, rescued-princess, token-giver, coerced-silent-witness, delayed-bride, recognition-witness, anxious-wife]
+      evidence: |
+        she took off her necklace of coral, and divided it amongst the
+        animals
+
+    two_brothers_marshal:
+      name: The Wicked Marshal
+      archetypes: [arc_false_hero]
+      species: sp_human
+      agency_modes: [agency_violence, agency_cunning, agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_lie, speech_command]
+      affects: [affect_greed, affect_fear]
+      traits: [distant-witness, sleeping-hero-killer, princess-coercer, dragon-credit-thief, exposed-liar, executed]
+      evidence: |
+        I have killed the dragon, and delivered the maiden and the
+        whole kingdom as well
+
+    two_brothers_dragon:
+      name: The Seven-Headed Dragon
+      being_type: being_dragon
+      agency_modes: [agency_violence, agency_speech]
+      traits: [seven-headed, virgin-demanding, fire-breathing, country-waster, slain-monster]
+      evidence: |
+        the seven-headed dragon came thither with loud roaring.
+
+    two_brothers_innkeeper:
+      name: The Innkeeper
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [black-crape-explainer, red-cloth-explainer, wager-loser, mercy-recipient]
+      evidence: |
+        Last year the town was all hung with black crape, what means
+        the red cloth to-day?
+
+    two_brothers_witch:
+      name: The Old Woman in the Enchanted Forest
+      being_type: being_witch
+      agency_modes: [agency_speech, agency_cunning, agency_violence]
+      transformations: [transform_petrification]
+      speech_acts_performed: [speech_lie, speech_command]
+      affects: [affect_fear]
+      traits: [tree-sitter, cold-pretender, wand-giver, animal-petrifier, vault-keeper, silver-vulnerable, forced-reviver, burned]
+      evidence: |
+        she leapt down and touched him also with a wand, and changed
+        him to stone.
+
+  magic_objects:
+
+    obj_two_brothers_golden_bird:
+      name: The Wondrous Golden Bird
+      instance_of: obj_golden_bird
+      object_kind: creature_object
+      attributes:
+        function: source of feather, egg, body, and wealth-generating organs
+      evidence: |
+        a bird which was quite golden
+
+    obj_two_brothers_golden_feather:
+      name: The Golden Feather
+      object_kind: token
+      attributes:
+        function: first proof that the bird is pure gold
+      evidence: |
+        one golden feather only fell down
+
+    obj_two_brothers_golden_egg:
+      name: The Golden Egg
+      object_kind: treasure
+      attributes:
+        function: second golden token taken from the bird's nest
+      evidence: |
+        an egg lay inside it, which was of gold.
+
+    obj_two_brothers_bird_heart_liver:
+      name: The Bird's Heart and Liver
+      instance_of: obj_magic_bird_heart_liver
+      object_kind: food
+      attributes:
+        function: eaten by the twins, producing daily gold under pillows
+      evidence: |
+        That must have been the heart and the liver
+
+    obj_two_brothers_daily_gold:
+      name: The Daily Gold Pieces
+      object_kind: treasure
+      attributes:
+        function: recurring fortune under the twins' pillows
+      evidence: |
+        every morning a piece of gold beneath his pillow
+
+    obj_two_brothers_fate_knife:
+      name: The Bright Life-Reporting Knife
+      instance_of: obj_fate_reporting_knife
+      object_kind: weapon
+      attributes:
+        function: reports whether the separated brother lives or dies by rust
+      evidence: |
+        the side of the knife which is turned in the direction by which
+        he went, will rust if he dies
+
+    obj_two_brothers_good_guns:
+      name: The Good Guns
+      object_kind: weapon
+      attributes:
+        function: trial-shot and hunting weapons for the twins
+      evidence: |
+        presented each of them with a good gun and a dog
+
+    obj_two_brothers_strength_cups:
+      name: The Three Strength Cups
+      object_kind: relic
+      attributes:
+        function: make the drinker strong enough to wield the buried sword
+      evidence: |
+        three full cups were standing
+
+    obj_two_brothers_dragon_sword:
+      name: The Buried Dragon Sword
+      object_kind: weapon
+      attributes:
+        function: sword that can be wielded only after drinking the cups
+      evidence: |
+        the sword which is buried before the threshold of the door
+
+    obj_two_brothers_dragon_tongues:
+      name: The Seven Dragon Tongues
+      instance_of: obj_forensic_token
+      object_kind: relic
+      attributes:
+        function: proof that exposes the marshal's false dragon-slayer claim
+      evidence: |
+        cut the tongues out of the dragon’s seven heads
+
+    obj_two_brothers_princess_handkerchief:
+      name: The Princess's Named Handkerchief
+      instance_of: obj_forensic_token
+      object_kind: token
+      attributes:
+        function: wraps the dragon tongues and proves the princess gave it to the true slayer
+      evidence: |
+        Her pocket-handkerchief, however, on which was her name
+
+    obj_two_brothers_animal_collars:
+      name: The Animal Collars and Golden Clasp
+      object_kind: token
+      attributes:
+        function: recognition tokens connecting the animals to the rescued princess
+      evidence: |
+        took the collar off each of them and the golden clasp from the
+        lion
+
+    obj_two_brothers_life_root:
+      name: The Mountain Life-Root
+      instance_of: obj_life_restoring_root
+      object_kind: relic
+      attributes:
+        function: restores the beheaded huntsmen to life
+      evidence: |
+        brought the root with him.
+
+    obj_two_brothers_witch_wand:
+      name: The Witch's Petrifying Wand
+      instance_of: obj_enchanting_wand
+      object_kind: tool
+      attributes:
+        function: turns animals and men to stone, then restores them under compulsion
+      evidence: |
+        I will throw down a wand from the tree
+
+    obj_two_brothers_silver_buttons:
+      name: The Three Silver Buttons
+      object_kind: weapon
+      attributes:
+        function: silver shot that defeats the lead-proof witch
+      evidence: |
+        tore three silver buttons off his coat, and loaded his gun with
+        them
+
+    obj_two_brothers_chastity_sword:
+      name: The Two-Edged Sword in the Bed
+      object_kind: weapon
+      attributes:
+        function: separates the mistaken twin from his brother's wife
+      evidence: |
+        laid a two-edged sword between him and the young Queen
+
+  locations:
+
+    loc_two_brothers_rich_house:
+      name: The Rich Goldsmith's House
+      instance_of: loc_house
+      evidence: |
+        The two boys went backwards and forwards to the rich house
+
+    loc_two_brothers_first_forest:
+      name: The Golden Bird Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        going into the forest to fetch brush-wood
+
+    loc_two_brothers_foster_house:
+      name: The Foster-Huntsman's House
+      instance_of: loc_house
+      evidence: |
+        he took them home with him
+
+    loc_two_brothers_parting_tree:
+      name: The Parting Tree of the Knife
+      instance_of: loc_tree
+      evidence: |
+        stick this knife into a tree at the place where you part
+
+    loc_two_brothers_dragon_town:
+      name: The Town Hung with Black and Red Cloth
+      evidence: |
+        arrived with his beasts in a town which was all hung with black
+        crape.
+
+    loc_two_brothers_inn:
+      name: The Inn of Wagers and News
+      instance_of: loc_inn
+      evidence: |
+        He went into an inn
+
+    loc_two_brothers_dragon_hill:
+      name: The Dragon's High Hill
+      instance_of: loc_mountain
+      evidence: |
+        There is a high hill without the town, whereon dwells a dragon
+
+    loc_two_brothers_hill_church:
+      name: The Little Church on the Dragon Hill
+      instance_of: loc_church
+      threshold_type: threshold_doorway
+      evidence: |
+        A little church stood at the top of it
+
+    loc_two_brothers_palace:
+      name: The King's Palace
+      instance_of: loc_castle
+      evidence: |
+        went straight to the King’s daughter
+
+    loc_two_brothers_enchanted_forest:
+      name: The Haunted Enchanted Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        there was a forest of which it was reported that it was haunted
+
+    loc_two_brothers_witch_tree:
+      name: The Witch's Tree
+      instance_of: loc_tree
+      evidence: |
+        saw an old woman sitting in the tree
+
+    loc_two_brothers_stone_vault:
+      name: The Vault of Petrified People
+      instance_of: loc_tomb
+      evidence: |
+        dragged him and the animals into a vault, where many more such
+        stones already lay.
+
+
+classifications:
+
+  world_laws:
+    - law_magic_bird_organs_generate_gold
+    - law_rescued_animals_repay_kindness
+    - law_life_root_restores_dismembered_body
+    - law_forest_suspends_domestic_order
+    - law_disguise_alters_social_reality
+
+  moral_regimes:
+    - moral_retributive
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_violence
+    - agency_animal_aid
+    - agency_object_mediation
+    - agency_cunning
+    - agency_social_rank
+
+  affects_driving:
+    - affect_envy
+    - affect_greed
+    - affect_fear
+    - affect_loyalty
+    - affect_love_at_first_sight
+
+  symbol_numbers:
+    - num_2
+    - num_3
+    - num_7
+    - num_12
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: two_brothers_poor_broommaker,
+      scene: "rich goldsmith and poor broom-maker are brothers; the poor man's twin sons live on scraps" }
+  - { function: func_magical_agent, order: 2, actor: two_brothers_poor_broommaker,
+      scene: "poor broom-maker captures golden bird, feather, and egg for the goldsmith" }
+  - { function: func_transference, order: 3, actor: two_brothers_younger_huntsman,
+      scene: "the twins accidentally eat the golden bird's heart and liver and receive daily gold" }
+  - { function: func_villainy, order: 4, actor: two_brothers_rich_goldsmith,
+      scene: "goldsmith lies that the twins belong to the Evil One, causing their father to abandon them" }
+  - { function: func_rescue, order: 5, actor: two_brothers_foster_huntsman,
+      scene: "huntsman adopts the abandoned twins and trains them as huntsmen" }
+  - { function: func_departure, order: 6, actor: two_brothers_younger_huntsman,
+      scene: "twins receive guns, dogs, gold, and fate knife, then separate east and west" }
+  - { function: func_donor_test, order: 7, actor: two_brothers_hare,
+      scene: "brothers spare hare, fox, wolf, bear, and lion and receive young animal helpers" }
+  - { function: func_mediation, order: 8, actor: two_brothers_innkeeper,
+      scene: "younger brother learns the princess will be sacrificed to the dragon" }
+  - { function: func_victory, order: 9, actor: two_brothers_younger_huntsman,
+      scene: "after drinking the cups, the huntsman and animals kill the seven-headed dragon" }
+  - { function: func_false_claims, order: 10, actor: two_brothers_marshal,
+      scene: "marshal beheads the sleeping hero, coerces the princess, and claims dragon victory" }
+  - { function: func_resurrection, order: 11, actor: two_brothers_hare,
+      scene: "hare fetches the life-root and the animals revive their beheaded master" }
+  - { function: func_return, order: 12, actor: two_brothers_younger_huntsman,
+      scene: "after one year the huntsman returns to the red-cloth wedding town" }
+  - { function: func_recognition, order: 13, actor: two_brothers_younger_huntsman,
+      scene: "royal food errands and dragon tongues expose the marshal and identify the true slayer" }
+  - { function: func_wedding, order: 14, actor: two_brothers_king,
+      scene: "marshal is executed; the true huntsman marries the princess and becomes viceroy" }
+  - { function: func_interdiction, order: 15, actor: two_brothers_king,
+      scene: "young king is warned away from the haunted forest but follows the white hart" }
+  - { function: func_villainy, order: 16, actor: two_brothers_witch,
+      scene: "witch tricks the young king into striking his animals with the wand and turns all to stone" }
+  - { function: func_mediation, order: 17, actor: two_brothers_elder_huntsman,
+      scene: "other brother reads the half-rusted knife and travels west to rescue him" }
+  - { function: func_trickery, order: 18, actor: two_brothers_elder_huntsman,
+      scene: "he accepts mistaken identity as the young king but lays a sword between himself and the queen" }
+  - { function: func_victory, order: 19, actor: two_brothers_elder_huntsman,
+      scene: "silver buttons bring down the witch; she restores the petrified brother and others" }
+  - { function: func_villainy, order: 20, actor: two_brothers_younger_huntsman,
+      scene: "jealous younger brother kills the loyal rescuer after hearing about the queen's bed" }
+  - { function: func_resurrection, order: 21, actor: two_brothers_hare,
+      scene: "the life-root revives the wrongly killed brother" }
+  - { function: func_recognition, order: 22, actor: two_brothers_princess,
+      scene: "the queen identifies the true husband by the lion's golden clasp" }
+
+
+edges:
+
+  # Magic bird heart and exile
+  - { from: two_brothers_poor_broommaker, to: obj_two_brothers_golden_feather, label: SELLS,
+      evidence: "gave him a great deal of money for it." }
+  - { from: two_brothers_poor_broommaker, to: obj_two_brothers_golden_egg, label: SELLS,
+      evidence: "gave him what it was worth." }
+  - { from: two_brothers_rich_goldsmith, to: obj_two_brothers_golden_bird, label: DEMANDS,
+      evidence: "I should indeed like to have the bird itself." }
+  - { from: two_brothers_younger_huntsman, to: obj_two_brothers_bird_heart_liver, label: EATS,
+      evidence: "We will eat these two little bits" }
+  - { from: obj_two_brothers_bird_heart_liver, to: obj_two_brothers_daily_gold, label: PRODUCES,
+      evidence: "every morning a piece of gold beneath his pillow" }
+  - { from: two_brothers_rich_goldsmith, to: two_brothers_poor_broommaker, label: DECEIVES,
+      evidence: "Thy children are in league with the Evil One" }
+  - { from: two_brothers_poor_broommaker, to: two_brothers_younger_huntsman, label: ABANDONS,
+      evidence: "led the twins forth into the forest" }
+  - { from: two_brothers_foster_huntsman, to: two_brothers_younger_huntsman, label: ADOPTS,
+      evidence: "he took them home with him" }
+  - { from: two_brothers_foster_huntsman, to: obj_two_brothers_fate_knife, label: GIVES,
+      evidence: "he gave them a bright knife" }
+  - { from: obj_two_brothers_fate_knife, to: two_brothers_elder_huntsman, label: REPORTS_DANGER_TO,
+      evidence: "his brother’s side of the knife was half rusted, and half bright." }
+
+  # Animal helpers and dragon combat
+  - { from: two_brothers_younger_huntsman, to: two_brothers_hare, label: SPARES,
+      evidence: "Dear huntsman, do but let me live" }
+  - { from: two_brothers_fox, to: two_brothers_younger_huntsman, label: GUIDES_TO_FOOD,
+      evidence: "we will show you the way there." }
+  - { from: two_brothers_innkeeper, to: two_brothers_younger_huntsman, label: REPORTS_SACRIFICE_TO,
+      evidence: "our King’s only daughter is to die to-morrow." }
+  - { from: two_brothers_king, to: two_brothers_princess, label: OFFERS_AS_REWARD,
+      evidence: "he who conquers the dragon shall have his daughter to wife" }
+  - { from: obj_two_brothers_strength_cups, to: two_brothers_younger_huntsman, label: STRENGTHENS,
+      evidence: "emptied the cups, and now he was strong enough" }
+  - { from: obj_two_brothers_dragon_sword, to: two_brothers_dragon, label: BEHEADS,
+      evidence: "struck off three of his heads." }
+  - { from: two_brothers_lion, to: two_brothers_dragon, label: TEARS_TO_PIECES,
+      evidence: "called up his animals who tore it in pieces." }
+  - { from: two_brothers_princess, to: obj_two_brothers_animal_collars, label: GIVES,
+      evidence: "divided it amongst the animals in order to reward them" }
+  - { from: two_brothers_younger_huntsman, to: obj_two_brothers_dragon_tongues, label: PRESERVES_PROOF,
+      evidence: "wrapped them in the handkerchief, and preserved them carefully." }
+
+  # False hero, resurrection, and exposure
+  - { from: two_brothers_marshal, to: two_brothers_younger_huntsman, label: BEHEADS,
+      evidence: "cut off the huntsman’s head" }
+  - { from: two_brothers_marshal, to: two_brothers_princess, label: COERCES_SILENCE_FROM,
+      evidence: "threatened to kill her if she did not obey him" }
+  - { from: two_brothers_marshal, to: two_brothers_king, label: FALSELY_CLAIMS,
+      evidence: "I have killed the dragon" }
+  - { from: two_brothers_humble_bee, to: two_brothers_hare, label: AWAKENS,
+      evidence: "stung his nose so that he awoke." }
+  - { from: two_brothers_hare, to: obj_two_brothers_life_root, label: FETCHES,
+      evidence: "brought the root with him." }
+  - { from: obj_two_brothers_life_root, to: two_brothers_younger_huntsman, label: REVIVES,
+      evidence: "his heart beat, and life came back." }
+  - { from: two_brothers_hare, to: two_brothers_princess, label: ANNOUNCES_TRUE_SLAYER_TO,
+      evidence: "My master, who killed the dragon, is here" }
+  - { from: obj_two_brothers_dragon_tongues, to: two_brothers_marshal, label: EXPOSES,
+      evidence: "the dragon’s tongues are the tokens of the victor" }
+  - { from: obj_two_brothers_princess_handkerchief, to: two_brothers_younger_huntsman, label: IDENTIFIES,
+      evidence: "To him who killed the dragon." }
+  - { from: two_brothers_king, to: two_brothers_marshal, label: EXECUTES,
+      evidence: "they sentenced him to be torn to pieces by four bulls." }
+
+  # Enchanted forest and twin substitution
+  - { from: two_brothers_younger_huntsman, to: loc_two_brothers_enchanted_forest, label: ENTERS,
+      evidence: "followed a white hart into the enchanted forest" }
+  - { from: two_brothers_witch, to: obj_two_brothers_witch_wand, label: THROWS_DOWN,
+      evidence: "I will throw down a wand from the tree" }
+  - { from: obj_two_brothers_witch_wand, to: two_brothers_younger_huntsman, label: PETRIFIES,
+      evidence: "changed him to stone." }
+  - { from: two_brothers_witch, to: loc_two_brothers_stone_vault, label: HIDES_VICTIMS_IN,
+      evidence: "where many more such stones already lay." }
+  - { from: obj_two_brothers_silver_buttons, to: two_brothers_witch, label: WOUNDS,
+      evidence: "when he fired she fell down at once with a scream." }
+  - { from: two_brothers_elder_huntsman, to: two_brothers_witch, label: COMPELS_REVERSAL_FROM,
+      evidence: "make my brother and all the human beings lying here, alive again" }
+  - { from: obj_two_brothers_witch_wand, to: two_brothers_younger_huntsman, label: RESTORES,
+      evidence: "his brother with his animals came to life again" }
+  - { from: two_brothers_elder_huntsman, to: obj_two_brothers_chastity_sword, label: PLACES_BETWEEN_BED,
+      evidence: "laid a two-edged sword between him and the young Queen" }
+  - { from: two_brothers_younger_huntsman, to: two_brothers_elder_huntsman, label: KILLS_IN_JEALOUSY,
+      evidence: "he became so jealous and angry that he drew his sword" }
+  - { from: obj_two_brothers_life_root, to: two_brothers_elder_huntsman, label: REVIVES,
+      evidence: "the dead man was brought to life again" }
+  - { from: obj_two_brothers_animal_collars, to: two_brothers_princess, label: ENABLES_RECOGNITION_BY,
+      evidence: "He who is followed by this lion is my true husband" }

@@ -1,0 +1,8 @@
+slug: the-three-sluggards
+khm: 151
+atu: '1950'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

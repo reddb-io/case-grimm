@@ -1,0 +1,89 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: legend-07-our-ladys-little-glass
+khm: null
+legend_number: 7
+canonical_source: ../../2-silver/canonical/legend-07-our-ladys-little-glass/canonical.txt
+title: Our Lady's Little Glass
+
+entities:
+  characters:
+    little_glass_waggoner:
+      name: The Waggoner with Wine
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_request]
+      affects: [affect_pity]
+      traits: [wine-carrier, stuck-cart-driver, willing-host, flower-cup-filler]
+      evidence: |
+        a waggoner’s cart which was heavily laden with wine
+
+    little_glass_our_lady:
+      name: Our Lady
+      species: sp_human
+      being_type: being_divine
+      archetypes: [arc_supernatural_donor]
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_request]
+      affects: [affect_hunger]
+      traits: [tired, thirsty, roadside-helper, flower-plucker, cart-releaser, plant-namer]
+      evidence: |
+        Our Lady just happened to come by
+
+  magic_objects:
+    obj_little_glass_field_bindweed:
+      name: Our Lady's Little Glass
+      object_kind: relic
+      evidence: |
+        little white flower with red stripes, called field bindweed
+
+    obj_little_glass_wine_cart:
+      name: The Stuck Wine Cart
+      object_kind: tool
+      evidence: |
+        the cart was set free
+
+  locations:
+    loc_little_glass_road:
+      name: The Road Where the Cart Sticks
+      instance_of: loc_road
+      evidence: |
+        come by that way
+
+classifications:
+  world_laws:
+    - law_sacred_flower_cup_releases_stuck_cart
+  moral_regimes:
+    - moral_kindness_rewarded
+  agency_modes_dominant: [agency_speech, agency_object_mediation]
+  affects_driving: [affect_pity, affect_hunger]
+  symbol_numbers: []
+  threshold_types: []
+
+propp:
+  - { function: func_roadside_distress, order: 1, actor: little_glass_waggoner,
+      scene: "the wine cart is stuck and cannot be moved" }
+  - { function: func_divine_request, order: 2, actor: little_glass_our_lady,
+      beneficiary: little_glass_waggoner,
+      scene: "Our Lady asks for wine and promises to set the cart free" }
+  - { function: func_flower_vessel, order: 3, actor: little_glass_our_lady,
+      scene: "Our Lady plucks a bindweed flower to serve as a glass" }
+  - { function: func_release, order: 4, actor: law_sacred_flower_cup_releases_stuck_cart,
+      beneficiary: little_glass_waggoner,
+      scene: "the cart is set free after Our Lady drinks from the flower" }
+  - { function: func_etiological_naming, order: 5, actor: obj_little_glass_field_bindweed,
+      scene: "the flower keeps the name Our Lady's Little Glass" }
+
+edges:
+  - { from: little_glass_waggoner, to: obj_little_glass_wine_cart, label: DRIVES,
+      evidence: "waggoner’s cart which was heavily laden with wine" }
+  - { from: little_glass_our_lady, to: little_glass_waggoner, label: REQUESTS_WINE_FROM,
+      evidence: "give me a glass of wine, and I will set thy cart free" }
+  - { from: little_glass_our_lady, to: obj_little_glass_field_bindweed, label: PLUCKS_AS_CUP,
+      evidence: "plucked a little white flower with red stripes" }
+  - { from: little_glass_waggoner, to: obj_little_glass_field_bindweed, label: FILLS_WITH_WINE,
+      evidence: "He filled it with wine" }
+  - { from: obj_little_glass_field_bindweed, to: law_sacred_flower_cup_releases_stuck_cart, label: MEDIATES,
+      evidence: "the cart was set free" }
+  - { from: obj_little_glass_field_bindweed, to: little_glass_our_lady, label: NAMED_FOR,
+      evidence: "Our Lady’s Little Glass" }

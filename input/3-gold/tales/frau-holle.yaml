@@ -1,0 +1,315 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: frau-holle
+khm: 24
+atu: '480'
+atu_name: The Kind and the Unkind Girls
+canonical_source: ../../2-silver/canonical/frau-holle/canonical.txt
+title: Frau Holle
+
+
+entities:
+
+  characters:
+
+    frau_holle_widow:
+      name: The Widow Stepmother
+      archetypes: [arc_cruel_stepmother]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_command]
+      affects: [affect_envy, affect_greed, affect_anger]
+      traits: [own-daughter-favouring, stepdaughter-exploiting, merciless, gold-seeking]
+      evidence: |
+        "she was much fonder of the ugly and idle one, because she was
+        her own daughter; and the other, who was a step-daughter, was
+        obliged to do all the work"
+
+    frau_holle_industrious_girl:
+      name: The Industrious Stepdaughter
+      archetypes: [arc_oppressed_maiden]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_endurance, agency_speech]
+      affects: [affect_grief, affect_fear, affect_longing]
+      traits: [pretty, industrious, bloodied-spinner, bread-helper, apple-shaker, true-servant, golden-returner]
+      evidence: |
+        "Every day the poor girl had to sit by a well, in the highway,
+        and spin and spin till her fingers bled."
+
+    frau_holle_lazy_daughter:
+      name: The Lazy Daughter
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_cunning]
+      affects: [affect_greed, affect_pride]
+      traits: [ugly, idle, false-imitator, task-refuser, short-lived-worker, pitch-marked]
+      evidence: |
+        "The first day she forced herself to work diligently... But on
+        the second day she began to be lazy"
+
+    frau_holle_mother_holle:
+      name: Mother Holle
+      archetypes: [arc_supernatural_donor]
+      agency_modes: [agency_domestic_labor, agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_command]
+      traits: [large-toothed, kind-speaking, bed-shaking-weather-maker, reward-giver, punishment-giver]
+      evidence: |
+        "Only you must take care to make my bed well, and shake it
+        thoroughly till the feathers fly--for then there is snow on the
+        earth. I am Mother Holle."
+
+    frau_holle_speaking_bread:
+      name: The Speaking Bread
+      being_type: being_animated_object
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_command]
+      traits: [oven-bound, overbaked, donor-path-tester]
+      evidence: |
+        "the bread cried out, 'Oh, take me out! take me out! or I shall
+        burn'"
+
+    frau_holle_speaking_apple_tree:
+      name: The Speaking Apple-Tree
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_command]
+      traits: [ripe, shake-requesting, donor-path-tester]
+      evidence: |
+        "a tree covered with apples, which called out to her, 'Oh, shake
+        me! shake me! we apples are all ripe!'"
+
+    frau_holle_cock:
+      name: The Cock by the Well-Side
+      species: sp_bird
+      agency_modes: [agency_speech]
+      traits: [well-side-announcer, golden-girl-singer, pitchy-girl-singer]
+      evidence: |
+        "the cock was standing by the well-side"
+
+  magic_objects:
+
+    obj_frau_holle_bloodied_shuttle:
+      name: The Bloodied Shuttle
+      instance_of: obj_spinning_wheel
+      object_kind: tool
+      attributes:
+        marked_by: frau_holle_industrious_girl
+        function: lost object that opens the well descent
+      evidence: |
+        "the shuttle was marked with her blood... it dropped out of her
+        hand and fell to the bottom."
+
+    obj_frau_holle_bread_shovel:
+      name: The Bread-Shovel
+      object_kind: tool
+      attributes:
+        function: removes the loaves from the oven
+      evidence: |
+        "took out all the loaves one after another with the bread-shovel."
+
+    obj_frau_holle_ripe_apples:
+      name: The Ripe Apples
+      object_kind: food
+      attributes:
+        function: gathered into a heap after the tree is shaken
+      evidence: |
+        "she shook the tree till the apples fell like rain"
+
+    obj_frau_holle_feather_bed:
+      name: Mother Holle's Feather Bed
+      object_kind: material
+      attributes:
+        weather_effect: snow on earth
+      evidence: |
+        "shake it thoroughly till the feathers fly--for then there is
+        snow on the earth."
+
+    obj_frau_holle_gold_rain:
+      name: The Shower of Gold
+      object_kind: treasure
+      attributes:
+        reward_for: true service and industriousness
+      evidence: |
+        "a heavy shower of golden rain fell, and all the gold remained
+        sticking to her"
+
+    obj_frau_holle_pitch_kettle:
+      name: The Kettleful of Pitch
+      object_kind: material
+      attributes:
+        punishment_for: lazy service and refused tasks
+      evidence: |
+        "instead of the gold a big kettleful of pitch was emptied over her."
+
+  locations:
+
+    loc_frau_holle_widow_house:
+      name: The Widow's House
+      instance_of: loc_house
+      evidence: |
+        "be the Cinderella of the house"
+
+    loc_frau_holle_well:
+      name: The Well in the Highway
+      instance_of: loc_well
+      threshold_type: threshold_well
+      evidence: |
+        "Every day the poor girl had to sit by a well, in the highway"
+
+    loc_frau_holle_meadow:
+      name: The Lovely Meadow Beneath the Well
+      instance_of: loc_meadow
+      evidence: |
+        "she was in a lovely meadow where the sun was shining and many
+        thousands of flowers were growing."
+
+    loc_frau_holle_oven:
+      name: The Oven Full of Bread
+      evidence: |
+        "came to a baker's oven full of bread"
+
+    loc_frau_holle_apple_tree:
+      name: The Apple-Tree on the Otherworld Path
+      instance_of: loc_tree
+      evidence: |
+        "came to a tree covered with apples"
+
+    loc_frau_holle_house:
+      name: Mother Holle's Little House
+      instance_of: loc_house
+      evidence: |
+        "At last she came to a little house, out of which an old woman
+        peeped"
+
+    loc_frau_holle_door:
+      name: The Great Return Door
+      threshold_type: threshold_doorway
+      evidence: |
+        "she took her by the hand, and led her to a large door."
+
+    loc_frau_holle_yard:
+      name: The Yard by the Well-Side
+      instance_of: loc_house
+      evidence: |
+        "as she went into the yard the cock was standing by the well-side"
+
+
+classifications:
+
+  world_laws:
+    - law_kindness_to_hidden_donors_rewarded
+    - law_otherworld_labor_manifests_as_weather
+
+  moral_regimes:
+    - moral_kindness_rewarded
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_endurance
+    - agency_speech
+    - agency_social_rank
+
+  affects_driving:
+    - affect_envy
+    - affect_greed
+    - affect_longing
+    - affect_fear
+
+  symbol_numbers:
+    - num_2   # two daughters repeat the same route with opposite conduct
+    - num_3   # lazy daughter's decline over first, second, and third day
+
+  threshold_types:
+    - threshold_well
+    - threshold_doorway
+
+
+propp:
+  - { function: func_villainy, order: 1, actor: frau_holle_widow,
+      scene: "widow favours her idle daughter and forces the stepdaughter to do all work and spin until bloody" }
+  - { function: func_lack, order: 2, actor: frau_holle_industrious_girl,
+      scene: "bloodied shuttle falls into the well and must be recovered" }
+  - { function: func_interdiction, order: 3, actor: frau_holle_widow,
+      scene: "stepmother commands that the girl who dropped the shuttle must fetch it out" }
+  - { function: func_departure, order: 4, actor: frau_holle_industrious_girl,
+      scene: "girl jumps into the well and awakens in the flowering meadow" }
+  - { function: func_donor_test, order: 5, actor: frau_holle_speaking_bread,
+      scene: "bread and apple-tree ask for help on the otherworld path" }
+  - { function: func_donor_test, order: 6, actor: frau_holle_mother_holle,
+      scene: "Mother Holle hires the girl to keep house and shake the feather bed" }
+  - { function: func_magical_agent, order: 7, actor: frau_holle_mother_holle,
+      scene: "true service is rewarded with gold and the returned shuttle" }
+  - { function: func_return, order: 8, actor: frau_holle_industrious_girl,
+      scene: "golden girl returns through the great door to her mother's yard" }
+  - { function: func_false_claims, order: 9, actor: frau_holle_lazy_daughter,
+      scene: "lazy daughter imitates the well descent by pricking herself and throwing in the shuttle" }
+  - { function: func_donor_test, order: 10, actor: frau_holle_lazy_daughter,
+      scene: "she refuses the bread and apple-tree because she will not dirty herself or risk an apple falling" }
+  - { function: func_violation, order: 11, actor: frau_holle_lazy_daughter,
+      scene: "she abandons Mother Holle's bed-making after the first day of forced diligence" }
+  - { function: func_punishment, order: 12, actor: frau_holle_mother_holle,
+      scene: "lazy service is answered with a kettleful of pitch that cannot be removed" }
+  - { function: func_branding, order: 13, actor: frau_holle_cock,
+      scene: "cock announces the golden girl and pitchy girl on their returns" }
+
+
+edges:
+
+  # Oppressed household and well descent
+  - { from: frau_holle_widow, to: frau_holle_industrious_girl, label: OPPRESSES,
+      evidence: "the other, who was a step-daughter, was obliged to do all the work" }
+  - { from: frau_holle_widow, to: frau_holle_lazy_daughter, label: FAVOURS,
+      evidence: "she was much fonder of the ugly and idle one, because she was her own daughter" }
+  - { from: frau_holle_industrious_girl, to: obj_frau_holle_bloodied_shuttle, label: BLOODIES,
+      evidence: "the shuttle was marked with her blood" }
+  - { from: obj_frau_holle_bloodied_shuttle, to: loc_frau_holle_well, label: FALLS_INTO,
+      evidence: "it dropped out of her hand and fell to the bottom." }
+  - { from: frau_holle_widow, to: frau_holle_industrious_girl, label: COMMANDS,
+      evidence: "Since you have let the shuttle fall in, you must fetch it out again." }
+  - { from: frau_holle_industrious_girl, to: loc_frau_holle_well, label: JUMPS_INTO,
+      evidence: "she jumped into the well to get the shuttle." }
+  - { from: loc_frau_holle_well, to: loc_frau_holle_meadow, label: OPENS_TO,
+      evidence: "when she awoke... she was in a lovely meadow" }
+
+  # Kind girl's donor path and service
+  - { from: frau_holle_speaking_bread, to: frau_holle_industrious_girl, label: ASKS_HELP_FROM,
+      evidence: "Oh, take me out! take me out! or I shall burn" }
+  - { from: frau_holle_industrious_girl, to: frau_holle_speaking_bread, label: RESCUES,
+      evidence: "took out all the loaves one after another with the bread-shovel." }
+  - { from: frau_holle_speaking_apple_tree, to: frau_holle_industrious_girl, label: ASKS_HELP_FROM,
+      evidence: "Oh, shake me! shake me! we apples are all ripe!" }
+  - { from: frau_holle_industrious_girl, to: obj_frau_holle_ripe_apples, label: GATHERS,
+      evidence: "went on shaking till they were all down... gathered them into a heap" }
+  - { from: frau_holle_mother_holle, to: frau_holle_industrious_girl, label: HIRES,
+      evidence: "Stay with me; if you will do all the work in the house properly" }
+  - { from: frau_holle_industrious_girl, to: obj_frau_holle_feather_bed, label: SHAKES,
+      evidence: "always shook her bed so vigorously that the feathers flew about like snow-flakes." }
+  - { from: law_otherworld_labor_manifests_as_weather, to: obj_frau_holle_feather_bed, label: GOVERNS,
+      evidence: "for then there is snow on the earth." }
+  - { from: frau_holle_industrious_girl, to: frau_holle_mother_holle, label: LONGS_HOME_FROM,
+      evidence: "I have a longing for home" }
+  - { from: frau_holle_mother_holle, to: obj_frau_holle_gold_rain, label: REWARDS_WITH,
+      evidence: "You shall have that because you have been so industrious" }
+  - { from: obj_frau_holle_gold_rain, to: frau_holle_industrious_girl, label: COVERS,
+      evidence: "all the gold remained sticking to her" }
+  - { from: frau_holle_mother_holle, to: obj_frau_holle_bloodied_shuttle, label: RETURNS,
+      evidence: "at the same time she gave her back the shuttle" }
+
+  # Lazy girl's failed repetition and pitch branding
+  - { from: frau_holle_widow, to: frau_holle_lazy_daughter, label: SENDS_TO_IMITATE,
+      evidence: "she was very anxious to obtain the same good luck for the ugly and lazy daughter." }
+  - { from: frau_holle_lazy_daughter, to: loc_frau_holle_well, label: JUMPS_INTO,
+      evidence: "Then she threw her shuttle into the well, and jumped in after it." }
+  - { from: frau_holle_lazy_daughter, to: frau_holle_speaking_bread, label: REFUSES_HELP,
+      evidence: "As if I had any wish to make myself dirty?" }
+  - { from: frau_holle_lazy_daughter, to: frau_holle_speaking_apple_tree, label: REFUSES_HELP,
+      evidence: "one of you might fall on my head" }
+  - { from: frau_holle_lazy_daughter, to: obj_frau_holle_feather_bed, label: NEGLECTS,
+      evidence: "Neither did she make Mother Holle's bed as she ought" }
+  - { from: frau_holle_mother_holle, to: obj_frau_holle_pitch_kettle, label: PUNISHES_WITH,
+      evidence: "instead of the gold a big kettleful of pitch was emptied over her." }
+  - { from: obj_frau_holle_pitch_kettle, to: frau_holle_lazy_daughter, label: MARKS_PERMANENTLY,
+      evidence: "the pitch stuck fast to her, and could not be got off as long as she lived." }
+  - { from: frau_holle_cock, to: frau_holle_industrious_girl, label: ANNOUNCES,
+      evidence: "Your golden girl's come back to you!" }
+  - { from: frau_holle_cock, to: frau_holle_lazy_daughter, label: ANNOUNCES,
+      evidence: "Your pitchy girl's come back to you!" }

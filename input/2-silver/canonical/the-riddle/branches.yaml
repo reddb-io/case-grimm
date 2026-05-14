@@ -1,0 +1,8 @@
+slug: the-riddle
+khm: 22
+atu: '851'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

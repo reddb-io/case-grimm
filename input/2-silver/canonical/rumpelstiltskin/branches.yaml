@@ -1,0 +1,104 @@
+slug: rumpelstiltskin
+khm: 55
+atu: '500'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg2591-grimm-taylor
+  weight: supplementary
+- book: pg11027-grimm-gruelle
+  weight: supplementary
+- book: pg52521-grimm-olcott
+  weight: supplementary
+- book: pg22555-grimm-eeden-dutch
+  weight: supplementary
+sections:
+- id: opening
+  title: opening
+  canonical:
+    kept: pg5314-grimm-hunt
+    type: notes-only
+    rationale: Mechanical-insert policy forbids invented connective text. Taylor's opening cannot be cleanly inserted between Hunt's sentences without rewriting; instead the details are preserved as ontology-feedstock.
+  branches:
+  - type: addition
+    from: pg2591-grimm-taylor
+    description: 'setting: mill by a stream, beside a wood, in a country far away'
+    text: By the side of a wood, in a country a long way off, ran a fine stream of water; and upon the stream there stood a mill. The miller's house was close by.
+    consequences:
+    - establishes loc_mill, loc_wood, loc_stream as tale-anchor locations
+    - miller becomes spatially-rooted (owns the mill) rather than itinerant
+    plot_breaks: none — purely additive setting
+  - type: addition
+    from: pg2591-grimm-taylor
+    description: miller's daughter is shrewd and clever
+    text: She was, moreover, very shrewd and clever; and the miller was so proud of her.
+    consequences:
+    - daughter gains trait_clever / agency_cunning — implicitly used later in name-guessing
+    - her later silence about how she will spin is reread as strategic, not helpless
+    - shifts agency mode from agency_endurance (passive victim) toward agency_cunning
+    plot_breaks: none — trait is internal
+  - type: addition
+    from: pg2591-grimm-taylor
+    description: miller's boast is motivated by paternal pride, not greed
+    text: the miller was so proud of her, that he one day told the king of the land… that his daughter could spin gold out of straw.
+    consequences:
+    - miller's character becomes flawed-but-loving rather than venal
+    - the bargain economy starts from love-misexpressed, not avarice
+    - softens moral_regime classification of the inciting act
+    plot_breaks: none — internal motivation only
+- id: king-meets-miller
+  title: king meets miller
+  canonical:
+    kept: pg5314-grimm-hunt
+    type: notes-only
+    rationale: Same as d01 — requires connective text. Detail preserved below.
+  branches:
+  - type: addition
+    from: pg2591-grimm-taylor
+    description: king has habit of hunting in the wood near the miller
+    text: the king of the land, who used to come and hunt in the wood
+    consequences:
+    - 'miller''s audience becomes plausible: routine proximity, not exceptional summoning'
+    - king gains habit/agency_social_rank trait active in tale-world
+    - binds king and miller spatially through the wood — same edge of forest where dwarf later sings
+    plot_breaks: none — additive context
+- id: dwarf-appearance
+  title: dwarf appearance
+  canonical:
+    kept: pg5314-grimm-hunt
+    type: rewording
+    rationale: Taylor's 'droll-looking, hobbled' is more vivid but shifts tone toward Victorian children's-book register. Description noted here for the graph layer (character-appearance) rather than folded into prose.
+- id: spinning-song
+  title: spinning song
+  canonical:
+    kept: pg2591-grimm-taylor
+    type: enrichment
+    rationale: 'Structurally significant: in the KHM original German the dwarf utters incantatory speech while spinning. Hunt suppresses it; Taylor preserves it. The song materially establishes that the dwarf''s power operates through speech (paralleling the later naming-as-defeat). This is the most important enrichment in the merge.'
+- id: dwarf-s-fate
+  title: dwarf's fate
+  canonical:
+    kept: pg5314-grimm-hunt
+    type: conflict
+    rationale: Three witnesses (Hunt, Olcott, Dutch) end in self-destruction; two (Taylor, Gruelle) soften for child audiences. ATU 500 canonically ends with the supernatural helper's self-defeat upon being named — this is the type's moral logic, not a stylistic choice. Hunt agrees with the KHM original 1812 text.
+  branches:
+  - type: fork
+    from: pg11027-grimm-gruelle
+    description: dwarf loses a leg and hops away alive, never seen again
+    text: and stamped his right foot so hard in the ground with rage that he could not draw it out again. Then he took hold of his left leg with both his hands, and pulled away so hard that his right came off in the struggle, and he hopped away howling terribly. And from that day to this the Queen has heard no more of her troublesome visitor.
+    consequences:
+    - 'villain survives: the bargain economy is not closed; naming-as-defeat is incomplete'
+    - 'moral_regime shifts: moral_violent_punishment → moral_humiliation (mutilation, not death)'
+    - ATU 500 type-marker (helper destroyed by being named) is weakened — naming exposes but doesn't undo
+    - 'the law_promise_binds_reality becomes asymmetric: the queen escapes, but the supernatural party persists'
+    plot_breaks: the closing rhyme "And from that day to this the Queen has heard no more..." presupposes the dwarf is gone but alive — incompatible with canonical's death.
+  - type: fork
+    from: pg2591-grimm-taylor
+    description: dwarf's foot sticks in the floor; he frees it, the court jeers, he leaves alive
+    text: and dashed his right foot in a rage so deep into the floor, that he was forced to lay hold of it with both hands to pull it out. Then he made the best of his way off, while the nurse laughed and the baby crowed; and all the court jeered at him for having had so much trouble for nothing, and said, “We wish you a very good morning, and a merry feast, Mr RUMPLESTILTSKIN!”
+    consequences:
+    - 'moral_regime shifts: moral_violent_punishment → moral_social_humiliation (public shaming)'
+    - introduces named-court audience (nurse, baby, courtiers) absent in canonical — the queen has witnesses
+    - the dwarf's defeat is communal-comic rather than private-tragic
+    - 'tone register shifts: tale becomes farce rather than parable'
+    plot_breaks: the nurse, baby, and court must be present at the climax — these characters don't exist in the canonical version where the confrontation is private between queen and dwarf.

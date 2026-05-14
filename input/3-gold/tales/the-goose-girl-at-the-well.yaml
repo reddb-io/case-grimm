@@ -1,0 +1,324 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-goose-girl-at-the-well
+khm: 179
+atu: "923"
+atu_name: Love Like Salt
+canonical_source: ../../2-silver/canonical/the-goose-girl-at-the-well/canonical.txt
+title: The Goose-Girl at the Well
+
+
+entities:
+
+  characters:
+
+    goose_well_wise_woman:
+      name: The Old Wise Woman
+      archetypes: [arc_supernatural_donor]
+      being_type: being_fairy
+      agency_modes: [agency_speech, agency_domestic_labor, agency_object_mediation]
+      speech_acts_performed: [speech_command, speech_testimony]
+      traits: [old, mountain-wilderness-dweller, goose-keeper, false-witch-reputation, burden-tester, princess-protector, palace-transformer]
+      evidence: |
+        the old woman was no witch, as people thought, but a wise woman
+
+    goose_well_young_count:
+      name: The Young Count
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_request, speech_testimony]
+      affects: [affect_pity, affect_joy]
+      traits: [handsome, forest-traveller, burden-bearer, emerald-book-carrier, well-witness, recognition-messenger]
+      evidence: |
+        a handsome young man was going through the forest
+
+    goose_well_princess:
+      name: The Lost Goose-Girl Princess
+      archetypes: [arc_youngest_sibling, arc_oppressed_maiden]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_object_mediation]
+      existential_states: [state_hidden_identity, state_disguised]
+      speech_acts_performed: [speech_testimony, speech_request]
+      affects: [affect_grief, affect_love, affect_shame]
+      traits: [youngest-daughter, salt-love-speaker, pearl-weeper, forest-exile, goose-girl, skin-masked, three-year-servant, restored-princess]
+      evidence: |
+        The best food does not please me without salt
+
+    goose_well_king:
+      name: The Repentant King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command]
+      affects: [affect_pride, affect_anger, affect_grief, affect_joy]
+      traits: [father, love-test-giver, salt-misreader, daughter-exiler, later-repentant, searching-parent]
+      evidence: |
+        When the King heard that, he fell into a passion
+
+    goose_well_queen:
+      name: The Grieving Queen
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_grief, affect_love, affect_joy]
+      traits: [mother, daughter-narrator, pearl-recognizer, private-questioner, reunion-weeper]
+      evidence: |
+        the Queen opened her eyes
+
+    goose_well_elder_sisters:
+      name: The Two Elder Sisters
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_testimony]
+      traits: [sugar-love-speaker, dress-love-speaker, kingdom-sharers]
+      evidence: |
+        The eldest spoke
+
+    goose_well_geese:
+      name: The Snow-White Geese
+      species: sp_goose
+      agency_modes: [agency_animal_aid]
+      traits: [flock, wise-woman-protected, cackling-welcomers, possible-enchanted-maidens]
+      evidence: |
+        her flock of geese
+
+    goose_well_night_owl:
+      name: The Old Night-Owl
+      species: sp_bird
+      agency_modes: [agency_speech]
+      traits: [fiery-eyed, threefold-caller, nocturnal-signal]
+      evidence: |
+        It was an old night-owl
+
+  magic_objects:
+
+    obj_goose_well_emerald_book:
+      name: The Little Emerald Book
+      object_kind: token
+      attributes:
+        material: emerald
+        function: carries the pearl that points the queen toward her lost daughter
+      evidence: |
+        a little book into his hand, which was cut out of a single emerald
+
+    obj_goose_well_pearl_tears:
+      name: The Princess's Pearl Tears
+      instance_of: obj_pearl_tears
+      object_kind: treasure
+      attributes:
+        source: princess grief
+        recognition_function: matches the jewels that once fell from the lost daughter's eyes
+      evidence: |
+        not tears fell from her eyes, but pearls and jewels only
+
+    obj_goose_well_skin_mask:
+      name: The Old Skin Mask
+      object_kind: garment
+      attributes:
+        function: hides the princess's true beauty and social identity
+      evidence: |
+        She removed a skin which covered her face
+
+    obj_goose_well_salt_sack:
+      name: The Sack of Salt
+      object_kind: material
+      attributes:
+        function: punitive burden imposed for the salt-love answer
+      evidence: |
+        caused a sack of salt to be bound on the back of the youngest
+
+    obj_goose_well_silken_gown:
+      name: The Princess's Silken Gown
+      object_kind: garment
+      attributes:
+        function: original royal clothing restored at the end of the service term
+      evidence: |
+        put on the silken gown which thou hadst on when thou camest to me
+
+  locations:
+
+    loc_goose_well_mountain_waste:
+      name: The Waste among the Mountains
+      instance_of: loc_wilderness
+      evidence: |
+        a waste place among the mountains
+
+    loc_goose_well_large_forest:
+      name: The Large Forest around the Waste
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        The waste was surrounded by a large forest
+
+    loc_goose_well_wise_woman_house:
+      name: The Wise Woman's Little House
+      instance_of: loc_house
+      evidence: |
+        there had a little house
+
+    loc_goose_well_meadow:
+      name: The Meadow by the House
+      instance_of: loc_meadow
+      evidence: |
+        stretched a green meadow
+
+    loc_goose_well_brook:
+      name: The Clear Brook
+      instance_of: loc_brook
+      evidence: |
+        through the midst of it rippled a clear brook
+
+    loc_goose_well_royal_palace:
+      name: The Royal Palace
+      instance_of: loc_castle
+      evidence: |
+        led into the royal palace
+
+    loc_goose_well_moonlit_well:
+      name: The Moonlit Well
+      instance_of: loc_well
+      threshold_type: threshold_well
+      evidence: |
+        At last she came to a well
+
+    loc_goose_well_transformed_palace:
+      name: The Transformed Palace
+      instance_of: loc_castle
+      evidence: |
+        the little house had changed into a splendid palace
+
+
+classifications:
+
+  world_laws:
+    - law_salt_love_misread_exiles_true_child
+    - law_pearl_tears_authenticate_lost_child
+    - law_kindness_to_hidden_donors_rewarded
+
+  moral_regimes:
+    - moral_restorative
+    - moral_humbling_reform
+    - moral_kindness_rewarded
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_domestic_labor
+    - agency_object_mediation
+
+  affects_driving:
+    - affect_grief
+    - affect_pity
+    - affect_pride
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_forest
+    - threshold_well
+
+
+propp:
+  - { function: func_donor_encounter, order: 1, actor: goose_well_wise_woman,
+      scene: "the count meets the feared old woman gathering grass and fruit in the forest" }
+  - { function: func_kindness_test, order: 2, actor: goose_well_young_count,
+      scene: "the count agrees to carry the old woman's burden out of compassion" }
+  - { function: func_burden_ordeal, order: 3, actor: goose_well_wise_woman,
+      scene: "the magical burden sticks fast and grows heavier until he reaches the house" }
+  - { function: func_donor_reward, order: 4, actor: goose_well_wise_woman,
+      scene: "the old woman gives him a little emerald book that brings good fortune" }
+  - { function: func_recognition_token, order: 5, actor: obj_goose_well_pearl_tears,
+      scene: "the queen sees the pearl in the emerald book and recognizes her lost daughter's tears" }
+  - { function: func_backstory_love_test, order: 6, actor: goose_well_king,
+      scene: "the king asks his daughters how much they love him and rejects the youngest's salt answer" }
+  - { function: func_exile, order: 7, actor: goose_well_king,
+      scene: "the youngest is sent into the wild forest with a sack of salt on her back" }
+  - { function: func_hidden_service, order: 8, actor: goose_well_princess,
+      scene: "the lost princess spends three years tending geese under a skin disguise" }
+  - { function: func_moonlit_revelation, order: 9, actor: goose_well_princess,
+      scene: "at the well she removes the skin, washes, and reveals her true beauty" }
+  - { function: func_search_and_discovery, order: 10, actor: goose_well_young_count,
+      scene: "the count witnesses the transformation and tells the king and queen" }
+  - { function: func_accusation_and_restoration, order: 11, actor: goose_well_wise_woman,
+      scene: "the wise woman rebukes the parents, calls out the daughter, and restores the family" }
+  - { function: func_magical_reward, order: 12, actor: goose_well_wise_woman,
+      scene: "the wise woman gives the pearl tears and house as wages, then the house becomes a palace" }
+
+
+edges:
+
+  - { from: goose_well_wise_woman, to: goose_well_geese, label: KEEPS_FLOCK_OF,
+      evidence: "lived with her flock of geese" }
+  - { from: goose_well_wise_woman, to: loc_goose_well_mountain_waste, label: LIVES_IN,
+      evidence: "a waste place among the mountains" }
+  - { from: loc_goose_well_mountain_waste, to: loc_goose_well_large_forest, label: SURROUNDED_BY,
+      evidence: "The waste was surrounded by a large forest" }
+  - { from: goose_well_wise_woman, to: agency_domestic_labor, label: GATHERS_FOOD_FOR_GEESE_THROUGH,
+      evidence: "collected grass for her geese" }
+  - { from: goose_well_wise_woman, to: being_witch, label: MISRECOGNIZED_AS,
+      evidence: "She has claws beneath her gloves; she is a witch" }
+  - { from: goose_well_young_count, to: goose_well_wise_woman, label: OFFERS_COMPASSIONATE_HELP_TO,
+      evidence: "I will take your bundle" }
+  - { from: goose_well_wise_woman, to: goose_well_young_count, label: BINDS_BURDEN_TO,
+      evidence: "it stuck as fast to his back as if it grew there" }
+  - { from: goose_well_wise_woman, to: goose_well_young_count, label: RIDES_ON_BURDEN_OF,
+      evidence: "jumped on to the bundle and seated herself on the top of it" }
+  - { from: goose_well_wise_woman, to: obj_goose_well_emerald_book, label: GIVES_AS_WAGES,
+      evidence: "here is something else for thee" }
+  - { from: obj_goose_well_emerald_book, to: goose_well_young_count, label: BRINGS_GOOD_FORTUNE_TO,
+      evidence: "it will bring thee good fortune" }
+  - { from: goose_well_young_count, to: loc_goose_well_royal_palace, label: CARRIES_TOKEN_TO,
+      evidence: "led into the royal palace" }
+  - { from: goose_well_young_count, to: obj_goose_well_emerald_book, label: LAYS_BEFORE_QUEEN,
+      evidence: "laid it at the Queen’s feet" }
+  - { from: goose_well_queen, to: obj_goose_well_pearl_tears, label: RECOGNIZES_DAUGHTER_BY,
+      evidence: "a pearl lay therein, of exactly the same kind" }
+  - { from: goose_well_princess, to: obj_goose_well_pearl_tears, label: WEEPS_AS,
+      evidence: "not tears fell from her eyes, but pearls and jewels only" }
+  - { from: goose_well_king, to: goose_well_princess, label: TESTS_LOVE_OF,
+      evidence: "how much dost thou love me?" }
+  - { from: goose_well_princess, to: goose_well_king, label: LOVES_LIKE_SALT,
+      evidence: "therefore I love my father like salt" }
+  - { from: goose_well_king, to: goose_well_princess, label: EXILES_WITH_SALT,
+      evidence: "caused a sack of salt to be bound on the back of the youngest" }
+  - { from: goose_well_princess, to: obj_goose_well_pearl_tears, label: STREWS_ROAD_WITH,
+      evidence: "The whole road was strewn with the pearls" }
+  - { from: law_salt_love_misread_exiles_true_child, to: goose_well_princess, label: DRIVES_EXILE_OF,
+      evidence: "If thou lovest me like salt, thy love shall also be repaid thee with salt" }
+  - { from: law_pearl_tears_authenticate_lost_child, to: goose_well_queen, label: STIRS_MATERNAL_RECOGNITION_IN,
+      evidence: "how the sight of it stirred my heart" }
+  - { from: goose_well_king, to: goose_well_princess, label: REPENTS_SEVERITY_TOWARD,
+      evidence: "The King soon afterwards repented of his great severity" }
+  - { from: goose_well_wise_woman, to: goose_well_princess, label: SHELTERS_FOR_THREE_YEARS,
+      evidence: "it is three years to-day since thou camest to me" }
+  - { from: goose_well_princess, to: goose_well_geese, label: TENDS,
+      evidence: "for three years she has had to tend the geese" }
+  - { from: goose_well_night_owl, to: goose_well_wise_woman, label: SIGNALS_TIME_TO,
+      evidence: "cried, “Uhu!” three times" }
+  - { from: goose_well_princess, to: loc_goose_well_moonlit_well, label: GOES_TO_WASH_AT,
+      evidence: "At last she came to a well" }
+  - { from: goose_well_princess, to: obj_goose_well_skin_mask, label: REMOVES_DISGUISE,
+      evidence: "She removed a skin which covered her face" }
+  - { from: obj_goose_well_skin_mask, to: goose_well_princess, label: CONCEALS_TRUE_APPEARANCE_OF,
+      evidence: "in an instant the maiden had put on the old skin" }
+  - { from: goose_well_young_count, to: goose_well_princess, label: WITNESSES_TRUE_FORM_OF,
+      evidence: "she was more beautiful than any one whom he had ever seen" }
+  - { from: goose_well_young_count, to: goose_well_king, label: REPORTS_WELL_REVELATION_TO,
+      evidence: "The count told them what wonderful things he had seen by the well" }
+  - { from: goose_well_young_count, to: goose_well_queen, label: REPORTS_WELL_REVELATION_TO,
+      evidence: "The count told them what wonderful things he had seen by the well" }
+  - { from: goose_well_wise_woman, to: goose_well_king, label: REBUKES_UNJUST_EXILE_BY,
+      evidence: "unjustly driven away your child" }
+  - { from: goose_well_wise_woman, to: goose_well_princess, label: CALLS_OUT_RESTORED,
+      evidence: "Come out, my little daughter" }
+  - { from: goose_well_princess, to: goose_well_king, label: REUNITES_WITH,
+      evidence: "fell on their necks and kissed them" }
+  - { from: goose_well_princess, to: goose_well_queen, label: REUNITES_WITH,
+      evidence: "fell on their necks and kissed them" }
+  - { from: goose_well_wise_woman, to: obj_goose_well_pearl_tears, label: GIVES_AS_WAGES,
+      evidence: "I give her the tears that she has wept on your account" }
+  - { from: goose_well_wise_woman, to: loc_goose_well_wise_woman_house, label: GIVES_AS_PAYMENT,
+      evidence: "I give her my little house as payment for her services" }
+  - { from: loc_goose_well_wise_woman_house, to: loc_goose_well_transformed_palace, label: TRANSFORMS_INTO,
+      evidence: "the little house had changed into a splendid palace" }
+  - { from: goose_well_wise_woman, to: being_fairy, label: IDENTIFIED_AS_WISE_WOMAN_NOT_WITCH,
+      evidence: "the old woman was no witch, as people thought, but a wise woman" }

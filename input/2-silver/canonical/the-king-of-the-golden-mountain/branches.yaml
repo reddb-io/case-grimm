@@ -1,0 +1,10 @@
+slug: the-king-of-the-golden-mountain
+khm: 92
+atu: '400'
+base: pg5314-grimm-hunt
+sources:
+- book: pg2591-grimm-taylor
+  weight: supplementary
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

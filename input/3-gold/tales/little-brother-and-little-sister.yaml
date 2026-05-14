@@ -1,0 +1,361 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: little-brother-and-little-sister
+khm: 11
+atu: '450'
+atu_name: Little Brother and Little Sister
+canonical_source: ../../2-silver/canonical/little-brother-and-little-sister/canonical.txt
+title: Little Brother and Little Sister
+
+
+entities:
+
+  characters:
+
+    little_brother_human:
+      name: Little Brother (human form)
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_curse, transform_animal_human]
+      affects: [affect_grief]
+      traits: [abused-child, thirsty, impulsive, sister-bonded]
+      evidence: |
+        "Since our mother died we have had no happiness; our
+         step-mother beats us every day"
+
+    little_brother_roebuck:
+      name: Little Brother (roebuck form)
+      species: sp_deer
+      agency_modes: [agency_endurance]
+      existential_states: [state_cursed, state_transformed, state_hidden_identity]
+      transformations: [transform_curse, transform_animal_human]
+      affects: [affect_loyalty, affect_grief]
+      traits: [golden-gartered, hunt-drawn, pass-word-knower, palace-cherished]
+      evidence: |
+        "as soon as the first drops touched his lips he lay there a
+         young roebuck."
+
+    little_sister:
+      name: Little Sister / True Queen
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_animal_aid]
+      existential_states: [state_liminal_dead]
+      affects: [affect_loyalty, affect_maternal_love, affect_grief]
+      traits: [protective-sister, forest-housekeeper, true-bride, murdered-mother, night-visitor]
+      evidence: |
+        "Be quiet, dear little roe, I will never, never leave you."
+
+    little_brother_stepmother:
+      name: The Wicked Stepmother / Old Witch
+      archetypes: [arc_cruel_stepmother]
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_speech, agency_cunning, agency_violence]
+      speech_acts_performed: [speech_curse, speech_lie]
+      affects: [affect_envy]
+      traits: [abusive, water-bewitcher, queen-murderer, false-bride-maker]
+      evidence: |
+        "the wicked step-mother was a witch... and had bewitched all
+         the brooks in the forest."
+
+    little_brother_false_queen:
+      name: The Witch's Daughter (one-eyed false queen)
+      archetypes: [arc_false_bride]
+      species: sp_human
+      agency_modes: [agency_cunning]
+      existential_states: [state_disguised, state_hidden_identity]
+      affects: [affect_envy]
+      traits: [one-eyed, ugly-as-night, substituted-in-bed, impostor]
+      evidence: |
+        "She gave her too the shape and the look of the Queen, only
+         she could not make good the lost eye."
+
+    little_brother_king:
+      name: The Hunting King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_violence, agency_speech]
+      affects: [affect_love_at_first_sight, affect_grief]
+      traits: [hunter, pass-word-hearer, bride-finder, recognition-agent, judge]
+      evidence: |
+        "there stood a maiden more lovely than any he had ever seen"
+
+    little_brother_huntsman:
+      name: The Huntsman Who Finds the Cottage
+      species: sp_human
+      agency_modes: [agency_endurance]
+      traits: [tracker, overhearer, informer]
+      evidence: |
+        "a hunter crept after him to the cottage and heard how he said,
+         'My little sister, let me in'"
+
+    little_brother_nurse:
+      name: The Nurse (night witness)
+      archetypes: [arc_envious_witness]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      traits: [wakeful, sole-witness, reports-revenant]
+      evidence: |
+        "the nurse, who was sitting in the nursery by the cradle, and
+         who was the only person awake"
+
+    little_brother_child:
+      name: The Queen's Little Boy
+      species: sp_human
+      traits: [newborn, nursed-by-returning-mother]
+      evidence: |
+        "the Queen had a pretty little boy"
+
+    little_brother_huntsmen_collective:
+      name: The King's Huntsmen
+      species: sp_human
+      agency_modes: [agency_violence]
+      traits: [hunters, pursuers, accidental-wounders]
+      evidence: |
+        "The King and the huntsmen saw the pretty creature, and started
+         after him"
+
+  magic_objects:
+
+    obj_golden_garter_roebuck:
+      name: Little Sister's Golden Garter (roebuck collar)
+      object_kind: garment
+      attributes:
+        function: marks enchanted roebuck as beloved kin, not wild quarry
+      evidence: |
+        "she untied her golden garter and put it round the roebuck's neck"
+
+    obj_rush_cord_roebuck:
+      name: The Rush Cord
+      object_kind: tool
+      attributes:
+        function: leash binding sister and roebuck in exile
+      evidence: |
+        "she plucked rushes and wove them into a soft cord"
+
+    obj_deadly_bath_fire:
+      name: The Deadly Bath Fire
+      object_kind: material
+      attributes:
+        function: suffocates the true queen in the bath-room
+      evidence: |
+        "in the bath-room they had made a fire of such deadly heat that
+         the beautiful young Queen was soon suffocated."
+
+  locations:
+
+    loc_forest_little_brother:
+      name: The Forest of Flight and Hunt
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "In the evening they came to a large forest"
+
+    loc_hollow_tree_little_brother:
+      name: The Hollow Tree (first refuge)
+      instance_of: loc_forest
+      attributes:
+        function: shelter for the fleeing children
+      evidence: |
+        "they lay down in a hollow tree and fell asleep."
+
+    loc_first_brook_tiger:
+      name: The First Bewitched Brook (tiger water)
+      instance_of: loc_brook
+      evidence: |
+        "Who drinks of me will be a tiger; who drinks of me will be a tiger."
+
+    loc_second_brook_wolf:
+      name: The Second Bewitched Brook (wolf water)
+      instance_of: loc_brook
+      evidence: |
+        "Who drinks of me will be a wolf; who drinks of me will be a wolf."
+
+    loc_third_brook_roebuck:
+      name: The Third Bewitched Brook (roebuck water)
+      instance_of: loc_brook
+      evidence: |
+        "Who drinks of me will be a roebuck; who drinks of me will be a roebuck."
+
+    loc_cottage_little_brother:
+      name: The Empty Forest Cottage
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        "they came at last to a little house... as it was empty, she
+         thought, 'We can stay here and live.'"
+
+    loc_palace_little_brother:
+      name: The King's Palace
+      instance_of: loc_castle
+      evidence: |
+        "The King took the lovely maiden upon his horse and carried her
+         to his palace"
+
+    loc_palace_garden_roebuck:
+      name: The Palace Garden (roebuck's royal enclosure)
+      instance_of: loc_garden
+      evidence: |
+        "the roebuck was tended and cherished, and ran about in the
+         palace-garden."
+
+    loc_bathroom_murder:
+      name: The Deadly Bath-Room
+      instance_of: loc_house
+      evidence: |
+        "they carried the weakly Queen into the bath-room"
+
+    loc_nursery_night_visits:
+      name: The Nursery of the Night Visits
+      instance_of: loc_house
+      evidence: |
+        "the nurse... sitting in the nursery by the cradle"
+
+
+classifications:
+
+  world_laws:
+    - law_enchanted_water_transforms
+    - law_curse_requires_counter_condition
+
+  moral_regimes:
+    - moral_restorative
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_cunning
+    - agency_social_rank
+
+  affects_driving:
+    - affect_loyalty
+    - affect_maternal_love
+    - affect_envy
+    - affect_grief
+
+  symbol_numbers:
+    - num_2   # sibling pair; witch/daughter pair; two kin cared for by queen (child and roe)
+    - num_3   # three brooks, three hunts, three night visits
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_absentation, order: 1, actor: little_brother_human,
+      scene: "abused siblings leave home for the wide world" }
+  - { function: func_villainy, order: 2, actor: little_brother_stepmother,
+      scene: "witch-stepmother bewitches the brooks in the forest" }
+  - { function: func_interdiction, order: 3, actor: little_sister,
+      scene: "sister warns brother not to drink tiger and wolf water" }
+  - { function: func_violation, order: 4, actor: little_brother_human,
+      scene: "brother drinks from third brook and becomes a roebuck" }
+  - { function: func_departure, order: 5, actor: little_sister,
+      scene: "sister leads the roebuck deeper into the forest and keeps house" }
+  - { function: func_donor_test, order: 6, actor: little_brother_roebuck,
+      scene: "roebuck repeatedly asks to join the royal hunt and return by pass-word" }
+  - { function: func_branding, order: 7, actor: little_brother_huntsman,
+      scene: "wounded roebuck reveals the cottage and pass-word to the huntsman" }
+  - { function: func_wedding, order: 8, actor: little_brother_king,
+      scene: "king uses pass-word, finds sister, and marries her with the roebuck included" }
+  - { function: func_villainy, order: 9, actor: little_brother_stepmother,
+      scene: "witch suffocates true queen and installs her one-eyed daughter as false queen" }
+  - { function: func_return, order: 10, actor: little_sister,
+      scene: "true queen returns at night to nurse child and care for roebuck" }
+  - { function: func_recognition, order: 11, actor: little_brother_king,
+      scene: "king watches, recognises the returning queen, and she receives life again" }
+  - { function: func_punishment, order: 12, actor: little_brother_stepmother,
+      scene: "false queen is torn by wild beasts; witch is burned" }
+  - { function: func_liquidation, order: 13, actor: little_brother_roebuck,
+      scene: "when witch burns, roebuck regains human form and siblings live happily" }
+
+
+edges:
+
+  # Flight from abuse
+  - { from: little_brother_stepmother, to: little_brother_human, label: ABUSES,
+      evidence: "our step-mother beats us every day" }
+  - { from: little_brother_stepmother, to: little_sister, label: ABUSES,
+      evidence: "if we come near her she kicks us away with her foot." }
+  - { from: little_brother_human, to: little_sister, label: FLEES_WITH,
+      evidence: "Come, we will go forth together into the wide world." }
+  - { from: little_brother_human, to: loc_forest_little_brother, label: FLEES_TO,
+      evidence: "In the evening they came to a large forest" }
+
+  # Bewitched water
+  - { from: little_brother_stepmother, to: loc_first_brook_tiger, label: ENCHANTS,
+      evidence: "had bewitched all the brooks in the forest." }
+  - { from: little_brother_stepmother, to: loc_second_brook_wolf, label: ENCHANTS,
+      evidence: "had bewitched all the brooks in the forest." }
+  - { from: little_brother_stepmother, to: loc_third_brook_roebuck, label: ENCHANTS,
+      evidence: "had bewitched all the brooks in the forest." }
+  - { from: loc_first_brook_tiger, to: little_brother_human, label: THREATENS_TRANSFORMATION,
+      evidence: "Who drinks of me will be a tiger" }
+  - { from: loc_second_brook_wolf, to: little_brother_human, label: THREATENS_TRANSFORMATION,
+      evidence: "Who drinks of me will be a wolf" }
+  - { from: loc_third_brook_roebuck, to: little_brother_roebuck, label: TRANSFORMS_INTO,
+      evidence: "as soon as the first drops touched his lips he lay there a young roebuck." }
+  - { from: little_brother_human, to: little_brother_roebuck, label: TRANSFORMS_INTO,
+      evidence: "he lay there a young roebuck." }
+
+  # Sister keeps the enchanted brother
+  - { from: little_sister, to: little_brother_roebuck, label: PROMISES_TO,
+      evidence: "I will never, never leave you." }
+  - { from: little_sister, to: obj_golden_garter_roebuck, label: BINDS_WITH,
+      evidence: "put it round the roebuck's neck" }
+  - { from: little_sister, to: obj_rush_cord_roebuck, label: LEADS_WITH,
+      evidence: "With this she tied the little beast and led it on" }
+  - { from: little_sister, to: loc_cottage_little_brother, label: KEEPS_HOUSE_AT,
+      evidence: "We can stay here and live." }
+  - { from: little_sister, to: little_brother_roebuck, label: CARES_FOR,
+      evidence: "brought tender grass for the roe, who ate out of her hand" }
+
+  # Hunt and royal marriage
+  - { from: little_brother_roebuck, to: little_sister, label: ASKS_RELEASE_FROM,
+      evidence: "let me be off to the hunt, I cannot bear it any longer" }
+  - { from: little_sister, to: little_brother_roebuck, label: REQUIRES_PASSWORD,
+      evidence: "knock and say, 'My little sister, let me in!'" }
+  - { from: little_brother_huntsmen_collective, to: little_brother_roebuck, label: WOUNDS,
+      evidence: "one of them wounded him a little in the foot" }
+  - { from: little_brother_huntsman, to: little_brother_king, label: REVEALS_TO,
+      evidence: "went to the King and told him what he had seen and heard." }
+  - { from: little_brother_king, to: little_sister, label: ENTERS_BY_PASSWORD,
+      evidence: "he knocked and called out, 'Dear little sister, let me in.'" }
+  - { from: little_brother_king, to: little_sister, label: MARRIES,
+      evidence: "Will you go with me to my palace and be my dear wife?" }
+  - { from: little_sister, to: little_brother_roebuck, label: BRINGS_TO_PALACE,
+      evidence: "the little roe must go with me, I cannot leave him." }
+
+  # Murder and substitution
+  - { from: little_brother_stepmother, to: little_sister, label: MURDERS,
+      attributes: { instrument: obj_deadly_bath_fire },
+      evidence: "the beautiful young Queen was soon suffocated." }
+  - { from: little_brother_stepmother, to: little_brother_false_queen, label: DISGUISES_AS,
+      evidence: "She gave her too the shape and the look of the Queen" }
+  - { from: little_brother_false_queen, to: little_sister, label: SUBSTITUTES_FOR,
+      evidence: "laid her in bed in place of the Queen." }
+  - { from: little_brother_stepmother, to: little_brother_king, label: DECEIVES,
+      evidence: "For your life leave the curtains closed; the Queen ought not to see the light yet" }
+
+  # Night returns and recognition
+  - { from: little_sister, to: little_brother_child, label: NURSES,
+      evidence: "She took the child out of the cradle, laid it on her arm, and suckled it." }
+  - { from: little_sister, to: little_brother_roebuck, label: CARES_FOR,
+      evidence: "went into the corner where it lay, and stroked its back." }
+  - { from: little_brother_nurse, to: little_brother_king, label: REVEALS_TO,
+      evidence: "went to the King and told him all." }
+  - { from: little_brother_king, to: little_sister, label: RECOGNIZES,
+      evidence: "You can be none other than my dear wife." }
+  - { from: little_sister, to: little_brother_king, label: REVEALS_TO,
+      evidence: "she told the King the evil deed which the wicked witch and her daughter had been guilty of" }
+
+  # Punishment and release
+  - { from: little_brother_king, to: little_brother_false_queen, label: PUNISHES,
+      evidence: "The daughter was taken into the forest where she was torn to pieces by wild beasts" }
+  - { from: little_brother_king, to: little_brother_stepmother, label: PUNISHES,
+      evidence: "the witch was cast into the fire and miserably burnt." }
+  - { from: little_brother_stepmother, to: little_brother_roebuck, label: CURSE_ENDS_WITH_DEATH,
+      evidence: "as soon as she was burnt the roebuck changed his shape" }
+  - { from: little_brother_roebuck, to: little_brother_human, label: RESTORES_TO_HUMAN,
+      evidence: "the roebuck changed his shape, and received his human form again" }

@@ -1,0 +1,296 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-nixie-of-the-mill-pond
+khm: 181
+atu: "316"
+atu_name: The Nix of the Mill-Pond
+canonical_source: ../../2-silver/canonical/the-nixie-of-the-mill-pond/canonical.txt
+title: The Nixie of the Mill-Pond
+
+
+entities:
+
+  characters:
+
+    mill_pond_miller:
+      name: The Miller
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_bargain, speech_promise, speech_warning]
+      affects: [affect_fear, affect_grief]
+      traits: [formerly-prosperous, ruined, distressed, deceived-bargainer, anxious-father, water-warning-giver]
+      evidence: |
+        There was once upon a time a miller
+
+    mill_pond_millers_wife:
+      name: The Miller's Wife
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_joy, affect_grief]
+      traits: [mother, childbirth-announced, prosperity-shadowed, debt-bearer]
+      evidence: |
+        his wife had given birth to a little boy
+
+    mill_pond_nix:
+      name: The Nix of the Mill-Pond
+      being_type: being_water_nix
+      agency_modes: [agency_speech, agency_violence, agency_object_mediation]
+      speech_acts_performed: [speech_bargain, speech_promise]
+      affects: [affect_greed]
+      traits: [beautiful-water-woman, pond-dweller, sweet-voiced, cunning-bargainer, child-debt-collector, underwater-captor, flood-pursuer]
+      evidence: |
+        the Nix of the Mill-pond
+
+    mill_pond_huntsman:
+      name: The Miller's Son / Huntsman
+      species: sp_human
+      agency_modes: [agency_violence, agency_endurance, agency_music, agency_domestic_labor]
+      existential_states: [state_bound_by_promise, state_transformed]
+      transformations: [transform_animal_human]
+      affects: [affect_love, affect_longing, affect_grief]
+      traits: [promised-newborn, excellent-huntsman, beloved-husband, water-captive, half-restored, frog-transformed, lost-shepherd, flute-player, recognized-spouse]
+      evidence: |
+        The boy grew up to be a youth and was apprenticed to a huntsman
+
+    mill_pond_huntsmans_wife:
+      name: The Huntsman's Wife
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_object_mediation, agency_music]
+      transformations: [transform_animal_human]
+      affects: [affect_love, affect_loyalty, affect_grief, affect_longing, affect_fear]
+      traits: [true-hearted, beloved-wife, pond-vigil-keeper, dream-follower, golden-gift-ritualist, toad-transformed, lost-shepherdess, flute-air-recognizer]
+      evidence: |
+        a beautiful and true-hearted maiden
+
+    mill_pond_wise_woman:
+      name: The Old Wise Woman
+      archetypes: [arc_supernatural_donor]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_command, speech_promise]
+      traits: [white-haired, lonely-cottage-dweller, dream-revealed, golden-object-donor, rescue-instructor, emergency-transformer]
+      evidence: |
+        there sat an old woman with white hair
+
+    mill_pond_roe:
+      name: The Roe / Stag
+      species: sp_deer
+      agency_modes: [agency_animal_aid]
+      traits: [chased, pond-neighbourhood-lure, shot-animal]
+      evidence: |
+        the huntsman was chasing a roe
+
+  magic_objects:
+
+    obj_mill_pond_golden_comb:
+      name: The Golden Comb
+      object_kind: tool
+      attributes:
+        function: first full-moon offering that raises the captive's head
+      evidence: |
+        Here is a golden comb for thee
+
+    obj_mill_pond_golden_flute:
+      name: The Golden Flute
+      object_kind: instrument
+      attributes:
+        function: second full-moon offering that raises the captive to half his body
+      evidence: |
+        The old woman gave her a golden flute
+
+    obj_mill_pond_golden_spinning_wheel:
+      name: The Golden Spinning-Wheel
+      instance_of: obj_spinning_wheel
+      object_kind: tool
+      attributes:
+        function: third full-moon offering that restores the captive's whole body
+      evidence: |
+        the wise woman gave her a golden spinning-wheel
+
+    obj_mill_pond_hunting_pouch:
+      name: The Hunting-Pouch on the Shore
+      object_kind: token
+      attributes:
+        function: absence-token confirming the huntsman's seizure by the nix
+      evidence: |
+        she found his hunting-pouch lying on the shore
+
+  locations:
+
+    loc_mill_pond_mill:
+      name: The Mill
+      instance_of: loc_mill
+      evidence: |
+        the mill in which he lived
+
+    loc_mill_pond_pond:
+      name: The Mill-Pond
+      instance_of: loc_pond
+      evidence: |
+        the dangerous mill-pond
+
+    loc_mill_pond_water_depths:
+      name: The Nix's Water Depths
+      instance_of: loc_pond
+      evidence: |
+        drew him quickly down under the waves
+
+    loc_mill_pond_mountain:
+      name: The Dream Mountain
+      instance_of: loc_mountain
+      evidence: |
+        climbing upwards between great masses of rock
+
+    loc_mill_pond_wise_cottage:
+      name: The Wise Woman's Cottage
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        stood a pretty cottage
+
+    loc_mill_pond_green_meadow:
+      name: The Green Meadow by the Cottage
+      instance_of: loc_meadow
+      evidence: |
+        on a green meadow
+
+    loc_mill_pond_strange_pastures:
+      name: The Strange Fields and Forests
+      instance_of: loc_forest
+      evidence: |
+        through field and forest
+
+
+classifications:
+
+  world_laws:
+    - law_promise_binds_reality
+    - law_full_moon_golden_gifts_raise_water_captive_by_degrees
+    - law_voice_recognizes_forgotten_bride
+
+  moral_regimes:
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_endurance
+    - agency_speech
+    - agency_music
+
+  affects_driving:
+    - affect_fear
+    - affect_love
+    - affect_loyalty
+    - affect_grief
+    - affect_longing
+
+  symbol_numbers:
+    - num_3
+    - num_2
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_misfortune, order: 1, actor: mill_pond_miller,
+      scene: "the miller's prosperity decreases until he is full of care" }
+  - { function: func_supernatural_bargain, order: 2, actor: mill_pond_nix,
+      victim: mill_pond_miller,
+      scene: "the nix promises wealth for the young thing just born in the house" }
+  - { function: func_unwitting_promise, order: 3, actor: mill_pond_miller,
+      beneficiary: mill_pond_nix,
+      scene: "the miller promises, thinking the newborn thing must be a puppy or kitten" }
+  - { function: func_child_debt_revealed, order: 4, actor: mill_pond_millers_wife,
+      victim: mill_pond_huntsman,
+      scene: "the birth of a son reveals the bargain's true cost" }
+  - { function: func_prohibition, order: 5, actor: mill_pond_miller,
+      beneficiary: mill_pond_huntsman,
+      scene: "the father warns his son never to touch the water" }
+  - { function: func_seizure, order: 6, actor: mill_pond_nix,
+      victim: mill_pond_huntsman,
+      scene: "the nix seizes the grown huntsman when he washes his hands in the pond" }
+  - { function: func_spouse_quest, order: 7, actor: mill_pond_huntsmans_wife,
+      scene: "the wife keeps vigil at the pond and follows a dream to the wise woman" }
+  - { function: func_threefold_ransom, order: 8, actor: mill_pond_huntsmans_wife,
+      beneficiary: mill_pond_huntsman,
+      scene: "golden comb, flute, and spinning-wheel raise the husband from the water by degrees" }
+  - { function: func_flight_from_flood, order: 9, actor: mill_pond_huntsman,
+      beneficiary: mill_pond_huntsmans_wife,
+      scene: "the restored couple flee from the pond's rising flood" }
+  - { function: func_protective_transformation, order: 10, actor: mill_pond_wise_woman,
+      beneficiary: mill_pond_huntsman,
+      scene: "the old woman transforms the fugitives into frog and toad so the flood cannot destroy them" }
+  - { function: func_separation, order: 11, actor: mill_pond_huntsman,
+      victim: mill_pond_huntsmans_wife,
+      scene: "the flood tears the transformed spouses apart into distant lands" }
+  - { function: func_recognition, order: 12, actor: mill_pond_huntsman,
+      beneficiary: mill_pond_huntsmans_wife,
+      scene: "the sorrowful flute air under the full moon restores mutual recognition" }
+
+
+edges:
+
+  - { from: mill_pond_miller, to: loc_mill_pond_mill, label: LIVES_IN,
+      evidence: "the mill in which he lived" }
+  - { from: mill_pond_miller, to: affect_grief, label: SUFFERS_LOST_PROSPERITY,
+      evidence: "full of care" }
+  - { from: mill_pond_nix, to: loc_mill_pond_pond, label: RISES_FROM,
+      evidence: "rising slowly out of the water" }
+  - { from: mill_pond_nix, to: mill_pond_miller, label: OFFERS_WEALTH_FOR_NEWBORN,
+      evidence: "I will make thee richer and happier" }
+  - { from: mill_pond_miller, to: mill_pond_nix, label: PROMISES_UNWITTING_CHILD_DEBT,
+      evidence: "he promised her what she desired" }
+  - { from: mill_pond_miller, to: law_promise_binds_reality, label: BINDS_HOUSEHOLD_BY_PROMISE,
+      evidence: "what kind of a promise he had given to the nix" }
+  - { from: mill_pond_millers_wife, to: mill_pond_huntsman, label: GIVES_BIRTH_TO,
+      evidence: "given birth to a little boy" }
+  - { from: mill_pond_nix, to: mill_pond_miller, label: RESTORES_PROSPERITY_AFTER_BARGAIN,
+      evidence: "prosperity again returned to the miller’s house" }
+  - { from: mill_pond_miller, to: mill_pond_huntsman, label: WARNS_AGAINST_WATER_TOUCH,
+      evidence: "if thou dost but touch the water" }
+  - { from: mill_pond_huntsman, to: mill_pond_roe, label: CHASES_AND_SHOOTS,
+      evidence: "the huntsman was chasing a roe" }
+  - { from: mill_pond_huntsman, to: loc_mill_pond_pond, label: WASHES_BLOOD_STAINED_HANDS_IN,
+      evidence: "to wash his blood-stained hands" }
+  - { from: mill_pond_nix, to: mill_pond_huntsman, label: SEIZES_AND_DRAWS_UNDER_WAVES,
+      evidence: "drew him quickly down under the waves" }
+  - { from: mill_pond_huntsmans_wife, to: obj_mill_pond_hunting_pouch, label: FINDS_ABSENCE_TOKEN,
+      evidence: "hunting-pouch lying on the shore" }
+  - { from: mill_pond_huntsmans_wife, to: loc_mill_pond_pond, label: KEEPS_VIGIL_AT,
+      evidence: "paced round and round it" }
+  - { from: mill_pond_huntsmans_wife, to: loc_mill_pond_mountain, label: DREAMS_PATH_UP,
+      evidence: "climbing upwards between great masses of rock" }
+  - { from: mill_pond_wise_woman, to: mill_pond_huntsmans_wife, label: GIVES_GOLDEN_COMB,
+      evidence: "Here is a golden comb for thee" }
+  - { from: obj_mill_pond_golden_comb, to: mill_pond_huntsman, label: RAISES_HEAD_FROM_WATER,
+      evidence: "the head of the huntsman arose" }
+  - { from: mill_pond_wise_woman, to: mill_pond_huntsmans_wife, label: GIVES_GOLDEN_FLUTE,
+      evidence: "gave her a golden flute" }
+  - { from: obj_mill_pond_golden_flute, to: mill_pond_huntsman, label: RAISES_HALF_BODY_FROM_WATER,
+      evidence: "half of his body also arose" }
+  - { from: mill_pond_wise_woman, to: mill_pond_huntsmans_wife, label: GIVES_GOLDEN_SPINNING_WHEEL,
+      evidence: "gave her a golden spinning-wheel" }
+  - { from: obj_mill_pond_golden_spinning_wheel, to: mill_pond_huntsman, label: RAISES_WHOLE_BODY_FROM_WATER,
+      evidence: "the head and the whole body of the man rose into the air" }
+  - { from: law_full_moon_golden_gifts_raise_water_captive_by_degrees, to: mill_pond_huntsman, label: RESTORES_CAPTIVE_BY_THREE_OFFERINGS,
+      evidence: "tarry until the time of the full moon" }
+  - { from: mill_pond_huntsman, to: mill_pond_huntsmans_wife, label: FLEES_HAND_IN_HAND,
+      evidence: "caught his wife by the hand and fled" }
+  - { from: loc_mill_pond_pond, to: mill_pond_huntsman, label: PURSUES_AS_FLOOD,
+      evidence: "the whole pond rose with a frightful roar" }
+  - { from: mill_pond_wise_woman, to: mill_pond_huntsmans_wife, label: TRANSFORMS_INTO_TOAD,
+      evidence: "she into a toad" }
+  - { from: mill_pond_wise_woman, to: mill_pond_huntsman, label: TRANSFORMS_INTO_FROG,
+      evidence: "he into a frog" }
+  - { from: mill_pond_huntsman, to: mill_pond_huntsmans_wife, label: SEPARATED_BY_FLOOD,
+      evidence: "it tore them apart and carried them far away" }
+  - { from: mill_pond_huntsman, to: loc_mill_pond_strange_pastures, label: TENDS_SHEEP_IN_EXILE,
+      evidence: "were both obliged to tend sheep" }
+  - { from: mill_pond_huntsman, to: agency_music, label: PLAYS_SORROWFUL_FLUTE_AIR,
+      evidence: "played on it a beautiful but sorrowful air" }
+  - { from: law_voice_recognizes_forgotten_bride, to: mill_pond_huntsman, label: RESTORES_RECOGNITION_BY_REPEATED_AIR,
+      evidence: "it seemed as if a veil fell from his eyes" }
+  - { from: mill_pond_huntsman, to: mill_pond_huntsmans_wife, label: RECOGNIZES_AND_REUNITES_WITH,
+      evidence: "They embraced and kissed each other" }

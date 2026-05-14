@@ -1,0 +1,214 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-wolf-and-the-seven-young-kids
+khm: 5
+atu: '123'
+atu_name: The Wolf and the Kids
+canonical_source: ../../2-silver/canonical/the-wolf-and-the-seven-young-kids/canonical.txt
+title: The Wolf and the Seven Young Kids
+
+
+entities:
+
+  characters:
+
+    seven_kids_mother_goat:
+      name: The Mother Goat
+      archetypes: [arc_protective_mother]
+      species: sp_goat
+      agency_modes: [agency_violence, agency_speech]
+      speech_acts_performed: [speech_command, speech_prohibition]
+      affects: [affect_maternal_love, affect_grief]
+      traits: [protective, surgical, vengeful-restorative]
+      evidence: |
+        "the goat cut open the monster's stomach, and hardly had she
+         make one cut, than one little kid thrust its head out"
+
+    seven_kids_wolf:
+      name: The Wolf
+      archetypes: [arc_predator, arc_disguised_villain]
+      species: sp_wolf
+      agency_modes: [agency_violence, agency_cunning]
+      existential_states: [state_disguised]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_greed]
+      traits: [voice-altered, paws-whitened, gluttonous, sleeps-after-meal]
+      evidence: |
+        "The wretch often disguises himself, but you will know him at
+         once by his rough voice and his black feet."
+
+    seven_kids_youngest:
+      name: The Youngest Kid (hides in clock-case, survives)
+      archetypes: [arc_youngest_sibling]
+      species: sp_goat
+      existential_states: [state_hidden_identity]
+      traits: [small-enough-to-hide, only-survivor]
+      evidence: |
+        "The youngest, who was in the clock-case, was the only one he
+         did not find."
+
+    seven_kids_others:
+      name: The Six Older Kids
+      species: sp_goat
+      existential_states: [state_devoured_but_alive]
+      evidence: |
+        "in his greediness the monster had swallowed them down whole."
+
+    seven_kids_shopkeeper:
+      name: The Shopkeeper (sells chalk to the wolf)
+      species: sp_human
+
+    seven_kids_baker:
+      name: The Baker (rubs dough on wolf's paws)
+      species: sp_human
+
+    seven_kids_miller:
+      name: The Miller (whitens wolf's paws with flour, under threat)
+      species: sp_human
+      affects: [affect_fear]
+      evidence: |
+        "'The wolf wants to deceive someone,' and refused; but the wolf
+         said, 'If thou wilt not do it, I will devour thee.'"
+
+  magic_objects:
+
+    obj_chalk_wolf:
+      name: Chalk (eaten to soften the wolf's voice)
+      object_kind: material
+
+    obj_flour_dough_wolf:
+      name: Dough + Flour (whitens the wolf's paws)
+      object_kind: material
+
+    obj_stones_substitution:
+      name: The Stones (replace kids in the wolf's belly)
+      object_kind: material
+      attributes:
+        purpose: weight-substitution; cause of wolf's drowning
+      evidence: |
+        "we will fill the wicked beast's stomach with them while he is
+         still asleep."
+
+    obj_scissors_needle_thread:
+      name: Scissors, Needle, Thread (mother's surgical tools)
+      object_kind: tool
+
+    obj_clock_case_hiding:
+      name: The Clock-Case (only successful hiding place)
+      object_kind: architecture
+      attributes:
+        function: refuge — too small or unexpected for wolf to search
+
+  locations:
+
+    loc_house_seven_kids:
+      name: The Goat-Family House
+      instance_of: loc_house
+      attributes:
+        contains: [table, bed, stove, kitchen, cupboard, washing-bowl, clock-case]
+
+    loc_forest_seven_kids:
+      name: The Forest (where mother fetches food)
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+
+    loc_meadow_seven_kids:
+      name: The Green Meadow (where wolf sleeps after gorging)
+      instance_of: loc_meadow
+
+    loc_well_seven_kids:
+      name: The Well (where the wolf drowns)
+      instance_of: loc_well
+      threshold_type: threshold_well
+
+
+classifications:
+
+  world_laws:
+    - law_devouring_can_be_reversed
+
+  moral_regimes:
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_cunning   # wolf's disguise
+    - agency_violence  # mother's surgery + the drowning
+
+  affects_driving:
+    - affect_greed             # wolf
+    - affect_maternal_love     # mother
+    - affect_fear              # kids, miller
+
+  symbol_numbers:
+    - num_7   # seven kids
+    - num_3   # three attempts at disguise (rough voice / black paws / final white-pawed entry)
+
+  threshold_types:
+    - threshold_forest
+    - threshold_well
+
+
+propp:
+  - { function: func_interdiction, order: 1, actor: seven_kids_mother_goat,
+      scene: "mother warns kids not to open the door to the wolf" }
+  - { function: func_absentation, order: 2, actor: seven_kids_mother_goat,
+      scene: "mother goes into the forest for food" }
+  - { function: func_donor_test, order: 3, actor: seven_kids_wolf,
+      scene: "wolf tries voice-disguise; kids see through it" }
+  - { function: func_donor_test, order: 4, actor: seven_kids_wolf,
+      scene: "wolf tries paw-disguise (black paws); kids see through it" }
+  - { function: func_violation, order: 5, victim: seven_kids_others,
+      scene: "wolf perfects the disguise; kids open the door" }
+  - { function: func_villainy, order: 6, actor: seven_kids_wolf,
+      scene: "wolf swallows six kids whole" }
+  - { function: func_rescue, order: 7, actor: seven_kids_mother_goat,
+      scene: "mother surgically retrieves the swallowed kids" }
+  - { function: func_punishment, order: 8, actor: seven_kids_mother_goat,
+      scene: "mother substitutes stones in the wolf's belly" }
+  - { function: func_victory, order: 9,
+      scene: "wolf drowns at the well by weight of the stones" }
+
+
+edges:
+
+  # Setup: the warning
+  - { from: seven_kids_mother_goat, to: seven_kids_youngest, label: WARNS,
+      evidence: "Dear children, I have to go into the forest, be on your guard against the wolf" }
+
+  # The disguise chain
+  - { from: seven_kids_wolf, to: obj_chalk_wolf, label: USES,
+      evidence: "ate this and made his voice soft with it" }
+  - { from: seven_kids_wolf, to: obj_flour_dough_wolf, label: USES,
+      evidence: "Strew some white meal over my feet for me" }
+  - { from: seven_kids_wolf, to: seven_kids_mother_goat, label: DISGUISES_AS,
+      evidence: "Open the door, dear children; your mother is here" }
+
+  # The lies
+  - { from: seven_kids_wolf, to: seven_kids_youngest, label: LIES_TO,
+      evidence: "your dear little mother has come home, and has brought every one of you something" }
+
+  # The hiding
+  - { from: seven_kids_youngest, to: obj_clock_case_hiding, label: HIDES_IN,
+      evidence: "the seventh into the clock-case... was the only one he did not find." }
+
+  # The devouring
+  - { from: seven_kids_wolf, to: seven_kids_others, label: SWALLOWS_WHOLE,
+      evidence: "in his greediness the monster had swallowed them down whole." }
+
+  # The discovery and rescue
+  - { from: seven_kids_youngest, to: seven_kids_mother_goat, label: REVEALS_TO,
+      evidence: "'Dear mother, I am in the clock-case.'" }
+  - { from: seven_kids_mother_goat, to: seven_kids_others, label: RESCUES_FROM_BELLY,
+      attributes: { tool: scissors, technique: cut-open-stomach-and-sew-shut },
+      evidence: "the goat cut open the monster's stomach... all six sprang out one after another" }
+
+  # The substitution
+  - { from: obj_stones_substitution, to: seven_kids_others, label: SUBSTITUTES_FOR,
+      evidence: "we will fill the wicked beast's stomach with them while he is still asleep" }
+
+  # The retributive death
+  - { from: seven_kids_wolf, to: loc_well_seven_kids, label: VISITS,
+      attributes: { reason: thirst-from-stones } }
+  - { from: obj_stones_substitution, to: seven_kids_wolf, label: KILLS,
+      attributes: { mechanism: weight-pulled-into-well },
+      evidence: "the heavy stones made him fall in, and there was no help, but he had to drown miserably." }

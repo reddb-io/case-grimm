@@ -1,0 +1,308 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-lambkin-and-the-little-fish
+khm: 141
+atu: '450'
+atu_name: Little Brother and Little Sister
+canonical_source: ../../2-silver/canonical/the-lambkin-and-the-little-fish/canonical.txt
+title: The Lambkin and the Little Fish
+
+
+entities:
+
+  characters:
+
+    lambfish_brother_fish:
+      name: The Little Brother as Fish
+      species: sp_fish
+      agency_modes: [agency_speech, agency_endurance]
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_animal_human]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_grief]
+      traits: [loving-brother, bewitched-fish, pond-bound, lamb-follower, lamenting-sibling, restored-child]
+      evidence: |
+        changed the little brother into a fish
+
+    lambfish_sister_lamb:
+      name: The Little Sister as Lambkin
+      species: sp_sheep
+      agency_modes: [agency_speech, agency_endurance]
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_animal_human]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_grief, affect_fear]
+      traits: [loving-sister, bewitched-lamb, meadow-bound, patient-victim, lamenting-sibling, restored-child]
+      evidence: |
+        the little sister into a lamb
+
+    lambfish_stepmother:
+      name: The Wicked Stepmother
+      archetypes: [arc_cruel_stepmother]
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_cunning, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command, speech_curse]
+      affects: [affect_anger]
+      traits: [unkind-stepmother, secret-hurter, window-watcher, witchcraft-knower, slaughter-plotter]
+      evidence: |
+        she understood arts of witchcraft
+
+    lambfish_cook:
+      name: The Compassionate Cook
+      archetypes: [arc_wise_helper]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_violence, agency_speech]
+      speech_acts_performed: [speech_command, speech_testimony]
+      affects: [affect_fear, affect_pity]
+      traits: [lamb-fetcher, knife-whetter, bewitched-speech-witness, substitute-sheep-killer, rescuer]
+      evidence: |
+        When the cook heard that the lambkin could speak
+
+    lambfish_foster_mother:
+      name: The Peasant Foster-Mother
+      archetypes: [arc_wise_helper]
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      affects: [affect_pity]
+      traits: [good-peasant-woman, former-foster-mother, lamb-identifier, wise-woman-seeker]
+      evidence: |
+        had been foster-mother to the little sister
+
+    lambfish_wise_woman:
+      name: The Wise Woman Who Blesses Them
+      archetypes: [arc_supernatural_donor]
+      being_type: being_fairy
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_blessing]
+      traits: [blessing-pronouncer, disenchanter, forest-hut-provider]
+      evidence: |
+        the wise woman pronounced a blessing
+
+    lambfish_visitors:
+      name: The Strangers Visiting the Castle
+      species: sp_human
+      traits: [visitors, feast-pretext]
+      evidence: |
+        strangers came as visitors to the castle
+
+  magic_objects:
+
+    obj_lambfish_counting_rhyme:
+      name: The Counting-Out Rhyme
+      object_kind: instrument
+      attributes:
+        function: play formula preceding the stepmother's angry witchcraft
+      evidence: |
+        played at counting out
+
+    obj_lambfish_cook_knife:
+      name: The Cook's Knife
+      object_kind: weapon
+      attributes:
+        function: threatened slaughter instrument for the lamb-sister
+      evidence: |
+        drawn out his knife
+
+    obj_lambfish_substitute_sheep:
+      name: The Substitute Sheep
+      object_kind: creature_object
+      attributes:
+        function: killed in place of the bewitched lambkin for the visitors
+      evidence: |
+        took another sheep
+
+  locations:
+
+    loc_lambfish_house:
+      name: The Stepmother's House
+      instance_of: loc_house
+      evidence: |
+        before the house
+
+    loc_lambfish_meadow:
+      name: The Meadow before the House
+      instance_of: loc_meadow
+      evidence: |
+        playing with other children in a meadow
+
+    loc_lambfish_pond:
+      name: The Pond Beside the House
+      instance_of: loc_pond
+      threshold_type: threshold_river
+      evidence: |
+        there was a pond in the meadow
+
+    loc_lambfish_castle:
+      name: The Castle Visited by Strangers
+      instance_of: loc_castle
+      evidence: |
+        visitors to the castle
+
+    loc_lambfish_kitchen:
+      name: The Kitchen of Slaughter
+      instance_of: loc_hearth
+      evidence: |
+        took it into the kitchen
+
+    loc_lambfish_kitchen_sink:
+      name: The Kitchen-Sink beside the Pond
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        in front of the kitchen-sink
+
+    loc_lambfish_peasant_house:
+      name: The Good Peasant Woman's House
+      instance_of: loc_house
+      evidence: |
+        a good peasant woman
+
+    loc_lambfish_forest_hut:
+      name: The Little Hut in the Great Forest
+      instance_of: loc_house
+      threshold_type: threshold_forest
+      evidence: |
+        a little hut in a great forest
+
+
+classifications:
+
+  world_laws:
+    - law_sibling_lament_reveals_bewitched_humanity
+    - law_curse_requires_counter_condition
+    - law_forest_suspends_domestic_order
+
+  moral_regimes:
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+    - agency_domestic_labor
+    - agency_endurance
+    - agency_violence
+
+  affects_driving:
+    - affect_grief
+    - affect_fear
+    - affect_anger
+    - affect_pity
+
+  threshold_types:
+    - threshold_river
+    - threshold_doorway
+    - threshold_forest
+
+
+propp:
+
+  - function: func_initial_situation
+    order: 1
+    actor: lambfish_brother_fish
+    beneficiary: lambfish_sister_lamb
+    scene: "a motherless brother and sister love one another while the unkind stepmother secretly seeks to hurt them"
+    evidence: "loved each other with all their hearts"
+
+  - function: func_play_formula
+    order: 2
+    actor: lambfish_brother_fish
+    scene: "the children play counting-out in the meadow around the pond"
+    evidence: "played at counting out"
+
+  - function: func_villainy
+    order: 3
+    actor: lambfish_stepmother
+    victim: lambfish_brother_fish
+    scene: "angry at their merry play, the witch-stepmother changes the brother into a fish and the sister into a lamb"
+    evidence: "bewitched them both"
+
+  - function: func_animal_lament
+    order: 4
+    actor: lambfish_brother_fish
+    beneficiary: lambfish_sister_lamb
+    scene: "the fish and lamb live sadly apart, one in the pond and one in the meadow"
+    evidence: "was very sad"
+
+  - function: func_murder_attempt
+    order: 5
+    actor: lambfish_stepmother
+    victim: lambfish_sister_lamb
+    scene: "when visitors arrive, the stepmother orders the cook to kill the lamb for the meal"
+    evidence: "Go and fetch the lamb from the meadow and kill it"
+
+  - function: func_recognition_by_lament
+    order: 6
+    actor: lambfish_cook
+    beneficiary: lambfish_sister_lamb
+    scene: "the cook hears the lamb and fish speak as siblings and understands that the lamb is bewitched"
+    evidence: "could be no common lamb"
+
+  - function: func_rescue
+    order: 7
+    actor: lambfish_cook
+    beneficiary: lambfish_sister_lamb
+    scene: "the cook refuses to kill the lamb, substitutes another sheep, and sends the lamb to a good peasant woman"
+    evidence: "I will not kill thee"
+
+  - function: func_disenchantment
+    order: 8
+    actor: lambfish_wise_woman
+    beneficiary: lambfish_brother_fish
+    scene: "the foster-mother brings the lamb to a wise woman whose blessing restores both siblings to human form"
+    evidence: "they regained their human forms"
+
+  - function: func_resolution
+    order: 9
+    actor: lambfish_wise_woman
+    beneficiary: lambfish_sister_lamb
+    scene: "the wise woman takes both restored children into a forest hut, where they live contentedly"
+    evidence: "were contented and happy"
+
+
+edges:
+
+  - { from: lambfish_stepmother, to: lambfish_brother_fish, label: SECRETLY_HURTS,
+      evidence: "secretly did everything she could to hurt them" }
+  - { from: lambfish_stepmother, to: loc_lambfish_meadow, label: WATCHES_FROM_WINDOW,
+      evidence: "watched them from the window" }
+  - { from: lambfish_stepmother, to: lambfish_brother_fish, label: TRANSFORMS_INTO_FISH,
+      evidence: "changed the little brother into a fish" }
+  - { from: lambfish_stepmother, to: lambfish_sister_lamb, label: TRANSFORMS_INTO_LAMB,
+      evidence: "the little sister into a lamb" }
+  - { from: lambfish_brother_fish, to: loc_lambfish_pond, label: SWIMS_IN,
+      evidence: "swam here and there about the pond" }
+  - { from: lambfish_sister_lamb, to: loc_lambfish_meadow, label: WALKS_IN,
+      evidence: "walked up and down the meadow" }
+  - { from: lambfish_visitors, to: loc_lambfish_castle, label: VISIT,
+      evidence: "strangers came as visitors to the castle" }
+  - { from: lambfish_stepmother, to: lambfish_cook, label: ORDERS_KILLING_BY,
+      evidence: "Go and fetch the lamb from the meadow and kill it" }
+  - { from: lambfish_cook, to: lambfish_sister_lamb, label: BINDS_FOR_SLAUGHTER,
+      evidence: "tied its feet" }
+  - { from: lambfish_cook, to: obj_lambfish_cook_knife, label: WHETS,
+      evidence: "whetting it on the door-step" }
+  - { from: lambfish_brother_fish, to: lambfish_sister_lamb, label: FOLLOWS,
+      evidence: "it followed them and swam along the pond" }
+  - { from: lambfish_sister_lamb, to: lambfish_brother_fish, label: LAMENTS_TO,
+      evidence: "Ah, brother, in the pond so deep" }
+  - { from: lambfish_brother_fish, to: lambfish_sister_lamb, label: ANSWERS_LAMENT,
+      evidence: "Ah, little sister, up on high" }
+  - { from: lambfish_cook, to: lambfish_sister_lamb, label: RECOGNIZES_AS_BEWITCHED,
+      evidence: "must be bewitched by the wicked woman" }
+  - { from: lambfish_cook, to: obj_lambfish_substitute_sheep, label: KILLS_INSTEAD,
+      evidence: "took another sheep" }
+  - { from: lambfish_cook, to: lambfish_foster_mother, label: ENTRUSTS_LAMB_TO,
+      evidence: "conveyed the lambkin to a good peasant woman" }
+  - { from: lambfish_foster_mother, to: lambfish_sister_lamb, label: RECOGNIZES,
+      evidence: "suspected at once who the lamb was" }
+  - { from: lambfish_foster_mother, to: lambfish_wise_woman, label: SEEKS_HELP_FROM,
+      evidence: "went with it to a wise woman" }
+  - { from: lambfish_wise_woman, to: lambfish_sister_lamb, label: BLESSES_AND_RESTORES,
+      evidence: "pronounced a blessing over the lambkin and the little fish" }
+  - { from: lambfish_wise_woman, to: lambfish_brother_fish, label: BLESSES_AND_RESTORES,
+      evidence: "they regained their human forms" }
+  - { from: lambfish_wise_woman, to: loc_lambfish_forest_hut, label: SHELTERS_IN,
+      evidence: "a little hut in a great forest" }
+  - { from: atu_450, to: law_sibling_lament_reveals_bewitched_humanity, label: REALIZED_BY,
+      evidence: "When the cook heard that the lambkin could speak" }

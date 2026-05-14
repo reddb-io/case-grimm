@@ -1,0 +1,588 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: sweetheart-roland
+khm: 56
+atu: '1119/313/884'
+atu_name: Sweetheart Roland
+canonical_source: ../../2-silver/canonical/sweetheart-roland/canonical.txt
+title: Sweetheart Roland
+
+
+entities:
+
+  characters:
+
+    sweetheart_roland_witch:
+      name: The Witch Stepmother
+      archetypes: [arc_cruel_stepmother]
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_cunning, agency_violence, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_command]
+      affects: [affect_envy, affect_anger]
+      traits: [real-witch, own-daughter-favouring, stepdaughter-hating, axe-murderer, many-league-pursuer, bread-crumb-tempter, dance-punished]
+      evidence: |
+        There was once on a time a woman who was a real witch
+
+    sweetheart_roland_witch_daughter:
+      name: The Ugly Wicked Daughter
+      archetypes: [arc_envious_witness]
+      species: sp_human
+      agency_modes: [agency_speech]
+      affects: [affect_envy]
+      traits: [own-daughter, apron-envying, bed-positioned, mistaken-victim, beheaded]
+      evidence: |
+        one ugly and wicked, and this one she loved because she was her
+        own daughter
+
+    sweetheart_roland_maiden:
+      name: The Faithful Stepmother's Daughter
+      archetypes: [arc_oppressed_maiden]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_endurance, agency_domestic_labor, agency_music]
+      existential_states: [state_transformed, state_forgotten_bride]
+      transformations: [transform_fugitive_pair]
+      affects: [affect_fear, affect_loyalty, affect_grief]
+      traits: [beautiful, good, apron-owner, murder-overhearer, place-switcher, wand-thief, blood-decoy-maker, magic-flight-transformer, red-landmark, flower-maid, shepherd-housekeeper, faithful-singer, true-bride]
+      evidence: |
+        one beautiful and good, and this one she hated, because she was
+        her step-daughter.
+
+    sweetheart_roland:
+      name: Sweetheart Roland
+      species: sp_human
+      agency_modes: [agency_speech, agency_music, agency_endurance]
+      existential_states: [state_transformed, state_deceived]
+      transformations: [transform_fugitive_pair]
+      affects: [affect_loyalty]
+      traits: [lover, wand-counsellor, lake-form, fiddler-form, wedding-arranger, forgetful-bridegroom, voice-recognizer]
+      evidence: |
+        her sweetheart, who was called Roland
+
+    sweetheart_roland_rival_woman:
+      name: The Woman Who Makes Roland Forget
+      archetypes: [arc_false_bride]
+      species: sp_human
+      agency_modes: [agency_cunning]
+      traits: [forgetfulness-agent, rival-bride, wedding-displaced]
+      evidence: |
+        he fell into the snares of another, who prevailed on him so far
+        that he forgot the maiden.
+
+    sweetheart_roland_shepherd:
+      name: The Shepherd Who Finds the Flower
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_fear]
+      traits: [field-shepherd, flower-picker, chest-keeper, enchanted-householder, wise-woman-seeker, rejected-suitor]
+      evidence: |
+        a shepherd kept his sheep in the field, and saw the flower
+
+    sweetheart_roland_wise_woman:
+      name: The Wise Woman Who Breaks the Flower Spell
+      archetypes: [arc_wise_helper]
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [enchantment-diagnoser, dawn-instruction-giver, white-cloth-counsellor]
+      evidence: |
+        he went to a wise woman and asked for her advice.
+
+    sweetheart_roland_country_girls:
+      name: The Country Girls at Roland's Wedding
+      species: sp_human
+      agency_modes: [agency_music, agency_speech]
+      traits: [custom-singers, bride-honourers, maiden-summoners]
+      evidence: |
+        all the girls were to be present at it, and sing in honour of
+        the bridal pair.
+
+  magic_objects:
+
+    obj_sweetheart_roland_pretty_apron:
+      name: The Pretty Apron
+      object_kind: garment
+      attributes:
+        function: desired object that triggers envy and murder plot
+      evidence: |
+        The step-daughter once had a pretty apron
+
+    obj_sweetheart_roland_murder_axe:
+      name: The Witch's Axe
+      object_kind: weapon
+      attributes:
+        function: murder weapon that kills the witch's own daughter by bed substitution
+      evidence: |
+        she held an axe in her right hand
+
+    obj_sweetheart_roland_magic_wand:
+      name: The Witch's Magic Wand
+      instance_of: obj_enchanting_wand
+      object_kind: tool
+      attributes:
+        function: stolen transformation instrument for the magic flight
+      evidence: |
+        I counsel thee first to take away her magic wand
+
+    obj_sweetheart_roland_blood_drops:
+      name: The Three Speaking Drops of Blood
+      instance_of: obj_speaking_blood_decoy
+      object_kind: token
+      attributes:
+        count: 3
+        locations: [bed-front, kitchen, stairs]
+        function: answer the witch and delay discovery of the flight
+      evidence: |
+        dropped three drops of blood on the ground
+
+    obj_sweetheart_roland_many_league_boots:
+      name: The Witch's Many League Boots
+      instance_of: obj_many_league_boots
+      object_kind: garment
+      attributes:
+        function: accelerates the witch's pursuit of the fugitives
+      evidence: |
+        many league boots, in which went an hour’s walk at every step
+
+    obj_sweetheart_roland_bread_crumbs:
+      name: The Witch's Bread-crumbs
+      object_kind: food
+      attributes:
+        function: lure thrown from shore to entice the duck-form maiden
+      evidence: |
+        threw bread-crumbs in
+
+    obj_sweetheart_roland_fiddle:
+      name: Roland's Fiddle
+      instance_of: obj_fiddle
+      object_kind: instrument
+      attributes:
+        function: compels the witch into the thorn-dance that kills her
+      evidence: |
+        her sweetheart Roland into a fiddler.
+
+    obj_sweetheart_roland_red_landmark:
+      name: The Red Stone Landmark Form
+      object_kind: token
+      attributes:
+        function: self-concealing waiting form while Roland arranges the wedding
+      evidence: |
+        I will change myself into a red stone land-mark.
+
+    obj_sweetheart_roland_flower_form:
+      name: The Maiden's Flower Form
+      object_kind: material
+      attributes:
+        function: abandoned waiting form; later hidden in the shepherd's chest
+      evidence: |
+        changed herself into a flower
+
+    obj_sweetheart_roland_shepherd_chest:
+      name: The Shepherd's Chest
+      object_kind: architecture
+      attributes:
+        function: keeps the flower form from which the maiden secretly keeps house
+      evidence: |
+        took it with him, and laid it away in his chest.
+
+    obj_sweetheart_roland_white_cloth:
+      name: The White Cloth That Stops the Magic
+      object_kind: garment
+      attributes:
+        function: breaks the flower transformation when thrown over the emerging form
+      evidence: |
+        throw a white cloth over it
+
+  locations:
+
+    loc_sweetheart_roland_witch_house:
+      name: The Witch Household
+      instance_of: loc_witch_house
+      threshold_type: threshold_doorway
+      evidence: |
+        All day long she dared not go out of doors
+
+    loc_sweetheart_roland_murder_bed:
+      name: The Murder Bed
+      instance_of: loc_house
+      evidence: |
+        be careful that thou art at the far-side of the bed
+
+    loc_sweetheart_roland_kitchen:
+      name: The Kitchen of the Blood Decoy
+      instance_of: loc_hearth
+      evidence: |
+        Here in the kitchen, I am warming myself
+
+    loc_sweetheart_roland_stairs:
+      name: The Stairs of the Blood Decoy
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        Here, on the stairs, I am sweeping
+
+    loc_sweetheart_roland_lake:
+      name: The Lake and Duck Transformation
+      instance_of: loc_brook
+      evidence: |
+        changed, with her magic wand, her sweetheart Roland into a lake
+
+    loc_sweetheart_roland_briar_hedge:
+      name: The Briar Hedge of the Magical Dance
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        a beautiful flower which stood in the midst of a briar hedge
+
+    loc_sweetheart_roland_field:
+      name: The Field of Waiting and Shepherding
+      instance_of: loc_meadow
+      evidence: |
+        the girl stood like a red land-mark in the field
+
+    loc_sweetheart_roland_shepherd_house:
+      name: The Shepherd's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        strange things happened in the shepherd’s house.
+
+    loc_sweetheart_roland_wedding:
+      name: Roland's Rival Wedding
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        Roland’s wedding was to be celebrated
+
+
+classifications:
+
+  world_laws:
+    - law_speaking_blood_decoys_pursuit
+    - law_loyal_pair_magic_flight
+    - law_music_attracts
+    - law_voice_recognizes_forgotten_bride
+
+  moral_regimes:
+    - moral_retributive
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_object_mediation
+    - agency_music
+    - agency_endurance
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_envy
+    - affect_fear
+    - affect_loyalty
+    - affect_grief
+    - affect_anger
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_doorway
+    - threshold_forest
+
+
+propp:
+
+  - function: func_villainy
+    order: 1
+    actor: sweetheart_roland_witch_daughter
+    victim: sweetheart_roland_maiden
+    scene: "envy over the apron leads the witch's daughter to demand it"
+    evidence: "fancied so much that she became envious"
+
+  - function: func_villainy
+    order: 2
+    actor: sweetheart_roland_witch
+    victim: sweetheart_roland_maiden
+    scene: "witch plots to cut off the stepdaughter's head in bed"
+    evidence: "to-night when she is asleep I will come and cut her head off."
+
+  - function: func_trickery
+    order: 3
+    actor: sweetheart_roland_maiden
+    victim: sweetheart_roland_witch
+    scene: "maiden changes bed positions so the witch kills her own child"
+    evidence: "took for herself the place at the back, close by the wall."
+
+  - function: func_departure
+    order: 4
+    actor: sweetheart_roland_maiden
+    beneficiary: sweetheart_roland
+    scene: "maiden wakes Roland and the lovers flee with the stolen wand"
+    evidence: "we must fly in all haste"
+
+  - function: func_magical_agent
+    order: 5
+    actor: obj_sweetheart_roland_blood_drops
+    beneficiary: sweetheart_roland_maiden
+    scene: "three blood drops answer the witch from stairs, kitchen, and bed"
+    evidence: "dropped three drops of blood on the ground"
+
+  - function: func_pursuit
+    order: 6
+    actor: sweetheart_roland_witch
+    victim: sweetheart_roland_maiden
+    scene: "witch pursues the fugitives with many-league boots"
+    evidence: "it was not long before she overtook them."
+
+  - function: func_rescue
+    order: 7
+    actor: sweetheart_roland_maiden
+    beneficiary: sweetheart_roland
+    scene: "maiden transforms Roland into a lake and herself into a duck"
+    evidence: "changed, with her magic wand, her sweetheart Roland into a lake"
+
+  - function: func_rescue
+    order: 8
+    actor: sweetheart_roland
+    beneficiary: sweetheart_roland_maiden
+    scene: "Roland's fiddle compels the witch to dance in thorns until dead"
+    evidence: "she was forced to dance"
+
+  - function: func_absentation
+    order: 9
+    actor: sweetheart_roland
+    victim: sweetheart_roland_maiden
+    scene: "Roland leaves to arrange the wedding while the maiden waits as a landmark"
+    evidence: "Now I will go to my father and arrange for the wedding."
+
+  - function: func_villainy
+    order: 10
+    actor: sweetheart_roland_rival_woman
+    victim: sweetheart_roland_maiden
+    scene: "another woman makes Roland forget the maiden"
+    evidence: "he forgot the maiden."
+
+  - function: func_transformation
+    order: 11
+    actor: sweetheart_roland_maiden
+    scene: "forgotten maiden becomes a flower and is taken by the shepherd"
+    evidence: "changed herself into a flower"
+
+  - function: func_unrecognized_service
+    order: 12
+    actor: sweetheart_roland_maiden
+    beneficiary: sweetheart_roland_shepherd
+    scene: "flower-maiden secretly keeps the shepherd's house"
+    evidence: "all the work was already done"
+
+  - function: func_release
+    order: 13
+    actor: obj_sweetheart_roland_white_cloth
+    beneficiary: sweetheart_roland_maiden
+    scene: "white cloth ends the flower transformation"
+    evidence: "Instantly the transformation came to an end"
+
+  - function: func_recognition
+    order: 14
+    actor: sweetheart_roland
+    beneficiary: sweetheart_roland_maiden
+    scene: "Roland hears her song and recognizes the true bride"
+    evidence: "I know the voice, that is the true bride"
+
+  - function: func_wedding
+    order: 15
+    actor: sweetheart_roland
+    beneficiary: sweetheart_roland_maiden
+    scene: "faithful maiden marries Roland and grief ends"
+    evidence: "held her wedding with her sweetheart Roland"
+
+
+edges:
+
+  # Murder plot and wrong victim
+  - from: sweetheart_roland_witch_daughter
+    to: obj_sweetheart_roland_pretty_apron
+    label: DESIRES
+    evidence: "fancied so much that she became envious"
+
+  - from: sweetheart_roland_witch
+    to: sweetheart_roland_maiden
+    label: PLANS_TO_KILL
+    evidence: "I will come and cut her head off."
+
+  - from: sweetheart_roland_maiden
+    to: sweetheart_roland_witch_daughter
+    label: SWITCHES_WITH
+    evidence: "pushed her gently to the front"
+
+  - from: sweetheart_roland_witch
+    to: obj_sweetheart_roland_murder_axe
+    label: USES
+    evidence: "she held an axe in her right hand"
+
+  - from: obj_sweetheart_roland_murder_axe
+    to: sweetheart_roland_witch_daughter
+    label: KILLS
+    evidence: "cut her own child’s head off."
+
+  # Flight preparation and blood decoy
+  - from: sweetheart_roland_maiden
+    to: sweetheart_roland
+    label: WARNS
+    evidence: "we must fly in all haste"
+
+  - from: sweetheart_roland
+    to: obj_sweetheart_roland_magic_wand
+    label: ADVISES_TAKING
+    evidence: "take away her magic wand"
+
+  - from: sweetheart_roland_maiden
+    to: obj_sweetheart_roland_magic_wand
+    label: STEALS
+    evidence: "The maiden fetched the magic wand"
+
+  - from: sweetheart_roland_maiden
+    to: obj_sweetheart_roland_blood_drops
+    label: PLACES
+    evidence: "dropped three drops of blood on the ground"
+
+  - from: obj_sweetheart_roland_blood_drops
+    to: sweetheart_roland_witch
+    label: ANSWERS
+    evidence: "Here, on the stairs, I am sweeping"
+
+  - from: obj_sweetheart_roland_blood_drops
+    to: sweetheart_roland_witch
+    label: DECEIVES
+    evidence: "Here in the kitchen, I am warming myself"
+
+  - from: sweetheart_roland_witch
+    to: obj_sweetheart_roland_many_league_boots
+    label: WEARS
+    evidence: "She put on her many league boots"
+
+  - from: obj_sweetheart_roland_many_league_boots
+    to: sweetheart_roland_witch
+    label: ACCELERATES
+    evidence: "an hour’s walk at every step"
+
+  # Magic flight and witch death
+  - from: sweetheart_roland_maiden
+    to: sweetheart_roland
+    label: TRANSFORMS
+    evidence: "changed, with her magic wand, her sweetheart Roland into a lake"
+
+  - from: sweetheart_roland_maiden
+    to: loc_sweetheart_roland_lake
+    label: BECOMES_DUCK_AT
+    evidence: "herself into a duck swimming in the middle of it."
+
+  - from: sweetheart_roland_witch
+    to: obj_sweetheart_roland_bread_crumbs
+    label: THROWS
+    evidence: "threw bread-crumbs in"
+
+  - from: sweetheart_roland_maiden
+    to: loc_sweetheart_roland_briar_hedge
+    label: BECOMES_FLOWER_AT
+    evidence: "a beautiful flower which stood in the midst of a briar hedge"
+
+  - from: sweetheart_roland
+    to: obj_sweetheart_roland_fiddle
+    label: PLAYS
+    evidence: "I will play to you while you do it."
+
+  - from: obj_sweetheart_roland_fiddle
+    to: sweetheart_roland_witch
+    label: COMPELS_DANCE
+    evidence: "whether she would or not, she was forced to dance"
+
+  - from: loc_sweetheart_roland_briar_hedge
+    to: sweetheart_roland_witch
+    label: WOUNDS
+    evidence: "the thorns tore her clothes from her body"
+
+  - from: obj_sweetheart_roland_fiddle
+    to: sweetheart_roland_witch
+    label: KILLS
+    evidence: "she had to dance till she lay dead on the ground."
+
+  # Forgotten bride and hidden service
+  - from: sweetheart_roland
+    to: sweetheart_roland_maiden
+    label: LEAVES_WAITING
+    evidence: "I will stay here and wait for thee"
+
+  - from: sweetheart_roland_maiden
+    to: obj_sweetheart_roland_red_landmark
+    label: TRANSFORMS_INTO
+    evidence: "change myself into a red stone land-mark."
+
+  - from: sweetheart_roland_rival_woman
+    to: sweetheart_roland
+    label: MAKES_FORGET
+    evidence: "he forgot the maiden."
+
+  - from: sweetheart_roland_maiden
+    to: obj_sweetheart_roland_flower_form
+    label: TRANSFORMS_INTO
+    evidence: "changed herself into a flower"
+
+  - from: sweetheart_roland_shepherd
+    to: obj_sweetheart_roland_flower_form
+    label: PLUCKS
+    evidence: "plucked it, took it with him"
+
+  - from: sweetheart_roland_shepherd
+    to: obj_sweetheart_roland_shepherd_chest
+    label: STORES_AT
+    evidence: "laid it away in his chest."
+
+  - from: sweetheart_roland_maiden
+    to: loc_sweetheart_roland_shepherd_house
+    label: KEEPS_HOUSE_AT
+    evidence: "all the work was already done"
+
+  - from: sweetheart_roland_wise_woman
+    to: sweetheart_roland_shepherd
+    label: ADVISES
+    evidence: "throw a white cloth over it"
+
+  - from: obj_sweetheart_roland_white_cloth
+    to: sweetheart_roland_maiden
+    label: RESTORES
+    evidence: "a beautiful girl stood before him"
+
+  - from: sweetheart_roland_shepherd
+    to: sweetheart_roland_maiden
+    label: PROPOSES_MARRIAGE_TO
+    evidence: "he asked her if she would marry him"
+
+  - from: sweetheart_roland_maiden
+    to: sweetheart_roland_shepherd
+    label: REFUSES
+    evidence: "No"
+
+  # Voice recognition and final wedding
+  - from: sweetheart_roland_country_girls
+    to: sweetheart_roland_maiden
+    label: BRING_TO_WEDDING
+    evidence: "the other girls came and took her."
+
+  - from: sweetheart_roland_maiden
+    to: loc_sweetheart_roland_wedding
+    label: SINGS_AT
+    evidence: "when she began her song"
+
+  - from: sweetheart_roland_maiden
+    to: sweetheart_roland
+    label: RECOGNIZED_BY_VOICE
+    evidence: "I know the voice, that is the true bride"
+
+  - from: sweetheart_roland
+    to: sweetheart_roland_rival_woman
+    label: REJECTS
+    evidence: "I will have no other!"
+
+  - from: sweetheart_roland
+    to: sweetheart_roland_maiden
+    label: MARRIES
+    evidence: "held her wedding with her sweetheart Roland"

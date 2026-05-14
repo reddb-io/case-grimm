@@ -1,0 +1,8 @@
+slug: the-water-nix
+khm: 79
+atu: '313'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

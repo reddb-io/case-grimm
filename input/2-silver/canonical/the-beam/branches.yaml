@@ -1,0 +1,8 @@
+slug: the-beam
+khm: 149
+atu: '987'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

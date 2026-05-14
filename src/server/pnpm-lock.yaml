@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@reddb-io/client':
-        specifier: ^1.0.8
-        version: 1.0.8
+        specifier: ^1.1.2
+        version: 1.1.2
     devDependencies:
       '@types/node':
         specifier: ^22.10.2
@@ -180,8 +180,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@reddb-io/client@1.0.8':
-    resolution: {integrity: sha512-9nLIg0sCSEyLV1Wz/R9e0yKiSaB3ohLQWvBZtRrbiwMRK147E+96bDxU/2WBC4HVeJvCU9oNVgRTfodQJ7fghw==}
+  '@reddb-io/client@1.1.2':
+    resolution: {integrity: sha512-IAGKSLLjg+v2eeF9v0/9jPR8nwcAlt6ur74CnTvVJtm1sDFJPhPDQEefmMAM0SQwotDG3HkQg4pztwUHC2t4ow==}
     engines: {node: '>=18'}
 
   '@types/node@22.19.19':
@@ -296,7 +296,7 @@ snapshots:
   '@esbuild/win32-x64@0.27.7':
     optional: true
 
-  '@reddb-io/client@1.0.8': {}
+  '@reddb-io/client@1.1.2': {}
 
   '@types/node@22.19.19':
     dependencies:

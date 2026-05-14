@@ -1,0 +1,669 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-griffin
+khm: 165
+atu: "610"
+atu_name: The Healing Fruit / The Griffin
+canonical_source: ../../2-silver/canonical/the-griffin/canonical.txt
+title: The Griffin
+
+
+entities:
+
+  characters:
+
+    griffin_king:
+      name: The Withholding King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning]
+      speech_acts_performed: [speech_promise, speech_command]
+      affects: [affect_greed, affect_fear, affect_joy]
+      traits: [daughter-healing-proclaimer, promise-withholder, impossible-task-setter, wealth-seeker, lake-punished]
+      evidence: |
+        He had no son, but an only daughter who had always been ill
+
+    griffin_princess:
+      name: The Sick King's Daughter
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_endurance]
+      affects: [affect_joy]
+      traits: [only-daughter, incurably-ill-princess, apple-cured, promised-bride]
+      evidence: |
+        an only daughter who had always been ill
+
+    griffin_peasant_father:
+      name: The Peasant Father
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_command]
+      traits: [three-son-father, apple-sender, youngest-scornful]
+      evidence: |
+        a peasant who had three sons
+
+    griffin_uele:
+      name: Uele, the Eldest Son
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_lie]
+      traits: [eldest-brother, false-answerer, frogs-legs-carrier, failed-apple-quester]
+      evidence: |
+        the eldest
+
+    griffin_seame:
+      name: Seame, the Second Son
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_lie]
+      traits: [second-brother, false-answerer, hogs-bristles-carrier, failed-apple-quester]
+      evidence: |
+        the next son, who was called Seame
+
+    griffin_hans:
+      name: Stupid Hans
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_cunning, agency_domestic_labor]
+      speech_acts_performed: [speech_request, speech_testimony]
+      affects: [affect_joy, affect_fear]
+      traits: [despised-youngest, truthful-answerer, apple-healer, land-boat-maker, hare-herd, griffin-feather-winner, answer-bringer, bridegroom-king]
+      evidence: |
+        the youngest boy, whose name was Hans, but who was always called Stupid Hans
+
+    griffin_little_iron_man:
+      name: The Little Iron Man
+      archetypes: [arc_supernatural_donor]
+      being_type: being_dwarf
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_request, speech_command]
+      traits: [iron-clothed-donor, road-questioner, truth-tester, object-fixer, whistle-giver]
+      evidence: |
+        a little iron man
+
+    griffin_palace_servant:
+      name: The Palace Servant Sent for a Hare
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_command]
+      affects: [affect_anger]
+      traits: [hare-demanding-servant, court-agent, failed-trick-messenger]
+      evidence: |
+        came a servant from the palace
+
+    griffin_hundred_hares:
+      name: The Hundred Hares
+      species: sp_hare
+      agency_modes: [agency_extraordinary_body]
+      traits: [hundred-hare-flock, pasture-test-animals, whistle-recalled]
+      evidence: |
+        a hundred hares
+
+    griffin_first_castle_lord:
+      name: The Lord with the Lost Money-Chest Key
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_request]
+      traits: [castle-host, key-loser, griffin-question-petitioner, gold-rewarder]
+      evidence: |
+        I have lost the key of an iron money-chest
+
+    griffin_second_castle_family:
+      name: The Castle Family with the Sick Daughter
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_request]
+      affects: [affect_joy]
+      traits: [sick-daughter-household, remedy-seekers, gold-and-silver-rewarders]
+      evidence: |
+        they had in the house a daughter who was ill
+
+    griffin_lake_carrier:
+      name: The Tall Lake Carrier
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_violence]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_request]
+      affects: [affect_longing, affect_joy]
+      traits: [tall-carrier, forced-ferryman, shoulder-carrier, burden-transferer, king-drowner]
+      evidence: |
+        a tall, tall man was there who had to carry everybody across
+
+    griffin_wife:
+      name: The Griffin's Wife
+      archetypes: [arc_wise_helper]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning]
+      speech_acts_performed: [speech_lie, speech_request, speech_testimony]
+      traits: [monster-wife, Christian-hider, bed-concealment-helper, question-asker, answer-repeater]
+      evidence: |
+        the wife only was at home
+
+    griffin:
+      name: The Griffin
+      being_type: being_griffin
+      agency_modes: [agency_speech, agency_violence]
+      speech_acts_performed: [speech_testimony]
+      traits: [man-flesh-smeller, Christian-devourer, tail-feather-holder, hidden-answer-knower]
+      evidence: |
+        no Christian can speak to the Griffin; he devours them all
+
+    griffin_toad_nest:
+      name: The Toad's Nest of Hair
+      species: sp_toad
+      agency_modes: [agency_object_mediation]
+      traits: [hidden-remedy-blocker, hair-nest-maker, sickness-cause]
+      evidence: |
+        a toad has made its nest of her hair
+
+  magic_objects:
+
+    obj_griffin_healing_apples:
+      name: The Healing Apples
+      object_kind: food
+      attributes:
+        function: cure the king's sick daughter when Hans truthfully carries them to court
+      evidence: |
+        an apple with which she could eat herself well
+
+    obj_griffin_frogs_legs:
+      name: Uele's Kicking Frogs' Legs
+      object_kind: food
+      attributes:
+        function: false-answer substitution replacing the elder brother's apples
+      evidence: |
+        frogs’ legs which were still kicking about
+
+    obj_griffin_hogs_bristles:
+      name: Seame's Hogs' Bristles
+      object_kind: material
+      attributes:
+        function: false-answer substitution replacing the second brother's apples
+      evidence: |
+        he had but hogs’ bristles
+
+    obj_griffin_land_boat:
+      name: The Boat Swifter on Land Than Water
+      object_kind: tool
+      attributes:
+        function: impossible royal task-object that moves as swiftly as the wind on dry land
+      evidence: |
+        a boat which would go quicker on dry land than on water
+
+    obj_griffin_wooden_bowls:
+      name: The Wooden Bowls
+      object_kind: tool
+      attributes:
+        function: false-answer substitution replacing the elder brothers' attempted land boat
+      evidence: |
+        he had nothing but wooden bowls
+
+    obj_griffin_hare_whistle:
+      name: The Hare-Recalling Whistle
+      object_kind: instrument
+      attributes:
+        function: recalls any escaped hare to the flock during the hundred-hare pasture test
+      evidence: |
+        there is a whistle for thee
+
+    obj_griffin_tail_feather:
+      name: The Griffin's Tail Feather
+      object_kind: token
+      attributes:
+        function: final royal task-token proving that Hans reached the Griffin
+      evidence: |
+        plucked a feather from his tail
+
+    obj_griffin_money_chest_key:
+      name: The Lost Money-Chest Key
+      object_kind: token
+      attributes:
+        function: hidden key whose location is revealed by the Griffin
+      evidence: |
+        the key lies in the wood-house under a log of wood behind the door
+
+    obj_griffin_hair_nest:
+      name: The Toad's Hair Nest
+      object_kind: material
+      attributes:
+        function: stolen or displaced hair whose return cures the sick castle daughter
+      evidence: |
+        under the cellar-steps a toad has made its nest of her hair
+
+  locations:
+
+    loc_griffin_peasant_garden:
+      name: The Peasant's Apple Garden
+      instance_of: loc_house
+      evidence: |
+        Go out into the garden
+
+    loc_griffin_king_palace:
+      name: The King's Palace
+      instance_of: loc_castle
+      evidence: |
+        At length Uele arrived at the palace
+
+    loc_griffin_boat_forest:
+      name: The Forest of the Land-Boat Task
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        sent Uele into the forest to make a boat
+
+    loc_griffin_hare_pasture:
+      name: The Hundred-Hare Pasture
+      instance_of: loc_field
+      evidence: |
+        went with his flock to the pasture
+
+    loc_griffin_first_castle:
+      name: The Castle of the Lost Key
+      instance_of: loc_castle
+      evidence: |
+        he came to a castle
+
+    loc_griffin_second_castle:
+      name: The Castle of the Sick Daughter
+      instance_of: loc_castle
+      evidence: |
+        arrived at another castle
+
+    loc_griffin_lake:
+      name: The Lake of the Bound Carrier
+      instance_of: loc_lake
+      threshold_type: threshold_river
+      evidence: |
+        there was a place where there was a lake
+
+    loc_griffin_house:
+      name: The Griffin's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        Hans arrived at the Griffin’s house
+
+    loc_griffin_bed:
+      name: The Hiding Place under the Griffin's Bed
+      instance_of: loc_bedchamber
+      evidence: |
+        lie down under his bed
+
+    loc_griffin_wood_house:
+      name: The Wood-House Behind the Door
+      instance_of: loc_house
+      evidence: |
+        in the wood-house under a log of wood behind the door
+
+    loc_griffin_cellar_steps:
+      name: The Cellar-Steps with the Toad's Nest
+      instance_of: loc_cellar
+      evidence: |
+        under the cellar-steps
+
+
+classifications:
+
+  world_laws:
+    - law_truthful_answer_preserves_donor_matter
+    - law_monster_household_eavesdropping_yields_remedies
+    - law_midwater_replacement_transfers_ferry_burden
+
+  moral_regimes:
+    - moral_restorative
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_object_mediation
+    - agency_cunning
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_joy
+    - affect_greed
+    - affect_longing
+
+  symbol_numbers:
+    - num_3
+    - num_100
+
+  threshold_types:
+    - threshold_forest
+    - threshold_river
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: griffin_princess
+    scene: The king's only daughter is incurably ill.
+    evidence: |
+      an only daughter who had always been ill
+
+  - function: func_proclamation
+    order: 2
+    actor: griffin_king
+    scene: The king promises his daughter and kingdom to whoever brings a healing apple.
+    evidence: |
+      whosoever brought his daughter an apple with which she could eat herself well
+
+  - function: func_failed_quest
+    order: 3
+    actor: griffin_uele
+    scene: Uele answers the iron man falsely and his apples become frogs' legs.
+    evidence: |
+      Frogs’ legs.
+
+  - function: func_failed_quest
+    order: 4
+    actor: griffin_seame
+    scene: Seame answers the iron man falsely and his apples become hogs' bristles.
+    evidence: |
+      Hogs’ bristles
+
+  - function: func_successful_quest
+    order: 5
+    actor: griffin_hans
+    scene: Hans truthfully carries apples to court and the princess is cured.
+    evidence: |
+      golden-yellow apples came tumbling out
+
+  - function: func_task
+    order: 6
+    actor: griffin_king
+    scene: The king delays marriage by demanding a boat that goes faster on land than water.
+    evidence: |
+      a boat which would go quicker on dry land than on water
+
+  - function: func_task_solution
+    order: 7
+    actor: griffin_hans
+    scene: Hans truthfully names the boat-task and completes the swift land boat.
+    evidence: |
+      The boat went as swiftly as the wind.
+
+  - function: func_task
+    order: 8
+    actor: griffin_king
+    scene: The king demands that Hans pasture one hundred hares without losing one.
+    evidence: |
+      take a hundred hares out to pasture from early morning until late evening
+
+  - function: func_magical_agent
+    order: 9
+    actor: griffin_little_iron_man
+    beneficiary: griffin_hans
+    scene: The iron man gives Hans a whistle that recalls runaway hares.
+    evidence: |
+      there is a whistle for thee
+
+  - function: func_counteraction
+    order: 10
+    actor: griffin_hans
+    scene: Hans gives a hare to the princess but recalls it by whistle before it is lost.
+    evidence: |
+      he whistled, and the hare jumped out of the apron
+
+  - function: func_task
+    order: 11
+    actor: griffin_king
+    scene: The king demands a feather from the Griffin's tail.
+    evidence: |
+      bring him a feather from the Griffin’s tail
+
+  - function: func_intermediate_questions
+    order: 12
+    actor: griffin_hans
+    scene: On the way, Hans agrees to ask the Griffin about the lost key, sick daughter, and bound carrier.
+    evidence: |
+      I will do that.
+
+  - function: func_hidden_entry
+    order: 13
+    actor: griffin_wife
+    beneficiary: griffin_hans
+    scene: The Griffin's wife hides Hans under the bed because the Griffin devours Christians.
+    evidence: |
+      you can lie down under his bed
+
+  - function: func_solution_extraction
+    order: 14
+    actor: griffin_wife
+    scene: The wife asks the sleeping Griffin's answers while Hans listens from under the bed.
+    evidence: |
+      I will ask about them myself.
+
+  - function: func_return
+    order: 15
+    actor: griffin_hans
+    scene: Hans leaves with the Griffin feather and all three answers.
+    evidence: |
+      he had a beautiful feather, and had heard what the Griffin had said
+
+  - function: func_remedy
+    order: 16
+    actor: griffin_hans
+    beneficiary: griffin_second_castle_family
+    scene: Hans removes the toad's hair nest and cures the sick daughter.
+    evidence: |
+      pulled out the toad’s nest from beneath the lowest step
+
+  - function: func_reward
+    order: 17
+    actor: griffin_first_castle_lord
+    beneficiary: griffin_hans
+    scene: Hans finds the lost key and receives wealth and livestock.
+    evidence: |
+      gave Hans as a reward much of the gold that was in the chest
+
+  - function: func_punishment
+    order: 18
+    actor: griffin_lake_carrier
+    victim: griffin_king
+    scene: The carrier puts the greedy king down in the middle of the lake.
+    evidence: |
+      put him down in the middle of it and went away
+
+  - function: func_wedding
+    order: 19
+    actor: griffin_hans
+    beneficiary: griffin_princess
+    scene: Hans marries the king's daughter and becomes king.
+    evidence: |
+      married the daughter, and became King
+
+
+edges:
+
+  - from: griffin_king
+    label: PROCLAIMS_REWARD_FOR
+    to: obj_griffin_healing_apples
+    evidence: |
+      whosoever brought his daughter an apple with which she could eat herself well
+
+  - from: griffin_uele
+    label: FALSELY_NAMES_APPLES_AS
+    to: obj_griffin_frogs_legs
+    evidence: |
+      Frogs’ legs.
+
+  - from: law_truthful_answer_preserves_donor_matter
+    label: SUBSTITUTES_FALSE_ANSWER_WITH
+    to: obj_griffin_frogs_legs
+    evidence: |
+      so shall it be, and remain
+
+  - from: griffin_seame
+    label: FALSELY_NAMES_APPLES_AS
+    to: obj_griffin_hogs_bristles
+    evidence: |
+      Hogs’ bristles
+
+  - from: griffin_hans
+    label: TRUTHFULLY_CARRIES
+    to: obj_griffin_healing_apples
+    evidence: |
+      apples with which the King’s daughter was to eat herself well
+
+  - from: obj_griffin_healing_apples
+    label: CURES
+    to: griffin_princess
+    evidence: |
+      As soon as she had eaten of those apples, she was cured
+
+  - from: griffin_king
+    label: DEMANDS
+    to: obj_griffin_land_boat
+    evidence: |
+      a boat which would go quicker on dry land than on water
+
+  - from: griffin_uele
+    label: FALSELY_NAMES_BOAT_AS
+    to: obj_griffin_wooden_bowls
+    evidence: |
+      Wooden bowls for the kitchen.
+
+  - from: griffin_hans
+    label: MAKES
+    to: obj_griffin_land_boat
+    evidence: |
+      Hans finished his boat
+
+  - from: obj_griffin_land_boat
+    label: TRAVELS_SWIFTLY_TO
+    to: loc_griffin_king_palace
+    evidence: |
+      The boat went as swiftly as the wind.
+
+  - from: griffin_king
+    label: DEMANDS_PASTURING_OF
+    to: griffin_hundred_hares
+    evidence: |
+      take a hundred hares out to pasture
+
+  - from: griffin_little_iron_man
+    label: GIVES
+    to: obj_griffin_hare_whistle
+    evidence: |
+      there is a whistle for thee
+
+  - from: obj_griffin_hare_whistle
+    label: RECALLS
+    to: griffin_hundred_hares
+    evidence: |
+      just whistle with it, and then it will come back again
+
+  - from: griffin_palace_servant
+    label: DEMANDS
+    to: griffin_hundred_hares
+    evidence: |
+      he must give her a hare instantly
+
+  - from: griffin_hans
+    label: RECALLS_HARE_FROM
+    to: griffin_princess
+    evidence: |
+      the hare jumped out of the apron
+
+  - from: griffin_king
+    label: DEMANDS
+    to: obj_griffin_tail_feather
+    evidence: |
+      bring him a feather from the Griffin’s tail
+
+  - from: griffin_first_castle_lord
+    label: ASKS_QUESTION_ABOUT
+    to: obj_griffin_money_chest_key
+    evidence: |
+      ask him where it is
+
+  - from: griffin_second_castle_family
+    label: ASKS_REMEDY_FOR
+    to: griffin_toad_nest
+    evidence: |
+      what would make their daughter healthy again
+
+  - from: griffin_lake_carrier
+    label: ASKS_RELEASE_QUESTION_OF
+    to: griffin_hans
+    evidence: |
+      ask him why I am forced to carry everybody over the lake
+
+  - from: griffin_wife
+    label: HIDES
+    to: griffin_hans
+    evidence: |
+      you can lie down under his bed
+
+  - from: griffin_hans
+    label: PLUCKS
+    to: obj_griffin_tail_feather
+    evidence: |
+      plucked a feather from his tail
+
+  - from: law_monster_household_eavesdropping_yields_remedies
+    label: REVEALS_LOCATION_OF
+    to: obj_griffin_money_chest_key
+    evidence: |
+      the key lies in the wood-house under a log of wood behind the door
+
+  - from: law_monster_household_eavesdropping_yields_remedies
+    label: REVEALS_REMEDY_FOR
+    to: griffin_second_castle_family
+    evidence: |
+      if she got her hair back she would be well
+
+  - from: law_monster_household_eavesdropping_yields_remedies
+    label: REVEALS_RELEASE_FOR
+    to: griffin_lake_carrier
+    evidence: |
+      if he only put one man down in the middle
+
+  - from: griffin_hans
+    label: TELLS_RELEASE_RULE_TO
+    to: griffin_lake_carrier
+    evidence: |
+      all he had to do was to set one person down in the middle of the lake
+
+  - from: griffin_hans
+    label: REMOVES
+    to: obj_griffin_hair_nest
+    evidence: |
+      pulled out the toad’s nest from beneath the lowest step
+
+  - from: obj_griffin_hair_nest
+    label: CURES
+    to: griffin_second_castle_family
+    evidence: |
+      she sprang off his shoulder and up the steps before him, and was quite cured
+
+  - from: griffin_hans
+    label: RETURNS
+    to: obj_griffin_money_chest_key
+    evidence: |
+      took it to the lord of the castle
+
+  - from: griffin_king
+    label: SEEKS_GRIFFIN_WEALTH
+    to: griffin
+    evidence: |
+      the Griffin gave every one whatsoever he wanted
+
+  - from: law_midwater_replacement_transfers_ferry_burden
+    label: TRANSFERS_BURDEN_TO
+    to: griffin_king
+    evidence: |
+      put him down in the middle of it and went away
+
+  - from: griffin_king
+    label: DROWNS_IN
+    to: loc_griffin_lake
+    evidence: |
+      the King was drowned
+
+  - from: griffin_hans
+    label: MARRIES
+    to: griffin_princess
+    evidence: |
+      married the daughter, and became King

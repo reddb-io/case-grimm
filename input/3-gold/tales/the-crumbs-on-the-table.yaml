@@ -1,0 +1,139 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-crumbs-on-the-table
+khm: 190
+atu: "1373A"
+atu_name: The Crumbs on the Table
+canonical_source: ../../2-silver/canonical/the-crumbs-on-the-table/canonical.txt
+title: The Crumbs on the Table
+
+entities:
+  characters:
+    crumbs_countryman:
+      name: The Countryman
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning]
+      speech_acts_performed: [speech_request, speech_testimony]
+      affects: [affect_joy]
+      traits: [permissive-master, tempter, insistent, mistress-minimizer, mocking-laugher]
+      evidence: |
+        A countryman one day said to his little puppies
+
+    crumbs_puppies:
+      name: The Little Dogs
+      species: sp_dog
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_warning, speech_testimony]
+      affects: [affect_fear, affect_hunger]
+      traits: [little, cautious, table-tempted, mistress-fearing, pressured, beaten, complaining, runaway]
+      evidence: |
+        Then the little dogs said, “No, no, we will not go
+
+    crumbs_mistress:
+      name: The Mistress
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_violence]
+      affects: [affect_anger]
+      traits: [absent-visitor, returning-authority, stick-seizer, punisher]
+      evidence: |
+        the mistress came, and seized the stick
+
+  magic_objects:
+    obj_crumbs_bread_crumbs:
+      name: The Bread-Crumbs on the Table
+      object_kind: food
+      attributes:
+        function: forbidden table scraps that the countryman urges the dogs to eat
+      evidence: |
+        pick up the bread-crumbs on the table
+
+    obj_crumbs_mistress_stick:
+      name: The Mistress's Stick
+      object_kind: tool
+      attributes:
+        function: domestic punishment instrument used on the dogs
+      evidence: |
+        seized the stick in great haste
+
+  locations:
+    loc_crumbs_parlour:
+      name: The Parlour
+      instance_of: loc_house
+      evidence: |
+        Come into the parlour
+
+    loc_crumbs_table:
+      name: The Table
+      instance_of: loc_house
+      evidence: |
+        got on the table
+
+    loc_crumbs_outside_house:
+      name: Outside the House
+      instance_of: loc_house
+      evidence: |
+        outside the house
+
+classifications:
+  world_laws:
+    - law_invited_table_theft_redirects_punishment_to_dependents
+  moral_regimes:
+    - moral_naive_punished
+  agency_modes_dominant:
+    - agency_speech
+    - agency_domestic_labor
+    - agency_violence
+  affects_driving:
+    - affect_fear
+    - affect_hunger
+    - affect_joy
+  symbol_numbers: []
+  threshold_types: []
+
+propp:
+  - { function: func_forbidden_food_invitation, order: 1, actor: crumbs_countryman,
+      beneficiary: crumbs_puppies,
+      scene: "the countryman invites the puppies into the parlour to eat crumbs from the table" }
+  - { function: func_prudent_refusal, order: 2, actor: crumbs_puppies,
+      scene: "the puppies refuse because the mistress will beat them if she learns it" }
+  - { function: func_pressure, order: 3, actor: crumbs_countryman,
+      victim: crumbs_puppies,
+      scene: "the countryman insists that the mistress will know nothing and gives them no peace" }
+  - { function: func_transgression, order: 4, actor: crumbs_puppies,
+      scene: "the puppies climb on the table and eat the bread-crumbs" }
+  - { function: func_returning_authority, order: 5, actor: crumbs_mistress,
+      scene: "the mistress returns at that very moment with the stick" }
+  - { function: func_punishment, order: 6, actor: crumbs_mistress,
+      victim: crumbs_puppies,
+      scene: "she beats and treats the puppies very harshly" }
+  - { function: func_mocking_coda, order: 7, actor: crumbs_countryman,
+      victim: crumbs_puppies,
+      scene: "the puppies complain outside and the countryman laughs that they should have expected it" }
+
+edges:
+  - { from: crumbs_countryman, to: loc_crumbs_parlour, label: INVITES_INTO_PARLOUR,
+      evidence: "Come into the parlour" }
+  - { from: crumbs_countryman, to: obj_crumbs_bread_crumbs, label: INVITES_TO_EAT,
+      evidence: "pick up the bread-crumbs on the table" }
+  - { from: crumbs_mistress, to: loc_crumbs_parlour, label: ABSENT_ON_VISITS,
+      evidence: "your mistress has gone out to pay some visits" }
+  - { from: crumbs_puppies, to: crumbs_mistress, label: FORESEE_PUNISHMENT,
+      evidence: "If the mistress gets to know it, she will beat us" }
+  - { from: crumbs_countryman, to: crumbs_mistress, label: DENIES_DISCOVERY_RISK,
+      evidence: "She will know nothing about it" }
+  - { from: crumbs_countryman, to: crumbs_puppies, label: PRESSURES_REPEATEDLY,
+      evidence: "let them have no peace" }
+  - { from: crumbs_puppies, to: loc_crumbs_table, label: CLIMB_ON_TABLE,
+      evidence: "got on the table" }
+  - { from: crumbs_puppies, to: obj_crumbs_bread_crumbs, label: EAT_WITH_ALL_MIGHT,
+      evidence: "ate up the bread-crumbs with all their might" }
+  - { from: crumbs_mistress, to: obj_crumbs_mistress_stick, label: SEIZES_STICK,
+      evidence: "seized the stick in great haste" }
+  - { from: crumbs_mistress, to: crumbs_puppies, label: BEATS_HARDLY,
+      evidence: "beat them and treated them very hardly" }
+  - { from: crumbs_puppies, to: crumbs_countryman, label: COMPLAIN_DOST_THOU_SEE,
+      evidence: "Dost, dost, dost, dost, dost thou see" }
+  - { from: crumbs_countryman, to: crumbs_puppies, label: MOCKS_EXPECTATION,
+      evidence: "Didn’t, didn’t, didn’t, you expect it" }
+  - { from: crumbs_puppies, to: loc_crumbs_outside_house, label: RUN_AWAY,
+      evidence: "they just had to run away" }

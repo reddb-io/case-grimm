@@ -1,0 +1,8 @@
+slug: the-girl-without-hands
+khm: 31
+atu: '706'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

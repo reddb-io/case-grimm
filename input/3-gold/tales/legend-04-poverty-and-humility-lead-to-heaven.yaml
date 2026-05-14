@@ -1,0 +1,155 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: legend-04-poverty-and-humility-lead-to-heaven
+khm: null
+legend_number: 4
+canonical_source: ../../2-silver/canonical/legend-04-poverty-and-humility-lead-to-heaven/canonical.txt
+title: Poverty and Humility Lead to Heaven
+
+entities:
+  characters:
+    poverty_prince:
+      name: The King's Son in Beggar's Garments
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_object_mediation]
+      existential_states: [state_hidden_identity]
+      speech_acts_performed: [speech_prayer, speech_request, speech_testimony]
+      affects: [affect_longing, affect_hunger]
+      traits: [sad-prince, heaven-longing, voluntary-beggar, seven-year-wanderer, patient-sufferer, unrecognized-son, sacrament-seeker, rose-and-lily-dead]
+      evidence: |
+        There was once a King’s son who went out into the world
+
+    poverty_gray_man:
+      name: The Poor Gray-Haired Guide
+      species: sp_human
+      archetypes: [arc_wise_helper]
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_command, speech_testimony]
+      traits: [poor, gray-haired, road-guide, humility-teacher, garment-exchanger]
+      evidence: |
+        a poor gray-haired man who was coming along the road
+
+    poverty_queen:
+      name: The Pitying Queen Mother
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank, agency_domestic_labor]
+      affects: [affect_pity]
+      traits: [unrecognizing-mother, letter-reader, under-stairs-provider]
+      evidence: |
+        out of pity, the Queen had a place under the stairs assigned to him
+
+    poverty_ill_natured_servant:
+      name: The Ill-Natured Servant
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation]
+      affects: [affect_greed]
+      traits: [food-stealer, dog-feeder, water-bringer, hard-hearted]
+      evidence: |
+        one of them was ill-natured
+
+    poverty_honest_servant:
+      name: The Honest Servant
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      affects: [affect_pity]
+      traits: [faithful-food-carrier, humble-helper]
+      evidence: |
+        the other, however, was honest
+
+    poverty_priest:
+      name: The Priest
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_prayer]
+      traits: [mass-sayer, last-sacrament-bringer, death-witness]
+      evidence: |
+        After mass the priest went to the poor man under the stairs
+
+  magic_objects:
+    obj_poverty_beggar_garment:
+      name: The Beggar's Garment
+      object_kind: garment
+      evidence: |
+        wore in its place the beggar’s garment
+
+    obj_poverty_rose_lily:
+      name: The Rose and Lily in His Hands
+      object_kind: relic
+      evidence: |
+        In one hand he had a rose, in the other a lily
+
+    obj_poverty_history_paper:
+      name: The Paper with His History
+      object_kind: book
+      evidence: |
+        a paper in which was written his history
+
+  locations:
+    loc_poverty_road:
+      name: The Road of the Gray-Haired Man
+      instance_of: loc_road
+      evidence: |
+        coming along the road towards him
+
+    loc_poverty_palace_stairs:
+      name: The Place Under the Palace Stairs
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        a place under the stairs
+
+    loc_poverty_grave:
+      name: The Flowered Grave
+      instance_of: loc_tomb
+      threshold_type: threshold_grave
+      evidence: |
+        When he was buried
+
+classifications:
+  world_laws:
+    - law_voluntary_poverty_and_humility_open_heaven
+  moral_regimes:
+    - moral_providential_protection
+  agency_modes_dominant: [agency_endurance, agency_speech, agency_domestic_labor]
+  affects_driving: [affect_longing, affect_hunger, affect_pity]
+  symbol_numbers: [num_7]
+  threshold_types: [threshold_doorway, threshold_grave]
+
+propp:
+  - { function: func_heaven_desire, order: 1, actor: poverty_prince,
+      scene: "the sad king's son longs to know the way to heaven" }
+  - { function: func_humility_instruction, order: 2, actor: poverty_gray_man,
+      beneficiary: poverty_prince,
+      scene: "the gray-haired man prescribes poverty, humility, and seven years of misery" }
+  - { function: func_ascetic_wandering, order: 3, actor: poverty_prince,
+      scene: "the prince wears beggar clothes, asks bread, prays, and suffers" }
+  - { function: func_unrecognized_return, order: 4, actor: poverty_prince,
+      scene: "he returns to the palace but is not recognized by servants or siblings" }
+  - { function: func_patient_decline, order: 5, actor: poverty_prince,
+      scene: "he is fed under the stairs, cheated by one servant, and grows weaker" }
+  - { function: func_sacramental_death, order: 6, actor: poverty_priest,
+      scene: "bells ring during the host and the prince dies with rose, lily, and history paper" }
+
+edges:
+  - { from: poverty_prince, to: loc_heaven, label: LONGS_FOR,
+      evidence: "How well must all be with one up there in heaven" }
+  - { from: poverty_gray_man, to: obj_poverty_beggar_garment, label: PRESCRIBES,
+      evidence: "Put on my ragged clothes" }
+  - { from: poverty_prince, to: obj_poverty_beggar_garment, label: WEARS,
+      evidence: "wore in its place the beggar’s garment" }
+  - { from: poverty_prince, to: speech_prayer, label: PRAYS_FOR_HEAVEN,
+      evidence: "prayed to the Lord to take him into his heaven" }
+  - { from: poverty_queen, to: loc_poverty_palace_stairs, label: ASSIGNS_PLACE_UNDER,
+      evidence: "a place under the stairs assigned to him" }
+  - { from: poverty_ill_natured_servant, to: poverty_prince, label: WITHHOLDS_FOOD_FROM,
+      evidence: "took the weak, wasted-away beggar nothing but water" }
+  - { from: poverty_honest_servant, to: poverty_prince, label: BRINGS_FOOD_TO,
+      evidence: "took the beggar what was sent to him" }
+  - { from: poverty_priest, to: poverty_prince, label: FINDS_DEAD_AFTER_MASS,
+      evidence: "there he lay dead" }
+  - { from: poverty_prince, to: obj_poverty_rose_lily, label: HOLDS_AT_DEATH,
+      evidence: "In one hand he had a rose, in the other a lily" }
+  - { from: loc_poverty_grave, to: obj_poverty_rose_lily, label: GROWS_FLOWERS,
+      evidence: "a rose grew on one side of his grave, and a lily on the other" }
+  - { from: poverty_prince, to: law_voluntary_poverty_and_humility_open_heaven, label: FULFILLS,
+      evidence: "By poverty and humility" }

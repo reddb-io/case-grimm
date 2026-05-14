@@ -1,0 +1,391 @@
+:root {
+  --reader-border: #d9dde4;
+  --reader-muted: #647084;
+  --reader-panel: #f7f8fa;
+  --reader-ink: #1f2937;
+  --reader-accent: #8a4f2a;
+}
+
+.markdown-section {
+  max-width: 1180px;
+}
+
+.app-name-link img {
+  max-width: 34px;
+}
+
+.tale-app {
+  color: var(--reader-ink);
+  display: grid;
+  gap: 16px;
+}
+
+.tale-toolbar {
+  align-items: end;
+  background: var(--reader-panel);
+  border: 1px solid var(--reader-border);
+  border-radius: 8px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(220px, 1fr) minmax(180px, 260px) auto auto;
+  padding: 14px;
+}
+
+.tale-field {
+  display: grid;
+  gap: 6px;
+}
+
+.tale-label {
+  color: var(--reader-muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.tale-field input,
+.tale-field select {
+  border: 1px solid var(--reader-border);
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: var(--reader-ink);
+  font: inherit;
+  min-height: 40px;
+  padding: 8px 10px;
+  width: 100%;
+}
+
+.tale-button {
+  background: #fff;
+  border: 1px solid var(--reader-border);
+  border-radius: 6px;
+  color: var(--reader-ink);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  min-height: 40px;
+  padding: 8px 12px;
+}
+
+.tale-button.primary {
+  background: var(--reader-accent);
+  border-color: var(--reader-accent);
+  color: #fff;
+}
+
+.tale-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.tale-layout {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.7fr);
+}
+
+.tale-card {
+  border: 1px solid var(--reader-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tale-card-header {
+  align-items: center;
+  border-bottom: 1px solid var(--reader-border);
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 12px 14px;
+}
+
+.tale-card-title {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.tale-meta {
+  color: var(--reader-muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.tale-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 14px 0;
+}
+
+.tale-tab {
+  background: #fff;
+  border: 1px solid var(--reader-border);
+  border-radius: 999px;
+  color: var(--reader-ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 10px;
+}
+
+.tale-tab.active {
+  background: #26323f;
+  border-color: #26323f;
+  color: #fff;
+}
+
+.tale-text {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.72;
+  max-height: 66vh;
+  overflow: auto;
+  padding: 8px 18px 20px;
+}
+
+.tale-text p {
+  margin: 0 0 1em;
+}
+
+.tale-side {
+  display: grid;
+  gap: 16px;
+}
+
+.facet-panel {
+  border: 1px solid var(--reader-border);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.facet-title {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  background: #f0f3f6;
+  border: 1px solid #e2e7ee;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1.3;
+  padding: 5px 8px;
+}
+
+.status-line {
+  color: var(--reader-muted);
+  font-size: 13px;
+  min-height: 20px;
+}
+
+.error-box {
+  background: #fff4f2;
+  border: 1px solid #f0b6aa;
+  border-radius: 8px;
+  color: #842b1d;
+  padding: 12px;
+}
+
+.diagnostics-box {
+  background: #111827;
+  border-radius: 8px;
+  color: #e5e7eb;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+  overflow: auto;
+  padding: 12px;
+  white-space: pre-wrap;
+}
+
+.showcase-block {
+  display: grid;
+  gap: 18px;
+  margin: 18px 0;
+}
+
+.metric-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.metric-card {
+  border: 1px solid var(--reader-border);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.metric-value {
+  color: #26323f;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.metric-label {
+  color: var(--reader-muted);
+  font-size: 12px;
+  font-weight: 800;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.metric-note,
+.metric-inline,
+.source-meta {
+  color: var(--reader-muted);
+  font-size: 12px;
+}
+
+.split-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.viz-panel,
+.question-card {
+  border: 1px solid var(--reader-border);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.viz-panel h3,
+.question-card h3 {
+  font-size: 17px;
+  line-height: 1.3;
+  margin: 0 0 12px;
+}
+
+.bar-row {
+  align-items: center;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: minmax(110px, 0.8fr) minmax(120px, 1fr) 64px;
+  margin: 9px 0;
+}
+
+.bar-track {
+  background: #edf1f5;
+  border-radius: 999px;
+  height: 9px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  background: var(--reader-accent);
+  height: 100%;
+}
+
+.data-table-wrap {
+  overflow: auto;
+}
+
+.data-table {
+  border-collapse: collapse;
+  font-size: 13px;
+  width: 100%;
+}
+
+.data-table th,
+.data-table td {
+  border-bottom: 1px solid #e8edf2;
+  padding: 7px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.data-table th {
+  color: var(--reader-muted);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.question-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 18px;
+}
+
+.question-id {
+  color: var(--reader-muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.question-card code {
+  background: #f5f7fa;
+  border: 1px solid #e3e8ee;
+  border-radius: 6px;
+  display: block;
+  font-size: 12px;
+  margin: 10px 0;
+  padding: 8px;
+  white-space: normal;
+}
+
+.model-list,
+.source-list {
+  display: grid;
+  gap: 8px;
+}
+
+.source-row {
+  align-items: start;
+  border-bottom: 1px solid #eef2f6;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+
+.source-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.source-badge {
+  background: #26323f;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 7px;
+}
+
+.empty-state {
+  color: var(--reader-muted);
+  font-size: 13px;
+}
+
+@media (max-width: 860px) {
+  .tale-toolbar,
+  .tale-layout,
+  .metric-grid,
+  .split-grid,
+  .question-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tale-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .tale-meta {
+    white-space: normal;
+  }
+}

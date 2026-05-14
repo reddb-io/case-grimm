@@ -1,0 +1,248 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-pack-of-ragamuffins
+khm: 10
+atu: '210'
+atu_name: The Pack of Ragamuffins
+canonical_source: ../../2-silver/canonical/the-pack-of-ragamuffins/canonical.txt
+title: The Pack of Ragamuffins
+
+
+entities:
+
+  characters:
+
+    pack_ragamuffins_cock:
+      name: The Cock (coachman rogue)
+      archetypes: [arc_trickster]
+      species: sp_bird
+      agency_modes: [agency_cunning, agency_violence, agency_speech]
+      speech_acts_performed: [speech_bargain, speech_command]
+      affects: [affect_greed, affect_pride]
+      traits: [coachman, nut-thief, duck-subduer, inn-fraudster]
+      evidence: |
+        "The little cock now seated himself on the box and was coachman"
+
+    pack_ragamuffins_hen:
+      name: The Hen (riding accomplice)
+      archetypes: [arc_trickster]
+      species: sp_bird
+      agency_modes: [agency_cunning, agency_speech]
+      speech_acts_performed: [speech_bargain]
+      affects: [affect_greed]
+      traits: [pleasure-seeking, egg-layer, accomplice, escape-partner]
+      evidence: |
+        "The host... said that they might stay the night" after being
+        promised "the egg which the little hen has laid on the way."
+
+    pack_ragamuffins_duck:
+      name: The Duck (wronged owner, coerced draught animal)
+      species: sp_bird
+      agency_modes: [agency_violence, agency_endurance]
+      affects: [affect_anger]
+      traits: [nut-hill-owner, defeated, harnessed, escapes-by-water]
+      evidence: |
+        "You thieving folks, who bade you go to my nut-hill?" After the
+        cock wounds her, she lets herself be harnessed to the carriage.
+
+    pack_ragamuffins_pin:
+      name: The Pin (animated object rogue)
+      being_type: being_animated_object
+      agency_modes: [agency_cunning]
+      speech_acts_performed: [speech_bargain]
+      traits: [thin, beer-delayed, towel-trap, face-scratcher]
+      evidence: |
+        "they met two foot-passengers, a pin and a needle" who had
+        stayed too long over beer.
+
+    pack_ragamuffins_needle:
+      name: The Needle (animated object rogue)
+      being_type: being_animated_object
+      agency_modes: [agency_cunning]
+      speech_acts_performed: [speech_bargain]
+      traits: [thin, beer-delayed, chair-trap, painful-pricker]
+      evidence: |
+        "took it by the head and stuck it into the cushion of the
+         landlord's chair"
+
+    pack_ragamuffins_host:
+      name: The Inn Host (reluctant victim)
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      affects: [affect_anger]
+      traits: [reluctant-hospitable, tricked, injured, vow-maker]
+      evidence: |
+        "he made a vow to take no more ragamuffins into his house"
+
+  magic_objects:
+
+    obj_nut_shell_carriage:
+      name: The Nut-Shell Carriage
+      object_kind: architecture
+      attributes:
+        maker: pack_ragamuffins_cock
+        draught_animal: pack_ragamuffins_duck
+      evidence: |
+        "the cock had to build a little carriage of nut-shells"
+
+    obj_hen_egg_payment:
+      name: The Hen's Promised Egg
+      object_kind: food
+      attributes:
+        promised_to: pack_ragamuffins_host
+        outcome: eaten by cock and hen before host wakes
+      evidence: |
+        "told him that he should have the egg which the little hen has
+         laid on the way"
+
+    obj_egg_shell_trap:
+      name: The Egg-Shell on the Hearth
+      object_kind: material
+      attributes:
+        effect: darts into host's eyes
+      evidence: |
+        "they threw the shell on the hearth"
+
+  locations:
+
+    loc_nut_hill:
+      name: The Nut-Hill
+      attributes:
+        owner: pack_ragamuffins_duck
+      evidence: |
+        "who bade you go to my nut-hill?"
+
+    loc_tailors_public_house_gate:
+      name: The Tailor's Public-House by the Gate
+      instance_of: loc_inn
+      threshold_type: threshold_gate
+      evidence: |
+        "They had been at the tailor's public-house by the gate, and
+         had stayed too long over the beer."
+
+    loc_inn_ragamuffins:
+      name: The Inn Where the Ragamuffins Lodge
+      instance_of: loc_inn
+      evidence: |
+        "Late in the evening they came to an inn"
+
+    loc_heath_escape:
+      name: The Heath (cock and hen's escape route)
+      evidence: |
+        "without more ado they flew away over the heath."
+
+    loc_stream_duck_escape:
+      name: The Stream (duck's escape route)
+      evidence: |
+        "found a stream, down which she swam"
+
+
+classifications:
+
+  world_laws:
+    - law_might_unmakes_promise
+
+  moral_regimes:
+    - moral_trickster_wins
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_violence
+
+  affects_driving:
+    - affect_greed
+    - affect_pride
+    - affect_anger
+
+  symbol_numbers:
+    - num_2   # cock/hen pair; pin/needle pair
+
+  threshold_types:
+    - threshold_gate
+
+
+propp:
+  # Rogue-company beast fable: the "hero" side is morally shabby.
+  # Propp functions are used loosely to record the movement from
+  # theft/dispute to fraudulent lodging and escape.
+  - { function: func_absentation, order: 1, actor: pack_ragamuffins_cock,
+      scene: "cock and hen go to the nut-hill to eat their fill" }
+  - { function: func_villainy, order: 2, actor: pack_ragamuffins_cock,
+      scene: "cock wounds the protesting duck and forces her into harness" }
+  - { function: func_departure, order: 3, actor: pack_ragamuffins_cock,
+      scene: "ragamuffin carriage sets off with duck as draught animal" }
+  - { function: func_donor_test, order: 4, actor: pack_ragamuffins_pin,
+      scene: "pin and needle ask to ride because night and dirt stop them" }
+  - { function: func_trickery, order: 5, actor: pack_ragamuffins_cock,
+      scene: "party persuades reluctant host with egg and duck promises" }
+  - { function: func_villainy, order: 6, actor: pack_ragamuffins_cock,
+      scene: "cock and hen eat the promised egg and leave traps behind" }
+  - { function: func_return, order: 7, actor: pack_ragamuffins_cock,
+      scene: "cock and hen fly away over the heath while duck escapes by stream" }
+  - { function: func_punishment, order: 8, actor: pack_ragamuffins_host,
+      scene: "host is scratched, blinded by shell, and pricked by needle" }
+  - { function: func_recognition, order: 9, actor: pack_ragamuffins_host,
+      scene: "host recognises the guests as ragamuffins and vows exclusion" }
+
+
+edges:
+
+  # Nut-hill theft and carriage
+  - { from: pack_ragamuffins_cock, to: loc_nut_hill, label: STEALS_FROM,
+      evidence: "let us go to the hill together and for once eat our fill" }
+  - { from: pack_ragamuffins_hen, to: loc_nut_hill, label: STEALS_FROM,
+      evidence: "let us go to the hill together and for once eat our fill" }
+  - { from: pack_ragamuffins_cock, to: obj_nut_shell_carriage, label: BUILDS,
+      evidence: "the cock had to build a little carriage of nut-shells." }
+  - { from: pack_ragamuffins_hen, to: obj_nut_shell_carriage, label: RIDES_IN,
+      evidence: "the little hen seated herself in it" }
+  - { from: pack_ragamuffins_duck, to: pack_ragamuffins_cock, label: ACCUSES,
+      evidence: "'You thieving folks, who bade you go to my nut-hill?'" }
+  - { from: pack_ragamuffins_cock, to: pack_ragamuffins_duck, label: WOUNDS,
+      evidence: "wounded her so with his spurs that she also begged for mercy" }
+  - { from: pack_ragamuffins_cock, to: pack_ragamuffins_duck, label: HARNESSES,
+      evidence: "willingly let herself be harnessed to the carriage as a punishment." }
+
+  # Passengers and lodging bargain
+  - { from: pack_ragamuffins_pin, to: pack_ragamuffins_cock, label: ASKS_RIDE_FROM,
+      evidence: "asked if they could not get into the carriage for a while." }
+  - { from: pack_ragamuffins_needle, to: pack_ragamuffins_cock, label: ASKS_RIDE_FROM,
+      evidence: "asked if they could not get into the carriage for a while." }
+  - { from: pack_ragamuffins_cock, to: pack_ragamuffins_pin, label: ADMITS_AS_PASSENGER,
+      evidence: "the cock let them both get in" }
+  - { from: pack_ragamuffins_cock, to: pack_ragamuffins_needle, label: ADMITS_AS_PASSENGER,
+      evidence: "the cock let them both get in" }
+  - { from: pack_ragamuffins_host, to: pack_ragamuffins_cock, label: LODGES,
+      evidence: "he at length said that they might stay the night." }
+  - { from: pack_ragamuffins_cock, to: pack_ragamuffins_host, label: PROMISES_TO,
+      attributes: { payment: [obj_hen_egg_payment, pack_ragamuffins_duck] },
+      evidence: "he should have the egg... and should likewise keep the duck" }
+
+  # Non-payment and traps
+  - { from: pack_ragamuffins_cock, to: obj_hen_egg_payment, label: EATS,
+      evidence: "brought the egg, pecked it open, and they ate it together" }
+  - { from: pack_ragamuffins_hen, to: obj_hen_egg_payment, label: EATS,
+      evidence: "brought the egg, pecked it open, and they ate it together" }
+  - { from: pack_ragamuffins_cock, to: obj_egg_shell_trap, label: PLANTS_TRAP,
+      evidence: "they threw the shell on the hearth." }
+  - { from: pack_ragamuffins_cock, to: pack_ragamuffins_needle, label: PLANTS_TRAP,
+      evidence: "stuck it into the cushion of the landlord's chair" }
+  - { from: pack_ragamuffins_cock, to: pack_ragamuffins_pin, label: PLANTS_TRAP,
+      evidence: "put the pin in his towel" }
+  - { from: pack_ragamuffins_cock, to: loc_heath_escape, label: FLEES_TO,
+      evidence: "they flew away over the heath." }
+  - { from: pack_ragamuffins_hen, to: loc_heath_escape, label: FLEES_TO,
+      evidence: "they flew away over the heath." }
+  - { from: pack_ragamuffins_duck, to: loc_stream_duck_escape, label: FLEES_TO,
+      evidence: "found a stream, down which she swam" }
+
+  # Host suffers the after-effects
+  - { from: pack_ragamuffins_pin, to: pack_ragamuffins_host, label: INJURES,
+      evidence: "the pin went over his face and made a red streak from one ear to the other." }
+  - { from: obj_egg_shell_trap, to: pack_ragamuffins_host, label: INJURES,
+      evidence: "the egg-shell darted into his eyes." }
+  - { from: pack_ragamuffins_needle, to: pack_ragamuffins_host, label: INJURES,
+      evidence: "the needle had pricked him still worse than the pin" }
+  - { from: pack_ragamuffins_host, to: pack_ragamuffins_cock, label: VOWS_TO_EXCLUDE,
+      evidence: "he made a vow to take no more ragamuffins into his house" }

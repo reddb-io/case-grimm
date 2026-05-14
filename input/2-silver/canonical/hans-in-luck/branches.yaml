@@ -1,0 +1,110 @@
+slug: hans-in-luck
+khm: 83
+atu: '1415'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg2591-grimm-taylor
+  weight: supplementary
+
+sections:
+- id: opening-frame
+  title: opening philosophical frame
+  canonical:
+    kept: pg5314-grimm-hunt
+    type: stylistic
+    rationale: |
+      Hunt opens directly with action ("Hans had served his master for
+      seven years"). Taylor prefaces with a ~90-word reflection on
+      lucky men, which is Victorian editorial framing, not in KHM.
+      Preserved here for tone-marker.
+  branches:
+  - type: addition
+    from: pg2591-grimm-taylor
+    description: philosophical opening on luck — frames Hans as archetype
+    text: |
+      Some men are born to good luck: all they do or try to do comes
+      right—all that falls to them is so much gain—all their geese are
+      swans—all their cards are trumps—toss them which way you will,
+      they will always, like poor puss, alight upon their legs, and only
+      move on so much the faster.
+    consequences:
+    - explicitly frames Hans as agency_fortune (lucky archetype) — graph layer can attach affect_arbitrary
+    - establishes moral_regime as moral_arbitrary up front, not just by ending
+    - makes the tale into a parable about luck rather than a single character study
+    plot_breaks: none — pure framing, removable
+
+- id: lump-material
+  title: master's payment material
+  canonical:
+    kept: pg5314-grimm-hunt
+    type: conflict
+    rationale: |
+      Hunt: "lump of gold as big as his head" — KHM faithful ("ein
+      Klumpen Gold"). Taylor: "lump of silver" — translation drift.
+      Hunt kept.
+  branches:
+  - type: fork
+    from: pg2591-grimm-taylor
+    description: silver (instead of gold) as the master's payment
+    text: a lump of silver as big as his head
+    consequences:
+    - shifts the absurd-value scale (silver < gold) — slightly less stark contrast with subsequent trades
+    - everywhere silver is referenced downstream must also change ("silver was my wages...")
+    plot_breaks: |
+      Multiple downstream mentions of "the gold/silver" in the trading dialogue would all need to change — Taylor consistently uses silver throughout.
+
+- id: riding-song
+  title: Hans's song on horseback
+  canonical:
+    kept: pg5314-grimm-hunt + pg2591-grimm-taylor
+    type: enrichment
+    rationale: |
+      Taylor preserves a quatrain Hans sings while riding ("No care and
+      no sorrow..."). Hunt suppresses it. Restored via merge.yaml#edit-1
+      with a 3-word bridge ("And he sang—") to introduce the verse.
+
+- id: scissors-grinder-song
+  title: scissors-grinder's song
+  canonical:
+    kept: pg5314-grimm-hunt
+    type: stylistic
+    rationale: |
+      Hunt's 2-line couplet ("I sharpen scissors and quickly grind, / My
+      coat blows out in the wind behind") is closer to the KHM original
+      ("Ich schleife die Schere und drehe geschwind"). Taylor's 5-line
+      version is expanded translation.
+  branches:
+  - type: fork
+    from: pg2591-grimm-taylor
+    description: longer, expanded scissors-grinder song
+    text: |
+      O’er hill and o’er dale
+      So happy I roam,
+      Work light and live well,
+      All the world is my home;
+      Then who so blythe, so merry as I?
+    consequences:
+    - longer song shifts grinder character from incidental tradesman to fully realised foil
+    - changes verse-count balance: now 2 quatrains in the tale (Hans's + grinder's), more song-heavy structure
+    plot_breaks: none — verse substitution only
+
+- id: ending-stones
+  title: ending — stones falling into well
+  canonical:
+    kept: pg5314-grimm-hunt
+    type: conflict
+    rationale: |
+      Hunt has TWO stones (grindstone + an extra "strong stone for old
+      nails") — matches KHM "die beiden Steine". Taylor reduces to one.
+      Hunt is faithful to original.
+  branches:
+  - type: fork
+    from: pg2591-grimm-taylor
+    description: only one stone falls in (no extra "strong stone for nails")
+    text: a most capital stone; do but work it well enough, and you can make an old nail cut with it
+    consequences:
+    - simplifies the closing comic beat — one stone, not two
+    - removes the doubled-folly motif (Hans accepts not just a grindstone but also a useless extra)
+    plot_breaks: none — final beat just plays out faster

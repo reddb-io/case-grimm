@@ -1,0 +1,10 @@
+slug: faithful-john
+khm: 6
+atu: '516'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg11027-grimm-gruelle
+  weight: supplementary
+sections: []

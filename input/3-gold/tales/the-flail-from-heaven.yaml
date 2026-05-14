@@ -1,0 +1,320 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-flail-from-heaven
+khm: 112
+atu: 1889K
+atu_name: The Flail from Heaven
+canonical_source: ../../2-silver/canonical/the-flail-from-heaven/canonical.txt
+title: The Flail from Heaven
+
+
+entities:
+
+  characters:
+
+    flail_countryman:
+      name: The Countryman / Peasant
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation, agency_cunning, agency_endurance]
+      affects: [affect_joy, affect_curiosity, affect_fear]
+      traits: [ploughing-peasant, ox-seller, seed-carrier, sky-tree-climber, heaven-watcher, tool-snatcher, tall-tale-witness]
+      evidence: |
+        A countryman was once going out to plough with a pair of oxen.
+
+    flail_butcher:
+      name: The Butcher Buyer
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_bargain]
+      traits: [ox-buyer, just-counter-of-seed-money]
+      evidence: |
+        By good luck a butcher came by just then
+
+    flail_oxen:
+      name: The Pair of Horn-Growing Oxen
+      species: sp_cattle
+      agency_modes: [agency_domestic_labor]
+      traits: [ploughing-oxen, impossible-horn-growers, gateway-blocked-animals, sold-beasts]
+      evidence: |
+        both the animals’ horns began to grow
+
+    flail_angels:
+      name: The Angels Threshing Oats
+      being_type: being_divine
+      agency_modes: [agency_domestic_labor]
+      traits: [heavenly-threshers, oat-workers, unwitting-tool-owners]
+      evidence: |
+        the angels above were threshing oats
+
+  magic_objects:
+
+    obj_flail_turnip_seed_measure:
+      name: The Measure of Turnip-Seed
+      object_kind: food
+      attributes:
+        function: sale-price unit that converts oxen into seed-counted thalers
+      evidence: |
+        a measure of turnip-seed
+
+    obj_flail_lost_seed:
+      name: The Lost Turnip Seed
+      object_kind: food
+      attributes:
+        function: seed lost from the bag, then grown into a tree reaching heaven
+      evidence: |
+        he lost one seed out of the bag
+
+    obj_flail_sky_tree:
+      name: The Tree Reaching up to the Sky
+      object_kind: material
+      attributes:
+        function: vertical route from earth to heaven
+      evidence: |
+        grown into a tree which reached up to the sky
+
+    obj_flail_chaff_rope:
+      name: The Rope Twisted from Oat Chaff
+      object_kind: tool
+      attributes:
+        function: emergency descent-rope from heaven after the tree begins to fall
+      evidence: |
+        taking the chaff of the oats which lay there in heaps, and twisting a rope of it
+
+    obj_flail_heavenly_oats:
+      name: The Oats Threshed by the Angels
+      object_kind: food
+      attributes:
+        function: heavenly grain whose chaff becomes the peasant's emergency rope
+      evidence: |
+        the angels above were threshing oats
+
+    obj_flail_heavenly_hoe:
+      name: The Hoe Snatched from Heaven
+      object_kind: tool
+      attributes:
+        function: tool used to dig steps out of the deep hole after descent
+      evidence: |
+        he had brought the hoe, for he hoed himself a flight of steps with it
+
+    obj_flail_heavenly_flail:
+      name: The Flail from Heaven
+      instance_of: obj_forensic_token
+      object_kind: tool
+      attributes:
+        function: proof-token that authenticates the peasant's impossible heaven tale
+      evidence: |
+        took the flail with him as a token of his truth
+
+  locations:
+
+    loc_flail_field:
+      name: The Plough Field
+      instance_of: loc_field
+      evidence: |
+        When he got to the field
+
+    loc_flail_gateway:
+      name: The Gateway Blocked by Horns
+      instance_of: loc_gate
+      threshold_type: threshold_gate
+      evidence: |
+        the oxen could not get through the gateway
+
+    loc_flail_road:
+      name: The Road Where the Seed Falls
+      instance_of: loc_road
+      evidence: |
+        On the way, however, he lost one seed out of the bag.
+
+    loc_flail_heaven:
+      name: Heaven Where the Angels Thresh Oats
+      instance_of: loc_heaven
+      threshold_type: threshold_doorway
+      evidence: |
+        see what the angels are doing up there above
+
+    loc_flail_deep_hole:
+      name: The Deep, Deep Hole
+      evidence: |
+        exactly in the middle of a deep, deep hole
+
+
+classifications:
+
+  world_laws:
+    - law_material_token_authenticates_tall_tale
+
+  moral_regimes:
+    - moral_comic_inversion
+    - moral_trickster_wins
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_object_mediation
+    - agency_endurance
+
+  affects_driving:
+    - affect_curiosity
+    - affect_fear
+    - affect_joy
+
+  symbol_numbers: []
+
+  threshold_types:
+    - threshold_gate
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_departure
+    order: 1
+    actor: flail_countryman
+    scene: The peasant goes out to plough with his oxen.
+    evidence: |
+      going out to plough with a pair of oxen
+
+  - function: func_marvel
+    order: 2
+    actor: flail_oxen
+    scene: The oxen's horns grow until they cannot pass through the gateway.
+    evidence: |
+      they were so big that the oxen could not get through the gateway
+
+  - function: func_bargain
+    order: 3
+    actor: flail_countryman
+    beneficiary: flail_butcher
+    scene: The peasant sells the oxen for a thaler per turnip seed.
+    evidence: |
+      a Brabant thaler for every seed
+
+  - function: func_growth
+    order: 4
+    actor: obj_flail_lost_seed
+    scene: The lost seed grows into a tree reaching up to the sky.
+    evidence: |
+      grown into a tree which reached up to the sky
+
+  - function: func_ascent
+    order: 5
+    actor: flail_countryman
+    scene: The peasant climbs the sky-tree to see the angels at work.
+    evidence: |
+      So he climbed up
+
+  - function: func_crisis
+    order: 6
+    actor: flail_countryman
+    scene: The tree begins to fall while he is above, forcing a chaff-rope escape.
+    evidence: |
+      the tree on which he was standing, was beginning to totter
+
+  - function: func_acquisition
+    order: 7
+    actor: flail_countryman
+    scene: The peasant snatches a hoe and flail from heaven.
+    evidence: |
+      snatched a hoe and a flail which were lying about in heaven
+
+  - function: func_return
+    order: 8
+    actor: flail_countryman
+    scene: The peasant descends into a deep hole and digs steps back to earth.
+    evidence: |
+      he hoed himself a flight of steps with it
+
+  - function: func_proof
+    order: 9
+    actor: flail_countryman
+    scene: The flail is kept as comic proof of the impossible heaven journey.
+    evidence: |
+      took the flail with him as a token of his truth
+
+
+edges:
+
+  - from: flail_countryman
+    label: PLOUGHS_WITH
+    to: flail_oxen
+    evidence: |
+      going out to plough with a pair of oxen
+
+  - from: flail_oxen
+    label: BLOCKED_BY
+    to: loc_flail_gateway
+    evidence: |
+      the oxen could not get through the gateway
+
+  - from: flail_countryman
+    label: SELLS
+    to: flail_oxen
+    evidence: |
+      he delivered them over to him
+
+  - from: flail_butcher
+    label: PAYS_FOR
+    to: obj_flail_turnip_seed_measure
+    evidence: |
+      The butcher paid him justly as agreed on
+
+  - from: obj_flail_lost_seed
+    label: TRANSFORMS_INTO
+    to: obj_flail_sky_tree
+    evidence: |
+      the seed had grown into a tree
+
+  - from: obj_flail_sky_tree
+    label: REACHES
+    to: loc_flail_heaven
+    evidence: |
+      reached up to the sky
+
+  - from: flail_countryman
+    label: CLIMBS
+    to: obj_flail_sky_tree
+    evidence: |
+      So he climbed up
+
+  - from: flail_angels
+    label: THRESHES
+    to: obj_flail_heavenly_oats
+    evidence: |
+      the angels above were threshing oats
+
+  - from: flail_countryman
+    label: STEALS
+    to: obj_flail_heavenly_hoe
+    evidence: |
+      snatched a hoe and a flail
+
+  - from: flail_countryman
+    label: STEALS
+    to: obj_flail_heavenly_flail
+    evidence: |
+      snatched a hoe and a flail
+
+  - from: flail_countryman
+    label: DESCENDS_BY
+    to: obj_flail_chaff_rope
+    evidence: |
+      let himself down by the rope
+
+  - from: flail_countryman
+    label: DIGS_OUT_WITH
+    to: obj_flail_heavenly_hoe
+    evidence: |
+      he hoed himself a flight of steps with it
+
+  - from: obj_flail_heavenly_flail
+    label: AUTHENTICATES
+    to: flail_countryman
+    evidence: |
+      as a token of his truth
+
+  - from: law_material_token_authenticates_tall_tale
+    label: REALIZED_BY
+    to: obj_flail_heavenly_flail
+    evidence: |
+      so that no one could have any doubt of his story

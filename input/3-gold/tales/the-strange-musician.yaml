@@ -1,0 +1,254 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-strange-musician
+khm: 8
+atu: '151'
+atu_name: The Strange Musician
+canonical_source: ../../2-silver/canonical/the-strange-musician/canonical.txt
+title: The Strange Musician
+
+
+entities:
+
+  characters:
+
+    strange_musician:
+      name: The Wonderful Musician
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_music, agency_cunning, agency_speech]
+      speech_acts_performed: [speech_command]
+      affects: [affect_curiosity]
+      traits: [solitary, selective, deceptive-teacher, music-compeller]
+      evidence: |
+        "Time is beginning to pass heavily with me here in the forest,
+         I will fetch hither a good companion for myself."
+
+    strange_musician_wolf:
+      name: The Wolf (first unwanted pupil)
+      archetypes: [arc_naive_victim, arc_predator]
+      species: sp_wolf
+      agency_modes: [agency_violence, agency_speech]
+      existential_states: [state_trapped]
+      affects: [affect_anger]
+      traits: [music-drawn, obedient-then-vengeful, paw-trapped]
+      evidence: |
+        "I will obey thee as a scholar obeys his master." Later,
+        "Full of anger and rage he hurried after the musician and
+         wanted to tear him to pieces."
+
+    strange_musician_fox:
+      name: The Fox (second unwanted pupil)
+      archetypes: [arc_naive_victim]
+      species: sp_fox
+      agency_modes: [agency_speech]
+      existential_states: [state_trapped]
+      affects: [affect_anger]
+      traits: [music-drawn, obedient, bough-snared, revenge-seeking]
+      evidence: |
+        "I will obey thee as a scholar obeys his master." The musician
+        fastens both paws to springing boughs until it hangs
+        struggling in the air.
+
+    strange_musician_hare:
+      name: The Hare (third unwanted pupil)
+      archetypes: [arc_naive_victim]
+      species: sp_hare
+      agency_modes: [agency_speech]
+      existential_states: [state_trapped]
+      affects: [affect_fear]
+      traits: [music-drawn, obedient, string-bound, vulnerable]
+      evidence: |
+        "run twenty times round the tree!" The hare obeys, and the
+        string cuts into its tender neck.
+
+    strange_musician_woodcutter:
+      name: The Poor Woodcutter (right companion)
+      species: sp_human
+      agency_modes: [agency_violence, agency_endurance]
+      affects: [affect_curiosity]
+      traits: [poor, compelled-listener, protective, axe-bearing]
+      evidence: |
+        "The sound reached the ears of a poor wood-cutter, who instantly,
+         whether he would or no, gave up his work and came with his
+         hatchet under his arm to listen to the music."
+
+  magic_objects:
+
+    obj_fiddle_strange_musician:
+      name: The Musician's Fiddle
+      instance_of: obj_fiddle
+      object_kind: instrument
+      attributes:
+        effect: draws animals and humans through the forest
+      evidence: |
+        "Then he took his fiddle from his back, and played so that it
+         echoed through the trees."
+
+    obj_oak_cleft_trap:
+      name: The Hollow Oak Cleft (wolf trap)
+      object_kind: material
+      attributes:
+        mechanism: paws wedged in tree-cleft with a stone
+      evidence: |
+        "they came to an old oak-tree which was hollow inside, and cleft
+         in the middle"
+
+    obj_hazel_bough_snare:
+      name: The Bent Hazel Boughs (fox snare)
+      object_kind: material
+      attributes:
+        mechanism: springing boughs jerk fox into the air by both paws
+      evidence: |
+        "the bushes sprang up again, and jerked up the little fox, so
+         that it hung struggling in the air."
+
+    obj_hare_string_snare:
+      name: The Long String (hare snare)
+      object_kind: tool
+      attributes:
+        mechanism: winds around aspen trunk and tightens around neck
+        turns: 20
+      evidence: |
+        "The musician tied a long string round the little hare's neck,
+         the other end of which he fastened to the tree."
+
+    obj_woodcutter_hatchet:
+      name: The Woodcutter's Hatchet
+      object_kind: weapon
+      attributes:
+        function: protective deterrent against revenge-seeking animals
+      evidence: |
+        "came with his hatchet under his arm to listen to the music."
+
+  locations:
+
+    loc_forest_strange_musician:
+      name: The Forest (music-compulsion field)
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      attributes:
+        contains: [thicket, hollow-oak, footpath, hazel-bushes, aspen-clearing]
+      evidence: |
+        "There was once a wonderful musician, who went quite alone
+         through a forest"
+
+
+classifications:
+
+  world_laws:
+    - law_music_attracts
+
+  moral_regimes:
+    - moral_trickster_wins
+
+  agency_modes_dominant:
+    - agency_music
+    - agency_cunning
+    - agency_violence
+
+  affects_driving:
+    - affect_curiosity
+    - affect_anger
+
+  symbol_numbers:
+    - num_3   # three animal pupils, three failed companion-summons, three traps
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+  # Beast-schwank / music-compulsion form: repeated summons replace
+  # the normal donor sequence. The musician tests candidates by false
+  # lessons, rejects animals, and is finally protected by the human
+  # listener whom the same music attracts.
+  - { function: func_lack, order: 1, actor: strange_musician,
+      scene: "alone in the forest, musician lacks a good companion" }
+  - { function: func_magical_agent, order: 2, actor: strange_musician,
+      scene: "fiddle-music echoes through the trees and summons listeners" }
+  - { function: func_donor_test, order: 3, actor: strange_musician_wolf,
+      scene: "wolf asks to learn the fiddle and promises scholar-like obedience" }
+  - { function: func_victory, order: 4, actor: strange_musician,
+      scene: "musician traps the wolf's paws in a hollow oak cleft" }
+  - { function: func_donor_test, order: 5, actor: strange_musician_fox,
+      scene: "fox asks to learn and submits to the musician's commands" }
+  - { function: func_victory, order: 6, actor: strange_musician,
+      scene: "musician binds fox's paws to springing hazel boughs" }
+  - { function: func_donor_test, order: 7, actor: strange_musician_hare,
+      scene: "hare asks to learn and runs twenty times round the aspen" }
+  - { function: func_victory, order: 8, actor: strange_musician,
+      scene: "hare winds itself into the string-snare and is trapped" }
+  - { function: func_pursuit, order: 9, actor: strange_musician_wolf,
+      scene: "wolf frees himself, frees fox and hare, and all seek revenge" }
+  - { function: func_rescue, order: 10, actor: strange_musician_woodcutter,
+      scene: "woodcutter stands before musician with axe and frightens beasts away" }
+  - { function: func_return, order: 11, actor: strange_musician,
+      scene: "musician plays once more in gratitude and goes onwards" }
+
+
+edges:
+
+  # Music summons listeners
+  - { from: strange_musician, to: obj_fiddle_strange_musician, label: USES,
+      evidence: "he took his fiddle from his back, and played so that it echoed through the trees." }
+  - { from: obj_fiddle_strange_musician, to: strange_musician_wolf, label: ATTRACTS,
+      evidence: "It was not long before a wolf came trotting through the thicket towards him." }
+  - { from: obj_fiddle_strange_musician, to: strange_musician_fox, label: ATTRACTS,
+      evidence: "It was not long before a fox came creeping through the trees towards him." }
+  - { from: obj_fiddle_strange_musician, to: strange_musician_hare, label: ATTRACTS,
+      evidence: "Then a little hare came springing towards him." }
+  - { from: obj_fiddle_strange_musician, to: strange_musician_woodcutter, label: ATTRACTS,
+      evidence: "The sound reached the ears of a poor wood-cutter, who instantly, whether he would or no, gave up his work" }
+
+  # False lessons become traps
+  - { from: strange_musician_wolf, to: strange_musician, label: ASKS_TO_LEARN_FROM,
+      evidence: "I should like to learn that, too." }
+  - { from: strange_musician, to: strange_musician_wolf, label: COMMANDS,
+      evidence: "if thou wilt learn to fiddle, put thy fore paws into this crevice." }
+  - { from: strange_musician, to: strange_musician_wolf, label: TRAPS,
+      attributes: { object: obj_oak_cleft_trap },
+      evidence: "with one blow wedged his two paws so fast that he was forced to stay there like a prisoner." }
+
+  - { from: strange_musician_fox, to: strange_musician, label: ASKS_TO_LEARN_FROM,
+      evidence: "I should like to learn that too." }
+  - { from: strange_musician, to: strange_musician_fox, label: COMMANDS,
+      evidence: "give me thy left front paw." }
+  - { from: strange_musician, to: strange_musician_fox, label: TRAPS,
+      attributes: { object: obj_hazel_bough_snare },
+      evidence: "the bushes sprang up again, and jerked up the little fox, so that it hung struggling in the air." }
+
+  - { from: strange_musician_hare, to: strange_musician, label: ASKS_TO_LEARN_FROM,
+      evidence: "I too, should like to learn that." }
+  - { from: strange_musician, to: strange_musician_hare, label: COMMANDS,
+      evidence: "run twenty times round the tree!" }
+  - { from: strange_musician, to: strange_musician_hare, label: TRAPS,
+      attributes: { object: obj_hare_string_snare },
+      evidence: "when it had run round twenty times, it had twisted the string twenty times round the trunk of the tree" }
+
+  # Revenge coalition
+  - { from: strange_musician_wolf, to: strange_musician_fox, label: FREES,
+      evidence: "The wolf drew down the little tree, bit the cord in two, and freed the fox" }
+  - { from: strange_musician_wolf, to: strange_musician_hare, label: FREES,
+      evidence: "They found the tied-up hare, whom likewise they delivered" }
+  - { from: strange_musician_fox, to: strange_musician_hare, label: FREES,
+      evidence: "They found the tied-up hare, whom likewise they delivered" }
+  - { from: strange_musician_wolf, to: strange_musician, label: SEEKS_REVENGE_ON,
+      evidence: "Full of anger and rage he hurried after the musician and wanted to tear him to pieces." }
+  - { from: strange_musician_fox, to: strange_musician, label: SEEKS_REVENGE_ON,
+      evidence: "then they all sought the enemy together." }
+  - { from: strange_musician_hare, to: strange_musician, label: SEEKS_REVENGE_ON,
+      evidence: "then they all sought the enemy together." }
+
+  # Human companion protects the musician
+  - { from: strange_musician_woodcutter, to: strange_musician, label: PROTECTS,
+      attributes: { weapon: obj_woodcutter_hatchet },
+      evidence: "he raised his glittering axe and placed himself before the musician" }
+  - { from: strange_musician_woodcutter, to: strange_musician_wolf, label: FRIGHTENS,
+      evidence: "Then the beasts were terrified and ran back into the forest." }
+  - { from: strange_musician_woodcutter, to: strange_musician_fox, label: FRIGHTENS,
+      evidence: "Then the beasts were terrified and ran back into the forest." }
+  - { from: strange_musician_woodcutter, to: strange_musician_hare, label: FRIGHTENS,
+      evidence: "Then the beasts were terrified and ran back into the forest." }
+  - { from: strange_musician, to: strange_musician_woodcutter, label: THANKS_WITH_MUSIC,
+      evidence: "The musician, however, played once more to the man out of gratitude" }

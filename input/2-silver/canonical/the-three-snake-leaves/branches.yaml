@@ -1,0 +1,8 @@
+slug: the-three-snake-leaves
+khm: 16
+atu: '612'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

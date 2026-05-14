@@ -1,0 +1,8 @@
+slug: the-little-folks-presents
+khm: 182
+atu: '503'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

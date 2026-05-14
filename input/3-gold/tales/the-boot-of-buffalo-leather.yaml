@@ -1,0 +1,255 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-boot-of-buffalo-leather
+khm: 199
+atu: "952"
+atu_name: The King and the Soldier / The Boot of Buffalo-Leather
+canonical_source: ../../2-silver/canonical/the-boot-of-buffalo-leather/canonical.txt
+title: The Boot of Buffalo-Leather
+
+entities:
+  characters:
+    buffalo_boot_soldier:
+      name: The Fearless Discharged Soldier
+      archetypes: [arc_discharged_soldier, arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_endurance, agency_object_mediation, agency_violence]
+      existential_states: [state_fearless]
+      speech_acts_performed: [speech_bargain, speech_command, speech_testimony]
+      affects: [affect_hunger, affect_joy]
+      traits: [discharged, trade-less, beggar, buffalo-boot-wearer, fearless, hungry, robber-table-intruder, toast-magician, old-comrade-summoner, king-saver]
+      evidence: |
+        A soldier who is afraid of nothing
+
+    buffalo_boot_huntsman_king:
+      name: Brother Bright-Boots / The Hidden King
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank, agency_endurance, agency_object_mediation]
+      existential_states: [state_disguised, state_hidden_identity]
+      speech_acts_performed: [speech_testimony, speech_command]
+      affects: [affect_fear, affect_joy]
+      traits: [well-dressed-huntsman, green-shooting-coat-wearer, forest-lost, rank-concealed, equal-treated, rescued-king, soldier-rewarder]
+      evidence: |
+        a man who was well dressed and wore a green shooting-coat
+
+    buffalo_boot_old_woman:
+      name: The Old Woman in the Robber House
+      archetypes: [arc_wise_helper]
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor, agency_cunning]
+      speech_acts_performed: [speech_warning]
+      affects: [affect_pity, affect_fear]
+      traits: [door-opener, robber-house-inhabitant, danger-warner, stove-hider, secret-feeder, route-guide]
+      evidence: |
+        an old woman opened it
+
+    buffalo_boot_twelve_robbers:
+      name: The Twelve Robbers
+      archetypes: [arc_predator]
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech, agency_domestic_labor]
+      existential_states: [state_petrified]
+      speech_acts_performed: [speech_command, speech_warning]
+      affects: [affect_anger, affect_fear]
+      traits: [forest-house-band, twelve, roast-meat-eaters, spy-suspecters, execution-threateners, toast-petrified, bound-prisoners]
+      evidence: |
+        twelve robbers came bursting in
+
+    buffalo_boot_old_comrades:
+      name: The Soldier's Old Comrades
+      species: sp_human
+      agency_modes: [agency_violence, agency_social_rank]
+      traits: [summoned-soldiers, robber-binders, prison-escorts]
+      evidence: |
+        he went to his old comrades
+
+  magic_objects:
+    obj_buffalo_boots:
+      name: The Buffalo-Leather Riding-Boots
+      object_kind: garment
+      attributes:
+        function: durable wandering identity that gives the tale its soldierly emblem
+      evidence: |
+        riding-boots of buffalo-leather
+
+    obj_buffalo_waterproof:
+      name: The Old Waterproof
+      object_kind: garment
+      attributes:
+        function: poor veteran clothing carried on the soldier's back
+      evidence: |
+        He had an old waterproof on his back
+
+    obj_buffalo_roast_meat:
+      name: The Robbers' Roast Meat
+      object_kind: food
+      attributes:
+        function: hunger lure that draws the soldier out from hiding to the robber table
+      evidence: |
+        some great dishes of roast meat
+
+    obj_buffalo_wine_bottle:
+      name: The Best Wine Bottle
+      object_kind: tool
+      attributes:
+        function: speech-and-toast instrument used to petrify and release the robbers
+      evidence: |
+        Bring a bottle out of the cellar
+
+    obj_buffalo_binding_cords:
+      name: The Binding Cords
+      object_kind: tool
+      attributes:
+        function: bind the robbers hand and foot after the release formula
+      evidence: |
+        bound hand and foot with cords
+
+  locations:
+    loc_buffalo_open_country:
+      name: The Open Country Road
+      instance_of: loc_road
+      evidence: |
+        straight out into the open country
+
+    loc_buffalo_forest:
+      name: The Lost Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        at length came to a forest
+
+    loc_buffalo_tree_trunk:
+      name: The Cut Tree-Trunk Meeting Place
+      instance_of: loc_forest
+      evidence: |
+        sitting on the trunk of a tree
+
+    loc_buffalo_robber_house:
+      name: The Stone Robber House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        They found a stone house
+
+    loc_buffalo_stove_corner:
+      name: The Corner Behind the Stove
+      instance_of: loc_hearth
+      evidence: |
+        Creep in here behind the stove
+
+    loc_buffalo_cellar:
+      name: The Wine Cellar
+      instance_of: loc_cellar
+      evidence: |
+        Bring a bottle out of the cellar
+
+    loc_buffalo_town:
+      name: The Town of Arrest and Recognition
+      instance_of: loc_gate
+      evidence: |
+        arrived there, he went to his old comrades
+
+    loc_buffalo_prison:
+      name: The Prison
+      instance_of: loc_dungeon
+      evidence: |
+        drive them straight to prison
+
+classifications:
+  world_laws:
+    - law_toast_formula_petrifies_robber_band
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_restorative
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+    - agency_object_mediation
+    - agency_violence
+  affects_driving:
+    - affect_hunger
+    - affect_fear
+    - affect_pity
+    - affect_joy
+  symbol_numbers:
+    - num_12
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+propp:
+  - { function: func_discharge_wandering, order: 1, actor: buffalo_boot_soldier,
+      scene: "the fearless discharged soldier wanders hungry with his old waterproof and buffalo boots" }
+  - { function: func_hidden_king_encounter, order: 2, actor: buffalo_boot_huntsman_king,
+      scene: "the soldier meets a lost huntsman in a green shooting-coat and treats him as Brother Bright-boots" }
+  - { function: func_lodging_warning, order: 3, actor: buffalo_boot_old_woman,
+      scene: "the old woman warns that the stone house belongs to robbers" }
+  - { function: func_hungry_entry, order: 4, actor: buffalo_boot_soldier,
+      scene: "the soldier enters despite warning because hunger or murder seem equivalent" }
+  - { function: func_robber_feast, order: 5, actor: buffalo_boot_twelve_robbers,
+      scene: "twelve robbers burst in and eat roast meat at the laid table" }
+  - { function: func_table_intrusion, order: 6, actor: buffalo_boot_soldier,
+      scene: "the soldier coughs, exposes himself, and demands food before execution" }
+  - { function: func_petrifying_toast, order: 7, actor: buffalo_boot_soldier,
+      victim: buffalo_boot_twelve_robbers,
+      scene: "the soldier brandishes the bottle and freezes the robbers in toast posture" }
+  - { function: func_booty_delay, order: 8, actor: buffalo_boot_soldier,
+      scene: "the soldier eats and drinks through the night while the robbers remain fixed" }
+  - { function: func_military_arrest, order: 9, actor: buffalo_boot_old_comrades,
+      victim: buffalo_boot_twelve_robbers,
+      scene: "old comrades bind the revived robbers and drive them to prison" }
+  - { function: func_identity_revelation, order: 10, actor: buffalo_boot_huntsman_king,
+      scene: "the huntsman opens his coat and reveals royal garments" }
+  - { function: func_reward, order: 11, actor: buffalo_boot_huntsman_king,
+      beneficiary: buffalo_boot_soldier,
+      scene: "the king rewards the brave soldier and promises he will never again be in want" }
+
+edges:
+  - { from: buffalo_boot_soldier, to: obj_buffalo_boots, label: WEARS,
+      evidence: "riding-boots of buffalo-leather" }
+  - { from: buffalo_boot_soldier, to: loc_buffalo_open_country, label: WANDERS_INTO,
+      evidence: "straight out into the open country" }
+  - { from: buffalo_boot_soldier, to: loc_buffalo_forest, label: ENTERS_LOST,
+      evidence: "at length came to a forest" }
+  - { from: buffalo_boot_huntsman_king, to: loc_buffalo_tree_trunk, label: SITS_ON,
+      evidence: "sitting on the trunk of a tree" }
+  - { from: buffalo_boot_soldier, to: buffalo_boot_huntsman_king, label: NAMES_BRIGHT_BOOTS,
+      evidence: "Brother Bright-boots" }
+  - { from: buffalo_boot_soldier, to: buffalo_boot_huntsman_king, label: JOINS_COMPANY_WITH,
+      evidence: "let us remain together, and seek our way" }
+  - { from: buffalo_boot_soldier, to: loc_buffalo_robber_house, label: FINDS_LIGHT_AT,
+      evidence: "I see a light shining" }
+  - { from: buffalo_boot_old_woman, to: buffalo_boot_soldier, label: WARNS_OF_ROBBERS,
+      evidence: "this is a robber’s house" }
+  - { from: buffalo_boot_old_woman, to: loc_buffalo_stove_corner, label: HIDES_TRAVELLERS_BEHIND,
+      evidence: "Creep in here behind the stove" }
+  - { from: buffalo_boot_twelve_robbers, to: obj_buffalo_roast_meat, label: EAT,
+      evidence: "the robbers enjoyed that thoroughly" }
+  - { from: buffalo_boot_soldier, to: affect_hunger, label: DRIVEN_BY,
+      evidence: "hunger drives me onwards" }
+  - { from: buffalo_boot_soldier, to: buffalo_boot_twelve_robbers, label: DEMANDS_FOOD_FROM,
+      evidence: "I am hungry, give me something to eat" }
+  - { from: buffalo_boot_twelve_robbers, to: buffalo_boot_soldier, label: THREATEN_AFTER_FOOD,
+      evidence: "thou shalt have some food, but after that thou must die" }
+  - { from: buffalo_boot_old_woman, to: obj_buffalo_wine_bottle, label: BRINGS_FROM_CELLAR,
+      evidence: "Bring a bottle out of the cellar" }
+  - { from: buffalo_boot_soldier, to: obj_buffalo_wine_bottle, label: BRANDISHES_OVER_ROBBERS,
+      evidence: "brandished the bottle over the heads of the robbers" }
+  - { from: obj_buffalo_wine_bottle, to: buffalo_boot_twelve_robbers, label: PETRIFIES_BY_TOAST,
+      evidence: "they all sat motionless as if made of stone" }
+  - { from: buffalo_boot_soldier, to: law_toast_formula_petrifies_robber_band, label: ACTIVATES,
+      evidence: "with your mouths open and your right hands lifted up" }
+  - { from: buffalo_boot_soldier, to: buffalo_boot_old_comrades, label: SUMMONS,
+      evidence: "Out in the forest I have found a nest full of gallows’ birds" }
+  - { from: buffalo_boot_soldier, to: buffalo_boot_twelve_robbers, label: RELEASES_WITH_FORMULA,
+      evidence: "Live again" }
+  - { from: buffalo_boot_old_comrades, to: buffalo_boot_twelve_robbers, label: BINDS,
+      evidence: "bound hand and foot with cords" }
+  - { from: buffalo_boot_old_comrades, to: loc_buffalo_prison, label: DRIVES_ROBBERS_TO,
+      evidence: "drive them straight to prison" }
+  - { from: buffalo_boot_huntsman_king, to: state_hidden_identity, label: REVEALS,
+      evidence: "I am the King" }
+  - { from: buffalo_boot_huntsman_king, to: buffalo_boot_soldier, label: REWARDS,
+      evidence: "Thou shalt never again be in want" }
+  - { from: buffalo_boot_soldier, to: buffalo_boot_huntsman_king, label: SAVES_LIFE_OF,
+      evidence: "hast saved my life" }

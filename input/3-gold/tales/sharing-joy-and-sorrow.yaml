@@ -1,0 +1,197 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: sharing-joy-and-sorrow
+khm: 170
+atu: "1408"
+atu_name: Sharing Joy and Sorrow
+canonical_source: ../../2-silver/canonical/sharing-joy-and-sorrow/canonical.txt
+title: Sharing Joy and Sorrow
+
+
+entities:
+
+  characters:
+
+    sharing_tailor:
+      name: The Quarrelsome Tailor
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech, agency_cunning, agency_domestic_labor]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_promise, speech_testimony]
+      affects: [affect_anger, affect_joy]
+      traits: [quarrelsome-husband, wife-beater, imprisoned-offender, promise-evader, hair-puller, tool-thrower, bad-faith-literalist, punished-tailor]
+      evidence: |
+        There was once a tailor, who was a quarrelsome fellow
+
+    sharing_tailors_wife:
+      name: The Tailor's Wife
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_endurance, agency_speech]
+      affects: [affect_fear, affect_grief]
+      traits: [good-wife, industrious-wife, pious-wife, abused-spouse, yard-fugitive, complainant]
+      evidence: |
+        his wife, who was good, industrious, and pious
+
+    sharing_authorities:
+      name: The Authorities and Magistrates
+      archetypes: [arc_oath_enforcer]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command]
+      traits: [public-authority, prison-sentencer, promise-enforcer, loophole-rejecting-judges]
+      evidence: |
+        the authorities at last heard of it
+
+    sharing_neighbors:
+      name: The Neighbors
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      affects: [affect_pity]
+      traits: [wife-assisters, violence-witnesses, communal-interveners]
+      evidence: |
+        the neighbors came to the wife’s assistance
+
+  magic_objects:
+
+    obj_sharing_bread_water:
+      name: The Prison Bread and Water
+      object_kind: food
+      attributes:
+        function: corrective prison ration meant to make the tailor better
+      evidence: |
+        kept for a while on bread and water
+
+    obj_sharing_yard_measure:
+      name: The Yard-Measure
+      object_kind: tool
+      attributes:
+        function: tailor's work tool weaponized during the chase
+      evidence: |
+        threw the yard-measure and scissors at her
+
+    obj_sharing_scissors:
+      name: The Scissors
+      object_kind: tool
+      attributes:
+        function: tailor's work tool weaponized during the chase
+      evidence: |
+        yard-measure and scissors
+
+  locations:
+
+    loc_sharing_household:
+      name: The Tailor's Household
+      instance_of: loc_house
+      evidence: |
+        live with her in peace
+
+    loc_sharing_prison:
+      name: The Prison
+      instance_of: loc_dungeon
+      evidence: |
+        put in prison in order to make him better
+
+    loc_sharing_yard:
+      name: The Yard
+      instance_of: loc_courtyard
+      evidence: |
+        sprang out into the yard
+
+    loc_sharing_magistrates_court:
+      name: The Magistrates' Court
+      evidence: |
+        summoned before the magistrates
+
+
+classifications:
+
+  world_laws:
+    - law_bad_faith_marital_literalism_masks_violence
+    - law_promise_binds_reality
+
+  moral_regimes:
+    - moral_retributive
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_violence
+    - agency_speech
+    - agency_social_rank
+    - agency_cunning
+
+  affects_driving:
+    - affect_anger
+    - affect_joy
+    - affect_fear
+
+  symbol_numbers: []
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: sharing_tailor,
+      scene: "the quarrelsome tailor abuses his good, industrious, pious wife" }
+  - { function: func_public_intervention, order: 2, actor: sharing_authorities,
+      scene: "authorities hear of the abuse, summon him, and imprison him" }
+  - { function: func_interdiction, order: 3, actor: sharing_authorities,
+      scene: "the tailor is forced to promise peaceful married conduct" }
+  - { function: func_violation, order: 4, actor: sharing_tailor,
+      scene: "he returns to old ways and evades the promise by pulling hair and throwing tools" }
+  - { function: func_rescue, order: 5, actor: sharing_neighbors,
+      beneficiary: sharing_tailors_wife, scene: "neighbors come to the wife's assistance" }
+  - { function: func_judgment, order: 6, actor: sharing_authorities,
+      scene: "magistrates remind him of his promise" }
+  - { function: func_bad_faith_defense, order: 7, actor: sharing_tailor,
+      scene: "he claims hits and misses alternated joy and sorrow between husband and wife" }
+  - { function: func_punishment, order: 8, actor: sharing_authorities,
+      scene: "the judges reject the answer and give him the reward he deserved" }
+
+
+edges:
+
+  # Abuse and first punishment
+  - { from: sharing_tailor, to: sharing_tailors_wife, label: SCOLDS_AND_BEATS,
+      evidence: "grumbled and scolded, and knocked her about and beat her" }
+  - { from: sharing_authorities, to: sharing_tailor, label: SUMMONS,
+      evidence: "they had him summoned" }
+  - { from: sharing_authorities, to: loc_sharing_prison, label: PUTS_IN,
+      evidence: "put in prison in order to make him better" }
+  - { from: obj_sharing_bread_water, to: sharing_tailor, label: RESTRICTS,
+      evidence: "kept for a while on bread and water" }
+  - { from: sharing_tailor, to: speech_promise, label: FORCED_TO_MAKE,
+      evidence: "forced, however, to promise not to beat his wife any more" }
+  - { from: sharing_authorities, to: sharing_tailor, label: COMMANDS_MARITAL_PEACE,
+      evidence: "live with her in peace" }
+
+  # Promise evasion through continued violence
+  - { from: sharing_tailor, to: sharing_tailors_wife, label: FALLS_INTO_OLD_WAYS_AGAINST,
+      evidence: "he fell into his old ways" }
+  - { from: sharing_tailor, to: sharing_tailors_wife, label: PULLS_HAIR,
+      evidence: "seize her by the hair and tear it out" }
+  - { from: sharing_tailors_wife, to: loc_sharing_yard, label: ESCAPES_TO,
+      evidence: "sprang out into the yard" }
+  - { from: sharing_tailor, to: obj_sharing_yard_measure, label: THROWS,
+      evidence: "threw the yard-measure and scissors at her" }
+  - { from: sharing_tailor, to: obj_sharing_scissors, label: THROWS,
+      evidence: "yard-measure and scissors at her" }
+  - { from: sharing_tailor, to: sharing_tailors_wife, label: LAUGHS_WHEN_HIT,
+      evidence: "When he hit her he laughed" }
+  - { from: sharing_neighbors, to: sharing_tailors_wife, label: ASSIST,
+      evidence: "came to the wife’s assistance" }
+
+  # Magistrates reject the loophole
+  - { from: sharing_authorities, to: sharing_tailor, label: SUMMONS_AGAIN,
+      evidence: "again summoned before the magistrates" }
+  - { from: sharing_authorities, to: speech_promise, label: REMINDS_OF,
+      evidence: "reminded of his promise" }
+  - { from: sharing_tailor, to: sharing_authorities, label: CLAIMS_PROMISE_KEPT,
+      evidence: "I have kept my word" }
+  - { from: sharing_tailor, to: law_bad_faith_marital_literalism_masks_violence, label: USES,
+      evidence: "I have not beaten her, but have shared joy and sorrow with her" }
+  - { from: law_bad_faith_marital_literalism_masks_violence, to: sharing_tailors_wife, label: REDEFINES_HARM_AS_SORROW,
+      evidence: "whenever I hit her I was full of joy, and she of sorrow" }
+  - { from: law_bad_faith_marital_literalism_masks_violence, to: sharing_tailor, label: FAILS_BEFORE_AUTHORITY,
+      evidence: "The judges were not satisfied with this answer" }
+  - { from: sharing_authorities, to: sharing_tailor, label: PUNISHES,
+      evidence: "gave him the reward he deserved" }

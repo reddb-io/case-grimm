@@ -1,0 +1,123 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: legend-08-the-aged-mother
+khm: null
+legend_number: 8
+canonical_source: ../../2-silver/canonical/legend-08-the-aged-mother/canonical.txt
+title: The Aged Mother
+
+entities:
+  characters:
+    aged_mother:
+      name: The Aged Mother
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      speech_acts_performed: [speech_prayer, speech_testimony]
+      affects: [affect_grief, affect_fear]
+      traits: [old, alone, desolate, bereaved, god-blaming, church-visitor, trembling, thankful, third-day-dead]
+      evidence: |
+        an old woman who sat in the evening alone in her room
+
+    aged_mother_dead_aunt:
+      name: The Dead Aunt
+      species: sp_human
+      being_type: being_spirit
+      existential_states: [state_liminal_dead]
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_testimony]
+      traits: [dead-relative, church-revenant, altar-guide, providence-interpreter]
+      evidence: |
+        Then an aunt of hers stood up
+
+    aged_mother_dead_relations:
+      name: The Dead Relations in Church
+      species: sp_human
+      being_type: being_spirit
+      existential_states: [state_liminal_dead]
+      agency_modes: [agency_speech]
+      traits: [dead, pale-faced, old-fashioned-garments, humming, church-seated]
+      evidence: |
+        none other than her dead relations
+
+    aged_mother_two_sons:
+      name: The Two Dead Sons
+      species: sp_human
+      being_type: being_spirit
+      existential_states: [state_liminal_dead]
+      traits: [dead-children, innocent-children, gallows-future, wheel-future, providentially-taken]
+      evidence: |
+        saw her two children
+
+  magic_objects:
+    obj_aged_mother_lantern:
+      name: The Night Lantern
+      object_kind: tool
+      evidence: |
+        lighted her lantern and went to church
+
+  locations:
+    loc_aged_mother_town:
+      name: The Large Town
+      instance_of: loc_town
+      evidence: |
+        In a large town
+
+    loc_aged_mother_room:
+      name: The Desolate Room
+      instance_of: loc_house
+      evidence: |
+        sat in the evening alone in her room
+
+    loc_aged_mother_church:
+      name: The Dim Church of Dead Kin
+      instance_of: loc_church
+      evidence: |
+        lighted her lantern and went to church
+
+    loc_aged_mother_gallows_wheel:
+      name: The Revealed Gallows and Wheel
+      instance_of: loc_gallows
+      evidence: |
+        one hanging on the gallows, the other bound to the wheel
+
+classifications:
+  world_laws:
+    - law_revenant_church_reframes_loss_as_mercy
+  moral_regimes:
+    - moral_providential_protection
+    - moral_mercy_over_judgment
+  agency_modes_dominant: [agency_speech, agency_endurance]
+  affects_driving: [affect_grief, affect_fear]
+  symbol_numbers: [num_3]
+  threshold_types: []
+
+propp:
+  - { function: func_bereavement_accusation, order: 1, actor: aged_mother,
+      scene: "the old woman grieves her losses and blames God for her sons' deaths" }
+  - { function: func_revenant_church_entry, order: 2, actor: aged_mother,
+      scene: "early-prayer bells lead her into a church filled with dead relations" }
+  - { function: func_providential_revelation, order: 3, actor: aged_mother_dead_aunt,
+      beneficiary: aged_mother,
+      scene: "the aunt shows what the sons would have become if they had lived" }
+  - { function: func_thanksgiving, order: 4, actor: aged_mother,
+      scene: "the mother thanks God for mercy she had not understood" }
+  - { function: func_peaceful_death, order: 5, actor: aged_mother,
+      scene: "on the third day the old mother lies down and dies" }
+
+edges:
+  - { from: aged_mother, to: moral_providential_protection, label: BLAMES_BEFORE_UNDERSTANDING,
+      evidence: "she blamed God for it" }
+  - { from: aged_mother, to: loc_aged_mother_church, label: ENTERS_AT_EARLY_PRAYER,
+      evidence: "bells ringing for early prayer" }
+  - { from: loc_aged_mother_church, to: aged_mother_dead_relations, label: FILLED_WITH,
+      evidence: "none other than her dead relations" }
+  - { from: aged_mother_dead_aunt, to: aged_mother_two_sons, label: REVEALS,
+      evidence: "one hanging on the gallows, the other bound to the wheel" }
+  - { from: aged_mother_dead_aunt, to: moral_providential_protection, label: EXPLAINS,
+      evidence: "if the good God had not taken them to himself when they were innocent children" }
+  - { from: aged_mother, to: speech_prayer, label: THANKS_GOD_IN,
+      evidence: "on her knees thanked God" }
+  - { from: aged_mother, to: law_revenant_church_reframes_loss_as_mercy, label: RECEIVES_REVELATION_OF,
+      evidence: "dealt with her more kindly than she had been able to understand" }
+  - { from: aged_mother, to: num_3, label: DIES_ON_THIRD_DAY,
+      evidence: "on the third day she lay down and died" }

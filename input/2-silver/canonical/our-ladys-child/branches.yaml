@@ -1,0 +1,8 @@
+slug: our-ladys-child
+khm: 3
+atu: '710'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

@@ -1,0 +1,375 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-juniper-tree
+khm: 47
+atu: '720'
+atu_name: The Juniper Tree
+canonical_source: ../../2-silver/canonical/the-juniper-tree/canonical.txt
+title: The Juniper-Tree
+
+
+entities:
+
+  characters:
+
+    juniper_rich_man:
+      name: The Rich Father
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_social_rank]
+      affects: [affect_longing, affect_grief, affect_maternal_love]
+      traits: [rich-householder, child-wisher, widower, remarried-father, deceived-cannibal-father, chain-recipient, restored-family-member]
+      evidence: |
+        "there was a rich man who had a beautiful and pious wife"
+
+    juniper_first_wife:
+      name: The First Wife Beneath the Juniper-Tree
+      archetypes: [arc_protective_mother]
+      species: sp_human
+      existential_states: [state_liminal_dead]
+      agency_modes: [agency_speech, agency_endurance]
+      affects: [affect_longing, affect_maternal_love]
+      traits: [pious, child-longing, blood-snow-wisher, juniper-berry-eater, dying-mother, tree-buried]
+      evidence: |
+        "If I die then bury me beneath the juniper-tree."
+
+    juniper_little_brother:
+      name: The Little Brother
+      species: sp_human
+      existential_states: [state_liminal_dead, state_transformed]
+      transformations: [transform_revenant_bird]
+      agency_modes: [agency_speech, agency_endurance]
+      affects: [affect_fear]
+      traits: [blood-and-snow-child, schoolboy, persecuted-stepson, apple-lured, decapitated, cooked, bone-gathered, restored-son]
+      evidence: |
+        "the first wife’s child was a little son, and he was as red as
+        blood and as white as snow."
+
+    juniper_stepmother:
+      name: The Cruel Stepmother
+      archetypes: [arc_cruel_stepmother]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_violence, agency_domestic_labor]
+      affects: [affect_envy, affect_fear]
+      traits: [inheritance-envier, devil-prompted, child-abuser, apple-lurer, decapitator, false-blamer, black-pudding-cook, millstone-crushed]
+      evidence: |
+        "she was for ever thinking how she could get all the fortune
+        for her daughter"
+
+    juniper_marlinchen:
+      name: Little Marlinchen
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_endurance]
+      affects: [affect_grief, affect_fear]
+      traits: [half-sister, false-guilt-victim, weeping-child, bone-gatherer, silk-handkerchief-burier, red-shoes-recipient, restored-family-member]
+      evidence: |
+        "My sister, little Marlinchen, Gathered together all my bones"
+
+    juniper_tree_bird:
+      name: The Beautiful Revenant Bird
+      species: sp_bird
+      existential_states: [state_liminal_dead, state_transformed]
+      transformations: [transform_revenant_bird]
+      agency_modes: [agency_music, agency_speech, agency_object_mediation, agency_violence]
+      speech_acts_performed: [speech_testimony]
+      traits: [bone-born, fire-mist-emergent, magnificent-singer, murder-testifier, gift-collector, family-gift-giver, millstone-avenger, restored-boy]
+      evidence: |
+        "a beautiful bird flew out of the fire singing magnificently"
+
+    juniper_goldsmith:
+      name: The Goldsmith
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_curiosity]
+      traits: [chain-maker, song-hearer, one-shoe-follower, chain-giver]
+      evidence: |
+        "The goldsmith was sitting in his workshop making a gold chain"
+
+    juniper_shoemaker:
+      name: The Shoemaker and Household
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_curiosity]
+      traits: [song-hearer, household-summoner, red-shoe-giver]
+      evidence: |
+        "The shoemaker heard that and ran out of doors"
+
+    juniper_millers:
+      name: The Twenty Miller's Men
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_curiosity]
+      traits: [stone-hewers, sequential-song-listeners, millstone-givers]
+      evidence: |
+        "in the mill sat twenty miller’s men hewing a stone"
+
+  magic_objects:
+
+    obj_juniper_blood_snow_apple:
+      name: The Apple, Blood, and Snow Wish
+      object_kind: food
+      attributes:
+        wish_formula: red_as_blood_white_as_snow
+        speaker: juniper_first_wife
+      evidence: |
+        "if I had but a child as red as blood and as white as snow!"
+
+    obj_juniper_chest_lid:
+      name: The Heavy Chest Lid with Sharp Iron Lock
+      object_kind: tool
+      attributes:
+        function: decapitates the little brother during apple lure
+      evidence: |
+        "the chest had a great heavy lid with a great sharp iron lock."
+
+    obj_juniper_white_handkerchief:
+      name: The White Handkerchief Holding the Severed Head
+      object_kind: garment
+      attributes:
+        function: conceals the murder by fixing the head on the neck
+      evidence: |
+        "took a white handkerchief out of the top drawer"
+
+    obj_juniper_black_puddings:
+      name: The Black-Puddings Made from the Boy
+      object_kind: food
+      attributes:
+        cook: juniper_stepmother
+        eater: juniper_rich_man
+      evidence: |
+        "we will make him into black-puddings."
+
+    obj_juniper_bones_silk_bundle:
+      name: The Bones in the Silk Handkerchief
+      object_kind: relic
+      attributes:
+        gathered_by: juniper_marlinchen
+        source_body: juniper_little_brother
+      evidence: |
+        "tied them up in her silk handkerchief"
+
+    obj_juniper_gold_chain:
+      name: The Gold Chain
+      object_kind: treasure
+      attributes:
+        source: juniper_goldsmith
+        recipient: juniper_rich_man
+      evidence: |
+        "there is the golden chain for thee"
+
+    obj_juniper_red_shoes:
+      name: The Red Shoes
+      object_kind: garment
+      attributes:
+        source: juniper_shoemaker
+        recipient: juniper_marlinchen
+      evidence: |
+        "there stands a pair of red shoes"
+
+    obj_juniper_millstone:
+      name: The Millstone
+      object_kind: weapon
+      attributes:
+        source: juniper_millers
+        victim: juniper_stepmother
+      evidence: |
+        "Give me the millstone, and then I will sing it again."
+
+  locations:
+
+    loc_juniper_house:
+      name: The Rich Man's House
+      instance_of: loc_house
+      evidence: |
+        "there was a court-yard in front of their house"
+
+    loc_juniper_tree:
+      name: The Juniper-Tree
+      instance_of: loc_tree
+      evidence: |
+        "a juniper-tree"
+
+    loc_juniper_house_door:
+      name: The Door Where the Boy Is Propped
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        "set him on a chair in front of the door"
+
+    loc_juniper_kitchen_hearth:
+      name: The Kitchen Fire and Pan
+      instance_of: loc_hearth
+      evidence: |
+        "standing by the fire with a pan of hot water before her"
+
+    loc_juniper_goldsmith_house:
+      name: The Goldsmith's House
+      instance_of: loc_house
+      evidence: |
+        "lighted on a goldsmith’s house"
+
+    loc_juniper_shoemaker_house:
+      name: The Shoemaker's House
+      instance_of: loc_house
+      evidence: |
+        "flew away to a shoemaker, and lighted on his roof"
+
+    loc_juniper_mill:
+      name: The Mill with the Lime-Tree
+      instance_of: loc_mill
+      evidence: |
+        "he flew far away to a mill"
+
+
+classifications:
+
+  world_laws:
+    - law_grave_tree_channels_maternal_aid
+    - law_dead_matter_reveals_murder
+
+  moral_regimes:
+    - moral_retributive
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_music
+    - agency_object_mediation
+    - agency_cunning
+    - agency_violence
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_longing
+    - affect_envy
+    - affect_grief
+    - affect_fear
+
+  symbol_numbers:
+    - num_3   # three gifts: chain, shoes, millstone; three restored family members
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_lack, order: 1, actor: juniper_first_wife,
+      scene: "beloved couple long for a child beside the juniper-tree" }
+  - { function: func_magical_birth, order: 2, actor: juniper_first_wife,
+      scene: "blood-on-snow wish leads to the birth of a red-and-white son and the mother's death" }
+  - { function: func_villainy, order: 3, actor: juniper_stepmother,
+      victim: juniper_little_brother,
+      scene: "stepmother envies the boy's inheritance and abuses him" }
+  - { function: func_trickery, order: 4, actor: juniper_stepmother,
+      victim: juniper_little_brother,
+      scene: "apple lure draws the boy into the chest where the lid cuts off his head" }
+  - { function: func_false_accusation, order: 5, actor: juniper_stepmother,
+      victim: juniper_marlinchen,
+      scene: "stepmother stages the corpse so Marlinchen thinks she knocked the head off" }
+  - { function: func_villainy, order: 6, actor: juniper_stepmother,
+      victim: juniper_little_brother,
+      scene: "stepmother cooks the boy into black-puddings and feeds him to his father" }
+  - { function: func_counteraction, order: 7, actor: juniper_marlinchen,
+      scene: "Marlinchen gathers the bones in silk and lays them beneath the juniper-tree" }
+  - { function: func_transfiguration, order: 8, actor: juniper_tree_bird,
+      scene: "mist, fire, and tree-motion transform the bones into a singing bird" }
+  - { function: func_testimony, order: 9, actor: juniper_tree_bird,
+      scene: "bird sings the murder-song at goldsmith, shoemaker, mill, and father's house" }
+  - { function: func_reward, order: 10, actor: juniper_tree_bird,
+      scene: "bird gains chain, shoes, and millstone through repeated song" }
+  - { function: func_punishment, order: 11, actor: juniper_tree_bird,
+      victim: juniper_stepmother,
+      scene: "bird drops the millstone on the stepmother and crushes her" }
+  - { function: func_restoration, order: 12, actor: juniper_little_brother,
+      scene: "after smoke, flames, and fire, the little brother stands restored with father and Marlinchen" }
+
+
+edges:
+
+  # Birth, maternal tree, and household replacement
+  - { from: juniper_first_wife, to: obj_juniper_blood_snow_apple, label: WISHES_THROUGH,
+      evidence: "if I had but a child as red as blood and as white as snow!" }
+  - { from: juniper_first_wife, to: juniper_little_brother, label: GIVES_BIRTH_TO,
+      evidence: "then she had a child as white as snow and as red as blood" }
+  - { from: juniper_first_wife, to: loc_juniper_tree, label: BURIED_BENEATH,
+      evidence: "buried her beneath the juniper-tree" }
+  - { from: juniper_rich_man, to: juniper_stepmother, label: MARRIES,
+      evidence: "he took another wife." }
+  - { from: juniper_stepmother, to: juniper_marlinchen, label: LOVES,
+      evidence: "When the woman looked at her daughter she loved her very much" }
+  - { from: juniper_stepmother, to: juniper_little_brother, label: ENVIES_INHERITANCE_OF,
+      evidence: "he would always stand in her way" }
+  - { from: juniper_stepmother, to: juniper_little_brother, label: ABUSES,
+      evidence: "slapped him here and cuffed him there" }
+
+  # Murder, concealment, and cannibal meal
+  - { from: juniper_stepmother, to: obj_juniper_chest_lid, label: USES_TO_KILL,
+      evidence: "crash! she shut the lid down, and his head flew off" }
+  - { from: obj_juniper_chest_lid, to: juniper_little_brother, label: DECAPITATES,
+      evidence: "his head flew off and fell among the red apples." }
+  - { from: juniper_stepmother, to: obj_juniper_white_handkerchief, label: HIDES_MURDER_WITH,
+      evidence: "folded the handkerchief so that nothing could be seen" }
+  - { from: juniper_stepmother, to: loc_juniper_house_door, label: STAGES_CORPSE_AT,
+      evidence: "set him on a chair in front of the door" }
+  - { from: juniper_stepmother, to: juniper_marlinchen, label: INDUCES_FALSE_GUILT_IN,
+      evidence: "Alas, mother, I have knocked my brother’s head off!" }
+  - { from: juniper_stepmother, to: obj_juniper_black_puddings, label: MAKES_FROM_BOY,
+      evidence: "chopped him in pieces, put him into the pan and made him into black puddings" }
+  - { from: juniper_rich_man, to: obj_juniper_black_puddings, label: EATS,
+      evidence: "And the more he ate the more he wanted to have" }
+  - { from: juniper_rich_man, to: juniper_little_brother, label: UNKNOWINGLY_EATS,
+      evidence: "My father he ate me" }
+  - { from: juniper_rich_man, to: obj_juniper_bones_silk_bundle, label: LEAVES_BONES_FOR,
+      evidence: "threw all the bones under the table" }
+
+  # Bone-gathering and bird transformation
+  - { from: juniper_marlinchen, to: obj_juniper_bones_silk_bundle, label: GATHERS,
+      evidence: "got all the bones from beneath the table" }
+  - { from: juniper_marlinchen, to: loc_juniper_tree, label: LAYS_BONES_BENEATH,
+      evidence: "Laid them beneath the juniper-tree" }
+  - { from: loc_juniper_tree, to: juniper_tree_bird, label: GENERATES,
+      evidence: "a beautiful bird flew out of the fire singing magnificently" }
+  - { from: juniper_little_brother, to: juniper_tree_bird, label: TRANSFORMS_INTO,
+      evidence: "what a beautiful bird am I!" }
+  - { from: juniper_tree_bird, to: law_dead_matter_reveals_murder, label: ENACTS,
+      evidence: "My mother she killed me, My father he ate me" }
+
+  # Song exchanges
+  - { from: juniper_tree_bird, to: loc_juniper_goldsmith_house, label: FLIES_TO,
+      evidence: "lighted on a goldsmith’s house" }
+  - { from: juniper_tree_bird, to: juniper_goldsmith, label: SINGS_TO,
+      evidence: "beautiful the song seemed to him." }
+  - { from: juniper_goldsmith, to: obj_juniper_gold_chain, label: GIVES,
+      evidence: "there is the golden chain for thee" }
+  - { from: juniper_tree_bird, to: obj_juniper_gold_chain, label: TAKES_IN_RIGHT_CLAW,
+      evidence: "took the golden chain in his right claw" }
+  - { from: juniper_tree_bird, to: loc_juniper_shoemaker_house, label: FLIES_TO,
+      evidence: "flew away to a shoemaker" }
+  - { from: juniper_shoemaker, to: obj_juniper_red_shoes, label: GIVES,
+      evidence: "there stands a pair of red shoes" }
+  - { from: juniper_tree_bird, to: obj_juniper_red_shoes, label: TAKES_IN_LEFT_CLAW,
+      evidence: "took the shoes in his left claw" }
+  - { from: juniper_tree_bird, to: loc_juniper_mill, label: FLIES_TO,
+      evidence: "he flew far away to a mill" }
+  - { from: juniper_tree_bird, to: juniper_millers, label: STOPS_WORK_BY_SONG,
+      evidence: "Then the last stopped also, and heard the last words." }
+  - { from: juniper_millers, to: obj_juniper_millstone, label: GIVE,
+      evidence: "if he sings again he shall have it." }
+  - { from: juniper_tree_bird, to: obj_juniper_millstone, label: WEARS_AS_COLLAR,
+      evidence: "put the stone on as if it were a collar" }
+
+  # Return, gifts, punishment, restoration
+  - { from: juniper_tree_bird, to: loc_juniper_house, label: RETURNS_TO,
+      evidence: "he flew far away to his father’s house." }
+  - { from: juniper_tree_bird, to: juniper_rich_man, label: GIVES_CHAIN_TO,
+      evidence: "the bird let the golden chain fall" }
+  - { from: juniper_tree_bird, to: juniper_marlinchen, label: GIVES_SHOES_TO,
+      evidence: "Then he threw down the shoes to her." }
+  - { from: juniper_tree_bird, to: juniper_stepmother, label: DROPS_MILLSTONE_ON,
+      evidence: "the bird threw down the millstone on her head" }
+  - { from: obj_juniper_millstone, to: juniper_stepmother, label: CRUSHES,
+      evidence: "she was entirely crushed by it." }
+  - { from: juniper_tree_bird, to: juniper_little_brother, label: TRANSFORMS_BACK_INTO,
+      evidence: "there stood the little brother" }
+  - { from: juniper_little_brother, to: juniper_rich_man, label: REUNITES_WITH,
+      evidence: "he took his father and Marlinchen by the hand" }
+  - { from: juniper_little_brother, to: juniper_marlinchen, label: REUNITES_WITH,
+      evidence: "all three were right glad" }

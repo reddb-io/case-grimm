@@ -1,0 +1,369 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-three-black-princesses
+khm: 137
+atu: '870'
+atu_name: The Three Black Princesses
+canonical_source: ../../2-silver/canonical/the-three-black-princesses/canonical.txt
+title: The Three Black Princesses
+
+
+entities:
+
+  characters:
+
+    three_black_fisherman_son:
+      name: The Fisherman's Son
+      archetypes: [arc_naive_victim]
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance, agency_object_mediation]
+      existential_states: [state_maimed]
+      speech_acts_performed: [speech_request]
+      affects: [affect_fear, affect_shame]
+      traits: [sold-captive, escaped-son, enchanted-castle-guest, taboo-bound-rescuer, father-recognizer, failed-deliverer, broken-legged]
+      evidence: |
+        there was a poor fisherman who fished on the lake with his son
+
+    three_black_fisherman_father:
+      name: The Fisherman Who Becomes Burgomaster
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_warning]
+      affects: [affect_fear, affect_shame]
+      traits: [poor-fisherman, ransom-taker, new-burgomaster, title-enforcer, recognizing-father]
+      evidence: |
+        the fisherman became burgomaster
+
+    three_black_mother:
+      name: The Fisherman's Wife Who Counsels Scalding Water
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_warning, speech_command]
+      affects: [affect_fear]
+      traits: [fearful-mother, holy-water-vessel-adviser, rescue-disruptor]
+      evidence: |
+        his mother said that might very likely not be a good thing to do
+
+    three_black_enemy:
+      name: The Besieging Enemy
+      species: sp_human
+      agency_modes: [agency_violence, agency_object_mediation]
+      traits: [besieger, ransom-demander, child-buyer]
+      evidence: |
+        East India was besieged by an enemy
+
+    three_black_townsfolk:
+      name: The Townsfolk and Great Men
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command]
+      traits: [proclamation-makers, burgomaster-makers, gallows-enforcers]
+      evidence: |
+        the townsfolk caused it to be proclaimed by beat of drum
+
+    three_black_princesses:
+      name: The Three Black Princesses
+      archetypes: [arc_imprisoned_maiden]
+      species: sp_human
+      agency_modes: [agency_speech]
+      existential_states: [state_cursed, state_imprisoned, state_transformed]
+      speech_acts_performed: [speech_command, speech_warning, speech_curse]
+      affects: [affect_fear, affect_anger]
+      traits: [black-clad, partly-white-faced, silence-taboo-setters, sleeping-victims, half-white-cursed-princesses]
+      evidence: |
+        three young princesses who were entirely dressed in black
+
+    three_black_bound_brothers:
+      name: The Three Brothers Bound by Seven Chains
+      species: sp_human
+      agency_modes: [agency_violence]
+      existential_states: [state_imprisoned]
+      traits: [chain-bound, vengeance-threat, unseen-brothers]
+      evidence: |
+        three brothers who are bound by seven chains
+
+  magic_objects:
+
+    obj_three_black_six_hundred_dollars:
+      name: The Six Hundred Dollars
+      object_kind: treasure
+      attributes:
+        function: ransom price that converts the poor fisherman into burgomaster
+      evidence: |
+        received six hundred dollars
+
+    obj_three_black_money_purse:
+      name: The Castle Purse of Money
+      object_kind: treasure
+      attributes:
+        source: three_black_princesses
+        function: equips the son for the one-week visit home
+      evidence: |
+        this purse with money
+
+    obj_three_black_coat:
+      name: The Castle Coat
+      object_kind: garment
+      attributes:
+        source: three_black_princesses
+        function: accompanies the son during magical transport home
+      evidence: |
+        put on this coat
+
+    obj_three_black_old_smock_frock:
+      name: The Old Smock-Frock
+      object_kind: garment
+      attributes:
+        function: proves the son's identity as the poor fisherman's child
+      evidence: |
+        put on his old smock-frock
+
+    obj_three_black_holy_water_vessel:
+      name: The Holy-Water Vessel
+      object_kind: relic
+      attributes:
+        source: three_black_mother
+        function: vessel used to carry boiling water into the enchanted castle
+      evidence: |
+        take a holy-water vessel with him
+
+    obj_three_black_boiling_water:
+      name: The Boiling Water
+      object_kind: material
+      attributes:
+        function: scalds the sleeping princesses and turns them half-white
+      evidence: |
+        drop some boiling water on their faces
+
+    obj_three_black_seven_chains:
+      name: The Seven Chains Binding the Brothers
+      object_kind: material
+      attributes:
+        count: 7
+        function: restrain the avenging brothers named by the princesses
+      evidence: |
+        bound by seven chains
+
+  locations:
+
+    loc_three_black_east_india:
+      name: East India
+      instance_of: loc_town
+      evidence: |
+        East India was besieged by an enemy
+
+    loc_three_black_lake:
+      name: The Fisherman's Lake
+      instance_of: loc_lake
+      evidence: |
+        fished on the lake with his son
+
+    loc_three_black_gallows:
+      name: The Burgomaster's Gallows
+      instance_of: loc_gallows
+      evidence: |
+        put to death on the gallows
+
+    loc_three_black_high_mountain:
+      name: The High Mountain in the Great Forest
+      instance_of: loc_mountain
+      threshold_type: threshold_forest
+      evidence: |
+        a great forest on a high mountain
+
+    loc_three_black_enchanted_castle:
+      name: The Black-Hung Enchanted Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        a great enchanted castle
+
+    loc_three_black_fisherman_hut:
+      name: The Old Fisherman's Hut
+      instance_of: loc_house
+      evidence: |
+        the old fisherman’s hut
+
+
+classifications:
+
+  world_laws:
+    - law_failed_silence_gaze_taboo_sinks_enchanted_castle
+    - law_disguise_alters_social_reality
+    - law_prohibition_invites_violation
+
+  moral_regimes:
+    - moral_disobedience_punished
+    - moral_overreach_reversal
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_object_mediation
+    - agency_social_rank
+    - agency_violence
+    - agency_endurance
+
+  affects_driving:
+    - affect_fear
+    - affect_shame
+    - affect_anger
+
+  symbol_numbers:
+    - num_3
+    - num_7
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_initial_situation
+    order: 1
+    actor: three_black_enemy
+    victim: three_black_townsfolk
+    scene: "East India is besieged until the enemy receives six hundred dollars"
+    evidence: "East India was besieged by an enemy"
+
+  - function: func_transaction
+    order: 2
+    actor: three_black_enemy
+    victim: three_black_fisherman_son
+    scene: "the enemy takes the fisherman's son prisoner and pays the father the six hundred dollars"
+    evidence: "took the son prisoner"
+
+  - function: func_social_elevation
+    order: 3
+    actor: three_black_townsfolk
+    beneficiary: three_black_fisherman_father
+    scene: "the father gives the money to the town and becomes burgomaster"
+    evidence: "the fisherman became burgomaster"
+
+  - function: func_escape
+    order: 4
+    actor: three_black_fisherman_son
+    scene: "the son escapes from the enemy and reaches the mountain forest"
+    evidence: "The son got away again from the enemy"
+
+  - function: func_threshold_crossing
+    order: 5
+    actor: three_black_fisherman_son
+    scene: "the mountain opens and admits the son into the black enchanted castle"
+    evidence: "The mountain opened"
+
+  - function: func_donor_sequence
+    order: 6
+    actor: three_black_princesses
+    beneficiary: three_black_fisherman_son
+    scene: "the princesses promise that he can deliver them if he spends a year without speaking to them or looking at them"
+    evidence: "not speak to them and also not look at them"
+
+  - function: func_temporary_return
+    order: 7
+    actor: three_black_princesses
+    beneficiary: three_black_fisherman_son
+    scene: "the princesses give purse and coat, send him instantly home, and require return within a week"
+    evidence: "in a week he must be back there again"
+
+  - function: func_recognition
+    order: 8
+    actor: three_black_fisherman_son
+    beneficiary: three_black_fisherman_father
+    scene: "the son proves his identity by putting on the old smock-frock of his poor fisherman life"
+    evidence: "Am I not the son of the poor fisherman"
+
+  - function: func_false_counsel
+    order: 9
+    actor: three_black_mother
+    beneficiary: three_black_fisherman_son
+    scene: "the mother fears the princesses and advises him to take a holy-water vessel and boiling water"
+    evidence: "drop some boiling water on their faces"
+
+  - function: func_violation
+    order: 10
+    actor: three_black_fisherman_son
+    victim: three_black_princesses
+    scene: "in fear, the son drops boiling water on the sleeping princesses instead of maintaining the release condition"
+    evidence: "he dropped the water on their faces"
+
+  - function: func_failed_disenchantment
+    order: 11
+    actor: three_black_princesses
+    scene: "the princesses turn half-white, curse him, and declare that no man can now set them free"
+    evidence: "no man born in the world"
+
+  - function: func_punishment
+    order: 12
+    actor: loc_three_black_enchanted_castle
+    victim: three_black_fisherman_son
+    scene: "the castle shrieks, the son leaps out and breaks his leg, and the castle sinks back into the earth"
+    evidence: "the castle sank into the earth again"
+
+
+edges:
+
+  - { from: three_black_enemy, to: loc_three_black_east_india, label: BESIEGES,
+      evidence: "East India was besieged by an enemy" }
+  - { from: three_black_enemy, to: obj_three_black_six_hundred_dollars, label: DEMANDS,
+      evidence: "received six hundred dollars" }
+  - { from: three_black_townsfolk, to: obj_three_black_six_hundred_dollars, label: REWARDS_PROCUREMENT_WITH_OFFICE,
+      evidence: "whosoever was able to procure the money should be burgomaster" }
+  - { from: three_black_enemy, to: three_black_fisherman_son, label: TAKES_PRISONER,
+      evidence: "took the son prisoner" }
+  - { from: three_black_enemy, to: three_black_fisherman_father, label: PAYS,
+      evidence: "gave the father six hundred dollars" }
+  - { from: three_black_fisherman_father, to: obj_three_black_six_hundred_dollars, label: DELIVERS_TO_TOWN,
+      evidence: "gave them to the great men of the town" }
+  - { from: three_black_townsfolk, to: three_black_fisherman_father, label: ELEVATES_TO_OFFICE,
+      evidence: "the fisherman became burgomaster" }
+  - { from: three_black_townsfolk, to: loc_three_black_gallows, label: THREATENS_WITH,
+      evidence: "put to death on the gallows" }
+  - { from: three_black_fisherman_son, to: three_black_enemy, label: ESCAPES_FROM,
+      evidence: "got away again from the enemy" }
+  - { from: three_black_fisherman_son, to: loc_three_black_high_mountain, label: ENTERS,
+      evidence: "a great forest on a high mountain" }
+  - { from: loc_three_black_high_mountain, to: loc_three_black_enchanted_castle, label: OPENS_TO_REVEAL,
+      evidence: "The mountain opened" }
+  - { from: loc_three_black_enchanted_castle, to: three_black_princesses, label: CONTAINS,
+      evidence: "Then came three young princesses" }
+  - { from: three_black_princesses, to: three_black_fisherman_son, label: PROMISE_RELEASE_POSSIBLE,
+      evidence: "he could deliver them" }
+  - { from: three_black_princesses, to: three_black_fisherman_son, label: IMPOSE_SILENCE_AND_GAZE_TABOO_ON,
+      evidence: "not speak to them and also not look at them" }
+  - { from: three_black_princesses, to: obj_three_black_money_purse, label: GIVE,
+      evidence: "take with him this purse with money" }
+  - { from: three_black_princesses, to: obj_three_black_coat, label: GIVE,
+      evidence: "put on this coat" }
+  - { from: three_black_princesses, to: three_black_fisherman_son, label: SET_RETURN_DEADLINE_FOR,
+      evidence: "in a week he must be back there again" }
+  - { from: three_black_fisherman_son, to: three_black_fisherman_father, label: SEEKS,
+      evidence: "asked the people where the poor fisherman could be" }
+  - { from: three_black_fisherman_father, to: three_black_fisherman_son, label: WARNS,
+      evidence: "Thou must not say that" }
+  - { from: three_black_fisherman_son, to: obj_three_black_old_smock_frock, label: WEARS_AS_PROOF,
+      evidence: "put on his old smock-frock" }
+  - { from: three_black_fisherman_father, to: three_black_fisherman_son, label: RECOGNIZES,
+      evidence: "his father knew him again" }
+  - { from: three_black_mother, to: obj_three_black_holy_water_vessel, label: ADVISES_TAKING,
+      evidence: "take a holy-water vessel with him" }
+  - { from: three_black_mother, to: obj_three_black_boiling_water, label: ADVISES_USING,
+      evidence: "drop some boiling water on their faces" }
+  - { from: three_black_fisherman_son, to: obj_three_black_boiling_water, label: DROPS,
+      evidence: "he dropped the water on their faces" }
+  - { from: obj_three_black_boiling_water, to: three_black_princesses, label: PARTIALLY_TRANSFORMS,
+      evidence: "they all turned half-white" }
+  - { from: three_black_princesses, to: three_black_fisherman_son, label: CURSE_AND_THREATEN,
+      evidence: "Thou accursed dog" }
+  - { from: three_black_princesses, to: three_black_bound_brothers, label: INVOKE_AS_AVENGERS,
+      evidence: "three brothers who are bound by seven chains" }
+  - { from: obj_three_black_seven_chains, to: three_black_bound_brothers, label: BIND,
+      evidence: "bound by seven chains" }
+  - { from: loc_three_black_enchanted_castle, to: three_black_fisherman_son, label: CASTS_OUT,
+      evidence: "sprang out of the window" }
+  - { from: three_black_fisherman_son, to: three_black_fisherman_son, label: BREAKS_LEG,
+      evidence: "broke his leg" }
+  - { from: loc_three_black_enchanted_castle, to: loc_three_black_high_mountain, label: SINKS_BACK_INTO,
+      evidence: "the castle sank into the earth again" }
+  - { from: atu_870, to: law_failed_silence_gaze_taboo_sinks_enchanted_castle, label: REALIZED_BY,
+      evidence: "the castle sank into the earth again" }

@@ -1,0 +1,540 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: brother-lustig
+khm: 81
+atu: '785/753A/330B/330'
+atu_name: Who Ate the Lamb's Heart? / The Unsuccessful Resuscitation / The Devil in the Sack / Entering Heaven by a Trick
+canonical_source: ../../2-silver/canonical/brother-lustig/canonical.txt
+title: Brother Lustig
+
+
+entities:
+
+  characters:
+
+    brother_lustig:
+      name: Brother Lustig
+      archetypes: [arc_discharged_soldier, arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_object_mediation, agency_violence, agency_endurance]
+      speech_acts_performed: [speech_lie, speech_wish, speech_command]
+      affects: [affect_hunger, affect_greed, affect_fear, affect_anger]
+      traits: [dismissed-soldier, bread-sharer, saint-companion, lamb-heart-eater, heart-denier, gold-confessor, failed-resurrector, wish-knapsack-owner, goose-thief, devil-trapper, hell-refused, heaven-trickster]
+      evidence: |
+        Then Brother Lustig also received his dismissal
+
+    brother_lustig_st_peter:
+      name: St. Peter
+      archetypes: [arc_supernatural_donor, arc_wise_helper]
+      species: sp_human
+      being_type: being_divine
+      agency_modes: [agency_speech, agency_cunning, agency_object_mediation, agency_endurance]
+      speech_acts_performed: [speech_command]
+      traits: [beggar-disguised, soldier-disguised, healer, resurrector, lamb-heart-tester, rescuer-of-failed-imitation, wish-knapsack-giver, heaven-doorkeeper]
+      evidence: |
+        St. Peter had, however, placed himself in his way in the shape
+        of a poor beggar
+
+    brother_lustig_peasant_couple:
+      name: The Sick Peasant and His Wife
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      affects: [affect_grief]
+      traits: [deathbed-household, loudly-lamenting, healed, lamb-offering]
+      evidence: |
+        the husband was lying sick unto death, and very near his end,
+        and his wife was crying and weeping quite loudly.
+
+    brother_lustig_first_king:
+      name: The First King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      affects: [affect_grief]
+      traits: [dead-daughter-father, half-kingdom-offerer, treasurer-orderer]
+      evidence: |
+        Then they went to the royal palace, where every one was in
+        great grief
+
+    brother_lustig_first_princess:
+      name: The First Dead Princess
+      species: sp_human
+      existential_states: [state_liminal_dead]
+      traits: [dead-daughter, dismembered-boiled, bone-ordered, trinity-raised, healthy-and-beautiful]
+      evidence: |
+        the princess arose, living, healthy and beautiful.
+
+    brother_lustig_second_king:
+      name: The Second King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      traits: [dead-daughter-father, councillor-consulter, reward-offerer, knapsack-filler]
+      evidence: |
+        he consulted his councillors first
+
+    brother_lustig_second_princess:
+      name: The Second Dead Princess
+      species: sp_human
+      existential_states: [state_liminal_dead]
+      traits: [dead-daughter, wrongly-boned, rescued-by-peter, restored]
+      evidence: |
+        his daughter was dead
+
+    brother_lustig_journeymen:
+      name: The Two Journeymen
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      affects: [affect_hunger]
+      traits: [hungry-eyed, gifted-goose-eaters, falsely-accused, cudgelled]
+      evidence: |
+        two journeymen came up and looked at the second goose
+
+    brother_lustig_landlord:
+      name: The Goose Inn Landlord
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_violence, agency_speech]
+      affects: [affect_anger]
+      traits: [goose-owner, theft-accuser, hazel-stick-threatener, journeymen-beater]
+      evidence: |
+        The landlord ran thither, and behold the oven was empty!
+
+    brother_lustig_castle_host:
+      name: The Haunted Castle Host
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      traits: [lodging-refuser, castle-warning-host, key-giver]
+      evidence: |
+        no one who has tried it so far, has ever come out of it alive.
+
+    brother_lustig_nobleman:
+      name: The Nobleman Who Owns the Castle
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      traits: [castle-owner, astonished-witness, reward-giver]
+      evidence: |
+        the nobleman to whom the castle belonged
+
+    brother_lustig_nine_devils:
+      name: The Nine Devils
+      being_type: being_devil
+      agency_modes: [agency_violence, agency_speech]
+      affects: [affect_fear]
+      traits: [haunting-dancers, hair-tearers, knapsack-trapped, smithy-hammered, eight-dead-one-escaped]
+      evidence: |
+        he saw nine ugly devils in the room
+
+    brother_lustig_ninth_devil:
+      name: The Escaped Ninth Devil
+      being_type: being_devil
+      agency_modes: [agency_speech, agency_cunning]
+      affects: [affect_fear]
+      traits: [black-eyed-survivor, hell-doorkeeper, knapsack-warning-speaker]
+      evidence: |
+        one which had been lying in a fold of it, was still alive
+
+    brother_lustig_smiths:
+      name: The Smith and His Apprentices
+      species: sp_human
+      agency_modes: [agency_violence, agency_domestic_labor, agency_object_mediation]
+      traits: [anvil-workers, hammer-strikers, devil-punishers]
+      evidence: |
+        asked the smith and his apprentices to strike it.
+
+    brother_lustig_hermit:
+      name: The Pious Hermit
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [road-adviser, heaven-hell-path-explainer]
+      evidence: |
+        a hermit who was known to be a pious man
+
+  magic_objects:
+
+    obj_brother_lustig_bread_coins:
+      name: The Contract-Bread and Four Kreuzers
+      object_kind: food
+      attributes:
+        function: discharge provision shared with St. Peter's beggar forms
+      evidence: |
+        nothing but a small loaf of contract-bread, and four kreuzers
+        in money
+
+    obj_brother_lustig_healing_salve:
+      name: St. Peter's Healing Salve
+      object_kind: material
+      attributes:
+        function: medicine that cures the dying peasant at once
+      evidence: |
+        he took a salve out of his pocket
+
+    obj_brother_lustig_lamb:
+      name: The Reward Lamb
+      object_kind: food
+      attributes:
+        function: reward animal carried, cooked, and eaten by Brother Lustig
+      evidence: |
+        the woman brought a lamb
+
+    obj_brother_lustig_lamb_heart:
+      name: The Lamb's Heart
+      object_kind: food
+      attributes:
+        function: best part secretly eaten and later confessed for a gold share
+      evidence: |
+        found the heart.
+
+    obj_brother_lustig_kettle:
+      name: The Resurrection Kettle and Water
+      object_kind: tool
+      attributes:
+        function: vessel used to boil dead bodies before bone-order resurrection
+      evidence: |
+        Bring me a kettle and some water
+
+    obj_brother_lustig_ordered_bones:
+      name: The Correctly Ordered White Bones
+      object_kind: relic
+      attributes:
+        function: anatomical arrangement required before resurrection speech works
+      evidence: |
+        arranged them together in their natural order.
+
+    obj_brother_lustig_confused_bones:
+      name: The Confused Bones
+      object_kind: relic
+      attributes:
+        function: failed imitation of resurrection because the bones are placed wrongly
+      evidence: |
+        placed them all wrong and in confusion.
+
+    obj_brother_lustig_knapsack:
+      name: Brother Lustig's Wish-Knapsack
+      instance_of: obj_wish_knapsack
+      object_kind: tool
+      attributes:
+        function: container that receives wished geese, devils, and Brother Lustig himself
+      evidence: |
+        whatsoever thou wishest to have inside it, shall be there.
+
+    obj_brother_lustig_two_geese:
+      name: The Two Roasted Geese
+      object_kind: food
+      attributes:
+        function: inn food wished into the knapsack and passed to hungry journeymen
+      evidence: |
+        two geese standing in the oven
+
+    obj_brother_lustig_castle_key:
+      name: The Haunted Castle Key
+      object_kind: tool
+      attributes:
+        function: access object for the castle night with the devils
+      evidence: |
+        just give me the key
+
+    obj_brother_lustig_chair_leg:
+      name: The Chair Leg
+      object_kind: weapon
+      attributes:
+        function: improvised weapon used before the devils are wished into the knapsack
+      evidence: |
+        got the leg of a chair and struck out
+
+  locations:
+
+    loc_brother_lustig_road:
+      name: The Discharge Road
+      instance_of: loc_road
+      evidence: |
+        placed himself in his way
+
+    loc_brother_lustig_first_inn:
+      name: The First Inn
+      instance_of: loc_inn
+      evidence: |
+        he went into an inn
+
+    loc_brother_lustig_peasant_house:
+      name: The Lamenting Peasant House
+      instance_of: loc_house
+      evidence: |
+        they came to a peasant’s house
+
+    loc_brother_lustig_lamb_wood:
+      name: The Lamb-Cooking Wood
+      instance_of: loc_forest
+      evidence: |
+        they departed and came to a wood
+
+    loc_brother_lustig_test_stream:
+      name: The Rising Water Test
+      instance_of: loc_river
+      evidence: |
+        a great stream of water to flow right across their path
+
+    loc_brother_lustig_first_palace:
+      name: The First Royal Palace
+      instance_of: loc_castle
+      evidence: |
+        Then they went to the royal palace
+
+    loc_brother_lustig_second_palace:
+      name: The Second Royal Palace
+      instance_of: loc_castle
+      evidence: |
+        he went to the King, and offered to raise the dead girl to life again
+
+    loc_brother_lustig_goose_inn:
+      name: The Goose Inn
+      instance_of: loc_inn
+      threshold_type: threshold_doorway
+      evidence: |
+        ordered three kreuzers’ worth of wine and one kreuzer’s worth
+        of bread
+
+    loc_brother_lustig_meadow:
+      name: The Meadow Where the Geese Are Eaten
+      instance_of: loc_meadow
+      evidence: |
+        went away to a meadow and took out the roast meat.
+
+    loc_brother_lustig_haunted_castle:
+      name: The Haunted Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        that splendid castle
+
+    loc_brother_lustig_smithy:
+      name: The Smithy
+      evidence: |
+        entered into a smithy
+
+    loc_brother_lustig_hell_door:
+      name: The Great Black Door of Hell
+      instance_of: loc_hell
+      threshold_type: threshold_doorway
+      evidence: |
+        a great black door, which was the door of Hell
+
+    loc_brother_lustig_heaven_door:
+      name: The Door of Heaven
+      instance_of: loc_heaven
+      threshold_type: threshold_doorway
+      evidence: |
+        he came to the door of Heaven
+
+
+classifications:
+
+  world_laws:
+    - law_kindness_to_hidden_donors_rewarded
+    - law_correct_bone_order_restores_life
+    - law_wish_knapsack_contains_targets
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_mercy_over_judgment
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_object_mediation
+    - agency_violence
+    - agency_endurance
+
+  affects_driving:
+    - affect_hunger
+    - affect_greed
+    - affect_fear
+    - affect_anger
+    - affect_grief
+
+  symbol_numbers:
+    - num_3
+    - num_4
+    - num_8
+    - num_9
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: brother_lustig,
+      scene: "Brother Lustig is discharged after war with only bread and four kreuzers" }
+  - { function: func_donor_test, order: 2, actor: brother_lustig_st_peter,
+      scene: "St. Peter appears three times as a beggar and receives bread and money" }
+  - { function: func_companionship, order: 3, actor: brother_lustig_st_peter,
+      scene: "St. Peter appears as a discharged soldier and travels with Brother Lustig" }
+  - { function: func_healing, order: 4, actor: brother_lustig_st_peter,
+      scene: "St. Peter heals a dying peasant and refuses payment, while Brother Lustig presses for the lamb" }
+  - { function: func_food_theft, order: 5, actor: brother_lustig,
+      scene: "Brother Lustig secretly eats the lamb's heart and denies that lambs have hearts" }
+  - { function: func_interrogation, order: 6, actor: brother_lustig_st_peter,
+      scene: "St. Peter raises the stream to force confession, but Brother Lustig keeps denying the heart theft" }
+  - { function: func_resurrection, order: 7, actor: brother_lustig_st_peter,
+      scene: "St. Peter restores the first dead princess by boiling and ordering her bones" }
+  - { function: func_confession_by_reward, order: 8, actor: brother_lustig,
+      scene: "Brother Lustig confesses the lamb's heart to claim the third heap of gold" }
+  - { function: func_failed_imitation, order: 9, actor: brother_lustig,
+      scene: "Brother Lustig imitates the resurrection on another princess but confuses the bones" }
+  - { function: func_rescue, order: 10, actor: brother_lustig_st_peter,
+      scene: "St. Peter appears, repairs the bone order, revives the girl, and gives the wish-knapsack" }
+  - { function: func_magic_object_use, order: 11, actor: brother_lustig,
+      scene: "Brother Lustig wishes two roasted geese into his knapsack and innocent journeymen are beaten for eating one" }
+  - { function: func_haunted_castle_test, order: 12, actor: brother_lustig,
+      scene: "Brother Lustig sleeps in the haunted castle and traps nine devils in the knapsack" }
+  - { function: func_punishment, order: 13, actor: brother_lustig_smiths,
+      scene: "the smith and apprentices hammer the knapsack until eight devils die and one escapes to Hell" }
+  - { function: func_afterlife_choice, order: 14, actor: brother_lustig,
+      scene: "old Brother Lustig chooses the broad road to Hell but is refused by the frightened escaped devil" }
+  - { function: func_entry_by_trick, order: 15, actor: brother_lustig,
+      scene: "Brother Lustig gives St. Peter the knapsack, then wishes himself into it inside Heaven" }
+
+
+edges:
+
+  # Discharge, donor test, and first reward
+  - { from: brother_lustig, to: arc_discharged_soldier, label: EMBODIES,
+      evidence: "received his dismissal" }
+  - { from: brother_lustig, to: obj_brother_lustig_bread_coins, label: RECEIVES_DISCHARGE_PAY,
+      evidence: "nothing but a small loaf of contract-bread, and four kreuzers in money" }
+  - { from: brother_lustig_st_peter, to: brother_lustig, label: TESTS_AS_BEGGAR,
+      evidence: "in the shape of a poor beggar" }
+  - { from: brother_lustig, to: brother_lustig_st_peter, label: SHARES_BREAD_AND_COIN,
+      evidence: "gave the apostle one of them, and a kreuzer likewise" }
+  - { from: brother_lustig_st_peter, to: num_3, label: TESTS_THREE_TIMES,
+      evidence: "for the third time placed himself in another shape as a beggar" }
+  - { from: brother_lustig, to: loc_brother_lustig_first_inn, label: SPENDS_LAST_COIN_AT,
+      evidence: "went into an inn, ate the bread, and ordered one kreuzer’s worth of beer" }
+  - { from: brother_lustig_st_peter, to: brother_lustig, label: JOINS_AS_SOLDIER,
+      evidence: "had assumed the appearance of a discharged soldier" }
+  - { from: brother_lustig_st_peter, to: brother_lustig, label: PROMISES_HALF_EARNINGS,
+      evidence: "if I earn anything, thou shalt have half of it" }
+  - { from: brother_lustig_st_peter, to: brother_lustig_peasant_couple, label: HEALS_HUSBAND,
+      evidence: "healed the sick man in a moment" }
+  - { from: brother_lustig_peasant_couple, to: obj_brother_lustig_lamb, label: OFFERS_REWARD,
+      evidence: "the woman brought a lamb" }
+  - { from: brother_lustig, to: obj_brother_lustig_lamb, label: CARRIES,
+      evidence: "I will easily carry it" }
+
+  # Lamb heart and confession trap
+  - { from: brother_lustig, to: obj_brother_lustig_lamb, label: COOKS,
+      evidence: "killed the lamb, lighted a fire" }
+  - { from: brother_lustig, to: obj_brother_lustig_lamb_heart, label: SECRETLY_EATS,
+      evidence: "at last he ate it all up" }
+  - { from: brother_lustig_st_peter, to: obj_brother_lustig_lamb_heart, label: ASKS_FOR,
+      evidence: "I will only have the heart, give me that" }
+  - { from: brother_lustig, to: brother_lustig_st_peter, label: LIES_ABOUT_HEART,
+      evidence: "a lamb has no heart" }
+  - { from: brother_lustig_st_peter, to: loc_brother_lustig_test_stream, label: CAUSES_STREAM_TEST,
+      evidence: "caused a great stream of water to flow right across their path" }
+  - { from: loc_brother_lustig_test_stream, to: brother_lustig, label: RISES_TO_THROAT,
+      evidence: "the water grew deeper and reached to his throat" }
+  - { from: brother_lustig_st_peter, to: brother_lustig, label: DEMANDS_CONFESSION,
+      evidence: "Then wilt thou confess that thou hast eaten the lamb’s heart?" }
+  - { from: brother_lustig, to: brother_lustig_st_peter, label: DENIES_UNDER_WATER,
+      evidence: "No,” said he, “I have not eaten it." }
+  - { from: brother_lustig_st_peter, to: brother_lustig, label: SAVES_FROM_DROWNING,
+      evidence: "made the water sink and helped him through it" }
+
+  # First resurrection and gold confession
+  - { from: brother_lustig_st_peter, to: brother_lustig_first_princess, label: RESTORES_TO_LIFE,
+      evidence: "I can bring dead ones to life again" }
+  - { from: brother_lustig_st_peter, to: obj_brother_lustig_kettle, label: REQUESTS,
+      evidence: "Bring me a kettle and some water" }
+  - { from: brother_lustig_st_peter, to: obj_brother_lustig_ordered_bones, label: ARRANGES,
+      evidence: "arranged them together in their natural order" }
+  - { from: obj_brother_lustig_ordered_bones, to: law_correct_bone_order_restores_life, label: ENACTS,
+      evidence: "In the name of the holy Trinity, dead woman, arise" }
+  - { from: brother_lustig_st_peter, to: num_3, label: SPEAKS_FORMULA_THREE_TIMES,
+      evidence: "said three times" }
+  - { from: brother_lustig_first_princess, to: brother_lustig_st_peter, label: RISES_AT_THIRD_TIME,
+      evidence: "at the third time, the princess arose" }
+  - { from: brother_lustig_first_king, to: brother_lustig_st_peter, label: OFFERS_REWARD,
+      evidence: "even if it were half my kingdom, I would give it thee" }
+  - { from: brother_lustig_first_king, to: brother_lustig, label: FILLS_KNAPSACK_WITH_GOLD,
+      evidence: "ordered his treasurer to fill Brother Lustig’s knapsack with gold" }
+  - { from: brother_lustig_st_peter, to: brother_lustig, label: DIVIDES_THIRD_SHARE_FOR_HEART_EATER,
+      evidence: "one for him who ate the lamb’s heart" }
+  - { from: brother_lustig, to: obj_brother_lustig_lamb_heart, label: CONFESSES_FOR_GOLD,
+      evidence: "Oh, I ate that!" }
+
+  # Failed imitation and wish-knapsack
+  - { from: brother_lustig, to: brother_lustig_second_king, label: OFFERS_RESURRECTION,
+      evidence: "offered to raise the dead girl to life again" }
+  - { from: brother_lustig, to: obj_brother_lustig_confused_bones, label: MISARRANGES,
+      evidence: "placed them all wrong and in confusion" }
+  - { from: obj_brother_lustig_confused_bones, to: brother_lustig_second_princess, label: FAILS_TO_RAISE,
+      evidence: "the bones did not stir" }
+  - { from: brother_lustig_st_peter, to: brother_lustig, label: REBUKES_FAILED_IMITATION,
+      evidence: "How can the dead maiden arise, when thou hast thrown about her bones in such confusion?" }
+  - { from: brother_lustig_st_peter, to: brother_lustig_second_princess, label: RESTORES,
+      evidence: "the King’s daughter arose, healthy and beautiful as before" }
+  - { from: brother_lustig_st_peter, to: brother_lustig, label: FORBIDS_REWARD,
+      evidence: "thou must neither demand nor accept the smallest thing from the King for this" }
+  - { from: brother_lustig, to: brother_lustig_second_king, label: OBTAINS_REWARD_BY_HINTS,
+      evidence: "by hints and cunning, he contrived to make the King order his knapsack to be filled with gold" }
+  - { from: brother_lustig_st_peter, to: obj_brother_lustig_knapsack, label: BESTOWS_POWER_ON,
+      evidence: "whatsoever thou wishest to have inside it, shall be there" }
+  - { from: obj_brother_lustig_knapsack, to: law_wish_knapsack_contains_targets, label: MATERIALIZES,
+      evidence: "whatsoever thou wishest to have inside it, shall be there" }
+
+  # Geese and innocent beating
+  - { from: brother_lustig, to: obj_brother_lustig_two_geese, label: WISHES_INTO_KNAPSACK,
+      evidence: "I wish those two roasted geese out of the oven and in my knapsack" }
+  - { from: obj_brother_lustig_two_geese, to: obj_brother_lustig_knapsack, label: APPEARS_IN,
+      evidence: "there they were inside it" }
+  - { from: brother_lustig, to: brother_lustig_journeymen, label: GIVES_GOOSE_TO,
+      evidence: "Take the goose, and eat it to my health" }
+  - { from: brother_lustig_landlord, to: brother_lustig_journeymen, label: ACCUSES_OF_THEFT,
+      evidence: "you are the thieves and shall pay" }
+  - { from: brother_lustig_landlord, to: brother_lustig_journeymen, label: CUDGELS_OUT,
+      evidence: "took a stick, and cudgeled them out of the house" }
+
+  # Devils in the knapsack
+  - { from: brother_lustig_castle_host, to: brother_lustig, label: WARNS_ABOUT_CASTLE,
+      evidence: "no one who has tried it so far, has ever come out of it alive" }
+  - { from: brother_lustig, to: obj_brother_lustig_castle_key, label: REQUESTS,
+      evidence: "just give me the key" }
+  - { from: brother_lustig_nine_devils, to: brother_lustig, label: DANCE_AROUND,
+      evidence: "were dancing around him" }
+  - { from: brother_lustig, to: obj_brother_lustig_chair_leg, label: STRIKES_WITH,
+      evidence: "got the leg of a chair and struck out into the midst of them" }
+  - { from: brother_lustig, to: brother_lustig_nine_devils, label: WISHES_INTO_KNAPSACK,
+      evidence: "Into my knapsack, all nine of you!" }
+  - { from: brother_lustig_nine_devils, to: obj_brother_lustig_knapsack, label: TRAPPED_IN,
+      evidence: "In an instant they were in it" }
+  - { from: brother_lustig, to: brother_lustig_nobleman, label: REPORTS_DEVILS_CAPTURED,
+      evidence: "I have got the whole nine of them in my knapsack!" }
+  - { from: brother_lustig_smiths, to: obj_brother_lustig_knapsack, label: HAMMERS,
+      evidence: "smote with their great hammers with all their strength" }
+  - { from: brother_lustig_nine_devils, to: num_8, label: EIGHT_DIE,
+      evidence: "eight of them were dead" }
+  - { from: brother_lustig_ninth_devil, to: loc_brother_lustig_hell_door, label: RETURNS_TO_HELL,
+      evidence: "went back again to hell" }
+
+  # Afterlife trick
+  - { from: brother_lustig_hermit, to: brother_lustig, label: EXPLAINS_TWO_ROADS,
+      evidence: "There are two roads, one is broad and pleasant, and leads to hell" }
+  - { from: brother_lustig, to: loc_brother_lustig_hell_door, label: CHOOSES_BROAD_ROAD_TO,
+      evidence: "took the broad and pleasant road" }
+  - { from: brother_lustig_ninth_devil, to: brother_lustig, label: FEARS_KNAPSACK,
+      evidence: "he was terrified" }
+  - { from: brother_lustig_ninth_devil, to: loc_brother_lustig_hell_door, label: BARS_AGAINST,
+      evidence: "don’t allow him to enter" }
+  - { from: brother_lustig, to: loc_brother_lustig_heaven_door, label: GOES_TO,
+      evidence: "he came to the door of Heaven" }
+  - { from: brother_lustig_st_peter, to: brother_lustig, label: REFUSES_HEAVEN_ENTRY,
+      evidence: "thou shalt not enter" }
+  - { from: brother_lustig, to: brother_lustig_st_peter, label: RETURNS_KNAPSACK,
+      evidence: "take thy knapsack back" }
+  - { from: brother_lustig_st_peter, to: loc_brother_lustig_heaven_door, label: HANGS_KNAPSACK_INSIDE,
+      evidence: "hung it beside his seat" }
+  - { from: brother_lustig, to: obj_brother_lustig_knapsack, label: WISHES_SELF_INTO,
+      evidence: "I wish myself inside my knapsack" }
+  - { from: brother_lustig, to: loc_brother_lustig_heaven_door, label: ENTERS_HEAVEN_BY_TRICK,
+      evidence: "in a second he was in it, and in Heaven" }
+  - { from: brother_lustig_st_peter, to: brother_lustig, label: FORCED_TO_LET_STAY,
+      evidence: "St. Peter was forced to let him stay there" }

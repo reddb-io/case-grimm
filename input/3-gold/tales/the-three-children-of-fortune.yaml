@@ -1,0 +1,377 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-three-children-of-fortune
+khm: 70
+atu: '1202/1281/1650/1651'
+atu_name: The Three Brothers Inherit a Rooster, a Scythe, and a Cat / Harvesting Grain with a Cannon / Burning the Barn to Destroy an Unknown Animal / Dick Whittington and His Cat
+canonical_source: ../../2-silver/canonical/the-three-children-of-fortune/canonical.txt
+title: The Three Children of Fortune
+
+
+entities:
+
+  characters:
+
+    three_children_father:
+      name: The Dying Father
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_command]
+      traits: [aged, poor, inheritance-planner, practical-counsellor]
+      evidence: |
+        I am already aged,” said he, “my death is nigh, and I have
+        wished to take thought for you before my end
+
+    three_children_eldest_brother:
+      name: The Eldest Brother
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_cunning]
+      speech_acts_performed: [speech_bargain]
+      affects: [affect_greed]
+      traits: [cock-inheritor, novelty-seeker, time-seller, gold-earner]
+      evidence: |
+        After the father’s death the eldest went away with his cock
+
+    three_children_second_brother:
+      name: The Second Brother
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_domestic_labor]
+      speech_acts_performed: [speech_bargain]
+      affects: [affect_greed]
+      traits: [scythe-inheritor, imitator, quiet-mower, gold-earner]
+      evidence: |
+        I will go forth and see whether I cannot get rid of my scythe
+        as profitably.
+
+    three_children_third_brother:
+      name: The Third Brother
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_cunning]
+      speech_acts_performed: [speech_bargain]
+      affects: [affect_greed]
+      traits: [cat-inheritor, right-buyer-seeker, mouse-plague-solver, greatest-treasure-winner]
+      evidence: |
+        And now the third brother wanted to take his cat to the right
+        man.
+
+    three_children_cock:
+      name: The Cock
+      species: sp_rooster
+      agency_modes: [agency_speech]
+      traits: [domestic-fowl, time-caller, weather-signal, novelty-animal]
+      evidence: |
+        it calls you three times during the night, at fixed hours
+
+    three_children_cat:
+      name: The Cat
+      species: sp_cat
+      agency_modes: [agency_violence, agency_speech]
+      traits: [mouse-killer, wonderful-beast, mewing-monster-to-strangers, palace-survivor]
+      evidence: |
+        But now the cat began her chase, and soon cleared a couple of
+        rooms
+
+    three_children_mice:
+      name: The Mice in the Kingdom
+      species: sp_mouse
+      agency_modes: [agency_violence]
+      traits: [plague, palace-invaders, table-dancers, gnawers]
+      evidence: |
+        mice squeaked in every corner, and gnawed whatever they could
+        lay hold of with their teeth.
+
+    three_children_cock_islanders:
+      name: The Cock-Island People
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      traits: [time-ignorant, wonder-struck, gold-paying-buyers]
+      evidence: |
+        the people knew nothing about cocks, and did not even understand
+        how to divide their time.
+
+    three_children_scythe_islanders:
+      name: The Scythe-Island People
+      species: sp_human
+      agency_modes: [agency_violence, agency_object_mediation]
+      traits: [scythe-ignorant, cannon-harvesters, astonished-buyers]
+      evidence: |
+        he chanced upon an island where the people knew nothing of
+        scythes.
+
+    three_children_cat_island_king:
+      name: The King of the Mouse-Plagued Island
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_object_mediation, agency_violence]
+      speech_acts_performed: [speech_command]
+      affects: [affect_fear]
+      traits: [mouse-plagued, cat-buyer, fearful-ruler, cannon-orderer]
+      evidence: |
+        the King himself in his palace did not know how to secure
+        himself against them
+
+    three_children_cat_island_people:
+      name: The Cat-Island People
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_violence]
+      affects: [affect_fear]
+      traits: [mouse-plagued, cat-buying-petitioners, mew-frightened, palace-besiegers]
+      evidence: |
+        The people complained bitterly of the plague
+
+    three_children_noble_youth:
+      name: The Noble Youth
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_command]
+      affects: [affect_fear]
+      traits: [cat-herald, mew-mistranslator, royal-messenger]
+      evidence: |
+        A noble youth, therefore, was sent to ask the cat “whether she
+        would peaceably quit the castle?”
+
+  magic_objects:
+
+    obj_three_children_scythe:
+      name: The Scythe
+      object_kind: tool
+      attributes:
+        function: ordinary harvest tool made valuable where mowing is unknown
+      evidence: |
+        he gave to the first a cock, to the second a scythe, and to the
+        third a cat.
+
+    obj_three_children_cock_gold:
+      name: The Ass-Load of Gold
+      object_kind: treasure
+      attributes:
+        function: payment for the cock as a time-keeping novelty
+      evidence: |
+        About as much gold as an ass can carry
+
+    obj_three_children_scythe_gold:
+      name: The Horse-Load of Gold
+      object_kind: treasure
+      attributes:
+        function: payment for the scythe after the quiet harvest demonstration
+      evidence: |
+        he received a horse laden with as much gold as it could carry.
+
+    obj_three_children_cat_gold:
+      name: The Mule-Load of Gold
+      object_kind: treasure
+      attributes:
+        function: payment for the cat's mouse-killing function
+      evidence: |
+        a mule laden with gold
+
+    obj_three_children_field_cannon:
+      name: The Field Cannon
+      instance_of: obj_cannon
+      object_kind: weapon
+      attributes:
+        function: excessive substitute for a harvest tool
+      evidence: |
+        they took cannon out to the fields and shot it down.
+
+    obj_three_children_palace_cannon:
+      name: The Palace Cannon
+      instance_of: obj_cannon
+      object_kind: weapon
+      attributes:
+        function: excessive attempt to remove the unknown cat from the palace
+      evidence: |
+        Cannon were brought out
+
+  locations:
+
+    loc_three_children_father_house:
+      name: The Father's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        A father once called his three sons before him
+
+    loc_three_children_cock_island:
+      name: The Island without Cocks
+      instance_of: loc_island
+      evidence: |
+        he came to an island where the people knew nothing about cocks
+
+    loc_three_children_scythe_island:
+      name: The Island without Scythes
+      instance_of: loc_island
+      evidence: |
+        he chanced upon an island where the people knew nothing of
+        scythes.
+
+    loc_three_children_cat_island:
+      name: The Island without Cats
+      instance_of: loc_island
+      evidence: |
+        no cats had ever yet been seen there
+
+    loc_three_children_corn_fields:
+      name: The Cannon-Harvest Fields
+      instance_of: loc_field
+      evidence: |
+        When the corn was ripe there, they took cannon out to the
+        fields and shot it down.
+
+    loc_three_children_royal_palace:
+      name: The Mouse-Plagued Royal Palace
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        the King himself in his palace did not know how to secure
+        himself against them
+
+
+classifications:
+
+  world_laws:
+    - law_novelty_converts_utility_to_treasure
+    - law_missing_tool_invites_destructive_overkill
+    - law_speech_taken_literally
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_speech
+    - agency_cunning
+    - agency_violence
+
+  affects_driving:
+    - affect_greed
+    - affect_fear
+
+  symbol_numbers:
+    - num_3
+    - num_6
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: three_children_father,
+      scene: "the dying father has no money and divides three ordinary gifts among his sons" }
+  - { function: func_interdiction, order: 2, actor: three_children_father,
+      scene: "he instructs them to seek countries where their gifts are unknown" }
+  - { function: func_departure, order: 3, actor: three_children_eldest_brother,
+      scene: "the eldest travels with the cock until he reaches an island without cocks" }
+  - { function: func_trickery, order: 4, actor: three_children_eldest_brother,
+      scene: "he presents the cock as a proud time-keeper and weather-signal" }
+  - { function: func_reward, order: 5, actor: three_children_cock_islanders,
+      beneficiary: three_children_eldest_brother,
+      scene: "the islanders buy the cock for an ass-load of gold" }
+  - { function: func_departure, order: 6, actor: three_children_second_brother,
+      scene: "the second brother imitates the first and finds an island without scythes" }
+  - { function: func_task_performed, order: 7, actor: three_children_second_brother,
+      scene: "he mows the corn quietly and quickly, replacing cannon-harvest" }
+  - { function: func_reward, order: 8, actor: three_children_scythe_islanders,
+      beneficiary: three_children_second_brother,
+      scene: "the islanders buy the scythe for a horse-load of gold" }
+  - { function: func_departure, order: 9, actor: three_children_third_brother,
+      scene: "the third brother takes the cat to an island without cats" }
+  - { function: func_villainy, order: 10, actor: three_children_mice,
+      victim: three_children_cat_island_people,
+      scene: "mice overrun tables, benches, corners, and the king's palace" }
+  - { function: func_task_performed, order: 11, actor: three_children_cat,
+      scene: "the cat kills the mice and clears rooms in the palace" }
+  - { function: func_reward, order: 12, actor: three_children_cat_island_king,
+      beneficiary: three_children_third_brother,
+      scene: "the king buys the cat for a mule-load of gold" }
+  - { function: func_false_interpretation, order: 13, actor: three_children_noble_youth,
+      scene: "the cat's mew is taken as a verbal refusal to leave the castle" }
+  - { function: func_punishment, order: 14, actor: three_children_cat_island_people,
+      scene: "the palace is bombarded and burned while the cat escapes" }
+
+
+edges:
+
+  # Inheritance as practical instruction
+  - { from: three_children_father, to: three_children_eldest_brother, label: GIVES_COCK_TO,
+      evidence: "he gave to the first a cock" }
+  - { from: three_children_father, to: obj_three_children_scythe, label: GIVES_TO_SECOND,
+      evidence: "to the second a scythe" }
+  - { from: three_children_father, to: three_children_third_brother, label: GIVES_CAT_TO,
+      evidence: "and to the third a cat." }
+  - { from: three_children_father, to: law_novelty_converts_utility_to_treasure, label: EXPLAINS,
+      evidence: "Only seek out a country where such things are still unknown, and your fortune is made." }
+
+  # Cock fortune
+  - { from: three_children_eldest_brother, to: three_children_cock, label: TRAVELS_WITH,
+      evidence: "the eldest went away with his cock" }
+  - { from: three_children_eldest_brother, to: loc_three_children_cock_island, label: ARRIVES_AT,
+      evidence: "he came to an island where the people knew nothing about cocks" }
+  - { from: three_children_cock_islanders, to: sp_rooster, label: LACK_KNOWLEDGE_OF,
+      evidence: "the people knew nothing about cocks" }
+  - { from: three_children_cock_islanders, to: num_6, label: CANNOT_TELL_TIME_AT,
+      evidence: "not one of them knew how to find out the time" }
+  - { from: three_children_eldest_brother, to: three_children_cock, label: PRESENTS_AS_WONDER,
+      evidence: "what a proud creature! it has a ruby-red crown upon its head" }
+  - { from: three_children_cock, to: num_3, label: CALLS_DURING_NIGHT,
+      evidence: "it calls you three times during the night" }
+  - { from: three_children_cock, to: three_children_cock_islanders, label: PROCLAIMS_TIME_TO,
+      evidence: "loudly and clearly proclaimed the time" }
+  - { from: three_children_cock_islanders, to: obj_three_children_cock_gold, label: PAYS_WITH,
+      evidence: "willingly gave him what he had asked" }
+  - { from: law_novelty_converts_utility_to_treasure, to: three_children_cock, label: REVALUES,
+      evidence: "A ridiculously small price for such a precious creature!" }
+
+  # Scythe fortune
+  - { from: three_children_second_brother, to: obj_three_children_scythe, label: TAKES_TO_MARKET,
+      evidence: "get rid of my scythe as profitably" }
+  - { from: three_children_second_brother, to: loc_three_children_scythe_island, label: ARRIVES_AT,
+      evidence: "he chanced upon an island where the people knew nothing of scythes" }
+  - { from: three_children_scythe_islanders, to: obj_three_children_scythe, label: LACK_KNOWLEDGE_OF,
+      evidence: "the people knew nothing of scythes" }
+  - { from: three_children_scythe_islanders, to: obj_three_children_field_cannon, label: HARVEST_WITH,
+      evidence: "they took cannon out to the fields and shot it down" }
+  - { from: law_missing_tool_invites_destructive_overkill, to: obj_three_children_field_cannon, label: GOVERNS_USE_OF,
+      evidence: "many shot right over it, others hit the ears instead of the stems" }
+  - { from: three_children_second_brother, to: loc_three_children_corn_fields, label: MOWS,
+      evidence: "mowed it down so quietly and quickly" }
+  - { from: three_children_scythe_islanders, to: obj_three_children_scythe_gold, label: PAYS_WITH,
+      evidence: "he received a horse laden with as much gold as it could carry." }
+  - { from: law_novelty_converts_utility_to_treasure, to: obj_three_children_scythe, label: REVALUES,
+      evidence: "They agreed to give him what he wanted for the scythe" }
+
+  # Cat fortune
+  - { from: three_children_third_brother, to: three_children_cat, label: TRAVELS_WITH,
+      evidence: "the third brother wanted to take his cat to the right man" }
+  - { from: three_children_third_brother, to: loc_three_children_cat_island, label: ARRIVES_AT,
+      evidence: "he sailed over to an island" }
+  - { from: three_children_cat_island_people, to: sp_cat, label: LACK_KNOWLEDGE_OF,
+      evidence: "no cats had ever yet been seen there" }
+  - { from: three_children_mice, to: loc_three_children_royal_palace, label: OVERRUN,
+      evidence: "mice squeaked in every corner" }
+  - { from: three_children_cat, to: three_children_mice, label: KILLS,
+      evidence: "killed so many that they could not be counted" }
+  - { from: three_children_cat_island_people, to: three_children_cat_island_king, label: BEGS_TO_BUY,
+      evidence: "the people begged the King to buy the wonderful beast for the country" }
+  - { from: three_children_cat_island_king, to: obj_three_children_cat_gold, label: PAYS_WITH,
+      evidence: "The King willingly gave what was asked" }
+  - { from: law_novelty_converts_utility_to_treasure, to: three_children_cat, label: REVALUES,
+      evidence: "the third brother came home with the greatest treasure of all." }
+
+  # Mew as catastrophic speech
+  - { from: three_children_cat, to: three_children_cat_island_people, label: FRIGHTENS_WITH_CRY,
+      evidence: "When they heard this strange cry, the King and all his people were frightened" }
+  - { from: three_children_cat_island_king, to: three_children_noble_youth, label: SENDS,
+      evidence: "A noble youth, therefore, was sent to ask the cat" }
+  - { from: three_children_cat, to: three_children_noble_youth, label: MEWS_TO,
+      evidence: "merely answered, “Mew! Mew!”" }
+  - { from: law_speech_taken_literally, to: three_children_noble_youth, label: GOVERNS_INTERPRETATION,
+      evidence: "The youth understood her to say, “Most certainly not! most certainly not!”" }
+  - { from: three_children_cat_island_people, to: obj_three_children_palace_cannon, label: BRINGS_OUT,
+      evidence: "Cannon were brought out" }
+  - { from: obj_three_children_palace_cannon, to: loc_three_children_royal_palace, label: BURNS,
+      evidence: "the palace was soon in flames" }
+  - { from: law_missing_tool_invites_destructive_overkill, to: loc_three_children_royal_palace, label: DESTROYS,
+      evidence: "the whole palace was shot down to the ground" }
+  - { from: three_children_cat, to: loc_three_children_royal_palace, label: ESCAPES_FROM,
+      evidence: "she sprang safely out of the window" }

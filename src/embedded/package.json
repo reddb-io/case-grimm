@@ -10,7 +10,7 @@
     "ingest:words": "tsx src/ingest-words.ts"
   },
   "dependencies": {
-    "@reddb-io/sdk": "^1.0.8",
+    "@reddb-io/sdk": "^1.1.2",
     "cli-args-parser": "^1.0.6"
   },
   "devDependencies": {

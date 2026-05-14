@@ -1,0 +1,12 @@
+slug: clever-hans
+khm: 32
+atu: '1696'
+base: pg5314-grimm-hunt
+sources:
+- book: pg2591-grimm-taylor
+  weight: supplementary
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg52521-grimm-olcott
+  weight: supplementary
+sections: []

@@ -45,7 +45,7 @@ via flag.
 Usa o binário `red` que o exemplo `embedded` já baixou via `postinstall`:
 
 ```bash
-# Garante que o embedded está instalado (que disponibiliza o binário 1.0.8)
+# Garante que o embedded está instalado (que disponibiliza o binário red)
 cd ../embedded && pnpm install && cd -
 
 # Sobe o servidor com os 3 transportes

@@ -1,0 +1,438 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-wishing-table-the-gold-ass-and-the-cudgel-in-the-sack
+khm: 36
+atu: '563'
+atu_name: The Wishing-Table, the Gold-Ass, and the Cudgel in the Sack
+canonical_source: ../../2-silver/canonical/the-wishing-table-the-gold-ass-and-the-cudgel-in-the-sack/canonical.txt
+title: The Wishing-table, the Gold-ass, and the Cudgel in the Sack
+
+
+entities:
+
+  characters:
+
+    wishing_table_old_tailor:
+      name: The Old Tailor
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_violence]
+      existential_states: [state_deceived]
+      affects: [affect_anger, affect_grief, affect_shame]
+      traits: [father, goat-dependent, rash-punisher, deceived-by-goat, restored-householder]
+      evidence: |
+        "When the tailor heard that, he was shocked, and saw clearly
+        that he had driven away his three sons without cause."
+
+    wishing_table_goat:
+      name: The Wicked Goat
+      species: sp_goat
+      agency_modes: [agency_speech, agency_cunning]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_shame, affect_fear]
+      traits: [milk-provider, false-complainant, shaved-bald, cave-frightener, bee-stung-runaway]
+      evidence: |
+        "But the goat did not behave the better to him"
+
+    wishing_table_eldest_son:
+      name: The Eldest Son / Joiner
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_endurance]
+      affects: [affect_shame]
+      traits: [wrongly-expelled, apprentice-joiner, wishing-table-owner, first-cheated-brother]
+      evidence: |
+        "The eldest had apprenticed himself to a joiner"
+
+    wishing_table_second_son:
+      name: The Second Son / Miller
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_endurance]
+      affects: [affect_shame]
+      traits: [wrongly-expelled, apprentice-miller, gold-ass-owner, second-cheated-brother]
+      evidence: |
+        "The second son had gone to a miller and had apprenticed
+        himself to him."
+
+    wishing_table_third_son:
+      name: The Third Son / Turner
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_cunning, agency_violence]
+      speech_acts_performed: [speech_command]
+      traits: [wrongly-expelled, longest-trained, warning-informed, cudgel-owner, recovery-agent]
+      evidence: |
+        "The third brother had apprenticed himself to a turner"
+
+    wishing_table_joiner_master:
+      name: The Joiner Master
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [trade-master, reward-giver, table-donor]
+      evidence: |
+        "his master presented him with a little table"
+
+    wishing_table_miller_master:
+      name: The Miller Master
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [trade-master, reward-giver, gold-ass-donor]
+      evidence: |
+        "I give thee an ass of a peculiar kind"
+
+    wishing_table_turner_master:
+      name: The Turner Master
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [trade-master, reward-giver, cudgel-donor]
+      evidence: |
+        "his master presented him with a sack"
+
+    wishing_table_innkeeper:
+      name: The Thievish Innkeeper
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_greed, affect_fear]
+      traits: [host, object-thief, substitution-maker, curiosity-peeper, cudgel-beaten-restorer]
+      evidence: |
+        "the thievish inn-keeper took away from my brothers"
+
+    wishing_table_kinsmen:
+      name: The Relations and Friends
+      species: sp_human
+      agency_modes: [agency_speech]
+      affects: [affect_shame]
+      traits: [invited-witnesses, mockers-after-failure, final-feast-guests]
+      evidence: |
+        "The relations, however, mocked him"
+
+    wishing_table_fox:
+      name: Brother Fox / Redskin
+      species: sp_fox
+      agency_modes: [agency_speech]
+      affects: [affect_fear]
+      traits: [cave-owner, goat-eye-frightened, bear-informer]
+      evidence: |
+        "a fierce beast is in my cave and stared at me with its fiery
+        eyes."
+
+    wishing_table_bear:
+      name: The Bear
+      species: sp_bear
+      agency_modes: [agency_violence, agency_speech]
+      affects: [affect_fear]
+      traits: [large-helper, cave-inspector, goat-eye-frightened, bee-pitied]
+      evidence: |
+        "when he saw the fiery eyes, fear seized on him likewise"
+
+    wishing_table_bee:
+      name: The Bee
+      species: sp_bee
+      agency_modes: [agency_violence, agency_speech]
+      traits: [small-helper, pitying, stinging-victor]
+      evidence: |
+        "She flew into the fox's cave, lighted on the goat's smoothly-
+        shorn head, and stung her"
+
+  magic_objects:
+
+    obj_wishing_table_yard_measure:
+      name: The Tailor's Yard-Measure
+      object_kind: tool
+      attributes:
+        function: father uses it to drive out the sons
+      evidence: |
+        "he took the yard-measure from the wall, and drove him out with
+        blows."
+
+    obj_wishing_table_razor:
+      name: The Razor
+      object_kind: tool
+      attributes:
+        function: shaves and marks the lying goat
+      evidence: |
+        "fetched his razor, lathered the goat's head, and shaved her"
+
+    obj_wishing_table_horsewhip:
+      name: The Horsewhip
+      object_kind: weapon
+      attributes:
+        function: drives the shaved goat away
+      evidence: |
+        "he brought the horsewhip, and gave her such cuts"
+
+    obj_wishing_table_khm36:
+      name: The Wishing-Table
+      instance_of: obj_wishing_table
+      object_kind: architecture
+      attributes:
+        formula: "Little table, spread thyself"
+        stolen_by: wishing_table_innkeeper
+      evidence: |
+        "if anyone set it out, and said, 'Little table, spread thyself,'
+        the good little table was at once covered"
+
+    obj_wishing_table_false_table:
+      name: The Innkeeper's False Table
+      object_kind: architecture
+      attributes:
+        function: substitution for the stolen wishing-table
+      evidence: |
+        "there was a little old table in his lumber-room which looked
+        just like the apprentice's"
+
+    obj_gold_ass_khm36:
+      name: The Gold-Ass
+      instance_of: obj_gold_dropping_ass
+      object_kind: creature_object
+      attributes:
+        formula: Bricklebrit
+        stolen_by: wishing_table_innkeeper
+      evidence: |
+        "If thou settest him on a cloth and sayest 'Bricklebrit,' the
+        good animal will drop gold pieces for thee."
+
+    obj_wishing_table_false_ass:
+      name: The Innkeeper's Ordinary Ass
+      object_kind: creature_object
+      attributes:
+        function: substitution for the stolen gold-ass
+      evidence: |
+        "led away the master of the mint, and tied up another ass in
+        his place."
+
+    obj_cudgel_sack_khm36:
+      name: The Cudgel in the Sack
+      instance_of: obj_cudgel_in_sack
+      object_kind: weapon
+      attributes:
+        release_formula: "Out of the sack, Cudgel!"
+        return_formula: "Into the sack, Cudgel!"
+      evidence: |
+        "if any one has done anything to injure thee, do but say, 'Out
+        of the sack, Cudgel!'"
+
+    obj_wishing_table_gold_cloth:
+      name: The Cloth for Catching Gold
+      object_kind: material
+      attributes:
+        function: laid beneath the gold-ass
+      evidence: |
+        "If thou settest him on a cloth"
+
+  locations:
+
+    loc_wishing_table_tailor_house:
+      name: The Old Tailor's House
+      instance_of: loc_house
+      evidence: |
+        "The old tailor was now alone with his goat."
+
+    loc_wishing_table_stable:
+      name: The Goat's Stable
+      instance_of: loc_stable
+      evidence: |
+        "led her into the stable and tied her up securely."
+
+    loc_wishing_table_churchyard:
+      name: The Churchyard Pasture
+      instance_of: loc_church
+      evidence: |
+        "the eldest took her to the churchyard"
+
+    loc_wishing_table_garden_fence:
+      name: The Garden Fence with Herbs
+      instance_of: loc_garden
+      evidence: |
+        "a place in the fence of the garden, where nothing but good
+        herbs grew"
+
+    loc_wishing_table_bush_pasture:
+      name: The Bushes with Finest Leaves
+      instance_of: loc_meadow
+      evidence: |
+        "sought out some bushes with the finest leaves"
+
+    loc_wishing_table_inn:
+      name: The Inn of Substitution
+      instance_of: loc_inn
+      evidence: |
+        "he came one evening to an inn which was filled with guests."
+
+    loc_wishing_table_lumber_room:
+      name: The Innkeeper's Lumber-Room
+      instance_of: loc_house
+      evidence: |
+        "a little old table in his lumber-room"
+
+    loc_wishing_table_fox_cave:
+      name: The Fox's Cave
+      instance_of: loc_cave
+      evidence: |
+        "ran to a fox's hole and crept into it."
+
+
+classifications:
+
+  world_laws:
+    - law_formula_commands_magic_objects
+
+  moral_regimes:
+    - moral_restorative
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_domestic_labor
+    - agency_cunning
+    - agency_violence
+
+  affects_driving:
+    - affect_anger
+    - affect_grief
+    - affect_greed
+    - affect_shame
+    - affect_fear
+
+  symbol_numbers:
+    - num_3   # three sons, three trades, three gifts, third gift restores the first two
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: wishing_table_old_tailor,
+      scene: "tailor, three sons, and one milk-goat depend on the goat's feeding" }
+  - { function: func_villainy, order: 2, actor: wishing_table_goat,
+      scene: "goat falsely tells the father each son has let her go hungry" }
+  - { function: func_exile, order: 3, actor: wishing_table_old_tailor,
+      scene: "deceived father drives all three sons out with the yard-measure" }
+  - { function: func_exposure, order: 4, actor: wishing_table_goat,
+      scene: "goat lies to the father himself; father realizes his sons were innocent" }
+  - { function: func_punishment, order: 5, actor: wishing_table_old_tailor,
+      scene: "father shaves and whips the goat so that she runs away" }
+  - { function: func_magical_agent, order: 6, actor: wishing_table_joiner_master,
+      scene: "eldest son receives the self-spreading table from the joiner master" }
+  - { function: func_villainy, order: 7, actor: wishing_table_innkeeper,
+      scene: "innkeeper steals the wishing-table and substitutes a false table" }
+  - { function: func_false_claims, order: 8, actor: wishing_table_eldest_son,
+      scene: "the false table fails before the invited kinsmen, shaming the eldest son" }
+  - { function: func_magical_agent, order: 9, actor: wishing_table_miller_master,
+      scene: "second son receives the gold-dropping ass from the miller master" }
+  - { function: func_villainy, order: 10, actor: wishing_table_innkeeper,
+      scene: "innkeeper steals the gold-ass and substitutes an ordinary ass" }
+  - { function: func_false_claims, order: 11, actor: wishing_table_second_son,
+      scene: "the false ass produces no gold before the kinsmen, shaming the second son" }
+  - { function: func_magical_agent, order: 12, actor: wishing_table_turner_master,
+      scene: "third son receives the cudgel in the sack from the turner master" }
+  - { function: func_trickery, order: 13, actor: wishing_table_third_son,
+      scene: "third son lures the innkeeper into trying to steal the sack" }
+  - { function: func_victory, order: 14, actor: wishing_table_third_son,
+      scene: "cudgel beats the innkeeper until he restores the table and gold-ass" }
+  - { function: func_liquidation, order: 15, actor: wishing_table_third_son,
+      scene: "third son returns home with all three gifts and restores the household" }
+  - { function: func_punishment, order: 16, actor: wishing_table_bee,
+      scene: "bee stings the shaved goat in the fox cave and drives her into the world" }
+
+
+edges:
+
+  # The goat's false testimony and the sons' expulsion
+  - { from: wishing_table_eldest_son, to: wishing_table_goat, label: FEEDS,
+      evidence: "The sons, therefore, did this, in turn." }
+  - { from: wishing_table_goat, to: wishing_table_eldest_son, label: LIES_ABOUT,
+      evidence: "Among the graves I leapt about, And found no food, so went without" }
+  - { from: wishing_table_old_tailor, to: wishing_table_eldest_son, label: DRIVES_OUT,
+      evidence: "he took the yard-measure from the wall, and drove him out with blows." }
+  - { from: wishing_table_goat, to: wishing_table_second_son, label: LIES_ABOUT,
+      evidence: "Among the graves I leapt about, And found no food, so went without" }
+  - { from: wishing_table_old_tailor, to: wishing_table_second_son, label: DRIVES_OUT,
+      evidence: "drove the youth out of doors with the yard-measure." }
+  - { from: wishing_table_goat, to: wishing_table_third_son, label: LIES_ABOUT,
+      evidence: "Among the graves I leapt about, And found no leaves, so went without" }
+  - { from: wishing_table_old_tailor, to: wishing_table_third_son, label: DRIVES_OUT,
+      evidence: "belabored the poor young fellow so vigorously with the yard-measure" }
+  - { from: wishing_table_old_tailor, to: wishing_table_goat, label: DISCOVERS_LIE_OF,
+      evidence: "saw clearly that he had driven away his three sons without cause." }
+  - { from: wishing_table_old_tailor, to: obj_wishing_table_razor, label: USES,
+      evidence: "fetched his razor, lathered the goat's head, and shaved her" }
+  - { from: wishing_table_old_tailor, to: obj_wishing_table_horsewhip, label: USES,
+      evidence: "he brought the horsewhip, and gave her such cuts" }
+
+  # First gift: wishing-table stolen and exposed
+  - { from: wishing_table_joiner_master, to: wishing_table_eldest_son, label: GIVES,
+      attributes: { object: obj_wishing_table_khm36 },
+      evidence: "his master presented him with a little table" }
+  - { from: wishing_table_eldest_son, to: obj_wishing_table_khm36, label: COMMANDS,
+      evidence: "Little table, spread thyself" }
+  - { from: obj_wishing_table_khm36, to: law_formula_commands_magic_objects, label: OBEYS,
+      evidence: "the good little table was at once covered" }
+  - { from: wishing_table_innkeeper, to: obj_wishing_table_khm36, label: STEALS,
+      evidence: "exchanged it for the wishing-table." }
+  - { from: wishing_table_innkeeper, to: obj_wishing_table_false_table, label: SUBSTITUTES,
+      evidence: "brought it out quite softly, and exchanged it" }
+  - { from: obj_wishing_table_false_table, to: wishing_table_eldest_son, label: SHAMES,
+      evidence: "the little table did not bestir itself" }
+  - { from: wishing_table_kinsmen, to: wishing_table_eldest_son, label: MOCK,
+      evidence: "The relations, however, mocked him" }
+
+  # Second gift: gold-ass stolen and exposed
+  - { from: wishing_table_miller_master, to: wishing_table_second_son, label: GIVES,
+      attributes: { object: obj_gold_ass_khm36 },
+      evidence: "I give thee an ass of a peculiar kind" }
+  - { from: wishing_table_second_son, to: obj_gold_ass_khm36, label: COMMANDS,
+      evidence: "Bricklebrit" }
+  - { from: obj_gold_ass_khm36, to: law_formula_commands_magic_objects, label: OBEYS,
+      evidence: "it rained gold pieces" }
+  - { from: wishing_table_innkeeper, to: obj_gold_ass_khm36, label: STEALS,
+      evidence: "led away the master of the mint" }
+  - { from: wishing_table_innkeeper, to: obj_wishing_table_false_ass, label: SUBSTITUTES,
+      evidence: "tied up another ass in his place." }
+  - { from: obj_wishing_table_false_ass, to: wishing_table_second_son, label: SHAMES,
+      evidence: "no gold pieces fell" }
+
+  # Third gift: cudgel recovers the stolen gifts
+  - { from: wishing_table_turner_master, to: wishing_table_third_son, label: GIVES,
+      attributes: { object: obj_cudgel_sack_khm36 },
+      evidence: "his master presented him with a sack" }
+  - { from: wishing_table_third_son, to: wishing_table_innkeeper, label: BAITS,
+      evidence: "these are nothing in comparison with the treasure which I have won for myself" }
+  - { from: wishing_table_innkeeper, to: obj_cudgel_sack_khm36, label: TRIES_TO_STEAL,
+      evidence: "pushed and pulled quite gently and carefully at the sack" }
+  - { from: wishing_table_third_son, to: obj_cudgel_sack_khm36, label: COMMANDS,
+      evidence: "Out of the sack, Cudgel!" }
+  - { from: obj_cudgel_sack_khm36, to: wishing_table_innkeeper, label: BEATS,
+      evidence: "fell on the inn-keeper and gave him a sound thrashing." }
+  - { from: wishing_table_innkeeper, to: obj_wishing_table_khm36, label: RESTORES,
+      evidence: "I will gladly produce everything" }
+  - { from: wishing_table_innkeeper, to: obj_gold_ass_khm36, label: RESTORES,
+      evidence: "I will gladly produce everything" }
+  - { from: wishing_table_third_son, to: obj_cudgel_sack_khm36, label: COMMANDS_BACK,
+      evidence: "Into the sack, Cudgel!" }
+
+  # Final restoration at home
+  - { from: wishing_table_third_son, to: wishing_table_old_tailor, label: RETURNS_TO,
+      evidence: "the turner went home to his father with the wishing-table, and the gold-ass." }
+  - { from: obj_gold_ass_khm36, to: wishing_table_kinsmen, label: ENRICHES,
+      evidence: "the gold pieces fell down on the cloth like a thunder-shower" }
+  - { from: obj_wishing_table_khm36, to: wishing_table_kinsmen, label: FEEDS,
+      evidence: "it was spread and amply covered with the most exquisite dishes." }
+  - { from: wishing_table_old_tailor, to: obj_needle_thread, label: LOCKS_AWAY,
+      evidence: "locked away needle and thread, yard-measure and goose" }
+  - { from: wishing_table_old_tailor, to: wishing_table_eldest_son, label: LIVES_WITH,
+      evidence: "lived with his three sons in joy and splendour." }
+  - { from: wishing_table_old_tailor, to: wishing_table_second_son, label: LIVES_WITH,
+      evidence: "lived with his three sons in joy and splendour." }
+  - { from: wishing_table_old_tailor, to: wishing_table_third_son, label: LIVES_WITH,
+      evidence: "lived with his three sons in joy and splendour." }
+
+  # Goat epilogue
+  - { from: wishing_table_goat, to: loc_wishing_table_fox_cave, label: HIDES_IN,
+      evidence: "ran to a fox's hole and crept into it." }
+  - { from: wishing_table_goat, to: wishing_table_fox, label: FRIGHTENS,
+      evidence: "two great eyes shining out of the darkness" }
+  - { from: wishing_table_goat, to: wishing_table_bear, label: FRIGHTENS,
+      evidence: "when he saw the fiery eyes, fear seized on him likewise" }
+  - { from: wishing_table_bee, to: wishing_table_goat, label: STINGS,
+      evidence: "stung her so violently" }
+  - { from: wishing_table_goat, to: loc_wishing_table_fox_cave, label: FLEES_FROM,
+      evidence: "ran forth into the world as if mad" }

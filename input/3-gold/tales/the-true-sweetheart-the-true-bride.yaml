@@ -1,0 +1,312 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-true-sweetheart-the-true-bride
+khm: 186
+atu: "313"
+atu_name: The Magic Flight
+canonical_source: ../../2-silver/canonical/the-true-sweetheart-the-true-bride/canonical.txt
+title: The True Sweetheart / The True Bride
+
+
+entities:
+
+  characters:
+
+    true_bride_maiden:
+      name: The True Bride
+      archetypes: [arc_oppressed_maiden]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_domestic_labor, agency_speech, agency_object_mediation, agency_music]
+      existential_states: [state_forgotten_bride, state_disguised, state_hidden_identity]
+      speech_acts_performed: [speech_testimony, speech_command]
+      affects: [affect_grief, affect_fear, affect_love, affect_longing, affect_loyalty]
+      traits: [motherless, beautiful, indefatigable-worker, stepmother-oppressed, helper-aided, castle-heiress, lime-tree-waiter, forgotten-betrothed, cowherd-disguised, calf-singer, three-night-festival-bride, left-cheek-recognized]
+      evidence: |
+        a girl who was young and beautiful
+
+    true_bride_stepmother:
+      name: The Wicked Step-Mother
+      archetypes: [arc_cruel_stepmother]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command, speech_warning]
+      affects: [affect_envy, affect_anger]
+      traits: [wicked, never-satisfied, burden-increaser, beating-threatener, impossible-task-setter, malicious-examiner, cellar-fallen]
+      evidence: |
+        her step-mother did all she could to make the girl’s life wretched
+
+    true_bride_old_woman:
+      name: The Good Old Woman
+      archetypes: [arc_supernatural_donor]
+      being_type: being_fairy
+      agency_modes: [agency_speech, agency_domestic_labor, agency_object_mediation]
+      speech_acts_performed: [speech_command, speech_testimony]
+      affects: [affect_pity]
+      traits: [low-voiced, kind, comforter, sleep-commanding, feather-picker, pond-emptier, castle-builder, vanishing-helper]
+      evidence: |
+        an old woman was by her side
+
+    true_bride_prince:
+      name: The King's Son
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_object_mediation]
+      existential_states: [state_deceived]
+      speech_acts_performed: [speech_testimony, speech_command]
+      affects: [affect_love, affect_longing]
+      traits: [heart-touching-wooer, betrothed-bridegroom, father-consent-seeker, bride-forgetter, proud-horse-rider, voice-stirred, festival-dancer, left-cheek-recognizer, true-bridegroom]
+      evidence: |
+        the son of the King came
+
+    true_bride_false_bride:
+      name: The King's Daughter / False Bride
+      archetypes: [arc_false_bride]
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [announced-bride, replacement-bride, abandoned-before-wedding]
+      evidence: |
+        the King’s daughter was about to celebrate her marriage
+
+    true_bride_calf:
+      name: The Little Calf
+      species: sp_cattle
+      agency_modes: [agency_animal_aid]
+      traits: [hand-fed, shepherd-maid-knowing, kneeling, song-listener, memory-witness]
+      evidence: |
+        she had a little calf
+
+  magic_objects:
+
+    obj_true_bride_feathers:
+      name: The Twelve Pounds of Feathers
+      object_kind: material
+      attributes:
+        function: first impossible task imposed under threat of beating
+      evidence: |
+        twelve pounds of feathers
+
+    obj_true_bride_holed_spoon:
+      name: The Spoon Full of Holes
+      object_kind: tool
+      attributes:
+        function: impossible tool for emptying the great pond
+      evidence: |
+        it was full of holes
+
+    obj_true_bride_celestial_dresses:
+      name: The Three Celestial Dresses
+      instance_of: obj_celestial_dresses
+      object_kind: garment
+      attributes:
+        sequence: [golden_suns, silver_moons, bright_stars]
+        function: staged festival visibility that leads the prince back toward recognition
+      evidence: |
+        one embroidered with bright stars, the second with silver moons, the third with golden suns
+
+    obj_true_bride_jewels:
+      name: The Handkerchief of Jewels
+      object_kind: treasure
+      attributes:
+        function: buried portable wealth used for the final recognition attempt
+      evidence: |
+        tied up a handful of jewels in her handkerchief
+
+    obj_true_bride_left_cheek_kiss:
+      name: The Reserved Left-Cheek Kiss
+      object_kind: token
+      attributes:
+        function: betrothal sign that restores the prince's memory of the true bride
+      evidence: |
+        kissed him on his left cheek
+
+  locations:
+
+    loc_true_bride_stepmother_house:
+      name: The Stepmother's House
+      instance_of: loc_house
+      evidence: |
+        Whenever this woman gave her anything to do
+
+    loc_true_bride_garden_pond:
+      name: The Great Pond beside the Garden
+      instance_of: loc_pond
+      evidence: |
+        the great pond which is beside the garden
+
+    loc_true_bride_magic_castle:
+      name: The Magic Castle on the Plain
+      instance_of: loc_castle
+      evidence: |
+        build me a castle
+
+    loc_true_bride_castle_cellar:
+      name: The Castle Cellar
+      instance_of: loc_cellar
+      evidence: |
+        Which is the way to the cellar?
+
+    loc_true_bride_lime_tree:
+      name: The Lime-Tree in the Castle Garden
+      instance_of: loc_tree
+      evidence: |
+        In the garden of the castle was a lime-tree
+
+    loc_true_bride_village:
+      name: The Herdswoman's Village
+      instance_of: loc_village
+      evidence: |
+        through the village where the maiden was living
+
+    loc_true_bride_town_road:
+      name: The Road to the Town
+      instance_of: loc_road
+      evidence: |
+        The road to the town
+
+    loc_true_bride_festival_hall:
+      name: The King's Festival Hall
+      instance_of: loc_castle
+      evidence: |
+        the brightly-lighted hall
+
+
+classifications:
+
+  world_laws:
+    - law_compassionate_helper_completes_oppressive_tasks
+    - law_voice_recognizes_forgotten_bride
+    - law_reserved_betrothal_kiss_restores_bride_memory
+
+  moral_regimes:
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_object_mediation
+    - agency_speech
+    - agency_music
+
+  affects_driving:
+    - affect_grief
+    - affect_love
+    - affect_longing
+    - affect_loyalty
+    - affect_envy
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_oppression, order: 1, actor: true_bride_stepmother,
+      victim: true_bride_maiden,
+      scene: "the stepmother increases the motherless girl's burdens and threatens beatings" }
+  - { function: func_impossible_task, order: 2, actor: true_bride_stepmother,
+      victim: true_bride_maiden,
+      scene: "the girl must pick twelve pounds of feathers by evening" }
+  - { function: func_supernatural_aid, order: 3, actor: true_bride_old_woman,
+      beneficiary: true_bride_maiden,
+      scene: "the old woman comforts the girl, lets her sleep, and completes the feathers" }
+  - { function: func_second_impossible_task, order: 4, actor: true_bride_stepmother,
+      victim: true_bride_maiden,
+      scene: "the girl must empty the great pond with a spoon full of holes" }
+  - { function: func_supernatural_aid, order: 5, actor: true_bride_old_woman,
+      beneficiary: true_bride_maiden,
+      scene: "the old woman empties the pond while the girl sleeps" }
+  - { function: func_third_impossible_task, order: 6, actor: true_bride_stepmother,
+      victim: true_bride_maiden,
+      scene: "the girl must build a castle by evening" }
+  - { function: func_supernatural_aid, order: 7, actor: true_bride_old_woman,
+      beneficiary: true_bride_maiden,
+      scene: "the old woman makes the rocks assemble into a splendid castle" }
+  - { function: func_antagonist_fall, order: 8, actor: true_bride_stepmother,
+      scene: "the stepmother falls through the cellar trap-door and dies" }
+  - { function: func_betrothal, order: 9, actor: true_bride_prince,
+      beneficiary: true_bride_maiden,
+      scene: "the king's son wins the maiden's heart and promises to return from his father" }
+  - { function: func_waiting_and_search, order: 10, actor: true_bride_maiden,
+      scene: "she waits under the lime-tree for three days and then seeks him through the world" }
+  - { function: func_forgotten_bride_disguise, order: 11, actor: true_bride_maiden,
+      scene: "she becomes a cowherd, buries her dresses and jewels, and sings to the calf" }
+  - { function: func_voice_stirs_memory, order: 12, actor: true_bride_maiden,
+      beneficiary: true_bride_prince,
+      scene: "the prince hears the calf-song and tries to remember" }
+  - { function: func_three_festival_appearances, order: 13, actor: true_bride_maiden,
+      scene: "she appears at the three-day festival in sun, moon, and star splendour" }
+  - { function: func_recognition, order: 14, actor: true_bride_maiden,
+      beneficiary: true_bride_prince,
+      scene: "the left-cheek kiss restores the prince's memory of the true bride" }
+  - { function: func_true_wedding, order: 15, actor: true_bride_prince,
+      beneficiary: true_bride_maiden,
+      scene: "the couple leaves the false wedding and returns to the magic castle for marriage" }
+
+
+edges:
+
+  - { from: true_bride_stepmother, to: true_bride_maiden, label: MAKES_LIFE_WRETCHED,
+      evidence: "make the girl’s life wretched" }
+  - { from: true_bride_maiden, to: agency_domestic_labor, label: WORKS_INDEFATIGABLY,
+      evidence: "worked at it indefatigably" }
+  - { from: true_bride_stepmother, to: obj_true_bride_feathers, label: IMPOSES_FEATHER_TASK,
+      evidence: "twelve pounds of feathers" }
+  - { from: true_bride_maiden, to: affect_grief, label: WEEPS_OVER_IMPOSSIBLE_TASK,
+      evidence: "tears ran down her cheeks" }
+  - { from: true_bride_old_woman, to: true_bride_maiden, label: COMES_TO_HELP,
+      evidence: "I have come to help thee" }
+  - { from: true_bride_old_woman, to: obj_true_bride_feathers, label: COMPLETES_FEATHERS,
+      evidence: "The twelve pounds were soon finished" }
+  - { from: true_bride_stepmother, to: obj_true_bride_holed_spoon, label: IMPOSES_POND_TASK,
+      evidence: "with that thou must empty out for me the great pond" }
+  - { from: true_bride_old_woman, to: loc_true_bride_garden_pond, label: EMPTIES_BY_TOUCH,
+      evidence: "she barely touched the pond" }
+  - { from: true_bride_stepmother, to: loc_true_bride_magic_castle, label: DEMANDS_CASTLE_BY_EVENING,
+      evidence: "build me a castle" }
+  - { from: true_bride_old_woman, to: loc_true_bride_magic_castle, label: BUILDS_BY_SUPERNATURAL_LABOR,
+      evidence: "countless hands were working invisibly" }
+  - { from: law_compassionate_helper_completes_oppressive_tasks, to: true_bride_maiden, label: RELIEVES_OPPRESSIVE_TASKS,
+      evidence: "I will soon do thy work" }
+  - { from: true_bride_stepmother, to: loc_true_bride_castle_cellar, label: DESCENDS_TO_INSPECT,
+      evidence: "Which is the way to the cellar?" }
+  - { from: loc_true_bride_castle_cellar, to: true_bride_stepmother, label: KILLS_BY_TRAP_DOOR_FALL,
+      evidence: "lying lifeless at the bottom" }
+  - { from: loc_true_bride_magic_castle, to: true_bride_maiden, label: BELONGS_TO,
+      evidence: "belonged to the girl alone" }
+  - { from: true_bride_prince, to: true_bride_maiden, label: BETROTHES_HIMSELF_TO,
+      evidence: "she betrothed herself to him" }
+  - { from: true_bride_maiden, to: loc_true_bride_lime_tree, label: WAITS_UNDER,
+      evidence: "wait here under the lime-tree" }
+  - { from: true_bride_prince, to: obj_true_bride_left_cheek_kiss, label: RECEIVES_BETROTHAL_KISS,
+      evidence: "kissed him on his left cheek" }
+  - { from: true_bride_maiden, to: obj_true_bride_celestial_dresses, label: PACKS_FOR_SEARCH,
+      evidence: "three of her most beautiful dresses" }
+  - { from: true_bride_maiden, to: obj_true_bride_jewels, label: CARRIES_SEARCH_WEALTH,
+      evidence: "tied up a handful of jewels in her handkerchief" }
+  - { from: true_bride_maiden, to: loc_true_bride_village, label: LIVES_AS_COWHERD,
+      evidence: "hired herself to a farmer as a cow-herd" }
+  - { from: true_bride_maiden, to: true_bride_calf, label: TEACHES_CALF_TO_KNEEL,
+      evidence: "the little calf knelt down" }
+  - { from: true_bride_maiden, to: law_voice_recognizes_forgotten_bride, label: SINGS_FORGOTTEN_BRIDE_LAMENT,
+      evidence: "As the prince forgot his betrothed bride" }
+  - { from: true_bride_prince, to: state_forgotten_bride, label: FORGETS_TRUE_BRIDE,
+      evidence: "he has forgotten me" }
+  - { from: true_bride_prince, to: true_bride_maiden, label: HEARS_VOICE_AND_ALMOST_REMEMBERS,
+      evidence: "as if he were trying to remember something" }
+  - { from: true_bride_maiden, to: obj_true_bride_celestial_dresses, label: WEARS_GOLDEN_SUNS,
+      evidence: "dress with the golden suns" }
+  - { from: true_bride_maiden, to: obj_true_bride_celestial_dresses, label: WEARS_SILVER_MOONS,
+      evidence: "dress with the silver moons" }
+  - { from: true_bride_maiden, to: obj_true_bride_celestial_dresses, label: WEARS_STAR_DRESS,
+      evidence: "she wore the star-dress" }
+  - { from: true_bride_prince, to: true_bride_maiden, label: DANCES_WITH_UNKNOWN_TRUE_BRIDE,
+      evidence: "He led her out to dance" }
+  - { from: true_bride_maiden, to: obj_true_bride_left_cheek_kiss, label: USES_RESERVED_KISS_TO_RESTORE_MEMORY,
+      evidence: "kissed him on his left cheek" }
+  - { from: law_reserved_betrothal_kiss_restores_bride_memory, to: true_bride_prince, label: CLEARS_EYES_AND_RECOGNIZES,
+      evidence: "as if scales fell from his eyes" }
+  - { from: true_bride_prince, to: true_bride_false_bride, label: ABANDONS_FALSE_WEDDING,
+      evidence: "here I stay no longer" }
+  - { from: true_bride_prince, to: true_bride_maiden, label: LEADS_TRUE_BRIDE_AWAY,
+      evidence: "gave her his hand" }
+  - { from: loc_true_bride_magic_castle, to: true_bride_maiden, label: HOSTS_TRUE_WEDDING,
+      evidence: "waiting to marry the bridegroom to the true bride" }

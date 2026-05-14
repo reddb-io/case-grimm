@@ -1,0 +1,230 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-fisherman-and-his-wife
+khm: 19
+atu: '555'
+atu_name: The Fisherman and His Wife
+canonical_source: ../../2-silver/canonical/the-fisherman-and-his-wife/canonical.txt
+title: The Fisherman and His Wife
+
+
+entities:
+
+  characters:
+
+    fisherman_husband:
+      name: The Fisherman
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      speech_acts_performed: [speech_wish]
+      affects: [affect_fear, affect_shame, affect_loyalty]
+      traits: [poor, merciful-fish-releaser, reluctant-mediator, wife-opposed, sea-summoner]
+      evidence: |
+        "The man still did not quite like to go, but did not like to
+        oppose his wife, and went to the sea."
+
+    fisherman_wife_ilsabil:
+      name: Ilsabil / The Fisherman's Wife
+      archetypes: [arc_greedy_one]
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_command, speech_wish]
+      affects: [affect_greed, affect_pride, affect_anger]
+      traits: [hovel-dissatisfied, escalating-wisher, rank-hungry, sleepless-with-greed, divine-overreacher]
+      evidence: |
+        "greediness let her have no sleep, for she was continually
+        thinking what there was left for her to be."
+
+    enchanted_flounder:
+      name: The Enchanted Flounder Prince
+      archetypes: [arc_enchanted_prince, arc_animal_helper]
+      species: sp_fish
+      agency_modes: [agency_animal_aid, agency_speech]
+      existential_states: [state_cursed, state_transformed]
+      traits: [talking-fish, released-prince, wish-granter, limit-enforcer]
+      evidence: |
+        "I am no Flounder really, but an enchanted prince."
+
+  magic_objects:
+
+    obj_fisherman_rod_line:
+      name: The Fisherman's Rod and Line
+      object_kind: tool
+      attributes:
+        function: catches the enchanted flounder from the clear water
+      evidence: |
+        "he was sitting with his rod, looking at the clear water"
+
+  locations:
+
+    loc_hovel_fisherman_wife:
+      name: The Dirty Hovel by the Sea
+      instance_of: loc_house
+      evidence: |
+        "a miserable hovel close by the sea"
+
+    loc_sea_fisherman_wife:
+      name: The Changing Sea
+      instance_of: loc_sea
+      attributes:
+        states:
+          - clear water
+          - green and yellow
+          - purple and dark-blue
+          - dark-grey and putrid
+          - black and boiling
+          - storm-red sky
+          - black waves as high as church-towers
+      evidence: |
+        "the sea came in with black waves as high as church-towers and
+        mountains"
+
+    loc_cottage_fisherman_wife:
+      name: The Small Cottage
+      instance_of: loc_house
+      evidence: |
+        "there stood a small cottage"
+
+    loc_castle_fisherman_wife:
+      name: The Great Stone Castle
+      instance_of: loc_castle
+      evidence: |
+        "she wants to live in a great stone castle."
+
+    loc_kingdom_palace_fisherman_wife:
+      name: The Enlarged Royal Palace and Throne
+      instance_of: loc_castle
+      evidence: |
+        "his wife was sitting on a high throne of gold and diamonds"
+
+    loc_emperor_palace_fisherman_wife:
+      name: The Emperor's Golden Palace
+      instance_of: loc_castle
+      evidence: |
+        "there sat his wife on a throne, which was made of one piece
+        of gold"
+
+    loc_papal_church_fisherman_wife:
+      name: The Papal Church and Palaces
+      instance_of: loc_church
+      evidence: |
+        "he saw what seemed to be a large church surrounded by palaces."
+
+
+classifications:
+
+  world_laws:
+    - law_insatiable_wishing_reverts_gifts
+    - law_nature_mirrors_moral_excess
+
+  moral_regimes:
+    - moral_overreach_reversal
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_social_rank
+    - agency_endurance
+    - agency_animal_aid
+
+  affects_driving:
+    - affect_greed
+    - affect_fear
+    - affect_pride
+    - affect_anger
+
+  symbol_numbers: []
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_lack, order: 1, actor: fisherman_husband,
+      scene: "fisherman and wife live in a miserable hovel by the sea" }
+  - { function: func_donor_test, order: 2, actor: enchanted_flounder,
+      scene: "caught flounder reveals he is an enchanted prince and asks to live" }
+  - { function: func_magical_agent, order: 3, actor: fisherman_husband,
+      scene: "fisherman releases the talking fish and gains access to a wish-granter" }
+  - { function: func_wish_granted, order: 4, actor: enchanted_flounder,
+      scene: "wife's hovel wish becomes a cottage" }
+  - { function: func_escalation, order: 5, actor: fisherman_wife_ilsabil,
+      scene: "wife rejects cottage and demands castle" }
+  - { function: func_wish_granted, order: 6, actor: enchanted_flounder,
+      scene: "castle wish is granted as sea darkens" }
+  - { function: func_escalation, order: 7, actor: fisherman_wife_ilsabil,
+      scene: "wife demands to be king" }
+  - { function: func_wish_granted, order: 8, actor: enchanted_flounder,
+      scene: "king wish is granted as sea heaves and smells putrid" }
+  - { function: func_escalation, order: 9, actor: fisherman_wife_ilsabil,
+      scene: "wife demands to be emperor" }
+  - { function: func_wish_granted, order: 10, actor: enchanted_flounder,
+      scene: "emperor wish is granted as sea turns black and boiling" }
+  - { function: func_escalation, order: 11, actor: fisherman_wife_ilsabil,
+      scene: "wife demands to be pope" }
+  - { function: func_wish_granted, order: 12, actor: enchanted_flounder,
+      scene: "pope wish is granted amid storm and ships in distress" }
+  - { function: func_villainy, order: 13, actor: fisherman_wife_ilsabil,
+      scene: "wife demands to be like God and order sun and moon" }
+  - { function: func_punishment, order: 14, actor: enchanted_flounder,
+      scene: "all granted ranks revert and wife is back in the dirty hovel" }
+
+
+edges:
+
+  # Mercy to the enchanted fish
+  - { from: fisherman_husband, to: enchanted_flounder, label: CATCHES,
+      attributes: { instrument: obj_fisherman_rod_line },
+      evidence: "he brought out a large Flounder." }
+  - { from: enchanted_flounder, to: fisherman_husband, label: REVEALS_TO,
+      evidence: "I am no Flounder really, but an enchanted prince." }
+  - { from: fisherman_husband, to: enchanted_flounder, label: RELEASES,
+      evidence: "with that he put him back again into the clear water" }
+
+  # First wish: cottage
+  - { from: fisherman_wife_ilsabil, to: fisherman_husband, label: COMMANDS,
+      evidence: "Go back and call him." }
+  - { from: fisherman_wife_ilsabil, to: loc_cottage_fisherman_wife, label: WISHES_FOR,
+      evidence: "she would like to have a cottage." }
+  - { from: fisherman_husband, to: enchanted_flounder, label: MEDIATES_WISH_TO,
+      evidence: "For my wife, good Ilsabil, Wills not as I'd have her will." }
+  - { from: enchanted_flounder, to: loc_cottage_fisherman_wife, label: GRANTS,
+      evidence: "she has it already." }
+  - { from: loc_sea_fisherman_wife, to: fisherman_wife_ilsabil, label: MIRRORS_EXCESS_OF,
+      evidence: "the sea was all green and yellow, and no longer so smooth" }
+
+  # Castle, king, emperor, pope
+  - { from: fisherman_wife_ilsabil, to: loc_castle_fisherman_wife, label: WISHES_FOR,
+      evidence: "I should like to live in a great stone castle" }
+  - { from: enchanted_flounder, to: loc_castle_fisherman_wife, label: GRANTS,
+      evidence: "she is standing before the door" }
+  - { from: loc_sea_fisherman_wife, to: fisherman_wife_ilsabil, label: MIRRORS_EXCESS_OF,
+      evidence: "the water was quite purple and dark-blue, and grey and thick" }
+  - { from: fisherman_wife_ilsabil, to: loc_kingdom_palace_fisherman_wife, label: WISHES_FOR,
+      evidence: "I must be King!" }
+  - { from: enchanted_flounder, to: loc_kingdom_palace_fisherman_wife, label: GRANTS,
+      evidence: "she is King already." }
+  - { from: loc_sea_fisherman_wife, to: fisherman_wife_ilsabil, label: MIRRORS_EXCESS_OF,
+      evidence: "the water heaved up from below, and smelt putrid." }
+  - { from: fisherman_wife_ilsabil, to: loc_emperor_palace_fisherman_wife, label: WISHES_FOR,
+      evidence: "I will be Emperor." }
+  - { from: enchanted_flounder, to: loc_emperor_palace_fisherman_wife, label: GRANTS,
+      evidence: "she is Emperor already." }
+  - { from: loc_sea_fisherman_wife, to: fisherman_wife_ilsabil, label: MIRRORS_EXCESS_OF,
+      evidence: "the sea was quite black and thick, and began to boil up" }
+  - { from: fisherman_wife_ilsabil, to: loc_papal_church_fisherman_wife, label: WISHES_FOR,
+      evidence: "I will be Pope" }
+  - { from: enchanted_flounder, to: loc_papal_church_fisherman_wife, label: GRANTS,
+      evidence: "she is Pope already." }
+  - { from: loc_sea_fisherman_wife, to: fisherman_wife_ilsabil, label: MIRRORS_EXCESS_OF,
+      evidence: "the water rose and roared as if it were boiling" }
+
+  # Divine overreach and reversion
+  - { from: fisherman_wife_ilsabil, to: fisherman_husband, label: COMMANDS,
+      evidence: "go to the Flounder, for I wish to be even as God is." }
+  - { from: fisherman_wife_ilsabil, to: speech_wish, label: OVERREACHES_WITH,
+      evidence: "I wish to be like unto God." }
+  - { from: loc_sea_fisherman_wife, to: fisherman_husband, label: TERRIFIES,
+      evidence: "he cried, but could not hear his own words" }
+  - { from: enchanted_flounder, to: loc_hovel_fisherman_wife, label: REVERTS_TO,
+      evidence: "you will find her back again in the dirty hovel." }
+  - { from: loc_hovel_fisherman_wife, to: fisherman_wife_ilsabil, label: CONTAINS,
+      evidence: "there they are living still at this very time." }

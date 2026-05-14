@@ -1,0 +1,362 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-devils-sooty-brother
+khm: 100
+atu: '475'
+atu_name: "The Man as Heater of Hell's Kettle"
+canonical_source: ../../2-silver/canonical/the-devils-sooty-brother/canonical.txt
+title: The Devil's Sooty Brother
+
+
+entities:
+
+  characters:
+
+    sooty_brother_hans:
+      name: Hans / The Devil's Sooty Brother
+      archetypes: [arc_discharged_soldier, arc_trickster]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_domestic_labor, agency_speech, agency_object_mediation, agency_music]
+      speech_acts_performed: [speech_command]
+      affects: [affect_hunger, affect_anger, affect_joy]
+      traits: [disbanded-soldier, hungry-wanderer, infernal-serving-man, unwashed-worker, kettle-peeper, sooty-returnee, gold-wage-winner, musician, royal-son-in-law]
+      evidence: |
+        A disbanded soldier had nothing to live on
+
+    sooty_brother_devil:
+      name: The Little Man / Old Devil
+      species: sp_human
+      being_type: being_devil
+      agency_modes: [agency_speech, agency_social_rank, agency_object_mediation, agency_domestic_labor]
+      speech_acts_performed: [speech_command, speech_promise]
+      affects: [affect_greed]
+      traits: [infernal-employer, seven-year-master, cleanliness-taboo-giver, hell-householder, wage-giver, helper-after-theft]
+      evidence: |
+        he met a little man who was, however, the Devil
+
+    sooty_brother_military_superiors:
+      name: The Former Corporal, Ensign, and General
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_violence]
+      affects: [affect_fear]
+      traits: [former-commanders, hell-kettle-prisoners, punished-authority, fire-tormented]
+      evidence: |
+        there he saw his former corporal shut in
+
+    sooty_brother_landlord:
+      name: The Inn Landlord
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_object_mediation]
+      speech_acts_performed: [speech_command]
+      affects: [affect_greed, affect_fear]
+      traits: [frightened-host, gold-watcher, night-thief, coerced-restituter]
+      evidence: |
+        The landlord was standing in front of the inn
+
+    sooty_brother_father:
+      name: Hans's Father at Home
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [homeward-object-of-return, absent-father]
+      evidence: |
+        what my father is doing at home
+
+    sooty_brother_old_king:
+      name: The Old King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_joy]
+      traits: [music-delighted-ruler, marriage-promiser, aged-king]
+      evidence: |
+        There was however, an old King in that country
+
+    sooty_brother_eldest_princess:
+      name: The Eldest Princess
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      affects: [affect_pride, affect_fear]
+      traits: [rank-conscious-daughter, smock-frock-refuser, water-threat-speaker]
+      evidence: |
+        his eldest daughter in marriage
+
+    sooty_brother_youngest_princess:
+      name: The Youngest Princess
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      affects: [affect_joy]
+      traits: [obedient-daughter, willing-bride, kingdom-bridge]
+      evidence: |
+        the youngest, who was quite willing
+
+  magic_objects:
+
+    obj_sooty_brother_knapsack_sweepings:
+      name: The Knapsack Full of Sweepings
+      object_kind: tool
+      attributes:
+        function: infernal wages that look worthless until opened in the forest
+        contents: sweepings from behind the doors of hell
+      evidence: |
+        fill your knapsack full of the sweepings
+
+    obj_sooty_brother_gold:
+      name: The Gold Made from Sweepings
+      object_kind: treasure
+      attributes:
+        function: wages, theft-lure, and basis of Hans's restored wealth
+      evidence: |
+        the sweepings had become pure gold
+
+    obj_sooty_brother_hell_kettles:
+      name: The Hell-Broth Kettles
+      object_kind: architecture
+      attributes:
+        function: punishment vessels whose fires Hans must tend
+        contents: former military superiors
+      evidence: |
+        the kettles wherein the hell-broth was stewing
+
+    obj_sooty_brother_bellows:
+      name: The Bellows for Hell-Fire
+      object_kind: tool
+      attributes:
+        function: makes the fire blaze under the general
+      evidence: |
+        he fetched the bellows and made hell-fire blaze
+
+    obj_sooty_brother_smock_frock:
+      name: The Shabby Smock-Frock
+      object_kind: garment
+      attributes:
+        function: low-status costume that makes the eldest princess reject Hans
+      evidence: |
+        bought himself a shabby smock-frock to wear
+
+  locations:
+
+    loc_sooty_brother_forest:
+      name: The Forest Where Hans Meets the Devil
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        went out into the forest
+
+    loc_sooty_brother_hell:
+      name: The Devil's Hell
+      instance_of: loc_hell
+      threshold_type: threshold_doorway
+      evidence: |
+        straightway led him down into hell
+
+    loc_sooty_brother_kettle_room:
+      name: The Kettle Room in Hell
+      instance_of: loc_hell
+      evidence: |
+        the kettles were standing all round hell
+
+    loc_sooty_brother_inn:
+      name: The Town Inn
+      instance_of: loc_inn
+      threshold_type: threshold_doorway
+      evidence: |
+        The landlord was standing in front of the inn
+
+    loc_sooty_brother_father_home:
+      name: The Father's Home
+      instance_of: loc_house
+      evidence: |
+        see what my father is doing at home
+
+    loc_sooty_brother_royal_country:
+      name: The Old King's Country
+      instance_of: loc_castle
+      evidence: |
+        an old King in that country
+
+
+classifications:
+
+  world_laws:
+    - law_infernal_service_refuse_becomes_gold
+    - law_infernal_substitution_threat_restores_stolen_wages
+    - law_promise_binds_reality
+
+  moral_regimes:
+    - moral_faithful_service_rewarded
+    - moral_trickster_wins
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_endurance
+    - agency_object_mediation
+    - agency_speech
+    - agency_music
+
+  affects_driving:
+    - affect_hunger
+    - affect_greed
+    - affect_fear
+    - affect_anger
+    - affect_joy
+
+  symbol_numbers:
+    - num_7
+    - num_3
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: sooty_brother_hans,
+      scene: "A disbanded soldier has no money or livelihood and wanders into the forest.",
+      evidence: "A disbanded soldier had nothing to live on" }
+  - { function: func_lack, order: 2, actor: sooty_brother_hans,
+      scene: "Hans names hunger and lack of money as his immediate need.",
+      evidence: "I am hungry, but have no money" }
+  - { function: func_donor_contract, order: 3, actor: sooty_brother_devil,
+      scene: "The Devil hires Hans as a serving-man for seven years and promises enough for life afterward.",
+      evidence: "If you will hire yourself to me, and be my serving-man" }
+  - { function: func_prohibition, order: 4, actor: sooty_brother_devil,
+      scene: "The Devil forbids washing, combing, trimming, cutting hair or nails, and wiping water from the eyes.",
+      evidence: "you must not wash, comb, or trim yourself" }
+  - { function: func_departure, order: 5, actor: sooty_brother_hans,
+      scene: "Hans follows the little man down into hell.",
+      evidence: "straightway led him down into hell" }
+  - { function: func_task, order: 6, actor: sooty_brother_devil,
+      scene: "The Devil assigns Hans to tend the kettles, clean the house, and hide sweepings behind the doors.",
+      evidence: "poke the fire under the kettles wherein the hell-broth was stewing" }
+  - { function: func_interdiction, order: 7, actor: sooty_brother_devil,
+      scene: "The Devil warns Hans not to peep into the kettles.",
+      evidence: "if he once peeped into the kettles, it would go ill with him" }
+  - { function: func_violation, order: 8, actor: sooty_brother_hans,
+      scene: "Hans peeps into the kettles and finds his former military superiors being punished.",
+      evidence: "slightly raised the lid of the first kettle" }
+  - { function: func_retributive_service, order: 9, actor: sooty_brother_hans,
+      scene: "Hans adds logs and bellows the fire hotter under the former authorities who once had power over him.",
+      evidence: "you once had me in your power, now I have you" }
+  - { function: func_service_completed, order: 10, actor: sooty_brother_hans,
+      scene: "Seven years of unwashed infernal labour pass as if they were only half a year.",
+      evidence: "the seven years seemed so short to him" }
+  - { function: func_wages, order: 11, actor: sooty_brother_devil,
+      scene: "The Devil pays Hans with a knapsack full of sweepings and an infernal speech formula.",
+      evidence: "fill your knapsack full of the sweepings" }
+  - { function: func_magical_conversion, order: 12, actor: obj_sooty_brother_knapsack_sweepings,
+      scene: "Back in the forest, the worthless sweepings have become pure gold.",
+      evidence: "the sweepings had become pure gold" }
+  - { function: func_villainy, order: 13, actor: sooty_brother_landlord,
+      scene: "The landlord lets Hans in after seeing the gold, then steals the knapsack during the night.",
+      evidence: "during the night he crept in and stole it away" }
+  - { function: func_return_to_donor, order: 14, actor: sooty_brother_hans,
+      scene: "Hans returns to hell, complains to the Devil, and receives cleaned appearance and replacement sweepings.",
+      evidence: "straightway went back again to hell" }
+  - { function: func_threatened_substitution, order: 15, actor: sooty_brother_hans,
+      scene: "Hans threatens the landlord with taking his place in hell unless the stolen money is restored.",
+      evidence: "thou shalt go down to hell in my place" }
+  - { function: func_liquidation, order: 16, actor: sooty_brother_landlord,
+      scene: "The landlord returns the money and more, making Hans rich.",
+      evidence: "Then the landlord gave him the money, and more besides" }
+  - { function: func_performance, order: 17, actor: sooty_brother_hans,
+      scene: "Hans goes homeward in a shabby smock-frock and makes music learned in hell.",
+      evidence: "strolled about making music" }
+  - { function: func_marriage_offer, order: 18, actor: sooty_brother_old_king,
+      scene: "The old king delights in the music and promises Hans his eldest daughter.",
+      evidence: "promised him his eldest daughter in marriage" }
+  - { function: func_refusal_and_transfer, order: 19, actor: sooty_brother_eldest_princess,
+      scene: "The eldest refuses the smock-frock fellow, so the king gives Hans the willing youngest daughter.",
+      evidence: "Rather than do that, I would go into the deepest water" }
+  - { function: func_wedding_and_accession, order: 20, actor: sooty_brother_hans,
+      scene: "Hans marries the king's daughter and eventually receives the whole kingdom.",
+      evidence: "the whole kingdom likewise" }
+
+
+edges:
+
+  # Infernal contract and service
+  - { from: sooty_brother_hans, to: loc_sooty_brother_forest, label: ENTERS,
+      evidence: "went out into the forest" }
+  - { from: sooty_brother_hans, to: sooty_brother_devil, label: MEETS,
+      evidence: "he met a little man who was, however, the Devil" }
+  - { from: sooty_brother_hans, to: affect_hunger, label: IS_DRIVEN_BY,
+      evidence: "I am hungry, but have no money" }
+  - { from: sooty_brother_devil, to: sooty_brother_hans, label: HIRES_AS_SERVING_MAN,
+      evidence: "hire yourself to me, and be my serving-man" }
+  - { from: sooty_brother_devil, to: sooty_brother_hans, label: PROMISES_LIFELONG_SUPPORT,
+      evidence: "you shall have enough for all your life" }
+  - { from: sooty_brother_devil, to: sooty_brother_hans, label: SETS_SEVEN_YEAR_TERM,
+      evidence: "You shall serve me for seven years" }
+  - { from: sooty_brother_devil, to: sooty_brother_hans, label: FORBIDS_WASHING_AND_GROOMING,
+      evidence: "you must not wash, comb, or trim yourself" }
+  - { from: sooty_brother_devil, to: loc_sooty_brother_hell, label: LEADS_DOWN_TO,
+      evidence: "straightway led him down into hell" }
+  - { from: sooty_brother_devil, to: obj_sooty_brother_hell_kettles, label: ASSIGNS_FIRE_TENDING_FOR,
+      evidence: "poke the fire under the kettles" }
+  - { from: sooty_brother_hans, to: obj_sooty_brother_hell_kettles, label: TENDS_FIRE_UNDER,
+      evidence: "made the fire, and swept the dirt well behind the doors" }
+  - { from: sooty_brother_devil, to: obj_sooty_brother_hell_kettles, label: FORBIDS_PEEPING_INTO,
+      evidence: "if he once peeped into the kettles, it would go ill with him" }
+
+  # Kettle reversal against former authority
+  - { from: sooty_brother_hans, to: obj_sooty_brother_hell_kettles, label: PEEPS_INTO,
+      evidence: "slightly raised the lid of the first kettle" }
+  - { from: obj_sooty_brother_hell_kettles, to: sooty_brother_military_superiors, label: CONTAINS,
+      evidence: "his former corporal shut in" }
+  - { from: sooty_brother_military_superiors, to: sooty_brother_hans, label: ONCE_HELD_POWER_OVER,
+      evidence: "You once had me in your power" }
+  - { from: sooty_brother_hans, to: obj_sooty_brother_hell_kettles, label: ADDS_LOGS_TO,
+      evidence: "poked the fire, and added a fresh log" }
+  - { from: sooty_brother_hans, to: obj_sooty_brother_bellows, label: USES,
+      evidence: "he fetched the bellows" }
+  - { from: obj_sooty_brother_bellows, to: sooty_brother_military_superiors, label: INTENSIFIES_FIRE_UNDER,
+      evidence: "made hell-fire blaze right under him" }
+
+  # Wages and theft
+  - { from: sooty_brother_devil, to: obj_sooty_brother_knapsack_sweepings, label: PAYS_WITH,
+      evidence: "fill your knapsack full of the sweepings" }
+  - { from: law_infernal_service_refuse_becomes_gold, to: obj_sooty_brother_knapsack_sweepings, label: TRANSFORMS,
+      evidence: "the sweepings had become pure gold" }
+  - { from: obj_sooty_brother_knapsack_sweepings, to: obj_sooty_brother_gold, label: BECOMES,
+      evidence: "the sweepings had become pure gold" }
+  - { from: sooty_brother_hans, to: loc_sooty_brother_inn, label: ENTERS_AFTER_SHOWING_GOLD,
+      evidence: "when Hans showed him the gold" }
+  - { from: sooty_brother_landlord, to: sooty_brother_hans, label: FEARS_APPEARANCE_OF,
+      evidence: "he was terrified, because Hans looked so horrible" }
+  - { from: sooty_brother_landlord, to: obj_sooty_brother_gold, label: STEALS,
+      evidence: "during the night he crept in and stole it away" }
+  - { from: sooty_brother_hans, to: sooty_brother_devil, label: COMPLAINS_TO,
+      evidence: "complained of his misfortune to the old Devil" }
+  - { from: sooty_brother_devil, to: sooty_brother_hans, label: RESTORES_CLEAN_APPEARANCE_OF,
+      evidence: "I will wash, comb, and trim you" }
+  - { from: sooty_brother_devil, to: obj_sooty_brother_knapsack_sweepings, label: REPLENISHES,
+      evidence: "gave him the knapsack back again full of sweepings" }
+  - { from: sooty_brother_hans, to: sooty_brother_landlord, label: THREATENS_WITH_HELL_SUBSTITUTION,
+      evidence: "thou shalt go down to hell in my place" }
+  - { from: law_infernal_substitution_threat_restores_stolen_wages, to: sooty_brother_landlord, label: COERCES,
+      evidence: "Then the landlord gave him the money, and more besides" }
+  - { from: sooty_brother_landlord, to: obj_sooty_brother_gold, label: RETURNS_WITH_EXTRA,
+      evidence: "gave him the money, and more besides" }
+
+  # Music, marriage, and accession
+  - { from: sooty_brother_hans, to: loc_sooty_brother_father_home, label: SETS_OUT_FOR,
+      evidence: "set out on his way home to his father" }
+  - { from: sooty_brother_hans, to: obj_sooty_brother_smock_frock, label: BUYS_AND_WEAR,
+      evidence: "bought himself a shabby smock-frock to wear" }
+  - { from: sooty_brother_hans, to: agency_music, label: LEARNS_IN_HELL,
+      evidence: "he had learned to do that while he was with the Devil in hell" }
+  - { from: sooty_brother_hans, to: sooty_brother_old_king, label: PLAYS_BEFORE,
+      evidence: "before whom he had to play" }
+  - { from: agency_music, to: sooty_brother_old_king, label: DELIGHTS,
+      evidence: "the King was so delighted with his playing" }
+  - { from: sooty_brother_old_king, to: sooty_brother_hans, label: PROMISES_ELDEST_DAUGHTER_TO,
+      evidence: "promised him his eldest daughter in marriage" }
+  - { from: sooty_brother_eldest_princess, to: sooty_brother_hans, label: REFUSES_MARRIAGE_TO,
+      evidence: "married to a common fellow in a smock-frock" }
+  - { from: sooty_brother_old_king, to: sooty_brother_youngest_princess, label: GIVES_IN_MARRIAGE,
+      evidence: "Then the King gave him the youngest" }
+  - { from: sooty_brother_youngest_princess, to: sooty_brother_hans, label: MARRIES_WILLINGLY,
+      evidence: "who was quite willing to do it to please her father" }
+  - { from: sooty_brother_hans, to: loc_sooty_brother_royal_country, label: INHERITS_KINGDOM,
+      evidence: "the whole kingdom likewise" }

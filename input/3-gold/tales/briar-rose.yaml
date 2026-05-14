@@ -1,0 +1,375 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: briar-rose
+khm: 50
+atu: '410'
+atu_name: Sleeping Beauty / Briar Rose
+canonical_source: ../../2-silver/canonical/briar-rose/canonical.txt
+title: Briar Rose
+
+
+entities:
+
+  characters:
+
+    briar_rose_father_king:
+      name: The Joyful Father King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command]
+      affects: [affect_longing, affect_fear]
+      traits: [child-longing, feast-giver, plate-limited, spindle-burning, sleep-struck-father]
+      evidence: |
+        the King could not contain himself for joy, and ordered a
+        great feast.
+
+    briar_rose_mother_queen:
+      name: The Longing Mother Queen
+      species: sp_human
+      agency_modes: [agency_speech]
+      affects: [affect_longing]
+      traits: [child-longing, bathing-prophecy-receiver, sleep-struck-mother]
+      evidence: |
+        when the Queen was bathing, a frog crept out of the water
+
+    briar_rose_frog_prophet:
+      name: The Prophetic Frog
+      archetypes: [arc_animal_helper]
+      species: sp_frog
+      agency_modes: [agency_speech, agency_animal_language]
+      speech_acts_performed: [speech_prophecy]
+      traits: [water-emerging, daughter-announcing, prophecy-fulfilled]
+      evidence: |
+        Your wish shall be fulfilled; before a year has gone by, you
+        shall have a daughter.
+
+    briar_rose:
+      name: Briar Rose
+      archetypes: [arc_imprisoned_maiden]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      existential_states: [state_cursed, state_enchanted_sleep]
+      affects: [affect_curiosity]
+      traits: [longed-for-child, gifted-princess, fifteenth-year-curious, spindle-pricked, hundred-year-sleeper, kiss-awakened-bride]
+      evidence: |
+        the beautiful sleeping “Briar-rose,” for so the princess was
+        named
+
+    briar_rose_twelve_wise_women:
+      name: The Twelve Invited Wise Women
+      archetypes: [arc_supernatural_donor]
+      being_type: being_fairy
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_prophecy]
+      traits: [invited-donors, birth-feast-guests, gift-bestowers, plate-counted]
+      evidence: |
+        the Wise Women bestowed their magic gifts upon the baby
+
+    briar_rose_thirteenth_wise_woman:
+      name: The Thirteenth Excluded Wise Woman
+      archetypes: [arc_prohibition_giver]
+      being_type: being_fairy
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_curse]
+      affects: [affect_anger]
+      traits: [excluded-guest, revenge-curser, death-sentence-speaker, abrupt-departure]
+      evidence: |
+        She wished to avenge herself for not having been invited
+
+    briar_rose_twelfth_wise_woman:
+      name: The Twelfth Mitigating Wise Woman
+      archetypes: [arc_supernatural_donor]
+      being_type: being_fairy
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_prophecy]
+      traits: [last-wish-holder, curse-softener, sleep-sentence-speaker]
+      evidence: |
+        she could not undo the evil sentence, but only soften it
+
+    briar_rose_old_spinner:
+      name: The Old Spinning Woman
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [tower-dweller, spindle-user, unwitting-curse-instrument]
+      evidence: |
+        in a little room sat an old woman with a spindle, busily
+        spinning her flax.
+
+    briar_rose_sleeping_court:
+      name: The Sleeping Court
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_domestic_labor]
+      existential_states: [state_enchanted_sleep]
+      traits: [king-queen-court-servants, whole-palace-sleepers, gesture-frozen, awakened-together]
+      evidence: |
+        this sleep extended over the whole palace
+
+    briar_rose_failed_princes:
+      name: The Failed King's Sons
+      species: sp_human
+      agency_modes: [agency_violence, agency_endurance]
+      affects: [affect_longing]
+      existential_states: [state_trapped]
+      traits: [premature-rescuers, thorn-caught, pitifully-dead]
+      evidence: |
+        kings’ sons came and tried to get through the thorny hedge
+
+    briar_rose_successful_prince:
+      name: The Timely King's Son
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      affects: [affect_love_at_first_sight]
+      traits: [fearless-rescuer, old-man-ignorer, fated-arriver, thorn-passed, kiss-awakener, bridegroom]
+      evidence: |
+        I am not afraid, I will go and see the beautiful Briar-rose.
+
+    briar_rose_old_man:
+      name: The Old Man at the Thorn-Hedge
+      archetypes: [arc_wise_helper]
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [legend-teller, warning-giver, failed-to-dissuade]
+      evidence: |
+        heard an old man talking about the thorn-hedge
+
+  magic_objects:
+
+    obj_briar_rose_twelve_golden_plates:
+      name: The Twelve Golden Plates
+      object_kind: treasure
+      attributes:
+        count: 12
+        function: limits the feast invitation and excludes the thirteenth Wise Woman
+      evidence: |
+        he had only twelve golden plates for them to eat out of
+
+    obj_briar_rose_magic_gifts:
+      name: The Wise Women's Magic Gifts
+      object_kind: token
+      attributes:
+        function: bestow virtue, beauty, riches, and other wished-for qualities
+      evidence: |
+        one gave virtue, another beauty, a third riches
+
+    obj_briar_rose_curse_spindle:
+      name: The Fated Spindle
+      instance_of: obj_spinning_wheel
+      object_kind: tool
+      attributes:
+        function: fulfils the death-sleep curse when Briar Rose pricks her finger
+      evidence: |
+        The King’s daughter shall in her fifteenth year prick herself
+        with a spindle
+
+    obj_briar_rose_burned_spindles:
+      name: The Burned Spindles
+      instance_of: obj_spinning_wheel
+      object_kind: tool
+      attributes:
+        function: failed royal precaution against the spindle curse
+      evidence: |
+        every spindle in the whole kingdom should be burnt.
+
+    obj_briar_rose_rusty_key:
+      name: The Rusty Tower Key
+      object_kind: tool
+      attributes:
+        function: opens the tower room containing the spindle
+      evidence: |
+        A rusty key was in the lock
+
+    obj_briar_rose_prince_kiss:
+      name: The Awakening Kiss
+      object_kind: token
+      attributes:
+        function: triggers Briar Rose's awakening when the hundred years are complete
+      evidence: |
+        he stooped down and gave her a kiss.
+
+  locations:
+
+    loc_briar_rose_birth_feast_hall:
+      name: The Birth Feast Hall
+      instance_of: loc_castle
+      evidence: |
+        The feast was held with all manner of splendour
+
+    loc_briar_rose_palace:
+      name: The Sleeping Palace
+      instance_of: loc_castle
+      threshold_type: threshold_thorn_hedge
+      evidence: |
+        this sleep extended over the whole palace
+
+    loc_briar_rose_old_tower:
+      name: The Old Tower
+      instance_of: loc_tower
+      threshold_type: threshold_doorway
+      evidence: |
+        at last came to an old tower.
+
+    loc_briar_rose_spindle_room:
+      name: The Little Spindle Room
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        there in a little room sat an old woman with a spindle
+
+    loc_briar_rose_thorn_hedge:
+      name: The Thorn-Hedge Around the Castle
+      instance_of: loc_garden
+      threshold_type: threshold_thorn_hedge
+      evidence: |
+        round about the castle there began to grow a hedge of thorns
+
+    loc_briar_rose_castle_yard:
+      name: The Sleeping Castle-Yard
+      instance_of: loc_castle
+      evidence: |
+        In the castle-yard he saw the horses and the spotted hounds
+        lying asleep
+
+
+classifications:
+
+  world_laws:
+    - law_softened_death_becomes_timed_sleep
+    - law_fated_time_opens_thorn_threshold
+    - law_curse_requires_counter_condition
+
+  moral_regimes:
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_social_rank
+    - agency_object_mediation
+    - agency_endurance
+
+  affects_driving:
+    - affect_longing
+    - affect_anger
+    - affect_curiosity
+    - affect_love_at_first_sight
+    - affect_fear
+
+  symbol_numbers:
+    - num_12   # invited wise women and golden plates
+    - num_13   # excluded thirteenth wise woman
+    - num_100  # hundred-year sleep
+
+  threshold_types:
+    - threshold_thorn_hedge
+    - threshold_doorway
+
+
+propp:
+  - { function: func_lack, order: 1, actor: briar_rose_mother_queen,
+      scene: "king and queen long daily for a child" }
+  - { function: func_prophecy, order: 2, actor: briar_rose_frog_prophet,
+      scene: "frog foretells that the queen will have a daughter within a year" }
+  - { function: func_donor_test, order: 3, actor: briar_rose_father_king,
+      scene: "king invites Wise Women to the birth feast but excludes one for lack of a thirteenth plate" }
+  - { function: func_magical_agent, order: 4, actor: briar_rose_twelve_wise_women,
+      scene: "invited Wise Women bestow virtue, beauty, riches, and other gifts" }
+  - { function: func_villainy, order: 5, actor: briar_rose_thirteenth_wise_woman,
+      scene: "excluded Wise Woman curses the princess to prick herself with a spindle and die" }
+  - { function: func_liquidation, order: 6, actor: briar_rose_twelfth_wise_woman,
+      scene: "twelfth Wise Woman softens death into a hundred-year sleep" }
+  - { function: func_interdiction, order: 7, actor: briar_rose_father_king,
+      scene: "king orders every spindle in the kingdom burned" }
+  - { function: func_absentation, order: 8, actor: briar_rose_father_king,
+      scene: "king and queen are away on the princess's fifteenth birthday" }
+  - { function: func_violation, order: 9, actor: briar_rose,
+      scene: "princess explores the palace, opens the tower room, touches the spindle, and is pricked" }
+  - { function: func_villainy, order: 10, actor: obj_briar_rose_curse_spindle,
+      scene: "curse is fulfilled and sleep spreads across the whole palace" }
+  - { function: func_absentation, order: 11, actor: loc_briar_rose_thorn_hedge,
+      scene: "thorn hedge encloses the castle and kills premature king's sons" }
+  - { function: func_mediation, order: 12, actor: briar_rose_old_man,
+      scene: "old man tells the prince the story of the sleeping princess and failed suitors" }
+  - { function: func_departure, order: 13, actor: briar_rose_successful_prince,
+      scene: "prince goes to see Briar Rose despite warning" }
+  - { function: func_guidance, order: 14, actor: loc_briar_rose_thorn_hedge,
+      scene: "hundred years are complete; hedge parts as flowers and lets prince pass" }
+  - { function: func_liquidation, order: 15, actor: briar_rose_successful_prince,
+      scene: "prince kisses Briar Rose and she wakes" }
+  - { function: func_wedding, order: 16, actor: briar_rose_successful_prince,
+      scene: "prince and Briar Rose marry after the entire court awakens" }
+
+
+edges:
+
+  # Birth wish and feast arithmetic
+  - { from: briar_rose_mother_queen, to: briar_rose_frog_prophet, label: RECEIVES_PROPHECY_FROM,
+      evidence: "a frog crept out of the water on to the land" }
+  - { from: briar_rose_frog_prophet, to: briar_rose, label: FORETELLS_BIRTH_OF,
+      evidence: "before a year has gone by, you shall have a daughter." }
+  - { from: briar_rose_father_king, to: loc_briar_rose_birth_feast_hall, label: ORDERS_FEAST_AT,
+      evidence: "ordered a great feast." }
+  - { from: briar_rose_father_king, to: briar_rose_twelve_wise_women, label: INVITES,
+      evidence: "also the Wise Women, in order that they might be kind" }
+  - { from: obj_briar_rose_twelve_golden_plates, to: briar_rose_thirteenth_wise_woman, label: EXCLUDES,
+      evidence: "one of them had to be left at home." }
+  - { from: briar_rose_twelve_wise_women, to: briar_rose, label: BESTOWS_GIFTS_ON,
+      evidence: "the Wise Women bestowed their magic gifts upon the baby" }
+  - { from: obj_briar_rose_magic_gifts, to: briar_rose, label: ADORNS_WITH,
+      evidence: "one gave virtue, another beauty, a third riches" }
+
+  # Curse and mitigation
+  - { from: briar_rose_thirteenth_wise_woman, to: briar_rose, label: CURSES,
+      evidence: "The King’s daughter shall in her fifteenth year prick herself with a spindle" }
+  - { from: briar_rose_thirteenth_wise_woman, to: obj_briar_rose_curse_spindle, label: BINDS_DEATH_TO,
+      evidence: "prick herself with a spindle, and fall down dead." }
+  - { from: briar_rose_twelfth_wise_woman, to: law_softened_death_becomes_timed_sleep, label: ENACTS,
+      evidence: "It shall not be death, but a deep sleep of a hundred years" }
+  - { from: briar_rose_twelfth_wise_woman, to: briar_rose, label: SOFTENS_CURSE_FOR,
+      evidence: "she could not undo the evil sentence, but only soften it" }
+  - { from: briar_rose_father_king, to: obj_briar_rose_burned_spindles, label: ORDERS_BURNING_OF,
+      evidence: "every spindle in the whole kingdom should be burnt." }
+
+  # Curse fulfilment
+  - { from: briar_rose, to: loc_briar_rose_old_tower, label: ENTERS,
+      evidence: "at last came to an old tower." }
+  - { from: briar_rose, to: obj_briar_rose_rusty_key, label: TURNS,
+      evidence: "when she turned it the door sprang open" }
+  - { from: briar_rose_old_spinner, to: obj_briar_rose_curse_spindle, label: SPINS_WITH,
+      evidence: "sat an old woman with a spindle, busily spinning her flax." }
+  - { from: briar_rose, to: obj_briar_rose_curse_spindle, label: TOUCHES_AND_IS_PRICKED_BY,
+      evidence: "she took the spindle and wanted to spin too." }
+  - { from: obj_briar_rose_curse_spindle, to: briar_rose, label: FULFILLS_CURSE_ON,
+      evidence: "she pricked her finger with it." }
+  - { from: briar_rose, to: state_enchanted_sleep, label: FALLS_INTO,
+      evidence: "lay in a deep sleep." }
+  - { from: state_enchanted_sleep, to: briar_rose_sleeping_court, label: EXTENDS_TO,
+      evidence: "this sleep extended over the whole palace" }
+  - { from: briar_rose_sleeping_court, to: loc_briar_rose_palace, label: SLEEPS_WITHIN,
+      evidence: "the whole of the court with them." }
+
+  # Thorn threshold
+  - { from: loc_briar_rose_thorn_hedge, to: loc_briar_rose_palace, label: ENCLOSES,
+      evidence: "grew close up round the castle and all over it" }
+  - { from: loc_briar_rose_thorn_hedge, to: briar_rose_failed_princes, label: TRAPS_AND_KILLS,
+      evidence: "the youths were caught in them, could not get loose again" }
+  - { from: briar_rose_old_man, to: briar_rose_successful_prince, label: WARNS,
+      evidence: "many kings’ sons had already come" }
+  - { from: briar_rose_successful_prince, to: briar_rose_old_man, label: IGNORES_WARNING_OF,
+      evidence: "he did not listen to his words." }
+  - { from: law_fated_time_opens_thorn_threshold, to: loc_briar_rose_thorn_hedge, label: OPENS_AT_TERM,
+      evidence: "the hundred years had just passed" }
+  - { from: loc_briar_rose_thorn_hedge, to: briar_rose_successful_prince, label: PARTS_FOR,
+      evidence: "parted from each other of their own accord, and let him pass unhurt" }
+
+  # Awakening and restoration
+  - { from: briar_rose_successful_prince, to: loc_briar_rose_spindle_room, label: REACHES,
+      evidence: "opened the door into the little room where Briar-rose was sleeping." }
+  - { from: briar_rose_successful_prince, to: obj_briar_rose_prince_kiss, label: GIVES,
+      evidence: "he stooped down and gave her a kiss." }
+  - { from: obj_briar_rose_prince_kiss, to: briar_rose, label: AWAKENS,
+      evidence: "Briar-rose opened her eyes and awoke" }
+  - { from: briar_rose, to: briar_rose_successful_prince, label: LOOKS_AT,
+      evidence: "looked at him quite sweetly." }
+  - { from: state_enchanted_sleep, to: briar_rose_sleeping_court, label: RELEASES,
+      evidence: "the King awoke, and the Queen, and the whole court" }
+  - { from: briar_rose_successful_prince, to: briar_rose, label: MARRIES,
+      evidence: "the marriage of the King’s son with Briar-rose was celebrated" }

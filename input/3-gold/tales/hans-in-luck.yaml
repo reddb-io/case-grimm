@@ -1,0 +1,337 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: hans-in-luck
+khm: 83
+atu: '1415'
+atu_name: Lucky Hans
+canonical_source: ../../2-silver/canonical/hans-in-luck/canonical.txt
+title: Hans in Luck
+
+
+entities:
+
+  characters:
+
+    hans_luck_hans:
+      name: Hans
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_endurance]
+      affects: [affect_joy, affect_longing, affect_fear, affect_hunger]
+      traits: [seven-year-servant, homeward-son, gold-burdened, horse-delighted, cow-dreamer, pig-receiver, goose-bearer, grindstone-carrier, well-relieved, burdenless-returner]
+      evidence: |
+        Hans had served his master for seven years
+
+    hans_luck_master:
+      name: Hans's Master
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      traits: [faithful-service-rewarder, gold-giver]
+      evidence: |
+        You have served me faithfully and honestly
+
+    hans_luck_horseman:
+      name: The Horseman
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      traits: [lively-horse-rider, gold-taker, horse-exchanger, riding-instructor]
+      evidence: |
+        a horseman trotting quickly and merrily by on a lively horse
+
+    hans_luck_countryman:
+      name: The Countryman with the Cow
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      traits: [cow-driver, horse-stopper, horse-taker, quick-rider-away]
+      evidence: |
+        a countryman, who was coming along the road and driving a cow
+        before him.
+
+    hans_luck_butcher:
+      name: The Butcher
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      traits: [wheelbarrow-pusher, flask-giver, cow-diagnoser, pig-exchanger]
+      evidence: |
+        a butcher just then came along the road with a wheel-barrow
+
+    hans_luck_lad:
+      name: The Lad with the Goose
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_object_mediation]
+      traits: [goose-carrier, theft-scare-speaker, pig-taker, bypath-driver]
+      evidence: |
+        a lad who was carrying a fine white goose under his arm
+
+    hans_luck_scissors_grinder:
+      name: The Scissors-Grinder
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_domestic_labor]
+      traits: [merry-grinder, golden-foundation-boaster, goose-taker, stone-giver]
+      evidence: |
+        there stood a scissors-grinder with his barrow
+
+    hans_luck_horse:
+      name: The Lively Horse
+      species: sp_horse
+      agency_modes: [agency_violence]
+      traits: [swift, lively, sharp-trotter, rider-thrower, countryman-stopped]
+      evidence: |
+        a lively horse
+
+    hans_luck_cow:
+      name: The Old Cow
+      species: sp_cattle
+      agency_modes: [agency_violence, agency_domestic_labor]
+      traits: [milk-fantasy-object, old-beast, no-milk-giver, head-kicker, plough-or-butcher-fit]
+      evidence: |
+        the impatient beast at last gave him such a blow on his head
+
+    hans_luck_pig:
+      name: The Young Pig
+      species: sp_pig
+      agency_modes: [agency_object_mediation]
+      traits: [wheelbarrow-carried, sausage-fantasy-object, theft-scare-object, bypath-driven-away]
+      evidence: |
+        a young pig
+
+    hans_luck_goose:
+      name: The Fine White Goose
+      species: sp_goose
+      agency_modes: [agency_object_mediation]
+      traits: [christening-feast-bird, fattened-eight-weeks, pillow-feather-fantasy, goose-for-grindstone-traded]
+      evidence: |
+        a fine white goose
+
+  magic_objects:
+
+    obj_hans_luck_gold_lump:
+      name: The Head-Sized Lump of Gold
+      object_kind: treasure
+      attributes:
+        function: seven years' wages and first heavy burden in the exchange chain
+      evidence: |
+        a piece of gold as big as his head
+
+    obj_hans_luck_handkerchief:
+      name: Hans's Handkerchief
+      object_kind: garment
+      attributes:
+        function: wrapper used to carry the gold lump on Hans's shoulder
+      evidence: |
+        wrapped up the lump in it
+
+    obj_hans_luck_grindstone:
+      name: The Worn Grindstone
+      object_kind: tool
+      attributes:
+        function: trade object received for the goose under promise of future money
+      evidence: |
+        I have one here; it is certainly a little worn
+
+    obj_hans_luck_heavy_stone:
+      name: The Extra Heavy Stone
+      object_kind: material
+      attributes:
+        function: added burden that falls into the well with the grindstone
+      evidence: |
+        an ordinary heavy stone that lay by him
+
+  locations:
+
+    loc_hans_luck_road_home:
+      name: The Road Home to Mother
+      instance_of: loc_road
+      evidence: |
+        set out on the way home.
+
+    loc_hans_luck_field_ditch:
+      name: The Ditch between Field and Highway
+      instance_of: loc_field
+      evidence: |
+        lying in a ditch which separated the field from the highway
+
+    loc_hans_luck_inn:
+      name: The Roadside Inn
+      instance_of: loc_inn
+      threshold_type: threshold_doorway
+      evidence: |
+        When he came to an inn he made a halt
+
+    loc_hans_luck_moor:
+      name: The Hot Moor
+      instance_of: loc_field
+      evidence: |
+        found himself upon a moor
+
+    loc_hans_luck_last_village:
+      name: The Last Village
+      instance_of: loc_village
+      evidence: |
+        going through the last village
+
+    loc_hans_luck_well:
+      name: The Field Well
+      instance_of: loc_well
+      threshold_type: threshold_well
+      evidence: |
+        a well in a field
+
+    loc_hans_luck_mother_home:
+      name: His Mother's Home
+      instance_of: loc_house
+      evidence: |
+        he was with his mother at home.
+
+
+classifications:
+
+  world_laws:
+    - law_diminishing_exchange_reframed_as_luck
+
+  moral_regimes:
+    - moral_contentment_over_possession
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_speech
+    - agency_endurance
+    - agency_domestic_labor
+    - agency_cunning
+
+  affects_driving:
+    - affect_joy
+    - affect_longing
+    - affect_fear
+    - affect_hunger
+
+  symbol_numbers:
+    - num_7
+    - num_8
+
+  threshold_types:
+    - threshold_doorway
+    - threshold_well
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: hans_luck_hans,
+      scene: "Hans completes seven years of service and asks to return home to his mother with his wages" }
+  - { function: func_reward, order: 2, actor: hans_luck_master,
+      scene: "the master gives Hans a head-sized lump of gold" }
+  - { function: func_exchange, order: 3, actor: hans_luck_horseman,
+      scene: "Hans trades the heavy gold for the horse and feels bold and free" }
+  - { function: func_mishap, order: 4, actor: hans_luck_horse,
+      scene: "the horse throws Hans into a ditch" }
+  - { function: func_exchange, order: 5, actor: hans_luck_countryman,
+      scene: "Hans trades the horse for a cow because he imagines milk, butter, and cheese" }
+  - { function: func_mishap, order: 6, actor: hans_luck_cow,
+      scene: "the cow gives no milk and kicks Hans in the head" }
+  - { function: func_exchange, order: 7, actor: hans_luck_butcher,
+      scene: "Hans trades the cow for a young pig, imagining meat and sausages" }
+  - { function: func_false_warning, order: 8, actor: hans_luck_lad,
+      scene: "the lad frightens Hans with a stolen-pig story and gets the pig for a goose" }
+  - { function: func_exchange, order: 9, actor: hans_luck_scissors_grinder,
+      scene: "the scissors-grinder persuades Hans to trade the goose for a grindstone and extra heavy stone" }
+  - { function: func_accidental_release, order: 10, actor: hans_luck_hans,
+      scene: "the stones fall into the well and Hans interprets losing them as divine deliverance" }
+  - { function: func_return, order: 11, actor: hans_luck_hans,
+      scene: "Hans runs home light-hearted and free from every burden" }
+
+
+edges:
+
+  # Reward becomes burden
+  - { from: hans_luck_hans, to: num_7, label: SERVES_FOR_YEARS,
+      evidence: "served his master for seven years" }
+  - { from: hans_luck_hans, to: hans_luck_master, label: ASKS_WAGES_FROM,
+      evidence: "give me my wages" }
+  - { from: hans_luck_master, to: obj_hans_luck_gold_lump, label: GIVES_AS_REWARD,
+      evidence: "gave Hans a piece of gold as big as his head" }
+  - { from: hans_luck_hans, to: obj_hans_luck_handkerchief, label: WRAPS_GOLD_IN,
+      evidence: "wrapped up the lump in it" }
+  - { from: hans_luck_hans, to: loc_hans_luck_road_home, label: SETS_OUT_ON,
+      evidence: "set out on the way home" }
+  - { from: obj_hans_luck_gold_lump, to: hans_luck_hans, label: BURDENS,
+      evidence: "it hurts my shoulder" }
+
+  # Gold to horse
+  - { from: hans_luck_hans, to: hans_luck_horseman, label: ENVIES_RIDING,
+      evidence: "what a fine thing it is to ride!" }
+  - { from: hans_luck_horseman, to: hans_luck_hans, label: PROPOSES_EXCHANGE,
+      evidence: "I will give you my horse, and you can give me your lump" }
+  - { from: hans_luck_hans, to: obj_hans_luck_gold_lump, label: TRADES_AWAY,
+      evidence: "took the gold" }
+  - { from: hans_luck_hans, to: hans_luck_horse, label: RECEIVES,
+      evidence: "helped Hans up" }
+  - { from: hans_luck_hans, to: affect_joy, label: FEELS,
+      evidence: "Hans was heartily delighted" }
+  - { from: hans_luck_horse, to: loc_hans_luck_field_ditch, label: THROWS_HANS_INTO,
+      evidence: "he was thrown off and lying in a ditch" }
+
+  # Horse to cow
+  - { from: hans_luck_countryman, to: hans_luck_horse, label: STOPS,
+      evidence: "The horse would have gone off too if it had not been stopped by a countryman" }
+  - { from: hans_luck_hans, to: hans_luck_cow, label: DESIRES_FOR_DAIRY,
+      evidence: "one’s milk, butter and cheese every day without fail" }
+  - { from: hans_luck_countryman, to: hans_luck_hans, label: EXCHANGES_COW_FOR_HORSE,
+      evidence: "giving the cow for the horse" }
+  - { from: hans_luck_hans, to: law_diminishing_exchange_reframed_as_luck, label: REFRAMES_EXCHANGE_AS_LUCK,
+      evidence: "Hans agreed with the greatest delight" }
+  - { from: hans_luck_hans, to: loc_hans_luck_inn, label: HALTS_AT,
+      evidence: "When he came to an inn he made a halt" }
+  - { from: hans_luck_hans, to: loc_hans_luck_moor, label: CROSSES,
+      evidence: "found himself upon a moor" }
+  - { from: hans_luck_hans, to: hans_luck_cow, label: TRIES_TO_MILK,
+      evidence: "I will milk the cow now" }
+  - { from: hans_luck_cow, to: hans_luck_hans, label: KICKS,
+      evidence: "gave him such a blow on his head" }
+
+  # Cow to pig to goose
+  - { from: hans_luck_butcher, to: hans_luck_hans, label: HELPS_UP,
+      evidence: "helped the good Hans up" }
+  - { from: hans_luck_butcher, to: hans_luck_cow, label: DIAGNOSES_OLD_BEAST,
+      evidence: "it is an old beast" }
+  - { from: hans_luck_hans, to: hans_luck_pig, label: DESIRES_FOR_MEAT,
+      evidence: "A young pig like that now is the thing to have" }
+  - { from: hans_luck_butcher, to: hans_luck_hans, label: EXCHANGES_PIG_FOR_COW,
+      evidence: "let you have the pig for the cow" }
+  - { from: hans_luck_lad, to: hans_luck_hans, label: WARNS_FALSELY_ABOUT_STOLEN_PIG,
+      evidence: "the Mayor himself had just had one stolen out of its sty" }
+  - { from: hans_luck_hans, to: affect_fear, label: FEELS,
+      evidence: "The good Hans was terrified" }
+  - { from: hans_luck_hans, to: hans_luck_goose, label: EXCHANGES_PIG_FOR,
+      evidence: "take my pig and leave me your goose" }
+  - { from: hans_luck_goose, to: num_8, label: FATTENED_FOR_WEEKS,
+      evidence: "fattened up for the last eight weeks" }
+  - { from: hans_luck_hans, to: law_diminishing_exchange_reframed_as_luck, label: CLAIMS_GAIN,
+      evidence: "I have even gained by the exchange" }
+
+  # Goose to stones to burdenlessness
+  - { from: hans_luck_scissors_grinder, to: hans_luck_hans, label: PROMISES_GOLDEN_TRADE,
+      evidence: "the trade has a golden foundation" }
+  - { from: hans_luck_scissors_grinder, to: obj_hans_luck_grindstone, label: OFFERS_FOR_GOOSE,
+      evidence: "you need not give me anything for it but your goose" }
+  - { from: hans_luck_hans, to: hans_luck_goose, label: TRADES_AWAY,
+      evidence: "he handed him the goose" }
+  - { from: hans_luck_hans, to: obj_hans_luck_grindstone, label: RECEIVES,
+      evidence: "received the grindstone in exchange" }
+  - { from: hans_luck_scissors_grinder, to: obj_hans_luck_heavy_stone, label: ADDS,
+      evidence: "here is a strong stone for you into the bargain" }
+  - { from: obj_hans_luck_grindstone, to: hans_luck_hans, label: BURDENS,
+      evidence: "the stones, too, weighed him down dreadfully" }
+  - { from: hans_luck_hans, to: loc_hans_luck_well, label: RESTS_AT,
+      evidence: "a well in a field" }
+  - { from: obj_hans_luck_grindstone, to: loc_hans_luck_well, label: FALLS_INTO,
+      evidence: "both of them fell into the water" }
+  - { from: obj_hans_luck_heavy_stone, to: loc_hans_luck_well, label: FALLS_INTO,
+      evidence: "both of them fell into the water" }
+  - { from: hans_luck_hans, to: affect_joy, label: JUMPS_FOR,
+      evidence: "he jumped for joy" }
+  - { from: hans_luck_hans, to: being_divine, label: THANKS,
+      evidence: "thanked God for having shown him this favour also" }
+  - { from: hans_luck_hans, to: moral_contentment_over_possession, label: EMBODIES,
+      evidence: "free from every burden" }
+  - { from: hans_luck_hans, to: loc_hans_luck_mother_home, label: RUNS_HOME_TO,
+      evidence: "he now ran on until he was with his mother at home" }

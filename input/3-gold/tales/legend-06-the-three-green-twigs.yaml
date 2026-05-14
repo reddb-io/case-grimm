@@ -1,0 +1,152 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: legend-06-the-three-green-twigs
+khm: null
+legend_number: 6
+canonical_source: ../../2-silver/canonical/legend-06-the-three-green-twigs/canonical.txt
+title: The Three Green Twigs
+
+entities:
+  characters:
+    green_twigs_hermit:
+      name: The Judging Hermit
+      species: sp_human
+      archetypes: [arc_repentant_sinner]
+      agency_modes: [agency_endurance, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_prayer, speech_testimony]
+      affects: [affect_fear, affect_grief]
+      traits: [pious, mountain-water-carrier, angel-fed, careless-judge, fasting-penitent, branch-bearer, robber-converter, dead-restored-to-favour]
+      evidence: |
+        There was once on a time a hermit who lived in a forest at the foot of a mountain
+
+    green_twigs_angel:
+      name: The Angel of God
+      being_type: being_divine
+      archetypes: [arc_supernatural_donor]
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_command]
+      traits: [visible-helper, step-counter, food-bringer, penance-giver, dry-branch-bearer]
+      evidence: |
+        an angel of God, visible to his eyes
+
+    green_twigs_bird:
+      name: The Speaking Bird
+      species: sp_bird
+      being_type: being_divine
+      archetypes: [arc_wise_helper]
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_joy]
+      traits: [forest-singer, divine-interpreter, mercy-teacher]
+      evidence: |
+        Then the bird began to speak
+
+    green_twigs_old_woman:
+      name: The Compassionate Cave Woman
+      species: sp_human
+      archetypes: [arc_wise_helper]
+      agency_modes: [agency_speech]
+      affects: [affect_pity, affect_fear, affect_grief]
+      traits: [cave-dweller, robber-mother, wary-host, compassionate, judgment-fearing]
+      evidence: |
+        an old woman was sitting in it
+
+    green_twigs_three_robbers:
+      name: The Three Robber Sons
+      species: sp_human
+      archetypes: [arc_repentant_sinner]
+      agency_modes: [agency_speech]
+      affects: [affect_fear, affect_grief]
+      traits: [wicked, wild, robbers, cave-returning, testimony-touched, penitent]
+      evidence: |
+        I have three sons who are wicked and wild
+
+  magic_objects:
+    obj_green_twigs_dry_branch:
+      name: The Dry Branch with Three Green Twigs
+      object_kind: relic
+      evidence: |
+        dry branch in his hand
+
+    obj_green_twigs_water_pails:
+      name: The Two Pails of Water
+      object_kind: tool
+      evidence: |
+        two pails of water up the mountain
+
+  locations:
+    loc_green_twigs_forest:
+      name: The Forest at the Mountain Foot
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        lived in a forest at the foot of a mountain
+
+    loc_green_twigs_mountain:
+      name: The Dry Mountain Height
+      instance_of: loc_mountain
+      evidence: |
+        two pails of water up the mountain
+
+    loc_green_twigs_gallows_road:
+      name: The Road to the Gallows
+      instance_of: loc_gallows
+      evidence: |
+        being taken to the gallows
+
+    loc_green_twigs_cave:
+      name: The Robbers' Cave
+      instance_of: loc_cave
+      evidence: |
+        at last found a cave
+
+classifications:
+  world_laws:
+    - law_judgment_word_interrupts_visible_grace
+    - law_dry_branch_sprouts_when_penance_converts_sinners
+  moral_regimes:
+    - moral_mercy_over_judgment
+    - moral_repentance
+  agency_modes_dominant: [agency_speech, agency_endurance, agency_object_mediation]
+  affects_driving: [affect_fear, affect_grief, affect_pity]
+  symbol_numbers: [num_3]
+  threshold_types: [threshold_forest]
+
+propp:
+  - { function: func_pious_service, order: 1, actor: green_twigs_hermit,
+      scene: "the hermit carries water up the mountain and receives visible angelic aid" }
+  - { function: func_sinful_judgment, order: 2, actor: green_twigs_hermit,
+      scene: "the hermit condemns a poor sinner being led to the gallows" }
+  - { function: func_grace_withdrawn, order: 3, actor: green_twigs_angel,
+      victim: green_twigs_hermit,
+      scene: "the angel and food disappear until the hermit understands his sin" }
+  - { function: func_penance_imposed, order: 4, actor: green_twigs_angel,
+      beneficiary: green_twigs_hermit,
+      scene: "the angel commands him to carry dry wood until three green twigs sprout" }
+  - { function: func_testimony_converts, order: 5, actor: green_twigs_hermit,
+      beneficiary: green_twigs_three_robbers,
+      scene: "the hermit's account of one sinful word moves the robbers to repentance" }
+  - { function: func_penance_fulfilled, order: 6, actor: obj_green_twigs_dry_branch,
+      scene: "the dry branch grows three green twigs after the hermit dies" }
+
+edges:
+  - { from: green_twigs_hermit, to: obj_green_twigs_water_pails, label: CARRIES,
+      evidence: "two pails of water up the mountain" }
+  - { from: green_twigs_angel, to: green_twigs_hermit, label: FEEDS,
+      evidence: "brought him his food" }
+  - { from: green_twigs_hermit, to: green_twigs_gallows_road, label: SEES_SINNER_AT,
+      evidence: "being taken to the gallows" }
+  - { from: green_twigs_hermit, to: law_judgment_word_interrupts_visible_grace, label: TRIGGERS,
+      evidence: "There, that one is getting his deserts!" }
+  - { from: green_twigs_bird, to: green_twigs_hermit, label: INTERPRETS_SIN_FOR,
+      evidence: "Thou hast done injustice" }
+  - { from: green_twigs_bird, to: moral_mercy_over_judgment, label: TEACHES,
+      evidence: "He alone sits in judgement" }
+  - { from: green_twigs_angel, to: obj_green_twigs_dry_branch, label: GIVES_AS_PENANCE,
+      evidence: "dry branch in his hand" }
+  - { from: green_twigs_hermit, to: green_twigs_three_robbers, label: CONVERTS_BY_TESTIMONY,
+      evidence: "began with hearty repentance to do penance for it" }
+  - { from: obj_green_twigs_dry_branch, to: law_dry_branch_sprouts_when_penance_converts_sinners, label: MANIFESTS,
+      evidence: "three green twigs had grown up on high" }
+  - { from: green_twigs_hermit, to: moral_repentance, label: RECEIVED_INTO_FAVOUR_BY,
+      evidence: "Thus the Lord had once more received him into his favour" }

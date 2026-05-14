@@ -1,0 +1,459 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-pink
+khm: 76
+atu: '652'
+atu_name: The Boy Whose Wishes Always Come True
+canonical_source: ../../2-silver/canonical/the-pink/canonical.txt
+title: The Pink
+
+
+entities:
+
+  characters:
+
+    pink_queen:
+      name: The Queen
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      existential_states: [state_imprisoned]
+      speech_acts_performed: [speech_wish]
+      affects: [affect_longing, affect_maternal_love]
+      traits: [childless-praying-mother, angel-promised, blood-framed, tower-walled, dove-fed, faithful-to-god, restored-to-table, happy-dead]
+      evidence: |
+        Every morning she went into the garden and prayed to God in
+        heaven to bestow on her a son or a daughter.
+
+    pink_king:
+      name: The King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      existential_states: [state_deceived]
+      speech_acts_performed: [speech_command]
+      affects: [affect_grief]
+      traits: [joyful-father, deceived-husband, tower-sentencer, feast-giver, truth-receiver, cook-punisher, grief-consumed]
+      evidence: |
+        When the King saw the blood on her apron, he believed this
+
+    pink_kings_son:
+      name: The King's Son
+      archetypes: [arc_luck_child]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_social_rank, agency_object_mediation]
+      existential_states: [state_hidden_identity]
+      speech_acts_performed: [speech_wish, speech_command, speech_testimony]
+      affects: [affect_maternal_love, affect_loyalty]
+      traits: [wish-powered-child, stolen-infant, palace-wisher, companion-wisher, cook-sentencer, poodle-maker, flower-carrier, ladder-wisher, strange-huntsman, game-summoner, mother-vindicator, bridegroom]
+      evidence: |
+        thou shalt have a son with the power of wishing, so that
+        whatsoever in the world he wishes for, that shall he have.
+
+    pink_old_cook:
+      name: The Old Cook
+      species: sp_human
+      agency_modes: [agency_cunning, agency_violence, agency_speech, agency_domestic_labor]
+      existential_states: [state_transformed, state_imprisoned]
+      transformations: [transform_animal_human]
+      speech_acts_performed: [speech_lie, speech_command]
+      affects: [affect_fear]
+      traits: [wish-power-knower, child-thief, blood-framer, false-accuser, hidden-nurse-controller, murder-plotter, poodle-punished, dungeon-cast, quartered]
+      evidence: |
+        Then came the old cook, who knew that the child had the power
+        of wishing, and stole it away
+
+    pink_maiden:
+      name: The Wished-for Maiden
+      species: sp_human
+      agency_modes: [agency_endurance, agency_cunning, agency_speech, agency_object_mediation]
+      existential_states: [state_transformed]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_loyalty, affect_fear]
+      traits: [wish-created-companion, beloved, murder-refuser, hind-token-substituter, flower-carried, restored-maiden, bride]
+      evidence: |
+        Then the King’s son wished for one, and she immediately stood
+        before him
+
+    pink_angels:
+      name: The Two White Dove-Angels
+      species: sp_bird
+      being_type: being_divine
+      agency_modes: [agency_animal_aid, agency_object_mediation]
+      traits: [white-dove-shaped, tower-feeders, grave-followers]
+      evidence: |
+        two angels from heaven in the shape of white doves
+
+    pink_nurse:
+      name: The Secret Nurse
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_endurance]
+      traits: [obliged-suckler, secret-place-carer]
+      evidence: |
+        a secret place, where a nurse was obliged to suckle it
+
+    pink_marshal:
+      name: The Marshal
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_testimony]
+      traits: [principal-servant, wish-prompted-questioner, queen-inquirer]
+      evidence: |
+        the marshal began, and said, “Your majesty, we live joyously
+        here, but how is the Queen living in the tower?
+
+    pink_huntsmen:
+      name: The Huntsmen
+      species: sp_human
+      agency_modes: [agency_violence, agency_social_rank]
+      traits: [forest-circle-makers, summoned-hunters, deer-shooters]
+      evidence: |
+        he summoned all the huntsmen together, and bade them go out
+        into the forest with him.
+
+  magic_objects:
+
+    obj_pink_chicken_blood:
+      name: The Chicken Blood on the Queen's Garments
+      instance_of: obj_false_blood_evidence
+      object_kind: material
+      attributes:
+        function: fabricated proof that the queen let the child be taken by beasts
+      evidence: |
+        dropped some of its blood on the Queen’s apron and on her dress.
+
+    obj_pink_murder_knife:
+      name: The Cook's Murder Knife
+      object_kind: weapon
+      attributes:
+        function: ordered instrument for killing the innocent boy
+      evidence: |
+        plunge this knife into his heart
+
+    obj_pink_hind_heart_tongue:
+      name: The Hind's Heart and Tongue
+      instance_of: obj_forensic_token
+      object_kind: relic
+      attributes:
+        function: substitute body tokens that let the maiden refuse murder while deceiving the cook
+      evidence: |
+        took her heart and tongue, and laid them on a plate
+
+    obj_pink_gold_collar:
+      name: The Gold Collar
+      object_kind: treasure
+      attributes:
+        function: visible mark of the cook's punitive poodle form
+      evidence: |
+        have a gold collar round thy neck
+
+    obj_pink_live_coals:
+      name: The Live Coals
+      object_kind: material
+      attributes:
+        function: punitive food forced on the transformed cook
+      evidence: |
+        the cooks were ordered to bring up some live coals
+
+    obj_pink_flower:
+      name: The Pink Flower
+      object_kind: token
+      attributes:
+        function: portable transformed form of the beloved maiden
+      evidence: |
+        changed into a beautiful pink
+
+    obj_pink_ladder:
+      name: The Wished Ladder
+      object_kind: tool
+      attributes:
+        function: vertical access to the sealed tower
+      evidence: |
+        wished for a ladder which would reach up to the very top.
+
+  locations:
+
+    loc_pink_prayer_garden:
+      name: The Queen's Prayer Garden
+      instance_of: loc_garden
+      evidence: |
+        Every morning she went into the garden and prayed to God in
+        heaven
+
+    loc_pink_clear_stream:
+      name: The Clear Stream
+      instance_of: loc_river
+      evidence: |
+        washed herself there in a clear stream.
+
+    loc_pink_secret_place:
+      name: The Cook's Secret Place
+      instance_of: loc_house
+      evidence: |
+        Then he carried the child away to a secret place
+
+    loc_pink_queen_tower:
+      name: The Sunless and Moonless Tower
+      instance_of: loc_tower
+      evidence: |
+        a high tower to be built, in which neither sun nor moon could
+        be seen
+
+    loc_pink_wished_palace:
+      name: The Wished Palace and Garden
+      instance_of: loc_castle
+      evidence: |
+        Wish for a beautiful palace for thyself with a garden
+
+    loc_pink_forest_hunt:
+      name: The Forest Hunting Circle
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        go out into the forest with him.
+
+    loc_pink_royal_table:
+      name: The Royal Table
+      instance_of: loc_castle
+      evidence: |
+        he was able to deck his table with game
+
+    loc_pink_deepest_dungeon:
+      name: The Deepest Dungeon
+      instance_of: loc_dungeon
+      evidence: |
+        ordered him to be cast into the deepest dungeon.
+
+    loc_pink_grave:
+      name: The Queen's Grave
+      instance_of: loc_tomb
+      evidence: |
+        followed her body and seated themselves on her grave.
+
+
+classifications:
+
+  world_laws:
+    - law_wish_speech_materializes_reality
+    - law_false_blood_evidence_convicts_innocent
+    - law_divine_feeding_sustains_innocent_confinement
+
+  moral_regimes:
+    - moral_retributive
+    - moral_restorative
+    - moral_providential_election
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+    - agency_object_mediation
+    - agency_social_rank
+    - agency_endurance
+    - agency_violence
+
+  affects_driving:
+    - affect_longing
+    - affect_maternal_love
+    - affect_fear
+    - affect_grief
+    - affect_loyalty
+
+  symbol_numbers:
+    - num_2
+    - num_3
+    - num_4
+    - num_7
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_lack, order: 1, actor: pink_queen,
+      scene: "the childless queen prays daily for a child" }
+  - { function: func_prophecy, order: 2, actor: pink_angels,
+      scene: "an angel announces that the queen will bear a son with the power of wishing" }
+  - { function: func_villainy, order: 3, actor: pink_old_cook,
+      scene: "the cook steals the child and fabricates blood evidence against the queen" }
+  - { function: func_false_accusation, order: 4, actor: pink_old_cook,
+      scene: "the cook accuses the queen of letting wild beasts take the child" }
+  - { function: func_punishment_of_innocent, order: 5, actor: pink_king,
+      scene: "the deceived king walls the queen into a sunless and moonless tower" }
+  - { function: func_divine_aid, order: 6, actor: pink_angels,
+      scene: "dove-shaped angels feed the queen throughout the seven years" }
+  - { function: func_magical_creation, order: 7, actor: pink_kings_son,
+      scene: "the boy wishes a palace, garden, and maiden companion into being" }
+  - { function: func_villainous_command, order: 8, actor: pink_old_cook,
+      scene: "the cook commands the maiden to murder the sleeping boy and bring his heart and tongue" }
+  - { function: func_refusal, order: 9, actor: pink_maiden,
+      scene: "the maiden refuses to shed innocent blood and substitutes a hind's heart and tongue" }
+  - { function: func_punishment, order: 10, actor: pink_kings_son,
+      scene: "the boy turns the cook into a coal-eating black poodle with a gold collar" }
+  - { function: func_return, order: 11, actor: pink_kings_son,
+      scene: "the son carries the maiden as a pink flower and returns to his own country" }
+  - { function: func_recognition_preparation, order: 12, actor: pink_kings_son,
+      scene: "the son reaches his mother by a wished ladder and enters his father's service as a strange huntsman" }
+  - { function: func_demonstration, order: 13, actor: pink_kings_son,
+      scene: "the strange huntsman summons game by wishing and earns a place beside the king" }
+  - { function: func_exposure, order: 14, actor: pink_kings_son,
+      scene: "the son reveals himself, vindicates the queen, and identifies the cook as the abductor" }
+  - { function: func_restoration, order: 15, actor: pink_kings_son,
+      scene: "the son restores the poodle to cook form and the pink flower to maiden form" }
+  - { function: func_closure, order: 16, actor: pink_king,
+      scene: "the queen dies faithfully, the cook is quartered, the grieving king dies, and the son marries the maiden" }
+
+
+edges:
+
+  # Birth wish and endowed child
+  - { from: pink_queen, to: loc_pink_prayer_garden, label: PRAYS_IN,
+      evidence: "Every morning she went into the garden and prayed to God in heaven" }
+  - { from: pink_queen, to: pink_kings_son, label: LONGS_FOR_CHILD,
+      evidence: "to bestow on her a son or a daughter" }
+  - { from: pink_angels, to: pink_queen, label: ANNOUNCES_BIRTH,
+      evidence: "Be at rest, thou shalt have a son with the power of wishing" }
+  - { from: pink_kings_son, to: law_wish_speech_materializes_reality, label: EMBODIES,
+      evidence: "whatsoever in the world he wishes for, that shall he have" }
+  - { from: pink_king, to: pink_kings_son, label: REJOICES_AT_BIRTH,
+      evidence: "she gave birth to a son, and the King was filled with gladness" }
+  - { from: pink_queen, to: loc_pink_clear_stream, label: WASHES_IN,
+      evidence: "washed herself there in a clear stream" }
+
+  # Cook's theft and false evidence
+  - { from: pink_old_cook, to: pink_kings_son, label: KNOWS_WISH_POWER,
+      evidence: "who knew that the child had the power of wishing" }
+  - { from: pink_old_cook, to: pink_kings_son, label: STEALS,
+      evidence: "and stole it away" }
+  - { from: pink_old_cook, to: obj_pink_chicken_blood, label: FABRICATES,
+      evidence: "cut it in pieces, and dropped some of its blood" }
+  - { from: obj_pink_chicken_blood, to: pink_queen, label: STAINS_GARMENTS,
+      evidence: "dropped some of its blood on the Queen’s apron and on her dress" }
+  - { from: pink_old_cook, to: loc_pink_secret_place, label: HIDES_CHILD_AT,
+      evidence: "carried the child away to a secret place" }
+  - { from: pink_nurse, to: pink_kings_son, label: SUCKLES,
+      evidence: "a nurse was obliged to suckle it" }
+  - { from: pink_old_cook, to: pink_queen, label: FALSELY_ACCUSES,
+      evidence: "accused the Queen of having allowed her child to be taken from her by the wild beasts" }
+  - { from: obj_pink_chicken_blood, to: law_false_blood_evidence_convicts_innocent, label: MATERIALIZES,
+      evidence: "When the King saw the blood on her apron, he believed this" }
+  - { from: pink_king, to: pink_queen, label: IMPRISONS,
+      evidence: "had his wife put into it, and walled up" }
+  - { from: pink_queen, to: loc_pink_queen_tower, label: CONFINED_IN,
+      evidence: "Here she was to stay for seven years without meat or drink" }
+  - { from: pink_angels, to: pink_queen, label: FEEDS,
+      evidence: "carried her food until the seven years were over" }
+  - { from: pink_angels, to: law_divine_feeding_sustains_innocent_confinement, label: ENACTS,
+      evidence: "God sent two angels from heaven in the shape of white doves" }
+  - { from: pink_angels, to: num_2, label: NUMBERED_AS,
+      evidence: "two angels from heaven" }
+  - { from: pink_queen, to: num_7, label: CONFINED_FOR_YEARS,
+      evidence: "Here she was to stay for seven years" }
+
+  # Wished palace and murder plot
+  - { from: pink_old_cook, to: pink_kings_son, label: FEARS_WISH_POWER,
+      evidence: "he might very easily get me into trouble" }
+  - { from: pink_old_cook, to: pink_kings_son, label: COMMANDS_WISH,
+      evidence: "Wish for a beautiful palace for thyself with a garden" }
+  - { from: pink_kings_son, to: loc_pink_wished_palace, label: WISHES_INTO_BEING,
+      evidence: "everything was there that he had wished for" }
+  - { from: pink_old_cook, to: pink_kings_son, label: COMMANDS_COMPANION_WISH,
+      evidence: "wish for a pretty girl as a companion" }
+  - { from: pink_kings_son, to: pink_maiden, label: WISHES_INTO_BEING,
+      evidence: "she immediately stood before him" }
+  - { from: pink_kings_son, to: pink_maiden, label: LOVES,
+      evidence: "loved each other with all their hearts" }
+  - { from: pink_old_cook, to: pink_maiden, label: COMMANDS_MURDER,
+      evidence: "plunge this knife into his heart, and bring me his heart and tongue" }
+  - { from: pink_old_cook, to: obj_pink_murder_knife, label: PROVIDES_WEAPON,
+      evidence: "plunge this knife into his heart" }
+  - { from: pink_maiden, to: pink_kings_son, label: REFUSES_TO_KILL,
+      evidence: "Why should I shed the blood of an innocent boy who has never harmed any one?" }
+  - { from: pink_maiden, to: obj_pink_hind_heart_tongue, label: SUBSTITUTES,
+      evidence: "she had a little hind brought to her, and ordered her to be killed" }
+  - { from: pink_maiden, to: pink_old_cook, label: DECEIVES_WITH_TOKEN,
+      evidence: "The girl reached the plate to him" }
+
+  # Punitive transformation and return
+  - { from: pink_kings_son, to: pink_old_cook, label: PRONOUNCES_SENTENCE,
+      evidence: "Now will I pronounce thy sentence" }
+  - { from: pink_kings_son, to: pink_old_cook, label: TRANSFORMS_INTO_DOG,
+      evidence: "the old man was changed into a poodle dog" }
+  - { from: pink_old_cook, to: sp_dog, label: TAKES_FORM_OF,
+      evidence: "Thou shalt become a black poodle" }
+  - { from: pink_old_cook, to: obj_pink_gold_collar, label: WEARS,
+      evidence: "had a gold collar round his neck" }
+  - { from: pink_old_cook, to: obj_pink_live_coals, label: EATS_PUNITIVELY,
+      evidence: "these he ate, until the flames broke forth from his throat" }
+  - { from: pink_kings_son, to: pink_queen, label: THINKS_OF,
+      evidence: "he thought of his mother, and wondered if she were still alive" }
+  - { from: pink_kings_son, to: pink_maiden, label: INVITES_HOME,
+      evidence: "I will go home to my own country; if thou wilt go with me, I will provide for thee" }
+  - { from: pink_kings_son, to: obj_pink_flower, label: TRANSFORMS_MAIDEN_INTO,
+      evidence: "he wished that she might be changed into a beautiful pink" }
+  - { from: pink_kings_son, to: obj_pink_flower, label: CARRIES,
+      evidence: "took her with him" }
+  - { from: pink_old_cook, to: pink_kings_son, label: FOLLOWS_AS_DOG,
+      evidence: "the poodle had to run after him" }
+
+  # Recognition route through tower, hunt, and feast
+  - { from: pink_kings_son, to: loc_pink_queen_tower, label: RETURNS_TO,
+      evidence: "He went to the tower in which his mother was confined" }
+  - { from: pink_kings_son, to: obj_pink_ladder, label: WISHES_INTO_BEING,
+      evidence: "wished for a ladder which would reach up to the very top" }
+  - { from: pink_kings_son, to: pink_queen, label: REVEALS_FILIAL_IDENTITY,
+      evidence: "I am your dear son" }
+  - { from: pink_kings_son, to: pink_king, label: APPROACHES_DISGUISED,
+      evidence: "caused himself to be announced as a strange huntsman" }
+  - { from: pink_kings_son, to: loc_pink_forest_hunt, label: ORGANIZES_HUNT,
+      evidence: "made them form a great circle, open at one end" }
+  - { from: pink_kings_son, to: loc_pink_forest_hunt, label: SUMMONS_GAME_BY_WISH,
+      evidence: "Two hundred deer and more came running inside the circle at once" }
+  - { from: pink_huntsmen, to: loc_pink_forest_hunt, label: SHOOT_GAME,
+      evidence: "the huntsmen shot them" }
+  - { from: pink_king, to: loc_pink_royal_table, label: HOLDS_FEAST,
+      evidence: "commanded that his entire household should eat with him next day" }
+  - { from: pink_kings_son, to: pink_marshal, label: WISHES_SPEECH_FROM,
+      evidence: "wished that one of the King’s principal servants would begin to speak of her" }
+  - { from: pink_marshal, to: pink_king, label: ASKS_ABOUT_QUEEN,
+      evidence: "how is the Queen living in the tower? Is she still alive, or has she died?" }
+  - { from: pink_king, to: pink_queen, label: REPEATS_FALSE_BELIEF,
+      evidence: "She let my dear son be torn to pieces by wild beasts" }
+  - { from: pink_kings_son, to: pink_king, label: REVEALS_TRUE_IDENTITY,
+      evidence: "she is alive still, and I am her son" }
+  - { from: pink_kings_son, to: pink_old_cook, label: IDENTIFIES_AS_ABDUCTOR,
+      evidence: "that wretch the old cook, who tore me from her arms" }
+  - { from: pink_kings_son, to: obj_pink_chicken_blood, label: EXPLAINS_FALSE_EVIDENCE,
+      evidence: "sprinkled her apron with the blood of a chicken" }
+  - { from: pink_old_cook, to: obj_pink_live_coals, label: COMPELLED_TO_DEVOUR,
+      evidence: "these the dog was compelled to devour before the sight of all" }
+  - { from: pink_kings_son, to: pink_old_cook, label: RESTORES_HUMAN_FORM,
+      evidence: "wished him back into the form of the cook" }
+  - { from: pink_king, to: pink_old_cook, label: CASTS_INTO_DUNGEON,
+      evidence: "ordered him to be cast into the deepest dungeon" }
+  - { from: pink_old_cook, to: loc_pink_deepest_dungeon, label: IMPRISONED_IN,
+      evidence: "cast into the deepest dungeon" }
+  - { from: pink_kings_son, to: obj_pink_flower, label: SHOWS_AT_TABLE,
+      evidence: "brought forth the pink, and placed it on the royal table" }
+  - { from: pink_kings_son, to: pink_maiden, label: RESTORES_FROM_FLOWER,
+      evidence: "wished that she might become a maiden" }
+
+  # Final justice and closure
+  - { from: pink_king, to: pink_queen, label: SENDS_ATTENDANTS_FOR,
+      evidence: "sent two waiting-maids and two attendants into the tower" }
+  - { from: pink_king, to: num_2, label: SENDS_WAITING_MAIDS,
+      evidence: "two waiting-maids" }
+  - { from: pink_king, to: num_2, label: SENDS_ATTENDANTS,
+      evidence: "two attendants" }
+  - { from: pink_queen, to: being_divine, label: CREDITS_SUPPORT_TO,
+      evidence: "The gracious and merciful God who has supported me in the tower" }
+  - { from: pink_queen, to: num_3, label: LIVES_THREE_DAYS_MORE,
+      evidence: "She lived three days more" }
+  - { from: pink_angels, to: loc_pink_grave, label: FOLLOW_BODY_TO,
+      evidence: "followed her body and seated themselves on her grave" }
+  - { from: pink_king, to: pink_old_cook, label: ORDERS_QUARTERING,
+      evidence: "The aged King ordered the cook to be torn in four pieces" }
+  - { from: pink_king, to: num_4, label: QUARTERING_NUMBER,
+      evidence: "torn in four pieces" }
+  - { from: affect_grief, to: pink_king, label: CONSUMES,
+      evidence: "grief consumed the King’s own heart" }
+  - { from: pink_kings_son, to: pink_maiden, label: MARRIES,
+      evidence: "His son married the beautiful maiden whom he had brought with him as a flower in his pocket" }

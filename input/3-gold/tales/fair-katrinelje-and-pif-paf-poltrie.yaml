@@ -1,0 +1,188 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: fair-katrinelje-and-pif-paf-poltrie
+khm: 131
+atu: '2019'
+atu_name: Fair Katrinelje and Pif Paf Poltrie
+canonical_source: ../../2-silver/canonical/fair-katrinelje-and-pif-paf-poltrie/canonical.txt
+title: Fair Katrinelje and Pif Paf Poltrie
+
+
+entities:
+
+  characters:
+
+    katrinelje_pif_paf_poltrie:
+      name: Pif-paf-poltrie
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_request]
+      traits: [formulaic-suitor, household-permission-seeker, trade-deferrer, broom-maker]
+      evidence: |
+        Many thanks, Pif-paf-poltrie
+
+    katrinelje_fair_katrinelje:
+      name: Fair Katrinelje
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_promise]
+      traits: [counting-farthings, bride-consenting, dowry-lister]
+      evidence: |
+        fair Katrinelje
+
+    katrinelje_father_hollenthe:
+      name: Father Hollenthe
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_request]
+      traits: [first-consent-giver, household-referrer]
+      evidence: |
+        Good-day, Father Hollenthe
+
+    katrinelje_mother_malcho:
+      name: Mother Malcho
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_request]
+      traits: [milking-mother, second-consent-giver, household-referrer]
+      evidence: |
+        Mother Malcho (Milch-cow)
+
+    katrinelje_brother_high_mighty:
+      name: Brother High-and-Mighty
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_request]
+      traits: [wood-chopping-brother, sibling-consent-giver]
+      evidence: |
+        Brother High-and-Mighty
+
+    katrinelje_sister_kaesetraut:
+      name: Sister Käsetraut
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_request]
+      traits: [cabbage-cutting-sister, sibling-consent-giver]
+      evidence: |
+        Sister Käsetraut
+
+  locations:
+
+    loc_katrinelje_household:
+      name: Fair Katrinelje's Household
+      instance_of: loc_house
+      evidence: |
+        Where is fair Katrinelje, then?
+
+    loc_katrinelje_cow_house:
+      name: Mother Malcho's Cow-House
+      instance_of: loc_stable
+      evidence: |
+        She is in the cow-house, milking the cow
+
+    loc_katrinelje_wood_room:
+      name: Brother High-and-Mighty's Wood-Chopping Room
+      instance_of: loc_house
+      evidence: |
+        He is in the room chopping some wood
+
+    loc_katrinelje_garden:
+      name: Sister Käsetraut's Garden
+      instance_of: loc_garden
+      evidence: |
+        She is in the garden cutting cabbages
+
+    loc_katrinelje_counting_room:
+      name: Fair Katrinelje's Farthings Room
+      instance_of: loc_house
+      evidence: |
+        She is in the room counting out her farthings
+
+
+classifications:
+
+  world_laws:
+    - law_formulaic_consent_circulates_through_household
+    - law_speech_taken_literally
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_domestic_labor
+
+  symbol_numbers:
+    - num_4
+
+
+propp:
+
+  - function: func_courtship_request
+    order: 1
+    actor: katrinelje_pif_paf_poltrie
+    scene: "Pif-paf-poltrie asks Father Hollenthe for his daughter and is redirected to household consensus"
+    evidence: "May I be allowed to have your daughter?"
+
+  - function: func_formulaic_iteration
+    order: 2
+    actor: katrinelje_pif_paf_poltrie
+    scene: "the suitor repeats the same greeting and marriage request to mother, brother, and sister"
+    evidence: "Many thanks, Pif-paf-poltrie"
+
+  - function: func_bride_consent
+    order: 3
+    actor: katrinelje_fair_katrinelje
+    scene: "Fair Katrinelje agrees to be bride if the whole household is willing"
+    evidence: "I am ready"
+
+  - function: func_dowry_display
+    order: 4
+    actor: katrinelje_fair_katrinelje
+    scene: "the bride lists her tiny comic dowry in money and food"
+    evidence: "Have I not a dowry fine?"
+
+  - function: func_trade_revelation
+    order: 5
+    actor: katrinelje_pif_paf_poltrie
+    scene: "the suitor repeatedly claims something better until he admits he is a broom-maker"
+    evidence: "Yes, that’s what I am"
+
+
+edges:
+
+  - { from: katrinelje_pif_paf_poltrie, to: katrinelje_father_hollenthe, label: ASKS_PERMISSION_FROM,
+      evidence: "May I be allowed to have your daughter?" }
+  - { from: katrinelje_father_hollenthe, to: katrinelje_pif_paf_poltrie, label: CONSENTS_CONDITIONALLY,
+      evidence: "if Mother Malcho (Milch-cow), Brother High-and-Mighty, Sister Käsetraut, and fair Katrinelje are willing" }
+  - { from: katrinelje_pif_paf_poltrie, to: katrinelje_mother_malcho, label: ASKS_PERMISSION_FROM,
+      evidence: "May I be allowed to have your daughter?" }
+  - { from: katrinelje_mother_malcho, to: loc_katrinelje_cow_house, label: WORKS_AT,
+      evidence: "in the cow-house, milking the cow" }
+  - { from: katrinelje_mother_malcho, to: katrinelje_pif_paf_poltrie, label: CONSENTS_CONDITIONALLY,
+      evidence: "if Father Hollenthe, Brother High-and-Mighty, Sister Käsetraut, and fair Katrinelje are willing" }
+  - { from: katrinelje_pif_paf_poltrie, to: katrinelje_brother_high_mighty, label: ASKS_PERMISSION_FROM,
+      evidence: "May I be allowed to have your sister?" }
+  - { from: katrinelje_brother_high_mighty, to: loc_katrinelje_wood_room, label: WORKS_AT,
+      evidence: "in the room chopping some wood" }
+  - { from: katrinelje_brother_high_mighty, to: katrinelje_pif_paf_poltrie, label: CONSENTS_CONDITIONALLY,
+      evidence: "if Father Hollenthe, Mother Malcho, Sister Käsetraut, and fair Katrinelje are willing" }
+  - { from: katrinelje_pif_paf_poltrie, to: katrinelje_sister_kaesetraut, label: ASKS_PERMISSION_FROM,
+      evidence: "May I be allowed to have your sister?" }
+  - { from: katrinelje_sister_kaesetraut, to: loc_katrinelje_garden, label: WORKS_AT,
+      evidence: "in the garden cutting cabbages" }
+  - { from: katrinelje_sister_kaesetraut, to: katrinelje_pif_paf_poltrie, label: CONSENTS_CONDITIONALLY,
+      evidence: "if Father Hollenthe, Mother Malcho, Brother High-and-Mighty, and fair Katrinelje are willing" }
+  - { from: katrinelje_pif_paf_poltrie, to: katrinelje_fair_katrinelje, label: ASKS_TO_MARRY,
+      evidence: "Wilt thou be my bride?" }
+  - { from: katrinelje_fair_katrinelje, to: loc_katrinelje_counting_room, label: COUNTS_MONEY_AT,
+      evidence: "in the room counting out her farthings" }
+  - { from: katrinelje_fair_katrinelje, to: katrinelje_pif_paf_poltrie, label: AGREES_TO_MARRY,
+      evidence: "I am ready" }
+  - { from: katrinelje_fair_katrinelje, to: katrinelje_pif_paf_poltrie, label: LISTS_DOWRY_TO,
+      evidence: "Fourteen farthings in ready money" }
+  - { from: katrinelje_pif_paf_poltrie, to: law_formulaic_consent_circulates_through_household, label: REALIZES,
+      evidence: "Oh, yes, if Father Hollenthe, Mother Malcho, Brother High-and-Mighty, and Sister Käsetraut are willing" }
+  - { from: katrinelje_pif_paf_poltrie, to: moral_comic_inversion, label: CLOSES_AS_BROOM_MAKER,
+      evidence: "Perhaps a broom-maker?" }

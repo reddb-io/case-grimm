@@ -1,0 +1,348 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: fitchers-bird-fowlers-fowl
+khm: 46
+atu: '311'
+atu_name: Fitcher's Bird / Rescue by the Sister
+canonical_source: ../../2-silver/canonical/fitchers-bird-fowlers-fowl/canonical.txt
+title: Fitcher's Bird [Fowler's Fowl]
+
+
+entities:
+
+  characters:
+
+    fitchers_bird_wizard:
+      name: The Wizard / Murderous Bridegroom
+      archetypes: [arc_murderous_bridegroom, arc_predator, arc_disguised_villain, arc_prohibition_giver]
+      species: sp_human
+      being_type: being_wizard
+      agency_modes: [agency_cunning, agency_speech, agency_violence, agency_object_mediation]
+      existential_states: [state_disguised]
+      speech_acts_performed: [speech_prohibition, speech_command, speech_lie]
+      traits: [poor-man-disguise, girl-catcher, basket-abductor, forbidden-room-tester, murderous-householder, false-bridegroom, burned-with-crew]
+      evidence: |
+        "There was once a wizard who used to take the form of a poor man"
+
+    fitchers_bird_father:
+      name: The Father of the Three Daughters
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [three-daughter-father, household-origin]
+      evidence: |
+        "a man who had three pretty daughters"
+
+    fitchers_bird_eldest_sister:
+      name: The Eldest Sister
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      existential_states: [state_liminal_dead]
+      transformations: [transform_reassembly]
+      affects: [affect_curiosity, affect_fear]
+      traits: [bread-giver, abducted-daughter, forbidden-room-opener, blood-marked-egg-holder, murdered, dismembered, reassembled-revived]
+      evidence: |
+        "when the eldest daughter came out and was just reaching him a
+        piece of bread"
+
+    fitchers_bird_second_sister:
+      name: The Second Sister
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      existential_states: [state_liminal_dead]
+      transformations: [transform_reassembly]
+      affects: [affect_curiosity, affect_fear]
+      traits: [second-victim, abducted-daughter, forbidden-room-opener, murdered, dismembered, reassembled-revived]
+      evidence: |
+        "Now I will fetch myself the second"
+
+    fitchers_bird_third_sister:
+      name: The Clever Third Sister
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_object_mediation, agency_endurance]
+      affects: [affect_curiosity, affect_fear]
+      traits: [clever, crafty, egg-preserver, forbidden-room-witness, sister-reassembler, false-bride, basket-trickster, bird-disguised, rescuer]
+      evidence: |
+        "she was clever and crafty."
+
+    fitchers_bird_rescue_kin:
+      name: The Bride's Brothers and Kinsmen
+      species: sp_human
+      agency_modes: [agency_violence, agency_social_rank]
+      traits: [summoned-rescuers, door-lockers, house-burners]
+      evidence: |
+        "the brothers and kinsmen of the bride, who had been sent to
+        rescue her"
+
+    fitchers_bird_wedding_guests:
+      name: The Wizard's Wedding Guests and Crew
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      traits: [deceived-wedding-party, bird-questioners, burned-crew]
+      evidence: |
+        "the wizard and all his crew had to burn."
+
+  magic_objects:
+
+    obj_fitchers_bird_abduction_basket:
+      name: The Wizard's Back-Basket
+      object_kind: tool
+      attributes:
+        carried_by: fitchers_bird_wizard
+        function: abduction container
+      evidence: |
+        "carried a basket on his back"
+
+    obj_fitchers_bird_keys:
+      name: The House Keys and Forbidden Little Key
+      instance_of: obj_forbidden_key
+      object_kind: tool
+      attributes:
+        opens: loc_fitchers_bird_forbidden_room
+        owner: fitchers_bird_wizard
+      evidence: |
+        "there are the keys of the house"
+
+    obj_fitchers_bird_egg:
+      name: The Blood-Marked Egg
+      instance_of: obj_blood_marked_test_token
+      object_kind: relic
+      attributes:
+        entrusted_by: fitchers_bird_wizard
+        test_function: reveals_forbidden_room_violation
+      evidence: |
+        "the egg which she held in her hand fell into the basin."
+
+    obj_fitchers_bird_bloody_basin:
+      name: The Bloody Basin of Dismembered Bodies
+      object_kind: relic
+      attributes:
+        contents: murdered_human_bodies
+        room: loc_fitchers_bird_forbidden_room
+      evidence: |
+        "A great bloody basin stood in the middle of the room"
+
+    obj_fitchers_bird_block_axe:
+      name: The Block and Gleaming Axe
+      object_kind: weapon
+      attributes:
+        function: execution and dismemberment apparatus
+      evidence: |
+        "a block of wood, and a gleaming axe lay upon it."
+
+    obj_fitchers_bird_gold_basket:
+      name: The Basketful of Gold
+      object_kind: treasure
+      attributes:
+        hidden_cargo: [fitchers_bird_eldest_sister, fitchers_bird_second_sister]
+      evidence: |
+        "a basketful of gold to my father and mother"
+
+    obj_fitchers_bird_decked_skull:
+      name: The Decked-Out Skull Bride
+      object_kind: relic
+      attributes:
+        function: window decoy for the bride
+      evidence: |
+        "took a skull with grinning teeth, put some ornaments on it and
+        a wreath of flowers"
+
+    obj_fitchers_bird_honey_feathers:
+      name: The Honey-and-Feather Bird Disguise
+      object_kind: garment
+      attributes:
+        components: [honey, feather-bed]
+        function: makes the third sister unrecognizable
+      evidence: |
+        "got into a barrel of honey, and then cut the feather-bed open
+        and rolled herself in it"
+
+  locations:
+
+    loc_fitchers_bird_daughters_house:
+      name: The House of the Three Daughters
+      instance_of: loc_house
+      evidence: |
+        "appeared before the door of a man who had three pretty daughters"
+
+    loc_fitchers_bird_dark_forest:
+      name: The Dark Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "carried her away into a dark forest"
+
+    loc_fitchers_bird_wizard_house:
+      name: The Wizard's Forest House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        "his house, which stood in the midst of it."
+
+    loc_fitchers_bird_forbidden_room:
+      name: The Bloody Forbidden Room
+      instance_of: loc_house
+      threshold_type: threshold_forbidden_door
+      evidence: |
+        "the forbidden door"
+
+    loc_fitchers_bird_little_chamber:
+      name: The Little Chamber Where the Sisters Hide
+      instance_of: loc_house
+      evidence: |
+        "whom she had hidden in a little chamber"
+
+    loc_fitchers_bird_parent_house:
+      name: The Parents' House
+      instance_of: loc_house
+      evidence: |
+        "into their parents’ house."
+
+    loc_fitchers_bird_garret_window:
+      name: The Garret-Window
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        "carried it upstairs to the garret-window"
+
+    loc_fitchers_bird_locked_house:
+      name: The Locked Burning House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        "They locked all the doors of the house"
+
+
+classifications:
+
+  world_laws:
+    - law_prohibition_invites_violation
+
+  moral_regimes:
+    - moral_retributive
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_violence
+    - agency_object_mediation
+
+  affects_driving:
+    - affect_curiosity
+    - affect_fear
+
+  symbol_numbers:
+    - num_3   # three sisters; third succeeds where the first two fail
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+    - threshold_forbidden_door
+
+
+propp:
+  - { function: func_trickery, order: 1, actor: fitchers_bird_wizard,
+      scene: "wizard disguises himself as a weak beggar and captures daughters in his basket" }
+  - { function: func_interdiction, order: 2, actor: fitchers_bird_wizard,
+      scene: "wizard gives keys and egg, forbidding the little-key room on pain of death" }
+  - { function: func_violation, order: 3, actor: fitchers_bird_eldest_sister,
+      scene: "eldest sister opens the forbidden bloody room and stains the egg" }
+  - { function: func_punishment, order: 4, actor: fitchers_bird_wizard,
+      victim: fitchers_bird_eldest_sister,
+      scene: "wizard kills and dismembers the eldest sister in the blood-room" }
+  - { function: func_repetition, order: 5, actor: fitchers_bird_second_sister,
+      scene: "second sister repeats the violation and is killed like the first" }
+  - { function: func_counteraction, order: 6, actor: fitchers_bird_third_sister,
+      scene: "third sister preserves the egg, enters the room, and reassembles her sisters" }
+  - { function: func_rescue, order: 7, actor: fitchers_bird_third_sister,
+      beneficiary: fitchers_bird_eldest_sister,
+      scene: "revived sisters are hidden in the gold basket and carried home by the wizard" }
+  - { function: func_trickery, order: 8, actor: fitchers_bird_third_sister,
+      scene: "third sister stages a skull-bride at the window and disguises herself as Fitcher's bird" }
+  - { function: func_escape, order: 9, actor: fitchers_bird_third_sister,
+      scene: "bird disguise lets her leave the wizard's house and misdirect guests" }
+  - { function: func_punishment, order: 10, actor: fitchers_bird_rescue_kin,
+      victim: fitchers_bird_wizard,
+      scene: "bride's kin lock the house and burn the wizard with his crew" }
+
+
+edges:
+
+  # Abduction and first test
+  - { from: fitchers_bird_wizard, to: state_disguised, label: ASSUMES,
+      evidence: "used to take the form of a poor man" }
+  - { from: fitchers_bird_wizard, to: obj_fitchers_bird_abduction_basket, label: CARRIES,
+      evidence: "carried a basket on his back" }
+  - { from: fitchers_bird_wizard, to: fitchers_bird_eldest_sister, label: ABDUCTS_BY_TOUCH,
+      evidence: "did but touch her, and she was forced to jump into his basket." }
+  - { from: fitchers_bird_wizard, to: loc_fitchers_bird_dark_forest, label: CARRIES_INTO,
+      evidence: "carried her away into a dark forest" }
+  - { from: loc_fitchers_bird_dark_forest, to: loc_fitchers_bird_wizard_house, label: CONTAINS,
+      evidence: "his house, which stood in the midst of it." }
+  - { from: fitchers_bird_wizard, to: obj_fitchers_bird_keys, label: GIVES,
+      evidence: "there are the keys of the house" }
+  - { from: fitchers_bird_wizard, to: loc_fitchers_bird_forbidden_room, label: FORBIDS_ENTRY_TO,
+      evidence: "there I forbid thee to go on pain of death." }
+  - { from: fitchers_bird_wizard, to: obj_fitchers_bird_egg, label: ENTRUSTS,
+      evidence: "Preserve the egg carefully for me" }
+  - { from: fitchers_bird_eldest_sister, to: law_prohibition_invites_violation, label: MOVED_BY_CURIOSITY,
+      evidence: "curiosity let her have no rest." }
+  - { from: fitchers_bird_eldest_sister, to: loc_fitchers_bird_forbidden_room, label: OPENS,
+      evidence: "the door sprang open." }
+  - { from: loc_fitchers_bird_forbidden_room, to: obj_fitchers_bird_bloody_basin, label: CONTAINS,
+      evidence: "A great bloody basin stood in the middle of the room" }
+  - { from: obj_fitchers_bird_egg, to: obj_blood_marked_test_token, label: INSTANCE_OF,
+      evidence: "She washed and scrubbed, but she could not get it out." }
+  - { from: fitchers_bird_wizard, to: obj_fitchers_bird_egg, label: READS_BLOOD_MARKS_ON,
+      evidence: "he saw at once by the red spots" }
+  - { from: fitchers_bird_wizard, to: fitchers_bird_eldest_sister, label: KILLS_AND_DISMEMBERS,
+      evidence: "cut her head off on the block, and hewed her in pieces" }
+  - { from: fitchers_bird_wizard, to: obj_fitchers_bird_bloody_basin, label: THROWS_BODY_INTO,
+      evidence: "threw her into the basin with the rest." }
+
+  # Repetition and clever reversal
+  - { from: fitchers_bird_wizard, to: fitchers_bird_second_sister, label: ABDUCTS,
+      evidence: "again he went to the house in the shape of a poor man" }
+  - { from: fitchers_bird_second_sister, to: loc_fitchers_bird_forbidden_room, label: OPENS,
+      evidence: "opened the door of the bloody chamber" }
+  - { from: fitchers_bird_second_sister, to: fitchers_bird_wizard, label: ATONES_WITH_LIFE_TO,
+      evidence: "had to atone for it with her life" }
+  - { from: fitchers_bird_third_sister, to: obj_fitchers_bird_egg, label: SAFEGUARDS,
+      evidence: "she first put the egg away with great care" }
+  - { from: fitchers_bird_third_sister, to: loc_fitchers_bird_forbidden_room, label: ENTERS,
+      evidence: "at last went into the forbidden room." }
+  - { from: fitchers_bird_third_sister, to: fitchers_bird_eldest_sister, label: REASSEMBLES,
+      evidence: "gather their limbs together and put them in order" }
+  - { from: fitchers_bird_third_sister, to: fitchers_bird_second_sister, label: REASSEMBLES,
+      evidence: "head, body, arms and legs." }
+  - { from: fitchers_bird_eldest_sister, to: transform_reassembly, label: RESTORED_BY,
+      evidence: "both the maidens opened their eyes and were once more alive." }
+  - { from: fitchers_bird_wizard, to: fitchers_bird_third_sister, label: ACCEPTS_AS_BRIDE,
+      evidence: "Thou hast stood the test, thou shalt be my bride." }
+  - { from: fitchers_bird_third_sister, to: fitchers_bird_wizard, label: COMMANDS_GOLD_DELIVERY,
+      evidence: "thou shalt first take a basketful of gold to my father and mother" }
+  - { from: fitchers_bird_third_sister, to: obj_fitchers_bird_gold_basket, label: HIDES_SISTERS_IN,
+      evidence: "She put both of them in a basket and covered them quite over with gold" }
+  - { from: fitchers_bird_wizard, to: loc_fitchers_bird_parent_house, label: CARRIES_BASKET_TO,
+      evidence: "took the basket with the gold and the two maidens into their parents’ house." }
+
+  # Bird disguise and final punishment
+  - { from: fitchers_bird_third_sister, to: obj_fitchers_bird_decked_skull, label: STAGES_AS_BRIDE,
+      evidence: "let it look out from thence." }
+  - { from: fitchers_bird_third_sister, to: obj_fitchers_bird_honey_feathers, label: DISGUISES_WITH,
+      evidence: "until she looked like a wondrous bird, and no one could recognize her." }
+  - { from: fitchers_bird_wedding_guests, to: fitchers_bird_third_sister, label: QUESTIONS_BIRD,
+      evidence: "O, Fitcher’s bird, how com’st thou here?" }
+  - { from: fitchers_bird_third_sister, to: fitchers_bird_wedding_guests, label: MISDIRECTS_WITH_SONG,
+      evidence: "And now from the window she’s peeping, I ween." }
+  - { from: fitchers_bird_wizard, to: obj_fitchers_bird_decked_skull, label: MISTAKES_FOR_BRIDE,
+      evidence: "thought it was his bride, and nodded to her" }
+  - { from: fitchers_bird_rescue_kin, to: loc_fitchers_bird_locked_house, label: LOCKS,
+      evidence: "They locked all the doors of the house" }
+  - { from: fitchers_bird_rescue_kin, to: loc_fitchers_bird_locked_house, label: SETS_FIRE_TO,
+      evidence: "set fire to it" }
+  - { from: loc_fitchers_bird_locked_house, to: fitchers_bird_wizard, label: BURNS,
+      evidence: "the wizard and all his crew had to burn." }
+  - { from: loc_fitchers_bird_locked_house, to: fitchers_bird_wedding_guests, label: BURNS,
+      evidence: "the wizard and all his crew had to burn." }

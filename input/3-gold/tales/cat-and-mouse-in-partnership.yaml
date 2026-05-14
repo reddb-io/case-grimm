@@ -1,0 +1,120 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: cat-and-mouse-in-partnership
+khm: 2
+atu: '15'
+atu_name: The Theft of Butter (by Playing Godfather)
+canonical_source: ../../2-silver/canonical/cat-and-mouse-in-partnership/canonical.txt
+title: Cat and Mouse in Partnership
+
+
+entities:
+
+  characters:
+
+    cat_in_partnership:
+      name: The Cat
+      archetypes: [arc_predator, arc_trickster]
+      species: sp_cat
+      agency_modes: [agency_cunning, agency_speech, agency_violence]
+      existential_states: []
+      speech_acts_performed: [speech_promise, speech_lie]
+      affects: [affect_greed]
+      traits: [false-affectionate, manipulative, self-serving]
+      evidence: |
+        "she had said so much to her about the great love and
+         friendship she felt for her, that at length the mouse agreed
+         that they should live and keep house together." — feigned
+         affection as the entrance into the partnership.
+
+    mouse_in_partnership:
+      name: The Mouse
+      archetypes: [arc_naive_victim]
+      species: sp_mouse
+      agency_modes: [agency_endurance]
+      existential_states: [state_deceived]
+      speech_acts_performed: [speech_promise]
+      affects: []
+      traits: [trusting, dutiful, cautious-by-words-but-not-by-act]
+      evidence: |
+        "'Top-off! Half-done!' answered the mouse, 'they are such odd
+         names, they make me very thoughtful.'" — she SENSES the
+         deception in her unease but does not act on it.
+
+  magic_objects: {}
+  # No magic objects in this tale — it is a beast fable in the
+  # secular-cynical register. The pot of fat is mundane (no magical
+  # properties; just food storage).
+
+  locations:
+
+    loc_house_cat_and_mouse:
+      name: The Shared House
+      instance_of: loc_house
+
+    loc_church_cat_and_mouse:
+      name: The Church (storage location)
+      instance_of: loc_church
+      attributes:
+        feature: "altar — sacred storage assumed safe from theft"
+      evidence: |
+        "I know no place where it will be better stored up than in the
+         church, for no one dares take anything away from there. We
+         will set it beneath the altar"
+
+
+classifications:
+
+  world_laws:
+    - law_might_unmakes_promise
+
+  moral_regimes:
+    - moral_naive_punished
+
+  agency_modes_dominant:
+    - agency_cunning
+
+  affects_driving:
+    - affect_greed
+
+  symbol_numbers:
+    - num_3   # three "godmothering" trips, three encoded names
+
+
+propp:
+  # Beast-fable form: Propp's functions occur, but the sequence
+  # TERMINATES in villainy-succeeds rather than hero-victory. The
+  # tale's structure is type-negative — recording it as Propp
+  # functions still works, just without the hero-restoration beats.
+  - { function: func_villainy, order: 1, actor: cat_in_partnership,
+      scene: "cat proposes partnership under false pretence of affection" }
+  - { function: func_lack, order: 2, scene: "winter looming — both need a food store" }
+  - { function: func_interdiction, order: 3, scene: "pot of fat is stored 'not to be touched until really in need'" }
+  - { function: func_violation, order: 4, actor: cat_in_partnership,
+      scene: "cat secretly eats the fat over three trips" }
+  - { function: func_villainy, order: 5, actor: cat_in_partnership,
+      scene: "cat devours the mouse when the deception is exposed" }
+
+
+edges:
+
+  - { from: cat_in_partnership, to: mouse_in_partnership, label: PARTNERS_WITH,
+      evidence: "the mouse agreed that they should live and keep house together." }
+  - { from: mouse_in_partnership, to: cat_in_partnership, label: PARTNERS_WITH }
+
+  - { from: cat_in_partnership, to: mouse_in_partnership, label: DECEIVES,
+      evidence: "All this, however, was untrue; the cat had no cousin, and had not been asked to be godmother." }
+
+  - { from: cat_in_partnership, to: mouse_in_partnership, label: LIES_TO,
+      evidence: "'What name did they give the child?' 'Top off!' said the cat quite coolly." }
+
+  - { from: cat_in_partnership, to: cat_in_partnership, label: BREAKS_OATH,
+      evidence: "the cat had a great yearning for it... she went straight to the church, stole to the pot of fat, began to lick at it"
+    }
+
+  - { from: cat_in_partnership, to: mouse_in_partnership, label: EATS,
+      evidence: "scarcely had she spoken it before the cat sprang on her, seized her, and swallowed her down." }
+
+  - { from: cat_in_partnership, to: loc_church_cat_and_mouse, label: STORES_AT,
+      evidence: "We will set it beneath the altar" }
+  - { from: mouse_in_partnership, to: loc_church_cat_and_mouse, label: STORES_AT }

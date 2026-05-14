@@ -1,0 +1,522 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-six-servants
+khm: 134
+atu: '513A'
+atu_name: Six Go through the Whole World / Six Soldiers of Fortune
+canonical_source: ../../2-silver/canonical/the-six-servants/canonical.txt
+title: The Six Servants
+
+
+entities:
+
+  characters:
+
+    six_servants_prince:
+      name: The King's Son
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank, agency_cunning, agency_endurance]
+      existential_states: [state_hidden_identity]
+      speech_acts_performed: [speech_request, speech_command, speech_lie]
+      affects: [affect_love_at_first_sight, affect_joy]
+      traits: [love-sick-prince, servant-recruiter, task-suitor, hidden-swineherd-husband, humbling-teacher]
+      evidence: |
+        A certain King’s son who had also heard of the maiden’s beauty
+
+    six_servants_old_king:
+      name: The Prince's Father
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_warning, speech_command]
+      affects: [affect_fear, affect_grief]
+      traits: [death-warning-father, reluctant-permission-giver]
+      evidence: |
+        Never,” answered the King
+
+    six_servants_aged_queen:
+      name: The Aged Queen Sorceress
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_social_rank, agency_speech, agency_violence, agency_cunning]
+      speech_acts_performed: [speech_command, speech_promise, speech_lie]
+      affects: [affect_anger, affect_fear]
+      traits: [suitor-destroyer, task-setter, spell-caster, warrior-sender, defeated-sorceress]
+      evidence: |
+        an aged Queen who was a sorceress
+
+    six_servants_princess:
+      name: The Sorceress's Proud Daughter
+      archetypes: [arc_proud_task_princess]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning]
+      existential_states: [state_deceived]
+      speech_acts_performed: [speech_command]
+      affects: [affect_pride, affect_anger, affect_shame]
+      traits: [beautiful-maiden, task-bride, proud-heart, revenge-meditator, swineherd-humbled-wife]
+      evidence: |
+        her daughter was the most beautiful maiden under the sun
+
+    six_servants_stout_one:
+      name: The Stout One
+      archetypes: [arc_extraordinary_companion]
+      species: sp_human
+      agency_modes: [agency_extraordinary_body, agency_object_mediation, agency_domestic_labor]
+      traits: [mountain-stomach, sea-drinker, oxen-eater, wine-drinker, sea-spitter]
+      evidence: |
+        the stomach looked like a small mountain
+
+    six_servants_listener:
+      name: The Listener
+      archetypes: [arc_extraordinary_companion]
+      species: sp_human
+      agency_modes: [agency_extraordinary_body, agency_speech]
+      traits: [turf-listener, world-hearer, hidden-plot-hearer, armour-hearer]
+      evidence: |
+        nothing escapes my ears
+
+    six_servants_tall_one:
+      name: The Tall One
+      archetypes: [arc_extraordinary_companion]
+      species: sp_human
+      agency_modes: [agency_extraordinary_body, agency_object_mediation]
+      traits: [earth-spanning-body, sea-carrier, rock-rescuer, rapid-returner]
+      evidence: |
+        taller than the highest mountain on earth
+
+    six_servants_split_glance:
+      name: The Bandaged-Eye Splitter
+      archetypes: [arc_extraordinary_companion]
+      species: sp_human
+      agency_modes: [agency_extraordinary_body, agency_violence]
+      traits: [bandaged-eyes, destructive-glance, rock-splitter, army-shatterer]
+      evidence: |
+        whatsoever I look at with my eyes, splits to pieces
+
+    six_servants_frosty_one:
+      name: The Frosty One
+      archetypes: [arc_extraordinary_companion]
+      species: sp_human
+      agency_modes: [agency_extraordinary_body, agency_endurance]
+      traits: [inverted-temperature-body, fire-endurer, pyre-survivor]
+      evidence: |
+        The hotter it is, the colder I am
+
+    six_servants_far_seer:
+      name: The Far-Seer
+      archetypes: [arc_extraordinary_companion]
+      species: sp_human
+      agency_modes: [agency_extraordinary_body, agency_object_mediation]
+      traits: [long-necked-lookout, world-seer, sea-ring-locator]
+      evidence: |
+        I have such sharp eyes that I can see into every forest and field
+
+    six_servants_warriors:
+      name: The Sorceress's Warriors
+      species: sp_human
+      agency_modes: [agency_violence, agency_social_rank]
+      traits: [bridal-pursuers, sea-drowned-troops]
+      evidence: |
+        sent her warriors after them
+
+    six_servants_mailed_knights:
+      name: The Sorceress's Mailed Knights
+      species: sp_human
+      agency_modes: [agency_violence, agency_social_rank]
+      traits: [armoured-pursuers, glass-shattered-troops]
+      evidence: |
+        she sent her mailed knights
+
+    six_servants_innkeepers:
+      name: The Innkeepers
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [secret-clothing-removers, old-gown-givers, humbling-accomplices]
+      evidence: |
+        secretly told the innkeepers
+
+  magic_objects:
+
+    obj_six_servants_ring:
+      name: The Queen's Ring in the Red Sea
+      object_kind: token
+      attributes:
+        owner: six_servants_aged_queen
+        task: first impossible bride-winning task
+      evidence: |
+        my ring which I have dropped into the Red Sea
+
+    obj_six_servants_three_hundred_oxen:
+      name: The Three Hundred Oxen
+      object_kind: creature_object
+      attributes:
+        count: 300
+        function: second impossible task's food quantity
+      evidence: |
+        Three hundred fat oxen are feeding there
+
+    obj_six_servants_three_hundred_casks:
+      name: The Three Hundred Casks of Wine
+      object_kind: food
+      attributes:
+        count: 300
+        function: second impossible task's drink quantity
+      evidence: |
+        three hundred casks of wine
+
+    obj_six_servants_wood_bundles:
+      name: The Three Hundred Bundles of Wood
+      object_kind: material
+      attributes:
+        count: 300
+        function: princess's revenge-pyre for the Frosty One
+      evidence: |
+        three hundred great bundles of wood
+
+    obj_six_servants_stored_sea_water:
+      name: The Stout One's Stored Sea-Water
+      object_kind: material
+      attributes:
+        source: loc_six_servants_red_sea
+        function: creates pursuing-warrior-drowning sea behind the carriage
+      evidence: |
+        some of the sea-water which he had drunk
+
+    obj_six_servants_old_gown:
+      name: The Old Gown and Worsted Stockings
+      object_kind: garment
+      attributes:
+        function: disguise props for the princess's swineherd-humbling
+      evidence: |
+        an old gown and a pair of worsted stockings
+
+  locations:
+
+    loc_six_servants_prince_palace:
+      name: The Prince's Father's Palace
+      instance_of: loc_castle
+      evidence: |
+        the palace of the prince’s father
+
+    loc_six_servants_heath:
+      name: The Heath of Recruitment
+      instance_of: loc_wilderness
+      evidence: |
+        riding across a heath
+
+    loc_six_servants_queen_town:
+      name: The Sorceress Queen's Town
+      instance_of: loc_town
+      evidence: |
+        came to the town where the aged Queen dwelt
+
+    loc_six_servants_queen_palace:
+      name: The Sorceress Queen's Palace
+      instance_of: loc_castle
+      evidence: |
+        the meadow in front of my palace
+
+    loc_six_servants_red_sea:
+      name: The Red Sea
+      instance_of: loc_sea
+      evidence: |
+        into the Red Sea
+
+    loc_six_servants_palace_meadow:
+      name: The Palace Meadow of Oxen
+      instance_of: loc_meadow
+      evidence: |
+        the meadow in front of my palace
+
+    loc_six_servants_cellar:
+      name: The Queen's Wine Cellar
+      instance_of: loc_cellar
+      evidence: |
+        down below in my cellar
+
+    loc_six_servants_chamber:
+      name: The Prince's Night Chamber
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        in thy chamber
+
+    loc_six_servants_enchanted_rock:
+      name: The Enchanted Rock Three Hundred Leagues Away
+      evidence: |
+        on the enchanted rock
+
+    loc_six_servants_fire_pile:
+      name: The Three-Day Fire Pile
+      instance_of: loc_courtyard
+      evidence: |
+        in the middle of the pile, and set fire to it
+
+    loc_six_servants_church_road:
+      name: The Road to Church
+      instance_of: loc_road
+      evidence: |
+        when they drove away to church
+
+    loc_six_servants_church:
+      name: The Wedding Church
+      instance_of: loc_church
+      evidence: |
+        blessed in church
+
+    loc_six_servants_swineherd_village:
+      name: The Swineherd Village Near the Palace
+      instance_of: loc_village
+      evidence: |
+        a village near which a swineherd tended his herd
+
+    loc_six_servants_inn:
+      name: The Inn of Humbling
+      instance_of: loc_inn
+      evidence: |
+        he alighted with her at the inn
+
+
+classifications:
+
+  world_laws:
+    - law_specialized_companions_solve_impossible_tasks
+    - law_promise_binds_reality
+    - law_disguised_status_descent_humbles
+
+  moral_regimes:
+    - moral_humbling_reform
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_extraordinary_body
+    - agency_speech
+    - agency_social_rank
+    - agency_cunning
+    - agency_violence
+
+  affects_driving:
+    - affect_love_at_first_sight
+    - affect_pride
+    - affect_anger
+    - affect_fear
+    - affect_shame
+
+  symbol_numbers:
+    - num_3
+    - num_6
+    - num_7
+    - num_12
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_initial_situation
+    order: 1
+    actor: six_servants_aged_queen
+    scene: "the sorceress queen destroys suitors by imposing fatal bride-winning tasks"
+    evidence: "whosoever wished to have her daughter, must first perform a task, or die"
+
+  - function: func_departure
+    order: 2
+    actor: six_servants_prince
+    scene: "after seven years of love-sickness, the prince receives permission and sets out"
+    evidence: "for seven years he lay there"
+
+  - function: func_helper_acquisition
+    order: 3
+    actor: six_servants_prince
+    scene: "the prince recruits the Stout One, Listener, Tall One, Splitter, Frosty One, and Far-Seer"
+    evidence: "the King’s son and his six servants"
+
+  - function: func_difficult_task
+    order: 4
+    actor: six_servants_aged_queen
+    scene: "the first task requires fetching the queen's ring from the Red Sea"
+    evidence: "fetch me my ring which I have dropped into the Red Sea"
+
+  - function: func_helper_intervention
+    order: 5
+    actor: six_servants_stout_one
+    scene: "the Far-Seer locates the ring, the Stout One drinks the sea dry, and the Tall One retrieves it"
+    evidence: "drank up the whole sea till it was as dry as a meadow"
+
+  - function: func_difficult_task
+    order: 6
+    actor: six_servants_aged_queen
+    scene: "the second task demands eating three hundred oxen and drinking three hundred casks of wine"
+    evidence: "these must thou eat, skin, hair, bones, horns and all"
+
+  - function: func_helper_intervention
+    order: 7
+    actor: six_servants_stout_one
+    scene: "the Stout One consumes all the oxen and wine as the single invited companion"
+    evidence: "ate the three hundred oxen without leaving one single hair"
+
+  - function: func_difficult_task
+    order: 8
+    actor: six_servants_aged_queen
+    scene: "the third task requires keeping the maiden in the prince's arms until midnight"
+    evidence: "if she is then no longer in thine arms, thou art lost"
+
+  - function: func_trickery
+    order: 9
+    actor: six_servants_aged_queen
+    scene: "the queen casts a sleep-spell and carries the maiden to an enchanted rock"
+    evidence: "the old woman cast such a spell over all of them"
+
+  - function: func_helper_intervention
+    order: 10
+    actor: six_servants_tall_one
+    scene: "the Listener hears the maiden, the Tall One reaches her, and the Splitter shatters the rock"
+    evidence: "the rock shivered into a thousand pieces"
+
+  - function: func_victory
+    order: 11
+    actor: six_servants_prince
+    scene: "the maiden is back in the prince's arms before midnight and the queen cannot oppose the marriage"
+    evidence: "was forced to give him her daughter"
+
+  - function: func_difficult_task
+    order: 12
+    actor: six_servants_princess
+    scene: "the proud princess adds a fire ordeal after the three tasks are already completed"
+    evidence: "she would still not be his wife"
+
+  - function: func_helper_intervention
+    order: 13
+    actor: six_servants_frosty_one
+    scene: "the Frosty One sits in the fire for three days and survives cold"
+    evidence: "standing amid the ashes, trembling like an aspen leaf"
+
+  - function: func_pursuit
+    order: 14
+    actor: six_servants_aged_queen
+    scene: "the queen sends warriors and mailed knights to recover her daughter"
+    evidence: "bring back her daughter"
+
+  - function: func_rescue
+    order: 15
+    actor: six_servants_stout_one
+    scene: "stored sea-water drowns the pursuing warriors and the Splitter shatters the mailed knights"
+    evidence: "a great sea arose in which the warriors were caught and drowned"
+
+  - function: func_wedding
+    order: 16
+    actor: six_servants_prince
+    scene: "the couple is blessed in church and the six servants depart"
+    evidence: "the two had been blessed in church"
+
+  - function: func_humbling
+    order: 17
+    actor: six_servants_prince
+    scene: "the prince disguises his rank, makes the proud bride believe she has married a swineherd, and lets her suffer rough labour"
+    evidence: "I have deserved this for my haughtiness and pride"
+
+  - function: func_recognition
+    order: 18
+    actor: six_servants_prince
+    scene: "the prince reveals himself in royal clothing and explains that both spouses have suffered"
+    evidence: "there stood her husband in kingly raiment"
+
+
+edges:
+
+  - { from: six_servants_aged_queen, to: six_servants_princess, label: USES_AS_BAIT,
+      evidence: "how to lure mankind to destruction" }
+  - { from: six_servants_aged_queen, to: six_servants_prince, label: SETS_FATAL_TASKS_FOR,
+      evidence: "I will set thee three tasks" }
+  - { from: six_servants_old_king, to: six_servants_prince, label: WARNS,
+      evidence: "it would be going to your death" }
+  - { from: six_servants_prince, to: affect_love_at_first_sight, label: FALLS_ILL_FROM,
+      evidence: "lay down and was sick unto death" }
+  - { from: six_servants_prince, to: six_servants_stout_one, label: RECRUITS,
+      evidence: "take me into your service" }
+  - { from: six_servants_prince, to: six_servants_listener, label: RECRUITS,
+      evidence: "I can make use of thee, come with me" }
+  - { from: six_servants_prince, to: six_servants_tall_one, label: RECRUITS,
+      evidence: "Come with me" }
+  - { from: six_servants_prince, to: six_servants_split_glance, label: RECRUITS,
+      evidence: "If you can use that, I shall be glad to serve you" }
+  - { from: six_servants_prince, to: six_servants_frosty_one, label: RECRUITS,
+      evidence: "if thou wilt enter my service, follow me" }
+  - { from: six_servants_prince, to: six_servants_far_seer, label: RECRUITS,
+      evidence: "Come with me if thou wilt" }
+  - { from: six_servants_far_seer, to: obj_six_servants_ring, label: LOCATES,
+      evidence: "It is sticking there, on a pointed stone" }
+  - { from: six_servants_tall_one, to: loc_six_servants_red_sea, label: CARRIES_COMPANIONS_TO,
+      evidence: "The Tall One carried them thither" }
+  - { from: six_servants_stout_one, to: loc_six_servants_red_sea, label: DRINKS_DRY,
+      evidence: "drank up the whole sea till it was as dry as a meadow" }
+  - { from: six_servants_tall_one, to: obj_six_servants_ring, label: RETRIEVES,
+      evidence: "brought out the ring with his hand" }
+  - { from: six_servants_prince, to: six_servants_aged_queen, label: RETURNS_RING_TO,
+      evidence: "took it to the old Queen" }
+  - { from: six_servants_aged_queen, to: obj_six_servants_three_hundred_oxen, label: ASSIGNS_AS_TASK,
+      evidence: "Three hundred fat oxen are feeding there" }
+  - { from: six_servants_aged_queen, to: obj_six_servants_three_hundred_casks, label: ASSIGNS_AS_TASK,
+      evidence: "three hundred casks of wine" }
+  - { from: six_servants_stout_one, to: obj_six_servants_three_hundred_oxen, label: EATS,
+      evidence: "ate the three hundred oxen without leaving one single hair" }
+  - { from: six_servants_stout_one, to: obj_six_servants_three_hundred_casks, label: DRINKS,
+      evidence: "drank the wine straight from the casks" }
+  - { from: six_servants_aged_queen, to: six_servants_princess, label: PLACES_IN_ARMS_OF,
+      evidence: "gave her into the princes’s arms" }
+  - { from: six_servants_tall_one, to: six_servants_prince, label: ENCIRCLES_PROTECTIVELY,
+      evidence: "wound himself round the two in a circle" }
+  - { from: six_servants_stout_one, to: loc_six_servants_chamber, label: GUARDS_DOOR_OF,
+      evidence: "placed himself by the door" }
+  - { from: six_servants_aged_queen, to: six_servants_prince, label: CASTS_SLEEP_SPELL_ON,
+      evidence: "cast such a spell over all of them" }
+  - { from: six_servants_princess, to: loc_six_servants_enchanted_rock, label: CARRIED_AWAY_TO,
+      evidence: "on a rock, three hundred leagues from hence" }
+  - { from: six_servants_listener, to: six_servants_princess, label: HEARS,
+      evidence: "She is on a rock" }
+  - { from: six_servants_tall_one, to: six_servants_split_glance, label: CARRIES,
+      evidence: "took the one with bandaged eyes on his back" }
+  - { from: six_servants_split_glance, to: loc_six_servants_enchanted_rock, label: SHATTERS,
+      evidence: "the rock shivered into a thousand pieces" }
+  - { from: six_servants_tall_one, to: six_servants_princess, label: RESCUES,
+      evidence: "took the maiden in his arms" }
+  - { from: six_servants_aged_queen, to: six_servants_prince, label: RECOGNIZES_SUPERIOR_KNOWLEDGE,
+      evidence: "Here is one who knows more than I do!" }
+  - { from: six_servants_aged_queen, to: six_servants_princess, label: INCITES_PRIDE_IN,
+      evidence: "It is a disgrace to thee to have to obey common people" }
+  - { from: six_servants_princess, to: obj_six_servants_wood_bundles, label: ORDERS_GATHERED,
+      evidence: "caused three hundred great bundles of wood to be got together" }
+  - { from: six_servants_princess, to: six_servants_prince, label: DEMANDS_FIRE_ENDURANCE_FOR,
+      evidence: "until some one was ready to seat himself in the midst of the wood" }
+  - { from: six_servants_frosty_one, to: loc_six_servants_fire_pile, label: ENDURES,
+      evidence: "standing amid the ashes" }
+  - { from: six_servants_prince, to: six_servants_princess, label: MARRIES,
+      evidence: "forced to take the unknown youth as a husband" }
+  - { from: six_servants_aged_queen, to: six_servants_warriors, label: SENDS_AFTER_COUPLE,
+      evidence: "sent her warriors after them" }
+  - { from: six_servants_stout_one, to: obj_six_servants_stored_sea_water, label: SPITS_OUT,
+      evidence: "spat out once or twice behind the carriage" }
+  - { from: obj_six_servants_stored_sea_water, to: six_servants_warriors, label: DROWNS,
+      evidence: "warriors were caught and drowned" }
+  - { from: six_servants_aged_queen, to: six_servants_mailed_knights, label: SENDS_AFTER_COUPLE,
+      evidence: "she sent her mailed knights" }
+  - { from: six_servants_listener, to: six_servants_mailed_knights, label: HEARS_ARMOUR_OF,
+      evidence: "heard the rattling of their armour" }
+  - { from: six_servants_split_glance, to: six_servants_mailed_knights, label: SHATTERS,
+      evidence: "they all sprang to pieces like glass" }
+  - { from: six_servants_prince, to: loc_six_servants_church, label: WEDS_AT,
+      evidence: "blessed in church" }
+  - { from: six_servants_prince, to: six_servants_princess, label: CLAIMS_TO_BE_SWINEHERD,
+      evidence: "I am no prince, but a herder of swine" }
+  - { from: six_servants_prince, to: six_servants_innkeepers, label: SECRETLY_INSTRUCTS,
+      evidence: "secretly told the innkeepers to take away her royal apparel" }
+  - { from: six_servants_innkeepers, to: obj_six_servants_old_gown, label: PROVIDES,
+      evidence: "gave her an old gown and a pair of worsted stockings" }
+  - { from: six_servants_princess, to: affect_shame, label: FEELS_DESERVED_HUMILIATION,
+      evidence: "I have deserved this for my haughtiness and pride" }
+  - { from: six_servants_prince, to: law_disguised_status_descent_humbles, label: REALIZES,
+      evidence: "had to suffer for me" }
+  - { from: six_servants_princess, to: six_servants_prince, label: RECOGNIZES,
+      evidence: "there stood her husband in kingly raiment" }
+  - { from: six_servants_prince, to: six_servants_princess, label: CELEBRATES_FINAL_WEDDING_WITH,
+      evidence: "then the wedding was celebrated" }

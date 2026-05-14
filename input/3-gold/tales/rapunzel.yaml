@@ -1,0 +1,297 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: rapunzel
+khm: 12
+atu: '310'
+atu_name: Rapunzel
+canonical_source: ../../2-silver/canonical/rapunzel/canonical.txt
+title: Rapunzel
+
+
+entities:
+
+  characters:
+
+    rapunzel_mother:
+      name: Rapunzel's Mother (pregnant woman with rampion longing)
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      affects: [affect_longing]
+      traits: [child-longing, pregnant, rampion-craving, wasting-away]
+      evidence: |
+        "if I can't get some of the rampion... to eat, I shall die."
+
+    rapunzel_father:
+      name: Rapunzel's Father (garden thief, terrified bargainer)
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning]
+      speech_acts_performed: [speech_bargain, speech_promise]
+      affects: [affect_fear, affect_loyalty]
+      traits: [wife-protecting, thief-by-necessity, promise-bound]
+      evidence: |
+        "Sooner than let thy wife die, bring her some of the rampion
+         thyself, let it cost thee what it will."
+
+    rapunzel_enchantress:
+      name: Dame Gothel / The Enchantress
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_speech, agency_social_rank, agency_violence]
+      speech_acts_performed: [speech_bargain, speech_command]
+      affects: [affect_anger]
+      traits: [garden-owner, dreaded, foster-captor, hair-cutter, deceiver]
+      evidence: |
+        "it belonged to an enchantress, who had great power and was
+         dreaded by all the world."
+
+    rapunzel:
+      name: Rapunzel (maiden in the tower)
+      archetypes: [arc_imprisoned_maiden]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_music, agency_speech]
+      affects: [affect_fear, affect_longing, affect_grief]
+      traits: [golden-haired, tower-confined, sweet-voiced, exiled-mother]
+      evidence: |
+        "the enchantress shut her into a tower, which lay in a forest,
+         and had neither stairs nor door"
+
+    rapunzel_prince:
+      name: The King's Son (song-drawn lover)
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_endurance, agency_speech]
+      existential_states: [state_blind]
+      affects: [affect_love_at_first_sight, affect_grief, affect_longing]
+      traits: [song-struck, secret-visitor, blinded-wanderer, restored]
+      evidence: |
+        "the singing had so deeply touched his heart, that every day he
+         went out into the forest and listened to it."
+
+    rapunzel_twins:
+      name: Rapunzel's Twins (boy and girl in exile)
+      species: sp_human
+      traits: [desert-born, royal-children, twin-pair]
+      evidence: |
+        "Rapunzel, with the twins to which she had given birth, a boy
+         and a girl, lived in wretchedness."
+
+  magic_objects:
+
+    obj_rampion:
+      name: Rampion / Rapunzel Plant
+      object_kind: food
+      attributes:
+        source: enchantress garden
+        effect: maternal longing, child-bargain trigger
+      evidence: |
+        "a bed which was planted with the most beautiful rampion
+         (rapunzel)"
+
+    obj_rapunzel_hair:
+      name: Rapunzel's Golden Braids (hair ladder)
+      object_kind: material
+      attributes:
+        length: twenty_ells
+        function: ladder into the tower
+      evidence: |
+        "then the hair fell twenty ells down, and the enchantress
+         climbed up by it."
+
+    obj_silk_ladder_plan:
+      name: The Planned Silk Ladder
+      object_kind: tool
+      attributes:
+        material: skeins of silk
+        status: planned escape device
+      evidence: |
+        "Bring with thee a skein of silk every time that thou comest,
+         and I will weave a ladder with it"
+
+    obj_scissors_rapunzel:
+      name: Dame Gothel's Scissors
+      object_kind: tool
+      attributes:
+        function: cuts Rapunzel's hair and ends tower access
+      evidence: |
+        "seized a pair of scissors with the right, and snip, snap,
+         they were cut off"
+
+    obj_thorns_blinding:
+      name: The Thorns Below the Tower
+      object_kind: material
+      attributes:
+        effect: pierce prince's eyes
+      evidence: |
+        "the thorns into which he fell, pierced his eyes."
+
+  locations:
+
+    loc_house_rapunzel_parents:
+      name: The Parents' House with Back Window
+      instance_of: loc_house
+      evidence: |
+        "a little window at the back of their house from which a
+         splendid garden could be seen"
+
+    loc_enchantress_garden:
+      name: The Enchantress's Walled Garden
+      instance_of: loc_garden
+      attributes:
+        barrier: high wall
+        contains: [obj_rampion]
+      evidence: |
+        "surrounded by a high wall, and no one dared to go into it"
+
+    loc_tower_rapunzel:
+      name: Rapunzel's Doorless Tower
+      instance_of: loc_tower
+      attributes:
+        access: hair ladder through high window
+        lacks: [stairs, door]
+      evidence: |
+        "a tower, which lay in a forest, and had neither stairs nor
+         door, but quite at the top was a little window."
+
+    loc_forest_rapunzel:
+      name: The Forest Around the Tower
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "the King's son rode through the forest and went by the tower."
+
+    loc_desert_rapunzel:
+      name: The Desert of Rapunzel's Exile
+      instance_of: loc_wilderness
+      evidence: |
+        "she took poor Rapunzel into a desert where she had to live in
+         great grief and misery."
+
+    loc_prince_kingdom:
+      name: The Prince's Kingdom
+      instance_of: loc_castle
+      evidence: |
+        "He led her to his kingdom where he was joyfully received"
+
+
+classifications:
+
+  world_laws:
+    - law_promise_binds_reality
+    - law_music_attracts
+
+  moral_regimes:
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_endurance
+    - agency_music
+
+  affects_driving:
+    - affect_longing
+    - affect_love_at_first_sight
+    - affect_grief
+    - affect_fear
+
+  symbol_numbers:
+    - num_2   # twins; pair of lovers; parent-pair
+    - num_12  # Rapunzel's age at tower imprisonment
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+  - { function: func_lack, order: 1, victim: rapunzel_mother,
+      scene: "childless couple longs for child; pregnant mother longs for forbidden rampion" }
+  - { function: func_villainy, order: 2, actor: rapunzel_father,
+      scene: "father steals rampion from enchantress's walled garden" }
+  - { function: func_donor_test, order: 3, actor: rapunzel_enchantress,
+      scene: "enchantress demands the unborn child in exchange for rampion mercy" }
+  - { function: func_absentation, order: 4, actor: rapunzel_enchantress,
+      scene: "enchantress names Rapunzel and takes the child away" }
+  - { function: func_interdiction, order: 5, actor: rapunzel_enchantress,
+      scene: "Rapunzel is shut in a doorless tower at age twelve" }
+  - { function: func_mediation, order: 6, actor: rapunzel_prince,
+      scene: "prince hears Rapunzel's song and seeks access to the tower" }
+  - { function: func_trickery, order: 7, actor: rapunzel_prince,
+      scene: "prince imitates Gothel's call and climbs Rapunzel's hair" }
+  - { function: func_wedding, order: 8, actor: rapunzel_prince,
+      scene: "Rapunzel agrees to marry him and plans a silk-ladder escape" }
+  - { function: func_villainy, order: 9, actor: rapunzel_enchantress,
+      scene: "Gothel cuts Rapunzel's hair, exiles her, and deceives the prince" }
+  - { function: func_branding, order: 10, actor: rapunzel_prince,
+      scene: "prince leaps from tower and is blinded by thorns" }
+  - { function: func_return, order: 11, actor: rapunzel_prince,
+      scene: "blind prince wanders for years and reaches Rapunzel's desert exile" }
+  - { function: func_liquidation, order: 12, actor: rapunzel,
+      scene: "Rapunzel's tears restore the prince's sight" }
+  - { function: func_return, order: 13, actor: rapunzel_prince,
+      scene: "prince leads Rapunzel and twins to his kingdom" }
+
+
+edges:
+
+  # Forbidden longing and bargain
+  - { from: rapunzel_mother, to: obj_rampion, label: LONGS_FOR,
+      evidence: "she longed for it, and had the greatest desire to eat some." }
+  - { from: rapunzel_father, to: loc_enchantress_garden, label: STEALS_FROM,
+      evidence: "descend into my garden and steal my rampion like a thief" }
+  - { from: rapunzel_father, to: obj_rampion, label: STEALS,
+      evidence: "hastily clutched a handful of rampion, and took it to his wife." }
+  - { from: rapunzel_enchantress, to: rapunzel_father, label: BARGAINS_WITH,
+      evidence: "I make one condition, thou must give me the child which thy wife will bring into the world" }
+  - { from: rapunzel_father, to: rapunzel_enchantress, label: PROMISES_TO,
+      evidence: "The man in his terror consented to everything" }
+  - { from: rapunzel_enchantress, to: rapunzel, label: TAKES_AWAY,
+      evidence: "gave the child the name of Rapunzel, and took it away with her." }
+
+  # Tower access
+  - { from: rapunzel_enchantress, to: rapunzel, label: IMPRISONS,
+      evidence: "the enchantress shut her into a tower" }
+  - { from: rapunzel_enchantress, to: rapunzel, label: COMMANDS,
+      evidence: "Rapunzel, Rapunzel, Let down thy hair to me." }
+  - { from: rapunzel, to: obj_rapunzel_hair, label: LETS_DOWN,
+      evidence: "the hair fell twenty ells down" }
+  - { from: rapunzel_enchantress, to: obj_rapunzel_hair, label: CLIMBS,
+      evidence: "the enchantress climbed up by it." }
+
+  # Song draws prince
+  - { from: rapunzel, to: rapunzel_prince, label: ATTRACTS_WITH_SONG,
+      evidence: "he heard a song, which was so charming that he stood still and listened." }
+  - { from: rapunzel_prince, to: rapunzel_enchantress, label: OVERHEARS,
+      evidence: "he heard how she cried, 'Rapunzel, Rapunzel, Let down thy hair.'" }
+  - { from: rapunzel_prince, to: obj_rapunzel_hair, label: CLIMBS,
+      evidence: "Immediately the hair fell down and the King's son climbed up." }
+  - { from: rapunzel_prince, to: rapunzel, label: PROPOSES_TO,
+      evidence: "he asked her if she would take him for her husband" }
+  - { from: rapunzel, to: rapunzel_prince, label: ACCEPTS_MARRIAGE,
+      evidence: "she said yes, and laid her hand in his." }
+  - { from: rapunzel, to: obj_silk_ladder_plan, label: PLANS_ESCAPE_WITH,
+      evidence: "I will weave a ladder with it, and when that is ready I will descend" }
+
+  # Discovery and punishment
+  - { from: rapunzel, to: rapunzel_enchantress, label: REVEALS_ACCIDENTALLY_TO,
+      evidence: "how it happens that you are so much heavier for me to draw up than the young King's son" }
+  - { from: rapunzel_enchantress, to: obj_rapunzel_hair, label: CUTS,
+      evidence: "snip, snap, they were cut off, and the lovely braids lay on the ground." }
+  - { from: rapunzel_enchantress, to: rapunzel, label: BANISHES_TO,
+      attributes: { destination: loc_desert_rapunzel },
+      evidence: "took poor Rapunzel into a desert where she had to live in great grief and misery." }
+  - { from: rapunzel_enchantress, to: rapunzel_prince, label: DECEIVES,
+      evidence: "she let the hair down. The King's son ascended, but he did not find his dearest Rapunzel above" }
+  - { from: rapunzel_prince, to: obj_thorns_blinding, label: FALLS_INTO,
+      evidence: "the thorns into which he fell, pierced his eyes." }
+  - { from: obj_thorns_blinding, to: rapunzel_prince, label: BLINDS,
+      evidence: "pierced his eyes. Then he wandered quite blind about the forest" }
+
+  # Exile, healing, return
+  - { from: rapunzel, to: rapunzel_twins, label: GIVES_BIRTH_TO,
+      evidence: "Rapunzel, with the twins to which she had given birth, a boy and a girl" }
+  - { from: rapunzel_prince, to: loc_desert_rapunzel, label: ARRIVES_AT,
+      evidence: "at length came to the desert where Rapunzel... lived in wretchedness." }
+  - { from: rapunzel, to: rapunzel_prince, label: RECOGNIZES,
+      evidence: "when he approached, Rapunzel knew him and fell on his neck and wept." }
+  - { from: rapunzel, to: rapunzel_prince, label: HEALS_WITH_TEARS,
+      evidence: "Two of her tears wetted his eyes and they grew clear again" }
+  - { from: rapunzel_prince, to: rapunzel, label: BRINGS_TO_KINGDOM,
+      evidence: "He led her to his kingdom where he was joyfully received" }

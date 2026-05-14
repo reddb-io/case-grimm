@@ -1,0 +1,514 @@
+book_id: pg52521-grimm-olcott
+source_file: ../../1-bronze/pg52521.txt
+total: 51
+tales:
+- title: THE FROG-KING; OR, IRON HENRY
+  slug: the-frog-king-or-iron-henry
+  body_line: 338
+  khm: 1
+  atu: '440'
+  kind: tale
+  word_count: 1393
+  char_count: 7395
+  language: en
+  title_de: Der Froschkönig oder der eiserne Heinrich
+- title: THE WOLF AND THE SEVEN LITTLE KIDS
+  slug: the-wolf-and-the-seven-little-kids
+  body_line: 511
+  khm: 5
+  atu: '123'
+  kind: tale
+  word_count: 1103
+  char_count: 5780
+  language: en
+  title_de: Der Wolf und die sieben jungen Geißlein
+- title: RAPUNZEL
+  slug: rapunzel
+  body_line: 642
+  khm: 12
+  atu: '310'
+  kind: tale
+  word_count: 1407
+  char_count: 7314
+  language: en
+  title_de: Rapunzel
+- title: LITTLE BROTHER AND LITTLE SISTER
+  slug: little-brother-and-little-sister
+  body_line: 814
+  khm: 11
+  atu: '450'
+  kind: tale
+  word_count: 2438
+  char_count: 12436
+  language: en
+  title_de: Brüderchen und Schwesterchen
+- title: THE STAR-MONEY
+  slug: the-star-money
+  body_line: 1103
+  khm: 153
+  atu: '779'
+  kind: tale
+  word_count: 335
+  char_count: 1677
+  language: en
+  title_de: Die Sterntaler
+- title: THE FISHERMAN AND HIS WIFE
+  slug: the-fisherman-and-his-wife
+  body_line: 1150
+  khm: 19
+  atu: '555'
+  kind: tale
+  word_count: 3048
+  char_count: 15804
+  language: en
+  title_de: Von dem Fischer un syner Fru
+- title: THE WHITE SNAKE
+  slug: the-white-snake
+  body_line: 1533
+  khm: 17
+  atu: '673'
+  kind: tale
+  word_count: 1595
+  char_count: 8382
+  language: en
+  title_de: Die weiße Schlange
+- title: HAENSEL AND GRETHEL
+  slug: haensel-and-grethel
+  body_line: 1707
+  khm: 15
+  atu: 327A
+  kind: tale
+  word_count: 2679
+  char_count: 14212
+  language: en
+  title_de: Hänsel und Gretel
+- title: THE SEVEN RAVENS
+  slug: the-seven-ravens
+  body_line: 2017
+  khm: 25
+  atu: '451'
+  kind: tale
+  word_count: 937
+  char_count: 4930
+  language: en
+  title_de: Die sieben Raben
+- title: ASH-MAIDEN
+  slug: ash-maiden
+  body_line: 2134
+  khm: 21
+  atu: 510A
+  kind: tale
+  word_count: 2616
+  char_count: 13981
+  language: en
+  title_de: Aschenputtel
+- title: THE ELVES AND THE SHOEMAKER
+  slug: the-elves-and-the-shoemaker
+  body_line: 2448
+  khm: 39
+  atu: '503'
+  kind: tale
+  word_count: 657
+  char_count: 3482
+  language: en
+  title_de: Die Wichtelmänner
+- title: THE THREE BROTHERS
+  slug: the-three-brothers
+  body_line: 2528
+  khm: 124
+  atu: '654'
+  kind: tale
+  word_count: 658
+  char_count: 3441
+  language: en
+  title_de: Die drei Brüder
+- title: LITTLE TABLE SET THYSELF, GOLD-ASS, AND CUDGEL OUT OF THE SACK
+  slug: little-table-set-thyself-gold-ass-and-cudgel-out-of-the-sack
+  body_line: 2603
+  khm: 36
+  atu: '563'
+  kind: tale
+  word_count: 3814
+  char_count: 20567
+  language: en
+  title_de: Tischchendeckdich, Goldesel und Knüppel aus dem Sack
+- title: IRON JOHN
+  slug: iron-john
+  body_line: 3148
+  khm: 136
+  atu: '502'
+  kind: tale
+  word_count: 3173
+  char_count: 16333
+  language: en
+  title_de: Der Eisenhans
+- title: CLEVER ELSIE
+  slug: clever-elsie
+  body_line: 3506
+  khm: 34
+  atu: '1450'
+  kind: tale
+  word_count: 1333
+  char_count: 6811
+  language: en
+  title_de: Die kluge Else
+- title: THE BREMEN TOWN-MUSICIANS
+  slug: the-bremen-town-musicians
+  body_line: 3671
+  khm: 27
+  atu: '130'
+  kind: tale
+  word_count: 1262
+  char_count: 6581
+  language: en
+  title_de: Die Bremer Stadtmusikanten
+- title: THE SIX SWANS
+  slug: the-six-swans
+  body_line: 3832
+  khm: 49
+  atu: '451'
+  kind: tale
+  word_count: 1974
+  char_count: 10260
+  language: en
+  title_de: Die sechs Schwäne
+- title: THE POOR MILLER’S BOY AND THE CAT
+  slug: the-poor-millers-boy-and-the-cat
+  body_line: 4048
+  khm: 106
+  atu: 545B
+  kind: tale
+  word_count: 1384
+  char_count: 7138
+  language: en
+  title_de: Der arme Müllerbursch und das Kätzchen
+- title: LITTLE RED-CAP
+  slug: little-red-cap
+  body_line: 4229
+  khm: 26
+  atu: '333'
+  kind: tale
+  word_count: 1073
+  char_count: 5807
+  language: en
+  title_de: Rotkäppchen
+- title: KING THRUSHBEARD
+  slug: king-thrushbeard
+  body_line: 4380
+  khm: 52
+  atu: '900'
+  kind: tale
+  word_count: 1649
+  char_count: 8627
+  language: en
+  title_de: König Drosselbart
+- title: THE GOLD-CHILDREN
+  slug: the-gold-children
+  body_line: 4581
+  khm: 85
+  atu: '555'
+  kind: tale
+  word_count: 1899
+  char_count: 9978
+  language: en
+  title_de: Die Goldkinder
+- title: LITTLE SNOW-WHITE
+  slug: little-snow-white
+  body_line: 4827
+  khm: 53
+  atu: '709'
+  kind: tale
+  word_count: 3055
+  char_count: 16411
+  language: en
+  title_de: Sneewittchen
+- title: RUMPELSTILTSKIN
+  slug: rumpelstiltskin
+  body_line: 5218
+  khm: 55
+  atu: '500'
+  kind: tale
+  word_count: 1088
+  char_count: 5718
+  language: en
+  title_de: Rumpelstilzchen
+- title: LITTLE BRIAR-ROSE
+  slug: little-briar-rose
+  body_line: 5361
+  khm: 50
+  atu: '410'
+  kind: tale
+  word_count: 1311
+  char_count: 6922
+  language: en
+  title_de: Dornröschen
+- title: THE THREE LITTLE MEN IN THE WOOD
+  slug: the-three-little-men-in-the-wood
+  body_line: 5501
+  khm: 13
+  atu: '403'
+  kind: tale
+  word_count: 1510
+  char_count: 7874
+  language: en
+  title_de: Die drei Männlein im Walde
+- title: THE GOLDEN BIRD
+  slug: the-golden-bird
+  body_line: 5690
+  khm: 57
+  atu: '550'
+  kind: tale
+  word_count: 2994
+  char_count: 15282
+  language: en
+  title_de: Der goldene Vogel
+- title: THE QUEEN BEE
+  slug: the-queen-bee
+  body_line: 6013
+  khm: 62
+  atu: '554'
+  kind: tale
+  word_count: 792
+  char_count: 4242
+  language: en
+  title_de: Die Bienenkönigin
+- title: BIRD-FOUND
+  slug: bird-found
+  body_line: 6102
+  khm: 51
+  atu: '313'
+  kind: tale
+  word_count: 874
+  char_count: 4650
+  language: en
+  title_de: Fundevogel
+- title: THE GOLDEN GOOSE
+  slug: the-golden-goose
+  body_line: 6220
+  khm: 64
+  atu: '571'
+  kind: tale
+  word_count: 1070
+  char_count: 5579
+  language: en
+  title_de: Die goldene Gans
+- title: MOTHER HOLLE
+  slug: mother-holle
+  body_line: 6346
+  khm: 24
+  atu: '480'
+  kind: tale
+  word_count: 1128
+  char_count: 5842
+  language: en
+  title_de: Frau Holle
+- title: THE TWO TRAVELERS
+  slug: the-two-travelers
+  body_line: 6497
+  khm: 107
+  atu: '613'
+  kind: tale
+  word_count: 4138
+  char_count: 21525
+  language: en
+  title_de: Die beiden Wanderer
+- title: JORINDA AND JORINGEL
+  slug: jorinda-and-joringel
+  body_line: 6981
+  khm: 69
+  atu: '405'
+  kind: tale
+  word_count: 918
+  char_count: 4900
+  language: en
+  title_de: Jorinde und Joringel
+- title: HOW SIX MEN GOT ON IN THE WORLD
+  slug: how-six-men-got-on-in-the-world
+  body_line: 7099
+  khm: 71
+  atu: 513A
+  kind: tale
+  word_count: 2060
+  char_count: 10643
+  language: en
+  title_de: Sechse kommen durch die ganze Welt
+- title: THE GOOSE-GIRL
+  slug: the-goose-girl
+  body_line: 7332
+  khm: 89
+  atu: '533'
+  kind: tale
+  word_count: 2203
+  char_count: 11816
+  language: en
+  title_de: Die Gänsemagd
+- title: THE SINGING, SOARING LARK
+  slug: the-singing-soaring-lark
+  body_line: 7616
+  khm: 88
+  atu: 425C
+  kind: tale
+  word_count: 2308
+  char_count: 12008
+  language: en
+  title_de: Das singende springende Löweneckerchen
+- title: DOCTOR KNOWALL
+  slug: doctor-knowall
+  body_line: 7870
+  khm: 98
+  atu: '1641'
+  kind: tale
+  word_count: 615
+  char_count: 3209
+  language: en
+  title_de: Doktor Allwissend
+- title: THE BLUE LIGHT
+  slug: the-blue-light
+  body_line: 7952
+  khm: 116
+  atu: '562'
+  kind: tale
+  word_count: 1741
+  char_count: 9081
+  language: en
+  title_de: Das blaue Licht
+- title: THE SPINDLE, THE SHUTTLE, AND THE NEEDLE
+  slug: the-spindle-the-shuttle-and-the-needle
+  body_line: 8161
+  khm: 188
+  atu: '585'
+  kind: tale
+  word_count: 1095
+  char_count: 5844
+  language: en
+  title_de: Spindel, Weberschiffchen und Nadel
+- title: THE THREE LUCK-CHILDREN
+  slug: the-three-luck-children
+  body_line: 8289
+  khm: 70
+  atu: '1650'
+  kind: tale
+  word_count: 980
+  char_count: 5163
+  language: en
+  title_de: Die drei Glückskinder
+- title: THE DONKEY CABBAGES
+  slug: the-donkey-cabbages
+  body_line: 8404
+  khm: 122
+  atu: '566'
+  kind: tale
+  word_count: 2567
+  char_count: 13378
+  language: en
+  title_de: Der Krautesel
+- title: CLEVER HANS
+  slug: clever-hans
+  body_line: 8684
+  khm: 32
+  atu: '1696'
+  kind: tale
+  word_count: 901
+  char_count: 5387
+  language: en
+  title_de: Der gescheite Hans
+- title: THE IRON STOVE
+  slug: the-iron-stove
+  body_line: 8993
+  khm: 127
+  atu: 425A
+  kind: tale
+  word_count: 2179
+  char_count: 11441
+  language: en
+  title_de: Der Eisenofen
+- title: SWEET PORRIDGE
+  slug: sweet-porridge
+  body_line: 9246
+  khm: 103
+  atu: '565'
+  kind: tale
+  word_count: 244
+  char_count: 1300
+  language: en
+  title_de: Der süße Brei
+- title: SNOW-WHITE AND ROSE-RED
+  slug: snow-white-and-rose-red
+  body_line: 9292
+  khm: 161
+  atu: '426'
+  kind: tale
+  word_count: 2435
+  char_count: 12899
+  language: en
+  title_de: Schneeweißchen und Rosenrot
+- title: THE HEDGE-KING
+  slug: the-hedge-king
+  body_line: 9560
+  khm: 171
+  atu: '221'
+  kind: tale
+  word_count: 1039
+  char_count: 5544
+  language: en
+  title_de: Der Zaunkönig
+- title: ONE-EYE, TWO-EYES, AND THREE-EYES
+  slug: one-eye-two-eyes-and-three-eyes
+  body_line: 9684
+  khm: 130
+  atu: '511'
+  kind: tale
+  word_count: 2620
+  char_count: 14323
+  language: en
+  title_de: Einäuglein, Zweiäuglein und Dreiäuglein
+- title: THE GOOSE-GIRL AT THE WELL
+  slug: the-goose-girl-at-the-well
+  body_line: 10025
+  khm: 179
+  atu: '923'
+  kind: tale
+  word_count: 3723
+  char_count: 19498
+  language: en
+  title_de: Die Gänsehirtin am Brunnen
+- title: THE SHOES THAT WERE DANCED TO PIECES
+  slug: the-shoes-that-were-danced-to-pieces
+  body_line: 10430
+  khm: 133
+  atu: '306'
+  kind: tale
+  word_count: 1393
+  char_count: 7493
+  language: en
+  title_de: Die zertanzten Schuhe
+- title: THE NIX OF THE MILL-POND
+  slug: the-nix-of-the-mill-pond
+  body_line: 10598
+  khm: 181
+  atu: '316'
+  kind: tale
+  word_count: 2124
+  char_count: 11278
+  language: en
+  title_de: Die Nixe im Teich
+- title: THE LITTLE HOUSE IN THE WOOD
+  slug: the-little-house-in-the-wood
+  body_line: 10825
+  khm: 169
+  atu: '431'
+  kind: tale
+  word_count: 1890
+  char_count: 9991
+  language: en
+  title_de: Das Waldhaus
+- title: MAID MALEEN
+  slug: maid-maleen
+  body_line: 11055
+  khm: 198
+  atu: '870'
+  kind: tale
+  word_count: 2005
+  char_count: 10984
+  language: en
+  title_de: Jungfrau Maleen

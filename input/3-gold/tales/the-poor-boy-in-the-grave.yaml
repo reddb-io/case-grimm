@@ -1,0 +1,314 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-poor-boy-in-the-grave
+khm: 185
+atu: "1577"
+atu_name: The Poor Boy in the Grave
+canonical_source: ../../2-silver/canonical/the-poor-boy-in-the-grave/canonical.txt
+title: The Poor Boy in the Grave
+
+
+entities:
+
+  characters:
+
+    poor_boy_orphan:
+      name: The Poor Shepherd-Boy
+      species: sp_human
+      agency_modes: [agency_endurance, agency_domestic_labor, agency_speech, agency_object_mediation]
+      existential_states: [state_liminal_dead]
+      speech_acts_performed: [speech_confession, speech_testimony]
+      affects: [affect_hunger, affect_fear, affect_despair, affect_grief]
+      traits: [orphaned, authority-placed, underfed, beaten, hen-watcher, chicken-stringer, honest-confessor, letter-hider, straw-chopper, despairing, false-poison-eater, grave-seeker]
+      evidence: |
+        a poor shepherd-boy whose father and mother were dead
+
+    poor_boy_farmer:
+      name: The Rich Farmer
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command, speech_warning, speech_testimony]
+      affects: [affect_greed, affect_anger, affect_fear, affect_guilt]
+      traits: [rich, bad-hearted, greedy, bread-anxious, abusive-guardian, rage-beater, hard-taskmaster, justice-fearing, conscience-tormented]
+      evidence: |
+        The man and his wife, had however, bad hearts
+
+    poor_boy_farmers_wife:
+      name: The Farmer's Wife
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_greed, affect_fear, affect_guilt]
+      traits: [bad-hearted, greedy, false-poison-keeper, honey-hider, hearth-helper, accidental-fire-starter, poverty-punished]
+      evidence: |
+        his wife
+
+    poor_boy_judge:
+      name: The Judge
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_warning, speech_testimony]
+      affects: [affect_pity]
+      traits: [letter-reader, grape-counter, simplicity-witness, cautioning-authority]
+      evidence: |
+        the judge had read the letter
+
+    poor_boy_hen_and_chickens:
+      name: The Hen and Chickens
+      species: sp_hen
+      agency_modes: [agency_endurance]
+      traits: [watched-flock, hedge-crossing, mother-hen-lost, string-tied-chickens, hawk-carried]
+      evidence: |
+        watch a hen and her chickens
+
+    poor_boy_hawk:
+      name: The Hawk / Bird of Prey
+      species: sp_bird
+      agency_modes: [agency_violence]
+      traits: [airborne-thief, hen-carrier, chicken-devourer, repeated-predator]
+      evidence: |
+        a hawk darted down
+
+  magic_objects:
+
+    obj_poor_boy_grape_basket:
+      name: The Basketful of Grapes
+      object_kind: food
+      attributes:
+        function: hunger-test errand whose missing clusters reveal the boy's need and simplicity
+      evidence: |
+        a basketful of grapes
+
+    obj_poor_boy_letters:
+      name: The Errand Letters
+      object_kind: token
+      attributes:
+        function: written reports that expose missing grapes despite the boy's attempt to hide one letter
+      evidence: |
+        he gave him a letter as well
+
+    obj_poor_boy_small_bread:
+      name: The Small Bit of Bread
+      object_kind: food
+      attributes:
+        function: inadequate food left for the boy during the hard straw task
+      evidence: |
+        left nothing behind for the boy but a small bit of bread
+
+    obj_poor_boy_chopped_coat:
+      name: The Chopped Little Coat
+      object_kind: garment
+      attributes:
+        function: accidental damage that makes the boy believe the farmer will kill him
+      evidence: |
+        chopped his little coat as well as the straw
+
+    obj_poor_boy_honey_pot:
+      name: The Pot of Honey Misnamed Poison
+      object_kind: food
+      attributes:
+        function: honey falsely described as poison to keep greedy people away
+      evidence: |
+        there was honey in it
+
+    obj_poor_boy_wine_bottle:
+      name: The Hungarian Wine Misnamed Fly-Poison
+      object_kind: food
+      attributes:
+        function: wine mistaken for poison, stupefying the boy and contributing to his death in the grave
+      evidence: |
+        no poison for flies, but Hungarian wine
+
+    obj_poor_boy_hot_fat_pan:
+      name: The Pan of Hot Fat
+      object_kind: tool
+      attributes:
+        function: fire-bearing household object that ignites the abusers' house after the boy's death
+      evidence: |
+        a pan of hot fat
+
+  locations:
+
+    loc_poor_boy_rich_house:
+      name: The Rich Man's House
+      instance_of: loc_house
+      evidence: |
+        in the house of a rich man
+
+    loc_poor_boy_hedge_field:
+      name: The Quick-Set Hedge
+      instance_of: loc_field
+      evidence: |
+        ran through a quick-set hedge
+
+    loc_poor_boy_judge_house:
+      name: The Judge's House
+      instance_of: loc_house
+      evidence: |
+        He took the basket to the judge
+
+    loc_poor_boy_yearly_fair:
+      name: The Yearly Fair
+      instance_of: loc_town
+      evidence: |
+        to the yearly fair
+
+    loc_poor_boy_churchyard:
+      name: The Churchyard
+      instance_of: loc_church
+      evidence: |
+        reached the churchyard
+
+    loc_poor_boy_new_grave:
+      name: The Newly Dug Grave
+      instance_of: loc_tomb
+      threshold_type: threshold_grave
+      evidence: |
+        laid himself in a newly dug grave
+
+    loc_poor_boy_wedding_inn:
+      name: The Wedding Inn
+      instance_of: loc_inn
+      evidence: |
+        an inn where a wedding was being kept
+
+    loc_poor_boy_hearth:
+      name: The Farmer's Hearth
+      instance_of: loc_hearth
+      evidence: |
+        standing on the hearth
+
+
+classifications:
+
+  world_laws:
+    - law_cruel_caregiving_converts_simple_error_into_fatal_despair
+
+  moral_regimes:
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_endurance
+    - agency_speech
+    - agency_object_mediation
+
+  affects_driving:
+    - affect_hunger
+    - affect_fear
+    - affect_despair
+    - affect_greed
+    - affect_guilt
+
+  symbol_numbers:
+    - num_2
+
+  threshold_types:
+    - threshold_grave
+
+
+propp:
+  - { function: func_orphan_placed, order: 1, actor: poor_boy_orphan,
+      scene: "the authorities place the orphaned shepherd-boy with a rich man" }
+  - { function: func_abusive_care, order: 2, actor: poor_boy_farmer,
+      victim: poor_boy_orphan,
+      scene: "the rich couple starve and beat the boy instead of bringing him up" }
+  - { function: func_animal_loss, order: 3, actor: poor_boy_hawk,
+      victim: poor_boy_hen_and_chickens,
+      scene: "a hawk carries off the hen and later the tied chickens" }
+  - { function: func_punishment, order: 4, actor: poor_boy_farmer,
+      victim: poor_boy_orphan,
+      scene: "the farmer beats the boy after each animal loss" }
+  - { function: func_errand_test, order: 5, actor: poor_boy_farmer,
+      beneficiary: poor_boy_judge,
+      scene: "the boy carries grapes and letters to the judge" }
+  - { function: func_hunger_confession, order: 6, actor: poor_boy_orphan,
+      scene: "the hungry boy eats grapes and honestly confesses the missing clusters" }
+  - { function: func_authority_warning, order: 7, actor: poor_boy_judge,
+      beneficiary: poor_boy_orphan,
+      scene: "the judge cautions the farmer to feed and teach the boy better" }
+  - { function: func_hard_task, order: 8, actor: poor_boy_farmer,
+      victim: poor_boy_orphan,
+      scene: "the farmer threatens a beating unless two bundles of straw are cut by a fixed time" }
+  - { function: func_accidental_damage, order: 9, actor: poor_boy_orphan,
+      scene: "the boy chops his little coat along with the straw" }
+  - { function: func_despair, order: 10, actor: poor_boy_orphan,
+      scene: "the boy believes the farmer will kill him and seeks death first" }
+  - { function: func_false_poison, order: 11, actor: poor_boy_orphan,
+      scene: "honey and wine misnamed as poison are eaten and drunk" }
+  - { function: func_grave_death, order: 12, actor: poor_boy_orphan,
+      scene: "the stupefied boy lies in a new grave and dies under the night-dew" }
+  - { function: func_retributive_ruin, order: 13, actor: poor_boy_farmer,
+      scene: "fear of justice and the pan of hot fat burn the house and leave the couple in poverty" }
+
+
+edges:
+
+  - { from: poor_boy_orphan, to: loc_poor_boy_rich_house, label: PLACED_BY_AUTHORITIES_IN,
+      evidence: "placed by the authorities" }
+  - { from: poor_boy_farmer, to: poor_boy_orphan, label: FAILS_TO_FEED_AND_RAISE,
+      evidence: "was to feed him and bring him up" }
+  - { from: poor_boy_farmer, to: affect_greed, label: MOTIVATED_BY_GREED,
+      evidence: "greedy and anxious about their riches" }
+  - { from: poor_boy_farmer, to: poor_boy_orphan, label: STARVES_AND_BEATS,
+      evidence: "he got little to eat, but only so many blows the more" }
+  - { from: poor_boy_orphan, to: poor_boy_hen_and_chickens, label: WATCHES,
+      evidence: "watch a hen and her chickens" }
+  - { from: poor_boy_hawk, to: poor_boy_hen_and_chickens, label: CARRIES_HEN_OFF,
+      evidence: "carried her off through the air" }
+  - { from: poor_boy_farmer, to: poor_boy_orphan, label: BEATS_AFTER_HEN_LOSS,
+      evidence: "gave the boy such a beating" }
+  - { from: poor_boy_orphan, to: poor_boy_hen_and_chickens, label: TIES_CHICKENS_TOGETHER,
+      evidence: "tied them all together with a string" }
+  - { from: poor_boy_hawk, to: poor_boy_hen_and_chickens, label: DEVOURS_TIED_CHICKENS,
+      evidence: "devoured them" }
+  - { from: poor_boy_farmer, to: poor_boy_orphan, label: BEATS_AFTER_CHICKEN_LOSS,
+      evidence: "beat the boy so unmercifully" }
+  - { from: poor_boy_farmer, to: poor_boy_orphan, label: DEMOTES_TO_ERRAND_BOY,
+      evidence: "thou must go as errand-boy" }
+  - { from: poor_boy_farmer, to: obj_poor_boy_grape_basket, label: SENDS_WITH_GRAPES,
+      evidence: "carry a basketful of grapes" }
+  - { from: poor_boy_orphan, to: obj_poor_boy_grape_basket, label: EATS_TWO_CLUSTERS_FROM_HUNGER,
+      evidence: "driven by hunger and thirst" }
+  - { from: poor_boy_orphan, to: poor_boy_judge, label: CONFESSES_GRAPE_EATING,
+      evidence: "confessed quite honestly" }
+  - { from: poor_boy_orphan, to: obj_poor_boy_letters, label: HIDES_LETTER_FROM_WITNESSING,
+      evidence: "put it under a stone" }
+  - { from: poor_boy_judge, to: poor_boy_farmer, label: CAUTIONS_TO_FEED_AND_TEACH,
+      evidence: "cautioned him to keep the poor boy better" }
+  - { from: poor_boy_farmer, to: poor_boy_orphan, label: THREATENS_BLOWS_AS_TEACHING,
+      evidence: "thou shalt be quite sufficiently taught by blows" }
+  - { from: poor_boy_farmer, to: poor_boy_orphan, label: SETS_STRAW_CHOPPING_TASK,
+      evidence: "chop two bundles of straw" }
+  - { from: poor_boy_farmer, to: obj_poor_boy_small_bread, label: LEAVES_ONLY_SMALL_BREAD,
+      evidence: "a small bit of bread" }
+  - { from: poor_boy_orphan, to: obj_poor_boy_chopped_coat, label: ACCIDENTALLY_CHOPS_COAT,
+      evidence: "chopped his little coat as well as the straw" }
+  - { from: obj_poor_boy_chopped_coat, to: affect_despair, label: TRIGGERS_FATAL_HOPELESSNESS,
+      evidence: "now all is over with me" }
+  - { from: poor_boy_orphan, to: law_cruel_caregiving_converts_simple_error_into_fatal_despair, label: TRAPPED_BY_ABUSIVE_DEPENDENCY,
+      evidence: "if he comes back and sees what I have done, he will kill me" }
+  - { from: poor_boy_farmers_wife, to: obj_poor_boy_honey_pot, label: FALSELY_NAMES_AS_POISON,
+      evidence: "I have a pot with poison in it under my bed" }
+  - { from: poor_boy_orphan, to: obj_poor_boy_honey_pot, label: EATS_WHILE_SEEKING_DEATH,
+      evidence: "ate all that was in it" }
+  - { from: poor_boy_orphan, to: obj_poor_boy_wine_bottle, label: DRINKS_MISNAMED_POISON,
+      evidence: "emptied it" }
+  - { from: obj_poor_boy_wine_bottle, to: poor_boy_orphan, label: STUPEFIES,
+      evidence: "stupefy him" }
+  - { from: poor_boy_orphan, to: loc_poor_boy_new_grave, label: LIES_DOWN_IN,
+      evidence: "laid himself in a newly dug grave" }
+  - { from: loc_poor_boy_wedding_inn, to: poor_boy_orphan, label: MUSIC_MISREAD_AS_PARADISE,
+      evidence: "he fancied he was already in Paradise" }
+  - { from: loc_poor_boy_new_grave, to: poor_boy_orphan, label: BECOMES_PLACE_OF_DEATH,
+      evidence: "remained in the grave" }
+  - { from: poor_boy_farmer, to: affect_fear, label: FEARS_JUSTICE_AFTER_DEATH,
+      evidence: "afraid of being brought to justice" }
+  - { from: poor_boy_farmers_wife, to: obj_poor_boy_hot_fat_pan, label: CARRIES_TO_HELP_FAINTED_HUSBAND,
+      evidence: "ran to him to help him" }
+  - { from: obj_poor_boy_hot_fat_pan, to: loc_poor_boy_rich_house, label: IGNITES_HOUSE,
+      evidence: "the whole house caught fire" }
+  - { from: moral_retributive, to: poor_boy_farmer, label: RUINS_ABUSIVE_HOUSEHOLD,
+      evidence: "passed in poverty and misery" }
+  - { from: poor_boy_farmer, to: affect_guilt, label: TORMENTED_BY_CONSCIENCE,
+      evidence: "tormented by the pangs of conscience" }

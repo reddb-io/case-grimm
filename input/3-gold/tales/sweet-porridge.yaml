@@ -1,0 +1,216 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: sweet-porridge
+khm: 103
+atu: '565'
+atu_name: The Magic Mill
+canonical_source: ../../2-silver/canonical/sweet-porridge/canonical.txt
+title: Sweet Porridge
+
+
+entities:
+
+  characters:
+
+    sweet_porridge_girl:
+      name: The Poor Good Little Girl
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_domestic_labor]
+      speech_acts_performed: [speech_command]
+      affects: [affect_hunger, affect_pity]
+      traits: [poor-child, good-child, forest-walker, formula-knower, pot-recipient, household-savior, overflow-stopper]
+      evidence: |
+        There was a poor but good little girl
+
+    sweet_porridge_mother:
+      name: The Hungry Mother
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor, agency_object_mediation]
+      speech_acts_performed: [speech_command]
+      affects: [affect_hunger, affect_fear]
+      traits: [poor-mother, pot-user, satisfied-eater, stop-word-ignorant, accidental-overflow-cause]
+      evidence: |
+        lived alone with her mother
+
+    sweet_porridge_aged_woman:
+      name: The Aged Woman in the Forest
+      archetypes: [arc_supernatural_donor]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      affects: [affect_pity]
+      traits: [sorrow-aware-donor, pot-giver, hunger-remedy-source]
+      evidence: |
+        an aged woman met her
+
+    sweet_porridge_townpeople:
+      name: The People Returning to Town
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      affects: [affect_fear, affect_hunger]
+      traits: [porridge-blocked-neighbors, eat-way-back-returners]
+      evidence: |
+        whosoever wished to return to the town
+
+  magic_objects:
+
+    obj_sweet_porridge_pot:
+      name: The Little Self-Cooking Porridge Pot
+      instance_of: obj_self_cooking_pot
+      object_kind: tool
+      attributes:
+        start_formula: Cook, little pot, cook
+        stop_formula: Stop, little pot
+        output: good, sweet porridge
+      evidence: |
+        presented her with a little pot
+
+    obj_sweet_porridge_food:
+      name: The Good Sweet Porridge
+      object_kind: food
+      attributes:
+        function: ends household hunger, then fills kitchen, house, street, and town
+      evidence: |
+        would cook good, sweet porridge
+
+  locations:
+
+    loc_sweet_porridge_forest:
+      name: The Donor Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        the child went into the forest
+
+    loc_sweet_porridge_house:
+      name: The Girl and Mother's House
+      instance_of: loc_house
+      evidence: |
+        took the pot home to her mother
+
+    loc_sweet_porridge_kitchen:
+      name: The Porridge-Filled Kitchen
+      instance_of: loc_hearth
+      evidence: |
+        the kitchen and whole house were full
+
+    loc_sweet_porridge_street:
+      name: The Porridge-Filled Street
+      instance_of: loc_road
+      evidence: |
+        then the whole street
+
+    loc_sweet_porridge_town:
+      name: The Blocked Town
+      instance_of: loc_town
+      evidence: |
+        return to the town
+
+
+classifications:
+
+  world_laws:
+    - law_unchecked_formula_abundance_floods_world
+    - law_formula_commands_magic_objects
+
+  moral_regimes:
+    - moral_restorative
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_object_mediation
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_hunger
+    - affect_pity
+    - affect_fear
+
+  symbol_numbers: []
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: sweet_porridge_girl,
+      scene: "A poor good little girl and her mother live alone with nothing left to eat.",
+      evidence: "they no longer had anything to eat" }
+  - { function: func_departure, order: 2, actor: sweet_porridge_girl,
+      scene: "The child goes into the forest.",
+      evidence: "the child went into the forest" }
+  - { function: func_donor_encounter, order: 3, actor: sweet_porridge_aged_woman,
+      scene: "An aged woman who knows the child's sorrow meets her in the forest.",
+      evidence: "was aware of her sorrow" }
+  - { function: func_magical_agent, order: 4, actor: sweet_porridge_aged_woman,
+      scene: "The aged woman gives the child a little pot that cooks and stops by spoken formulas.",
+      evidence: "presented her with a little pot" }
+  - { function: func_lack_liquidated, order: 5, actor: obj_sweet_porridge_pot,
+      scene: "The pot frees the girl and mother from poverty and hunger.",
+      evidence: "freed from their poverty and hunger" }
+  - { function: func_absent_keeper, order: 6, actor: sweet_porridge_girl,
+      scene: "One day the girl goes out, leaving the mother alone with the pot.",
+      evidence: "when the girl had gone out" }
+  - { function: func_formula_activation, order: 7, actor: sweet_porridge_mother,
+      scene: "The mother activates the pot and eats until satisfied.",
+      evidence: "Cook, little pot, cook" }
+  - { function: func_missing_counter_formula, order: 8, actor: sweet_porridge_mother,
+      scene: "The mother wants the pot to stop but does not know the word.",
+      evidence: "did not know the word" }
+  - { function: func_catastrophic_abundance, order: 9, actor: obj_sweet_porridge_pot,
+      scene: "The pot keeps cooking until porridge fills house, street, and nearly the whole town.",
+      evidence: "just as if it wanted to satisfy the hunger of the whole world" }
+  - { function: func_return, order: 10, actor: sweet_porridge_girl,
+      scene: "The girl comes home when only one house remains.",
+      evidence: "the child came home" }
+  - { function: func_counter_command, order: 11, actor: sweet_porridge_girl,
+      scene: "The girl says the stop formula and the pot gives up cooking.",
+      evidence: "Stop, little pot" }
+  - { function: func_comic_aftermath, order: 12, actor: sweet_porridge_townpeople,
+      scene: "Anyone who wants to return to town must eat a path through the porridge.",
+      evidence: "had to eat his way back" }
+
+
+edges:
+
+  # Gift and hunger resolution
+  - { from: sweet_porridge_girl, to: sweet_porridge_mother, label: LIVES_WITH,
+      evidence: "lived alone with her mother" }
+  - { from: sweet_porridge_girl, to: affect_hunger, label: SUFFERS,
+      evidence: "no longer had anything to eat" }
+  - { from: sweet_porridge_girl, to: loc_sweet_porridge_forest, label: ENTERS,
+      evidence: "went into the forest" }
+  - { from: sweet_porridge_aged_woman, to: sweet_porridge_girl, label: KNOWS_SORROW_OF,
+      evidence: "was aware of her sorrow" }
+  - { from: sweet_porridge_aged_woman, to: obj_sweet_porridge_pot, label: GIVES,
+      evidence: "presented her with a little pot" }
+  - { from: sweet_porridge_girl, to: obj_sweet_porridge_pot, label: TAKES_HOME,
+      evidence: "The girl took the pot home to her mother" }
+  - { from: obj_sweet_porridge_pot, to: obj_sweet_porridge_food, label: PRODUCES_BY_FORMULA,
+      evidence: "would cook good, sweet porridge" }
+  - { from: obj_sweet_porridge_pot, to: affect_hunger, label: ENDS,
+      evidence: "freed from their poverty and hunger" }
+
+  # Misused abundance
+  - { from: sweet_porridge_mother, to: obj_sweet_porridge_pot, label: ACTIVATES,
+      evidence: "Cook, little pot, cook" }
+  - { from: sweet_porridge_mother, to: obj_sweet_porridge_food, label: EATS_UNTIL_SATISFIED,
+      evidence: "she ate till she was satisfied" }
+  - { from: sweet_porridge_mother, to: obj_sweet_porridge_pot, label: LACKS_STOP_WORD_FOR,
+      evidence: "did not know the word" }
+  - { from: law_unchecked_formula_abundance_floods_world, to: obj_sweet_porridge_pot, label: LETS_COOKING_CONTINUE,
+      evidence: "So it went on cooking" }
+  - { from: obj_sweet_porridge_food, to: loc_sweet_porridge_kitchen, label: FILLS,
+      evidence: "the kitchen and whole house were full" }
+  - { from: obj_sweet_porridge_food, to: loc_sweet_porridge_street, label: FILLS,
+      evidence: "then the whole street" }
+  - { from: obj_sweet_porridge_food, to: loc_sweet_porridge_town, label: BLOCKS_RETURN_TO,
+      evidence: "return to the town" }
+
+  # Restoration by exact counter-command
+  - { from: sweet_porridge_girl, to: obj_sweet_porridge_pot, label: STOPS_BY_FORMULA,
+      evidence: "Stop, little pot" }
+  - { from: obj_sweet_porridge_pot, to: obj_sweet_porridge_food, label: CEASES_PRODUCING,
+      evidence: "it stopped and gave up cooking" }
+  - { from: sweet_porridge_townpeople, to: obj_sweet_porridge_food, label: EAT_PATH_THROUGH,
+      evidence: "had to eat his way back" }

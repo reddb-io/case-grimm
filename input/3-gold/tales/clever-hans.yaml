@@ -1,0 +1,294 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: clever-hans
+khm: 32
+atu: '1696'
+atu_name: Clever Hans
+canonical_source: ../../2-silver/canonical/clever-hans/canonical.txt
+title: Clever Hans
+
+
+entities:
+
+  characters:
+
+    clever_hans_hans:
+      name: Clever Hans
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor, agency_violence]
+      speech_acts_performed: [speech_command]
+      affects: [affect_shame]
+      traits: [literal-obedient, context-blind, repetitive-suitor, destructive-learner]
+      evidence: |
+        "That was ill done, Hans... Never mind, I'll do better next
+        time." Each correction is obeyed only in the next and wrong
+        episode.
+
+    clever_hans_mother:
+      name: Hans's Mother
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_command]
+      traits: [instructor, household-corrector, formula-speaker]
+      evidence: |
+        "That was ill done, Hans. Thou shouldst have stuck the needle
+        in thy sleeve."
+
+    clever_hans_grethel:
+      name: Grethel
+      archetypes: [arc_naive_victim]
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_bargain]
+      affects: [affect_anger]
+      traits: [gift-giver, intended-bride, tied-to-rack, eye-attack-victim]
+      evidence: |
+        "Grethel says to Hans, 'I will go with thee.'"
+
+    clever_hans_goat:
+      name: The Young Goat
+      species: sp_goat
+      agency_modes: [agency_endurance]
+      traits: [gift-animal, pocket-suffocated]
+      evidence: |
+        "Hans takes the goat, ties its legs, and puts it in his pocket.
+        When he gets home it is suffocated."
+
+    clever_hans_dogs:
+      name: The Dogs
+      species: sp_dog
+      agency_modes: [agency_violence]
+      traits: [bacon-devourers, roadside-animals]
+      evidence: |
+        "The dogs come and devour the bacon."
+
+    clever_hans_calf:
+      name: The Calf
+      species: sp_cattle
+      agency_modes: [agency_violence]
+      traits: [gift-animal, face-kicker, too-large-for-carrying-rule]
+      evidence: |
+        "Hans takes the calf, puts it on his head, and the calf kicks
+        his face."
+
+    clever_hans_sheep:
+      name: The Calves and Sheep in the Stable
+      species: sp_sheep
+      agency_modes: [agency_endurance]
+      traits: [stable-flock, mutilated-for-eyes]
+      evidence: |
+        "Hans went into the stable, cut out all the calves' and
+        sheep's eyes"
+
+  magic_objects:
+
+    obj_clever_hans_needle:
+      name: Grethel's Needle
+      instance_of: obj_needle_thread
+      object_kind: tool
+      attributes:
+        mishandled_by: stuck-in-hay-cart
+      evidence: |
+        "Hans takes the needle, sticks it into a hay-cart"
+
+    obj_clever_hans_knife:
+      name: Grethel's Knife
+      object_kind: weapon
+      attributes:
+        mishandled_by: stuck-in-sleeve
+      evidence: |
+        "Hans takes the knife, sticks it in his sleeve"
+
+    obj_clever_hans_hay_cart:
+      name: The Hay-Cart
+      object_kind: tool
+      attributes:
+        function: wrong place for carrying a needle
+      evidence: |
+        "sticks it into a hay-cart, and follows the cart home."
+
+    obj_clever_hans_bacon:
+      name: The Piece of Bacon
+      object_kind: food
+      attributes:
+        mishandled_by: dragged-on-rope
+      evidence: |
+        "Hans takes the bacon, ties it to a rope, and drags it away
+        behind him."
+
+    obj_clever_hans_rope:
+      name: The Rope
+      object_kind: tool
+      attributes:
+        used_on: [bacon, Grethel]
+      evidence: |
+        "I tied it to a rope, brought it home, dogs took it."
+
+    obj_clever_hans_rack:
+      name: The Rack
+      object_kind: architecture
+      attributes:
+        function: livestock feeding place where Hans ties Grethel
+      evidence: |
+        "led her to the rack and binds her fast"
+
+    obj_clever_hans_animal_eyes:
+      name: The Calves' and Sheep's Eyes
+      object_kind: relic
+      attributes:
+        false_obedience: literal response to "cast friendly eyes"
+      evidence: |
+        "cut out all the calves' and sheep's eyes, and threw them in
+        Grethel's face."
+
+  locations:
+
+    loc_clever_hans_mother_house:
+      name: Hans's Mother's House
+      instance_of: loc_house
+      evidence: |
+        "Good evening, mother." Hans repeatedly returns home for
+        correction.
+
+    loc_clever_hans_grethel_house:
+      name: Grethel's House
+      instance_of: loc_house
+      evidence: |
+        "Hans comes to Grethel. 'Good day, Grethel.'"
+
+    loc_clever_hans_stable:
+      name: The Stable
+      instance_of: loc_stable
+      evidence: |
+        "Hans went into the stable"
+
+
+classifications:
+
+  world_laws:
+    - law_misapplied_instruction_cascades
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_domestic_labor
+    - agency_violence
+
+  affects_driving:
+    - affect_shame
+    - affect_anger
+
+  symbol_numbers: []
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: clever_hans_hans,
+      scene: "Hans repeatedly goes from his mother to Grethel, promising to behave well" }
+  - { function: func_formula_gift, order: 2, actor: clever_hans_grethel,
+      scene: "Grethel gives Hans a needle; he sticks it in a hay-cart and loses its proper use" }
+  - { function: func_interdiction, order: 3, actor: clever_hans_mother,
+      scene: "mother says the needle should have been stuck in his sleeve" }
+  - { function: func_violation, order: 4, actor: clever_hans_hans,
+      scene: "Hans applies the sleeve-rule to Grethel's knife" }
+  - { function: func_interdiction, order: 5, actor: clever_hans_mother,
+      scene: "mother says the knife should have been put in his pocket" }
+  - { function: func_violation, order: 6, actor: clever_hans_hans,
+      scene: "Hans applies the pocket-rule to a young goat and suffocates it" }
+  - { function: func_interdiction, order: 7, actor: clever_hans_mother,
+      scene: "mother says a rope should have been put around the goat's neck" }
+  - { function: func_violation, order: 8, actor: clever_hans_hans,
+      scene: "Hans applies the rope-rule to bacon; dogs devour it" }
+  - { function: func_interdiction, order: 9, actor: clever_hans_mother,
+      scene: "mother says the bacon should have been carried on his head" }
+  - { function: func_violation, order: 10, actor: clever_hans_hans,
+      scene: "Hans applies the head-carrying rule to a calf and gets kicked in the face" }
+  - { function: func_interdiction, order: 11, actor: clever_hans_mother,
+      scene: "mother says the calf should have been led and put in the stall" }
+  - { function: func_violation, order: 12, actor: clever_hans_hans,
+      scene: "Hans applies livestock handling to Grethel: leads her by rope and ties her to the rack" }
+  - { function: func_interdiction, order: 13, actor: clever_hans_mother,
+      scene: "mother says Hans should have cast friendly eyes on Grethel" }
+  - { function: func_villainy, order: 14, actor: clever_hans_hans,
+      scene: "Hans cuts out calves' and sheep's eyes and throws them in Grethel's face" }
+  - { function: func_resolution, order: 15, actor: clever_hans_grethel,
+      scene: "Grethel tears herself loose, runs away, and becomes Hans's bride" }
+
+
+edges:
+
+  # Repeated route and instruction
+  - { from: clever_hans_hans, to: clever_hans_mother, label: ASKS_LEAVE_OF,
+      evidence: "Whither away, Hans? Hans answered, 'To Grethel.'" }
+  - { from: clever_hans_mother, to: clever_hans_hans, label: COMMANDS,
+      evidence: "Behave well, Hans." }
+  - { from: clever_hans_hans, to: clever_hans_grethel, label: VISITS,
+      evidence: "Hans comes to Grethel. 'Good day, Grethel.'" }
+  - { from: clever_hans_hans, to: law_misapplied_instruction_cascades, label: ENACTS,
+      evidence: "Never mind, I'll do better next time." }
+
+  # Needle and knife
+  - { from: clever_hans_grethel, to: obj_clever_hans_needle, label: GIVES,
+      evidence: "Grethel presents Hans with a needle." }
+  - { from: clever_hans_hans, to: obj_clever_hans_needle, label: STICKS_INTO,
+      evidence: "sticks it into a hay-cart" }
+  - { from: clever_hans_hans, to: obj_clever_hans_hay_cart, label: FOLLOWS_HOME,
+      evidence: "and follows the cart home." }
+  - { from: clever_hans_mother, to: obj_clever_hans_needle, label: CORRECTS_HANDLING_OF,
+      evidence: "Thou shouldst have stuck the needle in thy sleeve." }
+  - { from: clever_hans_grethel, to: obj_clever_hans_knife, label: GIVES,
+      evidence: "Grethel presents Hans with a knife." }
+  - { from: clever_hans_hans, to: obj_clever_hans_knife, label: STICKS_IN_SLEEVE,
+      evidence: "Hans takes the knife, sticks it in his sleeve" }
+  - { from: clever_hans_mother, to: obj_clever_hans_knife, label: CORRECTS_HANDLING_OF,
+      evidence: "thou shouldst have put the knife in thy pocket." }
+
+  # Goat, bacon, dogs, calf
+  - { from: clever_hans_grethel, to: clever_hans_goat, label: GIVES,
+      evidence: "Grethel presents Hans with a young goat." }
+  - { from: clever_hans_hans, to: clever_hans_goat, label: SUFFOCATES,
+      evidence: "puts it in his pocket. When he gets home it is suffocated." }
+  - { from: clever_hans_mother, to: clever_hans_goat, label: CORRECTS_HANDLING_OF,
+      evidence: "thou shouldst have put a rope round the goat's neck." }
+  - { from: clever_hans_grethel, to: obj_clever_hans_bacon, label: GIVES,
+      evidence: "Grethel presents Hans with a piece of bacon." }
+  - { from: clever_hans_hans, to: obj_clever_hans_bacon, label: DRAGS,
+      evidence: "ties it to a rope, and drags it away behind him." }
+  - { from: clever_hans_dogs, to: obj_clever_hans_bacon, label: DEVOUR,
+      evidence: "The dogs come and devour the bacon." }
+  - { from: clever_hans_mother, to: obj_clever_hans_bacon, label: CORRECTS_HANDLING_OF,
+      evidence: "thou shouldst have carried the bacon on thy head." }
+  - { from: clever_hans_grethel, to: clever_hans_calf, label: GIVES,
+      evidence: "Grethel presents Hans with a calf." }
+  - { from: clever_hans_hans, to: clever_hans_calf, label: CARRIES_ON_HEAD,
+      evidence: "puts it on his head" }
+  - { from: clever_hans_calf, to: clever_hans_hans, label: KICKS,
+      evidence: "and the calf kicks his face." }
+  - { from: clever_hans_mother, to: clever_hans_calf, label: CORRECTS_HANDLING_OF,
+      evidence: "thou shouldst have led the calf, and put it in the stall." }
+
+  # Grethel treated as livestock
+  - { from: clever_hans_grethel, to: clever_hans_hans, label: GOES_WITH,
+      evidence: "Grethel says to Hans, 'I will go with thee.'" }
+  - { from: clever_hans_hans, to: obj_clever_hans_rope, label: USES,
+      evidence: "takes Grethel, ties her to a rope" }
+  - { from: clever_hans_hans, to: obj_clever_hans_rack, label: BINDS_AT,
+      evidence: "leads her to the rack and binds her fast." }
+  - { from: clever_hans_mother, to: clever_hans_grethel, label: CORRECTS_COURTSHIP_TOWARD,
+      evidence: "thou shouldst have cast friendly eyes on her." }
+
+  # Final grotesque obedience
+  - { from: clever_hans_hans, to: loc_clever_hans_stable, label: ENTERS,
+      evidence: "Hans went into the stable" }
+  - { from: clever_hans_hans, to: clever_hans_sheep, label: MUTILATES,
+      evidence: "cut out all the calves' and sheep's eyes" }
+  - { from: clever_hans_hans, to: obj_clever_hans_animal_eyes, label: THROWS_AT,
+      evidence: "threw them in Grethel's face." }
+  - { from: clever_hans_grethel, to: clever_hans_hans, label: FLEES_FROM,
+      evidence: "Grethel became angry, tore herself loose and ran away" }
+  - { from: clever_hans_grethel, to: clever_hans_hans, label: BECOMES_BRIDE_OF,
+      evidence: "and became the bride of Hans." }

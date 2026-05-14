@@ -1,0 +1,213 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: hans-married
+khm: 84
+atu: '859B'
+atu_name: Hans Married / Equivocal Wealth Wooing
+canonical_source: ../../2-silver/canonical/hans-married/canonical.txt
+title: Hans Married
+
+
+entities:
+
+  characters:
+
+    hans_married_hans:
+      name: Hans
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      traits: [young-peasant, stove-seated, farthing-holder, bread-breaker, rich-wife-bridegroom, patched-smock-owner, literal-patch-pointer]
+      evidence: |
+        a young peasant named Hans
+
+    hans_married_uncle:
+      name: Hans's Uncle / Wooer
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_lie]
+      traits: [rich-wife-seeker, stove-stager, farthing-giver, patched-trouser-wearer, equivocal-wealth-speaker]
+      evidence: |
+        whose uncle wanted to find him a rich wife
+
+    hans_married_covetous_father:
+      name: The Covetous Father
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      affects: [affect_greed]
+      traits: [rich-peasant-father, means-questioner, patch-misreader, opportunity-seizer, marriage-consenter]
+      evidence: |
+        The covetous father asked
+
+    hans_married_bride:
+      name: The Rich Peasant's Daughter
+      species: sp_human
+      agency_modes: [agency_speech]
+      existential_states: [state_deceived]
+      traits: [rich-peasant-daughter, married-to-hans, property-inspector, patch-shown-wife]
+      evidence: |
+        a rich peasant’s daughter
+
+    hans_married_wedding_guest:
+      name: The Impossible Wedding Guest
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [snow-headdress-wearer, cobweb-coat-wearer, glass-shoe-wearer, comic-coda-speaker]
+      evidence: |
+        Were you indeed at the wedding?
+
+  magic_objects:
+
+    obj_hans_married_farthing:
+      name: The Newly-Coined Farthing
+      object_kind: treasure
+      attributes:
+        function: literal "money in hand" used to support the wooer's claim
+      evidence: |
+        a bright newly-coined farthing in his hand
+
+    obj_hans_married_milk_bread:
+      name: The Milk and White Bread
+      object_kind: food
+      attributes:
+        function: literal bread to break, staged as household abundance
+      evidence: |
+        a pot of milk and plenty of white bread
+
+    obj_hans_married_patched_trousers:
+      name: The Uncle's Patched Trousers
+      object_kind: garment
+      attributes:
+        function: ambiguous "patches" used to imply landholdings
+      evidence: |
+        a pair of old patched trousers
+
+    obj_hans_married_patched_smock:
+      name: Hans's Patched Smock-Frock
+      object_kind: garment
+      attributes:
+        function: literal patches shown to the bride as if they were property
+      evidence: |
+        put on his patched smock-frock
+
+    obj_hans_married_sunday_coat:
+      name: Hans's Sunday Coat
+      object_kind: garment
+      attributes:
+        function: good coat removed before showing the supposed property
+      evidence: |
+        Hans took off his Sunday coat
+
+  locations:
+
+    loc_hans_married_stove_seat:
+      name: The Hot Place behind the Stove
+      instance_of: loc_hearth
+      evidence: |
+        seated Hans behind the stove, and had it made very hot
+
+    loc_hans_married_next_village:
+      name: The Next Village
+      instance_of: loc_village
+      evidence: |
+        in the next village
+
+    loc_hans_married_fields:
+      name: The Fields and Meadows
+      instance_of: loc_field
+      evidence: |
+        fields and meadows were divided from each other
+
+    loc_hans_married_wedding:
+      name: The Wedding
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        the wedding was celebrated on the appointed day
+
+
+classifications:
+
+  world_laws:
+    - law_equivocal_poverty_terms_mimic_wealth
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_object_mediation
+    - agency_social_rank
+
+  affects_driving:
+    - affect_greed
+
+  symbol_numbers: []
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: hans_married_uncle,
+      scene: "Hans's uncle wants to find him a rich wife" }
+  - { function: func_staging, order: 2, actor: hans_married_uncle,
+      scene: "the uncle seats Hans behind the hot stove with milk, bread, and a farthing" }
+  - { function: func_deceptive_courtship, order: 3, actor: hans_married_uncle,
+      scene: "the uncle describes Hans's poverty props as if they were signs of wealth" }
+  - { function: func_greedy_acceptance, order: 4, actor: hans_married_covetous_father,
+      scene: "the covetous father accepts the marriage because he believes Hans has means" }
+  - { function: func_wedding, order: 5, actor: hans_married_bride,
+      scene: "the wedding is celebrated on the appointed day" }
+  - { function: func_exposure, order: 6, actor: hans_married_hans,
+      scene: "Hans shows the bride patches on his garment instead of land patches" }
+  - { function: func_comic_coda, order: 7, actor: hans_married_wedding_guest,
+      scene: "a nonsense wedding-guest formula closes with snow, cobweb, and glass attire breaking apart" }
+
+
+edges:
+
+  # Staging literal poverty as wealth
+  - { from: hans_married_uncle, to: hans_married_hans, label: SEEKS_RICH_WIFE_FOR,
+      evidence: "wanted to find him a rich wife" }
+  - { from: hans_married_uncle, to: loc_hans_married_stove_seat, label: SEATS_HANS_BEHIND,
+      evidence: "seated Hans behind the stove" }
+  - { from: hans_married_uncle, to: obj_hans_married_milk_bread, label: GIVES,
+      evidence: "a pot of milk and plenty of white bread" }
+  - { from: hans_married_uncle, to: obj_hans_married_farthing, label: PLACES_IN_HAND,
+      evidence: "gave him a bright newly-coined farthing in his hand" }
+  - { from: hans_married_uncle, to: obj_hans_married_patched_trousers, label: WEARS,
+      evidence: "put on a pair of old patched trousers" }
+  - { from: hans_married_uncle, to: hans_married_bride, label: PROPOSES_MARRIAGE_TO,
+      evidence: "Won’t you marry my nephew Hans" }
+  - { from: hans_married_covetous_father, to: affect_greed, label: EMBODIES,
+      evidence: "The covetous father asked" }
+  - { from: hans_married_covetous_father, to: hans_married_uncle, label: ASKS_ABOUT_MEANS,
+      evidence: "How is it with regard to his means?" }
+  - { from: hans_married_uncle, to: law_equivocal_poverty_terms_mimic_wealth, label: ENACTS,
+      evidence: "a snug berth, a nice bit of money in hand, and plenty of bread to break" }
+  - { from: obj_hans_married_patched_trousers, to: law_equivocal_poverty_terms_mimic_wealth, label: MATERIALIZES_PATCH_AMBIGUITY,
+      evidence: "small pieces of land were called patches also" }
+  - { from: hans_married_covetous_father, to: hans_married_bride, label: CONSENTS_TO_MARRIAGE,
+      evidence: "I have nothing further to say against the marriage" }
+
+  # Marriage and exposure
+  - { from: hans_married_bride, to: hans_married_hans, label: MARRIES,
+      evidence: "the wedding was celebrated on the appointed day" }
+  - { from: hans_married_bride, to: loc_hans_married_fields, label: GOES_TO_INSPECT_PROPERTY,
+      evidence: "went out of doors to see the bridegroom’s property" }
+  - { from: hans_married_hans, to: obj_hans_married_sunday_coat, label: TAKES_OFF,
+      evidence: "Hans took off his Sunday coat" }
+  - { from: hans_married_hans, to: obj_hans_married_patched_smock, label: PUTS_ON,
+      evidence: "put on his patched smock-frock" }
+  - { from: hans_married_hans, to: obj_hans_married_patched_smock, label: POINTS_TO_PATCHES,
+      evidence: "slapped either a large or a small patch on his smock-frock" }
+  - { from: hans_married_hans, to: hans_married_bride, label: REDIRECTS_GAZE_TO_CLOTHING,
+      evidence: "his wife should not stare at the broad land, but look at his garment" }
+  - { from: hans_married_wedding_guest, to: loc_hans_married_wedding, label: CLAIMS_ATTENDANCE,
+      evidence: "Yes, indeed I was there" }
+  - { from: hans_married_wedding_guest, to: moral_comic_inversion, label: CLOSES_WITH_NONSENSE_ATTIRE,
+      evidence: "My head-dress was of snow" }

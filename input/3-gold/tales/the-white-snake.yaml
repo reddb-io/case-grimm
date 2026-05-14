@@ -1,0 +1,382 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-white-snake
+khm: 17
+atu: '673'
+atu_name: The White Snake
+canonical_source: ../../2-silver/canonical/the-white-snake/canonical.txt
+title: The White Snake
+
+
+entities:
+
+  characters:
+
+    white_snake_servant:
+      name: The Trusty Servant / Young Fellow
+      species: sp_human
+      agency_modes: [agency_animal_language, agency_animal_aid, agency_endurance, agency_speech]
+      affects: [affect_curiosity, affect_fear, affect_love_at_first_sight]
+      traits: [secret-taster, animal-language-hearer, falsely-accused, kind-hearted, task-suitor]
+      evidence: |
+        "Eating the snake had given him power of understanding the
+        language of animals."
+
+    white_snake_wise_king:
+      name: The Wise King with the Covered Dish
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_command, speech_promise]
+      affects: [affect_anger]
+      traits: [secret-wise, solitary-eater, accusation-enforcer, amends-maker]
+      evidence: |
+        "Nothing was hidden from him"
+
+    white_snake_queen:
+      name: The Queen Whose Ring Is Lost
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [ring-owner, absent-accuser-cause]
+      evidence: |
+        "the Queen lost her most beautiful ring"
+
+    white_snake_sparrows:
+      name: The Chattering Sparrows
+      species: sp_bird
+      agency_modes: [agency_speech]
+      traits: [first-heard-animal-language, field-and-wood-reporters]
+      evidence: |
+        "the sparrows... telling one another of all kinds of things
+        which they had seen"
+
+    white_snake_duck:
+      name: The Ring-Swallowing Duck
+      species: sp_bird
+      agency_modes: [agency_speech]
+      traits: [confidential-talker, ring-swallower, kitchen-killed]
+      evidence: |
+        "I swallowed a ring which lay under the Queen's window."
+
+    white_snake_three_fishes:
+      name: The Three Rescued Fishes
+      archetypes: [arc_animal_helper]
+      species: sp_fish
+      agency_modes: [agency_animal_aid, agency_speech]
+      traits: [reed-caught, water-restored, ring-retrievers, debt-rememberers]
+      evidence: |
+        "We will remember you and repay you for saving us!"
+
+    white_snake_ant_king:
+      name: The Ant-King and His People
+      archetypes: [arc_animal_helper]
+      species: sp_ant
+      agency_modes: [agency_animal_aid, agency_speech]
+      traits: [nearly-trampled, side-path-beneficiary, millet-sorters, collective-workers]
+      evidence: |
+        "The ant-king had come in the night with thousands and
+        thousands of ants"
+
+    white_snake_young_ravens:
+      name: The Three Young Ravens
+      archetypes: [arc_animal_helper]
+      species: sp_bird
+      agency_modes: [agency_animal_aid, agency_speech]
+      traits: [cast-out-chicks, horse-fed, grown-fliers, apple-fetchers]
+      evidence: |
+        "We are the three young ravens whom you saved from starving"
+
+    white_snake_old_ravens:
+      name: The Two Old Ravens
+      species: sp_bird
+      agency_modes: [agency_speech]
+      affects: [affect_anger]
+      traits: [nest-parents, food-scarce, chick-expellers]
+      evidence: |
+        "Out with you, you idle, good-for-nothing creatures!"
+
+    white_snake_princess:
+      name: The Proud King's Daughter
+      archetypes: [arc_proud_task_princess]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_command]
+      affects: [affect_pride, affect_love_at_first_sight]
+      traits: [beautiful, proud-hearted, status-scornful, serial-task-setter, apple-transformed]
+      evidence: |
+        "she scorned him, and required him first to perform another task."
+
+    white_snake_bride_king:
+      name: The King Who Sets the Sea-Ring Task
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_command]
+      traits: [task-announcer, death-threatener, marriage-gatekeeper]
+      evidence: |
+        "the King ordered him to fetch this ring up from the bottom of
+        the sea"
+
+  magic_objects:
+
+    obj_white_snake_dish:
+      name: The Covered Dish of White Snake
+      instance_of: obj_language_granting_food
+      object_kind: food
+      attributes:
+        effect: grants understanding of animal language
+        secrecy: eaten by the king alone after dinner
+      evidence: |
+        "a white snake lying on the dish"
+
+    obj_queens_ring_white_snake:
+      name: The Queen's Lost Ring
+      object_kind: token
+      attributes:
+        swallowed_by: white_snake_duck
+        function: false accusation against servant
+      evidence: |
+        "the Queen lost her most beautiful ring"
+
+    obj_sea_ring_white_snake:
+      name: The Gold Ring Thrown into the Sea
+      object_kind: token
+      attributes:
+        task: retrieve from bottom of sea
+        recovered_by: white_snake_three_fishes
+      evidence: |
+        "a gold ring was thrown into it, in his sight"
+
+    obj_millet_seed_sacks_white_snake:
+      name: The Ten Sacks of Millet-Seed
+      object_kind: material
+      attributes:
+        count: 10
+        task: gather every grain before sunrise
+        gathered_by: white_snake_ant_king
+      evidence: |
+        "ten sacks-full of millet-seed on the grass"
+
+    obj_golden_apple_white_snake:
+      name: The Golden Apple from the Tree of Life
+      instance_of: obj_life_apple
+      object_kind: food
+      attributes:
+        source: Tree of Life at the end of the world
+        effect: fills princess's heart with love
+      evidence: |
+        "a golden apple fell into his hand"
+
+    obj_servants_horse_white_snake:
+      name: The Servant's Horse
+      object_kind: creature_object
+      attributes:
+        sacrificed_for: white_snake_young_ravens
+      evidence: |
+        "killed his horse with his sword, and gave it to them for food"
+
+  locations:
+
+    loc_wise_king_castle_white_snake:
+      name: The Wise King's Castle
+      instance_of: loc_castle
+      evidence: |
+        "there lived a king who was famed for his wisdom"
+
+    loc_servant_room_white_snake:
+      name: The Servant's Locked Room
+      instance_of: loc_house
+      evidence: |
+        "carrying the dish into his room. When he had carefully locked
+        the door"
+
+    loc_courtyard_brook_white_snake:
+      name: The Courtyard Brook
+      instance_of: loc_brook
+      evidence: |
+        "some ducks were sitting together quietly by a brook"
+
+    loc_pond_white_snake:
+      name: The Pond Where the Fishes Are Caught
+      instance_of: loc_pond
+      evidence: |
+        "came to a pond, where he saw three fishes caught in the reeds"
+
+    loc_wood_ravens_white_snake:
+      name: The Wood of the Ravens
+      instance_of: loc_forest
+      evidence: |
+        "The path led him into a wood"
+
+    loc_large_city_white_snake:
+      name: The Large City of the Bride Quest
+      evidence: |
+        "he came to a large city"
+
+    loc_seashore_task_white_snake:
+      name: The Seashore of the Ring Task
+      instance_of: loc_sea
+      evidence: |
+        "he was led out to the sea"
+
+    loc_princess_garden_white_snake:
+      name: The Princess's Garden
+      instance_of: loc_garden
+      evidence: |
+        "She went down into the garden and strewed with her own hands"
+
+    loc_tree_of_life_white_snake:
+      name: The Tree of Life at the End of the World
+      evidence: |
+        "the end of the world, where the Tree of Life stands"
+
+
+classifications:
+
+  world_laws:
+    - law_ingested_animal_grants_language
+    - law_rescued_animals_repay_kindness
+    - law_promise_binds_reality
+
+  moral_regimes:
+    - moral_kindness_rewarded
+
+  agency_modes_dominant:
+    - agency_animal_language
+    - agency_animal_aid
+    - agency_endurance
+    - agency_social_rank
+
+  affects_driving:
+    - affect_curiosity
+    - affect_fear
+    - affect_love_at_first_sight
+    - affect_pride
+
+  symbol_numbers:
+    - num_3   # three fishes, three young ravens, three bride-winning tasks
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+  - { function: func_violation, order: 1, actor: white_snake_servant,
+      scene: "servant secretly uncovers and tastes the king's white snake dish" }
+  - { function: func_magical_agent, order: 2, actor: white_snake_servant,
+      scene: "snake flesh grants understanding of animal language" }
+  - { function: func_villainy, order: 3, actor: white_snake_wise_king,
+      scene: "lost queen's ring creates false accusation and execution threat" }
+  - { function: func_liquidation, order: 4, actor: white_snake_duck,
+      scene: "duck's animal speech reveals she swallowed the queen's ring" }
+  - { function: func_departure, order: 5, actor: white_snake_servant,
+      scene: "servant refuses court office and travels to see the world" }
+  - { function: func_donor_test, order: 6, actor: white_snake_three_fishes,
+      scene: "servant rescues three fishes from reeds" }
+  - { function: func_donor_test, order: 7, actor: white_snake_ant_king,
+      scene: "servant turns aside to avoid trampling the ant-king's people" }
+  - { function: func_donor_test, order: 8, actor: white_snake_young_ravens,
+      scene: "servant kills his horse to feed helpless young ravens" }
+  - { function: func_mediation, order: 9, actor: white_snake_bride_king,
+      scene: "herald announces princess marriage requires hard task on pain of death" }
+  - { function: func_difficult_task, order: 10, actor: white_snake_bride_king,
+      scene: "gold ring must be fetched from the sea" }
+  - { function: func_magical_agent, order: 11, actor: white_snake_three_fishes,
+      scene: "rescued fishes bring the sea-ring in a mussel shell" }
+  - { function: func_difficult_task, order: 12, actor: white_snake_princess,
+      scene: "princess scatters ten sacks of millet to be gathered before sunrise" }
+  - { function: func_magical_agent, order: 13, actor: white_snake_ant_king,
+      scene: "ants gather every grain of millet into the sacks" }
+  - { function: func_difficult_task, order: 14, actor: white_snake_princess,
+      scene: "princess demands an apple from the Tree of Life" }
+  - { function: func_magical_agent, order: 15, actor: white_snake_young_ravens,
+      scene: "ravens fetch the Golden Apple from the end of the world" }
+  - { function: func_wedding, order: 16, actor: white_snake_princess,
+      scene: "shared Apple of Life fills her heart with love and closes marriage" }
+
+
+edges:
+
+  # Secret food and animal language
+  - { from: white_snake_wise_king, to: obj_white_snake_dish, label: EATS_SECRETLY,
+      evidence: "the King never took off the cover to eat of it until he was quite alone." }
+  - { from: white_snake_servant, to: obj_white_snake_dish, label: TASTES,
+      evidence: "cut off a little bit and put it into his mouth." }
+  - { from: obj_white_snake_dish, to: white_snake_servant, label: GRANTS,
+      attributes: { agency: agency_animal_language },
+      evidence: "had given him power of understanding the language of animals." }
+  - { from: white_snake_servant, to: white_snake_sparrows, label: UNDERSTANDS,
+      evidence: "he heard a strange whispering of little voices outside his window." }
+
+  # False accusation resolved by animal speech
+  - { from: white_snake_queen, to: obj_queens_ring_white_snake, label: LOSES,
+      evidence: "the Queen lost her most beautiful ring" }
+  - { from: white_snake_wise_king, to: white_snake_servant, label: ACCUSES,
+      evidence: "suspicion of having stolen it fell upon this trusty servant" }
+  - { from: white_snake_wise_king, to: white_snake_servant, label: THREATENS,
+      evidence: "he himself should be looked upon as guilty and executed." }
+  - { from: white_snake_duck, to: obj_queens_ring_white_snake, label: SWALLOWS,
+      evidence: "I swallowed a ring which lay under the Queen's window." }
+  - { from: white_snake_servant, to: white_snake_duck, label: UNDERSTANDS,
+      evidence: "The servant stood by and listened." }
+  - { from: white_snake_servant, to: white_snake_wise_king, label: PROVES_INNOCENCE_TO,
+      evidence: "The servant could now easily prove his innocence" }
+  - { from: white_snake_wise_king, to: white_snake_servant, label: REWARDS,
+      evidence: "allowed him to ask a favor" }
+  - { from: white_snake_servant, to: loc_wise_king_castle_white_snake, label: LEAVES,
+      evidence: "he set out on his way" }
+
+  # Three animal rescues
+  - { from: white_snake_servant, to: white_snake_three_fishes, label: RESCUES,
+      evidence: "put the three prisoners back into the water." }
+  - { from: white_snake_three_fishes, to: white_snake_servant, label: PROMISE_REPAYMENT_TO,
+      evidence: "We will remember you and repay you for saving us!" }
+  - { from: white_snake_servant, to: white_snake_ant_king, label: SPARES,
+      evidence: "he turned on to a side path" }
+  - { from: white_snake_ant_king, to: white_snake_servant, label: PROMISE_REPAYMENT_TO,
+      evidence: "We will remember you-one good turn deserves another!" }
+  - { from: white_snake_old_ravens, to: white_snake_young_ravens, label: ABANDONS,
+      evidence: "throwing out their young ones." }
+  - { from: white_snake_servant, to: obj_servants_horse_white_snake, label: KILLS,
+      evidence: "killed his horse with his sword" }
+  - { from: white_snake_servant, to: white_snake_young_ravens, label: FEEDS,
+      evidence: "gave it to them for food." }
+  - { from: white_snake_young_ravens, to: white_snake_servant, label: PROMISE_REPAYMENT_TO,
+      evidence: "We will remember you-one good turn deserves another!" }
+
+  # Bride tasks and animal repayments
+  - { from: white_snake_bride_king, to: white_snake_servant, label: ASSIGNS_TASK_TO,
+      attributes: { task: retrieve_sea_ring, penalty: drowning },
+      evidence: "fetch this ring up from the bottom of the sea" }
+  - { from: white_snake_three_fishes, to: obj_sea_ring_white_snake, label: RETRIEVES,
+      evidence: "there lay the gold ring in the shell." }
+  - { from: white_snake_three_fishes, to: white_snake_servant, label: REPAYS_WITH,
+      attributes: { object: obj_sea_ring_white_snake },
+      evidence: "they were the very fishes whose lives he had saved." }
+  - { from: white_snake_princess, to: white_snake_servant, label: SCORNS,
+      evidence: "she scorned him" }
+  - { from: white_snake_princess, to: obj_millet_seed_sacks_white_snake, label: SCATTERS,
+      evidence: "strewed with her own hands ten sacks-full of millet-seed" }
+  - { from: white_snake_princess, to: white_snake_servant, label: ASSIGNS_TASK_TO,
+      attributes: { task: gather_millet_before_sunrise },
+      evidence: "before sunrise these must be picked up" }
+  - { from: white_snake_ant_king, to: obj_millet_seed_sacks_white_snake, label: GATHERS,
+      evidence: "picked up all the millet-seed and gathered them into the sacks." }
+  - { from: white_snake_ant_king, to: white_snake_servant, label: REPAYS_WITH,
+      attributes: { object: obj_millet_seed_sacks_white_snake },
+      evidence: "The ant-king had come in the night with thousands and thousands of ants" }
+  - { from: white_snake_princess, to: white_snake_servant, label: ASSIGNS_TASK_TO,
+      attributes: { task: fetch_apple_from_tree_of_life },
+      evidence: "he shall not be my husband until he has brought me an apple from the Tree of Life." }
+  - { from: white_snake_young_ravens, to: obj_golden_apple_white_snake, label: RETRIEVES,
+      evidence: "have brought you the apple." }
+  - { from: white_snake_young_ravens, to: white_snake_servant, label: REPAYS_WITH,
+      attributes: { object: obj_golden_apple_white_snake },
+      evidence: "We are the three young ravens whom you saved from starving" }
+
+  # Marriage closure
+  - { from: white_snake_servant, to: white_snake_princess, label: SHARES_WITH,
+      attributes: { object: obj_golden_apple_white_snake },
+      evidence: "They cut the Apple of Life in two and ate it together" }
+  - { from: obj_golden_apple_white_snake, to: white_snake_princess, label: FILLS_WITH_LOVE,
+      evidence: "then her heart became full of love for him" }
+  - { from: white_snake_princess, to: white_snake_servant, label: MARRIES,
+      evidence: "they lived in undisturbed happiness to a great age." }

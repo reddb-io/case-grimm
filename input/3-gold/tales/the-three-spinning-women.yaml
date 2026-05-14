@@ -1,0 +1,237 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-three-spinning-women
+khm: 14
+atu: '501'
+atu_name: The Three Spinning Women
+canonical_source: ../../2-silver/canonical/the-three-spinning-women/canonical.txt
+title: The Three Spinning Women
+
+
+entities:
+
+  characters:
+
+    three_spinners_idle_girl:
+      name: The Idle Girl / Bride
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_endurance]
+      speech_acts_performed: [speech_lie, speech_promise]
+      affects: [affect_fear, affect_shame]
+      traits: [idle, non-spinner, weeping, bargain-keeper, socially-quick]
+      evidence: |
+        "There was once a girl who was idle and would not spin"
+
+    three_spinners_mother:
+      name: The Ashamed Mother
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_anger, affect_shame]
+      traits: [impatient, daughter-beating, false-praiser]
+      evidence: |
+        "the woman was ashamed to reveal the laziness of her daughter"
+
+    three_spinners_queen:
+      name: The Spinning-Loving Queen
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_command, speech_promise]
+      affects: [affect_curiosity]
+      traits: [spinning-loving, palace-employer, marriage-promiser]
+      evidence: |
+        "There is nothing that I like better to hear than spinning"
+
+    three_spinners_prince:
+      name: The King's Son / Bridegroom
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      affects: [affect_disgust, affect_fear]
+      traits: [industry-praising, body-cost-frightened, spinning-forbidder]
+      evidence: |
+        "Neither now nor ever shall my beautiful bride touch a
+         spinning-wheel."
+
+    three_spinners_broad_foot:
+      name: First Spinning Woman (broad flat foot)
+      archetypes: [arc_grotesque_task_helper]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [broad-footed, treadle-worker, wedding-aunt]
+      evidence: |
+        "the first of whom had a broad flat foot"
+
+    three_spinners_hanging_lip:
+      name: Second Spinning Woman (hanging underlip)
+      archetypes: [arc_grotesque_task_helper]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [hanging-lipped, thread-wetter, wedding-aunt]
+      evidence: |
+        "the second had such a great underlip that it hung down over
+         her chin"
+
+    three_spinners_broad_thumb:
+      name: Third Spinning Woman (broad thumb)
+      archetypes: [arc_grotesque_task_helper]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [broad-thumbed, thread-twister, wedding-aunt]
+      evidence: |
+        "the third had a broad thumb"
+
+  magic_objects:
+
+    obj_flax_rooms_three_spinners:
+      name: The Three Rooms of Finest Flax
+      instance_of: obj_spinning_wheel
+      object_kind: material
+      attributes:
+        count: 3
+        function: impossible spinning task for marriage
+      evidence: |
+        "three rooms which were filled from the bottom to the top with
+         the finest flax"
+
+    obj_spun_yarn_three_spinners:
+      name: The Great Heap of Spun Yarn
+      object_kind: material
+      attributes:
+        function: proof of completed spinning
+      evidence: |
+        "the empty rooms, and the great heap of yarn"
+
+  locations:
+
+    loc_mothers_house_three_spinners:
+      name: The Mother's House
+      instance_of: loc_house
+      evidence: |
+        "the Queen... went into the house and asked the mother why she
+         was beating her daughter"
+
+    loc_palace_three_spinners:
+      name: The Queen's Palace
+      instance_of: loc_castle
+      evidence: |
+        "Let me have your daughter with me in the palace."
+
+    loc_flax_rooms_three_spinners:
+      name: The Three Flax Rooms
+      instance_of: loc_house
+      attributes:
+        contains: [obj_flax_rooms_three_spinners]
+      evidence: |
+        "three rooms which were filled from the bottom to the top with
+         the finest flax"
+
+    loc_window_three_spinners:
+      name: The Palace Window Where the Helpers Appear
+      threshold_type: threshold_doorway
+      evidence: |
+        "went to the window. Then she saw three women coming towards her"
+
+    loc_wedding_table_three_spinners:
+      name: The Wedding Table of the Three Aunts
+      instance_of: loc_castle
+      evidence: |
+        "allow me to invite them to the wedding, and let them sit with
+         us at table."
+
+
+classifications:
+
+  world_laws:
+    - law_promise_binds_reality
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_cunning
+    - agency_speech
+
+  affects_driving:
+    - affect_shame
+    - affect_fear
+    - affect_disgust
+
+  symbol_numbers:
+    - num_3   # three rooms, three days of weeping, three spinning helpers, three bodily marks
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_lack, order: 1, actor: three_spinners_idle_girl,
+      scene: "girl is idle and cannot spin despite mother's pressure" }
+  - { function: func_trickery, order: 2, actor: three_spinners_mother,
+      scene: "mother lies to queen that daughter spins forever" }
+  - { function: func_difficult_task, order: 3, actor: three_spinners_queen,
+      scene: "queen sets three rooms of flax as task for prince-marriage" }
+  - { function: func_donor_test, order: 4, actor: three_spinners_broad_foot,
+      scene: "three strange women offer spinning help if acknowledged as aunts" }
+  - { function: func_magical_agent, order: 5, actor: three_spinners_broad_thumb,
+      scene: "helpers spin all three rooms of flax into fine yarn" }
+  - { function: func_wedding, order: 6, actor: three_spinners_prince,
+      scene: "queen orders wedding after seeing empty rooms and yarn" }
+  - { function: func_recognition, order: 7, actor: three_spinners_prince,
+      scene: "bridegroom learns each helper's deformity was caused by spinning" }
+  - { function: func_liquidation, order: 8, actor: three_spinners_prince,
+      scene: "bridegroom forbids bride ever to touch a spinning wheel again" }
+
+
+edges:
+
+  # False industry creates the impossible task
+  - { from: three_spinners_mother, to: three_spinners_idle_girl, label: BEATS,
+      evidence: "she beat her, on which the girl began to weep loudly." }
+  - { from: three_spinners_mother, to: three_spinners_queen, label: LIES_TO,
+      evidence: "I cannot get her to leave off spinning." }
+  - { from: three_spinners_queen, to: three_spinners_idle_girl, label: TAKES_AWAY,
+      evidence: "The mother was heartily satisfied with this, and the Queen took the girl with her." }
+  - { from: three_spinners_queen, to: three_spinners_idle_girl, label: PROMISES_TO,
+      attributes: { reward: marriage_to_eldest_son, condition: spin_three_rooms_flax },
+      evidence: "when thou hast done it, thou shalt have my eldest son for a husband" }
+  - { from: three_spinners_queen, to: obj_flax_rooms_three_spinners, label: ASSIGNS,
+      evidence: "Now spin me this flax" }
+
+  # Helper bargain and labour
+  - { from: three_spinners_broad_foot, to: three_spinners_idle_girl, label: BARGAINS_WITH,
+      evidence: "If thou wilt invite us to the wedding... we will spin up the flax for thee" }
+  - { from: three_spinners_hanging_lip, to: three_spinners_idle_girl, label: BARGAINS_WITH,
+      evidence: "not be ashamed of us, and wilt call us thine aunts" }
+  - { from: three_spinners_broad_thumb, to: three_spinners_idle_girl, label: BARGAINS_WITH,
+      evidence: "likewise wilt place us at thy table" }
+  - { from: three_spinners_idle_girl, to: three_spinners_broad_foot, label: PROMISES_TO,
+      evidence: "With all my heart... do but come in and begin the work at once." }
+  - { from: three_spinners_broad_foot, to: obj_flax_rooms_three_spinners, label: SPINS,
+      evidence: "The one drew the thread and trod the wheel" }
+  - { from: three_spinners_hanging_lip, to: obj_flax_rooms_three_spinners, label: SPINS,
+      evidence: "the other wetted the thread" }
+  - { from: three_spinners_broad_thumb, to: obj_flax_rooms_three_spinners, label: SPINS,
+      evidence: "the third twisted it" }
+  - { from: three_spinners_broad_thumb, to: obj_spun_yarn_three_spinners, label: PRODUCES,
+      evidence: "a skein of thread fell to the ground that was spun in the finest manner possible." }
+  - { from: three_spinners_idle_girl, to: three_spinners_queen, label: CONCEALS_HELPERS_FROM,
+      evidence: "The girl concealed the three spinners from the Queen" }
+
+  # Wedding recognition and release from spinning
+  - { from: three_spinners_idle_girl, to: three_spinners_broad_foot, label: INVITES_AS_KIN,
+      evidence: "allow me to invite them to the wedding" }
+  - { from: three_spinners_idle_girl, to: three_spinners_hanging_lip, label: INVITES_AS_KIN,
+      evidence: "Welcome, dear aunts." }
+  - { from: three_spinners_idle_girl, to: three_spinners_broad_thumb, label: INVITES_AS_KIN,
+      evidence: "Welcome, dear aunts." }
+  - { from: three_spinners_prince, to: three_spinners_broad_foot, label: QUESTIONS,
+      evidence: "How do you come by such a broad foot?" }
+  - { from: three_spinners_broad_foot, to: three_spinners_prince, label: REVEALS_LABOR_COST,
+      evidence: "By treading, she answered, by treading." }
+  - { from: three_spinners_hanging_lip, to: three_spinners_prince, label: REVEALS_LABOR_COST,
+      evidence: "By licking, she answered, by licking." }
+  - { from: three_spinners_broad_thumb, to: three_spinners_prince, label: REVEALS_LABOR_COST,
+      evidence: "By twisting the thread, by twisting the thread." }
+  - { from: three_spinners_prince, to: three_spinners_idle_girl, label: FORBIDS_SPINNING,
+      evidence: "Neither now nor ever shall my beautiful bride touch a spinning-wheel." }

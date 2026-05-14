@@ -1,0 +1,385 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: how-six-men-got-on-in-the-world
+khm: 71
+atu: '513A'
+atu_name: Six Go through the Whole World / Six Soldiers of Fortune
+canonical_source: ../../2-silver/canonical/how-six-men-got-on-in-the-world/canonical.txt
+title: How Six Men Got On in the World
+
+
+entities:
+
+  characters:
+
+    how_six_discharged_soldier:
+      name: The Discharged Soldier
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_object_mediation]
+      speech_acts_performed: [speech_bargain, speech_command]
+      affects: [affect_anger, affect_greed]
+      traits: [brave-soldier, underpaid, angry-recruiter, servant-race-sponsor, bride-renouncer, treasure-claimant]
+      evidence: |
+        he received his dismissal, and three farthings for his expenses
+        on the way.
+
+    how_six_strong_companion:
+      name: The Tree-Plucking Strong Man
+      archetypes: [arc_extraordinary_companion]
+      species: sp_human
+      agency_modes: [agency_extraordinary_body, agency_violence, agency_object_mediation]
+      traits: [tree-plucker, mother-serving-son, sack-carrier, treasure-remover]
+      evidence: |
+        a man standing therein who had plucked up six trees as if they
+        were blades of corn.
+
+    how_six_huntsman:
+      name: The Sharp-Eyed Huntsman
+      archetypes: [arc_extraordinary_companion]
+      species: sp_human
+      agency_modes: [agency_extraordinary_body, agency_violence]
+      traits: [two-mile-marksman, fly-eye-shooter, castle-top-watcher, skull-shooter]
+      evidence: |
+        Two miles from here a fly is sitting on the branch of an
+        oak-tree, and I want to shoot its left eye out.
+
+    how_six_blower:
+      name: The Blower
+      archetypes: [arc_extraordinary_companion]
+      species: sp_human
+      agency_modes: [agency_extraordinary_body, agency_violence]
+      traits: [windmill-blower, nostril-worker, regiment-scatterer, mercy-giver]
+      evidence: |
+        Two miles from here are seven windmills; look, I am blowing them
+        till they turn round.
+
+    how_six_runner:
+      name: The One-Legged Runner
+      archetypes: [arc_extraordinary_companion]
+      species: sp_human
+      agency_modes: [agency_extraordinary_body, agency_endurance]
+      traits: [leg-remover, bird-faster-runner, water-race-servant, sleeping-racer, recovery-runner]
+      evidence: |
+        I am a runner,” he replied, “and to stop myself running far too
+        fast, I have taken off one of my legs
+
+    how_six_frost_man:
+      name: The Frost-Cap Man
+      archetypes: [arc_extraordinary_companion]
+      species: sp_human
+      agency_modes: [agency_extraordinary_body, agency_object_mediation]
+      traits: [sideways-cap-wearer, frost-maker, bird-freezer, iron-room-saviour]
+      evidence: |
+        if I set my hat straight, a terrible frost comes on
+
+    how_six_king:
+      name: The King
+      archetypes: [arc_oath_enforcer]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence, agency_object_mediation]
+      speech_acts_performed: [speech_command, speech_bargain]
+      affects: [affect_fear, affect_anger, affect_greed]
+      traits: [race-proclaimer, head-staker, daughter-protector, iron-room-trapper, treasure-bargainer, pursuit-orderer, defeated-ruler]
+      evidence: |
+        the King had proclaimed that whosoever ran a race with his
+        daughter and won the victory, should be her husband
+
+    how_six_princess:
+      name: The King's Daughter
+      species: sp_human
+      agency_modes: [agency_extraordinary_body, agency_cunning]
+      affects: [affect_fear]
+      traits: [swift-runner, race-prize, rival-runner, sleeping-enemy-exploiter, pitcher-emptier]
+      evidence: |
+        the King’s daughter, who could also run very well quite as well
+        as any ordinary mortal can
+
+    how_six_cook:
+      name: The Cook
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_violence]
+      speech_acts_performed: [speech_command]
+      traits: [fire-maker, king-servant, iron-room-heater, falsely-scolded]
+      evidence: |
+        he sent for the cook, and commanded him to make a fire under the
+        room
+
+    how_six_sergeant:
+      name: The Wounded Sergeant
+      species: sp_human
+      agency_modes: [agency_speech, agency_violence]
+      affects: [affect_fear]
+      traits: [regiment-pursuer, nine-wounded, mercy-beggar, royal-message-bearer]
+      evidence: |
+        One sergeant cried for mercy; he had nine wounds
+
+    how_six_horsemen:
+      name: The Two Regiments of Horsemen
+      species: sp_human
+      agency_modes: [agency_violence, agency_social_rank]
+      traits: [pursuers, royal-troops, prisoner-callers, sky-blown]
+      evidence: |
+        Two regiments speedily overtook the six
+
+  magic_objects:
+
+    obj_how_six_huntsman_gun:
+      name: The Huntsman's Gun
+      object_kind: weapon
+      attributes:
+        function: precise long-distance shot that wakes the sleeping runner without injury
+      evidence: |
+        he loaded his gun, and shot so cleverly
+
+    obj_how_six_runner_pitcher:
+      name: The Runner's Pitcher
+      object_kind: tool
+      attributes:
+        function: race token whose full or emptied state determines victory
+      evidence: |
+        The runner received a pitcher, and the King’s daughter one too
+
+    obj_how_six_horse_skull:
+      name: The Horse's Skull Pillow
+      object_kind: relic
+      attributes:
+        function: uncomfortable pillow intended to keep the runner from sleeping too long
+      evidence: |
+        He had, however, made a pillow of a horse’s skull
+
+    obj_how_six_frost_cap:
+      name: The Frost Cap
+      object_kind: garment
+      attributes:
+        function: straightening the cap causes deadly frost and counters the iron room's fire
+      evidence: |
+        if I set my hat straight, a terrible frost comes on
+
+    obj_how_six_treasure_sack:
+      name: The Kingdom-Sized Sack
+      object_kind: tool
+      attributes:
+        function: tailored container for carrying away the kingdom's treasure
+        making_time_days: 14
+      evidence: |
+        all the tailors in the whole kingdom, and they were to sit for
+        fourteen days and sew a sack.
+
+  locations:
+
+    loc_how_six_forest:
+      name: The Recruitment Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        Then full of anger he went into the forest
+
+    loc_how_six_race_town:
+      name: The Race Town
+      instance_of: loc_town
+      evidence: |
+        the six came to a town where the King had proclaimed
+
+    loc_how_six_far_well:
+      name: The Far-Distant Well
+      instance_of: loc_well
+      threshold_type: threshold_well
+      evidence: |
+        some water from a far distant well
+
+    loc_how_six_castle_top:
+      name: The Top of the Castle
+      instance_of: loc_castle
+      evidence: |
+        standing at the top of the castle
+
+    loc_how_six_iron_room:
+      name: The Iron Room
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      attributes:
+        floor: iron
+        doors: iron
+        windows: iron bars
+        function: royal death-trap heated from below
+      evidence: |
+        a room which had a floor of iron, and the doors also were of
+        iron, and the windows were guarded with iron bars.
+
+    loc_how_six_kingdom_treasury:
+      name: The Kingdom's Treasure
+      instance_of: loc_castle
+      evidence: |
+        all his treasure
+
+
+classifications:
+
+  world_laws:
+    - law_specialized_companions_solve_impossible_tasks
+    - law_promise_binds_reality
+    - law_coercive_retrieval_voids_exchange
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_extraordinary_body
+    - agency_speech
+    - agency_cunning
+    - agency_object_mediation
+    - agency_violence
+
+  affects_driving:
+    - affect_anger
+    - affect_fear
+    - affect_greed
+
+  symbol_numbers:
+    - num_3
+    - num_6
+    - num_7
+    - num_9
+
+  threshold_types:
+    - threshold_forest
+    - threshold_well
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: how_six_discharged_soldier,
+      scene: "a brave discharged soldier receives only three farthings and vows the king will give him the country's treasure" }
+  - { function: func_departure, order: 2, actor: how_six_discharged_soldier,
+      scene: "he enters the forest and begins recruiting extraordinary companions" }
+  - { function: func_helper_acquisition, order: 3, actor: how_six_discharged_soldier,
+      scene: "the strong man, huntsman, blower, runner, and frost-cap man join him" }
+  - { function: func_interdiction, order: 4, actor: how_six_king,
+      scene: "the king stakes marriage and beheading on a race against his daughter" }
+  - { function: func_task, order: 5, actor: how_six_runner,
+      scene: "the runner races the princess to bring water from a far well" }
+  - { function: func_trickery, order: 6, actor: how_six_princess,
+      scene: "the princess finds the runner sleeping, empties his pitcher, and runs ahead" }
+  - { function: func_helper_intervention, order: 7, actor: how_six_huntsman,
+      scene: "the huntsman shoots the horse's skull from under the runner without hurting him" }
+  - { function: func_victory, order: 8, actor: how_six_runner,
+      scene: "the runner refills the pitcher and returns ten minutes before the princess" }
+  - { function: func_villainy, order: 9, actor: how_six_king,
+      scene: "the king traps the six in an iron room and heats it from below" }
+  - { function: func_helper_intervention, order: 10, actor: how_six_frost_man,
+      scene: "the frost-cap man straightens his cap and freezes the iron room" }
+  - { function: func_bargain, order: 11, actor: how_six_discharged_soldier,
+      scene: "the soldier renounces the princess in exchange for as much gold as his servant can carry" }
+  - { function: func_acquisition, order: 12, actor: how_six_strong_companion,
+      scene: "the strong man fills the giant sack with the kingdom's treasure and carts" }
+  - { function: func_pursuit, order: 13, actor: how_six_king,
+      scene: "the enraged king sends two regiments to recover the sack" }
+  - { function: func_rescue, order: 14, actor: how_six_blower,
+      scene: "the blower scatters the pursuing regiments into the sky" }
+  - { function: func_return, order: 15, actor: how_six_discharged_soldier,
+      scene: "the six divide the riches and live content until death" }
+
+
+edges:
+
+  # Discharge and recruitment
+  - { from: how_six_discharged_soldier, to: affect_anger, label: FEELS,
+      evidence: "Then full of anger he went into the forest" }
+  - { from: how_six_discharged_soldier, to: loc_how_six_forest, label: ENTERS,
+      evidence: "he went into the forest" }
+  - { from: how_six_discharged_soldier, to: how_six_strong_companion, label: RECRUITS,
+      evidence: "Wilt thou be my servant and go with me?" }
+  - { from: how_six_strong_companion, to: num_6, label: PLUCKS_TREES,
+      evidence: "plucked up six trees as if they were blades of corn" }
+  - { from: how_six_discharged_soldier, to: how_six_huntsman, label: RECRUITS,
+      evidence: "Oh, come with me" }
+  - { from: how_six_huntsman, to: obj_how_six_huntsman_gun, label: SHOULDERS,
+      evidence: "had shouldered his gun" }
+  - { from: how_six_discharged_soldier, to: how_six_blower, label: RECRUITS,
+      evidence: "Oh, come with me" }
+  - { from: how_six_blower, to: num_7, label: TURNS_WINDMILLS,
+      evidence: "seven windmills; look, I am blowing them till they turn round" }
+  - { from: how_six_discharged_soldier, to: how_six_runner, label: RECRUITS,
+      evidence: "Oh, go with me." }
+  - { from: how_six_runner, to: agency_extraordinary_body, label: EMBODIES,
+      evidence: "if I run with both, I go quicker than any bird can fly" }
+  - { from: how_six_discharged_soldier, to: how_six_frost_man, label: RECRUITS,
+      evidence: "Oh, come with me" }
+  - { from: how_six_frost_man, to: obj_how_six_frost_cap, label: WEARS,
+      evidence: "wore a cap, but had put it quite on one ear" }
+
+  # Race wager
+  - { from: how_six_king, to: loc_how_six_race_town, label: PROCLAIMS_IN,
+      evidence: "the six came to a town where the King had proclaimed" }
+  - { from: how_six_king, to: how_six_princess, label: OFFERS_AS_PRIZE,
+      evidence: "should be her husband" }
+  - { from: how_six_king, to: how_six_discharged_soldier, label: STAKES_HEAD_OF,
+      evidence: "his head and thine are both set on the victory" }
+  - { from: how_six_discharged_soldier, to: how_six_runner, label: SENDS_AS_RUNNER,
+      evidence: "I will, however, let my servant run for me" }
+  - { from: how_six_discharged_soldier, to: how_six_runner, label: BUCKLES_LEG_ON,
+      evidence: "the man buckled the other leg on the runner" }
+  - { from: how_six_runner, to: loc_how_six_far_well, label: RUNS_TO,
+      evidence: "In a short time he reached the well" }
+  - { from: how_six_runner, to: obj_how_six_runner_pitcher, label: FILLS,
+      evidence: "filled his pitcher with water" }
+  - { from: how_six_runner, to: obj_how_six_horse_skull, label: SLEEPS_ON,
+      evidence: "made a pillow of a horse’s skull" }
+  - { from: how_six_princess, to: obj_how_six_runner_pitcher, label: EMPTIES,
+      evidence: "emptied his pitcher, and ran on" }
+  - { from: how_six_huntsman, to: loc_how_six_castle_top, label: WATCHES_FROM,
+      evidence: "standing at the top of the castle" }
+  - { from: how_six_huntsman, to: obj_how_six_horse_skull, label: SHOOTS_AWAY,
+      evidence: "shot the horse’s skull away from under the runner’s head" }
+  - { from: how_six_runner, to: how_six_princess, label: DEFEATS_IN_RACE,
+      evidence: "was at home again, ten minutes before the King’s daughter" }
+
+  # Royal betrayal and frost countermeasure
+  - { from: how_six_king, to: how_six_princess, label: TAKES_COUNSEL_WITH,
+      evidence: "they took counsel with each other how to get rid of him and his companions" }
+  - { from: how_six_king, to: loc_how_six_iron_room, label: CONDUCTS_INTO,
+      evidence: "he conducted them to a room which had a floor of iron" }
+  - { from: how_six_king, to: how_six_cook, label: COMMANDS,
+      evidence: "commanded him to make a fire under the room" }
+  - { from: how_six_cook, to: loc_how_six_iron_room, label: HEATS,
+      evidence: "make a fire under the room until the iron became red-hot" }
+  - { from: how_six_frost_man, to: obj_how_six_frost_cap, label: STRAIGHTENS,
+      evidence: "Then he put his cap on straight" }
+  - { from: obj_how_six_frost_cap, to: loc_how_six_iron_room, label: FREEZES,
+      evidence: "there came such a frost that all heat disappeared" }
+  - { from: law_specialized_companions_solve_impossible_tasks, to: how_six_frost_man, label: ACTIVATES_POWER_OF,
+      evidence: "the one with the cap" }
+
+  # Treasure bargain and pursuit
+  - { from: how_six_king, to: how_six_discharged_soldier, label: OFFERS_GOLD_FOR_RENUNCIATION,
+      evidence: "If thou wilt take gold and renounce my daughter" }
+  - { from: how_six_discharged_soldier, to: how_six_king, label: ACCEPTS_GOLD_BARGAIN,
+      evidence: "give me as much as my servant can carry, and I will not ask for your daughter" }
+  - { from: how_six_discharged_soldier, to: obj_how_six_treasure_sack, label: COMMISSIONS,
+      evidence: "all the tailors in the whole kingdom" }
+  - { from: how_six_strong_companion, to: obj_how_six_treasure_sack, label: CARRIES,
+      evidence: "carrying a bundle of linen on his back that is as big as a house" }
+  - { from: how_six_king, to: loc_how_six_kingdom_treasury, label: SURRENDERS,
+      evidence: "caused all his treasure to be brought thither" }
+  - { from: how_six_strong_companion, to: loc_how_six_kingdom_treasury, label: PACKS_INTO_SACK,
+      evidence: "pushed it into the sack" }
+  - { from: how_six_strong_companion, to: obj_how_six_treasure_sack, label: FILLS_WITH_CARTS,
+      evidence: "seven thousand carts with gold" }
+  - { from: how_six_king, to: affect_anger, label: FEELS,
+      evidence: "he became enraged" }
+  - { from: how_six_king, to: how_six_horsemen, label: SENDS_IN_PURSUIT,
+      evidence: "bade his horsemen mount and pursue the six" }
+  - { from: how_six_horsemen, to: how_six_strong_companion, label: DEMANDS_SACK_FROM,
+      evidence: "put down the sack with the gold" }
+  - { from: how_six_blower, to: how_six_horsemen, label: BLOWS_INTO_AIR,
+      evidence: "blew on the two regiments" }
+  - { from: how_six_sergeant, to: how_six_blower, label: CRIES_FOR_MERCY,
+      evidence: "One sergeant cried for mercy" }
+  - { from: how_six_blower, to: how_six_sergeant, label: SPARES,
+      evidence: "so that he came down without injury" }
+  - { from: how_six_king, to: how_six_discharged_soldier, label: CONCEDES_DEFEAT,
+      evidence: "Let the rascals go. They have the best of it." }
+  - { from: how_six_discharged_soldier, to: obj_how_six_treasure_sack, label: DIVIDES_RICHES_FROM,
+      evidence: "divided it amongst them" }

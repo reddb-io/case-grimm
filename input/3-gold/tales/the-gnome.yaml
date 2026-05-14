@@ -1,0 +1,385 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-gnome
+khm: 91
+atu: 301A
+atu_name: The Quest for the Vanished Princesses
+canonical_source: ../../2-silver/canonical/the-gnome/canonical.txt
+title: The Gnome
+
+
+entities:
+
+  characters:
+
+    gnome_king:
+      name: The Rich King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_command, speech_riddle]
+      affects: [affect_grief]
+      traits: [rich, tree-loving, harsh-wisher, daughter-seeking, reward-giver, false-hero-punisher]
+      evidence: |
+        a rich King who had three daughters
+
+    gnome_princesses:
+      name: The Three King's Daughters
+      archetypes: [arc_imprisoned_maiden]
+      species: sp_human
+      existential_states: [state_imprisoned]
+      agency_modes: [agency_speech, agency_endurance]
+      speech_acts_performed: [speech_testimony]
+      traits: [kind, fair, apple-eaters, underground-sunk, dragon-captive, stove-testifiers, rescued]
+      evidence: |
+        all three sank deep down into the earth
+
+    gnome_youngest_princess:
+      name: The Youngest King's Daughter
+      archetypes: [arc_imprisoned_maiden]
+      species: sp_human
+      existential_states: [state_imprisoned]
+      agency_modes: [agency_speech]
+      affects: [affect_curiosity]
+      traits: [apple-desiring, prohibition-minimizer, youngest-captive, final-bride]
+      evidence: |
+        the King’s youngest child had a great desire for an apple
+
+    gnome_hans:
+      name: Stupid Hans / The Youngest Huntsman
+      archetypes: [arc_dragon_slayer]
+      species: sp_human
+      agency_modes: [agency_violence, agency_cunning, agency_object_mediation, agency_music]
+      speech_acts_performed: [speech_command, speech_testimony]
+      affects: [affect_courage]
+      traits: [despised-youngest, mannikin-beater, well-descender, dragon-slayer, betrayal-anticipator, flute-player, true-rescuer]
+      evidence: |
+        always called him Stupid Hans
+
+    gnome_eldest_huntsman:
+      name: The Eldest Huntsman
+      archetypes: [arc_false_hero]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning]
+      affects: [affect_fear, affect_envy]
+      traits: [beaten-by-mannikin, well-coward, rope-cutter, false-rescuer]
+      evidence: |
+        the lot fell on the eldest
+
+    gnome_second_huntsman:
+      name: The Second Huntsman
+      archetypes: [arc_false_hero]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning]
+      affects: [affect_fear, affect_envy]
+      traits: [beaten-by-mannikin, well-coward, rope-cutter, false-rescuer]
+      evidence: |
+        the second stayed at home, and he fared no better
+
+    gnome_mannikin:
+      name: The Earth Mannikin / Gnome
+      archetypes: [arc_supernatural_donor]
+      being_type: being_dwarf
+      agency_modes: [agency_speech, agency_cunning, agency_violence]
+      traits: [small, bread-begging, trick-beating, thousandfold-earth-kin, well-guide]
+      evidence: |
+        he was an earth mannikin
+
+    gnome_dragons:
+      name: The Three Many-Headed Dragons
+      being_type: being_dragon
+      agency_modes: [agency_violence]
+      traits: [nine-headed, five-headed, four-headed, princess-guarding, snoring, slain]
+      evidence: |
+        with a many-headed dragon
+
+    gnome_elves:
+      name: The Summoned Elves
+      being_type: being_dwarf
+      agency_modes: [agency_object_mediation, agency_music]
+      traits: [flute-summoned, numerous, hair-lifters, daylight-carriers]
+      evidence: |
+        suddenly a number of elves appeared
+
+  magic_objects:
+
+    obj_gnome_blood_red_apples:
+      name: The Blood-Red Apples
+      object_kind: food
+      attributes:
+        function: forbidden fruit that sends the princesses underground
+      evidence: |
+        the apples on this tree were all as red as blood
+
+    obj_gnome_bread:
+      name: The Dropped Bread Piece
+      object_kind: food
+      attributes:
+        function: dwarf's test-bait for beating the first two huntsmen
+      evidence: |
+        begged for a piece of bread
+
+    obj_gnome_basket_bell:
+      name: The Basket and Bell
+      object_kind: tool
+      attributes:
+        function: well-descent apparatus and fear signal
+      evidence: |
+        take a large basket, and he must seat himself in it with his
+        hanger and a bell
+
+    obj_gnome_hanger:
+      name: Hans's Hanger
+      object_kind: weapon
+      attributes:
+        function: blade used to cut off the dragons' heads
+      evidence: |
+        he took his hanger
+
+    obj_gnome_gold_stomacher:
+      name: The Pure Gold Stomacher
+      object_kind: token
+      attributes:
+        function: princess gift proving Hans's rescue
+      evidence: |
+        her stomacher, which was made of pure gold
+
+    obj_gnome_test_stone:
+      name: The Basket Test Stone
+      object_kind: material
+      attributes:
+        function: substitute weight that exposes the brothers' rope betrayal
+      evidence: |
+        he took a great stone which was lying there
+
+    obj_gnome_flute:
+      name: The Wall Flute
+      object_kind: instrument
+      attributes:
+        function: music object that summons elves to lift Hans from underground
+      evidence: |
+        hanging on the wall, a flute
+
+    obj_gnome_iron_stove:
+      name: The Stove of Testimony
+      object_kind: tool
+      attributes:
+        function: non-human listener used to route princess testimony to the king
+      evidence: |
+        tell it to the stove
+
+  locations:
+
+    loc_gnome_palace_garden:
+      name: The Palace Garden and Forbidden Apple Tree
+      instance_of: loc_garden
+      evidence: |
+        daily went to walk in the palace garden
+
+    loc_gnome_search_castle:
+      name: The Empty Smoking-Food Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        they arrived at a great castle
+
+    loc_gnome_deep_well:
+      name: The Dry Deep Well
+      instance_of: loc_well
+      threshold_type: threshold_well
+      evidence: |
+        a deep well, but there was no water in it
+
+    loc_gnome_underworld_rooms:
+      name: The Three Underground Dragon Rooms
+      instance_of: loc_cave
+      threshold_type: threshold_well
+      evidence: |
+        Below were three rooms
+
+    loc_gnome_kings_palace:
+      name: The King's Palace
+      instance_of: loc_castle
+      threshold_type: threshold_gate
+      evidence: |
+        he at once went to the King’s palace
+
+
+classifications:
+
+  world_laws:
+    - law_prohibition_invites_violation
+    - law_music_attracts
+    - law_object_confession_circumvents_forced_oath
+
+  moral_regimes:
+    - moral_retributive
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_violence
+    - agency_cunning
+    - agency_object_mediation
+    - agency_music
+    - agency_social_rank
+
+  affects_driving:
+    - affect_curiosity
+    - affect_fear
+    - affect_envy
+    - affect_courage
+
+  symbol_numbers:
+    - num_3
+    - num_8
+    - num_9
+    - num_100
+
+  threshold_types:
+    - threshold_well
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: gnome_princesses,
+      scene: "three princesses walk under the king's beloved forbidden apple tree" }
+  - { function: func_violation, order: 2, actor: gnome_youngest_princess,
+      scene: "the youngest plucks the apple and all three sisters eat it" }
+  - { function: func_disappearance, order: 3, actor: gnome_princesses,
+      scene: "all three princesses sink deep underground" }
+  - { function: func_reward_proclamation, order: 4, actor: gnome_king,
+      scene: "the king promises a daughter in marriage to whoever restores them" }
+  - { function: func_arrival, order: 5, actor: gnome_hans,
+      scene: "three huntsmen reach an empty castle with warm food" }
+  - { function: func_donor_test_failed, order: 6, actor: gnome_mannikin,
+      scene: "the mannikin beats the elder huntsmen after the dropped-bread trick" }
+  - { function: func_donor_test_reversed, order: 7, actor: gnome_hans,
+      scene: "Hans refuses the trick, beats the mannikin, and receives the well-secret" }
+  - { function: func_descent_trial, order: 8, actor: gnome_eldest_huntsman,
+      scene: "the elder huntsmen ring early and are drawn back up in fear" }
+  - { function: func_descent, order: 9, actor: gnome_hans,
+      scene: "Hans lets himself be lowered to the bottom of the dry well" }
+  - { function: func_combat, order: 10, actor: gnome_hans,
+      scene: "Hans enters three rooms and cuts off the dragons' heads" }
+  - { function: func_rescue, order: 11, actor: gnome_hans,
+      scene: "Hans sends the three princesses up in the basket" }
+  - { function: func_betrayal_prevention, order: 12, actor: gnome_hans,
+      scene: "Hans sends a stone first and exposes the brothers' rope-cutting" }
+  - { function: func_false_claim, order: 13, actor: gnome_eldest_huntsman,
+      scene: "the false brothers take the princesses to the king and demand marriage" }
+  - { function: func_magical_escape, order: 14, actor: gnome_elves,
+      scene: "Hans plays the flute and elves carry him back to daylight" }
+  - { function: func_recognition_crisis, order: 15, actor: gnome_princesses,
+      scene: "the princesses faint when Hans appears at the wedding" }
+  - { function: func_object_testimony, order: 16, actor: gnome_princesses,
+      scene: "the princesses tell the stove, and the king listens outside" }
+  - { function: func_punishment, order: 17, actor: gnome_king,
+      scene: "the false brothers are hanged and Hans receives the youngest princess" }
+
+
+edges:
+
+  # Forbidden apple and disappearance
+  - { from: gnome_king, to: loc_gnome_palace_garden, label: LOVES_TREE_IN,
+      evidence: "the King was a great lover of all kinds of fine trees" }
+  - { from: gnome_king, to: obj_gnome_blood_red_apples, label: PROHIBITS_TAKING,
+      evidence: "if anyone gathered an apple from it" }
+  - { from: gnome_king, to: loc_gnome_underworld_rooms, label: WISHES_OFFENDER_UNDERGROUND,
+      evidence: "he wished him a hundred fathoms underground" }
+  - { from: gnome_youngest_princess, to: obj_gnome_blood_red_apples, label: DESIRES,
+      evidence: "had a great desire for an apple" }
+  - { from: gnome_youngest_princess, to: obj_gnome_blood_red_apples, label: PLUCKS,
+      evidence: "plucked off quite a large apple" }
+  - { from: gnome_princesses, to: obj_gnome_blood_red_apples, label: EAT,
+      evidence: "the two other sisters also ate some of the apple" }
+  - { from: law_prohibition_invites_violation, to: gnome_princesses, label: SINKS,
+      evidence: "all three sank deep down into the earth" }
+  - { from: gnome_king, to: gnome_princesses, label: SEEKS,
+      evidence: "He sought them everywhere in the palace and garden" }
+  - { from: gnome_king, to: gnome_hans, label: PROMISES_REWARD_TO_RESCUER,
+      evidence: "whosoever brought his daughters back again should have one of them to wife" }
+
+  # Castle, mannikin, and well-secret
+  - { from: gnome_hans, to: loc_gnome_search_castle, label: ARRIVES_AT,
+      evidence: "they arrived at a great castle" }
+  - { from: loc_gnome_search_castle, to: gnome_hans, label: OFFERS_WARM_FOOD,
+      evidence: "delicate dishes which were still so warm that they were smoking" }
+  - { from: gnome_mannikin, to: obj_gnome_bread, label: BEGS_FOR,
+      evidence: "begged for a piece of bread" }
+  - { from: gnome_mannikin, to: gnome_eldest_huntsman, label: BEATS,
+      evidence: "gave him a good beating" }
+  - { from: gnome_mannikin, to: gnome_second_huntsman, label: BEATS,
+      evidence: "he fared no better" }
+  - { from: gnome_hans, to: gnome_mannikin, label: REFUSES_DROPPED_BREAD_TEST,
+      evidence: "canst thou not pick up that piece thyself?" }
+  - { from: gnome_hans, to: gnome_mannikin, label: BEATS,
+      evidence: "gave him a thorough beating" }
+  - { from: gnome_mannikin, to: loc_gnome_deep_well, label: REVEALS,
+      evidence: "he would show him where the King’s daughters were" }
+  - { from: gnome_mannikin, to: gnome_hans, label: WARNS_OF_FALSE_COMPANIONS,
+      evidence: "did not intend to deal honourably with him" }
+  - { from: gnome_mannikin, to: obj_gnome_basket_bell, label: INSTRUCTS_USE_OF,
+      evidence: "take a large basket" }
+
+  # Descent and dragon rescue
+  - { from: gnome_eldest_huntsman, to: obj_gnome_basket_bell, label: RINGS_EARLY,
+      evidence: "If I ring, you must draw me up again immediately." }
+  - { from: gnome_second_huntsman, to: obj_gnome_basket_bell, label: RINGS_EARLY,
+      evidence: "he did just the same as the first" }
+  - { from: gnome_hans, to: loc_gnome_underworld_rooms, label: DESCENDS_TO_BOTTOM,
+      evidence: "lowered quite to the bottom" }
+  - { from: gnome_dragons, to: gnome_princesses, label: HOLDS_CAPTIVE,
+      evidence: "with a many-headed dragon" }
+  - { from: gnome_hans, to: obj_gnome_hanger, label: TAKES,
+      evidence: "he took his hanger" }
+  - { from: gnome_hans, to: gnome_dragons, label: CUTS_OFF_NINE_HEADS,
+      evidence: "the nine fell off" }
+  - { from: gnome_hans, to: gnome_dragons, label: DELIVERS_FROM_FIVE_HEADS,
+      evidence: "a dragon with five heads" }
+  - { from: gnome_hans, to: gnome_dragons, label: DELIVERS_FROM_FOUR_HEADS,
+      evidence: "a dragon with four heads" }
+  - { from: gnome_princesses, to: gnome_hans, label: EMBRACE_RESCUER,
+      evidence: "embraced him and kissed him" }
+  - { from: gnome_princesses, to: obj_gnome_gold_stomacher, label: GIVES_TOKEN,
+      evidence: "hung it round his neck" }
+  - { from: gnome_hans, to: obj_gnome_basket_bell, label: SENDS_PRINCESSES_UP,
+      evidence: "placed the princesses one after the other in the basket" }
+
+  # False brothers and magical escape
+  - { from: gnome_hans, to: obj_gnome_test_stone, label: PLACES_IN_BASKET,
+      evidence: "placed it in the basket" }
+  - { from: gnome_eldest_huntsman, to: obj_gnome_basket_bell, label: CUTS_ROPE,
+      evidence: "cut the rope" }
+  - { from: gnome_second_huntsman, to: obj_gnome_basket_bell, label: CUTS_ROPE,
+      evidence: "cut the rope" }
+  - { from: gnome_eldest_huntsman, to: gnome_princesses, label: EXTORTS_FALSE_TESTIMONY,
+      evidence: "making them promise to tell their father that it was they who had delivered them" }
+  - { from: gnome_hans, to: obj_gnome_flute, label: FINDS,
+      evidence: "hanging on the wall, a flute" }
+  - { from: gnome_hans, to: obj_gnome_flute, label: PLAYS,
+      evidence: "played a few notes on it" }
+  - { from: law_music_attracts, to: gnome_elves, label: SUMMONS,
+      evidence: "with every note that he sounded one more came" }
+  - { from: gnome_elves, to: gnome_hans, label: CARRY_BY_HAIR_TO_DAYLIGHT,
+      evidence: "seized him by every hair that grew on his head" }
+
+  # Recognition and judgment
+  - { from: gnome_hans, to: loc_gnome_kings_palace, label: ARRIVES_AT_WEDDING,
+      evidence: "just as the wedding of one princess was about to be celebrated" }
+  - { from: gnome_princesses, to: gnome_hans, label: RECOGNIZE_AND_FAINT,
+      evidence: "When the princesses saw him they fainted." }
+  - { from: gnome_king, to: gnome_hans, label: ORDERS_PRISON,
+      evidence: "ordered him to be put in prison at once" }
+  - { from: gnome_princesses, to: gnome_king, label: ENTREAT_RELEASE,
+      evidence: "entreated the King to set him free again" }
+  - { from: gnome_king, to: obj_gnome_iron_stove, label: COMMANDS_STOVE_TESTIMONY,
+      evidence: "tell it to the stove" }
+  - { from: gnome_king, to: obj_gnome_iron_stove, label: LISTENS_AT_DOOR,
+      evidence: "listened at the door" }
+  - { from: obj_gnome_iron_stove, to: gnome_king, label: CONVEYS_TRUTH,
+      evidence: "heard everything" }
+  - { from: gnome_king, to: gnome_eldest_huntsman, label: HANGS,
+      evidence: "caused the two brothers to be hanged on the gallows" }
+  - { from: gnome_king, to: gnome_second_huntsman, label: HANGS,
+      evidence: "caused the two brothers to be hanged on the gallows" }
+  - { from: gnome_king, to: gnome_hans, label: GIVES_YOUNGEST_DAUGHTER,
+      evidence: "to the third he gave his youngest daughter" }

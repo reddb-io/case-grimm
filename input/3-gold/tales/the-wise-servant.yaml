@@ -1,0 +1,191 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-wise-servant
+khm: 162
+atu: "1009"
+atu_name: The Wise Servant
+canonical_source: ../../2-silver/canonical/the-wise-servant/canonical.txt
+title: The Wise Servant
+
+
+entities:
+
+  characters:
+
+    wise_servant_master:
+      name: The Master
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_command]
+      affects: [affect_fear]
+      traits: [householder, cow-owner, task-giver, anxious-searcher]
+      evidence: |
+        his master to seek a lost cow
+
+    wise_servant_john:
+      name: Clever John, the Wise Servant
+      species: sp_human
+      archetypes: [arc_fool]
+      agency_modes: [agency_speech, agency_domestic_labor, agency_cunning]
+      speech_acts_performed: [speech_testimony]
+      traits: [wise-servant, order-hearer, order-disobeyer, blackbird-seeker, ironic-prudent-john]
+      evidence: |
+        A clever John of this kind was once sent out by his master
+
+    wise_servant_lost_cow:
+      name: The Lost Cow
+      species: sp_cattle
+      agency_modes: [agency_endurance]
+      traits: [lost-cow, unsearched-for-task-object, abandoned-errand-object]
+      evidence: |
+        a lost cow
+
+    wise_servant_three_blackbirds:
+      name: The Three Blackbirds
+      species: sp_bird
+      agency_modes: [agency_extraordinary_body]
+      traits: [seen-bird, heard-bird, chased-bird, substitute-discovery]
+      evidence: |
+        Three blackbirds
+
+  magic_objects: {}
+
+  locations:
+
+    loc_wise_servant_masters_house:
+      name: The Master's House
+      instance_of: loc_house
+      evidence: |
+        all goes in his house
+
+    loc_wise_servant_large_field:
+      name: The Large Field
+      instance_of: loc_field
+      evidence: |
+        running up and down a large field
+
+
+classifications:
+
+  world_laws:
+    - law_self_willed_service_replaces_orders
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_domestic_labor
+    - agency_cunning
+
+  affects_driving:
+    - affect_fear
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types: []
+
+
+propp:
+
+  - function: func_ironic_maxim
+    order: 1
+    actor: wise_servant_john
+    scene: The narrator praises the master who has a servant who hears orders and does not obey them.
+    evidence: |
+      listens to his orders and does not obey them
+
+  - function: func_command
+    order: 2
+    actor: wise_servant_master
+    beneficiary: wise_servant_john
+    scene: The master sends John to seek a lost cow.
+    evidence: |
+      sent out by his master to seek a lost cow
+
+  - function: func_absence
+    order: 3
+    actor: wise_servant_john
+    scene: John stays away so long that the master fears some misfortune has happened.
+    evidence: |
+      he did not come back at all
+
+  - function: func_search
+    order: 4
+    actor: wise_servant_master
+    scene: The master searches and finds John running in a large field.
+    evidence: |
+      perceived the boy who was running up and down a large field
+
+  - function: func_task_failure
+    order: 5
+    actor: wise_servant_john
+    scene: John admits he has not found the cow because he has not looked for it.
+    evidence: |
+      I have not found the cow, but then I have not looked for it.
+
+  - function: func_substitution
+    order: 6
+    actor: wise_servant_john
+    scene: "John claims to have found something better: three blackbirds."
+    evidence: |
+      Something better, and that luckily I have found.
+
+  - function: func_punchline
+    order: 7
+    actor: wise_servant_three_blackbirds
+    scene: One bird is seen, one heard, and the third chased.
+    evidence: |
+      I see one of them, I hear the other, and I am running after the third
+
+
+edges:
+
+  - from: wise_servant_master
+    label: SENDS_TO_SEEK
+    to: wise_servant_lost_cow
+    evidence: |
+      sent out by his master to seek a lost cow
+
+  - from: wise_servant_john
+    label: DOES_NOT_LOOK_FOR
+    to: wise_servant_lost_cow
+    evidence: |
+      I have not found the cow, but then I have not looked for it.
+
+  - from: wise_servant_master
+    label: FEARS_MISFORTUNE_FOR
+    to: wise_servant_john
+    evidence: |
+      was afraid lest some misfortune had befallen him
+
+  - from: wise_servant_master
+    label: FINDS_IN_FIELD
+    to: wise_servant_john
+    evidence: |
+      perceived the boy who was running up and down a large field
+
+  - from: wise_servant_john
+    label: RUNS_IN
+    to: loc_wise_servant_large_field
+    evidence: |
+      running up and down a large field
+
+  - from: wise_servant_john
+    label: SUBSTITUTES_SEARCH_FOR
+    to: wise_servant_three_blackbirds
+    evidence: |
+      Then what hast thou looked for
+
+  - from: wise_servant_john
+    label: SEES_HEARS_AND_CHASES
+    to: wise_servant_three_blackbirds
+    evidence: |
+      I see one of them, I hear the other, and I am running after the third
+
+  - from: law_self_willed_service_replaces_orders
+    label: IRONICALLY_NAMES_AS_WISDOM
+    to: wise_servant_john
+    evidence: |
+      following his own wisdom

@@ -1,0 +1,292 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: godfather-death
+khm: 44
+atu: '332'
+atu_name: The Godfather / Godfather Death
+canonical_source: ../../2-silver/canonical/godfather-death/canonical.txt
+title: Godfather Death
+
+
+entities:
+
+  characters:
+
+    godfather_death_poor_man:
+      name: The Poor Father
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank, agency_endurance]
+      affects: [affect_fear]
+      traits: [twelve-children, bread-labourer, thirteenth-child-father, godfather-seeker, poverty-judge, death-chooser]
+      evidence: |
+        "A poor man had twelve children and was forced to work night and day"
+
+    godfather_death_physician:
+      name: The Godson Physician
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_cunning, agency_social_rank]
+      affects: [affect_greed, affect_love_at_first_sight, affect_fear]
+      traits: [death-godson, famous-physician, rich-man, death-cheater, royal-healer, warning-violator, candle-doomed]
+      evidence: |
+        "It was not long before the youth was the most famous physician
+        in the whole world."
+
+    godfather_death_god:
+      name: God
+      being_type: being_divine
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_promise]
+      traits: [first-godfather-candidate, pitying, rejected-divine-sponsor]
+      evidence: |
+        "The first to meet him was the good God"
+
+    godfather_death_devil:
+      name: The Devil
+      being_type: being_devil
+      agency_modes: [agency_speech, agency_cunning]
+      speech_acts_performed: [speech_promise]
+      traits: [second-godfather-candidate, gold-offerer, joy-offerer, rejected-tempter]
+      evidence: |
+        "Then the Devil came to him"
+
+    godfather_death:
+      name: Death
+      archetypes: [arc_supernatural_godfather]
+      being_type: being_death
+      agency_modes: [agency_speech, agency_object_mediation, agency_violence, agency_social_rank]
+      speech_acts_performed: [speech_command, speech_warning, speech_promise]
+      traits: [third-godfather-candidate, equality-maker, godfather, herb-donor, bedside-fate-marker, warning-giver, life-candle-keeper, revenger]
+      evidence: |
+        "I am Death, and I make all equal."
+
+    godfather_death_king:
+      name: The Sick King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      traits: [royal-patient, first-forbidden-cure, restored-by-bed-turning, grieving-father]
+      evidence: |
+        "Now it so befell that the King became ill"
+
+    godfather_death_princess:
+      name: The King's Daughter
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [only-child, severe-illness, marriage-reward, second-forbidden-cure]
+      evidence: |
+        "Soon afterwards the King’s daughter fell into a severe illness."
+
+  magic_objects:
+
+    obj_godfather_death_herb:
+      name: Death's Healing Herb
+      instance_of: obj_death_diagnostic_remedy
+      object_kind: material
+      attributes:
+        donor: godfather_death
+        function: conditional_healing
+        healing_condition: death_at_patient_head
+        death_condition: death_at_patient_feet
+      evidence: |
+        "showed him a herb which grew there"
+
+    obj_godfather_death_life_candles:
+      name: The Countless Life-Candles
+      instance_of: obj_life_candle
+      object_kind: material
+      attributes:
+        keeper: godfather_death
+        life_categories: [children, married_people_in_prime, old_people]
+      evidence: |
+        "thousands and thousands of candles were burning in countless rows"
+
+    obj_godfather_death_physician_candle:
+      name: The Physician's Little Life-Candle
+      instance_of: obj_life_candle
+      object_kind: material
+      attributes:
+        life_holder: godfather_death_physician
+        state: nearly_extinguished
+      evidence: |
+        "a little end which was just threatening to go out"
+
+  locations:
+
+    loc_godfather_death_highway:
+      name: The Great Highway
+      evidence: |
+        "ran out into the great highway"
+
+    loc_godfather_death_forest:
+      name: The Forest of the Herb
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "He led him forth into a forest"
+
+    loc_godfather_death_king_bed:
+      name: The King's Sickbed
+      instance_of: loc_castle
+      evidence: |
+        "when he came to the bed, Death was standing by the feet"
+
+    loc_godfather_death_princess_bed:
+      name: The Princess's Sickbed
+      instance_of: loc_castle
+      evidence: |
+        "the sick girl’s bed"
+
+    loc_godfather_death_cave:
+      name: The Cave Below the Earth
+      instance_of: loc_cave
+      evidence: |
+        "led him into a cave below the earth"
+
+
+classifications:
+
+  world_laws:
+    - law_death_position_determines_healing
+    - law_life_candle_measures_lifespan
+
+  moral_regimes:
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_object_mediation
+    - agency_cunning
+    - agency_social_rank
+    - agency_violence
+
+  affects_driving:
+    - affect_greed
+    - affect_love_at_first_sight
+    - affect_fear
+
+  symbol_numbers:
+    - num_3   # God, Devil, and Death as three godfather candidates
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+  - { function: func_lack, order: 1, actor: godfather_death_poor_man,
+      scene: "poor father with twelve children cannot provide for the thirteenth" }
+  - { function: func_donor_test, order: 2, actor: godfather_death_poor_man,
+      scene: "father rejects God and Devil before accepting Death as godfather" }
+  - { function: func_magical_agent, order: 3, actor: godfather_death,
+      beneficiary: godfather_death_physician,
+      scene: "Death gives the grown godson an herb and the head-or-feet rule" }
+  - { function: func_interdiction, order: 4, actor: godfather_death,
+      beneficiary: godfather_death_physician,
+      scene: "Death forbids using the herb against his will" }
+  - { function: func_liquidation, order: 5, actor: godfather_death_physician,
+      scene: "the physician becomes famous and rich by diagnosing life and death" }
+  - { function: func_violation, order: 6, actor: godfather_death_physician,
+      beneficiary: godfather_death_king,
+      scene: "physician turns the king's bed so Death moves from feet to head" }
+  - { function: func_warning, order: 7, actor: godfather_death,
+      beneficiary: godfather_death_physician,
+      scene: "Death pardons the first overreach but warns the next will cost the physician's neck" }
+  - { function: func_violation, order: 8, actor: godfather_death_physician,
+      beneficiary: godfather_death_princess,
+      scene: "physician repeats the bed-turning for the princess out of desire for beauty and crown" }
+  - { function: func_punishment, order: 9, actor: godfather_death,
+      victim: godfather_death_physician,
+      scene: "Death seizes the physician and takes him to the cave of life-candles" }
+  - { function: func_exposure, order: 10, actor: godfather_death,
+      scene: "Death reveals the life-candles and the physician's little failing light" }
+  - { function: func_trickery, order: 11, actor: godfather_death,
+      victim: godfather_death_physician,
+      scene: "Death pretends to transfer the old candle onto a new one" }
+  - { function: func_punishment, order: 12, actor: godfather_death,
+      victim: godfather_death_physician,
+      scene: "Death lets the little candle fall and the physician dies" }
+
+
+edges:
+
+  # Godfather selection
+  - { from: godfather_death_poor_man, to: loc_godfather_death_highway, label: RUNS_TO,
+      evidence: "ran out into the great highway" }
+  - { from: godfather_death_poor_man, to: godfather_death_god, label: REJECTS_AS_GODFATHER,
+      evidence: "I do not desire to have thee for a godfather" }
+  - { from: godfather_death_god, to: godfather_death_poor_man, label: OFFERS_CARE,
+      evidence: "I will hold thy child at its christening" }
+  - { from: godfather_death_devil, to: godfather_death_poor_man, label: OFFERS_GOLD,
+      evidence: "I will give him gold in plenty" }
+  - { from: godfather_death_poor_man, to: godfather_death_devil, label: REJECTS_AS_GODFATHER,
+      evidence: "thou deceivest men and leadest them astray." }
+  - { from: godfather_death, to: godfather_death_poor_man, label: OFFERS_GODFATHERHOOD,
+      evidence: "Take me as godfather." }
+  - { from: godfather_death_poor_man, to: godfather_death, label: CHOOSES_AS_GODFATHER,
+      evidence: "thou shalt be godfather." }
+  - { from: godfather_death, to: godfather_death_physician, label: STANDS_GODFATHER_TO,
+      evidence: "Death appeared as he had promised, and stood godfather" }
+
+  # Gift and diagnostic rule
+  - { from: godfather_death, to: loc_godfather_death_forest, label: LEADS_INTO,
+      evidence: "He led him forth into a forest" }
+  - { from: godfather_death, to: obj_godfather_death_herb, label: SHOWS,
+      evidence: "showed him a herb which grew there" }
+  - { from: godfather_death, to: godfather_death_physician, label: MAKES_PHYSICIAN,
+      evidence: "I make thee a celebrated physician." }
+  - { from: godfather_death, to: law_death_position_determines_healing, label: REVEALS_LAW,
+      evidence: "If I stand by the head of the sick man" }
+  - { from: godfather_death, to: godfather_death_physician, label: WARNS,
+      evidence: "beware of using the herb against my will" }
+  - { from: obj_godfather_death_herb, to: godfather_death_physician, label: EMPOWERS_AS_HEALER,
+      evidence: "if thou givest him of this herb he will recover" }
+
+  # First overreach: king
+  - { from: godfather_death_physician, to: godfather_death_king, label: SUMMONED_TO,
+      evidence: "the physician was summoned" }
+  - { from: godfather_death, to: loc_godfather_death_king_bed, label: STANDS_BY_FEET,
+      evidence: "Death was standing by the feet of the sick man" }
+  - { from: godfather_death_physician, to: godfather_death, label: CHEATS,
+      evidence: "If I could but cheat Death for once" }
+  - { from: godfather_death_physician, to: godfather_death_king, label: TURNS_BODY,
+      evidence: "laid him the other way" }
+  - { from: godfather_death_physician, to: godfather_death_king, label: HEALS_WITH_HERB,
+      evidence: "Then he gave the King some of the herb" }
+  - { from: godfather_death, to: godfather_death_physician, label: PARDONS_ONCE,
+      evidence: "this time I will pardon it" }
+  - { from: godfather_death, to: godfather_death_physician, label: THREATENS_NEXT_OFFENSE,
+      evidence: "if thou venturest it again, it will cost thee thy neck" }
+
+  # Second overreach: princess
+  - { from: godfather_death_king, to: godfather_death_princess, label: OFFERS_MARRIAGE_REWARD_FOR,
+      evidence: "whosoever rescued her from death should be her husband" }
+  - { from: godfather_death, to: loc_godfather_death_princess_bed, label: STANDS_BY_FEET,
+      evidence: "he saw Death by her feet." }
+  - { from: godfather_death_physician, to: godfather_death_princess, label: INFATUATED_BY,
+      evidence: "infatuated by the great beauty of the King’s daughter" }
+  - { from: godfather_death_physician, to: godfather_death_princess, label: TURNS_BODY,
+      evidence: "placed her head where her feet had lain." }
+  - { from: godfather_death_physician, to: godfather_death_princess, label: HEALS_WITH_HERB,
+      evidence: "Then he gave her some of the herb" }
+  - { from: godfather_death, to: godfather_death_physician, label: SEIZES,
+      evidence: "seized him so firmly with his ice-cold hand" }
+  - { from: godfather_death, to: loc_godfather_death_cave, label: LEADS_TO,
+      evidence: "led him into a cave below the earth" }
+
+  # Life-candle revelation and death
+  - { from: loc_godfather_death_cave, to: obj_godfather_death_life_candles, label: CONTAINS,
+      evidence: "thousands and thousands of candles were burning in countless rows" }
+  - { from: godfather_death, to: law_life_candle_measures_lifespan, label: REVEALS_LAW,
+      evidence: "these are the lights of men’s lives." }
+  - { from: godfather_death, to: obj_godfather_death_physician_candle, label: POINTS_TO,
+      evidence: "Behold, it is there." }
+  - { from: godfather_death_physician, to: godfather_death, label: PLEADS_FOR_NEW_LIGHT,
+      evidence: "light a new one for me" }
+  - { from: godfather_death, to: godfather_death_physician, label: REFUSES,
+      evidence: "one must go out before a new one is lighted." }
+  - { from: godfather_death, to: godfather_death_physician, label: PRETENDS_TO_HELP,
+      evidence: "Death behaved as if he were going to fulfill his wish" }
+  - { from: godfather_death, to: obj_godfather_death_physician_candle, label: EXTINGUISHES,
+      evidence: "the little piece fell down and was extinguished." }
+  - { from: obj_godfather_death_physician_candle, to: godfather_death_physician, label: ENDS_LIFE_OF,
+      evidence: "Immediately the physician fell on the ground" }
+  - { from: godfather_death_physician, to: moral_retributive, label: PUNISHED_BY,
+      evidence: "now he himself was in the hands of Death." }

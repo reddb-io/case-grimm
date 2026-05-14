@@ -1,0 +1,195 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-owl
+khm: 174
+atu: "1281"
+atu_name: Burning the Barn to Destroy an Unknown Animal
+canonical_source: ../../2-silver/canonical/the-owl/canonical.txt
+title: The Owl
+
+
+entities:
+
+  characters:
+
+    owl_horned_owl:
+      name: The Horned Owl
+      species: sp_bird
+      agency_modes: [agency_speech]
+      affects: [affect_fear]
+      traits: [horned-owl, night-arrival, barn-refugee, mistaken-monster, innocent-burned-animal]
+      evidence: |
+        one of the great owls, called horned owls
+
+    owl_manservant:
+      name: The Man-Servant
+      species: sp_human
+      agency_modes: [agency_speech]
+      existential_states: [state_deceived]
+      affects: [affect_fear]
+      traits: [straw-fetcher, first-witness, alarm-runner, monster-reporter]
+      evidence: |
+        the man-servant went into the barn to fetch some straw
+
+    owl_master:
+      name: The Barn Owner / Master
+      species: sp_human
+      agency_modes: [agency_speech]
+      existential_states: [state_deceived]
+      affects: [affect_fear]
+      traits: [skeptical-master, second-witness, fear-contagion-carrier, assistance-beggar]
+      evidence: |
+        I must go and see for myself what kind of a monster it is
+
+    owl_townsmen:
+      name: The Armed Townsmen
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech]
+      existential_states: [state_deceived]
+      affects: [affect_fear]
+      traits: [armed-crowd, noise-and-clamour, barn-surrounders, monster-believers, destructive-consensus]
+      evidence: |
+        the townsmen came armed with spears, hay-forks, scythes, and axes
+
+    owl_courageous_townsman:
+      name: The First Courageous Townsman
+      species: sp_human
+      agency_modes: [agency_violence]
+      existential_states: [state_deceived]
+      affects: [affect_fear]
+      traits: [spear-lowered-entrant, pale-runaway, speechless-witness]
+      evidence: |
+        one of the most courageous of them stepped forth
+
+    owl_warlike_strongman:
+      name: The Warlike Strong Man
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech]
+      existential_states: [state_deceived]
+      affects: [affect_fear]
+      traits: [famous-for-warlike-deeds, armour-bearer, ladder-climber, false-heroic-retreater]
+      evidence: |
+        a great strong man who was famous for his warlike deeds
+
+    owl_burgomaster:
+      name: The Burgomaster and Senators
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      existential_states: [state_deceived]
+      affects: [affect_fear]
+      traits: [municipal-authority, common-purse-calculator, burn-the-barn-counselor]
+      evidence: |
+        the senators appeared with the burgomaster at their head
+
+  locations:
+
+    loc_owl_little_town:
+      name: The Little Town
+      instance_of: loc_town
+      evidence: |
+        an extraordinary event took place in a little town
+
+    loc_owl_neighboring_woods:
+      name: The Neighboring Woods
+      instance_of: loc_forest
+      evidence: |
+        had come from the neighboring woods into the barn
+
+    loc_owl_barn:
+      name: The Owl Barn
+      instance_of: loc_barn
+      evidence: |
+        into the barn of one of the townsfolk
+
+    loc_owl_marketplace:
+      name: The Market-Place Assembly
+      instance_of: loc_marketplace
+      evidence: |
+        When they had drawn up in the market-place
+
+
+classifications:
+
+  world_laws:
+    - law_fearful_misrecognition_turns_signs_deadly
+    - law_missing_tool_invites_destructive_overkill
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_violence
+    - agency_social_rank
+
+  affects_driving:
+    - affect_fear
+
+  symbol_numbers: []
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_past_frame, order: 1, actor: loc_owl_little_town,
+      scene: "the tale places an extraordinary event in a less crafty former age" }
+  - { function: func_accidental_intrusion, order: 2, actor: owl_horned_owl,
+      scene: "a horned owl enters the barn from the neighboring woods at night" }
+  - { function: func_first_misrecognition, order: 3, actor: owl_manservant,
+      scene: "the servant sees the owl and reports a man-devouring monster" }
+  - { function: func_fear_contagion, order: 4, actor: owl_master,
+      scene: "the master goes boldly, sees the owl, and spreads the panic to the neighbors" }
+  - { function: func_collective_mobilization, order: 5, actor: owl_townsmen,
+      scene: "the town arms itself as if against an enemy and surrounds the barn" }
+  - { function: func_failed_confrontation, order: 6, actor: owl_courageous_townsman,
+      scene: "the first armed entrant runs out pale and speechless" }
+  - { function: func_false_heroic_attempt, order: 7, actor: owl_warlike_strongman,
+      scene: "the warlike strong man climbs toward the owl but retreats trembling" }
+  - { function: func_destructive_counsel, order: 8, actor: owl_burgomaster,
+      scene: "the burgomaster advises paying for the barn and burning it down" }
+  - { function: func_overkill_resolution, order: 9, actor: law_missing_tool_invites_destructive_overkill,
+      scene: "the town sets fire to the barn at all four corners and burns the owl" }
+
+
+edges:
+
+  - { from: owl_horned_owl, to: loc_owl_neighboring_woods, label: COMES_FROM,
+      evidence: "had come from the neighboring woods into the barn" }
+  - { from: owl_horned_owl, to: loc_owl_barn, label: ENTERS_AND_REMAINS_IN,
+      evidence: "into the barn of one of the townsfolk in the night-time" }
+  - { from: owl_horned_owl, to: affect_fear, label: FEARS_OTHER_BIRDS,
+      evidence: "for fear of the other birds" }
+  - { from: owl_manservant, to: loc_owl_barn, label: ENTERS_TO_FETCH_STRAW,
+      evidence: "went into the barn to fetch some straw" }
+  - { from: owl_manservant, to: owl_horned_owl, label: MISRECOGNIZES_AS_MONSTER,
+      evidence: "a monster, the like of which he had never set eyes on in his life" }
+  - { from: owl_manservant, to: owl_master, label: REPORTS_DANGER_TO,
+      evidence: "announced to his master that a monster" }
+  - { from: owl_master, to: owl_horned_owl, label: SEES_AND_FEARS,
+      evidence: "he was no less terrified than the servant had been" }
+  - { from: owl_master, to: owl_townsmen, label: SPREADS_ALARM_TO_NEIGHBORS,
+      evidence: "ran to his neighbours, and begged them imploringly" }
+  - { from: owl_townsmen, to: loc_owl_marketplace, label: ASSEMBLE_IN,
+      evidence: "drawn up in the market-place" }
+  - { from: owl_townsmen, to: loc_owl_barn, label: SURROUND_ON_ALL_SIDES,
+      evidence: "surrounded it on all sides" }
+  - { from: owl_courageous_townsman, to: owl_horned_owl, label: CONFRONTS_AND_RETREATS_FROM,
+      evidence: "came running out immediately afterwards with a shriek" }
+  - { from: owl_warlike_strongman, to: owl_townsmen, label: ACCUSES_OF_COWARDICE,
+      evidence: "not one of you dares to encounter the animal" }
+  - { from: owl_warlike_strongman, to: owl_horned_owl, label: CLIMBS_TOWARD_AND_RETREATS_FROM,
+      evidence: "he began to tremble, and half-fainting, went back again" }
+  - { from: owl_horned_owl, to: owl_warlike_strongman, label: DISPLAYS_DEFENSIVE_BODY,
+      evidence: "rolled her eyes, ruffled her feathers, flapped her wings" }
+  - { from: owl_townsmen, to: owl_warlike_strongman, label: MISREAD_RETREAT_AS_WOUNDING,
+      evidence: "has poisoned and mortally wounded the very strongest man among us" }
+  - { from: owl_burgomaster, to: loc_owl_barn, label: COUNSELS_BURNING,
+      evidence: "then burn down the whole building" }
+  - { from: owl_townsmen, to: loc_owl_barn, label: SETS_FIRE_TO,
+      evidence: "they set fire to the barn at all four corners" }
+  - { from: loc_owl_barn, to: owl_horned_owl, label: BURNS_WITHIN,
+      evidence: "with it the owl was miserably burnt" }
+  - { from: law_fearful_misrecognition_turns_signs_deadly, to: owl_townsmen, label: TURNS_HARMLESS_SIGN_INTO_PANIC,
+      evidence: "They took counsel as to what they ought to do to prevent the whole town being destroyed" }
+  - { from: law_missing_tool_invites_destructive_overkill, to: loc_owl_barn, label: DESTROYS_CONTAINER_TO_SOLVE_SIMPLE_THREAT,
+      evidence: "This is no time for thinking of expense" }

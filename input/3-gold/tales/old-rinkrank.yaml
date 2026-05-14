@@ -1,0 +1,229 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: old-rinkrank
+khm: 196
+atu: "311"
+atu_name: Fitcher's Bird / Abducted Bride Self-Rescue
+canonical_source: ../../2-silver/canonical/old-rinkrank/canonical.txt
+title: Old Rinkrank
+
+entities:
+  characters:
+    rinkrank_king:
+      name: The King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence, agency_object_mediation]
+      speech_acts_performed: [speech_promise, speech_command]
+      affects: [affect_grief, affect_joy]
+      traits: [daughter-father, glass-mountain-maker, marriage-test-setter, grieving-parent, punitive-king, treasure-taker]
+      evidence: |
+        There was once on a time a King who had a daughter
+
+    rinkrank_princess:
+      name: The King's Daughter / Mother Mansrot
+      archetypes: [arc_imprisoned_maiden, arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_domestic_labor, agency_object_mediation, agency_endurance]
+      existential_states: [state_imprisoned]
+      speech_acts_performed: [speech_bargain, speech_command, speech_testimony]
+      affects: [affect_love, affect_fear, affect_joy]
+      traits: [betrothed-princess, glass-mountain-faller, cave-captive, forced-servant, aged-in-captivity, renamed-mother-mansrot, window-trickster, ladder-escapee]
+      evidence: |
+        the glass-mountain opened and shut her up inside it
+
+    rinkrank_betrothed:
+      name: The Princess's Betrothed
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      affects: [affect_love, affect_grief, affect_joy]
+      traits: [princess-lover, glass-mountain-crosser, helpless-witness, long-waiting-betrothed, final-bridegroom]
+      evidence: |
+        there was one who loved the King’s daughter
+
+    rinkrank_old_rinkrank:
+      name: Old Rinkrank
+      archetypes: [arc_predator]
+      species: sp_human
+      agency_modes: [agency_speech, agency_violence, agency_object_mediation, agency_domestic_labor]
+      speech_acts_performed: [speech_command, speech_bargain]
+      affects: [affect_greed, affect_fear]
+      traits: [long-gray-bearded, underground-captor, death-threatener, servant-master, pocket-ladder-owner, gold-and-silver-hoarder, beard-trapped, executed]
+      evidence: |
+        An old fellow with a very long gray beard came to meet her
+
+    rinkrank_diggers:
+      name: The King's Mountain-Diggers
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation]
+      traits: [rescue-workers, mountain-breakers, failed-searchers, later-excavators]
+      evidence: |
+        had the mountain broken open where she had been lost
+
+  magic_objects:
+    obj_rinkrank_glass_mountain_test:
+      name: The Glass Mountain Marriage Test
+      object_kind: architecture
+      attributes:
+        function: courtship ordeal that becomes the mechanism of the princess's disappearance
+      evidence: |
+        caused a glass mountain to be made
+
+    obj_rinkrank_pocket_ladder:
+      name: Old Rinkrank's Pocket Ladder
+      object_kind: tool
+      attributes:
+        function: portable escape route from the underground house to the top of the glass mountain
+      evidence: |
+        he took his ladder out of his pocket
+
+    obj_rinkrank_window_cord:
+      name: The Window Cord
+      object_kind: tool
+      attributes:
+        function: pulls the little window down on Old Rinkrank's beard
+      evidence: |
+        pulled the window down with a cord
+
+    obj_rinkrank_gold_silver:
+      name: Old Rinkrank's Gold and Silver
+      object_kind: treasure
+      attributes:
+        function: hoarded underground wealth seized after the captor is exposed
+      evidence: |
+        a heap of gold and silver
+
+  locations:
+    loc_rinkrank_glass_mountain:
+      name: The Glass Mountain
+      instance_of: loc_glass_mountain
+      evidence: |
+        a glass mountain
+
+    loc_rinkrank_cave:
+      name: The Great Cave Under the Earth
+      instance_of: loc_cave
+      evidence: |
+        quite deep down into the earth into a great cave
+
+    loc_rinkrank_underground_house:
+      name: Old Rinkrank's Underground House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        he knocked at his door
+
+    loc_rinkrank_little_window:
+      name: The Little Window
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        one little window through which the light shone in
+
+classifications:
+  world_laws:
+    - law_glass_mountain_opens_to_underworld_captivity
+    - law_captive_threshold_trap_extorts_escape_tool
+  moral_regimes:
+    - moral_restorative
+    - moral_retributive
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_endurance
+    - agency_object_mediation
+    - agency_social_rank
+  affects_driving:
+    - affect_love
+    - affect_grief
+    - affect_fear
+    - affect_joy
+  symbol_numbers: []
+  threshold_types:
+    - threshold_doorway
+
+propp:
+  - { function: func_marriage_test_set, order: 1, actor: rinkrank_king,
+      scene: "the king makes a glass mountain and promises his daughter to whoever crosses it" }
+  - { function: func_betrothal_attempt, order: 2, actor: rinkrank_betrothed,
+      beneficiary: rinkrank_princess,
+      scene: "the lover and princess attempt the glass-mountain crossing together" }
+  - { function: func_disappearance, order: 3, actor: loc_rinkrank_glass_mountain,
+      victim: rinkrank_princess,
+      scene: "the princess slips, the glass mountain opens, and she is sealed inside" }
+  - { function: func_failed_rescue_search, order: 4, actor: rinkrank_diggers,
+      beneficiary: rinkrank_princess,
+      scene: "the king's workers break open the mountain but cannot find the lost place" }
+  - { function: func_captivity, order: 5, actor: rinkrank_old_rinkrank,
+      victim: rinkrank_princess,
+      scene: "Old Rinkrank threatens death unless the princess serves him underground" }
+  - { function: func_servitude_years, order: 6, actor: rinkrank_princess,
+      scene: "the princess cooks, makes the bed, and does all the captor's work for many years" }
+  - { function: func_threshold_reversal, order: 7, actor: rinkrank_princess,
+      scene: "she shuts the house and leaves only the little window open" }
+  - { function: func_body_trap, order: 8, actor: rinkrank_princess,
+      victim: rinkrank_old_rinkrank,
+      scene: "she shuts the window on Old Rinkrank's beard" }
+  - { function: func_escape_tool_extorted, order: 9, actor: rinkrank_princess,
+      beneficiary: rinkrank_princess,
+      scene: "she refuses release until he reveals the ladder" }
+  - { function: func_return, order: 10, actor: rinkrank_princess,
+      scene: "the princess climbs the ladder, reaches the top, and returns to her father" }
+  - { function: func_punishment, order: 11, actor: rinkrank_king,
+      victim: rinkrank_old_rinkrank,
+      scene: "the king digs out Old Rinkrank, executes him, and takes the treasure" }
+  - { function: func_wedding, order: 12, actor: rinkrank_princess,
+      beneficiary: rinkrank_betrothed,
+      scene: "the princess marries her still-waiting betrothed" }
+
+edges:
+  - { from: rinkrank_king, to: loc_rinkrank_glass_mountain, label: CAUSES_TO_BE_MADE,
+      evidence: "caused a glass mountain to be made" }
+  - { from: rinkrank_king, to: rinkrank_princess, label: PROMISES_AS_BRIDE,
+      evidence: "whosoever could cross to the other side of it without falling should have his daughter to wife" }
+  - { from: rinkrank_betrothed, to: rinkrank_princess, label: LOVES,
+      evidence: "there was one who loved the King’s daughter" }
+  - { from: rinkrank_princess, to: rinkrank_betrothed, label: OFFERS_SUPPORT,
+      evidence: "would hold him if he were about to fall" }
+  - { from: rinkrank_princess, to: loc_rinkrank_glass_mountain, label: FALLS_INTO,
+      evidence: "the princess slipped and fell" }
+  - { from: loc_rinkrank_glass_mountain, to: rinkrank_princess, label: SWALLOWS_AND_SEALS,
+      evidence: "the glass-mountain opened and shut her up inside it" }
+  - { from: rinkrank_diggers, to: loc_rinkrank_glass_mountain, label: BREAK_OPEN,
+      evidence: "had the mountain broken open where she had been lost" }
+  - { from: rinkrank_princess, to: loc_rinkrank_cave, label: FALLS_DOWN_TO,
+      evidence: "quite deep down into the earth into a great cave" }
+  - { from: rinkrank_old_rinkrank, to: rinkrank_princess, label: THREATENS_SERVICE_OR_DEATH,
+      evidence: "if she would be his servant and do everything he bade her, she might live, if not he would kill her" }
+  - { from: rinkrank_princess, to: rinkrank_old_rinkrank, label: SERVES,
+      evidence: "So she did all he bade her" }
+  - { from: rinkrank_old_rinkrank, to: obj_rinkrank_pocket_ladder, label: USES_TO_CLIMB_OUT,
+      evidence: "took his ladder out of his pocket" }
+  - { from: rinkrank_old_rinkrank, to: obj_rinkrank_gold_silver, label: BRINGS_HOME,
+      evidence: "brought with him a heap of gold and silver" }
+  - { from: rinkrank_princess, to: loc_rinkrank_underground_house, label: SEALS,
+      evidence: "she shut the doors and windows all fast" }
+  - { from: rinkrank_princess, to: loc_rinkrank_little_window, label: LEAVES_OPEN,
+      evidence: "one little window through which the light shone in" }
+  - { from: rinkrank_old_rinkrank, to: loc_rinkrank_little_window, label: PUTS_BEARD_THROUGH,
+      evidence: "he first put his beard through the open window" }
+  - { from: rinkrank_princess, to: obj_rinkrank_window_cord, label: PULLS,
+      evidence: "pulled the window down with a cord" }
+  - { from: loc_rinkrank_little_window, to: rinkrank_old_rinkrank, label: TRAPS_BEARD_OF,
+      evidence: "his beard was shut fast in it" }
+  - { from: rinkrank_princess, to: obj_rinkrank_pocket_ladder, label: EXTORTS_LOCATION_OF,
+      evidence: "not until he gave her the ladder" }
+  - { from: rinkrank_old_rinkrank, to: obj_rinkrank_pocket_ladder, label: REVEALS_LOCATION_OF,
+      evidence: "he had to tell her where the ladder was" }
+  - { from: rinkrank_princess, to: loc_rinkrank_glass_mountain, label: ASCENDS_OUT_OF,
+      evidence: "ascended the mountain" }
+  - { from: rinkrank_princess, to: rinkrank_king, label: TESTIFIES_TO,
+      evidence: "told him all that had happened to her" }
+  - { from: rinkrank_king, to: rinkrank_old_rinkrank, label: EXECUTES,
+      evidence: "had Old Rinkrank put to death" }
+  - { from: rinkrank_king, to: obj_rinkrank_gold_silver, label: TAKES,
+      evidence: "took all his gold and silver" }
+  - { from: rinkrank_princess, to: rinkrank_betrothed, label: MARRIES,
+      evidence: "The princess married her betrothed" }
+  - { from: law_glass_mountain_opens_to_underworld_captivity, to: rinkrank_princess, label: IMPRISONS,
+      evidence: "the mountain closed immediately" }
+  - { from: law_captive_threshold_trap_extorts_escape_tool, to: obj_rinkrank_pocket_ladder, label: EXTRACTS,
+      evidence: "Then, whether he would or not, he had to tell her where the ladder was" }

@@ -1,0 +1,452 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-jew-among-thorns
+khm: 110
+atu: '592'
+atu_name: The Jew among Thorns
+canonical_source: ../../2-silver/canonical/the-jew-among-thorns/canonical.txt
+title: The Jew among Thorns
+
+
+entities:
+
+  characters:
+
+    thorns_honest_servant:
+      name: The Honest Servant
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_music, agency_object_mediation, agency_speech, agency_cunning, agency_violence]
+      speech_acts_performed: [speech_wish, speech_request]
+      affects: [affect_pity, affect_joy]
+      traits: [underpaid-servant, diligent-worker, cheerful-fool, generous-donor-recipient, magical-fiddler, coerced-dance-trickster, condemned-man, gallows-reverser]
+      evidence: |
+        a servant who served him diligently and honestly
+
+    thorns_rich_master:
+      name: The Rich Miserly Master
+      archetypes: [arc_greedy_one]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_cunning, agency_speech]
+      affects: [affect_greed]
+      traits: [wage-withholder, miser, false-liberal-master, three-farthing-payer]
+      evidence: |
+        his master gave him no wages
+
+    thorns_dwarf_donor:
+      name: The Little Man / Dwarf Donor
+      archetypes: [arc_supernatural_donor]
+      species: sp_human
+      being_type: being_dwarf
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_request, speech_wish]
+      traits: [needy-old-man, donor-in-disguise, three-gift-granter]
+      evidence: |
+        a little man stepped out
+
+    thorns_jewish_man:
+      name: The Jewish Man in the Thorn-Bushes
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_request, speech_lie, speech_confession]
+      affects: [affect_greed, affect_fear, affect_anger]
+      traits: [source-stereotyped-outsider, bird-desirer, coerced-dancer, thorn-wounded-complainant, prejudicially-believed-accuser, coerced-confessor, executed-man]
+      evidence: |
+        he met a Jew with a long goat’s-beard
+
+    thorns_bird:
+      name: The Singing Bird in the Tree
+      species: sp_bird
+      agency_modes: [agency_music]
+      traits: [loud-singer, desired-bird, shot-into-thorns]
+      evidence: |
+        a bird which was sitting up at the top of a tree
+
+    thorns_judge:
+      name: The Judge
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_command, speech_request]
+      affects: [affect_fear]
+      traits: [prejudicial-judge, death-sentencer, compelled-request-granter, dancing-authority, life-giver]
+      evidence: |
+        This is a bad defence, no Jew would do that.
+
+    thorns_hangman:
+      name: The Hangman
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_violence]
+      traits: [executioner, ladder-holder, compelled-dancer]
+      evidence: |
+        The servant walked quietly with the hangman up the ladder
+
+    thorns_clerk_and_crowd:
+      name: The Clerk, Officers, Crowd, and Dogs
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [marketplace-witnesses, compelled-dancers, mixed-crowd]
+      evidence: |
+        all who had gathered in the market-place out of curiosity were dancing with them
+
+  magic_objects:
+
+    obj_thorns_three_farthings:
+      name: The Three Farthings of Three Years' Wages
+      object_kind: treasure
+      attributes:
+        function: miserly wages converted by generosity into three supernatural gifts
+      evidence: |
+        a farthing for each year
+
+    obj_thorns_never_miss_gun:
+      name: The Never-Miss Gun
+      instance_of: obj_never_miss_gun
+      object_kind: weapon
+      attributes:
+        function: shoots the bird into the thorn-bushes with guaranteed accuracy
+      evidence: |
+        a gun, which shall hit everything that I aim at
+
+    obj_thorns_compelling_fiddle:
+      name: The Compelling Fiddle
+      instance_of: obj_fiddle
+      object_kind: instrument
+      attributes:
+        function: forces all hearers to dance, first in thorns and later at the gallows
+      evidence: |
+        a fiddle, which when I play on it, shall compel all who hear it to dance
+
+    obj_thorns_purse_of_gold:
+      name: The Purse Full of Gold
+      object_kind: treasure
+      attributes:
+        function: payment extracted to stop the thorn-dance, later legal evidence against the servant
+      evidence: |
+        a purse full of gold
+
+    obj_thorns_gallows_rope:
+      name: The Gallows Rope
+      object_kind: tool
+      attributes:
+        function: execution object interrupted when the fiddle compels the hangman to dance
+      evidence: |
+        the cord fell out of the hand of the one who was going to tie the Jew fast
+
+  locations:
+
+    loc_thorns_master_house:
+      name: The Rich Master's House
+      instance_of: loc_house
+      evidence: |
+        He was every morning the first out of bed
+
+    loc_thorns_road:
+      name: The Road Up Hill and Down Dale
+      instance_of: loc_road
+      evidence: |
+        on he went, up hill and down dale
+
+    loc_thorns_donor_bush:
+      name: The Bush Where the Little Man Appears
+      instance_of: loc_thorn_thicket
+      evidence: |
+        as he was going by a thicket a little man stepped out
+
+    loc_thorns_tree:
+      name: The Bird's Tree
+      instance_of: loc_tree
+      evidence: |
+        sitting up at the top of a tree
+
+    loc_thorns_thorn_bushes:
+      name: The Thorn-Bushes
+      instance_of: loc_thorn_thicket
+      evidence: |
+        down fell the bird into the thorn-bushes
+
+    loc_thorns_town_court:
+      name: The Town Court of the Justice
+      instance_of: loc_town
+      evidence: |
+        he ran into the town to the justice
+
+    loc_thorns_marketplace_gallows:
+      name: The Market-Place Gallows
+      instance_of: loc_gallows
+      threshold_type: threshold_grave
+      evidence: |
+        Soon all who had gathered in the market-place out of curiosity were dancing with them
+
+
+classifications:
+
+  world_laws:
+    - law_music_attracts
+    - law_irresistible_request_overrides_judgment
+    - law_kindness_to_hidden_donors_rewarded
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_stigmatized_accuser_punished
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_music
+    - agency_object_mediation
+    - agency_speech
+    - agency_cunning
+    - agency_social_rank
+
+  affects_driving:
+    - affect_pity
+    - affect_greed
+    - affect_fear
+    - affect_anger
+    - affect_joy
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_grave
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: thorns_honest_servant
+    scene: Three years of honest service are withheld as wages by the master.
+    evidence: |
+      Master, for three years I have served you honestly
+
+  - function: func_donor_test
+    order: 2
+    actor: thorns_dwarf_donor
+    beneficiary: thorns_honest_servant
+    scene: The little man asks for the servant's entire poor wage.
+    evidence: |
+      give me your three farthings
+
+  - function: func_reward
+    order: 3
+    actor: thorns_dwarf_donor
+    beneficiary: thorns_honest_servant
+    scene: The servant's generosity is converted into three magical wishes.
+    evidence: |
+      I grant you three wishes, one for each farthing
+
+  - function: func_acquisition
+    order: 4
+    actor: thorns_honest_servant
+    scene: The servant receives the never-miss gun, compelling fiddle, and irrefusable-request gift.
+    evidence: |
+      All that shall you have
+
+  - function: func_villainy
+    order: 5
+    actor: thorns_honest_servant
+    victim: thorns_jewish_man
+    scene: The servant forces the Jewish man to dance in the thorns and extracts gold to stop.
+    evidence: |
+      he took up his fiddle and began to play
+
+  - function: func_accusation
+    order: 6
+    actor: thorns_jewish_man
+    victim: thorns_honest_servant
+    scene: The wounded man reports robbery and mistreatment to the judge.
+    evidence: |
+      I have come to make a complaint
+
+  - function: func_condemnation
+    order: 7
+    actor: thorns_judge
+    victim: thorns_honest_servant
+    scene: The judge disbelieves the servant and sentences him to hang.
+    evidence: |
+      he sentenced the good servant to be hanged
+
+  - function: func_last_request
+    order: 8
+    actor: thorns_honest_servant
+    scene: The servant's irrefusable last request opens the way for the fiddle.
+    evidence: |
+      as a last favor let me play once more upon my fiddle
+
+  - function: func_rescue
+    order: 9
+    actor: thorns_honest_servant
+    beneficiary: thorns_honest_servant
+    scene: The compelling fiddle makes judge, hangman, crowd, and dogs dance until execution collapses.
+    evidence: |
+      the hangman let go his hold of the good servant
+
+  - function: func_exposure
+    order: 10
+    actor: thorns_honest_servant
+    victim: thorns_jewish_man
+    scene: Under renewed threat of the fiddle, the Jewish man confesses theft in the tale's logic.
+    evidence: |
+      I stole it, I stole it!
+
+  - function: func_punishment
+    order: 11
+    actor: thorns_judge
+    victim: thorns_jewish_man
+    scene: The judge has the accuser executed as a thief.
+    evidence: |
+      the judge had the Jew taken to the gallows and hanged as a thief
+
+
+edges:
+
+  - from: thorns_rich_master
+    label: WITHHOLDS_WAGES_FROM
+    to: thorns_honest_servant
+    evidence: |
+      his master gave him no wages
+
+  - from: thorns_rich_master
+    label: PAYS
+    to: obj_thorns_three_farthings
+    evidence: |
+      counted out only three farthings
+
+  - from: thorns_honest_servant
+    label: GIVES
+    to: obj_thorns_three_farthings
+    evidence: |
+      he gave him the three farthings
+
+  - from: thorns_dwarf_donor
+    label: GRANTS
+    to: obj_thorns_never_miss_gun
+    evidence: |
+      there lay a fiddle and gun, all ready
+
+  - from: thorns_dwarf_donor
+    label: GRANTS
+    to: obj_thorns_compelling_fiddle
+    evidence: |
+      there lay a fiddle and gun, all ready
+
+  - from: thorns_dwarf_donor
+    label: GRANTS
+    to: thorns_honest_servant
+    evidence: |
+      no man in the world shall be able to deny you
+
+  - from: thorns_honest_servant
+    label: SHOOTS
+    to: thorns_bird
+    evidence: |
+      taking aim he pulled the trigger, and down fell the bird
+
+  - from: thorns_bird
+    label: FALLS_INTO
+    to: loc_thorns_thorn_bushes
+    evidence: |
+      down fell the bird into the thorn-bushes
+
+  - from: thorns_honest_servant
+    label: COMMANDS
+    to: thorns_jewish_man
+    evidence: |
+      fetch the bird out for yourself
+
+  - from: thorns_jewish_man
+    label: ENTERS
+    to: loc_thorns_thorn_bushes
+    evidence: |
+      began to crawl into the thicket
+
+  - from: thorns_honest_servant
+    label: PLAYS
+    to: obj_thorns_compelling_fiddle
+    evidence: |
+      took up his fiddle and began to play
+
+  - from: obj_thorns_compelling_fiddle
+    label: COMPELS_TO_DANCE
+    to: thorns_jewish_man
+    evidence: |
+      the Jew’s legs began to move, and to jump into the air
+
+  - from: loc_thorns_thorn_bushes
+    label: WOUNDS
+    to: thorns_jewish_man
+    evidence: |
+      the thorns tore his shabby coat from him, combed his beard, and pricked and plucked him all over the body
+
+  - from: thorns_jewish_man
+    label: GIVES
+    to: obj_thorns_purse_of_gold
+    evidence: |
+      I will give the gentleman whatsoever he asks if only he leaves off fiddling a purse full of gold
+
+  - from: thorns_jewish_man
+    label: ACCUSES
+    to: thorns_honest_servant
+    evidence: |
+      a rascal has robbed and ill-treated me on the public highway
+
+  - from: thorns_judge
+    label: SENTENCES
+    to: thorns_honest_servant
+    evidence: |
+      he sentenced the good servant to be hanged
+
+  - from: thorns_honest_servant
+    label: REQUESTS
+    to: thorns_judge
+    evidence: |
+      Grant me just one request before I die.
+
+  - from: law_irresistible_request_overrides_judgment
+    label: COMPELS
+    to: thorns_judge
+    evidence: |
+      he could not have refused on account of the gift
+
+  - from: obj_thorns_compelling_fiddle
+    label: COMPELS_TO_DANCE
+    to: thorns_judge
+    evidence: |
+      the judge, his clerk, and the hangman and his men
+
+  - from: obj_thorns_compelling_fiddle
+    label: COMPELS_TO_DANCE
+    to: thorns_hangman
+    evidence: |
+      the hangman let go his hold of the good servant
+
+  - from: obj_thorns_compelling_fiddle
+    label: COMPELS_TO_DANCE
+    to: thorns_clerk_and_crowd
+    evidence: |
+      all who had gathered in the market-place out of curiosity were dancing with them
+
+  - from: thorns_judge
+    label: SPARES
+    to: thorns_honest_servant
+    evidence: |
+      I will give you your life if you will only stop fiddling.
+
+  - from: thorns_honest_servant
+    label: THREATENS_WITH
+    to: obj_thorns_compelling_fiddle
+    evidence: |
+      I will take my fiddle and begin to play again
+
+  - from: thorns_jewish_man
+    label: CONFESSES_TO
+    to: thorns_honest_servant
+    evidence: |
+      I stole it, I stole it!
+
+  - from: thorns_judge
+    label: EXECUTES
+    to: thorns_jewish_man
+    evidence: |
+      hanged as a thief

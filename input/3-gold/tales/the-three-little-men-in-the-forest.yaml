@@ -1,0 +1,364 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-three-little-men-in-the-forest
+khm: 13
+atu: '403'
+atu_name: The Three Little Men in the Forest
+canonical_source: ../../2-silver/canonical/the-three-little-men-in-the-forest/canonical.txt
+title: The Three Little Men in the Forest
+
+
+entities:
+
+  characters:
+
+    three_little_men_father:
+      name: The Widowed Father
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      traits: [indecisive, boot-oracle-user, remarried]
+      evidence: |
+        "Marriage is a joy and also a torment." He tests remarriage by
+        pouring water into a boot with a hole in the sole.
+
+    three_little_men_stepmother:
+      name: The Envious Stepmother
+      archetypes: [arc_cruel_stepmother]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_cunning, agency_violence]
+      speech_acts_performed: [speech_command, speech_lie]
+      affects: [affect_envy, affect_anger]
+      traits: [promise-breaking, stepdaughter-persecuting, false-bride-maker, self-sentencing]
+      evidence: |
+        "The woman became bitterly unkind to her step-daughter" and
+        later throws the young queen into the stream.
+
+    three_little_men_stepdaughter:
+      name: The Kind Stepdaughter / True Queen
+      archetypes: [arc_oppressed_maiden]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      existential_states: [state_liminal_dead]
+      affects: [affect_grief]
+      traits: [beautiful, lovable, obedient, generous, gold-speaking, murdered-mother]
+      evidence: |
+        She shares her hard bread with the little men and later returns
+        to nurse her baby after being thrown into the stream.
+
+    three_little_men_stepsister:
+      name: The Unkind Stepsister / False Queen
+      archetypes: [arc_false_bride]
+      species: sp_human
+      agency_modes: [agency_cunning]
+      existential_states: [state_disguised, state_hidden_identity]
+      affects: [affect_envy]
+      traits: [ugly, repulsive, selfish, toad-speaking, substituted-in-bed]
+      evidence: |
+        "with every word she said, a toad sprang out of her mouth"
+
+    three_little_men:
+      name: The Three Little Men / Dwarfs / Elves
+      archetypes: [arc_supernatural_donor]
+      being_type: being_dwarf
+      agency_modes: [agency_speech]
+      traits: [forest-dwellers, hospitality-testers, gift-givers, punishers]
+      evidence: |
+        "she saw a small house out of which peeped three dwarfs" who
+        grant gifts or punishments after the bread and broom tests.
+
+    three_little_men_king:
+      name: The King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_violence, agency_speech]
+      affects: [affect_curiosity]
+      traits: [compassionate, bride-finder, delayed-recognizer, judge]
+      evidence: |
+        "Then the King felt compassion, and when he saw that she was so
+         very beautiful, he said to her, 'Wilt thou go away with me?'"
+
+    three_little_men_scullion:
+      name: The Scullion (duck-return witness)
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      traits: [night-witness, question-answerer, messenger]
+      evidence: |
+        "During the night, however, the scullion saw a duck come
+         swimming up the gutter"
+
+    three_little_men_baby:
+      name: The Queen's Baby
+      species: sp_human
+      traits: [newborn, christening-child, nursed-by-returning-mother]
+      evidence: |
+        "When a year was over, the young Queen bore a son"
+
+    three_little_men_duck_form:
+      name: The Duck Form of the True Queen
+      species: sp_bird
+      existential_states: [state_liminal_dead, state_transformed]
+      transformations: [transform_animal_human]
+      agency_modes: [agency_speech, agency_endurance]
+      traits: [stream-returning, night-visiting, child-nursing, threshold-restored]
+      evidence: |
+        "the scullion saw a duck come swimming up the gutter" and then
+        she went upstairs "in the form of the Queen."
+
+  magic_objects:
+
+    obj_holed_boot_oracle:
+      name: The Holed Boot Marriage Oracle
+      object_kind: tool
+      attributes:
+        function: decides whether father will remarry
+      evidence: |
+        "If it hold the water, then I will again take a wife"
+
+    obj_paper_frock:
+      name: The Paper Frock
+      object_kind: garment
+      attributes:
+        function: lethal winter clothing for impossible strawberry errand
+      evidence: |
+        "put on this dress and go out into the wood"
+
+    obj_hard_bread:
+      name: The Hard Bread
+      object_kind: food
+      attributes:
+        function: shared with the little men; triggers reward
+      evidence: |
+        "divided her bit of bread in two and gave them the half."
+
+    obj_little_men_broom:
+      name: The Little Men's Broom
+      object_kind: tool
+      attributes:
+        function: donor-test task; sweeping reveals winter strawberries
+      evidence: |
+        "Sweep away the snow at the back door with it."
+
+    obj_winter_strawberries:
+      name: The Winter Strawberries
+      object_kind: food
+      attributes:
+        function: impossible-task fulfilment
+      evidence: |
+        "real ripe strawberries, which came up quite dark-red out of
+         the snow"
+
+    obj_boiled_yarn:
+      name: The Boiled Yarn
+      object_kind: material
+      attributes:
+        function: second persecutory errand on frozen river
+      evidence: |
+        "boiled yarn in it... that she might go on the frozen river"
+
+    obj_king_sword:
+      name: The King's Sword (threefold restoration)
+      object_kind: weapon
+      attributes:
+        swings: 3
+        function: restores duck/spirit queen to human life
+      evidence: |
+        "take his sword and swing it three times over me on the threshold"
+
+    obj_nail_barrel:
+      name: The Nail-Barrel Punishment
+      object_kind: weapon
+      attributes:
+        function: mirror sentence for stepmother and false bride
+      evidence: |
+        "a barrel stuck full of nails, and rolled down hill into the water"
+
+  locations:
+
+    loc_house_father_three_little_men:
+      name: The Father's House
+      instance_of: loc_house
+      evidence: |
+        "The girl went home, and told her father what the woman had said."
+
+    loc_forest_three_little_men:
+      name: The Winter Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "Far and wide there was nothing but snow, and not a green blade
+         to be seen."
+
+    loc_little_house_three_little_men:
+      name: The Little House of the Three Men
+      instance_of: loc_house
+      attributes:
+        contains: [stove, back-door, broom]
+      evidence: |
+        "she saw a small house out of which peeped three dwarfs."
+
+    loc_frozen_river_yarn:
+      name: The Frozen River for Rinsing Yarn
+      instance_of: loc_river
+      evidence: |
+        "go on the frozen river, cut a hole in the ice, and rinse the yarn."
+
+    loc_palace_three_little_men:
+      name: The King's Palace
+      instance_of: loc_castle
+      evidence: |
+        "when they arrived at his palace, the wedding was celebrated"
+
+    loc_stream_three_little_men:
+      name: The Stream Beside the Palace
+      instance_of: loc_river
+      evidence: |
+        "threw her out of the window into the stream which flowed by."
+
+    loc_threshold_three_little_men:
+      name: The Threshold of Restoration
+      threshold_type: threshold_doorway
+      evidence: |
+        "swing it three times over me on the threshold."
+
+
+classifications:
+
+  world_laws:
+    - law_kindness_to_hidden_donors_rewarded
+
+  moral_regimes:
+    - moral_kindness_rewarded
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_speech
+    - agency_cunning
+
+  affects_driving:
+    - affect_envy
+    - affect_anger
+
+  symbol_numbers:
+    - num_3   # three mornings, three little men, three gifts, three curses, three nights, three sword-swings
+    - num_2   # two daughters in parallel moral test
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_interdiction, order: 1, actor: three_little_men_stepmother,
+      scene: "stepmother's marriage promise reverses by the third morning into persecution" }
+  - { function: func_villainy, order: 2, actor: three_little_men_stepmother,
+      scene: "sends stepdaughter into winter forest in a paper frock for strawberries" }
+  - { function: func_donor_test, order: 3, actor: three_little_men,
+      scene: "little men ask for bread and order her to sweep snow by the back door" }
+  - { function: func_magical_agent, order: 4, actor: three_little_men,
+      scene: "three gifts: beauty, gold from speech, kingly marriage" }
+  - { function: func_difficult_task, order: 5, actor: three_little_men_stepdaughter,
+      scene: "finds ripe strawberries in snow and returns home with gold-speech" }
+  - { function: func_donor_test, order: 6, actor: three_little_men_stepsister,
+      scene: "stepsister repeats forest visit but refuses greeting, bread, and sweeping" }
+  - { function: func_punishment, order: 7, actor: three_little_men,
+      scene: "three punishments: ugliness, toads from speech, miserable death" }
+  - { function: func_wedding, order: 8, actor: three_little_men_king,
+      scene: "king finds stepdaughter rinsing yarn on frozen river and marries her" }
+  - { function: func_villainy, order: 9, actor: three_little_men_stepmother,
+      scene: "stepmother and daughter throw queen into stream and substitute false bride" }
+  - { function: func_return, order: 10, actor: three_little_men_duck_form,
+      scene: "queen returns as duck/queen for three nights to ask after king, guests, and child" }
+  - { function: func_recognition, order: 11, actor: three_little_men_scullion,
+      scene: "scullion reports the duck's instruction to the king" }
+  - { function: func_liquidation, order: 12, actor: three_little_men_king,
+      scene: "king swings sword three times and restores true queen to life" }
+  - { function: func_punishment, order: 13, actor: three_little_men_stepmother,
+      scene: "stepmother pronounces her own nail-barrel sentence and is rolled into water with daughter" }
+
+
+edges:
+
+  # Remarriage and reversal of promise
+  - { from: three_little_men_stepmother, to: three_little_men_stepdaughter, label: PROMISES_TO,
+      evidence: "thou shalt wash thyself in milk every morning, and drink wine" }
+  - { from: three_little_men_father, to: obj_holed_boot_oracle, label: USES,
+      evidence: "If it hold the water, then I will again take a wife" }
+  - { from: three_little_men_stepmother, to: three_little_men_stepdaughter, label: ABUSES,
+      evidence: "day by day did her best to treat her still worse." }
+  - { from: three_little_men_stepmother, to: three_little_men_stepdaughter, label: ENVIES,
+      evidence: "She was also envious because her step-daughter was beautiful and lovable" }
+
+  # First winter donor-test
+  - { from: three_little_men_stepmother, to: three_little_men_stepdaughter, label: SENDS_TO_IMPOSSIBLE_TASK,
+      attributes: { task: winter_strawberries, garment: obj_paper_frock },
+      evidence: "do not show thy face again until thou hast the basketful of strawberries" }
+  - { from: three_little_men_stepdaughter, to: three_little_men, label: GREETS,
+      evidence: "She wished them good day, and knocked modestly at the door." }
+  - { from: three_little_men_stepdaughter, to: three_little_men, label: SHARES_FOOD_WITH,
+      attributes: { food: obj_hard_bread },
+      evidence: "divided her bit of bread in two and gave them the half." }
+  - { from: three_little_men, to: three_little_men_stepdaughter, label: COMMANDS,
+      evidence: "Sweep away the snow at the back door with it." }
+  - { from: three_little_men_stepdaughter, to: obj_winter_strawberries, label: FINDS,
+      evidence: "what did she find but real ripe strawberries" }
+  - { from: three_little_men, to: three_little_men_stepdaughter, label: GRANTS_TO,
+      attributes: { gifts: [daily_beauty, gold_from_speech, royal_marriage] },
+      evidence: "What shall we give her as she is so good, and has shared her bread with us?" }
+
+  # Second forest test, inverted
+  - { from: three_little_men_stepsister, to: three_little_men, label: REFUSES_FOOD_TO,
+      evidence: "There is not enough for myself, so how can I give it away to other people?" }
+  - { from: three_little_men_stepsister, to: three_little_men, label: REFUSES_SERVICE_TO,
+      evidence: "Humph! Sweep for yourselves" }
+  - { from: three_little_men, to: three_little_men_stepsister, label: CURSES,
+      attributes: { punishments: [daily_ugliness, toads_from_speech, miserable_death] },
+      evidence: "What shall we give her as she is so naughty, and has a wicked envious heart" }
+
+  # River task and royal marriage
+  - { from: three_little_men_stepmother, to: three_little_men_stepdaughter, label: SENDS_TO_IMPOSSIBLE_TASK,
+      attributes: { task: rinse_yarn_on_frozen_river, object: obj_boiled_yarn },
+      evidence: "go on the frozen river, cut a hole in the ice, and rinse the yarn." }
+  - { from: three_little_men_king, to: three_little_men_stepdaughter, label: RESCUES_FROM_TASK,
+      evidence: "Wilt thou go away with me?" }
+  - { from: three_little_men_king, to: three_little_men_stepdaughter, label: MARRIES,
+      evidence: "the wedding was celebrated with great pomp" }
+
+  # Murder and false bride
+  - { from: three_little_men_stepdaughter, to: three_little_men_baby, label: GIVES_BIRTH_TO,
+      evidence: "the young Queen bore a son" }
+  - { from: three_little_men_stepmother, to: three_little_men_stepdaughter, label: MURDERS,
+      evidence: "threw her out of the window into the stream which flowed by." }
+  - { from: three_little_men_stepsister, to: three_little_men_stepdaughter, label: SUBSTITUTES_FOR,
+      evidence: "the ugly daughter laid herself in the bed" }
+  - { from: three_little_men_stepmother, to: three_little_men_king, label: DECEIVES,
+      evidence: "she is lying in a violent perspiration; you must let her rest to-day." }
+  - { from: three_little_men_stepsister, to: three_little_men_king, label: REVEALS_CURSE_TO,
+      evidence: "with every word a toad leaped out" }
+
+  # Duck return and restoration
+  - { from: three_little_men_stepdaughter, to: three_little_men_duck_form, label: TRANSFORMS_INTO,
+      evidence: "a duck come swimming up the gutter" }
+  - { from: three_little_men_duck_form, to: three_little_men_scullion, label: QUESTIONS,
+      evidence: "King, what art thou doing now? Sleepest thou, or wakest thou?" }
+  - { from: three_little_men_duck_form, to: three_little_men_baby, label: NURSES,
+      evidence: "nursed the baby, shook up its little bed, covered it over" }
+  - { from: three_little_men_duck_form, to: three_little_men_scullion, label: COMMANDS,
+      evidence: "Go and tell the King to take his sword and swing it three times over me" }
+  - { from: three_little_men_scullion, to: three_little_men_king, label: REVEALS_TO,
+      evidence: "Then the scullion ran and told this to the King" }
+  - { from: three_little_men_king, to: obj_king_sword, label: USES,
+      evidence: "came with his sword and swung it thrice over the spirit" }
+  - { from: obj_king_sword, to: three_little_men_stepdaughter, label: RESTORES_TO_LIFE,
+      evidence: "his wife stood before him strong, living, and healthy" }
+
+  # Self-sentence and punishment
+  - { from: three_little_men_king, to: three_little_men_stepmother, label: ELICITS_SENTENCE_FROM,
+      evidence: "What does a person deserve who drags another out of bed and throws him in the water?" }
+  - { from: three_little_men_stepmother, to: obj_nail_barrel, label: PRONOUNCES_OWN_SENTENCE,
+      evidence: "The wretch deserves nothing better... than to be taken and put in a barrel stuck full of nails" }
+  - { from: three_little_men_king, to: three_little_men_stepmother, label: PUNISHES,
+      attributes: { instrument: obj_nail_barrel },
+      evidence: "the old woman to be put into it with her daughter" }
+  - { from: three_little_men_king, to: three_little_men_stepsister, label: PUNISHES,
+      attributes: { instrument: obj_nail_barrel },
+      evidence: "the old woman to be put into it with her daughter" }

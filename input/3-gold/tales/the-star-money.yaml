@@ -1,0 +1,342 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-star-money
+khm: 153
+atu: '779'
+atu_name: The Star Money
+canonical_source: ../../2-silver/canonical/the-star-money/canonical.txt
+title: The Star Money
+
+
+entities:
+
+  characters:
+
+    star_money_girl:
+      name: The Good and Pious Little Girl
+      archetypes: [arc_pious_orphan]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_object_mediation, agency_speech]
+      speech_acts_performed: [speech_blessing]
+      affects: [affect_pity]
+      traits: [orphan, homeless, bedless, bread-holder, pious, world-forsaken, total-almsgiver, heaven-rewarded]
+      evidence: |
+        She was, however, good and pious
+
+    star_money_poor_man:
+      name: The Hungry Poor Man
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_request]
+      affects: [affect_hunger]
+      traits: [poor-man, hungry-beggar, bread-recipient]
+      evidence: |
+        Then a poor man met her
+
+    star_money_cold_head_child:
+      name: The Child with the Cold Head
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_request]
+      affects: [affect_pity]
+      traits: [moaning-child, cold-headed, hood-recipient]
+      evidence: |
+        Then came a child who moaned
+
+    star_money_frozen_child:
+      name: The Child Without a Jacket
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_request]
+      affects: [affect_pity]
+      traits: [jacketless-child, frozen-with-cold, jacket-recipient]
+      evidence: |
+        another child who had no jacket and was frozen with cold
+
+    star_money_frock_beggar:
+      name: The Child Begging for a Frock
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_request]
+      affects: [affect_pity]
+      traits: [frock-beggar, garment-recipient]
+      evidence: |
+        one begged for a frock
+
+    star_money_shirt_beggar:
+      name: The Child Asking for a Little Shirt
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_request]
+      affects: [affect_pity]
+      traits: [dark-forest-child, final-garment-beggar, shirt-recipient]
+      evidence: |
+        there came yet another child, and asked for a little shirt
+
+  magic_objects:
+
+    obj_star_money_bread:
+      name: The Little Bit of Bread
+      object_kind: food
+      attributes:
+        function: last food received by charity and immediately given away to hunger
+      evidence: |
+        a little bit of bread in her hand
+
+    obj_star_money_hood:
+      name: The Hood
+      object_kind: garment
+      attributes:
+        function: first garment given to cover a cold child's head
+      evidence: |
+        she took off her hood and gave it to him
+
+    obj_star_money_jacket:
+      name: The Jacket
+      object_kind: garment
+      attributes:
+        function: second garment given to a frozen child
+      evidence: |
+        she gave it her own
+
+    obj_star_money_frock:
+      name: The Frock
+      object_kind: garment
+      attributes:
+        function: outer garment surrendered to the next beggar
+      evidence: |
+        one begged for a frock, and she gave away that also
+
+    obj_star_money_little_shirt:
+      name: The Little Shirt
+      object_kind: garment
+      attributes:
+        function: final garment surrendered in the dark forest, completing total almsgiving
+      evidence: |
+        thou canst very well give thy little shirt away
+
+    obj_star_money_fallen_money:
+      name: The Star-Money
+      object_kind: treasure
+      attributes:
+        function: heavenly replacement wealth that falls as stars but becomes hard smooth money
+      evidence: |
+        some stars from heaven fell down
+
+    obj_star_money_new_linen_shirt:
+      name: The New Linen Shirt
+      object_kind: garment
+      attributes:
+        function: replacement clothing provided after the girl gives away her last shirt
+      evidence: |
+        a new one which was of the very finest linen
+
+  locations:
+
+    loc_star_money_open_country:
+      name: The Open Country
+      instance_of: loc_field
+      evidence: |
+        she went forth into the open country
+
+    loc_star_money_forest:
+      name: The Dark Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        she got into a forest and it had already become dark
+
+    loc_star_money_heaven:
+      name: Heaven
+      instance_of: loc_heaven
+      evidence: |
+        stars from heaven fell down
+
+
+classifications:
+
+  world_laws:
+    - law_total_almsgiving_draws_heavenly_replacement
+
+  moral_regimes:
+    - moral_kindness_rewarded
+    - moral_providential_election
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_object_mediation
+    - agency_speech
+
+  affects_driving:
+    - affect_pity
+    - affect_hunger
+
+  symbol_numbers: []
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: star_money_girl
+    scene: The orphan girl has no parents, no room, no bed, and only bread and clothing.
+    evidence: |
+      father and mother were dead
+
+  - function: func_departure
+    order: 2
+    actor: star_money_girl
+    scene: Forsaken by the world, the girl goes into the open country trusting God.
+    evidence: |
+      she went forth into the open country, trusting in the good God
+
+  - function: func_almsgiving
+    order: 3
+    actor: star_money_girl
+    beneficiary: star_money_poor_man
+    scene: The girl gives her whole piece of bread to the hungry poor man and blesses it.
+    evidence: |
+      She reached him the whole of her piece of bread
+
+  - function: func_almsgiving
+    order: 4
+    actor: star_money_girl
+    beneficiary: star_money_cold_head_child
+    scene: She gives her hood to the child whose head is cold.
+    evidence: |
+      she took off her hood and gave it to him
+
+  - function: func_almsgiving
+    order: 5
+    actor: star_money_girl
+    beneficiary: star_money_frozen_child
+    scene: She gives her jacket to the frozen child without one.
+    evidence: |
+      she met another child who had no jacket and was frozen with cold
+
+  - function: func_almsgiving
+    order: 6
+    actor: star_money_girl
+    beneficiary: star_money_frock_beggar
+    scene: She gives away her frock when another child begs for it.
+    evidence: |
+      one begged for a frock, and she gave away that also
+
+  - function: func_almsgiving
+    order: 7
+    actor: star_money_girl
+    beneficiary: star_money_shirt_beggar
+    scene: In the dark forest, she gives away her last little shirt.
+    evidence: |
+      took it off, and gave away that also
+
+  - function: func_reward
+    order: 8
+    actor: loc_star_money_heaven
+    beneficiary: star_money_girl
+    scene: Stars fall from heaven as hard smooth money, and a new linen shirt appears.
+    evidence: |
+      they were nothing else but hard smooth pieces of money
+
+  - function: func_enrichment
+    order: 9
+    actor: star_money_girl
+    scene: The girl gathers the money into the new shirt and remains rich for life.
+    evidence: |
+      was rich all the days of her life
+
+
+edges:
+
+  - from: star_money_girl
+    label: IS_ORPHANED
+    to: arc_pious_orphan
+    evidence: |
+      father and mother were dead
+
+  - from: star_money_girl
+    label: TRUSTS_IN
+    to: loc_star_money_heaven
+    evidence: |
+      trusting in the good God
+
+  - from: star_money_poor_man
+    label: REQUESTS_FOOD_FROM
+    to: star_money_girl
+    evidence: |
+      give me something to eat, I am so hungry
+
+  - from: star_money_girl
+    label: GIVES
+    to: obj_star_money_bread
+    evidence: |
+      She reached him the whole of her piece of bread
+
+  - from: star_money_girl
+    label: BLESSES_GIFT
+    to: speech_blessing
+    evidence: |
+      May God bless it to thy use
+
+  - from: star_money_cold_head_child
+    label: REQUESTS
+    to: obj_star_money_hood
+    evidence: |
+      My head is so cold, give me something to cover it with
+
+  - from: star_money_girl
+    label: GIVES
+    to: obj_star_money_hood
+    evidence: |
+      she took off her hood and gave it to him
+
+  - from: star_money_girl
+    label: GIVES
+    to: obj_star_money_jacket
+    evidence: |
+      she gave it her own
+
+  - from: star_money_girl
+    label: GIVES
+    to: obj_star_money_frock
+    evidence: |
+      one begged for a frock, and she gave away that also
+
+  - from: star_money_girl
+    label: GIVES_LAST_GARMENT
+    to: obj_star_money_little_shirt
+    evidence: |
+      took it off, and gave away that also
+
+  - from: obj_star_money_fallen_money
+    label: FALLS_FROM
+    to: loc_star_money_heaven
+    evidence: |
+      stars from heaven fell down
+
+  - from: obj_star_money_fallen_money
+    label: BECOMES_MONEY
+    to: obj_star_money_fallen_money
+    evidence: |
+      hard smooth pieces of money
+
+  - from: obj_star_money_new_linen_shirt
+    label: REPLACES
+    to: obj_star_money_little_shirt
+    evidence: |
+      although she had just given her little shirt away, she had a new one
+
+  - from: star_money_girl
+    label: GATHERS_MONEY_IN
+    to: obj_star_money_new_linen_shirt
+    evidence: |
+      gathered together the money into this
+
+  - from: law_total_almsgiving_draws_heavenly_replacement
+    label: REWARDS
+    to: star_money_girl
+    evidence: |
+      was rich all the days of her life

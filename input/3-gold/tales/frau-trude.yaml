@@ -1,0 +1,220 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: frau-trude
+khm: 43
+atu: '334'
+atu_name: Household of the Witch
+canonical_source: ../../2-silver/canonical/frau-trude/canonical.txt
+title: Frau Trude
+
+
+entities:
+
+  characters:
+
+    frau_trude_girl:
+      name: The Obstinate Little Girl
+      archetypes: [arc_willful_child]
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      existential_states: [state_transformed]
+      transformations: [transform_punitive_objectification]
+      affects: [affect_curiosity, affect_fear]
+      traits: [obstinate, inquisitive, disobedient, witch-house-visitor, trembling-witness, transformed-fuel]
+      evidence: |
+        "There was once a little girl who was obstinate and inquisitive"
+
+    frau_trude_parents:
+      name: The Girl's Parents
+      archetypes: [arc_prohibition_giver]
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_prohibition]
+      traits: [warning-parents, household-authority, conditional-disowners]
+      evidence: |
+        "Her parents absolutely forbade her"
+
+    frau_trude:
+      name: Frau Trude
+      archetypes: [arc_predator]
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_speech, agency_cunning, agency_violence]
+      speech_acts_performed: [speech_lie, speech_command]
+      traits: [bad-woman, wicked-doer, householder-witch, fire-headed-proper-costume, waiting-predator, child-transformer, fire-warmer]
+      evidence: |
+        "then thou hast seen the witch in her proper costume."
+
+    frau_trude_black_man:
+      name: The Black Man on the Steps
+      species: sp_human
+      agency_modes: [agency_endurance]
+      traits: [uncanny-threshold-figure, black, explained-as-collier]
+      evidence: |
+        "I saw a black man on your steps."
+
+    frau_trude_green_man:
+      name: The Green Man
+      species: sp_human
+      agency_modes: [agency_endurance]
+      traits: [uncanny-threshold-figure, green, explained-as-huntsman]
+      evidence: |
+        "Then I saw a green man."
+
+    frau_trude_blood_red_man:
+      name: The Blood-Red Man
+      species: sp_human
+      agency_modes: [agency_endurance]
+      traits: [uncanny-threshold-figure, blood-red, explained-as-butcher]
+      evidence: |
+        "After that I saw a blood-red man."
+
+  magic_objects:
+
+    obj_frau_trude_wood_block:
+      name: The Block of Wood
+      object_kind: material
+      attributes:
+        original_being: frau_trude_girl
+        transformed_by: frau_trude
+        use: fuel
+      evidence: |
+        "Then she changed the girl into a block of wood"
+
+  locations:
+
+    loc_frau_trude_parent_house:
+      name: The Parental Household
+      instance_of: loc_house
+      evidence: |
+        "One day she said to her parents"
+
+    loc_frau_trude_house:
+      name: Frau Trude's House
+      instance_of: loc_witch_house
+      threshold_type: threshold_doorway
+      evidence: |
+        "there are such odd things in her house"
+
+    loc_frau_trude_steps:
+      name: Frau Trude's Steps
+      instance_of: loc_witch_house
+      threshold_type: threshold_doorway
+      evidence: |
+        "I saw a black man on your steps."
+
+    loc_frau_trude_window:
+      name: Frau Trude's Window
+      instance_of: loc_witch_house
+      threshold_type: threshold_doorway
+      evidence: |
+        "I looked through the window"
+
+    loc_frau_trude_fire:
+      name: Frau Trude's Fire
+      instance_of: loc_hearth
+      evidence: |
+        "threw it into the fire"
+
+
+classifications:
+
+  world_laws:
+    - law_prohibition_invites_violation
+
+  moral_regimes:
+    - moral_disobedience_punished
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+    - agency_violence
+    - agency_social_rank
+
+  affects_driving:
+    - affect_curiosity
+    - affect_fear
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: frau_trude_girl,
+      scene: "the little girl is introduced as obstinate, inquisitive, and disobedient" }
+  - { function: func_interdiction, order: 2, actor: frau_trude_parents,
+      beneficiary: frau_trude_girl,
+      scene: "parents forbid the girl to visit Frau Trude and warn that she is wicked" }
+  - { function: func_violation, order: 3, actor: frau_trude_girl,
+      scene: "the girl ignores the parental prohibition and goes to Frau Trude" }
+  - { function: func_arrival, order: 4, actor: frau_trude_girl,
+      scene: "the girl reaches Frau Trude trembling after seeing uncanny figures" }
+  - { function: func_reconnaissance, order: 5, actor: frau_trude_girl,
+      scene: "the girl reports black, green, blood-red, and fire-headed sights around the house" }
+  - { function: func_exposure, order: 6, actor: frau_trude,
+      scene: "Frau Trude admits that the fire-headed figure is the witch in her proper costume" }
+  - { function: func_villainy, order: 7, actor: frau_trude,
+      victim: frau_trude_girl,
+      scene: "Frau Trude transforms the girl into wood and throws her into the fire" }
+  - { function: func_punishment, order: 8, actor: frau_trude,
+      victim: frau_trude_girl,
+      scene: "the transformed child burns as light and warmth for the witch" }
+
+
+edges:
+
+  # Prohibition and violation
+  - { from: frau_trude_girl, to: affect_curiosity, label: DRIVEN_BY,
+      evidence: "I have become quite curious!" }
+  - { from: frau_trude_girl, to: frau_trude, label: WANTS_TO_VISIT,
+      evidence: "I will go to her some day." }
+  - { from: frau_trude_parents, to: frau_trude_girl, label: FORBID,
+      evidence: "Her parents absolutely forbade her" }
+  - { from: frau_trude_parents, to: frau_trude, label: WARN_AGAINST,
+      evidence: "Frau Trude is a bad woman, who does wicked things" }
+  - { from: frau_trude_parents, to: frau_trude_girl, label: THREATEN_DISOWNING,
+      evidence: "if thou goest to her; thou art no longer our child." }
+  - { from: frau_trude_girl, to: law_prohibition_invites_violation, label: VIOLATES,
+      evidence: "did not let herself be turned aside by her parent’s prohibition" }
+  - { from: frau_trude_girl, to: loc_frau_trude_house, label: GOES_TO,
+      evidence: "still went to Frau Trude." }
+
+  # Uncanny household signs
+  - { from: frau_trude, to: frau_trude_girl, label: QUESTIONS,
+      evidence: "Why art thou so pale?" }
+  - { from: frau_trude_girl, to: affect_fear, label: TREMBLES_WITH,
+      evidence: "her whole body trembled" }
+  - { from: frau_trude_girl, to: frau_trude_black_man, label: SEES,
+      evidence: "I saw a black man on your steps." }
+  - { from: frau_trude, to: frau_trude_black_man, label: EXPLAINS_AS,
+      evidence: "That was a collier." }
+  - { from: frau_trude_girl, to: frau_trude_green_man, label: SEES,
+      evidence: "Then I saw a green man." }
+  - { from: frau_trude, to: frau_trude_green_man, label: EXPLAINS_AS,
+      evidence: "That was a huntsman." }
+  - { from: frau_trude_girl, to: frau_trude_blood_red_man, label: SEES,
+      evidence: "I saw a blood-red man." }
+  - { from: frau_trude, to: frau_trude_blood_red_man, label: EXPLAINS_AS,
+      evidence: "That was a butcher." }
+  - { from: frau_trude_girl, to: loc_frau_trude_window, label: LOOKS_THROUGH,
+      evidence: "I looked through the window" }
+  - { from: frau_trude_girl, to: frau_trude, label: SEES_FIRE_HEADED_FORM,
+      evidence: "the devil himself with a head of fire." }
+  - { from: frau_trude, to: frau_trude_girl, label: REVEALS_PROPER_COSTUME,
+      evidence: "then thou hast seen the witch in her proper costume." }
+  - { from: frau_trude, to: frau_trude_girl, label: AWAITS,
+      evidence: "I have been waiting for thee" }
+
+  # Punitive transformation
+  - { from: frau_trude, to: frau_trude_girl, label: TRANSFORMS,
+      evidence: "she changed the girl into a block of wood" }
+  - { from: frau_trude_girl, to: obj_frau_trude_wood_block, label: TRANSFORMS_INTO,
+      evidence: "changed the girl into a block of wood" }
+  - { from: frau_trude, to: obj_frau_trude_wood_block, label: THROWS_INTO_FIRE,
+      evidence: "threw it into the fire." }
+  - { from: obj_frau_trude_wood_block, to: loc_frau_trude_fire, label: BURNS_IN,
+      evidence: "it was in full blaze" }
+  - { from: frau_trude, to: loc_frau_trude_fire, label: WARMS_BY,
+      evidence: "warmed herself by it" }
+  - { from: frau_trude, to: moral_disobedience_punished, label: ENACTS,
+      evidence: "That shines bright for once in a way." }

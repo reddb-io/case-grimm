@@ -1,0 +1,535 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-singing-springing-lark
+khm: 88
+atu: '425C/425A'
+atu_name: Beauty and the Beast / Animal as Bridegroom and Lost Husband
+canonical_source: ../../2-silver/canonical/the-singing-springing-lark/canonical.txt
+title: The Singing, Springing Lark
+
+
+entities:
+
+  characters:
+
+    lark_father:
+      name: The Traveling Father
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_fear]
+      traits: [journeying, gift-bringing, favorite-child-father, over-persuaded, oath-bound]
+      evidence: |
+        he asked his three daughters what he should bring back with him
+        for them
+
+    lark_youngest_daughter:
+      name: The Youngest Daughter / Faithful Wife
+      archetypes: [arc_reluctant_bride]
+      species: sp_human
+      existential_states: [state_forgotten_bride]
+      agency_modes: [agency_speech, agency_endurance, agency_cunning, agency_object_mediation]
+      speech_acts_performed: [speech_promise, speech_bargain]
+      affects: [affect_loyalty, affect_grief]
+      traits: [favorite-child, fearless, promise-honoring, faithful-seeker, dragon-helper, bridegroom-reclaimer]
+      evidence: |
+        Dearest father, indeed your promise must be fulfilled.
+
+    lark_eldest_daughter:
+      name: The Eldest Daughter
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_wish]
+      traits: [pearl-wisher, first-bride-sister]
+      evidence: |
+        the eldest wished for pearls
+
+    lark_second_daughter:
+      name: The Second Daughter
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_wish]
+      traits: [diamond-wisher, second-bride-sister]
+      evidence: |
+        the second wished for diamonds
+
+    lark_lion_prince:
+      name: The Enchanted Lion Prince / Dove
+      archetypes: [arc_enchanted_prince]
+      species: sp_lion
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human]
+      agency_modes: [agency_speech, agency_violence, agency_animal_aid]
+      speech_acts_performed: [speech_promise, speech_warning]
+      affects: [affect_loyalty]
+      traits: [lark-owner, threatening-lion, night-human, bridegroom, dove-exile, dragon-fighter, bewitched-forgetter]
+      evidence: |
+        The lion, however, was an enchanted prince and was by day a
+        lion
+
+    lark_lion_people:
+      name: The Lion People
+      species: sp_lion
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human]
+      agency_modes: [agency_social_rank, agency_animal_aid]
+      traits: [enchanted-retinue, night-human, bridal-conductors]
+      evidence: |
+        all his people were lions with him, but in the night they
+        resumed their natural human shapes.
+
+    lark_child:
+      name: The Child of the Lion Prince and Wife
+      species: sp_human
+      traits: [taken-to-wedding, grown-beautiful-at-return]
+      evidence: |
+        their little child as well
+
+    lark_sun:
+      name: The Sun
+      archetypes: [arc_supernatural_donor]
+      being_type: being_celestial
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_testimony]
+      traits: [all-shining, crevice-searching, casket-giver]
+      evidence: |
+        Thou shinest into every crevice, and over every peak
+
+    lark_moon:
+      name: The Moon
+      archetypes: [arc_supernatural_donor]
+      being_type: being_celestial
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_testimony]
+      traits: [night-shining, field-and-forest-searching, egg-giver]
+      evidence: |
+        Thou shinest the whole night through, and on every field and
+        forest
+
+    lark_night_wind:
+      name: The Night Wind
+      archetypes: [arc_supernatural_donor, arc_wise_helper]
+      being_type: being_wind
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_warning]
+      traits: [leaf-searching, wind-summoner, counsel-giver, nut-giver]
+      evidence: |
+        Thou blowest over every tree and under every leaf
+
+    lark_south_wind:
+      name: The South Wind
+      being_type: being_wind
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_testimony]
+      traits: [dove-finder, red-sea-witness, dragon-news-bringer]
+      evidence: |
+        the south wind said, “I have seen the white dove
+
+    lark_dragon_princess:
+      name: The Dragon Princess / False Bride
+      archetypes: [arc_false_bride]
+      being_type: being_dragon
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human]
+      agency_modes: [agency_violence, agency_cunning, agency_speech]
+      speech_acts_performed: [speech_bargain]
+      affects: [affect_greed]
+      traits: [enchanted-princess, dragon-form, carried-off-bridegroom, golden-dress-buyer, sleeping-draught-plotter]
+      evidence: |
+        the dragon, however, is an enchanted princess.
+
+    lark_griffin:
+      name: The Griffin by the Red Sea
+      being_type: being_griffin
+      agency_modes: [agency_animal_aid, agency_object_mediation]
+      traits: [sea-carrier, rest-needing, home-carrying]
+      evidence: |
+        the griffin which is by the Red Sea
+
+    lark_page:
+      name: The Page with the Sleeping Draught
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [drug-giver, secret-revealer, prince-helper]
+      evidence: |
+        the page was to give the prince a sleeping-draught
+
+    lark_sorcerer_father:
+      name: The Princess's Sorcerer Father
+      being_type: being_wizard
+      agency_modes: [agency_violence]
+      traits: [feared-father, pursuit-threat]
+      evidence: |
+        they feared the father of the princess, who was a sorcerer
+
+  magic_objects:
+
+    obj_lark_singing_lark:
+      name: The Singing, Soaring Lark
+      object_kind: creature_object
+      attributes:
+        function: desired gift that creates the father's lion-promise
+      evidence: |
+        a singing, soaring lark
+
+    obj_lark_pearls_diamonds:
+      name: Pearls and Diamonds
+      object_kind: treasure
+      attributes:
+        function: elder sisters' ordinary return-gifts
+      evidence: |
+        he had brought pearls and diamonds for the two eldest
+
+    obj_lark_candle_ray:
+      name: The Candle Ray
+      object_kind: material
+      attributes:
+        function: forbidden light that transforms the lion-prince into a dove
+      evidence: |
+        a ray about the breadth of a hair fell on the King’s son
+
+    obj_lark_blood_feather_trace:
+      name: Red Blood and White Feather Trace
+      object_kind: trail
+      attributes:
+        interval: every seventh step
+        function: path tokens dropped by the dove for the faithful wife
+      evidence: |
+        a red drop of blood and a little white feather fell down and
+        showed her the way.
+
+    obj_lark_sun_casket:
+      name: The Sun's Casket
+      object_kind: token
+      attributes:
+        function: deferred aid that contains the sun-bright dress
+      evidence: |
+        I present thee with a casket, open it when thou art in sorest
+        need.
+
+    obj_lark_moon_egg:
+      name: The Moon's Egg
+      object_kind: token
+      attributes:
+        function: deferred aid containing the golden hen and chickens
+      evidence: |
+        here I give thee an egg, break it when thou art in great need.
+
+    obj_lark_eleventh_reed:
+      name: The Eleventh Reed
+      object_kind: tool
+      attributes:
+        count: 11
+        function: counted reed that lets the lion overcome the dragon
+      evidence: |
+        count them, break off the eleventh, and strike the dragon with
+        it
+
+    obj_lark_nut:
+      name: The Sea-Crossing Nut
+      object_kind: token
+      attributes:
+        function: grows a resting-tree for the griffin above the sea
+      evidence: |
+        Here is a nut for thee
+
+    obj_lark_sun_dress:
+      name: The Sun-Bright Dress
+      object_kind: garment
+      attributes:
+        function: first barter object purchased for one night beside the bridegroom
+      evidence: |
+        A dress lay therein as brilliant as the sun itself.
+
+    obj_lark_golden_hen_chickens:
+      name: The Golden Hen and Twelve Chickens
+      object_kind: creature_object
+      attributes:
+        count: 12
+        function: second barter wonder purchased for the successful recognition night
+      evidence: |
+        there came out a clucking hen with twelve chickens all of gold
+
+    obj_lark_sleeping_draught:
+      name: The Sleeping Draught
+      object_kind: food
+      attributes:
+        function: prevents the prince hearing the faithful wife's first appeal
+      evidence: |
+        a sleeping-draught
+
+  locations:
+
+    loc_lark_father_house:
+      name: The Father's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        on thy return home
+
+    loc_lark_forest_castle:
+      name: The Forest Castle
+      instance_of: loc_castle
+      threshold_type: threshold_forest
+      evidence: |
+        in the midst of it was a splendid castle
+
+    loc_lark_lark_tree:
+      name: The Lark Tree
+      instance_of: loc_tree
+      evidence: |
+        quite on the top of the tree, he saw a singing, soaring lark
+
+    loc_lark_wedding_chamber:
+      name: The Light-Proof Wedding Chamber
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        She had a chamber built there, so strong and thick that no ray
+        could pierce through it
+
+    loc_lark_red_sea:
+      name: The Red Sea
+      instance_of: loc_sea
+      evidence: |
+        it has flown to the Red Sea
+
+    loc_lark_false_bride_castle:
+      name: The False Bride's Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        she came to the castle where both of them were living together
+
+    loc_lark_meadow:
+      name: The Meadow of the Golden Chickens
+      instance_of: loc_meadow
+      evidence: |
+        went out into a meadow, sat down there, and wept
+
+
+classifications:
+
+  world_laws:
+    - law_promise_binds_reality
+    - law_forbidden_light_exiles_animal_bridegroom
+    - law_trace_tokens_guide_lost_spouse_quest
+    - law_voice_recognizes_forgotten_bride
+
+  moral_regimes:
+    - moral_restorative
+    - moral_reciprocal_sacrifice
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_endurance
+    - agency_object_mediation
+    - agency_animal_aid
+    - agency_violence
+
+  affects_driving:
+    - affect_loyalty
+    - affect_fear
+    - affect_grief
+    - affect_greed
+
+  symbol_numbers:
+    - num_3
+    - num_7
+    - num_12
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: lark_father,
+      scene: "a father asks his three daughters what gifts he should bring from his journey" }
+  - { function: func_lack, order: 2, actor: lark_youngest_daughter,
+      scene: "the youngest asks for a singing, soaring lark that the father cannot find" }
+  - { function: func_violation, order: 3, actor: lark_father,
+      scene: "the father tries to take the lark from the lion's tree" }
+  - { function: func_threat, order: 4, actor: lark_lion_prince,
+      scene: "the lion threatens to devour whoever steals his lark" }
+  - { function: func_bargain, order: 5, actor: lark_father,
+      scene: "the father promises the first being who meets him at home in exchange for life and lark" }
+  - { function: func_departure, order: 6, actor: lark_youngest_daughter,
+      scene: "the youngest daughter accepts that the promise must be fulfilled and goes to the forest" }
+  - { function: func_marriage, order: 7, actor: lark_lion_prince,
+      scene: "the lion is a night-human prince and marries her in the forest castle" }
+  - { function: func_warning, order: 8, actor: lark_lion_prince,
+      scene: "the prince warns that candlelight would change him into a dove for seven years" }
+  - { function: func_transformation, order: 9, actor: lark_lion_prince,
+      scene: "a hair-breadth ray reaches him and he becomes a white dove" }
+  - { function: func_pursuit, order: 10, actor: lark_youngest_daughter,
+      scene: "the wife follows red blood and white feathers through the world" }
+  - { function: func_helper_sequence, order: 11, actor: lark_sun,
+      scene: "sun and moon give deferred wonders, while winds discover the dove's destination" }
+  - { function: func_combat_aid, order: 12, actor: lark_youngest_daughter,
+      scene: "she strikes the dragon with the eleventh reed so the lion can overcome it" }
+  - { function: func_abduction, order: 13, actor: lark_dragon_princess,
+      scene: "the restored princess carries the youth away on the griffin" }
+  - { function: func_second_quest, order: 14, actor: lark_youngest_daughter,
+      scene: "the faithful wife searches until she reaches the false bride's castle" }
+  - { function: func_bartered_nights, order: 15, actor: lark_youngest_daughter,
+      scene: "she buys nights beside the bridegroom with the sun dress and golden chickens" }
+  - { function: func_recognition, order: 16, actor: lark_lion_prince,
+      scene: "the prince recognizes his beloved wife by her voice and is released from forgetfulness" }
+  - { function: func_return, order: 17, actor: lark_griffin,
+      scene: "the lovers ride the griffin over the Red Sea and return to their grown child" }
+
+
+edges:
+
+  # Gift request and animal-bridegroom bargain
+  - { from: lark_father, to: lark_youngest_daughter, label: ASKS_GIFT_WISH,
+      evidence: "what he should bring back with him for them" }
+  - { from: lark_eldest_daughter, to: obj_lark_pearls_diamonds, label: WISHES_FOR,
+      evidence: "the eldest wished for pearls" }
+  - { from: lark_second_daughter, to: obj_lark_pearls_diamonds, label: WISHES_FOR,
+      evidence: "the second wished for diamonds" }
+  - { from: lark_youngest_daughter, to: obj_lark_singing_lark, label: WISHES_FOR,
+      evidence: "I should like a singing, soaring lark" }
+  - { from: lark_father, to: obj_lark_singing_lark, label: SEEKS_IN_VAIN,
+      evidence: "he had sought everywhere in vain for a singing, soaring lark" }
+  - { from: lark_father, to: loc_lark_forest_castle, label: ENTERS_FOREST_CASTLE_AREA,
+      evidence: "in the midst of it was a splendid castle" }
+  - { from: loc_lark_lark_tree, to: obj_lark_singing_lark, label: HOLDS,
+      evidence: "quite on the top of the tree, he saw a singing, soaring lark" }
+  - { from: lark_lion_prince, to: obj_lark_singing_lark, label: OWNS,
+      evidence: "my singing, soaring lark" }
+  - { from: lark_lion_prince, to: lark_father, label: THREATENS_TO_DEVOUR,
+      evidence: "will I devour" }
+  - { from: lark_father, to: lark_lion_prince, label: PROMISES_FIRST_MEETER,
+      evidence: "what first meets thee on thy return home" }
+  - { from: lark_lion_prince, to: lark_father, label: GRANTS_LIFE_AND_BIRD,
+      evidence: "I will grant thee thy life, and thou shalt have the bird for thy daughter" }
+  - { from: lark_youngest_daughter, to: lark_father, label: MEETS_FIRST,
+      evidence: "the first who met him was no other than his youngest and dearest daughter" }
+  - { from: lark_youngest_daughter, to: law_promise_binds_reality, label: HONORS,
+      evidence: "your promise must be fulfilled" }
+  - { from: lark_youngest_daughter, to: loc_lark_forest_castle, label: DEPARTS_TO,
+      evidence: "went fearlessly out into the forest" }
+
+  # Enchanted marriage and forbidden light
+  - { from: lark_lion_prince, to: state_transformed, label: IS_BY_DAY,
+      evidence: "was by day a lion" }
+  - { from: lark_lion_prince, to: transform_animal_human, label: RESUMES_HUMAN_SHAPE_AT_NIGHT,
+      evidence: "in the night they resumed their natural human shapes" }
+  - { from: lark_lion_prince, to: lark_youngest_daughter, label: MARRIES,
+      evidence: "their wedding was celebrated with great magnificence" }
+  - { from: lark_lion_people, to: lark_youngest_daughter, label: CONDUCTS,
+      evidence: "my lions shall conduct thee" }
+  - { from: lark_lion_prince, to: lark_youngest_daughter, label: WARNS_ABOUT_LIGHT,
+      evidence: "if when there a ray from a burning candle fell on him" }
+  - { from: obj_lark_candle_ray, to: lark_lion_prince, label: TOUCHES,
+      evidence: "when this ray touched him" }
+  - { from: law_forbidden_light_exiles_animal_bridegroom, to: lark_lion_prince, label: TRANSFORMS_INSTANTLY,
+      evidence: "he was transformed in an instant" }
+  - { from: lark_lion_prince, to: sp_bird, label: BECOMES_DOVE,
+      evidence: "a white dove was sitting there" }
+  - { from: lark_lion_prince, to: obj_lark_blood_feather_trace, label: PROMISES_TRACE,
+      evidence: "at every seventh step that you take I will let fall a drop of red blood and a white feather" }
+
+  # Seven-year trace and cosmic helpers
+  - { from: obj_lark_blood_feather_trace, to: lark_youngest_daughter, label: SHOWS_WAY,
+      evidence: "showed her the way" }
+  - { from: lark_youngest_daughter, to: lark_lion_prince, label: FOLLOWS_FOR_SEVEN_YEARS,
+      evidence: "the seven years were almost past" }
+  - { from: lark_lion_prince, to: lark_youngest_daughter, label: DISAPPEARS_FROM,
+      evidence: "the dove had disappeared" }
+  - { from: lark_youngest_daughter, to: lark_sun, label: ASKS_IF_SEEN_DOVE,
+      evidence: "hast thou not seen a white dove flying?" }
+  - { from: lark_sun, to: obj_lark_sun_casket, label: GIVES,
+      evidence: "I present thee with a casket" }
+  - { from: lark_youngest_daughter, to: lark_moon, label: ASKS_IF_SEEN_DOVE,
+      evidence: "hast thou not seen a white dove flying?" }
+  - { from: lark_moon, to: obj_lark_moon_egg, label: GIVES,
+      evidence: "here I give thee an egg" }
+  - { from: lark_youngest_daughter, to: lark_night_wind, label: ASKS_IF_SEEN_DOVE,
+      evidence: "hast thou not seen a white dove flying?" }
+  - { from: lark_night_wind, to: lark_south_wind, label: CONSULTS,
+      evidence: "I will ask the three other winds" }
+  - { from: lark_south_wind, to: lark_lion_prince, label: HAS_SEEN,
+      evidence: "I have seen the white dove" }
+  - { from: lark_south_wind, to: loc_lark_red_sea, label: LOCATES_AT,
+      evidence: "it has flown to the Red Sea" }
+  - { from: lark_night_wind, to: obj_lark_eleventh_reed, label: INSTRUCTS_TO_BREAK,
+      evidence: "break off the eleventh" }
+  - { from: lark_night_wind, to: obj_lark_nut, label: GIVES,
+      evidence: "Here is a nut for thee" }
+
+  # Dragon release, theft, and renewed quest
+  - { from: lark_lion_prince, to: lark_dragon_princess, label: FIGHTS,
+      evidence: "the lion is there fighting with a dragon" }
+  - { from: lark_dragon_princess, to: state_transformed, label: IS_ENCHANTED_AS,
+      evidence: "the dragon, however, is an enchanted princess" }
+  - { from: lark_youngest_daughter, to: obj_lark_eleventh_reed, label: CUTS_OFF,
+      evidence: "cut off the eleventh" }
+  - { from: lark_youngest_daughter, to: lark_dragon_princess, label: STRIKES,
+      evidence: "struck the dragon therewith" }
+  - { from: lark_lion_prince, to: lark_dragon_princess, label: OVERCOMES,
+      evidence: "the lion overcame it" }
+  - { from: lark_lion_prince, to: transform_animal_human, label: REGAINS_HUMAN_SHAPE,
+      evidence: "both of them regained their human shapes" }
+  - { from: lark_dragon_princess, to: lark_lion_prince, label: CARRIES_OFF,
+      evidence: "carried him off with her" }
+  - { from: lark_dragon_princess, to: lark_griffin, label: SEATS_SELF_ON,
+      evidence: "seated herself on the griffin" }
+  - { from: lark_youngest_daughter, to: affect_grief, label: FEELS,
+      evidence: "sat down and cried" }
+  - { from: lark_youngest_daughter, to: lark_lion_prince, label: VOWS_TO_FIND,
+      evidence: "until I find him" }
+  - { from: lark_youngest_daughter, to: loc_lark_false_bride_castle, label: ARRIVES_AT,
+      evidence: "she came to the castle where both of them were living together" }
+
+  # Bartered nights and voice recognition
+  - { from: obj_lark_sun_casket, to: obj_lark_sun_dress, label: CONTAINS,
+      evidence: "A dress lay therein as brilliant as the sun itself." }
+  - { from: lark_dragon_princess, to: obj_lark_sun_dress, label: WANTS,
+      evidence: "The dress pleased the bride so well" }
+  - { from: lark_youngest_daughter, to: lark_dragon_princess, label: DEMANDS_FLESH_AND_BLOOD,
+      evidence: "Not for money or land" }
+  - { from: lark_youngest_daughter, to: lark_lion_prince, label: BUYS_NIGHT_BESIDE,
+      evidence: "Let me sleep a night in the chamber where the bridegroom sleeps." }
+  - { from: lark_page, to: lark_lion_prince, label: GIVES_SLEEPING_DRAUGHT,
+      evidence: "give the prince a sleeping-draught" }
+  - { from: lark_youngest_daughter, to: lark_lion_prince, label: RECOUNTS_SEVEN_YEAR_SEARCH,
+      evidence: "I have followed after thee for seven years." }
+  - { from: obj_lark_sleeping_draught, to: lark_lion_prince, label: PREVENTS_HEARING,
+      evidence: "the prince slept so soundly" }
+  - { from: obj_lark_moon_egg, to: obj_lark_golden_hen_chickens, label: RELEASES,
+      evidence: "there came out a clucking hen with twelve chickens all of gold" }
+  - { from: lark_dragon_princess, to: obj_lark_golden_hen_chickens, label: WANTS,
+      evidence: "The little chickens pleased her so much" }
+  - { from: lark_page, to: lark_lion_prince, label: REVEALS_FIRST_NIGHT,
+      evidence: "the page told all" }
+  - { from: lark_lion_prince, to: lark_page, label: COMMANDS_DRAUGHT_DISCARDED,
+      evidence: "Pour out the draught by the bed-side." }
+  - { from: lark_lion_prince, to: lark_youngest_daughter, label: RECOGNIZES_BY_VOICE,
+      evidence: "he immediately recognized his beloved wife by her voice" }
+  - { from: law_voice_recognizes_forgotten_bride, to: lark_lion_prince, label: RELEASES,
+      evidence: "Now I really am released!" }
+  - { from: lark_dragon_princess, to: lark_lion_prince, label: BEWITCHED_FORGETFULNESS,
+      evidence: "the strange princess has bewitched me so that I have been compelled to forget thee" }
+
+  # Sea return and restoration
+  - { from: lark_lion_prince, to: lark_youngest_daughter, label: FLEES_SECRETLY_WITH,
+      evidence: "they both left the castle secretly in the night" }
+  - { from: lark_lion_prince, to: lark_sorcerer_father, label: FEARS,
+      evidence: "they feared the father of the princess" }
+  - { from: lark_griffin, to: lark_youngest_daughter, label: CARRIES_OVER_SEA,
+      evidence: "bore them across the Red Sea" }
+  - { from: lark_youngest_daughter, to: obj_lark_nut, label: DROPS,
+      evidence: "she let fall the nut" }
+  - { from: obj_lark_nut, to: loc_lark_red_sea, label: GROWS_TREE_IN,
+      evidence: "a tall nut-tree grew up" }
+  - { from: loc_lark_red_sea, to: lark_griffin, label: PROVIDES_REST_FOR,
+      evidence: "whereon the bird rested" }
+  - { from: lark_griffin, to: loc_lark_father_house, label: CARRIES_HOME,
+      evidence: "then carried them home" }
+  - { from: lark_youngest_daughter, to: lark_child, label: FINDS_GROWN,
+      evidence: "their child, who had grown tall and beautiful" }
+  - { from: lark_lion_prince, to: lark_youngest_daughter, label: LIVES_HAPPILY_WITH,
+      evidence: "they lived thenceforth happily until their death." }

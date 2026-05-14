@@ -1,0 +1,569 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-knapsack-the-hat-and-the-horn
+khm: 54
+atu: '569'
+atu_name: The Knapsack, the Hat, and the Horn
+canonical_source: ../../2-silver/canonical/the-knapsack-the-hat-and-the-horn/canonical.txt
+title: The Knapsack, the Hat, and the Horn
+
+
+entities:
+
+  characters:
+
+    knapsack_eldest_brother:
+      name: The Eldest Brother Who Chooses Silver
+      archetypes: [arc_greedy_one]
+      species: sp_human
+      agency_modes: [agency_endurance]
+      affects: [affect_greed]
+      traits: [poverty-driven, silver-satisfied, home-returning, brother-denying, beaten-into-recognition]
+      evidence: |
+        Now I have found the good luck I wished for, and I desire
+        nothing more.
+
+    knapsack_second_brother:
+      name: The Second Brother Who Chooses Gold
+      archetypes: [arc_greedy_one]
+      species: sp_human
+      agency_modes: [agency_endurance]
+      affects: [affect_greed]
+      traits: [poverty-driven, gold-undecided, treasure-satisfied, brother-denying, beaten-into-recognition]
+      evidence: |
+        putting as much into his pockets as would go in, said farewell
+        to his brother, and went home.
+
+    knapsack_youngest_brother:
+      name: The Youngest Fortune-Seeker
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_cunning, agency_object_mediation, agency_violence, agency_social_rank]
+      speech_acts_performed: [speech_wish, speech_command]
+      affects: [affect_greed, affect_anger]
+      traits: [treasure-refusing, hunger-driven, wishing-cloth-finder, coercive-trader, soldier-commander, forced-bridegroom, betrayed-husband, self-made-king]
+      evidence: |
+        Silver and gold do not move me, I will not renounce my chance
+        of fortune
+
+    knapsack_charcoal_burners:
+      name: The Three Charcoal-burners
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [lonely-wood-dwellers, potato-eaters, object-exchangers, cloth-deprived]
+      evidence: |
+        One night he met, in a lonely wood, a dusty, black
+        charcoal-burner
+
+    knapsack_summoned_warriors:
+      name: The Summoned Corporal and Warriors
+      species: sp_human
+      agency_modes: [agency_violence, agency_object_mediation, agency_speech]
+      traits: [knapsack-emergent, armed-from-head-to-foot, command-obedient, cloth-retrievers, house-surrounders, royal-troop-repellers]
+      evidence: |
+        a corporal comes with six men armed from head to foot, and they
+        do whatsoever thou commandest them.
+
+    knapsack_elder_brothers_household:
+      name: The Prosperous Elder Brothers' Household
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      affects: [affect_pride]
+      traits: [silver-gold-enriched, handsome-house-builders, ragged-brother-mockers, beaten-by-soldiers]
+      evidence: |
+        his brothers had built themselves a handsome house with their
+        silver and gold
+
+    knapsack_king:
+      name: The Resisting King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command]
+      affects: [affect_anger, affect_fear]
+      traits: [peace-keeper, troop-sender, crown-preserver, daughter-yielder, crushed-ruler]
+      evidence: |
+        News of this at length came to the King, who was very angry
+
+    knapsack_royal_troops:
+      name: The King's Captain and Troops
+      species: sp_human
+      agency_modes: [agency_violence, agency_social_rank]
+      traits: [ordered-against-disturber, beaten-back, bloody-nosed, put-to-flight]
+      evidence: |
+        ordered a captain to march out with his troop
+
+    knapsack_princess:
+      name: The Treacherous King's Daughter
+      archetypes: [arc_treacherous_spouse]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_cunning, agency_speech, agency_violence]
+      existential_states: [state_deceived]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_shame, affect_fear]
+      traits: [vexed-bride, common-husband-ashamed, caressing-deceiver, knapsack-thief, hat-thief, mercy-beggar, crushed-daughter]
+      evidence: |
+        the King’s daughter was vexed that her husband should be a
+        common man
+
+  magic_objects:
+
+    obj_knapsack_silver_hill:
+      name: The Hill All Silver
+      object_kind: treasure
+      attributes:
+        function: first fortune-threshold, accepted by the eldest brother
+      evidence: |
+        they saw that the hill was all silver.
+
+    obj_knapsack_gold_hill:
+      name: The Hill All Gold
+      object_kind: treasure
+      attributes:
+        function: second fortune-threshold, accepted by the second brother
+      evidence: |
+        they came to a hill which was all gold.
+
+    obj_knapsack_wishing_cloth:
+      name: The Wishing-cloth
+      instance_of: obj_abundance_cloth
+      object_kind: tool
+      attributes:
+        formula: I wish thee to be covered with good cheer again
+        function: produces food, baits exchanges, and remains the recovered abundance source
+      evidence: |
+        For he saw plainly that it was a wishing-cloth.
+
+    obj_knapsack_soldier_pack:
+      name: The Soldier-Summoning Knapsack
+      instance_of: obj_summoning_knapsack
+      object_kind: tool
+      attributes:
+        formula: tap with hand
+        summons: [corporal, six armed men]
+        function: enforces retrieval, kin punishment, palace expulsion, and military dominance
+      evidence: |
+        every time thou tappest it with thy hand, a corporal comes with
+        six men armed from head to foot
+
+    obj_knapsack_artillery_hat:
+      name: The Old Worn-out Artillery Hat
+      instance_of: obj_artillery_hat
+      object_kind: garment
+      attributes:
+        formula: turn round on head
+        function: fires cannon to defeat royal soldiers and recover from the stolen knapsack
+      evidence: |
+        when any one puts it on, and turns it round on his head, the
+        cannons go off as if twelve were fired all together
+
+    obj_knapsack_siege_horn:
+      name: The Fortification-Destroying Horn
+      instance_of: obj_siege_horn
+      object_kind: instrument
+      attributes:
+        formula: blow horn
+        function: destroys walls, towns, villages, king, and princess
+      evidence: |
+        When any one blew it all the walls and fortifications fell down
+
+    obj_knapsack_hazel_sticks:
+      name: The Hazel-sticks for Beating the Brothers
+      object_kind: weapon
+      attributes:
+        function: instruments of coerced recognition against the elder brothers
+      evidence: |
+        two of them were to take hazel-sticks with them
+
+  locations:
+
+    loc_knapsack_first_forest:
+      name: The Great Forest of the Silver Hill
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        One day they arrived in a great forest, and in the midst of it
+        was a hill
+
+    loc_knapsack_larger_forest:
+      name: The Larger Endless Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        he got into a forest which was still larger than the one before,
+        and never would come to an end
+
+    loc_knapsack_tree_of_first_meal:
+      name: The High Tree of the First Wishing-cloth Meal
+      instance_of: loc_tree
+      evidence: |
+        Then he climbed up a high tree
+
+    loc_knapsack_charcoal_wood:
+      name: The Lonely Charcoal Wood
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        One night he met, in a lonely wood
+
+    loc_knapsack_brothers_house:
+      name: The Elder Brothers' Handsome House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        his brothers had built themselves a handsome house
+
+    loc_knapsack_town:
+      name: The King's Town
+      instance_of: loc_gate
+      threshold_type: threshold_gate
+      evidence: |
+        drive this disturber of the peace out of the town
+
+    loc_knapsack_royal_palace:
+      name: The Royal Palace
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        take him out of the royal palace.
+
+    loc_knapsack_whole_country:
+      name: The Whole Country
+      evidence: |
+        he made himself King of the whole country.
+
+
+classifications:
+
+  world_laws:
+    - law_formula_commands_magic_objects
+    - law_coercive_retrieval_voids_exchange
+    - law_militarized_objects_create_sovereignty
+    - law_forest_suspends_domestic_order
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_speech
+    - agency_cunning
+    - agency_violence
+    - agency_social_rank
+
+  affects_driving:
+    - affect_greed
+    - affect_anger
+    - affect_fear
+    - affect_shame
+
+  symbol_numbers:
+    - num_3
+    - num_7
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+    - threshold_gate
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: knapsack_youngest_brother
+    scene: "three brothers leave poverty and hunger to seek fortune"
+    evidence: "their need was so great that they had to endure hunger"
+
+  - function: func_departure
+    order: 2
+    actor: knapsack_youngest_brother
+    scene: "brothers go into the world"
+    evidence: "go into the world and seek our fortune."
+
+  - function: func_testing
+    order: 3
+    actor: obj_knapsack_silver_hill
+    beneficiary: knapsack_eldest_brother
+    scene: "eldest brother accepts silver and stops seeking"
+    evidence: "the hill was all silver"
+
+  - function: func_testing
+    order: 4
+    actor: obj_knapsack_gold_hill
+    beneficiary: knapsack_second_brother
+    scene: "second brother accepts gold and stops seeking"
+    evidence: "they came to a hill which was all gold."
+
+  - function: func_donor_sequence
+    order: 5
+    actor: obj_knapsack_wishing_cloth
+    beneficiary: knapsack_youngest_brother
+    scene: "hunger wish produces the first meal and reveals the wishing-cloth"
+    evidence: "my wish has been fulfilled at the right moment."
+
+  - function: func_exchange
+    order: 6
+    actor: knapsack_charcoal_burners
+    beneficiary: knapsack_youngest_brother
+    scene: "charcoal-burners exchange military objects for the wishing-cloth"
+    evidence: "I will propose an exchange to thee"
+
+  - function: func_retrieval
+    order: 7
+    actor: knapsack_summoned_warriors
+    beneficiary: knapsack_youngest_brother
+    scene: "summoned warriors retrieve the cloth after each exchange"
+    evidence: "demand my wishing-cloth back."
+
+  - function: func_return
+    order: 8
+    actor: knapsack_youngest_brother
+    scene: "youngest brother returns home with knapsack, hat, and horn"
+    evidence: "it is time for me to go home"
+
+  - function: func_unrecognized_arrival
+    order: 9
+    actor: knapsack_elder_brothers_household
+    victim: knapsack_youngest_brother
+    scene: "rich brothers reject him as a ragged beggar"
+    evidence: "they would not acknowledge him as their brother."
+
+  - function: func_punishment
+    order: 10
+    actor: knapsack_summoned_warriors
+    victim: knapsack_elder_brothers_household
+    scene: "soldiers beat elder brothers until they know him"
+    evidence: "beat the two insolent men until they knew who he was."
+
+  - function: func_struggle
+    order: 11
+    actor: knapsack_king
+    victim: knapsack_youngest_brother
+    scene: "king sends troops against the disturber of the peace"
+    evidence: "ordered a captain to march out with his troop"
+
+  - function: func_victory
+    order: 12
+    actor: obj_knapsack_artillery_hat
+    beneficiary: knapsack_youngest_brother
+    scene: "hat artillery defeats royal troops"
+    evidence: "heavy guns began to play"
+
+  - function: func_forced_marriage
+    order: 13
+    actor: knapsack_youngest_brother
+    beneficiary: knapsack_princess
+    scene: "youngest brother demands princess and kingdom as peace terms"
+    evidence: "until the King gives me his daughter to wife"
+
+  - function: func_trickery
+    order: 14
+    actor: knapsack_princess
+    victim: knapsack_youngest_brother
+    scene: "princess caresses him and steals the knapsack"
+    evidence: "dexterously took the knapsack off his shoulders"
+
+  - function: func_rescue
+    order: 15
+    actor: obj_knapsack_artillery_hat
+    beneficiary: knapsack_youngest_brother
+    scene: "hat forces princess to beg for mercy after she steals the knapsack"
+    evidence: "the King’s daughter herself was forced to come and beg for mercy."
+
+  - function: func_trickery
+    order: 16
+    actor: knapsack_princess
+    victim: knapsack_youngest_brother
+    scene: "princess steals the hat while he sleeps"
+    evidence: "she waited until he was asleep, and then she took the hat away from him"
+
+  - function: func_punishment
+    order: 17
+    actor: obj_knapsack_siege_horn
+    victim: knapsack_king
+    scene: "horn destroys built space and crushes king and daughter"
+    evidence: "crushed the King and his daughter to death."
+
+  - function: func_transfiguration
+    order: 18
+    actor: knapsack_youngest_brother
+    scene: "no opposition remains and he makes himself king"
+    evidence: "he made himself King of the whole country."
+
+
+edges:
+
+  # Poverty and divergent fortune choices
+  - from: knapsack_eldest_brother
+    to: obj_knapsack_silver_hill
+    label: TAKES
+    evidence: "He took as much of the silver as he could possibly carry"
+
+  - from: knapsack_second_brother
+    to: obj_knapsack_gold_hill
+    label: TAKES
+    evidence: "putting as much into his pockets as would go in"
+
+  - from: knapsack_youngest_brother
+    to: obj_knapsack_silver_hill
+    label: REFUSES
+    evidence: "did not touch it, but went onwards."
+
+  - from: knapsack_youngest_brother
+    to: obj_knapsack_gold_hill
+    label: REFUSES
+    evidence: "Silver and gold do not move me"
+
+  # Abundance cloth and exchanges
+  - from: knapsack_youngest_brother
+    to: obj_knapsack_wishing_cloth
+    label: WISHES_WITH
+    evidence: "I wish thee to be covered with good cheer again"
+
+  - from: obj_knapsack_wishing_cloth
+    to: knapsack_youngest_brother
+    label: FEEDS
+    evidence: "as many dishes with the most exquisite food on them stood on the table"
+
+  - from: obj_knapsack_wishing_cloth
+    to: knapsack_charcoal_burners
+    label: FEEDS
+    evidence: "They ate and drank together, and enjoyed themselves heartily."
+
+  - from: knapsack_charcoal_burners
+    to: obj_knapsack_soldier_pack
+    label: OFFERS
+    evidence: "there in the corner hangs a soldier’s knapsack"
+
+  - from: knapsack_charcoal_burners
+    to: obj_knapsack_artillery_hat
+    label: OFFERS
+    evidence: "lies a little old worn-out hat which has strange properties"
+
+  - from: knapsack_charcoal_burners
+    to: obj_knapsack_siege_horn
+    label: OFFERS
+    evidence: "at last he offered him a horn"
+
+  - from: knapsack_youngest_brother
+    to: obj_knapsack_wishing_cloth
+    label: TRADES_AWAY
+    evidence: "he gave the charcoal-burner the cloth"
+
+  - from: obj_knapsack_soldier_pack
+    to: knapsack_summoned_warriors
+    label: SUMMONS
+    evidence: "Immediately the seven warriors stepped up to him"
+
+  - from: knapsack_youngest_brother
+    to: knapsack_summoned_warriors
+    label: COMMANDS
+    evidence: "What does my lord and ruler wish for?"
+
+  - from: knapsack_summoned_warriors
+    to: obj_knapsack_wishing_cloth
+    label: RETRIEVES
+    evidence: "they brought what he required"
+
+  # Homecoming and royal conflict
+  - from: knapsack_elder_brothers_household
+    to: knapsack_youngest_brother
+    label: REJECTS
+    evidence: "they would not acknowledge him as their brother."
+
+  - from: knapsack_youngest_brother
+    to: obj_knapsack_soldier_pack
+    label: ACTIVATES
+    evidence: "tapped his knapsack until a hundred and fifty men stood before him"
+
+  - from: knapsack_summoned_warriors
+    to: knapsack_elder_brothers_household
+    label: BEATS
+    evidence: "beat the two insolent men until they knew who he was."
+
+  - from: knapsack_king
+    to: knapsack_royal_troops
+    label: COMMANDS
+    evidence: "ordered a captain to march out with his troop"
+
+  - from: knapsack_royal_troops
+    to: knapsack_youngest_brother
+    label: ATTACKS
+    evidence: "drive this disturber of the peace out of the town"
+
+  - from: knapsack_summoned_warriors
+    to: knapsack_royal_troops
+    label: REPULSES
+    evidence: "repulsed the captain and his men"
+
+  - from: obj_knapsack_artillery_hat
+    to: knapsack_royal_troops
+    label: DEFEATS
+    evidence: "heavy guns began to play, and the king’s men were beaten"
+
+  - from: knapsack_youngest_brother
+    to: knapsack_king
+    label: DEMANDS_FROM
+    evidence: "I will not make peace until the King gives me his daughter to wife"
+
+  - from: knapsack_king
+    to: knapsack_princess
+    label: GIVES_AWAY
+    evidence: "I must give thee away."
+
+  - from: knapsack_youngest_brother
+    to: knapsack_princess
+    label: MARRIES
+    evidence: "So the wedding was celebrated"
+
+  # Treacherous spouse and final destruction
+  - from: knapsack_princess
+    to: obj_knapsack_soldier_pack
+    label: STEALS
+    evidence: "dexterously took the knapsack off his shoulders"
+
+  - from: knapsack_princess
+    to: knapsack_summoned_warriors
+    label: COMMANDS
+    evidence: "commanded the warriors to seize their former master"
+
+  - from: knapsack_summoned_warriors
+    to: knapsack_youngest_brother
+    label: EXPELS
+    evidence: "take him out of the royal palace."
+
+  - from: obj_knapsack_artillery_hat
+    to: knapsack_princess
+    label: FORCES_MERCY
+    evidence: "forced to come and beg for mercy."
+
+  - from: knapsack_princess
+    to: obj_knapsack_artillery_hat
+    label: STEALS
+    evidence: "she took the hat away from him"
+
+  - from: knapsack_youngest_brother
+    to: obj_knapsack_siege_horn
+    label: BLOWS
+    evidence: "in great anger he blew it with all his strength."
+
+  - from: obj_knapsack_siege_horn
+    to: knapsack_king
+    label: KILLS
+    evidence: "crushed the King and his daughter to death."
+
+  - from: obj_knapsack_siege_horn
+    to: knapsack_princess
+    label: KILLS
+    evidence: "crushed the King and his daughter to death."
+
+  - from: obj_knapsack_siege_horn
+    to: loc_knapsack_whole_country
+    label: DEVASTATES
+    evidence: "everything would have been in ruins"
+
+  - from: knapsack_youngest_brother
+    to: loc_knapsack_whole_country
+    label: RULES
+    evidence: "he made himself King of the whole country."

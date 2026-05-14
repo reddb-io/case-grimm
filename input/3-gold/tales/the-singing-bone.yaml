@@ -1,0 +1,268 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-singing-bone
+khm: 28
+atu: '780'
+atu_name: The Singing Bone
+canonical_source: ../../2-silver/canonical/the-singing-bone/canonical.txt
+title: The Singing Bone
+
+
+entities:
+
+  characters:
+
+    singing_bone_king:
+      name: The King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command]
+      affects: [affect_fear]
+      traits: [reward-promiser, princess-giver, truth-hearer, judge]
+      evidence: |
+        "The King promised a large reward to anyone who would free the
+        land from this plague"
+
+    singing_bone_princess:
+      name: The King's Only Daughter
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [bride-reward, falsely-won-wife]
+      evidence: |
+        "should have his only daughter to wife."
+
+    singing_bone_elder_brother:
+      name: The Elder Brother
+      species: sp_human
+      agency_modes: [agency_cunning, agency_violence, agency_speech]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_pride, affect_envy, affect_fear]
+      traits: [crafty, shrewd, proud, tavern-delayer, fratricide, false-boar-slayer, exposed-killer]
+      evidence: |
+        "his envious, evil heart gave him no peace."
+
+    singing_bone_younger_brother:
+      name: The Younger Brother
+      species: sp_human
+      agency_modes: [agency_endurance, agency_violence, agency_speech]
+      existential_states: [state_liminal_dead]
+      affects: [affect_fear]
+      traits: [innocent, simple, good-hearted, spear-gifted, boar-slayer, murdered-under-bridge, bone-witness]
+      evidence: |
+        "the younger, who was innocent and simple, from a kind heart."
+
+    singing_bone_little_man:
+      name: The Little Man with the Black Spear
+      archetypes: [arc_supernatural_donor]
+      being_type: being_dwarf
+      agency_modes: [agency_speech]
+      traits: [purity-reader, spear-donor, boar-protection-giver]
+      evidence: |
+        "I give you this spear because your heart is pure and good"
+
+    singing_bone_wild_boar:
+      name: The Devastating Wild Boar
+      archetypes: [arc_predator]
+      species: sp_boar
+      agency_modes: [agency_violence]
+      traits: [field-destroyer, cattle-killer, tusk-ripper, forest-plague, spear-slain]
+      evidence: |
+        "laid waste the farmer's fields, killed the cattle, and ripped
+        up people's bodies with his tusks."
+
+    singing_bone_shepherd:
+      name: The Shepherd Who Finds the Bone
+      species: sp_human
+      agency_modes: [agency_music, agency_speech, agency_endurance]
+      affects: [affect_curiosity]
+      traits: [bridge-crosser, bone-finder, horn-maker, testimony-carrier]
+      evidence: |
+        "saw lying in the sand beneath, a snow-white little bone."
+
+  magic_objects:
+
+    obj_singing_bone_black_spear:
+      name: The Black Spear
+      object_kind: weapon
+      attributes:
+        donor: singing_bone_little_man
+        function: turns boar's charge into self-killing
+      evidence: |
+        "He held in his hand a black spear"
+
+    obj_singing_bone_boar_body:
+      name: The Wild Boar's Body
+      object_kind: creature_object
+      attributes:
+        function: false proof carried by elder brother to claim reward
+      evidence: |
+        "took the monster on his back and went homewards with it"
+
+    obj_singing_bone_horn:
+      name: The Singing Bone Horn
+      instance_of: obj_singing_bone
+      object_kind: instrument
+      attributes:
+        source_body: singing_bone_younger_brother
+        function: sings the murder testimony when blown
+      evidence: |
+        "cut out of it a mouth-piece for his horn... the bone began of
+        its own accord to sing"
+
+    obj_singing_bone_punishment_sack:
+      name: The Punishment Sack
+      object_kind: material
+      attributes:
+        function: elder brother is sewn inside and drowned
+      evidence: |
+        "was sewn up in a sack and drowned."
+
+  locations:
+
+    loc_singing_bone_country:
+      name: The Country Plagued by the Boar
+      evidence: |
+        "In a certain country there was once great lamentation over a
+        wild boar"
+
+    loc_singing_bone_forest:
+      name: The Wild Boar's Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "the forest in which it lived."
+
+    loc_singing_bone_merry_house:
+      name: The House of Wine and Dancing
+      instance_of: loc_house
+      evidence: |
+        "there stood at the entrance a house where people were making
+        merry with wine and dancing."
+
+    loc_singing_bone_bridge:
+      name: The Bridge Over the Brook
+      instance_of: loc_bridge
+      evidence: |
+        "they came to a bridge over a brook"
+
+    loc_singing_bone_brook:
+      name: The Brook Beneath the Bridge
+      instance_of: loc_brook
+      evidence: |
+        "Long have I lain beside the water"
+
+    loc_singing_bone_king_hall:
+      name: The King's Judgment Hall
+      instance_of: loc_castle
+      evidence: |
+        "when he came with it to the King the horn again began to sing"
+
+    loc_singing_bone_churchyard_tomb:
+      name: The Beautiful Tomb in the Churchyard
+      instance_of: loc_tomb
+      evidence: |
+        "the bones of the murdered man were laid to rest in a beautiful
+        tomb in the churchyard."
+
+
+classifications:
+
+  world_laws:
+    - law_kindness_to_hidden_donors_rewarded
+    - law_dead_matter_reveals_murder
+
+  moral_regimes:
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_violence
+    - agency_music
+    - agency_speech
+    - agency_cunning
+    - agency_social_rank
+
+  affects_driving:
+    - affect_fear
+    - affect_pride
+    - affect_envy
+    - affect_curiosity
+
+  symbol_numbers:
+    - num_2   # two brothers enter the forest from opposite sides
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+  - { function: func_villainy, order: 1, actor: singing_bone_wild_boar,
+      scene: "wild boar devastates fields, cattle, and bodies" }
+  - { function: func_mediation, order: 2, actor: singing_bone_king,
+      scene: "king promises daughter and reward to whoever kills the boar" }
+  - { function: func_departure, order: 3, actor: singing_bone_elder_brother,
+      scene: "two poor brothers enter the forest from opposite sides" }
+  - { function: func_donor_test, order: 4, actor: singing_bone_little_man,
+      scene: "little man reads younger brother's pure heart and gives black spear" }
+  - { function: func_victory, order: 5, actor: singing_bone_younger_brother,
+      scene: "younger brother kills the charging boar with the donor spear" }
+  - { function: func_trickery, order: 6, actor: singing_bone_elder_brother,
+      scene: "elder brother delays him with wine until evening" }
+  - { function: func_villainy, order: 7, actor: singing_bone_elder_brother,
+      scene: "elder brother murders younger brother on the bridge and buries him beneath it" }
+  - { function: func_false_claims, order: 8, actor: singing_bone_elder_brother,
+      scene: "elder brother carries boar to king and claims bride as false slayer" }
+  - { function: func_mediation, order: 9, actor: singing_bone_shepherd,
+      scene: "years later shepherd finds a white bone beneath the bridge" }
+  - { function: func_exposure, order: 10, actor: obj_singing_bone_horn,
+      scene: "bone-horn sings the murder truth to shepherd and king" }
+  - { function: func_punishment, order: 11, actor: singing_bone_king,
+      scene: "wicked brother is sewn in a sack and drowned" }
+  - { function: func_liquidation, order: 12, actor: singing_bone_younger_brother,
+      scene: "murdered brother's skeleton is found and laid in a churchyard tomb" }
+
+
+edges:
+
+  # Boar plague and donor gift
+  - { from: singing_bone_wild_boar, to: loc_singing_bone_country, label: DEVASTATES,
+      evidence: "laid waste the farmer's fields, killed the cattle" }
+  - { from: singing_bone_king, to: singing_bone_princess, label: OFFERS_AS_REWARD,
+      evidence: "should have his only daughter to wife." }
+  - { from: singing_bone_little_man, to: obj_singing_bone_black_spear, label: GIVES,
+      evidence: "I give you this spear because your heart is pure and good" }
+  - { from: obj_singing_bone_black_spear, to: singing_bone_wild_boar, label: KILLS,
+      evidence: "it ran so swiftly against it that its heart was cloven in twain." }
+  - { from: singing_bone_younger_brother, to: obj_singing_bone_boar_body, label: CARRIES,
+      evidence: "took the monster on his back" }
+
+  # Fratricide and false claim
+  - { from: singing_bone_elder_brother, to: singing_bone_younger_brother, label: DECEIVES,
+      evidence: "Come in, dear brother, rest and refresh yourself with a cup of wine." }
+  - { from: singing_bone_elder_brother, to: loc_singing_bone_bridge, label: MURDERS_AT,
+      evidence: "half-way across he gave him such a blow from behind that he fell down dead." }
+  - { from: singing_bone_elder_brother, to: singing_bone_younger_brother, label: BURIES_BENEATH,
+      evidence: "He buried him beneath the bridge" }
+  - { from: singing_bone_elder_brother, to: obj_singing_bone_boar_body, label: STEALS_PROOF,
+      evidence: "took the boar, and carried it to the King" }
+  - { from: singing_bone_elder_brother, to: singing_bone_king, label: LIES_TO,
+      evidence: "pretending that he had killed it" }
+  - { from: singing_bone_elder_brother, to: singing_bone_princess, label: MARRIES,
+      evidence: "obtained the King's daughter in marriage." }
+
+  # Bone testimony and judgment
+  - { from: singing_bone_shepherd, to: obj_singing_bone_horn, label: MAKES,
+      evidence: "picked it up, and cut out of it a mouth-piece for his horn." }
+  - { from: obj_singing_bone_horn, to: singing_bone_shepherd, label: TESTIFIES_TO,
+      evidence: "My brother slew me for the boar" }
+  - { from: obj_singing_bone_horn, to: singing_bone_king, label: TESTIFIES_TO,
+      evidence: "when he came with it to the King the horn again began to sing." }
+  - { from: law_dead_matter_reveals_murder, to: obj_singing_bone_horn, label: GOVERNS,
+      evidence: "the bone began of its own accord to sing" }
+  - { from: singing_bone_king, to: loc_singing_bone_bridge, label: ORDERS_DIGGING_AT,
+      evidence: "caused the ground below the bridge to be dug up" }
+  - { from: loc_singing_bone_bridge, to: singing_bone_younger_brother, label: REVEALS_REMAINS_OF,
+      evidence: "the whole skeleton of the murdered man came to light." }
+  - { from: singing_bone_king, to: obj_singing_bone_punishment_sack, label: PUNISHES_WITH,
+      evidence: "was sewn up in a sack and drowned." }
+  - { from: singing_bone_younger_brother, to: loc_singing_bone_churchyard_tomb, label: LAID_TO_REST_IN,
+      evidence: "laid to rest in a beautiful tomb in the churchyard." }

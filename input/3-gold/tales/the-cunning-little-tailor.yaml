@@ -1,0 +1,427 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-cunning-little-tailor
+khm: 114
+atu: '850'
+atu_name: The Cunning Little Tailor
+canonical_source: ../../2-silver/canonical/the-cunning-little-tailor/canonical.txt
+title: The Cunning Little Tailor
+
+
+entities:
+
+  characters:
+
+    cunning_tailor_little_tailor:
+      name: The Cunning Little Tailor
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_object_mediation, agency_music, agency_endurance, agency_domestic_labor]
+      speech_acts_performed: [speech_riddle, speech_bargain]
+      affects: [affect_pride, affect_joy]
+      traits: [little, low-status-tailor, useless-land-louper, lucky-suitor, riddle-solver, bear-tricker, vise-threatener, successful-bridegroom]
+      evidence: |
+        the third was a little useless land-louper
+
+    cunning_tailor_proud_princess:
+      name: The Proud Riddle Princess
+      archetypes: [arc_proud_task_princess]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning]
+      speech_acts_performed: [speech_riddle, speech_promise, speech_command]
+      existential_states: [state_deceived]
+      affects: [affect_pride, affect_fear]
+      traits: [extremely-proud, riddle-setter, contemptuous-rejecter, bear-ordeal-setter, promise-bound-bride, terrified-carriage-passenger]
+      evidence: |
+        There was once on a time a princess who was extremely proud.
+
+    cunning_tailor_two_elder_tailors:
+      name: The Two Elder Tailors
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_domestic_labor]
+      affects: [affect_envy, affect_pride]
+      traits: [self-confident-craftsmen, failed-guessers, envious-bear-releasers, false-hearted]
+      evidence: |
+        the two other tailors, who had false hearts and envied him his good fortune
+
+    cunning_tailor_bear:
+      name: The Stable Bear
+      species: sp_bear
+      existential_states: [state_deceived, state_trapped]
+      agency_modes: [agency_violence, agency_music]
+      affects: [affect_anger, affect_fear]
+      traits: [lethal-stable-bear, nut-envier, pebble-dupe, dancing-bear, fiddle-student, vise-trapped, carriage-pursuer, threat-frightened]
+      evidence: |
+        the bear had never yet left any one alive who had fallen into his clutches
+
+    cunning_tailor_king:
+      name: The King
+      archetypes: [arc_oath_enforcer]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_command]
+      traits: [public-promise-enforcer, carriage-orderer, wedding-authorizer]
+      evidence: |
+        the King ordered a carriage to be brought
+
+  magic_objects:
+
+    obj_cunning_tailor_silver_golden_hair:
+      name: The Silver and Golden Hair Riddle
+      object_kind: material
+      attributes:
+        function: hidden bodily fact whose correct answer binds the princess's marriage promise
+      evidence: |
+        The princess has a silver and a golden hair on her head
+
+    obj_cunning_tailor_nuts:
+      name: The Tailor's Nuts
+      object_kind: food
+      attributes:
+        function: real nuts cracked by the tailor to bait the bear into imitation
+      evidence: |
+        he took some nuts out of his pocket
+
+    obj_cunning_tailor_pebbles:
+      name: The Pebbles Given as Nuts
+      object_kind: material
+      attributes:
+        function: substituted stones that make the bear believe it cannot crack nuts
+      evidence: |
+        they were, however, not nuts, but pebbles
+
+    obj_cunning_tailor_violin:
+      name: The Tailor's Violin
+      instance_of: obj_fiddle
+      object_kind: instrument
+      attributes:
+        function: music makes the bear dance and creates the false fiddling lesson
+      evidence: |
+        the tailor took out a violin from beneath his coat
+
+    obj_cunning_tailor_vise:
+      name: The Vise for the Bear's Claws
+      object_kind: tool
+      attributes:
+        function: mechanical trap that holds the bear through the night and later frightens him away
+      evidence: |
+        a vise was brought, and the bear put his claws in it
+
+    obj_cunning_tailor_carriage:
+      name: The Wedding Carriage
+      object_kind: architecture
+      attributes:
+        function: vehicle to church, pursued by the released bear
+      evidence: |
+        the King ordered a carriage to be brought
+
+  locations:
+
+    loc_cunning_tailor_princess_court:
+      name: The Proud Princess's Court
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        They all three announced themselves to the princess
+
+    loc_cunning_tailor_bear_stable:
+      name: The Bear Stable
+      instance_of: loc_stable
+      threshold_type: threshold_doorway
+      evidence: |
+        Below, in the stable is a bear
+
+    loc_cunning_tailor_wedding_road:
+      name: The Road to Church
+      instance_of: loc_road
+      evidence: |
+        ran after the carriage
+
+    loc_cunning_tailor_church:
+      name: The Wedding Church
+      instance_of: loc_church
+      threshold_type: threshold_doorway
+      evidence: |
+        The tailor drove quietly to church
+
+
+classifications:
+
+  world_laws:
+    - law_promise_binds_reality
+    - law_music_attracts
+    - law_imitation_trap_overpowers_brute
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_object_mediation
+    - agency_music
+    - agency_endurance
+    - agency_social_rank
+
+  affects_driving:
+    - affect_pride
+    - affect_fear
+    - affect_envy
+    - affect_anger
+    - affect_joy
+
+  symbol_numbers:
+    - num_2
+    - num_3
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_initial_situation
+    order: 1
+    actor: cunning_tailor_proud_princess
+    scene: Proud princess rejects wooers by riddles but publicly promises marriage to the solver.
+    evidence: |
+      whosoever solved her riddle should marry her
+
+  - function: func_departure
+    order: 2
+    actor: cunning_tailor_little_tailor
+    scene: The little tailor ignores the elder tailors' contempt and goes to the princess.
+    evidence: |
+      he went forth as if the whole world were his
+
+  - function: func_test
+    order: 3
+    actor: cunning_tailor_proud_princess
+    victim: cunning_tailor_little_tailor
+    scene: The princess poses the two-coloured hair riddle to the three tailors.
+    evidence: |
+      I have two kinds of hair on my head
+
+  - function: func_solution
+    order: 4
+    actor: cunning_tailor_little_tailor
+    beneficiary: cunning_tailor_little_tailor
+    scene: The little tailor answers silver and golden hair correctly.
+    evidence: |
+      The princess has a silver and a golden hair on her head
+
+  - function: func_difficult_task
+    order: 5
+    actor: cunning_tailor_proud_princess
+    victim: cunning_tailor_little_tailor
+    scene: The princess adds the stable-bear night to evade the marriage promise.
+    evidence: |
+      Below, in the stable is a bear with which thou shalt pass the night
+
+  - function: func_trickery
+    order: 6
+    actor: cunning_tailor_little_tailor
+    victim: cunning_tailor_bear
+    scene: The tailor substitutes pebbles for nuts and makes the bear doubt its strength.
+    evidence: |
+      they were, however, not nuts, but pebbles
+
+  - function: func_trickery
+    order: 7
+    actor: cunning_tailor_little_tailor
+    victim: cunning_tailor_bear
+    scene: The tailor plays violin, promises lessons, and screws the bear's claws in a vise.
+    evidence: |
+      the little tailor screwed it tight
+
+  - function: func_victory
+    order: 8
+    actor: cunning_tailor_little_tailor
+    beneficiary: cunning_tailor_little_tailor
+    scene: The tailor survives the night in the stable and the princess is held to the wedding.
+    evidence: |
+      the tailor stood gaily before her
+
+  - function: func_pursuit
+    order: 9
+    actor: cunning_tailor_bear
+    victim: cunning_tailor_little_tailor
+    scene: The envious elder tailors release the bear, who pursues the wedding carriage.
+    evidence: |
+      The bear in great fury ran after the carriage
+
+  - function: func_rescue
+    order: 10
+    actor: cunning_tailor_little_tailor
+    beneficiary: cunning_tailor_little_tailor
+    scene: The tailor frightens the bear away by threatening the vise again.
+    evidence: |
+      If thou dost not be off thou shalt be put into it again
+
+  - function: func_wedding
+    order: 11
+    actor: cunning_tailor_little_tailor
+    beneficiary: cunning_tailor_proud_princess
+    scene: The tailor reaches church and marries the princess at once.
+    evidence: |
+      the princess was married to him at once
+
+
+edges:
+
+  - from: cunning_tailor_proud_princess
+    label: POSES_RIDDLE_TO
+    to: cunning_tailor_little_tailor
+    evidence: |
+      she gave him some riddle to guess
+
+  - from: cunning_tailor_proud_princess
+    label: PROMISES_MARRIAGE_TO_SOLVER
+    to: speech_riddle
+    evidence: |
+      whosoever solved her riddle should marry her
+
+  - from: cunning_tailor_two_elder_tailors
+    label: MOCKS
+    to: cunning_tailor_little_tailor
+    evidence: |
+      thou canst not do much with thy little bit of understanding
+
+  - from: cunning_tailor_proud_princess
+    label: ASKS_COLOR_OF
+    to: obj_cunning_tailor_silver_golden_hair
+    evidence: |
+      I have two kinds of hair on my head
+
+  - from: cunning_tailor_little_tailor
+    label: SOLVES
+    to: obj_cunning_tailor_silver_golden_hair
+    evidence: |
+      The princess has a silver and a golden hair on her head
+
+  - from: cunning_tailor_proud_princess
+    label: FEARS_SOLVED_RIDDLE
+    to: cunning_tailor_little_tailor
+    evidence: |
+      she turned pale and nearly fell down with terror
+
+  - from: cunning_tailor_proud_princess
+    label: ASSIGNS_BEAR_ORDEAL_TO
+    to: cunning_tailor_little_tailor
+    evidence: |
+      with which thou shalt pass the night
+
+  - from: cunning_tailor_bear
+    label: LIVES_IN
+    to: loc_cunning_tailor_bear_stable
+    evidence: |
+      Below, in the stable is a bear
+
+  - from: cunning_tailor_little_tailor
+    label: CRACKS
+    to: obj_cunning_tailor_nuts
+    evidence: |
+      cracked them, and ate the kernels
+
+  - from: cunning_tailor_little_tailor
+    label: GIVES_AS_NUTS
+    to: obj_cunning_tailor_pebbles
+    evidence: |
+      reached him a handful; they were, however, not nuts, but pebbles
+
+  - from: cunning_tailor_bear
+    label: FAILS_TO_CRACK
+    to: obj_cunning_tailor_pebbles
+    evidence: |
+      could get nothing out of them
+
+  - from: cunning_tailor_little_tailor
+    label: PLAYS
+    to: obj_cunning_tailor_violin
+    evidence: |
+      played a piece of it to himself
+
+  - from: obj_cunning_tailor_violin
+    label: MAKES_DANCE
+    to: cunning_tailor_bear
+    evidence: |
+      he could not help beginning to dance
+
+  - from: cunning_tailor_bear
+    label: ASKS_LESSONS_FROM
+    to: cunning_tailor_little_tailor
+    evidence: |
+      Wilt thou give me lessons?
+
+  - from: cunning_tailor_little_tailor
+    label: TRAPS_IN
+    to: obj_cunning_tailor_vise
+    evidence: |
+      the little tailor screwed it tight
+
+  - from: obj_cunning_tailor_vise
+    label: TRAPS
+    to: cunning_tailor_bear
+    evidence: |
+      the bear put his claws in it
+
+  - from: cunning_tailor_little_tailor
+    label: SLEEPS_IN
+    to: loc_cunning_tailor_bear_stable
+    evidence: |
+      lay down in the corner on a bundle of straw, and fell asleep
+
+  - from: cunning_tailor_proud_princess
+    label: MISREADS_GROWLING_AS
+    to: cunning_tailor_little_tailor
+    evidence: |
+      believed nothing else but that he was growling for joy
+
+  - from: cunning_tailor_king
+    label: ORDERS
+    to: obj_cunning_tailor_carriage
+    evidence: |
+      the King ordered a carriage to be brought
+
+  - from: cunning_tailor_two_elder_tailors
+    label: RELEASES
+    to: cunning_tailor_bear
+    evidence: |
+      unscrewed the bear again
+
+  - from: cunning_tailor_bear
+    label: PURSUES
+    to: obj_cunning_tailor_carriage
+    evidence: |
+      ran after the carriage
+
+  - from: cunning_tailor_proud_princess
+    label: WARNS
+    to: cunning_tailor_little_tailor
+    evidence: |
+      the bear is behind us and wants to get thee
+
+  - from: cunning_tailor_little_tailor
+    label: THREATENS_WITH
+    to: obj_cunning_tailor_vise
+    evidence: |
+      Dost thou see the vise?
+
+  - from: obj_cunning_tailor_vise
+    label: FRIGHTENS_AWAY
+    to: cunning_tailor_bear
+    evidence: |
+      he turned round and ran away
+
+  - from: cunning_tailor_little_tailor
+    label: MARRIES
+    to: cunning_tailor_proud_princess
+    evidence: |
+      the princess was married to him at once
+
+  - from: cunning_tailor_little_tailor
+    label: DRIVES_TO
+    to: loc_cunning_tailor_church
+    evidence: |
+      The tailor drove quietly to church

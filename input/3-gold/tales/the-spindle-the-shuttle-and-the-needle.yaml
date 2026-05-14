@@ -1,0 +1,222 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-spindle-the-shuttle-and-the-needle
+khm: 188
+atu: "585"
+atu_name: The Spindle, the Shuttle and the Needle
+canonical_source: ../../2-silver/canonical/the-spindle-the-shuttle-and-the-needle/canonical.txt
+title: The Spindle, the Shuttle and the Needle
+
+entities:
+  characters:
+    spindle_shuttle_maiden:
+      name: The Industrious Orphan Maiden
+      archetypes: [arc_pious_orphan]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_wish]
+      affects: [affect_grief, affect_love, affect_longing, affect_shame]
+      traits: [fatherless, motherless, godmother-raised, fifteen-years-old, blessed, industrious, spinner, weaver, sewer, generous, poorest-and-richest-bride]
+      evidence: |
+        There was once a girl whose father and mother died while she was still a little child
+
+    spindle_shuttle_godmother:
+      name: The Pious Godmother
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      speech_acts_performed: [speech_blessing, speech_testimony]
+      affects: [affect_love]
+      traits: [old, solitary, spinner, weaver, sewer, fosterer, deathbed-donor, blessing-giver]
+      evidence: |
+        dwelt her godmother, who supported herself by spinning, weaving, and sewing
+
+    spindle_shuttle_prince:
+      name: The King's Son
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_love]
+      traits: [bride-seeker, paradox-chooser, white-feathered, golden-thread-follower, true-bride-recognizer]
+      evidence: |
+        the son of the King was travelling about the country looking for a bride
+
+    spindle_shuttle_rich_girl:
+      name: The Rich Girl
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      affects: [affect_pride]
+      traits: [richest-girl, splendidly-dressed, curtseying, passed-over]
+      evidence: |
+        The rich girl was sitting in all her splendour before the door of her house
+
+  magic_objects:
+    obj_spindle_shuttle_needle:
+      name: The Spindle, Shuttle, and Needle
+      instance_of: obj_charmed_textile_tools
+      object_kind: tool
+      attributes:
+        function: inherited textile tools that summon the prince, weave the path, and prepare the house
+        sequence: [spindle, shuttle, needle]
+      evidence: |
+        my spindle, shuttle, and needle
+
+    obj_spindle_shuttle_golden_thread:
+      name: The Shining Golden Thread
+      object_kind: material
+      attributes:
+        function: path drawn by the spindle to guide the prince back to the maiden
+      evidence: |
+        drawing a shining golden thread after it
+
+    obj_spindle_shuttle_wondrous_carpet:
+      name: The Self-Woven Carpet
+      object_kind: garment
+      attributes:
+        function: threshold carpet woven by the shuttle for the wooer's arrival
+        motifs: [lilies, roses, green-branches, hares, rabbits, stags, deer, birds]
+      evidence: |
+        it began to weave a carpet which was more beautiful than the eyes of man had ever yet beheld
+
+    obj_spindle_shuttle_furnished_room:
+      name: The Needle-Furnished Room
+      object_kind: tool
+      attributes:
+        function: household interior prepared by the needle with cloth, velvet, and silk curtains
+      evidence: |
+        they covered tables and benches with green cloth in an instant
+
+  locations:
+    loc_spindle_shuttle_village:
+      name: The Village
+      instance_of: loc_village
+      evidence: |
+        When he came to the village where the maiden dwelt
+
+    loc_spindle_shuttle_small_house:
+      name: The Small House at the End of the Village
+      instance_of: loc_house
+      evidence: |
+        in a small house at the end of the village
+
+    loc_spindle_shuttle_little_room:
+      name: The Maiden's Little Room
+      instance_of: loc_house
+      evidence: |
+        sitting in her little room
+
+    loc_spindle_shuttle_open_country:
+      name: The Open Country
+      instance_of: loc_road
+      evidence: |
+        dancing out merrily into the open country
+
+    loc_spindle_shuttle_royal_castle:
+      name: The Royal Castle
+      instance_of: loc_castle
+      evidence: |
+        took her to the royal castle
+
+classifications:
+  world_laws:
+    - law_textile_tools_summon_wooer_and_prepare_house
+  moral_regimes:
+    - moral_industrious_piety_rewarded
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_object_mediation
+    - agency_speech
+  affects_driving:
+    - affect_grief
+    - affect_love
+    - affect_longing
+  symbol_numbers:
+    - num_3
+  threshold_types: []
+
+propp:
+  - { function: func_orphaning, order: 1, actor: spindle_shuttle_maiden,
+      scene: "the maiden loses father and mother while still a little child" }
+  - { function: func_fostered_in_labor, order: 2, actor: spindle_shuttle_godmother,
+      beneficiary: spindle_shuttle_maiden,
+      scene: "the godmother raises the child in spinning, weaving, sewing, and goodness" }
+  - { function: func_blessed_inheritance, order: 3, actor: spindle_shuttle_godmother,
+      beneficiary: spindle_shuttle_maiden,
+      scene: "the dying godmother leaves the house and textile tools with a blessing" }
+  - { function: func_industrious_prosperity, order: 4, actor: spindle_shuttle_maiden,
+      scene: "the maiden works alone and always finds buyers, so she lacks nothing and shares with others" }
+  - { function: func_bride_quest, order: 5, actor: spindle_shuttle_prince,
+      scene: "the prince seeks the girl who is both poorest and richest" }
+  - { function: func_false_candidate_passed, order: 6, actor: spindle_shuttle_prince,
+      victim: spindle_shuttle_rich_girl,
+      scene: "the prince rides past the richest girl despite her splendour" }
+  - { function: func_first_sighting, order: 7, actor: spindle_shuttle_prince,
+      beneficiary: spindle_shuttle_maiden,
+      scene: "he sees the poor maiden spinning in the sunlit room" }
+  - { function: func_magic_object_summoned, order: 8, actor: obj_spindle_shuttle_needle,
+      scene: "the spindle follows the maiden's song and draws a golden thread to the prince" }
+  - { function: func_threshold_prepared, order: 9, actor: obj_spindle_shuttle_wondrous_carpet,
+      scene: "the shuttle weaves a magnificent carpet before the threshold" }
+  - { function: func_house_prepared, order: 10, actor: obj_spindle_shuttle_furnished_room,
+      scene: "the needle dresses the house for the wooer's entrance" }
+  - { function: func_bride_recognized, order: 11, actor: spindle_shuttle_prince,
+      beneficiary: spindle_shuttle_maiden,
+      scene: "the prince names her poorest and richest and asks her to be his bride" }
+  - { function: func_wedding, order: 12, actor: spindle_shuttle_prince,
+      beneficiary: spindle_shuttle_maiden,
+      scene: "the prince takes her to the royal castle, where the wedding is celebrated" }
+
+edges:
+  - { from: spindle_shuttle_maiden, to: spindle_shuttle_godmother, label: FOSTERED_BY,
+      evidence: "The old woman took the forlorn child to live with her" }
+  - { from: spindle_shuttle_godmother, to: agency_domestic_labor, label: SUPPORTS_SELF_BY_TEXTILE_WORK,
+      evidence: "supported herself by spinning, weaving, and sewing" }
+  - { from: spindle_shuttle_godmother, to: spindle_shuttle_maiden, label: EDUCATES_IN_GOODNESS,
+      evidence: "educated her in all that is good" }
+  - { from: spindle_shuttle_godmother, to: loc_spindle_shuttle_small_house, label: LEAVES_HOUSE_TO,
+      evidence: "I leave thee the little house" }
+  - { from: spindle_shuttle_godmother, to: obj_spindle_shuttle_needle, label: LEAVES_TEXTILE_TOOLS_TO,
+      evidence: "my spindle, shuttle, and needle" }
+  - { from: spindle_shuttle_godmother, to: spindle_shuttle_maiden, label: BLESSES,
+      evidence: "laid her hands on the girl’s head, blessed her" }
+  - { from: spindle_shuttle_maiden, to: affect_grief, label: MOURNS_GODMOTHER,
+      evidence: "weeping bitterly" }
+  - { from: spindle_shuttle_maiden, to: agency_domestic_labor, label: SPINS_WEAVES_SEWS,
+      evidence: "span, wove, and sewed" }
+  - { from: spindle_shuttle_maiden, to: moral_industrious_piety_rewarded, label: SHARES_SURPLUS,
+      evidence: "even had something to share with others" }
+  - { from: spindle_shuttle_prince, to: spindle_shuttle_maiden, label: SEEKS_POOREST_AND_RICHEST_BRIDE,
+      evidence: "She shall be my wife who is the poorest, and at the same time the richest" }
+  - { from: spindle_shuttle_prince, to: spindle_shuttle_rich_girl, label: PASSES_OVER,
+      evidence: "looked at her, said nothing, and rode on" }
+  - { from: spindle_shuttle_prince, to: spindle_shuttle_maiden, label: SEES_SPINNING_THROUGH_WINDOW,
+      evidence: "saw through the window, on which the bright sun was shining" }
+  - { from: spindle_shuttle_maiden, to: affect_shame, label: BLUSHES_UNDER_GAZE,
+      evidence: "she blushed all over her face" }
+  - { from: spindle_shuttle_maiden, to: affect_longing, label: LOOKS_AFTER_PRINCE,
+      evidence: "looked after him as long as she could distinguish the white feathers in his hat" }
+  - { from: spindle_shuttle_maiden, to: obj_spindle_shuttle_needle, label: SINGS_WISH_TO_SPINDLE,
+      evidence: "Spindle, my spindle, haste, haste thee away" }
+  - { from: obj_spindle_shuttle_needle, to: obj_spindle_shuttle_golden_thread, label: DRAWS_GOLDEN_THREAD,
+      evidence: "drawing a shining golden thread after it" }
+  - { from: obj_spindle_shuttle_golden_thread, to: spindle_shuttle_prince, label: GUIDES_BACK,
+      evidence: "rode back with the golden thread" }
+  - { from: spindle_shuttle_maiden, to: obj_spindle_shuttle_needle, label: SINGS_WISH_TO_SHUTTLE,
+      evidence: "Shuttle, my shuttle, weave well this day" }
+  - { from: obj_spindle_shuttle_needle, to: obj_spindle_shuttle_wondrous_carpet, label: WEAVES_THRESHOLD_CARPET,
+      evidence: "Before the threshold, however, it began to weave a carpet" }
+  - { from: obj_spindle_shuttle_wondrous_carpet, to: loc_spindle_shuttle_small_house, label: PREPARES_APPROACH,
+      evidence: "Lilies and roses blossomed on both sides of it" }
+  - { from: spindle_shuttle_maiden, to: obj_spindle_shuttle_needle, label: SINGS_WISH_TO_NEEDLE,
+      evidence: "Needle, my needle, sharp-pointed and fine" }
+  - { from: obj_spindle_shuttle_needle, to: obj_spindle_shuttle_furnished_room, label: FURNISHES_ROOM,
+      evidence: "flew everywhere about the room as quick as lightning" }
+  - { from: spindle_shuttle_prince, to: obj_spindle_shuttle_wondrous_carpet, label: STEPS_OVER,
+      evidence: "stepped over the carpet into the house" }
+  - { from: spindle_shuttle_prince, to: spindle_shuttle_maiden, label: RECOGNIZES_POOREST_RICHEST,
+      evidence: "Thou art the poorest and also the richest" }
+  - { from: spindle_shuttle_maiden, to: spindle_shuttle_prince, label: GIVES_HAND,
+      evidence: "she gave him her hand" }
+  - { from: spindle_shuttle_prince, to: loc_spindle_shuttle_royal_castle, label: TAKES_BRIDE_TO_CASTLE,
+      evidence: "took her to the royal castle" }
+  - { from: obj_spindle_shuttle_needle, to: loc_spindle_shuttle_royal_castle, label: PRESERVED_IN_TREASURE_CHAMBER,
+      evidence: "preserved in the treasure-chamber" }

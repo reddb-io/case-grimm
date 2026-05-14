@@ -1,0 +1,224 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-mouse-the-bird-and-the-sausage
+khm: 23
+atu: '85'
+atu_name: The Mouse, the Bird, and the Sausage
+canonical_source: ../../2-silver/canonical/the-mouse-the-bird-and-the-sausage/canonical.txt
+title: The Mouse, the Bird, and the Sausage
+
+
+entities:
+
+  characters:
+
+    mouse_bird_sausage_mouse:
+      name: The Mouse
+      species: sp_mouse
+      agency_modes: [agency_domestic_labor, agency_endurance]
+      affects: [affect_fear, affect_grief]
+      traits: [water-carrier, fire-lighter, table-layer, reluctant-role-exchanger, fatal-imitation-cook]
+      evidence: |
+        "The mouse had to carry water, light the fire, and lay the
+        table"
+
+    mouse_bird_sausage_bird:
+      name: The Bird
+      species: sp_bird
+      agency_modes: [agency_domestic_labor, agency_speech, agency_endurance]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_envy, affect_fear, affect_grief]
+      traits: [wood-gatherer, boaster, shamed-worker, role-exchange-instigator, careless-fire-setter, drowned-water-fetcher]
+      evidence: |
+        "The bird's work was to fly every day into the forest and bring
+        back wood."
+
+    mouse_bird_sausage_sausage:
+      name: The Sausage
+      being_type: being_animated_object
+      agency_modes: [agency_domestic_labor, agency_endurance]
+      affects: [affect_fear]
+      traits: [household-companion, broth-seasoner, reluctant-wood-fetcher, dog-devoured]
+      evidence: |
+        "the sausage stayed by the pot... it rolled itself once or
+        twice through the broth or vegetables"
+
+    mouse_bird_sausage_other_bird:
+      name: The Other Bird
+      archetypes: [arc_trickster]
+      species: sp_bird
+      agency_modes: [agency_speech, agency_cunning]
+      affects: [affect_envy]
+      traits: [roadside-shamer, discord-sower, labour-comparer]
+      evidence: |
+        "The other bird, however, called it a poor simpleton for his
+        hard work"
+
+    mouse_bird_sausage_dog:
+      name: The Dog
+      archetypes: [arc_predator]
+      species: sp_dog
+      agency_modes: [agency_violence, agency_speech]
+      speech_acts_performed: [speech_lie]
+      traits: [road-predator, sausage-eater, forged-letters-accuser]
+      evidence: |
+        "it met a dog on the road who had fallen on the poor sausage
+        as lawful booty, and had seized and swallowed it."
+
+  magic_objects:
+
+    obj_mouse_bird_sausage_broth:
+      name: The Broth or Vegetables
+      object_kind: food
+      attributes:
+        function: meal seasoned by the sausage's bodily rolling
+      evidence: |
+        "it rolled itself once or twice through the broth or vegetables
+        and then they were buttered, salted, and ready."
+
+    obj_mouse_bird_sausage_wood:
+      name: The Household Wood
+      object_kind: material
+      attributes:
+        function: daily fuel normally gathered by the bird
+      evidence: |
+        "fly every day into the forest and bring back wood."
+
+    obj_mouse_bird_sausage_bucket:
+      name: The Water Bucket
+      object_kind: tool
+      attributes:
+        function: tool the bird drops into the well before drowning
+      evidence: |
+        "the bucket dropped from his claws into the well"
+
+  locations:
+
+    loc_mouse_bird_sausage_house:
+      name: The Shared Household
+      instance_of: loc_house
+      evidence: |
+        "became companions, kept house together, lived well and happily
+        with each other"
+
+    loc_mouse_bird_sausage_forest:
+      name: The Forest for Wood
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "fly every day into the forest and bring back wood."
+
+    loc_mouse_bird_sausage_road:
+      name: The Road Where the Sausage Is Eaten
+      evidence: |
+        "Not far off, however, it met a dog on the road"
+
+    loc_mouse_bird_sausage_hearth:
+      name: The Household Fire and Pot
+      instance_of: loc_hearth
+      evidence: |
+        "the little bird lighted the fire, the mouse stayed by the pot"
+
+    loc_mouse_bird_sausage_well:
+      name: The Well of the Dropped Bucket
+      instance_of: loc_well
+      threshold_type: threshold_well
+      evidence: |
+        "the bucket dropped from his claws into the well, and he fell
+        down with it"
+
+
+classifications:
+
+  world_laws:
+    - law_role_exchange_breaks_domestic_order
+    - law_forest_suspends_domestic_order
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_speech
+    - agency_cunning
+    - agency_violence
+
+  affects_driving:
+    - affect_envy
+    - affect_fear
+    - affect_grief
+
+  symbol_numbers:
+    - num_3   # three household companions and three misassigned tasks
+
+  threshold_types:
+    - threshold_forest
+    - threshold_well
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: mouse_bird_sausage_mouse,
+      scene: "mouse, bird, and sausage keep house happily by fixed division of labour" }
+  - { function: func_mediation, order: 2, actor: mouse_bird_sausage_other_bird,
+      scene: "other bird shames the wood-gathering bird as a poor simpleton" }
+  - { function: func_lack, order: 3, actor: mouse_bird_sausage_bird,
+      scene: "bird longs for a new arrangement despite the household's prosperity" }
+  - { function: func_interdiction, order: 4, actor: mouse_bird_sausage_mouse,
+      scene: "mouse and sausage beg earnestly against changing the work" }
+  - { function: func_violation, order: 5, actor: mouse_bird_sausage_bird,
+      scene: "bird insists on changing roles and lots assign sausage to wood, mouse to cooking, bird to water" }
+  - { function: func_departure, order: 6, actor: mouse_bird_sausage_sausage,
+      scene: "sausage goes out towards the wood to carry fuel" }
+  - { function: func_villainy, order: 7, actor: mouse_bird_sausage_dog,
+      scene: "dog seizes and swallows the sausage on the road" }
+  - { function: func_villainy, order: 8, actor: mouse_bird_sausage_mouse,
+      scene: "mouse tries to cook by rolling in the pot and loses skin, hair, and life" }
+  - { function: func_punishment, order: 9, actor: mouse_bird_sausage_bird,
+      scene: "bird's scattered wood catches fire; while fetching water he drops the bucket and drowns in the well" }
+
+
+edges:
+
+  # Stable household division
+  - { from: mouse_bird_sausage_mouse, to: mouse_bird_sausage_bird, label: KEEPS_HOUSE_WITH,
+      evidence: "a mouse, a bird, and a sausage became companions, kept house together" }
+  - { from: mouse_bird_sausage_sausage, to: mouse_bird_sausage_mouse, label: KEEPS_HOUSE_WITH,
+      evidence: "lived well and happily with each other" }
+  - { from: mouse_bird_sausage_bird, to: loc_mouse_bird_sausage_forest, label: FETCHES_WOOD_FROM,
+      evidence: "fly every day into the forest and bring back wood." }
+  - { from: mouse_bird_sausage_mouse, to: loc_mouse_bird_sausage_house, label: MAINTAINS_HOUSEHOLD_AT,
+      evidence: "carry water, light the fire, and lay the table" }
+  - { from: mouse_bird_sausage_sausage, to: obj_mouse_bird_sausage_broth, label: SEASONS,
+      evidence: "rolled itself once or twice through the broth or vegetables" }
+
+  # Speech that breaks the arrangement
+  - { from: mouse_bird_sausage_bird, to: mouse_bird_sausage_other_bird, label: BOASTS_TO,
+      evidence: "related its excellent circumstances and boasted of them." }
+  - { from: mouse_bird_sausage_other_bird, to: mouse_bird_sausage_bird, label: SHAMES,
+      evidence: "called it a poor simpleton for his hard work" }
+  - { from: mouse_bird_sausage_bird, to: mouse_bird_sausage_mouse, label: DEMANDS_ROLE_EXCHANGE_FROM,
+      evidence: "they must change about for once, and try to arrange it in another way." }
+  - { from: mouse_bird_sausage_bird, to: mouse_bird_sausage_sausage, label: DEMANDS_ROLE_EXCHANGE_FROM,
+      evidence: "though the mouse and the sausage also begged most earnestly, the bird would have his way" }
+  - { from: law_role_exchange_breaks_domestic_order, to: mouse_bird_sausage_bird, label: GOVERNS,
+      evidence: "They cast lots about it" }
+
+  # Catastrophic new roles
+  - { from: mouse_bird_sausage_sausage, to: loc_mouse_bird_sausage_forest, label: SENT_TO_FETCH_WOOD_FROM,
+      evidence: "the lot fell on the sausage who was to carry wood" }
+  - { from: mouse_bird_sausage_dog, to: mouse_bird_sausage_sausage, label: EATS,
+      evidence: "had seized and swallowed it." }
+  - { from: mouse_bird_sausage_dog, to: mouse_bird_sausage_sausage, label: ACCUSES,
+      evidence: "he had found forged letters on the sausage, on which account its life was forfeited to him." }
+  - { from: mouse_bird_sausage_mouse, to: obj_mouse_bird_sausage_broth, label: IMITATES_COOKING_IN,
+      evidence: "wanted to dress it, and to get into the pot as the sausage used to do" }
+  - { from: obj_mouse_bird_sausage_broth, to: mouse_bird_sausage_mouse, label: KILLS,
+      evidence: "lost her skin and hair and life in the attempt." }
+  - { from: mouse_bird_sausage_bird, to: obj_mouse_bird_sausage_wood, label: SCATTERS,
+      evidence: "the bird threw the wood here and there" }
+  - { from: obj_mouse_bird_sausage_wood, to: loc_mouse_bird_sausage_house, label: BURNS,
+      evidence: "the wood caught fire, so that a conflagration ensued" }
+  - { from: mouse_bird_sausage_bird, to: obj_mouse_bird_sausage_bucket, label: DROPS,
+      evidence: "the bucket dropped from his claws into the well" }
+  - { from: mouse_bird_sausage_bird, to: loc_mouse_bird_sausage_well, label: DROWNS_IN,
+      evidence: "he fell down with it, and could not recover himself, but had to drown there." }

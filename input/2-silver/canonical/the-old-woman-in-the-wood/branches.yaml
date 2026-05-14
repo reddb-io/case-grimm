@@ -1,0 +1,8 @@
+slug: the-old-woman-in-the-wood
+khm: 123
+atu: '442'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

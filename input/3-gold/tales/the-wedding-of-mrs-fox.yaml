@@ -1,0 +1,315 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-wedding-of-mrs-fox
+khm: 38
+atu: '65'
+atu_name: The Wedding of Mrs Fox
+canonical_source: ../../2-silver/canonical/the-wedding-of-mrs-fox/canonical.txt
+title: The Wedding of Mrs Fox
+
+
+entities:
+
+  characters:
+
+    wedding_mrs_fox_old_mr_fox:
+      name: Old Mr Fox
+      archetypes: [arc_trickster]
+      species: sp_fox
+      agency_modes: [agency_cunning, agency_violence]
+      affects: [affect_anger]
+      traits: [nine-tailed, feigned-dead, bench-hidden, fidelity-tester, cudgel-punisher, dead-in-second-story]
+      evidence: |
+        "an old fox with nine tails... wished to try her. He stretched
+        himself out under the bench... as if he were stone dead."
+
+    wedding_mrs_fox_mrs_fox:
+      name: Mrs Fox
+      archetypes: [arc_treacherous_spouse]
+      species: sp_fox
+      agency_modes: [agency_speech, agency_domestic_labor, agency_social_rank]
+      affects: [affect_grief]
+      traits: [widow-or-tested-wife, upstairs-withdrawer, suitor-selector, fox-trait-comparer, old-husband-expeller]
+      evidence: |
+        "But has he nine as beautiful tails as the late Mr. Fox?"
+
+    wedding_mrs_fox_miss_cat:
+      name: Miss Cat / Mrs Cat of Kehrewit
+      species: sp_cat
+      agency_modes: [agency_speech, agency_domestic_labor]
+      traits: [maid, cook, door-keeper, suitor-messenger, stair-runner]
+      evidence: |
+        "her maid, Miss Cat, sat by the fire, and did the cooking."
+
+    wedding_mrs_fox_one_to_eight_tail_suitors:
+      name: Fox Suitors with One to Eight Tails
+      species: sp_fox
+      agency_modes: [agency_speech]
+      traits: [sequential-wooers, tail-count-failures, rejected]
+      evidence: |
+        "After this still more came, each with one tail more than the
+        other, but they were all turned away"
+
+    wedding_mrs_fox_nine_tail_suitor:
+      name: The Nine-Tailed Fox Suitor
+      species: sp_fox
+      agency_modes: [agency_speech]
+      traits: [accepted-suitor, old-fox-match, wedding-interrupted]
+      evidence: |
+        "until at last one came who had nine tails, like old Mr. Fox."
+
+    wedding_mrs_fox_wolf_suitor:
+      name: The Wolf Suitor
+      species: sp_wolf
+      agency_modes: [agency_speech]
+      traits: [first-second-story-wooer, lacks-red-stockings, lacks-pointed-mouth, rejected]
+      evidence: |
+        "When old Mr. Fox was dead, the wolf came as a wooer"
+
+    wedding_mrs_fox_dog_suitor:
+      name: The Dog Suitor
+      species: sp_dog
+      agency_modes: [agency_speech]
+      traits: [animal-wooer, lacks-one-good-point, rejected]
+      evidence: |
+        "When the wolf was gone, came a dog"
+
+    wedding_mrs_fox_stag_suitor:
+      name: The Stag Suitor
+      species: sp_deer
+      agency_modes: [agency_speech]
+      traits: [animal-wooer, forest-beast, lacks-one-good-point, rejected]
+      evidence: |
+        "came a dog, a stag, a hare, a bear, a lion"
+
+    wedding_mrs_fox_hare_suitor:
+      name: The Hare Suitor
+      species: sp_hare
+      agency_modes: [agency_speech]
+      traits: [animal-wooer, swift-forest-beast, lacks-one-good-point, rejected]
+      evidence: |
+        "came a dog, a stag, a hare, a bear, a lion"
+
+    wedding_mrs_fox_bear_suitor:
+      name: The Bear Suitor
+      species: sp_bear
+      agency_modes: [agency_speech, agency_violence]
+      traits: [animal-wooer, strong-forest-beast, lacks-one-good-point, rejected]
+      evidence: |
+        "came a dog, a stag, a hare, a bear, a lion"
+
+    wedding_mrs_fox_lion_suitor:
+      name: The Lion Suitor
+      species: sp_lion
+      agency_modes: [agency_speech, agency_violence]
+      traits: [animal-wooer, royal-forest-beast, lacks-one-good-point, rejected]
+      evidence: |
+        "came a dog, a stag, a hare, a bear, a lion, and all the beasts
+        of the forest"
+
+    wedding_mrs_fox_young_fox_suitor:
+      name: The Young Fox Suitor
+      species: sp_fox
+      agency_modes: [agency_speech]
+      traits: [red-stockings, pointed-mouth, accepted-groom, proper-fox-match]
+      evidence: |
+        "At length came a young fox... 'Has the gentleman red stockings
+        on, and has he a little pointed mouth?' 'Yes'"
+
+  magic_objects:
+
+    obj_wedding_mrs_fox_bench:
+      name: The Bench under Which Old Mr Fox Lies
+      object_kind: architecture
+      attributes:
+        function: hiding-place for the feigned-death fidelity test
+      evidence: |
+        "He stretched himself out under the bench"
+
+    obj_wedding_mrs_fox_cudgel:
+      name: Old Mr Fox's Cudgel
+      object_kind: weapon
+      attributes:
+        function: punishes the wedding rabble and Mrs Fox
+      evidence: |
+        "old Mr. Fox stirred under the bench, and cudgelled all the rabble"
+
+    obj_wedding_mrs_fox_warm_beer:
+      name: Warm Beer with Butter
+      object_kind: food
+      attributes:
+        prepared_by: wedding_mrs_fox_miss_cat
+      evidence: |
+        "I am boiling warm beer with butter so nice"
+
+    obj_wedding_mrs_fox_bread_milk:
+      name: Bread Broken in Milk
+      object_kind: food
+      attributes:
+        prepared_by: wedding_mrs_fox_miss_cat
+      evidence: |
+        "In milk I'm breaking bread so sweet"
+
+    obj_wedding_mrs_fox_gold_rings:
+      name: Miss Cat's Five Gold Rings
+      object_kind: token
+      attributes:
+        worn_by: wedding_mrs_fox_miss_cat
+      evidence: |
+        "With her five gold rings at the door she knocks"
+
+    obj_wedding_mrs_fox_wedding_feast:
+      name: The Wedding-Feast
+      object_kind: food
+      attributes:
+        ordered_by: wedding_mrs_fox_mrs_fox
+      evidence: |
+        "ordered the servant to prepare the wedding-feast."
+
+  locations:
+
+    loc_wedding_mrs_fox_house:
+      name: Mrs Fox's House
+      instance_of: loc_house
+      evidence: |
+        "standing at the house-door, knocking"
+
+    loc_wedding_mrs_fox_door:
+      name: The House-Door
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        "The maid heard some one standing at the house-door, knocking."
+
+    loc_wedding_mrs_fox_upstairs_room:
+      name: Mrs Fox's Upstairs Room
+      instance_of: loc_house
+      evidence: |
+        "Mrs. Fox went up to her room, shut herself in"
+
+    loc_wedding_mrs_fox_fireplace:
+      name: Miss Cat's Fireplace
+      instance_of: loc_hearth
+      evidence: |
+        "Miss Cat, sat by the fire, and did the cooking."
+
+    loc_wedding_mrs_fox_parlour_door:
+      name: The Parlour Door
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        "Until she comes to the parlour door."
+
+
+classifications:
+
+  world_laws:
+    - law_feigned_death_tests_fidelity
+
+  moral_regimes:
+    - moral_retributive
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_domestic_labor
+    - agency_cunning
+    - agency_violence
+
+  affects_driving:
+    - affect_grief
+    - affect_anger
+
+  symbol_numbers:
+    - num_9   # nine tails mark the acceptable match in the first story
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_interdiction, order: 1, actor: wedding_mrs_fox_old_mr_fox,
+      scene: "old Mr Fox suspects his wife and stages his body as dead to test her fidelity" }
+  - { function: func_absentation, order: 2, actor: wedding_mrs_fox_old_mr_fox,
+      scene: "he withdraws under the bench and behaves as if stone dead" }
+  - { function: func_mediation, order: 3, actor: wedding_mrs_fox_miss_cat,
+      scene: "Miss Cat receives fox wooers at the house-door and carries their proposals upstairs" }
+  - { function: func_testing, order: 4, actor: wedding_mrs_fox_mrs_fox,
+      scene: "Mrs Fox asks whether each suitor has nine tails like old Mr Fox" }
+  - { function: func_rejection, order: 5, actor: wedding_mrs_fox_mrs_fox,
+      scene: "foxes with one through eight tails are rejected" }
+  - { function: func_false_resolution, order: 6, actor: wedding_mrs_fox_nine_tail_suitor,
+      scene: "the nine-tailed suitor is accepted and the old fox is ordered outside" }
+  - { function: func_punishment, order: 7, actor: wedding_mrs_fox_old_mr_fox,
+      scene: "old Mr Fox rises, cudgels the rabble, and drives Mrs Fox from the house" }
+  - { function: func_absentation, order: 8, actor: wedding_mrs_fox_old_mr_fox,
+      scene: "in the second story old Mr Fox is truly dead" }
+  - { function: func_mediation, order: 9, actor: wedding_mrs_fox_miss_cat,
+      scene: "the cat again mediates suitors between the door and Mrs Fox upstairs" }
+  - { function: func_testing, order: 10, actor: wedding_mrs_fox_mrs_fox,
+      scene: "Mrs Fox requires red stockings and a pointed mouth" }
+  - { function: func_rejection, order: 11, actor: wedding_mrs_fox_mrs_fox,
+      scene: "wolf, dog, stag, hare, bear, lion, and forest beasts are rejected for lacking one good point" }
+  - { function: func_wedding, order: 12, actor: wedding_mrs_fox_young_fox_suitor,
+      scene: "the young fox with red stockings and pointed mouth is admitted and married" }
+
+
+edges:
+
+  # First story: feigned death and nine-tailed comparison
+  - { from: wedding_mrs_fox_old_mr_fox, to: wedding_mrs_fox_mrs_fox, label: TESTS_FIDELITY_OF,
+      evidence: "believed that his wife was not faithful to him, and wished to try her." }
+  - { from: wedding_mrs_fox_old_mr_fox, to: obj_wedding_mrs_fox_bench, label: HIDES_UNDER,
+      evidence: "He stretched himself out under the bench" }
+  - { from: wedding_mrs_fox_old_mr_fox, to: law_feigned_death_tests_fidelity, label: ENACTS,
+      evidence: "behaved as if he were stone dead." }
+  - { from: wedding_mrs_fox_mrs_fox, to: loc_wedding_mrs_fox_upstairs_room, label: WITHDRAWS_TO,
+      evidence: "went up to her room, shut herself in" }
+  - { from: wedding_mrs_fox_miss_cat, to: obj_wedding_mrs_fox_warm_beer, label: PREPARES,
+      evidence: "I am boiling warm beer with butter so nice" }
+  - { from: wedding_mrs_fox_one_to_eight_tail_suitors, to: loc_wedding_mrs_fox_door, label: KNOCK_AT,
+      evidence: "Soon afterwards there was another knock" }
+  - { from: wedding_mrs_fox_miss_cat, to: wedding_mrs_fox_one_to_eight_tail_suitors, label: REJECTS_AS_MESSENGER,
+      evidence: "Miss Cat went downstairs and sent the wooer away." }
+  - { from: wedding_mrs_fox_mrs_fox, to: num_9, label: REQUIRES,
+      evidence: "But has he nine as beautiful tails as the late Mr. Fox?" }
+  - { from: wedding_mrs_fox_nine_tail_suitor, to: num_9, label: HAS_MARKED_COUNT,
+      evidence: "one came who had nine tails, like old Mr. Fox." }
+  - { from: wedding_mrs_fox_mrs_fox, to: wedding_mrs_fox_nine_tail_suitor, label: ACCEPTS,
+      evidence: "When the widow heard that, she said joyfully to the cat" }
+  - { from: wedding_mrs_fox_mrs_fox, to: wedding_mrs_fox_old_mr_fox, label: ORDERS_CARRIED_OUT,
+      evidence: "And carry old Mr. Fox outside." }
+  - { from: wedding_mrs_fox_old_mr_fox, to: obj_wedding_mrs_fox_cudgel, label: USES,
+      evidence: "cudgelled all the rabble" }
+  - { from: wedding_mrs_fox_old_mr_fox, to: wedding_mrs_fox_mrs_fox, label: DRIVES_OUT,
+      evidence: "drove them and Mrs. Fox out of the house." }
+
+  # Second story: animal suitors and proper fox-match
+  - { from: wedding_mrs_fox_wolf_suitor, to: loc_wedding_mrs_fox_door, label: KNOCKS_AT,
+      evidence: "the wolf came as a wooer, and knocked at the door" }
+  - { from: wedding_mrs_fox_miss_cat, to: obj_wedding_mrs_fox_bread_milk, label: PREPARES,
+      evidence: "In milk I'm breaking bread so sweet" }
+  - { from: wedding_mrs_fox_miss_cat, to: obj_wedding_mrs_fox_gold_rings, label: WEARS,
+      evidence: "With her five gold rings at the door she knocks" }
+  - { from: wedding_mrs_fox_mrs_fox, to: wedding_mrs_fox_wolf_suitor, label: REJECTS,
+      evidence: "No... Then he won't do for me." }
+  - { from: wedding_mrs_fox_mrs_fox, to: wedding_mrs_fox_dog_suitor, label: REJECTS,
+      evidence: "one of the good points which old Mr. Fox had possessed, was always lacking" }
+  - { from: wedding_mrs_fox_mrs_fox, to: wedding_mrs_fox_stag_suitor, label: REJECTS,
+      evidence: "one of the good points which old Mr. Fox had possessed, was always lacking" }
+  - { from: wedding_mrs_fox_mrs_fox, to: wedding_mrs_fox_hare_suitor, label: REJECTS,
+      evidence: "one of the good points which old Mr. Fox had possessed, was always lacking" }
+  - { from: wedding_mrs_fox_mrs_fox, to: wedding_mrs_fox_bear_suitor, label: REJECTS,
+      evidence: "one of the good points which old Mr. Fox had possessed, was always lacking" }
+  - { from: wedding_mrs_fox_mrs_fox, to: wedding_mrs_fox_lion_suitor, label: REJECTS,
+      evidence: "one of the good points which old Mr. Fox had possessed, was always lacking" }
+  - { from: wedding_mrs_fox_young_fox_suitor, to: wedding_mrs_fox_mrs_fox, label: MATCHES_TRAITS_FOR,
+      evidence: "red stockings... little pointed mouth" }
+  - { from: wedding_mrs_fox_mrs_fox, to: wedding_mrs_fox_young_fox_suitor, label: ACCEPTS,
+      evidence: "Then let him come upstairs" }
+  - { from: wedding_mrs_fox_mrs_fox, to: obj_wedding_mrs_fox_wedding_feast, label: ORDERS_PREPARED,
+      evidence: "ordered the servant to prepare the wedding-feast." }
+  - { from: wedding_mrs_fox_mrs_fox, to: wedding_mrs_fox_young_fox_suitor, label: MARRIES,
+      evidence: "the wedding was solemnized with young Mr. Fox" }
+  - { from: wedding_mrs_fox_mrs_fox, to: moral_comic_inversion, label: PARTICIPATES_IN,
+      evidence: "if they have not left off, they are dancing still." }

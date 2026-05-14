@@ -1,0 +1,22 @@
+slug: the-golden-goose
+khm: 64
+atu: '571'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg2591-grimm-taylor
+  weight: supplementary
+- book: pg11027-grimm-gruelle
+  weight: supplementary
+- book: pg52521-grimm-olcott
+  weight: supplementary
+- book: pg22555-grimm-eeden-dutch
+  weight: supplementary
+sections:
+- id: three-trials-and-wedding
+  title: three trials and wedding
+  canonical:
+    kept: pg5314-grimm-hunt + pg2591-grimm-taylor
+    type: enrichment
+    rationale: Hunt truncates the KHM 1857 ending, dropping three structurally important trials. Taylor preserves them. This is verifiable against KHM (Die goldene Gans, 1857 final edition). Restoration adds three new helper characters and three new tasks to the gold-layer model.

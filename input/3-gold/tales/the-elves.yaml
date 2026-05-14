@@ -1,0 +1,446 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-elves
+khm: 39
+atu: '503'
+atu_name: The Elves / Gifts of the Little People
+canonical_source: ../../2-silver/canonical/the-elves/canonical.txt
+title: The Elves
+
+
+entities:
+
+  characters:
+
+    elves_shoemaker:
+      name: The Poor Shoemaker
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_endurance, agency_speech]
+      affects: [affect_shame, affect_curiosity]
+      traits: [poor-through-no-fault, good-conscience, leather-cutter, prayerful, restored-to-wealth]
+      evidence: |
+        "by no fault of his own, had become so poor that at last he had
+        nothing left but leather for one pair of shoes."
+
+    elves_shoemaker_wife:
+      name: The Shoemaker's Wife
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_curiosity]
+      traits: [watcher, grateful, clothing-maker, helper-rewarder]
+      evidence: |
+        "The little men have made us rich, and we really must show that
+        we are grateful for it."
+
+    elves_shoemaker_elves:
+      name: The Two Naked Little Men
+      archetypes: [arc_supernatural_donor]
+      being_type: being_dwarf
+      agency_modes: [agency_domestic_labor]
+      traits: [naked, nocturnal, tiny, skilled-cobblers, hidden-helpers, dance-away]
+      evidence: |
+        "two pretty little naked men came, sat down by the shoemaker's
+        table... stitch, and sew, and hammer"
+
+    elves_shoe_buyers:
+      name: The Shoe Buyers
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [pay-more-than-customary, prosperity-enablers]
+      evidence: |
+        "a buyer came in... he paid more for them than was customary"
+
+    elves_servant_girl:
+      name: The Poor Servant-Girl
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_endurance, agency_speech]
+      affects: [affect_curiosity]
+      traits: [industrious, cleanly, illiterate, godmother, time-displaced-returner]
+      evidence: |
+        "a poor servant-girl, who was industrious and cleanly, and swept
+        the house every day"
+
+    elves_servant_master_mistress:
+      name: The Servant-Girl's Master and Mistress
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      traits: [letter-readers, persuaders, dead-after-seven-years]
+      evidence: |
+        "she put her broom in the corner, and took the letter to her
+        master and mistress"
+
+    elves_christening_elves:
+      name: The Three Christening Elves
+      archetypes: [arc_supernatural_donor]
+      being_type: being_dwarf
+      agency_modes: [agency_speech]
+      traits: [invitation-senders, mountain-guides, christening-hosts, money-givers, time-displacing]
+      evidence: |
+        "Then three elves came and conducted her to a hollow mountain,
+        where the little folks lived."
+
+    elves_baby_mother:
+      name: The Elf Baby's Mother
+      being_type: being_dwarf
+      agency_modes: [agency_domestic_labor]
+      traits: [lying-in-mother, pearl-bed-occupant, christening-host]
+      evidence: |
+        "The baby's mother lay in a bed of black ebony ornamented with
+        pearls"
+
+    elves_baby:
+      name: The Elf Baby
+      being_type: being_dwarf
+      traits: [christening-child, otherworld-infant]
+      evidence: |
+        "asked the girl to hold a child for them at its christening."
+
+    elves_return_strangers:
+      name: The Strangers in the Former House
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [new-inhabitants, time-gap-witnesses]
+      evidence: |
+        "some strangers came out of the house, who asked her who she
+        was"
+
+    elves_mother:
+      name: The Mother Whose Child Is Taken
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      affects: [affect_maternal_love, affect_grief]
+      traits: [bereaved, advice-seeking, changeling-tester, child-restored]
+      evidence: |
+        "A certain mother's child had been taken away out of its cradle
+        by the elves"
+
+    elves_neighbor:
+      name: The Advising Neighbour
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning]
+      traits: [changeling-diagnostician, egg-shell-adviser]
+      evidence: |
+        "she went to her neighbour, and asked her advice."
+
+    elves_changeling:
+      name: The Changeling
+      archetypes: [arc_changeling]
+      being_type: being_dwarf
+      agency_modes: [agency_speech]
+      affects: [affect_curiosity]
+      traits: [large-headed, staring-eyed, gluttonous, ancient-speaking, laughter-exposed]
+      evidence: |
+        "a changeling with a large head and staring eyes, which would
+        do nothing but eat and drink"
+
+    elves_stolen_child:
+      name: The Right Child
+      species: sp_human
+      traits: [stolen-from-cradle, returned-to-hearth]
+      evidence: |
+        "brought the right child, set it down on the hearth"
+
+    elves_returning_host:
+      name: The Host of Returning Little Elves
+      being_type: being_dwarf
+      agency_modes: [agency_domestic_labor]
+      traits: [child-returners, changeling-removers]
+      evidence: |
+        "suddenly came a host of little elves, who brought the right
+        child"
+
+  magic_objects:
+
+    obj_elves_leather:
+      name: The Cut-Out Leather
+      object_kind: material
+      attributes:
+        function: scarce material transformed by night labour into shoes
+      evidence: |
+        "leather for one pair of shoes... he cut out the shoes"
+
+    obj_elves_finished_shoes:
+      name: The Finished Shoes
+      object_kind: garment
+      attributes:
+        function: masterpiece shoes completed overnight
+      evidence: |
+        "the two shoes stood quite finished on his table"
+
+    obj_elves_shoe_money:
+      name: The Shoe Money
+      object_kind: treasure
+      attributes:
+        function: buys leather for two, then four pairs of shoes
+      evidence: |
+        "with the money, the shoemaker was able to purchase leather"
+
+    obj_elves_candle:
+      name: The Watching Candle
+      object_kind: tool
+      attributes:
+        function: lets the couple watch the hidden helpers
+      evidence: |
+        "The woman liked the idea, and lighted a candle"
+
+    obj_elves_little_clothes:
+      name: The Little Shirts, Coats, Vests, Trousers, Stockings, and Shoes
+      object_kind: garment
+      attributes:
+        made_for: elves_shoemaker_elves
+      evidence: |
+        "I will make them little shirts, and coats, and vests, and
+        trousers... make them two little pairs of shoes."
+
+    obj_elves_broom:
+      name: The Servant-Girl's Broom
+      object_kind: tool
+      attributes:
+        function: marks the interrupted human work across the time gap
+      evidence: |
+        "she put her broom in the corner"
+
+    obj_elves_letter:
+      name: The Elves' Christening Letter
+      object_kind: book
+      attributes:
+        function: invitation to hold the elf child at christening
+      evidence: |
+        "she found a letter on this heap"
+
+    obj_elves_mountain_money:
+      name: The Money in the Servant-Girl's Pockets
+      object_kind: treasure
+      attributes:
+        function: payment from the little elves after the christening stay
+      evidence: |
+        "they filled her pockets quite full of money"
+
+    obj_elves_ebony_bed:
+      name: The Black Ebony Bed with Pearls
+      object_kind: architecture
+      attributes:
+        owner: elves_baby_mother
+      evidence: |
+        "a bed of black ebony ornamented with pearls"
+
+    obj_elves_ivory_cradle:
+      name: The Ivory Cradle
+      object_kind: architecture
+      attributes:
+        owner: elves_baby
+      evidence: |
+        "the cradle was of ivory"
+
+    obj_elves_gold_bath:
+      name: The Gold Bath
+      object_kind: treasure
+      attributes:
+        function: luxurious christening-world infant object
+      evidence: |
+        "the bath of gold"
+
+    obj_elves_cradle:
+      name: The Human Child's Cradle
+      object_kind: architecture
+      attributes:
+        function: site of elf substitution
+      evidence: |
+        "taken away out of its cradle by the elves"
+
+    obj_elves_egg_shells:
+      name: The Two Egg-Shells Used as Pots
+      object_kind: tool
+      attributes:
+        function: absurd miniature boiling task that exposes the changeling
+      evidence: |
+        "boil some water in two egg-shells"
+
+  locations:
+
+    loc_elves_shoemaker_house:
+      name: The Shoemaker's House and Workroom
+      instance_of: loc_house
+      evidence: |
+        "sat down by the shoemaker's table"
+
+    loc_elves_shoemaker_table:
+      name: The Shoemaker's Table
+      instance_of: loc_house
+      evidence: |
+        "stood quite finished on his table"
+
+    loc_elves_hiding_corner:
+      name: The Corner behind the Hanging Clothes
+      instance_of: loc_house
+      evidence: |
+        "hid themselves in a corner of the room, behind some clothes"
+
+    loc_elves_house_door_heap:
+      name: The Sweepings Heap before the Door
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        "emptied her sweepings on the great heap in front of the door"
+
+    loc_elves_hollow_mountain:
+      name: The Hollow Mountain of the Little Folks
+      instance_of: loc_mountain
+      evidence: |
+        "conducted her to a hollow mountain, where the little folks lived"
+
+    loc_elves_servant_old_house:
+      name: The Servant-Girl's Former House
+      instance_of: loc_house
+      evidence: |
+        "When she got home, she wanted to begin her work"
+
+    loc_elves_mother_house:
+      name: The Mother's House
+      instance_of: loc_house
+      evidence: |
+        "laid in its place"
+
+    loc_elves_kitchen_hearth:
+      name: The Kitchen Hearth
+      instance_of: loc_hearth
+      evidence: |
+        "carry the changeling into the kitchen, set it down on the
+        hearth"
+
+
+classifications:
+
+  world_laws:
+    - law_secret_night_labor_restores_honest_poverty
+    - law_otherworld_time_displaces_human_time
+    - law_absurd_task_exposes_changeling
+
+  moral_regimes:
+    - moral_restorative
+    - moral_kindness_rewarded
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_speech
+    - agency_endurance
+    - agency_cunning
+
+  affects_driving:
+    - affect_curiosity
+    - affect_grief
+    - affect_maternal_love
+
+  symbol_numbers:
+    - num_2   # two little night-workers and two egg-shells
+    - num_3   # three christening elves and three otherworld days
+    - num_7   # seven human years pass outside the mountain
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_lack, order: 1, actor: elves_shoemaker,
+      scene: "the shoemaker has leather left for only one pair of shoes" }
+  - { function: func_secret_aid, order: 2, actor: elves_shoemaker_elves,
+      scene: "two little naked men sew the cut leather into perfect shoes by morning" }
+  - { function: func_reward, order: 3, actor: elves_shoe_buyers,
+      scene: "buyers pay enough for more leather until the shoemaker becomes wealthy" }
+  - { function: func_discovery, order: 4, actor: elves_shoemaker_wife,
+      scene: "the couple hides behind clothes and sees the midnight workers" }
+  - { function: func_reciprocation, order: 5, actor: elves_shoemaker_wife,
+      scene: "wife and husband replace cut leather with clothing and shoes for the helpers" }
+  - { function: func_departure, order: 6, actor: elves_shoemaker_elves,
+      scene: "the dressed little men dance out and never cobble again" }
+  - { function: func_invitation, order: 7, actor: elves_christening_elves,
+      scene: "a letter invites the servant-girl to hold an elf child at christening" }
+  - { function: func_guidance, order: 8, actor: elves_christening_elves,
+      scene: "three elves conduct the girl into the hollow mountain" }
+  - { function: func_reward, order: 9, actor: elves_christening_elves,
+      scene: "after three days of pleasure they fill her pockets with money" }
+  - { function: func_return, order: 10, actor: elves_servant_girl,
+      scene: "she returns home and learns seven human years have passed" }
+  - { function: func_villainy, order: 11, actor: elves_returning_host,
+      scene: "elves have taken a mother's child and left a changeling in its place" }
+  - { function: func_advice, order: 12, actor: elves_neighbor,
+      scene: "the neighbour tells the mother to boil water in egg-shells on the hearth" }
+  - { function: func_exposure, order: 13, actor: elves_changeling,
+      scene: "the changeling laughs and declares its ancient age" }
+  - { function: func_restoration, order: 14, actor: elves_returning_host,
+      scene: "the little elves return the right child and take the changeling away" }
+
+
+edges:
+
+  # First story: hidden craft labour and gratitude
+  - { from: elves_shoemaker, to: obj_elves_leather, label: CUTS_OUT,
+      evidence: "he cut out the shoes which he wished to begin to make" }
+  - { from: elves_shoemaker_elves, to: obj_elves_finished_shoes, label: MAKE_OVERNIGHT,
+      evidence: "the two shoes stood quite finished on his table" }
+  - { from: elves_shoemaker_elves, to: law_secret_night_labor_restores_honest_poverty, label: ENACTS,
+      evidence: "what he cut out in the evening was finished by the morning" }
+  - { from: elves_shoe_buyers, to: obj_elves_finished_shoes, label: BUY,
+      evidence: "as the shoes pleased him so well, he paid more" }
+  - { from: elves_shoe_buyers, to: obj_elves_shoe_money, label: PAY_WITH,
+      evidence: "with the money, the shoemaker was able to purchase leather" }
+  - { from: elves_shoemaker, to: loc_elves_hiding_corner, label: HIDES_IN,
+      evidence: "hid themselves in a corner of the room" }
+  - { from: elves_shoemaker_wife, to: obj_elves_candle, label: LIGHTS,
+      evidence: "lighted a candle" }
+  - { from: elves_shoemaker_wife, to: obj_elves_little_clothes, label: MAKES,
+      evidence: "I will make them little shirts, and coats, and vests" }
+  - { from: elves_shoemaker, to: obj_elves_little_clothes, label: CONTRIBUTES_TO,
+      evidence: "do thou, too, make them two little pairs of shoes." }
+  - { from: elves_shoemaker_elves, to: obj_elves_little_clothes, label: PUT_ON,
+      evidence: "They dressed themselves with the greatest rapidity" }
+  - { from: elves_shoemaker_elves, to: loc_elves_shoemaker_house, label: LEAVE,
+      evidence: "At last they danced out of doors." }
+
+  # Second story: christening and time displacement
+  - { from: elves_servant_girl, to: obj_elves_broom, label: USES,
+      evidence: "swept the house every day" }
+  - { from: elves_servant_girl, to: obj_elves_letter, label: FINDS,
+      evidence: "she found a letter on this heap" }
+  - { from: obj_elves_letter, to: elves_baby, label: INVITES_GODMOTHER_FOR,
+      evidence: "asked the girl to hold a child for them at its christening" }
+  - { from: elves_christening_elves, to: loc_elves_hollow_mountain, label: CONDUCT_TO,
+      evidence: "conducted her to a hollow mountain" }
+  - { from: elves_baby_mother, to: obj_elves_ebony_bed, label: LIES_IN,
+      evidence: "lay in a bed of black ebony ornamented with pearls" }
+  - { from: elves_baby, to: obj_elves_ivory_cradle, label: HAS_CRADLE,
+      evidence: "the cradle was of ivory" }
+  - { from: elves_baby, to: obj_elves_gold_bath, label: HAS_BATH,
+      evidence: "the bath of gold" }
+  - { from: elves_servant_girl, to: elves_baby, label: HOLDS_AT_CHRISTENING,
+      evidence: "The girl stood as godmother" }
+  - { from: elves_christening_elves, to: obj_elves_mountain_money, label: GIVE,
+      evidence: "they filled her pockets quite full of money" }
+  - { from: elves_servant_girl, to: law_otherworld_time_displaces_human_time, label: EXPERIENCES,
+      evidence: "not... three days... but seven years" }
+  - { from: elves_return_strangers, to: elves_servant_girl, label: QUESTION,
+      evidence: "asked her who she was, and what business she had there" }
+
+  # Third story: changeling exposure and child restoration
+  - { from: elves_returning_host, to: elves_stolen_child, label: STEAL,
+      evidence: "child had been taken away out of its cradle by the elves" }
+  - { from: elves_changeling, to: obj_elves_cradle, label: SUBSTITUTED_IN,
+      evidence: "laid in its place" }
+  - { from: elves_changeling, to: arc_changeling, label: EMBODIES,
+      evidence: "a changeling with a large head and staring eyes" }
+  - { from: elves_mother, to: elves_neighbor, label: ASKS_ADVICE_OF,
+      evidence: "went to her neighbour, and asked her advice." }
+  - { from: elves_neighbor, to: obj_elves_egg_shells, label: PRESCRIBES,
+      evidence: "boil some water in two egg-shells" }
+  - { from: elves_mother, to: loc_elves_kitchen_hearth, label: SETS_CHANGELING_ON,
+      evidence: "set it down on the hearth" }
+  - { from: obj_elves_egg_shells, to: law_absurd_task_exposes_changeling, label: TRIGGERS,
+      evidence: "which would make the changeling laugh" }
+  - { from: elves_changeling, to: law_absurd_task_exposes_changeling, label: REVEALS_BY_SPEECH,
+      evidence: "I am as old now as the Wester forest" }
+  - { from: elves_returning_host, to: elves_stolen_child, label: RETURNS,
+      evidence: "brought the right child, set it down on the hearth" }
+  - { from: elves_returning_host, to: elves_changeling, label: TAKES_AWAY,
+      evidence: "took the changeling away with them." }
+  - { from: elves_mother, to: elves_stolen_child, label: RECOVERS,
+      evidence: "brought the right child" }

@@ -53,7 +53,7 @@ for (const e of graph.edges) {
 // Quick indices used by many subcommands.
 const charToTale = new Map<string, string>()
 const charDirect = new Map<string, Set<string>>() // arc_, sp_
-const taleFeatures = new Map<string, Set<string>>() // theme_, loc_, num_, obj_
+const taleFeatures = new Map<string, Set<string>>() // tale-level ontology/object labels
 for (const e of graph.edges) {
   if (e.label === 'APPEARS_IN') charToTale.set(e.from, e.to)
   if (e.label === 'IS_ARCHETYPE' || e.label === 'IS_SPECIES') {
@@ -62,6 +62,11 @@ for (const e of graph.edges) {
   }
   if (
     e.label === 'CONTAINS_THEME' ||
+    e.label === 'HAS_WORLD_LAW' ||
+    e.label === 'HAS_MORAL_REGIME' ||
+    e.label === 'HAS_AGENCY_MODE' ||
+    e.label === 'HAS_AFFECT' ||
+    e.label === 'HAS_THRESHOLD_TYPE' ||
     e.label === 'HAS_LOCATION' ||
     e.label === 'CONTAINS_NUMBER' ||
     e.label === 'HAS_MAGIC_OBJECT'
@@ -732,21 +737,9 @@ function patternCmd(edge: string): void {
 
 // 16. timeline --------------------------------------------------------------
 function timelineCmd(): void {
-  // Order tales by their slug alphabetically (TALES.json order would be
-  // ideal, but slug-order is deterministic and good enough for a first cut).
-  // Use TALES.json if present.
-  let order: string[] = []
-  try {
-    const manifest = JSON.parse(
-      readFileSync(resolve(repoRoot, 'input/TALES.json'), 'utf8'),
-    ) as { tales: Array<{ slug: string; modelled: boolean }> }
-    order = manifest.tales
-      .filter((t) => t.modelled)
-      .map((t) => `${t.slug}_tale`)
-      .filter((t) => nodeByLabel.has(t))
-  } catch {
-    order = [...TALE_LABELS].sort()
-  }
+  // Gold v2 no longer has input/TALES.json; the loaded graph is the source
+  // of truth and remains deterministic because tale files are sorted.
+  const order = [...TALE_LABELS].sort()
   header(`Theme presence by tale order (${order.length} tales)`)
   const rows = order.map((t, i) => {
     const themes = [...(taleFeatures.get(t) ?? [])].filter(isTheme).sort()
@@ -941,13 +934,13 @@ function statsCmd(): void {
   console.log('\narchetypes per character:')
   table([describe(arcPerChar)])
 
-  // Themes per tale.
-  const themesPerTale: number[] = []
+  // World laws per tale.
+  const lawsPerTale: number[] = []
   for (const t of TALE_LABELS) {
-    themesPerTale.push([...(taleFeatures.get(t) ?? [])].filter(isTheme).length)
+    lawsPerTale.push([...(taleFeatures.get(t) ?? [])].filter((label) => label.startsWith('law_')).length)
   }
-  console.log('\nthemes per tale:')
-  table([describe(themesPerTale)])
+  console.log('\nworld laws per tale:')
+  table([describe(lawsPerTale)])
 
   // Characters per tale.
   const charsPerTale = new Map<string, number>()
@@ -967,16 +960,16 @@ function statsCmd(): void {
   console.log('\ntop edge labels (with share):')
   table(top10.map(([l, n]) => ({ label: l, count: n, share_pct: Number(((n / totalEdges) * 100).toFixed(1)) })))
 
-  // Tale-to-tale theme similarity (mean Jaccard).
+  // Tale-to-tale classification similarity (mean Jaccard).
   const taleScores: number[] = []
   for (let i = 0; i < TALE_LABELS.length; i++) {
     for (let j = i + 1; j < TALE_LABELS.length; j++) {
-      const a = new Set([...(taleFeatures.get(TALE_LABELS[i]) ?? [])].filter(isTheme))
-      const b = new Set([...(taleFeatures.get(TALE_LABELS[j]) ?? [])].filter(isTheme))
+      const a = new Set([...(taleFeatures.get(TALE_LABELS[i]) ?? [])].filter((label) => !isObject(label)))
+      const b = new Set([...(taleFeatures.get(TALE_LABELS[j]) ?? [])].filter((label) => !isObject(label)))
       taleScores.push(jaccard(a, b))
     }
   }
-  console.log('\npair-wise tale theme Jaccard:')
+  console.log('\npair-wise tale classification Jaccard:')
   table([describe(taleScores.map((x) => Number(x.toFixed(4))))])
 }
 
@@ -1123,27 +1116,27 @@ async function wordsCmd(taleSlug: string | undefined, word: string | undefined, 
     if (word) {
       header(`Tales where '${word}' appears`)
       const r = await db.query(
-        `SELECT tale, freq FROM tale_words WHERE word = '${word.replace(/'/g, "''")}' ORDER BY freq DESC`,
+        `SELECT c1, c0 FROM tale_words WHERE c2 = '${word.replace(/'/g, "''")}' ORDER BY c0 DESC`,
       )
-      table((r.rows ?? []) as Record<string, unknown>[])
+      table((r.rows ?? []).map((row) => ({ tale: row.c1, freq: row.c0 })))
       return
     }
     if (taleSlug) {
       header(`Top ${top} words in '${taleSlug}'`)
       const r = await db.query(
-        `SELECT word, freq FROM tale_words WHERE tale = '${taleSlug.replace(/'/g, "''")}' ORDER BY freq DESC LIMIT ${top}`,
+        `SELECT c2, c0 FROM tale_words WHERE c1 = '${taleSlug.replace(/'/g, "''")}' ORDER BY c0 DESC LIMIT ${top}`,
       )
-      table((r.rows ?? []) as Record<string, unknown>[])
+      table((r.rows ?? []).map((row) => ({ word: row.c2, freq: row.c0 })))
       return
     }
     header(`Top ${top} content words across the corpus`)
     const r = await db.query(
-      `SELECT word, SUM(freq), COUNT(*) FROM tale_words GROUP BY word ORDER BY SUM(freq) DESC LIMIT ${top}`,
+      `SELECT c2, SUM(c0), COUNT(*) FROM tale_words GROUP BY c2 ORDER BY SUM(c0) DESC LIMIT ${top}`,
     )
     table(
       (r.rows ?? []).map((row) => ({
-        word: row['word'],
-        total_freq: row['SUM(freq)'] ?? row['sum(freq)'],
+        word: row.c2,
+        total_freq: row['SUM(c0)'] ?? row['sum(c0)'],
         in_tales: row['COUNT(*)'] ?? row['count(*)'],
       })),
     )
@@ -1161,12 +1154,12 @@ async function correlateCmd(themeSlug: string | undefined, top: number): Promise
   const db = await connect(snap.uri)
   try {
     // Pull all word -> tales mapping in one go.
-    const r = await db.query('SELECT tale, word, freq FROM tale_words')
+    const r = await db.query('SELECT c1, c2, c0 FROM tale_words')
     const wordTales = new Map<string, Map<string, number>>()
     for (const row of r.rows ?? []) {
-      const w = String(row['word'])
-      const t = String(row['tale'])
-      const f = Number(row['freq']) || 0
+      const w = String(row.c2)
+      const t = String(row.c1)
+      const f = Number(row.c0) || 0
       if (!wordTales.has(w)) wordTales.set(w, new Map())
       wordTales.get(w)!.set(t, f)
     }
@@ -1192,7 +1185,7 @@ async function correlateCmd(themeSlug: string | undefined, top: number): Promise
         if (pos < 2) continue
         // lift = P(word | theme) / P(word | ¬theme)
         const pInTheme = pos / tales.size
-        const pOut = neg / Math.max(1, 62 - tales.size)
+        const pOut = neg / Math.max(1, TALE_LABELS.length - tales.size)
         const lift = pInTheme / Math.max(pOut, 0.01)
         scores.push({ word: w, lift: Number(lift.toFixed(2)), pos, neg })
       }
@@ -1212,13 +1205,13 @@ async function richnessCmd(): Promise<void> {
   try {
     header('Tales by vocabulary richness (unique_words / total_tokens)')
     const r = await db.query(
-      `SELECT tale, total_tokens, unique_words FROM tale_vocab ORDER BY unique_words DESC`,
+      `SELECT c2, c1, c0 FROM tale_vocab ORDER BY c0 DESC`,
     )
     const rows = (r.rows ?? []).slice(0, 20).map((row) => {
-      const total = Number(row['total_tokens']) || 0
-      const uniq = Number(row['unique_words']) || 0
+      const total = Number(row.c1) || 0
+      const uniq = Number(row.c0) || 0
       return {
-        tale: row['tale'],
+        tale: row.c2,
         total_tokens: total,
         unique_words: uniq,
         ttr: total ? Number((uniq / total).toFixed(3)) : 0,  // type-token ratio
@@ -1228,14 +1221,14 @@ async function richnessCmd(): Promise<void> {
 
     header('Bottom 10 (least lexical variety)')
     const r2 = await db.query(
-      `SELECT tale, total_tokens, unique_words FROM tale_vocab ORDER BY unique_words ASC LIMIT 10`,
+      `SELECT c2, c1, c0 FROM tale_vocab ORDER BY c0 ASC LIMIT 10`,
     )
     table(
       (r2.rows ?? []).map((row) => {
-        const total = Number(row['total_tokens']) || 0
-        const uniq = Number(row['unique_words']) || 0
+        const total = Number(row.c1) || 0
+        const uniq = Number(row.c0) || 0
         return {
-          tale: row['tale'],
+          tale: row.c2,
           total_tokens: total,
           unique_words: uniq,
           ttr: total ? Number((uniq / total).toFixed(3)) : 0,
@@ -1254,12 +1247,12 @@ async function ngramsCmd(top: number): Promise<void> {
   try {
     header(`Top ${top} bigrams across the corpus`)
     const r = await db.query(
-      `SELECT bigram, SUM(freq), COUNT(*) FROM tale_bigrams GROUP BY bigram ORDER BY SUM(freq) DESC LIMIT ${top}`,
+      `SELECT c0, SUM(c2), COUNT(*) FROM tale_bigrams GROUP BY c0 ORDER BY SUM(c2) DESC LIMIT ${top}`,
     )
     table(
       (r.rows ?? []).map((row) => ({
-        bigram: row['bigram'],
-        total_freq: row['SUM(freq)'] ?? row['sum(freq)'],
+        bigram: row.c0,
+        total_freq: row['SUM(c2)'] ?? row['sum(c2)'],
         in_tales: row['COUNT(*)'] ?? row['count(*)'],
       })),
     )
@@ -1334,14 +1327,21 @@ async function aboutCmd(): Promise<void> {
 const COOC_KINDS = ['archetype', 'theme', 'theme-archetype', 'number-theme'] as const
 const SUBGRAPH_NAMES = Object.keys(SUBGRAPH_KINDS) // KINSHIP, PREDATION, HELPING, OWNERSHIP
 
-function knownNode(value: string): true | string {
-  return nodeByLabel.has(value) || `unknown slug '${value}'`
+function cliString(value: unknown): string {
+  if (Array.isArray(value)) return String(value[0] ?? '')
+  return String(value ?? '')
 }
 
-function knownCharacter(value: string): true | string {
-  if (!nodeByLabel.has(value)) return `unknown slug '${value}'`
-  if (nodeByLabel.get(value)!.node_type !== 'character')
-    return `'${value}' is a ${nodeByLabel.get(value)!.node_type}, not a character`
+function knownNode(value: unknown): true | string {
+  const slug = cliString(value)
+  return nodeByLabel.has(slug) || `unknown slug '${slug}'`
+}
+
+function knownCharacter(value: unknown): true | string {
+  const slug = cliString(value)
+  if (!nodeByLabel.has(slug)) return `unknown slug '${slug}'`
+  if (nodeByLabel.get(slug)!.node_type !== 'character')
+    return `'${slug}' is a ${nodeByLabel.get(slug)!.node_type}, not a character`
   return true
 }
 
@@ -1357,7 +1357,7 @@ const cli = createCLI({
         name: 'kind',
         required: true,
         description: `One of: ${COOC_KINDS.join(', ')}`,
-        validate: (v) => COOC_KINDS.includes(v as typeof COOC_KINDS[number]) || `must be one of ${COOC_KINDS.join(', ')}`,
+        validate: (v: unknown) => COOC_KINDS.includes(cliString(v) as typeof COOC_KINDS[number]) || `must be one of ${COOC_KINDS.join(', ')}`,
       }],
       handler: (r) => cooc(String(r.positional.kind)),
     },
@@ -1397,7 +1397,7 @@ const cli = createCLI({
       positional: [{
         name: 'kind',
         required: true,
-        validate: (v) => SUBGRAPH_NAMES.includes(String(v).toUpperCase()) || `unknown kind. try: ${SUBGRAPH_NAMES.join(', ')}`,
+        validate: (v: unknown) => SUBGRAPH_NAMES.includes(cliString(v).toUpperCase()) || `unknown kind. try: ${SUBGRAPH_NAMES.join(', ')}`,
       }],
       handler: (r) => subgraphCmd(String(r.positional.kind)),
     },
@@ -1421,8 +1421,9 @@ const cli = createCLI({
       positional: [{
         name: 'tale',
         required: true,
-        validate: (v) => {
-          const s = String(v).endsWith('_tale') ? String(v) : `${v}_tale`
+        validate: (v: unknown) => {
+          const tale = cliString(v)
+          const s = tale.endsWith('_tale') ? tale : `${tale}_tale`
           return (nodeByLabel.has(s) && typeOf(s) === 'tale') || `unknown tale '${s}'`
         },
       }],

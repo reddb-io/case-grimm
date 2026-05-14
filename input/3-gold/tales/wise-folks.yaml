@@ -1,0 +1,317 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: wise-folks
+khm: 104
+atu: '1384'
+atu_name: A Man Seeks Someone as Stupid as His Wife
+canonical_source: ../../2-silver/canonical/wise-folks/canonical.txt
+title: Wise Folks
+
+
+entities:
+
+  characters:
+
+    wise_folks_hans:
+      name: Hans the Peasant Husband
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_object_mediation, agency_violence]
+      speech_acts_performed: [speech_command, speech_lie]
+      affects: [affect_anger, affect_greed, affect_pity]
+      traits: [travelling-husband, violent-threatener, folly-comparer, false-heaven-man, horse-and-purse-winner, beating-postponer]
+      evidence: |
+        One day a peasant took his good hazel-stick
+
+    wise_folks_trina:
+      name: Trina
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor, agency_object_mediation]
+      existential_states: [state_deceived]
+      affects: [affect_fear, affect_joy]
+      traits: [wife, cow-seller, foolish-collateral-keeper, smallest-cow-pledge-holder, spared-by-comparison]
+      evidence: |
+        said to his wife, “Trina,
+
+    wise_folks_cattle_dealer:
+      name: The Cattle-Dealer
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_object_mediation]
+      speech_acts_performed: [speech_lie]
+      traits: [cow-buyer, money-belt-excuser, false-pledge-offerer, two-cow-taker]
+      evidence: |
+        the cattle-dealer came
+
+    wise_folks_waggon_woman:
+      name: The Standing Woman in the Waggon
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_domestic_labor]
+      existential_states: [state_deceived]
+      affects: [affect_pity, affect_grief, affect_joy]
+      traits: [widow-like-believer, standing-rider, heaven-courier-dupe, dead-husband-provider, purse-giver]
+      evidence: |
+        a woman was standing upright in the middle of it
+
+    wise_folks_waggon_son:
+      name: The Woman's Son
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_domestic_labor]
+      existential_states: [state_deceived]
+      affects: [affect_joy]
+      traits: [field-worker, heaven-news-seeker, horse-lender, father-horse-sender]
+      evidence: |
+        she found her son who had come in from the field
+
+    wise_folks_dead_husband:
+      name: The Husband in Heaven
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [dead-husband, imagined-heaven-shepherd, recipient-of-money-and-horse]
+      evidence: |
+        my husband, who has been there these three years
+
+  magic_objects:
+
+    obj_wise_folks_hazel_stick:
+      name: Hans's Hazel-Stick
+      object_kind: weapon
+      attributes:
+        function: threatened punishment that motivates the search for greater fools
+      evidence: |
+        his good hazel-stick
+
+    obj_wise_folks_three_cows:
+      name: The Three Cows
+      object_kind: creature_object
+      attributes:
+        price: two hundred thalers
+        function: sale property whose false pledge exposes Trina's folly
+      evidence: |
+        our three cows
+
+    obj_wise_folks_smallest_cow:
+      name: The Smallest Cow Kept as Security
+      object_kind: creature_object
+      attributes:
+        function: mistaken pledge for the two cows already taken
+      evidence: |
+        I have kept the smallest
+
+    obj_wise_folks_money_belt:
+      name: The Forgotten Money-Belt
+      object_kind: token
+      attributes:
+        function: excuse that lets the cattle-dealer remove two cows without paying
+      evidence: |
+        I have forgotten to buckle on my money-belt
+
+    obj_wise_folks_purse:
+      name: The Purse of Wheat Money
+      object_kind: treasure
+      attributes:
+        function: money supposedly sent to the woman's dead husband in heaven
+      evidence: |
+        I will send that to him
+
+    obj_wise_folks_horse:
+      name: The Son's Horse
+      object_kind: creature_object
+      attributes:
+        function: second profit gained by the false-heaven-message trick
+      evidence: |
+        He saddled the horse
+
+  locations:
+
+    loc_wise_folks_house:
+      name: Hans and Trina's House
+      instance_of: loc_house
+      evidence: |
+        When the peasant got home
+
+    loc_wise_folks_byre:
+      name: The Cow Byre
+      instance_of: loc_stable
+      threshold_type: threshold_doorway
+      evidence: |
+        drove them out of the byre
+
+    loc_wise_folks_yard_door:
+      name: The Yard-Door
+      instance_of: loc_gate
+      threshold_type: threshold_gate
+      evidence: |
+        going out of the yard-door
+
+    loc_wise_folks_highway:
+      name: The Great Highways
+      instance_of: loc_road
+      evidence: |
+        went out into the great highways
+
+    loc_wise_folks_heaven:
+      name: The Imagined Heaven
+      instance_of: loc_heaven
+      threshold_type: threshold_gate
+      evidence: |
+        I have fallen down from heaven
+
+    loc_wise_folks_willow_tree:
+      name: The Willow-Tree Counting Place
+      instance_of: loc_tree
+      evidence: |
+        sitting under a willow-tree
+
+    loc_wise_folks_stable:
+      name: Hans's Stable
+      instance_of: loc_stable
+      evidence: |
+        put the horse in the stable
+
+
+classifications:
+
+  world_laws:
+    - law_foolish_collateral_inverts_sale_value
+    - law_false_afterlife_courier_extracts_goods
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+    - agency_object_mediation
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_anger
+    - affect_fear
+    - affect_pity
+    - affect_grief
+    - affect_greed
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_doorway
+    - threshold_gate
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: wise_folks_hans,
+      scene: "Hans leaves for three days and instructs Trina not to sell the three cows for less than two hundred thalers.",
+      evidence: "shall not return for three days" }
+  - { function: func_threat, order: 2, actor: wise_folks_hans,
+      scene: "Hans threatens to beat Trina black and blue with his hazel-stick if she does anything foolish.",
+      evidence: "I will make your back black and blue" }
+  - { function: func_trickery, order: 3, actor: wise_folks_cattle_dealer,
+      scene: "The cattle-dealer agrees to the price but claims to have forgotten his money-belt.",
+      evidence: "I have forgotten to buckle on my money-belt" }
+  - { function: func_foolish_bargain, order: 4, actor: wise_folks_trina,
+      scene: "Trina lets him take two cows because he leaves the smallest cow as security.",
+      evidence: "I have kept the smallest, which eats the least" }
+  - { function: func_discovery, order: 5, actor: wise_folks_hans,
+      scene: "Hans returns, hears the bargain, and recognises Trina's foolish security.",
+      evidence: "What kind of security?" }
+  - { function: func_quest_condition, order: 6, actor: wise_folks_hans,
+      scene: "Hans postpones the beating while searching for people even stupider than Trina.",
+      evidence: "see if I find anyone who is still stupider than you" }
+  - { function: func_reconnaissance, order: 7, actor: wise_folks_hans,
+      scene: "On the highway he sees a woman standing upright in a wagon to make it lighter for the cattle.",
+      evidence: "standing upright in the middle of it" }
+  - { function: func_deception, order: 8, actor: wise_folks_hans,
+      scene: "Hans claims he has fallen from heaven and invents news about the woman's dead husband.",
+      evidence: "I have fallen down from heaven" }
+  - { function: func_gain, order: 9, actor: wise_folks_hans,
+      scene: "The woman gives Hans a purse of money to carry secretly to her husband in heaven.",
+      evidence: "with her own hands put it in his pocket" }
+  - { function: func_second_dupe, order: 10, actor: wise_folks_waggon_son,
+      scene: "The son rides out to find the man from heaven and asks Hans to pursue him.",
+      evidence: "Have you seen the man who has fallen down from Heaven?" }
+  - { function: func_second_gain, order: 11, actor: wise_folks_hans,
+      scene: "Hans rides away on the son's horse by pretending to catch the heaven-man.",
+      evidence: "mounted the horse and rode off in a quick trot" }
+  - { function: func_return, order: 12, actor: wise_folks_hans,
+      scene: "Hans returns home with horse and purse and tells Trina he has found two sillier fools.",
+      evidence: "I have found two who are still sillier fools than you" }
+  - { function: func_comic_closure, order: 13, actor: wise_folks_hans,
+      scene: "Hans concludes that stupidity can be honored when it brings in a horse and money.",
+      evidence: "If stupidity always brought in as much as that" }
+
+
+edges:
+
+  # Cow sale and mistaken security
+  - { from: wise_folks_hans, to: wise_folks_trina, label: LEAVES_SALE_INSTRUCTIONS_WITH,
+      evidence: "you may strike a bargain at once" }
+  - { from: wise_folks_hans, to: obj_wise_folks_three_cows, label: SETS_PRICE_FOR,
+      evidence: "two hundred thalers for them" }
+  - { from: wise_folks_hans, to: obj_wise_folks_hazel_stick, label: THREATENS_PUNISHMENT_WITH,
+      evidence: "with the stick which I have in my hand" }
+  - { from: wise_folks_cattle_dealer, to: obj_wise_folks_three_cows, label: AGREES_TO_BUY,
+      evidence: "I am quite willing to give that" }
+  - { from: wise_folks_cattle_dealer, to: obj_wise_folks_money_belt, label: CLAIMS_TO_HAVE_FORGOTTEN,
+      evidence: "forgotten to buckle on my money-belt" }
+  - { from: wise_folks_cattle_dealer, to: wise_folks_trina, label: OFFERS_FALSE_SECURITY_TO,
+      evidence: "I will take two cows with me and leave one" }
+  - { from: law_foolish_collateral_inverts_sale_value, to: wise_folks_trina, label: DECEIVES,
+      evidence: "The woman saw the force of this" }
+  - { from: wise_folks_trina, to: obj_wise_folks_smallest_cow, label: KEEPS_AS_SECURITY,
+      evidence: "I have kept the smallest" }
+  - { from: wise_folks_cattle_dealer, to: obj_wise_folks_three_cows, label: TAKES_TWO_OF,
+      evidence: "let the man go away with the cows" }
+  - { from: wise_folks_hans, to: wise_folks_trina, label: POSTPONES_BEATING_OF,
+      evidence: "If I succeed in doing so, you shall go scot-free" }
+
+  # False afterlife courier fraud
+  - { from: wise_folks_hans, to: loc_wise_folks_highway, label: WAITS_ON,
+      evidence: "went out into the great highways" }
+  - { from: wise_folks_hans, to: wise_folks_waggon_woman, label: TARGETS_AS_FOOL,
+      evidence: "That is certainly one of the kind I am in search of" }
+  - { from: wise_folks_hans, to: loc_wise_folks_heaven, label: CLAIMS_FALL_FROM,
+      evidence: "I have fallen down from heaven" }
+  - { from: wise_folks_waggon_woman, to: wise_folks_dead_husband, label: ASKS_NEWS_OF,
+      evidence: "my husband, who has been there these three years" }
+  - { from: wise_folks_hans, to: wise_folks_waggon_woman, label: LIES_ABOUT_DEAD_HUSBAND_TO,
+      evidence: "He keeps sheep" }
+  - { from: wise_folks_hans, to: loc_wise_folks_heaven, label: INVENTS_GATE_RULE_FOR,
+      evidence: "they are taken away from one at the gate" }
+  - { from: wise_folks_waggon_woman, to: obj_wise_folks_purse, label: FETCHES,
+      evidence: "drive home and fetch the purse" }
+  - { from: wise_folks_waggon_woman, to: wise_folks_hans, label: GIVES_PURSE_TO,
+      evidence: "with her own hands put it in his pocket" }
+  - { from: law_false_afterlife_courier_extracts_goods, to: wise_folks_hans, label: ENABLES_GAIN_FOR,
+      evidence: "I will send that to him" }
+
+  # Son and horse
+  - { from: wise_folks_waggon_woman, to: wise_folks_waggon_son, label: TELLS_HEAVEN_STORY_TO,
+      evidence: "She told him what unlooked-for things had befallen her" }
+  - { from: wise_folks_waggon_son, to: obj_wise_folks_horse, label: SADDLES,
+      evidence: "He saddled the horse" }
+  - { from: wise_folks_waggon_son, to: wise_folks_hans, label: ASKS_ABOUT_HEAVEN_MAN,
+      evidence: "Have you seen the man who has fallen down from Heaven?" }
+  - { from: wise_folks_hans, to: wise_folks_waggon_son, label: REDIRECTS_TOWARD_HILL,
+      evidence: "has gone up that hill" }
+  - { from: wise_folks_waggon_son, to: wise_folks_hans, label: LENDS_HORSE_TO,
+      evidence: "be so kind as to get on my horse" }
+  - { from: wise_folks_hans, to: obj_wise_folks_horse, label: RIDES_AWAY_WITH,
+      evidence: "mounted the horse and rode off in a quick trot" }
+  - { from: wise_folks_waggon_son, to: wise_folks_dead_husband, label: BELIEVES_HORSE_SENT_TO,
+      evidence: "sent his father the horse" }
+
+  # Return and comparison of folly
+  - { from: wise_folks_hans, to: loc_wise_folks_stable, label: PUTS_HORSE_IN,
+      evidence: "put the horse in the stable" }
+  - { from: wise_folks_hans, to: wise_folks_trina, label: SPARES_BY_FINDING_GREATER_FOOLS,
+      evidence: "this time you escape without a beating" }
+  - { from: wise_folks_hans, to: obj_wise_folks_purse, label: PROFITS_BY,
+      evidence: "a great purse full of money" }
+  - { from: wise_folks_hans, to: moral_trickster_wins, label: EXEMPLIFIES,
+      evidence: "It was a good stroke of business" }

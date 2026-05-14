@@ -1,0 +1,14 @@
+slug: jorinda-and-joringel
+khm: 69
+base:
+  book: pg5314-grimm-hunt
+edits:
+- id: 1
+  op: insert_after
+  from: pg2591-grimm-taylor
+  anchor: Jorinda was standing there, clasping him round the neck, and she was as beautiful as ever!
+  text: |+
+
+    Then he touched all the other birds with the flower, so that they all took their old forms again; and he took Jorinda home, where they were married, and lived happily together many years: and so did a good many other lads, whose maidens had been forced to sing in the old fairy’s cages by themselves, much longer than they liked.
+
+  label: §end restore Taylor's full closing passage (other birds restored + marriage + comic coda)

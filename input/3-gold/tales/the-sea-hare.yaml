@@ -1,0 +1,319 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-sea-hare
+khm: 191
+atu: "554"
+atu_name: The Grateful Animals
+canonical_source: ../../2-silver/canonical/the-sea-hare/canonical.txt
+title: The Sea-Hare
+
+entities:
+  characters:
+    sea_hare_princess:
+      name: The All-Seeing Princess
+      archetypes: [arc_proud_task_princess]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_extraordinary_body, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command, speech_testimony]
+      affects: [affect_pride, affect_anger]
+      traits: [haughty, marriage-refusing, kingdom-inspecting, twelve-windowed, impossible-search-setter, execution-ordering, anxious-when-blinded, finally-destiny-accepting]
+      evidence: |
+        There was once upon a time a princess
+
+    sea_hare_youngest_brother:
+      name: The Youngest Brother
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_animal_aid, agency_object_mediation]
+      existential_states: [state_hidden_identity, state_transformed]
+      transformations: [transform_animal_human]
+      speech_acts_performed: [speech_request, speech_bargain, speech_testimony]
+      affects: [affect_fear]
+      traits: [handsome, earnest-beggar, three-chance-negotiator, hunter, mercy-giver, animal-aided, sea-hare-transformed, secret-keeper, king]
+      evidence: |
+        Then the youngest came to her
+
+    sea_hare_eldest_brother:
+      name: The Eldest Brother
+      species: sp_human
+      agency_modes: [agency_cunning]
+      existential_states: [state_hidden_identity]
+      affects: [affect_fear]
+      traits: [first-suitor-brother, lime-pit-hider, discovered, beheaded]
+      evidence: |
+        The eldest believed he would be quite safe if he crept into a lime-pit
+
+    sea_hare_second_brother:
+      name: The Second Brother
+      species: sp_human
+      agency_modes: [agency_cunning]
+      existential_states: [state_hidden_identity]
+      affects: [affect_fear]
+      traits: [second-suitor-brother, cellar-hider, discovered, ninety-ninth-post-head]
+      evidence: |
+        The second crept into the cellar of the palace
+
+    sea_hare_raven:
+      name: The Raven
+      archetypes: [arc_animal_helper]
+      species: sp_bird
+      agency_modes: [agency_animal_aid, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_bargain, speech_testimony]
+      traits: [spared-bird, nest-owner, egg-hider, imperfect-helper, eleventh-window-found]
+      evidence: |
+        the bird cried, “Don’t shoot; I will make it worth thy while not.”
+
+    sea_hare_fish:
+      name: The Large Fish
+      archetypes: [arc_animal_helper]
+      species: sp_fish
+      agency_modes: [agency_animal_aid, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_bargain, speech_testimony]
+      traits: [spared-fish, lake-depth-dweller, stomach-hider, twelfth-window-found, killed]
+      evidence: |
+        the fish cried, “Don’t shoot, and I will make it worth thy while.”
+
+    sea_hare_fox:
+      name: The Lame Fox
+      archetypes: [arc_animal_helper]
+      species: sp_fox
+      agency_modes: [agency_animal_aid, agency_speech, agency_cunning, agency_object_mediation]
+      speech_acts_performed: [speech_request, speech_bargain, speech_command, speech_testimony]
+      traits: [lame, thorn-footed, spared-fox, spring-transformer, stall-keeper, animal-dealer, successful-helper]
+      evidence: |
+        met a fox which was lame
+
+  magic_objects:
+    obj_sea_hare_twelve_windows:
+      name: The Twelve Windows
+      object_kind: architecture
+      attributes:
+        function: progressive sight apparatus through which the princess sees above and under the earth
+        count: 12
+      evidence: |
+        had an apartment with twelve windows
+
+    obj_sea_hare_execution_posts:
+      name: The Head Posts
+      object_kind: relic
+      attributes:
+        function: visible record of failed suitors and death stakes
+        count_before_brothers: 97
+      evidence: |
+        Ninety-seven posts with the heads of dead men were already standing before the castle
+
+    obj_sea_hare_gun:
+      name: The Youngest Brother's Gun
+      object_kind: weapon
+      attributes:
+        function: threatened violence that produces the animal bargains
+      evidence: |
+        Then he seized his gun and went out hunting
+
+    obj_sea_hare_raven_egg:
+      name: The Raven's Egg
+      object_kind: creature_object
+      attributes:
+        function: first animal hiding place for the youth
+      evidence: |
+        fetched an egg out of his nest
+
+    obj_sea_hare_fish_stomach:
+      name: The Fish's Stomach
+      object_kind: creature_object
+      attributes:
+        function: second animal hiding place at the bottom of the lake
+      evidence: |
+        I will shut thee up in my stomach
+
+    obj_sea_hare_sea_hare_form:
+      name: The Small Sea-Hare Form
+      object_kind: creature_object
+      attributes:
+        species: sp_sea_hare
+        function: transformed market animal that hides beneath the princess's braids
+      evidence: |
+        was changed into a small sea-hare
+
+  locations:
+    loc_sea_hare_castle:
+      name: The Princess's Castle
+      instance_of: loc_castle
+      evidence: |
+        high under the battlements in her castle
+
+    loc_sea_hare_window_apartment:
+      name: The Twelve-Window Apartment
+      instance_of: loc_tower
+      evidence: |
+        had an apartment with twelve windows
+
+    loc_sea_hare_lime_pit:
+      name: The Lime-Pit
+      instance_of: loc_cave
+      evidence: |
+        crept into a lime-pit
+
+    loc_sea_hare_palace_cellar:
+      name: The Palace Cellar
+      instance_of: loc_cellar
+      evidence: |
+        the cellar of the palace
+
+    loc_sea_hare_forest:
+      name: The Forest
+      instance_of: loc_forest
+      evidence: |
+        He went into the forest to the raven
+
+    loc_sea_hare_lake:
+      name: The Lake
+      instance_of: loc_lake
+      evidence: |
+        came to a lake
+
+    loc_sea_hare_spring:
+      name: The Transforming Spring
+      instance_of: loc_brook
+      evidence: |
+        went with him to a spring
+
+    loc_sea_hare_marketplace:
+      name: The Town Market
+      instance_of: loc_marketplace
+      evidence: |
+        The merchant went into the town
+
+    loc_sea_hare_palace:
+      name: The Palace
+      instance_of: loc_castle
+      evidence: |
+        The youth went straight to the palace
+
+classifications:
+  world_laws:
+    - law_grateful_animals_hide_hero_from_omnivision
+    - law_rescued_animals_repay_kindness
+  moral_regimes:
+    - moral_kindness_rewarded
+    - moral_humbling_reform
+  agency_modes_dominant:
+    - agency_animal_aid
+    - agency_cunning
+    - agency_extraordinary_body
+    - agency_object_mediation
+  affects_driving:
+    - affect_pride
+    - affect_fear
+    - affect_anger
+  symbol_numbers:
+    - num_3
+    - num_12
+  threshold_types: []
+
+propp:
+  - { function: func_proud_princess_sets_task, order: 1, actor: sea_hare_princess,
+      scene: "the princess declares that only a man who can hide from her sight may be her husband" }
+  - { function: func_execution_stakes, order: 2, actor: sea_hare_princess,
+      victim: obj_sea_hare_execution_posts,
+      scene: "failed suitors are beheaded and displayed on posts before the castle" }
+  - { function: func_failed_suitor, order: 3, actor: sea_hare_eldest_brother,
+      victim: sea_hare_princess,
+      scene: "the eldest brother hides in a lime-pit and is seen from the first window" }
+  - { function: func_failed_suitor, order: 4, actor: sea_hare_second_brother,
+      victim: sea_hare_princess,
+      scene: "the second brother hides in the palace cellar and becomes the ninety-ninth head" }
+  - { function: func_three_chance_bargain, order: 5, actor: sea_hare_youngest_brother,
+      beneficiary: sea_hare_princess,
+      scene: "the youngest wins a day and two pardoned discoveries before the final attempt" }
+  - { function: func_animal_mercy, order: 6, actor: sea_hare_youngest_brother,
+      beneficiary: sea_hare_raven,
+      scene: "the youth spares the raven after it promises repayment" }
+  - { function: func_animal_mercy, order: 7, actor: sea_hare_youngest_brother,
+      beneficiary: sea_hare_fish,
+      scene: "the youth spares the fish after it promises repayment" }
+  - { function: func_animal_mercy, order: 8, actor: sea_hare_youngest_brother,
+      beneficiary: sea_hare_fox,
+      scene: "the youth draws the thorn from the fox's foot and lets it live" }
+  - { function: func_first_hiding_attempt, order: 9, actor: sea_hare_raven,
+      beneficiary: sea_hare_youngest_brother,
+      scene: "the raven hides him in an egg, but the eleventh window reveals him" }
+  - { function: func_second_hiding_attempt, order: 10, actor: sea_hare_fish,
+      beneficiary: sea_hare_youngest_brother,
+      scene: "the fish hides him in its stomach, but the twelfth window reveals him" }
+  - { function: func_successful_transformation, order: 11, actor: sea_hare_fox,
+      beneficiary: sea_hare_youngest_brother,
+      scene: "the fox transforms them both and sells the sea-hare to the princess" }
+  - { function: func_omnivision_defeated, order: 12, actor: obj_sea_hare_sea_hare_form,
+      scene: "the sea-hare hides beneath the princess's braids where her windows cannot find him" }
+  - { function: func_wedding_and_kingship, order: 13, actor: sea_hare_youngest_brother,
+      beneficiary: sea_hare_princess,
+      scene: "the princess accepts destiny, marries him, and he becomes king" }
+
+edges:
+  - { from: sea_hare_princess, to: obj_sea_hare_twelve_windows, label: SEES_THROUGH,
+      evidence: "had an apartment with twelve windows" }
+  - { from: obj_sea_hare_twelve_windows, to: sea_hare_princess, label: EXTENDS_SIGHT,
+      evidence: "she saw everything above the earth and under the earth" }
+  - { from: sea_hare_princess, to: affect_pride, label: MOTIVATED_BY_HAUGHTINESS,
+      evidence: "as she was haughty" }
+  - { from: sea_hare_princess, to: obj_sea_hare_execution_posts, label: DISPLAYS_FAILED_SUITORS,
+      evidence: "Ninety-seven posts with the heads of dead men were already standing before the castle" }
+  - { from: sea_hare_eldest_brother, to: loc_sea_hare_lime_pit, label: HIDES_IN,
+      evidence: "crept into a lime-pit" }
+  - { from: sea_hare_princess, to: sea_hare_eldest_brother, label: DISCOVERS_FROM_FIRST_WINDOW,
+      evidence: "she saw him from the first window" }
+  - { from: sea_hare_second_brother, to: loc_sea_hare_palace_cellar, label: HIDES_IN,
+      evidence: "crept into the cellar of the palace" }
+  - { from: sea_hare_second_brother, to: obj_sea_hare_execution_posts, label: PLACED_ON_NINETY_NINTH_POST,
+      evidence: "His head was placed on the nine and ninetieth post" }
+  - { from: sea_hare_youngest_brother, to: sea_hare_princess, label: REQUESTS_THREE_CHANCES,
+      evidence: "if he failed the third time, he would look on his life as over" }
+  - { from: sea_hare_youngest_brother, to: obj_sea_hare_gun, label: HUNTS_WITH,
+      evidence: "seized his gun and went out hunting" }
+  - { from: sea_hare_raven, to: sea_hare_youngest_brother, label: BARGAINS_FOR_LIFE,
+      evidence: "Don’t shoot; I will make it worth thy while not" }
+  - { from: sea_hare_fish, to: sea_hare_youngest_brother, label: BARGAINS_FOR_LIFE,
+      evidence: "Don’t shoot, and I will make it worth thy while" }
+  - { from: sea_hare_fox, to: sea_hare_youngest_brother, label: ASKS_THORN_REMOVAL,
+      evidence: "draw the thorn out of my foot for me" }
+  - { from: sea_hare_youngest_brother, to: sea_hare_fox, label: REMOVES_THORN,
+      evidence: "He did this" }
+  - { from: sea_hare_raven, to: obj_sea_hare_raven_egg, label: HIDES_HERO_IN_EGG,
+      evidence: "shut the youth inside it" }
+  - { from: sea_hare_princess, to: obj_sea_hare_raven_egg, label: FINDS_FROM_ELEVENTH_WINDOW,
+      evidence: "from the eleventh she saw him" }
+  - { from: sea_hare_fish, to: obj_sea_hare_fish_stomach, label: HIDES_HERO_IN_STOMACH,
+      evidence: "I will shut thee up in my stomach" }
+  - { from: sea_hare_princess, to: obj_sea_hare_fish_stomach, label: FINDS_FROM_TWELFTH_WINDOW,
+      evidence: "from the twelfth she saw him" }
+  - { from: sea_hare_fish, to: sea_hare_princess, label: KILLED_AFTER_DISCOVERY,
+      evidence: "ordered the fish to be caught and killed" }
+  - { from: sea_hare_youngest_brother, to: affect_fear, label: HAS_HEAVY_HEART,
+      evidence: "went with a heavy heart into the country" }
+  - { from: sea_hare_fox, to: loc_sea_hare_spring, label: LEADS_TO_SPRING,
+      evidence: "went with him to a spring" }
+  - { from: sea_hare_fox, to: state_transformed, label: BECOMES_STALL_KEEPER,
+      evidence: "came out as a stall-keeper in the market" }
+  - { from: sea_hare_youngest_brother, to: obj_sea_hare_sea_hare_form, label: TRANSFORMED_INTO,
+      evidence: "was changed into a small sea-hare" }
+  - { from: sea_hare_fox, to: loc_sea_hare_marketplace, label: DISPLAYS_SEA_HARE,
+      evidence: "showed the pretty little animal" }
+  - { from: sea_hare_princess, to: obj_sea_hare_sea_hare_form, label: BUYS,
+      evidence: "she bought it" }
+  - { from: sea_hare_fox, to: obj_sea_hare_sea_hare_form, label: COMMANDS_HAIR_HIDING,
+      evidence: "creep quickly under the braids of her hair" }
+  - { from: sea_hare_princess, to: obj_sea_hare_twelve_windows, label: FAILS_TO_FIND_THROUGH_ALL_WINDOWS,
+      evidence: "did not see him from the twelfth either" }
+  - { from: sea_hare_princess, to: affect_anger, label: SHATTERS_WINDOWS_IN_ANGER,
+      evidence: "full of anxiety and anger" }
+  - { from: obj_sea_hare_sea_hare_form, to: sea_hare_princess, label: HIDES_BENEATH_HAIR,
+      evidence: "felt the sea-hare beneath the braids of her hair" }
+  - { from: sea_hare_youngest_brother, to: sea_hare_fox, label: RESTORES_TRUE_FORMS_WITH,
+      evidence: "received back their true forms" }
+  - { from: sea_hare_youngest_brother, to: law_grateful_animals_hide_hero_from_omnivision, label: WINS_BY,
+      evidence: "He never told her where he had concealed himself for the third time" }
+  - { from: sea_hare_princess, to: sea_hare_youngest_brother, label: RESPECTS_SUPPOSED_SKILL,
+      evidence: "she had a great respect for him" }
+  - { from: sea_hare_youngest_brother, to: loc_sea_hare_palace, label: BECOMES_KING_AT,
+      evidence: "now he was king, and lord of all the kingdom" }

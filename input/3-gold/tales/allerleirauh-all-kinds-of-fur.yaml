@@ -1,0 +1,390 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: allerleirauh-all-kinds-of-fur
+khm: 65
+atu: 510B
+atu_name: All-Kinds-of-Fur / Donkeyskin
+canonical_source: ../../2-silver/canonical/allerleirauh-all-kinds-of-fur/canonical.txt
+title: Allerleirauh; All-Kinds-of-Fur
+
+
+entities:
+
+  characters:
+
+    allerleirauh_princess:
+      name: Allerleirauh
+      archetypes: [arc_oppressed_maiden]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_endurance, agency_domestic_labor, agency_object_mediation, agency_speech]
+      existential_states: [state_hidden_identity, state_disguised]
+      speech_acts_performed: [speech_command, speech_lie]
+      affects: [affect_fear, affect_shame, affect_grief]
+      traits: [golden-haired-princess, impossible-gift-requester, fugitive-daughter, fur-disguised, soot-blackened, kitchen-servant, festival-bride, token-sender, revealed-bride]
+      evidence: |
+        The daughter was still more shocked when she became aware of her
+        father’s resolution, but hoped to turn him from his design.
+
+    allerleirauh_dead_queen:
+      name: The Dead Golden-Haired Queen
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_maternal_love]
+      traits: [beautiful, golden-haired, deathbed-promise-maker, beauty-template]
+      evidence: |
+        If thou wishest to marry again after my death, take no one who
+        is not quite as beautiful as I am
+
+    allerleirauh_father_king:
+      name: Allerleirauh's Father King
+      archetypes: [arc_taboo_desiring_father]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_promise, speech_command]
+      affects: [affect_grief, affect_taboo_desire]
+      traits: [widowed, oath-bound, bride-searcher, daughter-desiring, taboo-marriage-insister, impossible-gift-provider]
+      evidence: |
+        I will marry my daughter, for she is the counterpart of my late
+        wife
+
+    allerleirauh_councillors:
+      name: The Shocked Councillors
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_prohibition]
+      affects: [affect_fear]
+      traits: [marriage-advisers, taboo-witnesses, ruin-warners]
+      evidence: |
+        God has forbidden a father to marry his daughter
+
+    allerleirauh_huntsmen:
+      name: The Second King's Huntsmen
+      species: sp_human
+      agency_modes: [agency_violence, agency_social_rank]
+      affects: [affect_curiosity]
+      traits: [forest-searchers, beast-misrecognizers, captors, kitchen-deliverers]
+      evidence: |
+        A wondrous beast is lying in the hollow tree
+
+    allerleirauh_second_king:
+      name: The Second King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_command]
+      affects: [affect_love_at_first_sight, affect_curiosity]
+      traits: [forest-owner, hunter, festival-dancer, soup-questioner, ring-strategist, bride-recognizer]
+      evidence: |
+        My eyes have never yet seen any one so beautiful!
+
+    allerleirauh_cook:
+      name: The Palace Cook
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_command]
+      affects: [affect_fear]
+      traits: [kitchen-supervisor, feast-watcher, soup-delegator, hair-threatener, reluctant-confessor]
+      evidence: |
+        Leave that alone till morning, and make me the soup for the King
+
+    allerleirauh_palace_court:
+      name: The Festival Court
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [festival-guests, beauty-witnesses, mistaken-princess-witnesses]
+      evidence: |
+        every one made way for her, for no one knew her
+
+  magic_objects:
+
+    obj_allerleirauh_celestial_dresses:
+      name: The Dresses of Sun, Moon, and Stars
+      instance_of: obj_celestial_dresses
+      object_kind: garment
+      attributes:
+        sequence: [sun, moon, stars]
+        initial_function: impossible bride-gift demand
+        later_function: festival visibility and recognition escalation
+      evidence: |
+        three dresses, one as golden as the sun, one as silvery as the
+        moon, and one as bright as the stars
+
+    obj_allerleirauh_fur_mantle:
+      name: The Mantle of All Kinds of Fur
+      instance_of: obj_fur_disguise_mantle
+      object_kind: garment
+      attributes:
+        material: one skin-piece from every animal in the kingdom
+        function: animal-like disguise and name-source
+      evidence: |
+        a mantle of a thousand different kinds of fur and hair joined
+        together
+
+    obj_allerleirauh_nutshell:
+      name: The Nutshell Holding the Dresses
+      object_kind: tool
+      attributes:
+        function: impossible compression of royal garments into portable flight storage
+      evidence: |
+        The three dresses of the sun, moon, and stars she put into a
+        nutshell
+
+    obj_allerleirauh_soot:
+      name: The Soot and Ashes
+      object_kind: material
+      attributes:
+        function: darkens face and hands, lowering royal appearance into kitchen anonymity
+      evidence: |
+        blackened her face and hands with soot
+
+    obj_allerleirauh_golden_ring:
+      name: The Golden Ring in the Soup
+      instance_of: obj_hidden_bride_token
+      object_kind: token
+      attributes:
+        sequence: first soup token
+        function: summons inquiry from the second king
+      evidence: |
+        put it in the bowl in which the soup was served
+
+    obj_allerleirauh_golden_spinning_wheel:
+      name: The Little Golden Spinning-Wheel
+      object_kind: token
+      attributes:
+        material_form: spinning-wheel
+        sequence: second soup token
+        function: repeats recognition inquiry through domestic-work symbol
+      evidence: |
+        fetched the little golden spinning-wheel, and put it in the bowl
+
+    obj_allerleirauh_golden_reel:
+      name: The Golden Reel in the Soup
+      instance_of: obj_hidden_bride_token
+      object_kind: token
+      attributes:
+        sequence: third soup token
+        function: final token before visual exposure
+      evidence: |
+        put her golden reel into it
+
+    obj_allerleirauh_bread_soup:
+      name: The King's Bread Soup
+      object_kind: food
+      attributes:
+        function: domestic carrier for hidden bride tokens
+      evidence: |
+        make the King the bread soup which he so much likes
+
+    obj_allerleirauh_second_king_ring:
+      name: The Ring Slipped onto Allerleirauh's Finger
+      object_kind: token
+      attributes:
+        function: counter-token placed by the second king to fix the festival woman's identity
+      evidence: |
+        he contrived, without her noticing it, to slip a golden ring on
+        her finger
+
+  locations:
+
+    loc_allerleirauh_father_kingdom:
+      name: The Father's Kingdom
+      instance_of: loc_castle
+      evidence: |
+        one of every kind of animal in your kingdom must give a piece
+        of his skin for it
+
+    loc_allerleirauh_forest:
+      name: The Great Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        walked the whole night until she reached a great forest
+
+    loc_allerleirauh_hollow_tree:
+      name: The Hollow Tree
+      instance_of: loc_tree
+      threshold_type: threshold_forest
+      evidence: |
+        she got into a hollow tree, and fell asleep
+
+    loc_allerleirauh_second_palace:
+      name: The Second King's Palace
+      instance_of: loc_castle
+      evidence: |
+        took her home to the royal palace
+
+    loc_allerleirauh_stair_closet:
+      name: The Closet Under the Stairs
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        a closet under the stairs, where no daylight entered
+
+    loc_allerleirauh_palace_kitchen:
+      name: The Palace Kitchen and Hearth
+      instance_of: loc_hearth
+      evidence: |
+        Then she was sent into the kitchen
+
+    loc_allerleirauh_festival_hall:
+      name: The Festival Hall
+      instance_of: loc_castle
+      evidence: |
+        she went up to the festival
+
+
+classifications:
+
+  world_laws:
+    - law_promise_binds_reality
+    - law_impossible_bride_gifts_delay_forced_marriage
+    - law_disguise_alters_social_reality
+    - law_kitchen_tokens_reveal_hidden_bride
+
+  moral_regimes:
+    - moral_prudential_retreat
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_endurance
+    - agency_domestic_labor
+    - agency_object_mediation
+    - agency_social_rank
+
+  affects_driving:
+    - affect_taboo_desire
+    - affect_fear
+    - affect_shame
+    - affect_love_at_first_sight
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: allerleirauh_dead_queen,
+      scene: "dying queen binds the king's remarriage to an equal golden-haired bride" }
+  - { function: func_absentation, order: 2, actor: allerleirauh_dead_queen,
+      scene: "queen dies and the king cannot be comforted" }
+  - { function: func_lack, order: 3, actor: allerleirauh_father_king,
+      scene: "messengers fail to find a bride matching the dead queen" }
+  - { function: func_villainy, order: 4, actor: allerleirauh_father_king,
+      scene: "father decides to marry his daughter as the queen's counterpart" }
+  - { function: func_interdiction, order: 5, actor: allerleirauh_councillors,
+      scene: "councillors forbid the father-daughter marriage as ruinous crime" }
+  - { function: func_difficult_task, order: 6, actor: allerleirauh_princess,
+      scene: "princess demands sun, moon, star dresses and a mantle of all furs to divert him" }
+  - { function: func_task_fulfilled, order: 7, actor: allerleirauh_father_king,
+      scene: "king procures the impossible garments and sets the wedding for tomorrow" }
+  - { function: func_departure, order: 8, actor: allerleirauh_princess,
+      scene: "princess packs treasures, dons fur and soot, and flees through the night" }
+  - { function: func_capture, order: 9, actor: allerleirauh_huntsmen,
+      scene: "huntsmen find the fur-covered girl in a hollow tree and take her to the palace" }
+  - { function: func_degradation, order: 10, actor: allerleirauh_princess,
+      scene: "Allerleirauh is placed under the stairs and made kitchen servant" }
+  - { function: func_first_appearance, order: 11, actor: allerleirauh_princess,
+      scene: "she appears at the feast in the sun dress, dances, vanishes, and sends a ring in soup" }
+  - { function: func_second_appearance, order: 12, actor: allerleirauh_princess,
+      scene: "she appears in the moon dress and sends the golden spinning-wheel in soup" }
+  - { function: func_third_appearance, order: 13, actor: allerleirauh_princess,
+      scene: "she appears in the star dress and the king slips a ring onto her finger" }
+  - { function: func_recognition, order: 14, actor: allerleirauh_second_king,
+      scene: "white finger, ring, star-dress, and golden hair expose the hidden bride" }
+  - { function: func_wedding, order: 15, actor: allerleirauh_princess,
+      scene: "the second king marries Allerleirauh and they remain together" }
+
+
+edges:
+
+  # Deathbed promise and taboo marriage threat
+  - { from: allerleirauh_dead_queen, to: allerleirauh_father_king, label: BINDS_BY_PROMISE,
+      evidence: "this thou must promise me." }
+  - { from: allerleirauh_father_king, to: allerleirauh_dead_queen, label: GRIEVES_FOR,
+      evidence: "For a long time the King could not be comforted" }
+  - { from: allerleirauh_father_king, to: allerleirauh_princess, label: DESIRES_TO_MARRY,
+      evidence: "I will marry my daughter" }
+  - { from: allerleirauh_councillors, to: allerleirauh_father_king, label: WARNS,
+      evidence: "God has forbidden a father to marry his daughter" }
+  - { from: allerleirauh_father_king, to: affect_taboo_desire, label: DRIVEN_BY,
+      evidence: "suddenly felt a violent love for her." }
+
+  # Impossible gifts and flight
+  - { from: allerleirauh_princess, to: obj_allerleirauh_celestial_dresses, label: DEMANDS,
+      evidence: "I must have three dresses" }
+  - { from: allerleirauh_princess, to: obj_allerleirauh_fur_mantle, label: DEMANDS,
+      evidence: "I wish for a mantle of a thousand different kinds of fur" }
+  - { from: obj_allerleirauh_celestial_dresses, to: law_impossible_bride_gifts_delay_forced_marriage, label: ACTIVATES,
+      evidence: "To get that will be quite impossible" }
+  - { from: allerleirauh_father_king, to: obj_allerleirauh_celestial_dresses, label: PROCURES,
+      evidence: "the cleverest maidens in his kingdom had to weave the three dresses" }
+  - { from: allerleirauh_father_king, to: obj_allerleirauh_fur_mantle, label: PROCURES,
+      evidence: "out of these was made a mantle of a thousand different kinds of fur." }
+  - { from: allerleirauh_father_king, to: allerleirauh_princess, label: SETS_WEDDING_FOR,
+      evidence: "The wedding shall be to-morrow." }
+  - { from: allerleirauh_princess, to: obj_allerleirauh_nutshell, label: HIDES_DRESSES_IN,
+      evidence: "put into a nutshell" }
+  - { from: allerleirauh_princess, to: obj_allerleirauh_fur_mantle, label: DISGUISES_WITH,
+      evidence: "put on her mantle of all kinds of fur" }
+  - { from: allerleirauh_princess, to: obj_allerleirauh_soot, label: DISGUISES_WITH,
+      evidence: "blackened her face and hands with soot." }
+  - { from: allerleirauh_princess, to: loc_allerleirauh_forest, label: FLEES_TO,
+      evidence: "walked the whole night until she reached a great forest." }
+  - { from: allerleirauh_princess, to: loc_allerleirauh_hollow_tree, label: HIDES_IN,
+      evidence: "she got into a hollow tree, and fell asleep." }
+
+  # Forest capture and kitchen descent
+  - { from: allerleirauh_huntsmen, to: allerleirauh_princess, label: MISRECOGNIZES_AS_BEAST,
+      evidence: "A wondrous beast is lying in the hollow tree" }
+  - { from: allerleirauh_huntsmen, to: allerleirauh_princess, label: CAPTURES,
+      evidence: "When the huntsmen laid hold of the maiden" }
+  - { from: allerleirauh_princess, to: allerleirauh_huntsmen, label: ASKS_PITY_FROM,
+      evidence: "have pity on me, and take me with you." }
+  - { from: allerleirauh_huntsmen, to: loc_allerleirauh_stair_closet, label: ASSIGNS_LODGING_TO,
+      evidence: "Hairy animal, there canst thou live and sleep." }
+  - { from: allerleirauh_princess, to: loc_allerleirauh_palace_kitchen, label: SERVES_IN,
+      evidence: "Then she was sent into the kitchen" }
+  - { from: obj_allerleirauh_fur_mantle, to: law_disguise_alters_social_reality, label: ACTIVATES,
+      evidence: "Allerleirauh, thou wilt be useful in the kitchen" }
+
+  # Festival appearances and soup tokens
+  - { from: allerleirauh_princess, to: obj_allerleirauh_celestial_dresses, label: WEARS,
+      attributes: { dress: sun },
+      evidence: "took out her dress which shone like the sun" }
+  - { from: allerleirauh_second_king, to: allerleirauh_princess, label: DANCES_WITH,
+      evidence: "The King came to meet her, gave his hand to her, and danced with her" }
+  - { from: allerleirauh_princess, to: obj_allerleirauh_golden_ring, label: HIDES_IN_FOOD,
+      evidence: "put it in the bowl in which the soup was served." }
+  - { from: obj_allerleirauh_golden_ring, to: allerleirauh_second_king, label: SUMMONS_INQUIRY_FROM,
+      evidence: "he saw a golden ring lying" }
+  - { from: allerleirauh_princess, to: obj_allerleirauh_celestial_dresses, label: WEARS,
+      attributes: { dress: moon },
+      evidence: "the dress which was as silvery as the moon" }
+  - { from: allerleirauh_princess, to: obj_allerleirauh_golden_spinning_wheel, label: HIDES_IN_FOOD,
+      evidence: "put it in the bowl so that the soup covered it." }
+  - { from: allerleirauh_princess, to: obj_allerleirauh_celestial_dresses, label: WEARS,
+      attributes: { dress: stars },
+      evidence: "she put on the dress which shone like the stars" }
+  - { from: allerleirauh_second_king, to: obj_allerleirauh_second_king_ring, label: PLACES_ON,
+      evidence: "to slip a golden ring on her finger" }
+  - { from: allerleirauh_princess, to: obj_allerleirauh_golden_reel, label: HIDES_IN_FOOD,
+      evidence: "put her golden reel into it." }
+  - { from: obj_allerleirauh_bread_soup, to: law_kitchen_tokens_reveal_hidden_bride, label: ACTIVATES,
+      evidence: "make the King the bread soup which he so much likes" }
+
+  # Recognition and marriage
+  - { from: allerleirauh_second_king, to: obj_allerleirauh_second_king_ring, label: RECOGNIZES,
+      evidence: "saw the ring which he had put on it during the dance." }
+  - { from: allerleirauh_second_king, to: obj_allerleirauh_fur_mantle, label: TEARS_OFF,
+      evidence: "The King clutched the mantle and tore it off." }
+  - { from: obj_allerleirauh_fur_mantle, to: allerleirauh_princess, label: REVEALS,
+      evidence: "Then her golden hair shone forth" }
+  - { from: allerleirauh_second_king, to: allerleirauh_princess, label: RECOGNIZES_AS_BRIDE,
+      evidence: "Thou art my dear bride" }
+  - { from: allerleirauh_second_king, to: allerleirauh_princess, label: MARRIES,
+      evidence: "Thereupon the marriage was solemnized" }

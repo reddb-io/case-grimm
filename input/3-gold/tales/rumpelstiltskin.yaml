@@ -1,0 +1,431 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: rumpelstiltskin
+khm: 55
+atu: '500'
+atu_name: The Name of the Supernatural Helper / Rumpelstiltskin
+canonical_source: ../../2-silver/canonical/rumpelstiltskin/canonical.txt
+title: Rumpelstiltskin
+
+
+entities:
+
+  characters:
+
+    rumpelstiltskin_miller:
+      name: The Poor Miller Who Boasts
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_lie, speech_boast]
+      affects: [affect_pride]
+      traits: [poor, status-seeking, daughter-boasting, impossible-task-trigger]
+      evidence: |
+        in order to make himself appear important he said to him
+
+    rumpelstiltskin_millers_daughter:
+      name: The Miller's Daughter / Young Queen
+      archetypes: [arc_oppressed_maiden]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_domestic_labor, agency_social_rank]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_bargain, speech_promise, speech_name_guess]
+      affects: [affect_fear, affect_grief]
+      traits: [beautiful, falsely-advertised-spinner, death-threatened, bargain-making, queen, mother, name-quester, child-keeper]
+      evidence: |
+        I have to spin straw into gold, and I do not know how to do it.
+
+    rumpelstiltskin_king:
+      name: The Greedy King
+      archetypes: [arc_greedy_one]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command]
+      affects: [affect_greed]
+      traits: [boast-believer, palace-tester, death-threatener, gold-delighted, greed-escalating, wealth-marrier]
+      evidence: |
+        his heart became only more greedy.
+
+    rumpelstiltskin_little_man:
+      name: Rumpelstiltskin
+      archetypes: [arc_grotesque_task_helper]
+      being_type: being_dwarf
+      agency_modes: [agency_domestic_labor, agency_speech, agency_cunning]
+      speech_acts_performed: [speech_bargain]
+      affects: [affect_anger]
+      traits: [little-man, straw-gold-spinner, necklace-taker, ring-taker, firstborn-claimer, secret-name-singer, self-destroying]
+      evidence: |
+        in came a little man
+
+    rumpelstiltskin_messenger:
+      name: The Name-Finding Messenger
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      speech_acts_performed: [speech_testimony]
+      traits: [country-searcher, mountain-witness, name-overhearer, queen-informer]
+      evidence: |
+        the messenger came back again
+
+    rumpelstiltskin_child:
+      name: The Queen's First Child
+      species: sp_human
+      existential_states: [state_bound_by_promise]
+      traits: [beautiful-child, promised-firstborn, contested-living-treasure, retained-by-name-guess]
+      evidence: |
+        A year after, she had a beautiful child
+
+  magic_objects:
+
+    obj_rumpelstiltskin_straw_rooms:
+      name: The Rooms Full of Straw
+      object_kind: material
+      attributes:
+        sequence: 3
+        function: impossible labour material that the king escalates across three nights
+      evidence: |
+        a room which was quite full of straw
+
+    obj_rumpelstiltskin_spinning_wheel_reel:
+      name: The Spinning-wheel and Reel
+      instance_of: obj_spinning_wheel
+      object_kind: tool
+      attributes:
+        function: textile apparatus through which Rumpelstiltskin converts straw into gold
+      evidence: |
+        gave her a spinning-wheel and a reel
+
+    obj_rumpelstiltskin_necklace:
+      name: The Miller's Daughter's Necklace
+      object_kind: treasure
+      attributes:
+        function: first payment for the little man's spinning
+      evidence: |
+        My necklace
+
+    obj_rumpelstiltskin_ring:
+      name: The Ring on Her Finger
+      object_kind: treasure
+      attributes:
+        function: second payment for the little man's spinning
+      evidence: |
+        The ring on my finger
+
+    obj_rumpelstiltskin_gold_reels:
+      name: The Reels Full of Gold
+      object_kind: treasure
+      attributes:
+        function: transformed output that satisfies the king's greed and advances the marriage
+      evidence: |
+        all the reels were full of gold.
+
+    obj_rumpelstiltskin_firstborn_promise:
+      name: The Firstborn-Child Promise
+      object_kind: token
+      attributes:
+        function: third payment, activated when the miller's daughter becomes queen and bears a child
+      evidence: |
+        promise me, if you should become Queen, your first child.
+
+  locations:
+
+    loc_rumpelstiltskin_palace:
+      name: The King's Palace
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        bring her to-morrow to my palace
+
+    loc_rumpelstiltskin_locked_straw_room:
+      name: The Locked Straw-Room
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        he himself locked up the room, and left her in it alone.
+
+    loc_rumpelstiltskin_queen_room:
+      name: The Queen's Child-Room
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        suddenly he came into her room
+
+    loc_rumpelstiltskin_country:
+      name: The Name-Search Country
+      evidence: |
+        sent a messenger over the country to inquire, far and wide
+
+    loc_rumpelstiltskin_mountain_forest_edge:
+      name: The High Mountain at the End of the Forest
+      instance_of: loc_mountain
+      threshold_type: threshold_forest
+      evidence: |
+        a high mountain at the end of the forest
+
+    loc_rumpelstiltskin_little_house_fire:
+      name: The Little House with the Fire
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        there I saw a little house, and before the house a fire was
+        burning
+
+
+classifications:
+
+  world_laws:
+    - law_false_boast_imposes_impossible_task
+    - law_promise_binds_reality
+    - law_secret_name_breaks_supernatural_claim
+
+  moral_regimes:
+    - moral_restorative
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_domestic_labor
+    - agency_social_rank
+    - agency_cunning
+    - agency_endurance
+
+  affects_driving:
+    - affect_greed
+    - affect_fear
+    - affect_grief
+    - affect_anger
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_doorway
+    - threshold_forest
+
+
+propp:
+
+  - function: func_false_claim
+    order: 1
+    actor: rumpelstiltskin_miller
+    victim: rumpelstiltskin_millers_daughter
+    scene: "miller boasts that his daughter can spin straw into gold"
+    evidence: "I have a daughter who can spin straw into gold."
+
+  - function: func_villainy
+    order: 2
+    actor: rumpelstiltskin_king
+    victim: rumpelstiltskin_millers_daughter
+    scene: "king locks her in with straw and threatens death by morning"
+    evidence: "if by to-morrow morning early you have not spun this straw into gold during the night, you must die."
+
+  - function: func_donor_sequence
+    order: 3
+    actor: rumpelstiltskin_little_man
+    beneficiary: rumpelstiltskin_millers_daughter
+    scene: "little man spins the first straw into gold for the necklace"
+    evidence: "What will you give me"
+
+  - function: func_repetition
+    order: 4
+    actor: rumpelstiltskin_king
+    victim: rumpelstiltskin_millers_daughter
+    scene: "king escalates to a larger room and a second night"
+    evidence: "another room full of straw, which was much larger"
+
+  - function: func_bargain
+    order: 5
+    actor: rumpelstiltskin_little_man
+    beneficiary: rumpelstiltskin_millers_daughter
+    scene: "second spinning is paid by the ring"
+    evidence: "The little man took the ring"
+
+  - function: func_difficult_task
+    order: 6
+    actor: rumpelstiltskin_king
+    victim: rumpelstiltskin_millers_daughter
+    scene: "third room adds the promise of royal marriage if she succeeds"
+    evidence: "if you succeed, you shall be my wife."
+
+  - function: func_promise
+    order: 7
+    actor: rumpelstiltskin_millers_daughter
+    victim: rumpelstiltskin_child
+    scene: "girl promises her future first child as third payment"
+    evidence: "she promised the manikin what he wanted"
+
+  - function: func_wedding
+    order: 8
+    actor: rumpelstiltskin_king
+    beneficiary: rumpelstiltskin_millers_daughter
+    scene: "king marries the miller's daughter after the gold is made"
+    evidence: "he took her in marriage"
+
+  - function: func_claim
+    order: 9
+    actor: rumpelstiltskin_little_man
+    victim: rumpelstiltskin_child
+    scene: "manikin returns after the child is born and claims the promised living thing"
+    evidence: "Now give me what you promised."
+
+  - function: func_difficult_task
+    order: 10
+    actor: rumpelstiltskin_little_man
+    beneficiary: rumpelstiltskin_millers_daughter
+    scene: "queen gets three days to find out his name"
+    evidence: "if by that time you find out my name, then shall you keep your child."
+
+  - function: func_reconnaissance
+    order: 11
+    actor: rumpelstiltskin_messenger
+    beneficiary: rumpelstiltskin_millers_daughter
+    scene: "messenger hears the little man singing his secret name"
+    evidence: "That Rumpelstiltskin I am styled."
+
+  - function: func_victory
+    order: 12
+    actor: rumpelstiltskin_millers_daughter
+    victim: rumpelstiltskin_little_man
+    scene: "queen speaks the name and breaks the claim"
+    evidence: "Perhaps your name is Rumpelstiltskin?"
+
+  - function: func_punishment
+    order: 13
+    actor: rumpelstiltskin_little_man
+    victim: rumpelstiltskin_little_man
+    scene: "little man tears himself in two in rage"
+    evidence: "he tore himself in two."
+
+
+edges:
+
+  # False boast and impossible labour
+  - from: rumpelstiltskin_miller
+    to: rumpelstiltskin_king
+    label: BOASTS_TO
+    evidence: "I have a daughter who can spin straw into gold."
+
+  - from: rumpelstiltskin_miller
+    to: rumpelstiltskin_millers_daughter
+    label: FALSELY_BOASTS_ABOUT
+    evidence: "in order to make himself appear important"
+
+  - from: rumpelstiltskin_king
+    to: rumpelstiltskin_millers_daughter
+    label: TESTS
+    evidence: "I will try what she can do."
+
+  - from: rumpelstiltskin_king
+    to: loc_rumpelstiltskin_locked_straw_room
+    label: LOCKS_IN
+    evidence: "he himself locked up the room"
+
+  - from: rumpelstiltskin_king
+    to: rumpelstiltskin_millers_daughter
+    label: THREATENS_DEATH
+    evidence: "you must die."
+
+  - from: obj_rumpelstiltskin_straw_rooms
+    to: obj_rumpelstiltskin_gold_reels
+    label: TRANSFORMS_INTO
+    evidence: "all the straw was spun, and all the reels were full of gold."
+
+  # Three payments
+  - from: rumpelstiltskin_little_man
+    to: rumpelstiltskin_millers_daughter
+    label: BARGAINS_WITH
+    evidence: "What will you give me"
+
+  - from: rumpelstiltskin_millers_daughter
+    to: obj_rumpelstiltskin_necklace
+    label: PAYS_WITH
+    evidence: "My necklace"
+
+  - from: rumpelstiltskin_millers_daughter
+    to: obj_rumpelstiltskin_ring
+    label: PAYS_WITH
+    evidence: "The ring on my finger"
+
+  - from: rumpelstiltskin_millers_daughter
+    to: obj_rumpelstiltskin_firstborn_promise
+    label: PROMISES
+    evidence: "promise me, if you should become Queen, your first child."
+
+  - from: obj_rumpelstiltskin_firstborn_promise
+    to: rumpelstiltskin_child
+    label: CLAIMS
+    evidence: "Now give me what you promised."
+
+  - from: rumpelstiltskin_little_man
+    to: obj_rumpelstiltskin_spinning_wheel_reel
+    label: USES
+    evidence: "seated himself in front of the wheel"
+
+  - from: rumpelstiltskin_little_man
+    to: obj_rumpelstiltskin_gold_reels
+    label: PRODUCES
+    evidence: "by morning had spun all the straw into glittering gold."
+
+  - from: rumpelstiltskin_king
+    to: obj_rumpelstiltskin_gold_reels
+    label: DESIRES
+    evidence: "still he had not gold enough"
+
+  - from: rumpelstiltskin_king
+    to: rumpelstiltskin_millers_daughter
+    label: MARRIES
+    evidence: "he took her in marriage"
+
+  # Child-claim and name task
+  - from: rumpelstiltskin_millers_daughter
+    to: rumpelstiltskin_child
+    label: HAS_CHILD
+    evidence: "she had a beautiful child"
+
+  - from: rumpelstiltskin_little_man
+    to: rumpelstiltskin_child
+    label: CLAIMS
+    evidence: "something that is living is dearer to me"
+
+  - from: rumpelstiltskin_little_man
+    to: rumpelstiltskin_millers_daughter
+    label: OFFERS_NAME_TEST
+    evidence: "if by that time you find out my name"
+
+  - from: rumpelstiltskin_millers_daughter
+    to: rumpelstiltskin_messenger
+    label: SENDS
+    evidence: "she sent a messenger over the country"
+
+  - from: rumpelstiltskin_messenger
+    to: loc_rumpelstiltskin_mountain_forest_edge
+    label: TRAVELS_TO
+    evidence: "a high mountain at the end of the forest"
+
+  - from: rumpelstiltskin_messenger
+    to: rumpelstiltskin_little_man
+    label: OVERHEARS
+    evidence: "That Rumpelstiltskin I am styled."
+
+  - from: rumpelstiltskin_little_man
+    to: loc_rumpelstiltskin_little_house_fire
+    label: DANCES_AT
+    evidence: "before the house a fire was burning"
+
+  - from: rumpelstiltskin_messenger
+    to: rumpelstiltskin_millers_daughter
+    label: REVEALS_NAME_TO
+    evidence: "That Rumpelstiltskin I am styled."
+
+  - from: rumpelstiltskin_millers_daughter
+    to: rumpelstiltskin_little_man
+    label: NAMES
+    evidence: "Perhaps your name is Rumpelstiltskin?"
+
+  - from: rumpelstiltskin_millers_daughter
+    to: rumpelstiltskin_child
+    label: KEEPS
+    evidence: "then shall you keep your child."
+
+  - from: rumpelstiltskin_little_man
+    to: rumpelstiltskin_little_man
+    label: DESTROYS_SELF
+    evidence: "he tore himself in two."

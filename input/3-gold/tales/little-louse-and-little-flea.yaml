@@ -1,0 +1,241 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: little-louse-and-little-flea
+khm: 30
+atu: '2022'
+atu_name: Little Louse and Little Flea
+canonical_source: ../../2-silver/canonical/little-louse-and-little-flea/canonical.txt
+title: Little Louse and Little Flea
+
+
+entities:
+
+  characters:
+
+    louse_flea_louse:
+      name: The Little Louse
+      species: sp_insect
+      agency_modes: [agency_domestic_labor]
+      traits: [beer-brewer, eggshell-cook, burned-self, drowning-victim]
+      evidence: |
+        "Then the little louse fell in and burnt herself."
+
+    louse_flea_flea:
+      name: The Little Flea
+      species: sp_insect
+      agency_modes: [agency_speech]
+      affects: [affect_grief, affect_fear]
+      traits: [housemate, screamer, first-lamenter, drowning-victim]
+      evidence: |
+        "On this the little flea began to scream loudly."
+
+    louse_flea_room_door:
+      name: The Little Room-Door
+      being_type: being_animated_object
+      agency_modes: [agency_speech]
+      affects: [affect_grief]
+      traits: [questioner, creaker, lament-repeater, drowning-victim]
+      evidence: |
+        "Then said the little room-door, 'Little flea, why art thou
+        screaming?'"
+
+    louse_flea_broom:
+      name: The Little Broom
+      being_type: being_animated_object
+      agency_modes: [agency_speech, agency_domestic_labor]
+      affects: [affect_grief]
+      traits: [corner-dweller, frantic-sweeper, lament-repeater, drowning-victim]
+      evidence: |
+        "So the little broom began to sweep frantically."
+
+    louse_flea_cart:
+      name: The Little Cart
+      being_type: being_animated_object
+      agency_modes: [agency_speech, agency_endurance]
+      affects: [affect_grief]
+      traits: [passing-cart, wild-runner, lament-repeater, drowning-victim]
+      evidence: |
+        "Then I will run, and began to run wildly."
+
+    louse_flea_ash_heap:
+      name: The Little Ash-Heap
+      being_type: being_animated_object
+      agency_modes: [agency_speech, agency_violence]
+      affects: [affect_grief]
+      traits: [roadside-ash, furious-burner, clear-flame-maker, drowning-victim]
+      evidence: |
+        "The ash-heap said, 'Then I will burn furiously,' and began to
+        burn in clear flames."
+
+    louse_flea_tree:
+      name: The Little Tree
+      agency_modes: [agency_speech, agency_violence]
+      affects: [affect_grief]
+      traits: [near-ash-heap, self-shaker, leaf-loser, drowning-victim]
+      evidence: |
+        "began to shake herself so that all her leaves fell off"
+
+    louse_flea_girl:
+      name: The Girl with the Water-Pitcher
+      species: sp_human
+      agency_modes: [agency_speech, agency_violence, agency_domestic_labor]
+      affects: [affect_grief]
+      traits: [water-carrier, tree-witness, pitcher-breaker, drowning-victim]
+      evidence: |
+        "a girl who came up with her water-pitcher saw that"
+
+    louse_flea_spring:
+      name: The Little Spring
+      agency_modes: [agency_speech, agency_violence]
+      affects: [affect_grief]
+      traits: [water-source, final-questioner, violent-flow-maker, universal-drowner]
+      evidence: |
+        "then I will begin to flow, and began to flow violently."
+
+  magic_objects:
+
+    obj_louse_flea_eggshell:
+      name: The Egg-Shell Beer Vessel
+      object_kind: material
+      attributes:
+        function: tiny brewing vessel in which the louse burns herself
+      evidence: |
+        "were brewing beer in an egg-shell."
+
+    obj_louse_flea_water_pitcher:
+      name: The Little Water-Pitcher
+      object_kind: tool
+      attributes:
+        function: broken by the girl in the lament cascade
+      evidence: |
+        "Then I will break my little water-pitcher"
+
+  locations:
+
+    loc_louse_flea_house:
+      name: The Shared Tiny House
+      instance_of: loc_house
+      evidence: |
+        "A louse and a flea kept house together"
+
+    loc_louse_flea_corner:
+      name: The Corner with the Broom
+      instance_of: loc_house
+      evidence: |
+        "a little broom in the corner"
+
+    loc_louse_flea_ash_heap_place:
+      name: The Place of the Ash-Heap
+      instance_of: loc_hearth
+      evidence: |
+        "the ash-heap by which it ran"
+
+    loc_louse_flea_spring:
+      name: The Little Spring
+      instance_of: loc_brook
+      evidence: |
+        "the little spring from which ran the water"
+
+
+classifications:
+
+  world_laws:
+    - law_contagious_lament_cascades
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_violence
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_grief
+    - affect_fear
+
+  symbol_numbers: []
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: louse_flea_louse,
+      scene: "louse and flea keep house together and brew beer in an egg-shell" }
+  - { function: func_villainy, order: 2, actor: louse_flea_louse,
+      scene: "louse falls in and burns herself" }
+  - { function: func_mediation, order: 3, actor: louse_flea_flea,
+      scene: "flea screams and tells the door that the louse has burned herself" }
+  - { function: func_chain_reaction, order: 4, actor: louse_flea_room_door,
+      scene: "door creaks after receiving the lament" }
+  - { function: func_chain_reaction, order: 5, actor: louse_flea_broom,
+      scene: "broom sweeps frantically after the door repeats the growing lament" }
+  - { function: func_chain_reaction, order: 6, actor: louse_flea_cart,
+      scene: "cart runs wildly after hearing louse, flea, door, and broom" }
+  - { function: func_chain_reaction, order: 7, actor: louse_flea_ash_heap,
+      scene: "ash-heap burns furiously after hearing the accumulated chain" }
+  - { function: func_chain_reaction, order: 8, actor: louse_flea_tree,
+      scene: "tree shakes itself until all leaves fall off" }
+  - { function: func_chain_reaction, order: 9, actor: louse_flea_girl,
+      scene: "girl breaks her water-pitcher after hearing the lament list" }
+  - { function: func_punishment, order: 10, actor: louse_flea_spring,
+      scene: "spring flows violently and drowns every participant together" }
+
+
+edges:
+
+  # Initial accident and first lament
+  - { from: louse_flea_louse, to: obj_louse_flea_eggshell, label: BREWS_IN,
+      evidence: "were brewing beer in an egg-shell." }
+  - { from: louse_flea_louse, to: obj_louse_flea_eggshell, label: FALLS_INTO,
+      evidence: "Then the little louse fell in and burnt herself." }
+  - { from: louse_flea_flea, to: louse_flea_louse, label: LAMENTS,
+      evidence: "Because the louse has burnt herself." }
+  - { from: louse_flea_room_door, to: louse_flea_flea, label: ASKS_WHY,
+      evidence: "Little flea, why art thou screaming?" }
+  - { from: louse_flea_room_door, to: louse_flea_flea, label: REPEATS_LAMENT_OF,
+      evidence: "The little louse has burnt herself, The little flea is weeping." }
+
+  # Cumulative chain
+  - { from: louse_flea_broom, to: louse_flea_room_door, label: ASKS_WHY,
+      evidence: "Why art thou creaking, little door?" }
+  - { from: louse_flea_broom, to: louse_flea_room_door, label: JOINS_LAMENT_AFTER,
+      evidence: "So the little broom began to sweep frantically." }
+  - { from: louse_flea_cart, to: louse_flea_broom, label: ASKS_WHY,
+      evidence: "Why art thou sweeping, little broom?" }
+  - { from: louse_flea_cart, to: louse_flea_broom, label: JOINS_LAMENT_AFTER,
+      evidence: "Then I will run, and began to run wildly." }
+  - { from: louse_flea_ash_heap, to: louse_flea_cart, label: ASKS_WHY,
+      evidence: "Why art thou running so, little cart?" }
+  - { from: louse_flea_ash_heap, to: louse_flea_cart, label: JOINS_LAMENT_AFTER,
+      evidence: "Then I will burn furiously" }
+  - { from: louse_flea_tree, to: louse_flea_ash_heap, label: ASKS_WHY,
+      evidence: "Ash-heap, why art thou burning?" }
+  - { from: louse_flea_tree, to: louse_flea_ash_heap, label: JOINS_LAMENT_AFTER,
+      evidence: "Then I will shake myself" }
+  - { from: louse_flea_girl, to: louse_flea_tree, label: ASKS_WHY,
+      evidence: "Little tree, why art thou shaking thyself?" }
+  - { from: louse_flea_girl, to: obj_louse_flea_water_pitcher, label: BREAKS,
+      evidence: "Then I will break my little water-pitcher" }
+  - { from: louse_flea_spring, to: louse_flea_girl, label: ASKS_WHY,
+      evidence: "Girl, why art thou breaking thy water-jug?" }
+  - { from: louse_flea_spring, to: law_contagious_lament_cascades, label: COMPLETES,
+      evidence: "then I will begin to flow" }
+
+  # Final drowning
+  - { from: louse_flea_spring, to: louse_flea_girl, label: DROWNS,
+      evidence: "And in the water everything was drowned, the girl" }
+  - { from: louse_flea_spring, to: louse_flea_tree, label: DROWNS,
+      evidence: "the little tree" }
+  - { from: louse_flea_spring, to: louse_flea_ash_heap, label: DROWNS,
+      evidence: "the little ash-heap" }
+  - { from: louse_flea_spring, to: louse_flea_cart, label: DROWNS,
+      evidence: "the little cart" }
+  - { from: louse_flea_spring, to: louse_flea_broom, label: DROWNS,
+      evidence: "the broom" }
+  - { from: louse_flea_spring, to: louse_flea_room_door, label: DROWNS,
+      evidence: "the little door" }
+  - { from: louse_flea_spring, to: louse_flea_flea, label: DROWNS,
+      evidence: "the little flea" }
+  - { from: louse_flea_spring, to: louse_flea_louse, label: DROWNS,
+      evidence: "the little louse, all together." }

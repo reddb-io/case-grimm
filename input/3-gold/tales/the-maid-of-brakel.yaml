@@ -1,0 +1,170 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-maid-of-brakel
+khm: 139
+atu: '1476'
+atu_name: The Maid of Brakel
+canonical_source: ../../2-silver/canonical/the-maid-of-brakel/canonical.txt
+title: The Maid of Brakel
+
+
+entities:
+
+  characters:
+
+    brakel_maid:
+      name: The Maid of Brakel
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_prayer, speech_command]
+      affects: [affect_longing, affect_anger]
+      traits: [husband-seeking, chapel-praying, hidden-voice-mishearer, child-mary-rebuker]
+      evidence: |
+        A girl from Brakel
+
+    brakel_clerk:
+      name: The Clerk behind the Altar
+      archetypes: [arc_hypocritical_cleric]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning]
+      speech_acts_performed: [speech_prohibition]
+      traits: [hidden-listener, gruff-voice-speaker, prayer-interrupter]
+      evidence: |
+        The clerk, however, was standing behind the altar
+
+    brakel_desired_man:
+      name: The Golden-Haired Man by Suttmer Gate
+      species: sp_human
+      traits: [desired-husband, golden-haired, suttmer-gate-dweller]
+      evidence: |
+        His hair it is golden
+
+  magic_objects:
+
+    obj_brakel_saint_anne_image:
+      name: The Saint Anne Image
+      object_kind: relic
+      attributes:
+        represented_figure: Saint Anne
+        function: devotional addressee for the maid's husband-prayer
+      evidence: |
+        holy Saint Anne
+
+    obj_brakel_child_mary_image:
+      name: The Child Mary Image
+      object_kind: relic
+      attributes:
+        represented_figure: child Mary
+        function: wrongly treated as the source of the clerk's prohibition
+      evidence: |
+        the child Mary who stood by her mother Anne
+
+  locations:
+
+    loc_brakel:
+      name: Brakel
+      instance_of: loc_village
+      evidence: |
+        A girl from Brakel
+
+    loc_brakel_st_annes_chapel:
+      name: St Anne's Chapel at the Hinnenberg
+      instance_of: loc_church
+      evidence: |
+        at the foot of the Hinnenberg
+
+    loc_brakel_altar:
+      name: The Altar Hiding Place
+      instance_of: loc_church
+      evidence: |
+        standing behind the altar
+
+    loc_brakel_suttmer_gate:
+      name: Suttmer Gate
+      instance_of: loc_gate
+      evidence: |
+        By Suttmer gate does he dwell
+
+
+classifications:
+
+  world_laws:
+    - law_hidden_clerk_voice_misattributed_to_sacred_image
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+
+  affects_driving:
+    - affect_longing
+    - affect_anger
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_initial_situation
+    order: 1
+    actor: brakel_maid
+    scene: "the maid goes to Saint Anne's Chapel because she wants a husband"
+    evidence: "she wanted to have a husband"
+
+  - function: func_prayer_request
+    order: 2
+    actor: brakel_maid
+    beneficiary: brakel_desired_man
+    scene: "believing herself alone, she sings a prayer asking Saint Anne to help her to the golden-haired man by Suttmer gate"
+    evidence: "Help me soon to a man"
+
+  - function: func_hidden_interruption
+    order: 3
+    actor: brakel_clerk
+    victim: brakel_maid
+    scene: "the clerk behind the altar hears the prayer and replies in a gruff forbidding voice"
+    evidence: "Thou shalt not have him"
+
+  - function: func_misattribution
+    order: 4
+    actor: brakel_maid
+    victim: obj_brakel_child_mary_image
+    scene: "the maid believes the child Mary image has spoken instead of recognizing the hidden clerk"
+    evidence: "The maiden thought that the child Mary"
+
+  - function: func_comic_rebuke
+    order: 5
+    actor: brakel_maid
+    victim: obj_brakel_child_mary_image
+    scene: "angry at the supposed child-speaker, she tells child Mary to hold her tongue and let her mother answer"
+    evidence: "let your mother speak"
+
+
+edges:
+
+  - { from: brakel_maid, to: loc_brakel_st_annes_chapel, label: VISITS,
+      evidence: "went to St. Anne’s Chapel" }
+  - { from: loc_brakel_st_annes_chapel, to: loc_brakel_altar, label: CONTAINS,
+      evidence: "standing behind the altar" }
+  - { from: brakel_maid, to: obj_brakel_saint_anne_image, label: PRAYS_TO,
+      evidence: "holy Saint Anne" }
+  - { from: brakel_maid, to: brakel_desired_man, label: DESIRES_AS_HUSBAND,
+      evidence: "Help me soon to a man" }
+  - { from: brakel_desired_man, to: loc_brakel_suttmer_gate, label: DWELLS_BY,
+      evidence: "By Suttmer gate does he dwell" }
+  - { from: brakel_clerk, to: brakel_maid, label: OVERHEARS,
+      evidence: "heard that" }
+  - { from: brakel_clerk, to: brakel_maid, label: FORBIDS_MATCH,
+      evidence: "Thou shalt not have him" }
+  - { from: brakel_maid, to: obj_brakel_child_mary_image, label: MISATTRIBUTES_VOICE_TO,
+      evidence: "The maiden thought that the child Mary" }
+  - { from: brakel_maid, to: obj_brakel_child_mary_image, label: REBUKES,
+      evidence: "hold your tongue" }
+  - { from: obj_brakel_child_mary_image, to: obj_brakel_saint_anne_image, label: STANDS_BY,
+      evidence: "stood by her mother Anne" }
+  - { from: atu_1476, to: law_hidden_clerk_voice_misattributed_to_sacred_image, label: REALIZED_BY,
+      evidence: "The maiden thought that the child Mary" }

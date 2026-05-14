@@ -1,0 +1,290 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: herr-korbes
+khm: 41
+atu: '210'
+atu_name: The Pack of Ragamuffins
+canonical_source: ../../2-silver/canonical/herr-korbes/canonical.txt
+title: Herr Korbes
+
+
+entities:
+
+  characters:
+
+    herr_korbes_cock:
+      name: The Cock
+      archetypes: [arc_trickster]
+      species: sp_rooster
+      agency_modes: [agency_cunning, agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_command]
+      traits: [carriage-builder, journey-leader, passenger-gatherer, wheel-protector]
+      evidence: |
+        "So the cock built a beautiful carriage, which had four red
+        wheels, and harnessed four mice to it."
+
+    herr_korbes_hen:
+      name: The Hen
+      species: sp_bird
+      agency_modes: [agency_endurance]
+      traits: [journey-companion, carriage-rider, perch-hider]
+      evidence: |
+        "The hen seated herself in it with the cock, and they drove away
+        together."
+
+    herr_korbes_mice:
+      name: The Four Harnessed Mice
+      species: sp_mouse
+      agency_modes: [agency_endurance, agency_domestic_labor]
+      traits: [draught-team, carriage-pullers, piping-mice, barn-drivers]
+      evidence: |
+        "harnessed four mice to it."
+
+    herr_korbes_cat:
+      name: The Cat
+      archetypes: [arc_trickster]
+      species: sp_cat
+      agency_modes: [agency_cunning, agency_violence]
+      traits: [ride-seeker, hearth-hider, ash-thrower]
+      evidence: |
+        "Not long afterwards they met a cat who said, 'Where are you
+        going?'"
+
+    herr_korbes_millstone:
+      name: The Millstone
+      being_type: being_animated_object
+      agency_modes: [agency_cunning, agency_violence]
+      traits: [passenger, door-ambusher, final-killer]
+      evidence: |
+        "the millstone laid itself over the door."
+
+    herr_korbes_egg:
+      name: The Egg
+      being_type: being_animated_object
+      agency_modes: [agency_cunning, agency_violence]
+      traits: [passenger, towel-hider, eye-gluer]
+      evidence: |
+        "The egg rolled itself into a towel"
+
+    herr_korbes_duck:
+      name: The Duck
+      species: sp_duck
+      agency_modes: [agency_cunning, agency_violence, agency_animal_aid]
+      traits: [passenger, well-pole-watcher, water-splasher]
+      evidence: |
+        "the duck on the well-pole."
+
+    herr_korbes_pin:
+      name: The Pin
+      being_type: being_animated_object
+      agency_modes: [agency_cunning, agency_violence]
+      traits: [passenger, cushion-hider, chair-pricker]
+      evidence: |
+        "the pin stuck itself into the chair-cushion"
+
+    herr_korbes_needle:
+      name: The Needle
+      being_type: being_animated_object
+      agency_modes: [agency_cunning, agency_violence]
+      traits: [passenger, pillow-hider, bed-pricker]
+      evidence: |
+        "the needle jumped on to the bed in the middle of the pillow"
+
+    herr_korbes:
+      name: Herr Korbes
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_violence]
+      affects: [affect_anger]
+      traits: [absent-householder, sequentially-injured, rage-driven, wicked, killed-at-door]
+      evidence: |
+        "Herr Korbes must have been a very wicked man!"
+
+  magic_objects:
+
+    obj_herr_korbes_carriage:
+      name: The Beautiful Carriage with Four Red Wheels
+      object_kind: architecture
+      attributes:
+        builder: herr_korbes_cock
+        draught_team: herr_korbes_mice
+        wheel_count: 4
+      evidence: |
+        "built a beautiful carriage, which had four red wheels"
+
+  locations:
+
+    loc_herr_korbes_road:
+      name: The Road to Herr Korbes's House
+      evidence: |
+        "as we go forth on our way to the house of Herr Korbes."
+
+    loc_herr_korbes_house:
+      name: Herr Korbes's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        "they reached the house of Herr Korbes"
+
+    loc_herr_korbes_barn:
+      name: The Barn
+      instance_of: loc_barn
+      evidence: |
+        "The mice drew the carriage into the barn"
+
+    loc_herr_korbes_perch:
+      name: The Perch
+      instance_of: loc_house
+      evidence: |
+        "the hen flew with the cock upon a perch."
+
+    loc_herr_korbes_hearth:
+      name: The Hearth
+      instance_of: loc_hearth
+      evidence: |
+        "The cat sat down by the hearth"
+
+    loc_herr_korbes_well_pole:
+      name: The Well-Pole
+      instance_of: loc_well
+      evidence: |
+        "the duck on the well-pole."
+
+    loc_herr_korbes_towel:
+      name: The Towel
+      instance_of: loc_house
+      evidence: |
+        "The egg rolled itself into a towel"
+
+    loc_herr_korbes_chair_cushion:
+      name: The Chair-Cushion
+      instance_of: loc_house
+      evidence: |
+        "the pin stuck itself into the chair-cushion"
+
+    loc_herr_korbes_bed_pillow:
+      name: The Bed Pillow
+      instance_of: loc_house
+      evidence: |
+        "the needle jumped on to the bed in the middle of the pillow"
+
+    loc_herr_korbes_door:
+      name: The House-Door
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        "when he came to the house-door"
+
+
+classifications:
+
+  world_laws:
+    - law_rogue_company_weaponizes_household
+
+  moral_regimes:
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_violence
+    - agency_domestic_labor
+    - agency_endurance
+    - agency_animal_aid
+
+  affects_driving:
+    - affect_anger
+
+  symbol_numbers:
+    - num_4   # four red wheels and four harnessed mice
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_departure, order: 1, actor: herr_korbes_cock,
+      scene: "cock builds a four-wheeled carriage and travels with hen toward Herr Korbes's house" }
+  - { function: func_assembly, order: 2, actor: herr_korbes_cock,
+      scene: "cat, millstone, egg, duck, pin, and needle join the carriage party" }
+  - { function: func_arrival, order: 3, actor: herr_korbes_mice,
+      scene: "company reaches Herr Korbes's empty house and the mice draw the carriage into the barn" }
+  - { function: func_trickery, order: 4, actor: herr_korbes_cat,
+      scene: "each traveller hides in a domestic fixture as an ambush" }
+  - { function: func_punishment, order: 5, actor: herr_korbes_cat,
+      scene: "cat throws ashes in Herr Korbes's face when he goes to the hearth" }
+  - { function: func_punishment, order: 6, actor: herr_korbes_duck,
+      scene: "duck splashes water in his face when he runs to wash" }
+  - { function: func_punishment, order: 7, actor: herr_korbes_egg,
+      scene: "egg breaks from the towel and glues up his eyes" }
+  - { function: func_punishment, order: 8, actor: herr_korbes_pin,
+      scene: "pin pricks him when he sits in the chair" }
+  - { function: func_punishment, order: 9, actor: herr_korbes_needle,
+      scene: "needle pricks him when he throws himself on the bed" }
+  - { function: func_punishment, order: 10, actor: herr_korbes_millstone,
+      scene: "millstone leaps from above the door and kills Herr Korbes" }
+
+
+edges:
+
+  # Journey and passenger-assembly
+  - { from: herr_korbes_cock, to: obj_herr_korbes_carriage, label: BUILDS,
+      evidence: "the cock built a beautiful carriage" }
+  - { from: herr_korbes_cock, to: herr_korbes_mice, label: HARNESSES,
+      evidence: "harnessed four mice to it." }
+  - { from: herr_korbes_hen, to: obj_herr_korbes_carriage, label: RIDES_IN,
+      evidence: "The hen seated herself in it with the cock" }
+  - { from: herr_korbes_cock, to: loc_herr_korbes_house, label: TRAVELS_TO,
+      evidence: "We are going to the house of Herr Korbes." }
+  - { from: herr_korbes_cat, to: herr_korbes_cock, label: ASKS_DESTINATION_OF,
+      evidence: "Where are you going?" }
+  - { from: herr_korbes_cat, to: obj_herr_korbes_carriage, label: BOARDS,
+      evidence: "Take me with you" }
+  - { from: herr_korbes_millstone, to: obj_herr_korbes_carriage, label: BOARDS,
+      evidence: "After this came a millstone" }
+  - { from: herr_korbes_egg, to: obj_herr_korbes_carriage, label: BOARDS,
+      evidence: "then an egg" }
+  - { from: herr_korbes_duck, to: obj_herr_korbes_carriage, label: BOARDS,
+      evidence: "then a duck" }
+  - { from: herr_korbes_pin, to: obj_herr_korbes_carriage, label: BOARDS,
+      evidence: "then a pin" }
+  - { from: herr_korbes_needle, to: obj_herr_korbes_carriage, label: BOARDS,
+      evidence: "and at last a needle" }
+
+  # Domestic positioning
+  - { from: herr_korbes_mice, to: loc_herr_korbes_barn, label: DRAWS_CARRIAGE_TO,
+      evidence: "The mice drew the carriage into the barn" }
+  - { from: herr_korbes_cock, to: loc_herr_korbes_perch, label: HIDES_ON,
+      evidence: "the hen flew with the cock upon a perch." }
+  - { from: herr_korbes_hen, to: loc_herr_korbes_perch, label: HIDES_ON,
+      evidence: "the hen flew with the cock upon a perch." }
+  - { from: herr_korbes_cat, to: loc_herr_korbes_hearth, label: HIDES_AT,
+      evidence: "The cat sat down by the hearth" }
+  - { from: herr_korbes_duck, to: loc_herr_korbes_well_pole, label: HIDES_ON,
+      evidence: "the duck on the well-pole." }
+  - { from: herr_korbes_egg, to: loc_herr_korbes_towel, label: HIDES_IN,
+      evidence: "The egg rolled itself into a towel" }
+  - { from: herr_korbes_pin, to: loc_herr_korbes_chair_cushion, label: HIDES_IN,
+      evidence: "the pin stuck itself into the chair-cushion" }
+  - { from: herr_korbes_needle, to: loc_herr_korbes_bed_pillow, label: HIDES_IN,
+      evidence: "the needle jumped on to the bed in the middle of the pillow" }
+  - { from: herr_korbes_millstone, to: loc_herr_korbes_door, label: HIDES_OVER,
+      evidence: "the millstone laid itself over the door." }
+
+  # Sequential ambush
+  - { from: herr_korbes, to: loc_herr_korbes_hearth, label: GOES_TO,
+      evidence: "went to the hearth" }
+  - { from: herr_korbes_cat, to: herr_korbes, label: THROWS_ASHES_AT,
+      evidence: "the cat threw a quantity of ashes in his face." }
+  - { from: herr_korbes_duck, to: herr_korbes, label: SPLASHES_WATER_AT,
+      evidence: "the duck splashed some water in his face." }
+  - { from: herr_korbes_egg, to: herr_korbes, label: GLUES_EYES,
+      evidence: "broke, and glued up his eyes." }
+  - { from: herr_korbes_pin, to: herr_korbes, label: PRICKS,
+      evidence: "the pin pricked him." }
+  - { from: herr_korbes_needle, to: herr_korbes, label: PRICKS,
+      evidence: "the needle pricked him" }
+  - { from: herr_korbes, to: loc_herr_korbes_door, label: RUNS_TO,
+      evidence: "when he came to the house-door" }
+  - { from: herr_korbes_millstone, to: herr_korbes, label: KILLS,
+      evidence: "the millstone leapt down and struck him dead." }
+  - { from: herr_korbes, to: moral_retributive, label: NARRATOR_RATIFIES,
+      evidence: "Herr Korbes must have been a very wicked man!" }

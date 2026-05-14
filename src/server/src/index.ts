@@ -18,11 +18,17 @@ import { connect as clientConnect, RedDBError, type RedDB } from '@reddb-io/clie
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { loadGraph, type GrimmGraph } from '../../shared/load-graph.ts'
+import {
+  edgeInsertBatches,
+  insertSql,
+  nodeInsertBatches,
+  type EntityId,
+} from '../../shared/graph-sql.ts'
 
 // ---------------------------------------------------------------------------
 // Transport router
 //
-// @reddb-io/client@1.0.8 has known bugs across the three remote transports
+// Older @reddb-io/client builds had known bugs across the three remote transports
 // (filed in the project root README's feedback section):
 //
 //   http://   connect() rejects with HTTP_503 because /health reports
@@ -118,53 +124,49 @@ async function safe<T = Record<string, unknown>>(
 // Ingestion (same shape as the embedded example — see comments there)
 // ---------------------------------------------------------------------------
 
-type EntityId = string | number
-
-/** RedDB reserves the first 101 ids per collection for internal metadata. */
-const ID_OFFSET = 101
 const NODE_CHUNK = 100
 const EDGE_CHUNK = 50
 
 type AnyDb = RedDB | HttpRawDb
 
-async function ingestNodes(db: AnyDb, graph: GrimmGraph): Promise<Map<string, EntityId>> {
+async function ingestNodes(db: AnyDb, graph: GrimmGraph): Promise<void> {
   const C = graph.collection
   console.log(`Inserting ${graph.nodes.length} nodes into '${C}' in chunks of ${NODE_CHUNK}...`)
   const start = Date.now()
+  let inserted = 0
 
-  const labelToId = new Map<string, EntityId>()
-
-  for (let i = 0; i < graph.nodes.length; i += NODE_CHUNK) {
-    const batch = graph.nodes.slice(i, i + NODE_CHUNK)
-    const tuples = batch
-      .map((n) => `(${sqlString(n.label)}, ${sqlString(n.node_type)}, ${sqlString(n.name)})`)
-      .join(', ')
-    await db.query(`INSERT INTO ${C} NODE (label, node_type, name) VALUES ${tuples}`)
-    for (let j = 0; j < batch.length; j++) {
-      labelToId.set(batch[j].label, i + j + 1 + ID_OFFSET)
+  for (const group of nodeInsertBatches(graph.nodes)) {
+    for (let i = 0; i < group.rows.length; i += NODE_CHUNK) {
+      const rows = group.rows.slice(i, i + NODE_CHUNK)
+      await db.query(insertSql(C, 'NODE', group.columns, rows))
+      inserted += rows.length
+      process.stdout.write(`  ${inserted}/${graph.nodes.length}\r`)
     }
-    process.stdout.write(`  ${Math.min(i + NODE_CHUNK, graph.nodes.length)}/${graph.nodes.length}\r`)
   }
   console.log(`  ${graph.nodes.length}/${graph.nodes.length} nodes in ${Date.now() - start}ms`)
+}
 
-  // Calibrate
-  const firstLabel = graph.nodes[0]?.label
-  const firstId = labelToId.get(firstLabel)
-  if (firstLabel && firstId !== undefined) {
-    try {
-      const probe = await db.query(`GRAPH NEIGHBORHOOD '${firstId}'`)
-      const me = (probe.rows ?? []).find((r) => Number(r['depth']) === 0)
-      if (me?.['label'] === firstLabel) {
-        console.log(`  calibration ok — '${firstLabel}' is at id ${firstId}`)
-      } else {
-        console.warn(
-          `  ⚠ calibration mismatch: id ${firstId} resolves to '${me?.['label']}'`,
-        )
-      }
-    } catch (err) {
-      console.warn(`  ⚠ calibration probe failed: ${err instanceof Error ? err.message : err}`)
-    }
+async function buildLabelToId(db: AnyDb, graph: GrimmGraph): Promise<Map<string, EntityId>> {
+  const expected = new Set(graph.nodes.map((n) => n.label))
+  const labelToId = new Map<string, EntityId>()
+  const result = await db.query(`GRAPH CENTRALITY LIMIT ${graph.nodes.length}`)
+  for (const row of result.rows ?? []) {
+    const label = row['label']
+    const id = row['node_id']
+    if (typeof label !== 'string' || !expected.has(label)) continue
+    if (typeof id === 'string' || typeof id === 'number') labelToId.set(label, id)
   }
+
+  const missing = graph.nodes
+    .map((n) => n.label)
+    .filter((label) => !labelToId.has(label))
+  if (missing.length > 0) {
+    throw new Error(
+      `Could not resolve ${missing.length} graph node ids from RedDB; first missing labels: ${missing.slice(0, 10).join(', ')}`,
+    )
+  }
+
+  console.log(`  resolved label → node_id map for ${labelToId.size} nodes from RedDB`)
   return labelToId
 }
 
@@ -177,29 +179,19 @@ async function ingestEdges(
   console.log(`Inserting ${graph.edges.length} edges into '${C}' in chunks of ${EDGE_CHUNK}...`)
   const start = Date.now()
 
-  const valid: Array<[string, EntityId, EntityId]> = []
-  const unresolved = new Set<string>()
-  for (const e of graph.edges) {
-    const from = labelToId.get(e.from)
-    const to = labelToId.get(e.to)
-    if (from === undefined || to === undefined) {
-      if (from === undefined) unresolved.add(e.from)
-      if (to === undefined) unresolved.add(e.to)
-      continue
-    }
-    valid.push([e.label, from, to])
-  }
-  const skipped = graph.edges.length - valid.length
+  const { batches, skipped, unresolved } = edgeInsertBatches(graph.edges, labelToId)
+  const validCount = graph.edges.length - skipped
+  let inserted = 0
 
-  for (let i = 0; i < valid.length; i += EDGE_CHUNK) {
-    const batch = valid.slice(i, i + EDGE_CHUNK)
-    const tuples = batch
-      .map(([label, from, to]) => `(${sqlString(label)}, ${from}, ${to})`)
-      .join(', ')
-    await db.query(`INSERT INTO ${C} EDGE (label, from, to) VALUES ${tuples}`)
-    process.stdout.write(`  ${Math.min(i + EDGE_CHUNK, valid.length)}/${valid.length}\r`)
+  for (const group of batches) {
+    for (let i = 0; i < group.rows.length; i += EDGE_CHUNK) {
+      const rows = group.rows.slice(i, i + EDGE_CHUNK)
+      await db.query(insertSql(C, 'EDGE', group.columns, rows))
+      inserted += rows.length
+      process.stdout.write(`  ${inserted}/${validCount}\r`)
+    }
   }
-  console.log(`  ${valid.length}/${graph.edges.length} edges in ${Date.now() - start}ms`)
+  console.log(`  ${validCount}/${graph.edges.length} edges in ${Date.now() - start}ms`)
   if (skipped > 0) {
     console.warn(`  ⚠ skipped ${skipped} edges with unresolved endpoints:`)
     for (const u of unresolved) console.warn(`     - ${u}`)
@@ -258,11 +250,11 @@ async function runDemos(
   if (props) console.table(props)
 
   const pathPairs: Array<[string, string]> = [
-    ['evil_queen', 'snow_white'],
-    ['lrc_wolf', 'wsk_wolf'],
+    ['snow_white_stepmother_queen', 'snow_white'],
+    ['little_red_cap_wolf', 'seven_kids_wolf'],
     ['cinderella', 'snow_white'],
     ['hansel', 'gretel'],
-    ['gingerbread_witch', 'evil_queen'],
+    ['hansel_gretel_witch', 'snow_white_stepmother_queen'],
   ]
   header('Shortest paths between iconic pairs')
   for (const [from, to] of pathPairs) {
@@ -307,10 +299,11 @@ async function main(): Promise<void> {
         `\nCollection '${graph.collection}' already has ${existing} entities — skipping ingest.\n` +
           `Wipe ./output/server.rdb on the host to re-ingest.`,
       )
-      labelToId = new Map(graph.nodes.map((n, i) => [n.label, i + 1 + ID_OFFSET]))
+      labelToId = await buildLabelToId(db, graph)
     } else {
       console.log()
-      labelToId = await ingestNodes(db, graph)
+      await ingestNodes(db, graph)
+      labelToId = await buildLabelToId(db, graph)
       await ingestEdges(db, graph, labelToId)
     }
 

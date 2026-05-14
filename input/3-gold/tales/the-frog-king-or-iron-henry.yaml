@@ -1,0 +1,226 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-frog-king-or-iron-henry
+khm: 1
+atu: '440'
+atu_name: The Frog King (or Iron Henry)
+canonical_source: ../../2-silver/canonical/the-frog-king-or-iron-henry/canonical.txt
+title: The Frog King, or Iron Henry
+
+
+entities:
+
+  characters:
+
+    frog_king_princess:
+      name: The Princess (youngest of the King's daughters)
+      archetypes: [arc_reluctant_bride, arc_youngest_sibling]
+      species: sp_human
+      agency_modes: [agency_speech, agency_violence]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_disgust, affect_fear]
+      traits: [most beautiful, spoiled]
+      evidence: |
+        "the youngest was so beautiful that the sun itself, which has
+         seen so much, was astonished whenever it shone in her face."
+
+    frog_king_frog_form:
+      name: The Frog (cursed form of the prince)
+      archetypes: [arc_animal_helper, arc_enchanted_prince]
+      species: sp_frog
+      agency_modes: [agency_animal_aid, agency_speech]
+      existential_states: [state_cursed, state_transformed, state_hidden_identity]
+      speech_acts_performed: [speech_bargain]
+      traits: [ugly, persistent]
+      evidence: |
+        "Then he told her how he had been bewitched by a wicked witch,
+         and how no one could have delivered him from the well but
+         herself."
+
+    frog_king_human_form:
+      name: The Prince (true form, after release)
+      archetypes: [arc_enchanted_prince]
+      species: sp_human
+      traits: [beautiful, kind-eyed]
+      evidence: |
+        "he fell down he was no frog but a King's son with beautiful
+         kind eyes."
+
+    frog_king_father:
+      name: The King (princess's father)
+      archetypes: [arc_oath_enforcer]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_command]
+      evidence: |
+        "Then said the King, 'That which thou hast promised must thou
+         perform. Go and let him in.'"
+
+    faithful_henry:
+      name: Faithful Henry (the prince's servant)
+      archetypes: [arc_faithful_servant]
+      species: sp_human
+      agency_modes: [agency_endurance]
+      affects: [affect_loyalty, affect_grief]
+      traits: [loyal, long-suffering]
+      evidence: |
+        "Faithful Henry had been so unhappy when his master was changed
+         into a frog, that he had caused three iron bands to be laid
+         round his heart, lest it should burst with grief and sadness."
+
+    frog_king_witch:
+      name: The Wicked Witch (off-stage; antecedent curse-worker)
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_curse]
+      evidence: |
+        "he had been bewitched by a wicked witch" — never appears
+        directly; only referenced in the prince's recollection.
+
+  magic_objects:
+
+    obj_golden_ball_frog_king:
+      name: The Princess's Golden Ball
+      instance_of: obj_golden_ball
+      object_kind: token
+      evidence: |
+        "she took a golden ball, and threw it up on high and caught it,
+         and this ball was her favorite plaything."
+
+    obj_iron_bands_henry:
+      name: Three Iron Bands Around Henry's Heart
+      object_kind: token
+      attributes:
+        count: 3
+        material: iron
+        purpose: prevent grief-induced bursting of the heart
+      evidence: |
+        "he had caused three iron bands to be laid round his heart,
+         lest it should burst with grief and sadness."
+
+    obj_carriage_frog_king:
+      name: Royal Carriage with Eight White Horses
+      object_kind: architecture
+      attributes:
+        horses: 8
+        feathers: ostrich
+        harness: golden chains
+      evidence: |
+        "a carriage came driving up with eight white horses, which had
+         white ostrich feathers on their heads, and were harnessed with
+         golden chains."
+
+  locations:
+
+    loc_forest_frog_king:
+      name: The Dark Forest by the King's Castle
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "Close by the King's castle lay a great dark forest"
+
+    loc_well_frog_king:
+      name: The Well under the Lime-Tree
+      instance_of: loc_well
+      threshold_type: threshold_well
+      attributes:
+        feature: under an old lime-tree
+        depth: "so deep that the bottom could not be seen"
+      evidence: |
+        "under an old lime-tree in the forest was a well"
+
+    loc_castle_frog_king:
+      name: The King's Castle
+      instance_of: loc_castle
+
+    loc_doorway_dining_hall:
+      name: The Dining-Hall Door
+      threshold_type: threshold_doorway
+      evidence: |
+        "something came creeping splish splash, splish splash, up the
+         marble staircase, and when it had got to the top, it knocked
+         at the door."
+
+
+classifications:
+
+  world_laws:
+    - law_promise_binds_reality
+    - law_curse_requires_counter_condition
+
+  moral_regimes:
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_violence
+
+  affects_driving:
+    - affect_disgust
+    - affect_loyalty
+
+  symbol_numbers:
+    - num_3
+    - num_8
+
+  threshold_types:
+    - threshold_forest
+    - threshold_well
+    - threshold_doorway
+
+
+propp:
+  - { function: func_lack, order: 1, victim: frog_king_princess, scene: "ball falls into well" }
+  - { function: func_donor_test, order: 2, actor: frog_king_frog_form, scene: "frog demands promise" }
+  - { function: func_magical_agent, order: 3, actor: frog_king_frog_form, scene: "ball retrieved" }
+  - { function: func_violation, order: 4, actor: frog_king_princess, scene: "princess runs home, abandons frog" }
+  - { function: func_branding, order: 5, victim: frog_king_princess, scene: "frog arrives at door — princess marked as oath-bound" }
+  - { function: func_difficult_task, order: 6, actor: frog_king_princess, scene: "must let frog eat, sleep with her" }
+  - { function: func_struggle, order: 7, actor: frog_king_princess, scene: "throws frog against wall in rage" }
+  - { function: func_recognition, order: 8, actor: frog_king_human_form, scene: "frog reveals as prince" }
+  - { function: func_wedding, order: 9, scene: "marriage and departure to prince's kingdom" }
+  - { function: func_return, order: 10, actor: faithful_henry, scene: "Henry's iron bands break — secondary closure arc" }
+
+
+edges:
+
+  # The bargain
+  - { from: frog_king_princess, to: frog_king_frog_form, label: PROMISES_TO,
+      evidence: "if thou wilt promise me this I will go down below..." }
+  - { from: frog_king_frog_form, to: obj_golden_ball_frog_king, label: RETRIEVES,
+      evidence: "in a short while came swimming up again with the ball in his mouth" }
+
+  # The violation
+  - { from: frog_king_princess, to: frog_king_frog_form, label: ABANDONS,
+      evidence: "She did not listen to it, but ran home and soon forgot the poor frog" }
+
+  # The doorway scene + enforcement
+  - { from: frog_king_father, to: frog_king_princess, label: COMMANDS,
+      evidence: "That which thou hast promised must thou perform. Go and let him in." }
+
+  # The release
+  - { from: frog_king_princess, to: frog_king_frog_form, label: THROWS_AT,
+      evidence: "took him up and threw him with all her might against the wall." }
+  - { from: frog_king_frog_form, to: frog_king_human_form, label: TRANSFORMS_INTO,
+      evidence: "when he fell down he was no frog but a King's son" }
+
+  # The antecedent curse
+  - { from: frog_king_witch, to: frog_king_frog_form, label: ENCHANTS,
+      evidence: "he had been bewitched by a wicked witch" }
+
+  # Marriage + departure
+  - { from: frog_king_princess, to: frog_king_human_form, label: MARRIES,
+      evidence: "He by her father's will was now her dear companion and husband." }
+
+  # Faithful Henry secondary arc
+  - { from: faithful_henry, to: frog_king_human_form, label: SERVES,
+      evidence: "behind stood the young King's servant Faithful Henry" }
+  - { from: faithful_henry, to: obj_iron_bands_henry, label: BINDS_HEART_WITH,
+      evidence: "he had caused three iron bands to be laid round his heart" }
+
+  # Locations
+  - { from: loc_forest_frog_king, to: loc_well_frog_king, label: CONTAINS }
+  - { from: loc_castle_frog_king, to: loc_forest_frog_king, label: ADJACENT_TO,
+      evidence: "Close by the King's castle lay a great dark forest" }

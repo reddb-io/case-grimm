@@ -1,0 +1,789 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-two-kings-children
+khm: 113
+atu: '313'
+atu_name: The Magic Flight
+canonical_source: ../../2-silver/canonical/the-two-kings-children/canonical.txt
+title: The Two Kings' Children
+
+
+entities:
+
+  characters:
+
+    two_kings_prince:
+      name: The King's Son
+      species: sp_human
+      existential_states: [state_transformed, state_forgotten_bride]
+      transformations: [transform_fugitive_pair]
+      agency_modes: [agency_endurance, agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_fear, affect_love, affect_loyalty, affect_grief]
+      traits: [sixteen-year-prophecy-target, stag-chaser, lake-palace-captive, threshold-sleeper, task-hero, fugitive-bridegroom, kiss-forgetter, restored-bridegroom]
+      evidence: |
+        the King’s son was separated from the others
+
+    two_kings_youngest_princess:
+      name: The Youngest King's Daughter
+      archetypes: [arc_wise_helper]
+      species: sp_human
+      existential_states: [state_transformed, state_hidden_identity, state_forgotten_bride]
+      transformations: [transform_fugitive_pair]
+      agency_modes: [agency_cunning, agency_speech, agency_object_mediation, agency_domestic_labor, agency_endurance]
+      speech_acts_performed: [speech_command, speech_bargain]
+      affects: [affect_love, affect_loyalty, affect_grief, affect_fear]
+      traits: [youngest-daughter, saint-image-commander, earth-worker-summoner, hair-comber, magic-flight-transformer, walnut-keeper, mill-servant, lamenting-forgotten-bride, true-bride]
+      evidence: |
+        the one by whom he last watched, can take him something
+
+    two_kings_lake_king:
+      name: The Lake-Palace King / Tall Stag-Man
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_command, speech_promise]
+      affects: [affect_anger]
+      traits: [stag-disguised-captor, lake-dragger, daughter-guardian, death-threatener, impossible-task-setter, pursuing-father]
+      evidence: |
+        a great tall man was standing there instead of the stag
+
+    two_kings_lake_queen:
+      name: The Lake-Palace Queen
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_command]
+      affects: [affect_anger]
+      traits: [father-corrector, final-pursuer, pond-drinker, walnut-giver, failed-retriever]
+      evidence: |
+        It is no use to send thee, I must go there myself.
+
+    two_kings_elder_princesses:
+      name: The Two Elder Daughters
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      traits: [elder-sisters, food-refusers, marriage-delay-pretext]
+      evidence: |
+        I cannot give away my youngest daughter until the two eldest are married.
+
+    two_kings_earth_workers:
+      name: The Little Earth-Workers
+      being_type: being_dwarf
+      agency_modes: [agency_domestic_labor, agency_endurance]
+      traits: [summoned-little-earth-men, kindred-gatherers, forest-cutters, pond-cleaners, castle-builders, dismissed-workers]
+      evidence: |
+        numbers of little earth-men came forth
+
+    two_kings_prince_mother:
+      name: The Prince's Mother / False Mother
+      species: sp_human
+      agency_modes: [agency_cunning, agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_command]
+      affects: [affect_anger]
+      traits: [homecoming-kisser, memory-eraser, carriage-canceller, false-bride-arranger, door-locker, expelled-mother]
+      evidence: |
+        his mother gave him a kiss
+
+    two_kings_false_bride:
+      name: The Distant False Bride
+      archetypes: [arc_false_bride]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning]
+      speech_acts_performed: [speech_bargain]
+      affects: [affect_envy]
+      traits: [distant-bride, dress-envier, night-bargainer, displaced-rival, expelled-bride]
+      evidence: |
+        a wife for her son, who came from quite a distant part of the world
+
+    two_kings_servants:
+      name: The Castle Servants
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [sleeping-drink-givers, awakened-listeners, second-night-allies]
+      evidence: |
+        the servants were ordered to give the King’s son a sleeping-drink
+
+    two_kings_miller:
+      name: The Miller
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [employer, church-leave-giver]
+      evidence: |
+        the maiden served the miller honorably and faithfully
+
+    two_kings_priest:
+      name: The Wedding Priest
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      traits: [wedding-blesser, altar-officiant]
+      evidence: |
+        they were blessed by the priest
+
+  magic_objects:
+
+    obj_two_kings_stag_form:
+      name: The Great Stag Form
+      object_kind: creature_object
+      attributes:
+        function: lure-form that draws the prince out of the forest to the tall captor
+      evidence: |
+        he saw a great stag which he wanted to shoot
+
+    obj_two_kings_glass_skates:
+      name: The Six Pairs of Ruined Glass Skates
+      object_kind: garment
+      attributes:
+        count: 6
+        function: comic measure of the tall man's long pursuit of the prince
+      evidence: |
+        ruined six pairs of glass skates
+
+    obj_two_kings_st_christopher_images:
+      name: The Three Stone Images of St. Christopher
+      instance_of: obj_sacred_answering_image
+      object_kind: relic
+      attributes:
+        count: 3
+        function: answer the father's hourly watch-calls while the prince sleeps
+      evidence: |
+        there stood a stone image of St. Christopher
+
+    obj_two_kings_glass_tools:
+      name: The Glass Tools for Impossible Labour
+      object_kind: tool
+      attributes:
+        forms: [axe, wedge, mallet, shovel, hoe, gimlet]
+        function: fragile tools that make the forest, pond, and mountain tasks humanly impossible
+      evidence: |
+        he gave him a glass axe, a glass wedge, and a glass mallet
+
+    obj_two_kings_knotted_handkerchief:
+      name: The Knotted White Handkerchief
+      instance_of: obj_summoning_handkerchief
+      object_kind: garment
+      attributes:
+        function: summons and dismisses the earth-workers when struck three times on the earth
+      evidence: |
+        she took her handkerchief and made a knot in it
+
+    obj_two_kings_three_walnuts:
+      name: The Three Need-Walnuts
+      object_kind: token
+      attributes:
+        count: 3
+        function: deferred help from the mother after the failed pursuit
+      evidence: |
+        the Queen gave her daughter three walnuts
+
+    obj_two_kings_walnut_dresses:
+      name: The Three Dresses Inside the Walnuts
+      object_kind: garment
+      attributes:
+        count: 3
+        function: increasingly splendid dresses bartered for nights beside the forgotten prince
+      evidence: |
+        a beautiful dress lay inside it
+
+    obj_two_kings_sleeping_drink:
+      name: The Sleeping-Drink
+      instance_of: obj_sleeping_draught
+      object_kind: food
+      attributes:
+        function: drugged drink intended to prevent the prince from hearing the forgotten bride's lament
+      evidence: |
+        give the King’s son a sleeping-drink
+
+    obj_two_kings_wedding_flowers_ribbons:
+      name: The Wedding Flowers and Foot-Ribbons
+      object_kind: material
+      attributes:
+        function: children's festive gifts at the restored true wedding
+      evidence: |
+        gave them flowers, and offered them gay ribbons to bind about their feet
+
+  locations:
+
+    loc_two_kings_hunting_forest:
+      name: The Hunting Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        In the forest, the King’s son was separated from the others
+
+    loc_two_kings_great_lake:
+      name: The Great Lake Crossing
+      instance_of: loc_pond
+      evidence: |
+        dragged him through a great lake
+
+    loc_two_kings_lake_palace:
+      name: The Lake-Palace of the Three Daughters
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        dragged him through a great lake to a great palace
+
+    loc_two_kings_bedchamber:
+      name: The Watch Bedchambers
+      instance_of: loc_bedchamber
+      threshold_type: threshold_doorway
+      evidence: |
+        went to the bed-room
+
+    loc_two_kings_task_forest:
+      name: The Forest to Be Cut Down
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        I have a great forest
+
+    loc_two_kings_fishpond:
+      name: The Muddy Fish-Pond
+      instance_of: loc_pond
+      evidence: |
+        I have a great fish-pond
+
+    loc_two_kings_briar_mountain:
+      name: The Briar Mountain
+      instance_of: loc_mountain
+      threshold_type: threshold_forest
+      evidence: |
+        a great mountain on which there was nothing but briars
+
+    loc_two_kings_new_castle:
+      name: The Castle Built on the Mountain
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        a castle must be built on the top of the mountain
+
+    loc_two_kings_plain:
+      name: The Pursuit Plain
+      instance_of: loc_field
+      evidence: |
+        the two were already far over the plain
+
+    loc_two_kings_prince_castle:
+      name: The Prince's Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        they arrived at the castle from whence the King’s son came
+
+    loc_two_kings_village:
+      name: The Village Where the Bride Waits
+      instance_of: loc_village
+      evidence: |
+        close by it was a village
+
+    loc_two_kings_mill_pond:
+      name: The Mill Pond and Tub-Washing Place
+      instance_of: loc_mill
+      evidence: |
+        sit by the pond every afternoon and clean the tubs
+
+    loc_two_kings_church:
+      name: The Wedding Church and Altar
+      instance_of: loc_church
+      threshold_type: threshold_doorway
+      evidence: |
+        went into the church and stood by the altar
+
+    loc_two_kings_prince_door:
+      name: The Threshold Outside the Prince's Door
+      instance_of: loc_bedchamber
+      threshold_type: threshold_doorway
+      evidence: |
+        sleep one night outside the King’s son’s door
+
+
+classifications:
+
+  world_laws:
+    - law_sacred_proxy_answers_watch
+    - law_summoned_earth_workers_complete_tasks
+    - law_loyal_pair_magic_flight
+    - law_homecoming_kiss_erases_bride_memory
+    - law_wonder_gifts_purchase_recognition_nights
+    - law_voice_recognizes_forgotten_bride
+
+  moral_regimes:
+    - moral_restorative
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_object_mediation
+    - agency_domestic_labor
+    - agency_endurance
+    - agency_social_rank
+
+  affects_driving:
+    - affect_fear
+    - affect_love
+    - affect_loyalty
+    - affect_grief
+    - affect_envy
+    - affect_anger
+
+  symbol_numbers:
+    - num_3
+    - num_6
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_prophecy
+    order: 1
+    actor: two_kings_prince
+    scene: The prince is foretold to die by a stag at sixteen.
+    evidence: |
+      it had been foretold that he should be killed by a stag
+
+  - function: func_capture
+    order: 2
+    actor: two_kings_lake_king
+    victim: two_kings_prince
+    scene: The stag chase draws the prince from the forest to the tall man, who drags him through the lake.
+    evidence: |
+      dragged him through a great lake to a great palace
+
+  - function: func_difficult_task
+    order: 3
+    actor: two_kings_lake_king
+    victim: two_kings_prince
+    scene: The king imposes three nights of answering watch-calls under threat of death.
+    evidence: |
+      if thou then givest me no answer, to-morrow morning thou shall be put to death
+
+  - function: func_magical_agent
+    order: 4
+    actor: two_kings_youngest_princess
+    beneficiary: two_kings_prince
+    scene: The princess commands St. Christopher images to answer for the sleeping prince.
+    evidence: |
+      give him an answer instead of the King’s son
+
+  - function: func_difficult_task
+    order: 5
+    actor: two_kings_lake_king
+    victim: two_kings_prince
+    scene: The king requires forest-cutting, pond-clearing, and castle-building with fragile glass tools.
+    evidence: |
+      thou must still do something more for her sake
+
+  - function: func_helper_intervention
+    order: 6
+    actor: two_kings_youngest_princess
+    beneficiary: two_kings_prince
+    scene: The princess summons earth-workers three times while the prince sleeps.
+    evidence: |
+      Earth-workers, come forth
+
+  - function: func_task_solution
+    order: 7
+    actor: two_kings_earth_workers
+    beneficiary: two_kings_prince
+    scene: The earth-workers complete the impossible forest, pond, and mountain-castle tasks.
+    evidence: |
+      all was ready
+
+  - function: func_departure
+    order: 8
+    actor: two_kings_prince
+    beneficiary: two_kings_youngest_princess
+    scene: The lovers flee by night after the father postpones marriage again.
+    evidence: |
+      ran away with her
+
+  - function: func_pursuit
+    order: 9
+    actor: two_kings_lake_king
+    victim: two_kings_youngest_princess
+    scene: The father pursues twice and is fooled by briar/rose and church/priest transformations.
+    evidence: |
+      saw her father behind her
+
+  - function: func_pursuit
+    order: 10
+    actor: two_kings_lake_queen
+    victim: two_kings_youngest_princess
+    scene: The mother pursues herself and is defeated by the fishpond/fish transformation.
+    evidence: |
+      Now we are undone, for my mother is coming herself
+
+  - function: func_donor_gift
+    order: 11
+    actor: two_kings_lake_queen
+    beneficiary: two_kings_youngest_princess
+    scene: The mother concedes and gives the princess three walnuts for greatest need.
+    evidence: |
+      With these thou canst help thyself when thou art in thy greatest need.
+
+  - function: func_absentation
+    order: 12
+    actor: two_kings_prince
+    victim: two_kings_youngest_princess
+    scene: The prince leaves the bride in the village while he goes to fetch a carriage.
+    evidence: |
+      Stay here, my dearest
+
+  - function: func_villainy
+    order: 13
+    actor: two_kings_prince_mother
+    victim: two_kings_youngest_princess
+    scene: The prince's mother kisses him, making him forget bride and mission.
+    evidence: |
+      his mother gave him a kiss, and he forgot everything
+
+  - function: func_unrecognized_service
+    order: 14
+    actor: two_kings_youngest_princess
+    scene: The forgotten bride takes mill service near the prince's castle.
+    evidence: |
+      the maiden served the miller honorably and faithfully
+
+  - function: func_false_wedding
+    order: 15
+    actor: two_kings_false_bride
+    victim: two_kings_youngest_princess
+    scene: A distant bride is brought for the prince and the forgotten princess attends in a walnut dress.
+    evidence: |
+      a wife for her son, who came from quite a distant part of the world
+
+  - function: func_bargain
+    order: 16
+    actor: two_kings_youngest_princess
+    beneficiary: two_kings_false_bride
+    scene: The princess trades the first dress for a night outside the prince's door, but he is drugged.
+    evidence: |
+      the bride might perhaps earn it
+
+  - function: func_recognition
+    order: 17
+    actor: two_kings_prince
+    beneficiary: two_kings_youngest_princess
+    scene: On the second purchased night the prince hears her lament and his memory returns.
+    evidence: |
+      what was past came back to him
+
+  - function: func_wedding
+    order: 18
+    actor: two_kings_priest
+    beneficiary: two_kings_youngest_princess
+    scene: The true pair marry after the third walnut dress, while the false mother and bride depart.
+    evidence: |
+      they were blessed by the priest, and had a merry wedding
+
+
+edges:
+
+  - from: two_kings_prince
+    label: PROPHESIED_TO_DIE_BY
+    to: obj_two_kings_stag_form
+    evidence: |
+      killed by a stag when he was sixteen years of age
+
+  - from: two_kings_prince
+    label: CHASES
+    to: obj_two_kings_stag_form
+    evidence: |
+      he chased the stag so far
+
+  - from: two_kings_lake_king
+    label: APPEARS_IN_PLACE_OF
+    to: obj_two_kings_stag_form
+    evidence: |
+      a great tall man was standing there instead of the stag
+
+  - from: two_kings_lake_king
+    label: DRAGS_THROUGH
+    to: loc_two_kings_great_lake
+    evidence: |
+      dragged him through a great lake
+
+  - from: two_kings_lake_king
+    label: IMPOSES_WATCH_ON
+    to: two_kings_prince
+    evidence: |
+      thou must keep watch over the eldest for one night
+
+  - from: two_kings_youngest_princess
+    label: COMMANDS
+    to: obj_two_kings_st_christopher_images
+    evidence: |
+      When my father calls, do thou answer
+
+  - from: obj_two_kings_st_christopher_images
+    label: ANSWERS_FOR
+    to: two_kings_prince
+    evidence: |
+      give him an answer instead of the King’s son
+
+  - from: two_kings_prince
+    label: SLEEPS_ON
+    to: loc_two_kings_bedchamber
+    evidence: |
+      laid himself down on the threshold of the door and slept
+
+  - from: two_kings_lake_king
+    label: GIVES_FRAGILE_TOOLS
+    to: obj_two_kings_glass_tools
+    evidence: |
+      he gave him a glass axe, a glass wedge, and a glass mallet
+
+  - from: obj_two_kings_glass_tools
+    label: BREAKS_DURING
+    to: loc_two_kings_task_forest
+    evidence: |
+      the axe broke in two
+
+  - from: two_kings_youngest_princess
+    label: COMBS_TO_SLEEP
+    to: two_kings_prince
+    evidence: |
+      she combed his hair, and he became weary and fell asleep
+
+  - from: two_kings_youngest_princess
+    label: STRIKES_ON_EARTH
+    to: obj_two_kings_knotted_handkerchief
+    evidence: |
+      struck it three times on the earth
+
+  - from: obj_two_kings_knotted_handkerchief
+    label: SUMMONS
+    to: two_kings_earth_workers
+    evidence: |
+      Earth-workers, come forth
+
+  - from: two_kings_earth_workers
+    label: CUTS_DOWN
+    to: loc_two_kings_task_forest
+    evidence: |
+      the great forest must be cut down
+
+  - from: two_kings_earth_workers
+    label: CLEANS
+    to: loc_two_kings_fishpond
+    evidence: |
+      have the fish-pond entirely cleaned out
+
+  - from: two_kings_earth_workers
+    label: BUILDS
+    to: loc_two_kings_new_castle
+    evidence: |
+      a castle must be built on the top of the mountain
+
+  - from: two_kings_youngest_princess
+    label: DISMISSES
+    to: two_kings_earth_workers
+    evidence: |
+      Earth-workers, go home
+
+  - from: two_kings_lake_king
+    label: POSTPONES_MARRIAGE_BY
+    to: two_kings_elder_princesses
+    evidence: |
+      I cannot give away my youngest daughter until the two eldest are married
+
+  - from: two_kings_prince
+    label: RUNS_AWAY_WITH
+    to: two_kings_youngest_princess
+    evidence: |
+      ran away with her
+
+  - from: two_kings_youngest_princess
+    label: TRANSFORMS_PAIR_INTO
+    to: loc_two_kings_plain
+    attributes:
+      forms: [briar, rose]
+    evidence: |
+      I will at once change thee into a briar, and myself into a rose
+
+  - from: two_kings_lake_king
+    label: PURSUES
+    to: two_kings_youngest_princess
+    evidence: |
+      My father is behind us
+
+  - from: two_kings_lake_king
+    label: FAILS_TO_GATHER
+    to: two_kings_youngest_princess
+    evidence: |
+      the thorn came and pricked his finger
+
+  - from: two_kings_youngest_princess
+    label: TRANSFORMS_PAIR_INTO
+    to: loc_two_kings_church
+    attributes:
+      forms: [church, priest]
+    evidence: |
+      change thee into a church and myself into a priest
+
+  - from: two_kings_lake_king
+    label: LISTENS_TO
+    to: loc_two_kings_church
+    evidence: |
+      So he listened to the sermon, and then went home again.
+
+  - from: two_kings_youngest_princess
+    label: TRANSFORMS_PAIR_INTO
+    to: loc_two_kings_fishpond
+    attributes:
+      forms: [fish-pond, fish]
+    evidence: |
+      change thee into a fish-pond and myself into a fish
+
+  - from: two_kings_lake_queen
+    label: DRINKS_UP
+    to: loc_two_kings_fishpond
+    evidence: |
+      drank up the whole pond in order to catch the fish
+
+  - from: two_kings_lake_queen
+    label: GIVES
+    to: obj_two_kings_three_walnuts
+    evidence: |
+      the Queen gave her daughter three walnuts
+
+  - from: two_kings_prince
+    label: LEAVES_WAITING
+    to: two_kings_youngest_princess
+    evidence: |
+      Stay here, my dearest
+
+  - from: two_kings_youngest_princess
+    label: WAITS_IN
+    to: loc_two_kings_village
+    evidence: |
+      the maiden sat in the village and watched and watched
+
+  - from: two_kings_prince_mother
+    label: KISSES
+    to: two_kings_prince
+    evidence: |
+      his mother gave him a kiss
+
+  - from: two_kings_prince
+    label: FORGETS
+    to: two_kings_youngest_princess
+    evidence: |
+      he forgot everything which had happened
+
+  - from: two_kings_youngest_princess
+    label: SERVES_AT
+    to: loc_two_kings_mill_pond
+    evidence: |
+      took service in the mill which belonged to the castle
+
+  - from: two_kings_prince_mother
+    label: SEEKS
+    to: two_kings_false_bride
+    evidence: |
+      the Queen had sought a wife for her son
+
+  - from: obj_two_kings_three_walnuts
+    label: CONTAINS
+    to: obj_two_kings_walnut_dresses
+    evidence: |
+      a beautiful dress lay inside it
+
+  - from: two_kings_youngest_princess
+    label: WEARS
+    to: obj_two_kings_walnut_dresses
+    evidence: |
+      She put it on, and went into the church
+
+  - from: two_kings_false_bride
+    label: DESIRES
+    to: obj_two_kings_walnut_dresses
+    evidence: |
+      as beautiful a dress as that lady there
+
+  - from: two_kings_youngest_princess
+    label: BARGAINS_FOR_NIGHT
+    to: loc_two_kings_prince_door
+    evidence: |
+      sleep one night outside the King’s son’s door
+
+  - from: two_kings_servants
+    label: GIVE
+    to: obj_two_kings_sleeping_drink
+    evidence: |
+      give the King’s son a sleeping-drink
+
+  - from: obj_two_kings_sleeping_drink
+    label: PREVENTS_HEARING
+    to: two_kings_prince
+    evidence: |
+      The King’s son did not hear one word of it
+
+  - from: two_kings_youngest_princess
+    label: LAMENTS_ON
+    to: loc_two_kings_prince_door
+    evidence: |
+      the maiden laid herself down on the threshold and lamented all night long
+
+  - from: two_kings_youngest_princess
+    label: RECOUNTS_SERVICE_FOR
+    to: two_kings_prince
+    evidence: |
+      told of all that she had done
+
+  - from: two_kings_servants
+    label: KEEPS_AWAKE
+    to: two_kings_prince
+    evidence: |
+      gave him something to keep him awake
+
+  - from: two_kings_prince
+    label: HEARS
+    to: two_kings_youngest_princess
+    evidence: |
+      All this the King’s son heard
+
+  - from: two_kings_prince
+    label: REGAINS_MEMORY_OF
+    to: two_kings_youngest_princess
+    evidence: |
+      what was past came back to him
+
+  - from: two_kings_prince_mother
+    label: LOCKS_DOOR_AGAINST
+    to: two_kings_prince
+    evidence: |
+      his mother had locked the door
+
+  - from: two_kings_prince
+    label: APOLOGIZES_TO
+    to: two_kings_youngest_princess
+    evidence: |
+      prayed her not to be angry with him for having forgotten her
+
+  - from: two_kings_priest
+    label: BLESSES
+    to: two_kings_prince
+    evidence: |
+      they were blessed by the priest
+
+  - from: two_kings_priest
+    label: BLESSES
+    to: two_kings_youngest_princess
+    evidence: |
+      they were blessed by the priest
+
+  - from: obj_two_kings_wedding_flowers_ribbons
+    label: ADORNS_WEDDING_OF
+    to: two_kings_youngest_princess
+    evidence: |
+      gave them flowers, and offered them gay ribbons to bind about their feet
+
+  - from: two_kings_prince_mother
+    label: DEPARTS_WITH
+    to: two_kings_false_bride
+    evidence: |
+      the false mother and the bride had to depart

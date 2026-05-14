@@ -1,0 +1,362 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-death-of-the-little-hen
+khm: 80
+atu: '2022'
+atu_name: The Death of the Little Hen
+canonical_source: ../../2-silver/canonical/the-death-of-the-little-hen/canonical.txt
+title: The Death of the Little Hen
+
+
+entities:
+
+  characters:
+
+    death_hen_little_hen:
+      name: The Little Hen
+      species: sp_hen
+      agency_modes: [agency_cunning]
+      affects: [affect_greed, affect_fear]
+      traits: [nut-hill-companion, sharing-agreement-breaker, large-nut-finder, kernel-hider, choking, dead-and-motionless, buried]
+      evidence: |
+        Then the hen found a large, large nut, but said nothing about
+        it, intending to eat the kernel herself.
+
+    death_hen_little_cock:
+      name: The Little Cock
+      species: sp_rooster
+      agency_modes: [agency_speech, agency_endurance, agency_object_mediation]
+      affects: [affect_grief, affect_fear]
+      traits: [sharing-partner, water-fetcher, red-silk-fetcher, wreath-fetcher, funeral-driver, bridge-seeker, grave-digger, grief-dead]
+      evidence: |
+        Then the cock was so distressed that he cried aloud
+
+    death_hen_stream:
+      name: The Spring / Stream
+      being_type: being_animated_object
+      agency_modes: [agency_speech]
+      traits: [water-holder, red-silk-demander, delayed-helper]
+      evidence: |
+        The well answered, “First run to the bride, and get her to give
+        thee some red silk.”
+
+    death_hen_bride:
+      name: The Bride
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      traits: [red-silk-holder, wreath-demander, exchange-link]
+      evidence: |
+        The bride answered, “First run and bring me my little wreath
+        which is hanging to a willow.”
+
+    death_hen_willow:
+      name: The Willow
+      being_type: being_animated_object
+      agency_modes: [agency_object_mediation]
+      traits: [wreath-holder, branch-source]
+      evidence: |
+        hanging to a willow
+
+    death_hen_six_mice:
+      name: The Six Mice
+      species: sp_mouse
+      agency_modes: [agency_animal_aid, agency_object_mediation]
+      affects: [affect_grief]
+      traits: [funeral-carriage-builders, little-horses, harnessed-pullers, straw-bridge-victims, drowned]
+      evidence: |
+        six mice built a little carriage to carry her to her grave
+
+    death_hen_fox:
+      name: The Fox
+      species: sp_fox
+      agency_modes: [agency_speech, agency_object_mediation]
+      traits: [funeral-rider, back-seat-passenger, drowned]
+      evidence: |
+        Then the fox seated himself at the back
+
+    death_hen_wolf:
+      name: The Wolf
+      species: sp_wolf
+      agency_modes: [agency_object_mediation]
+      traits: [funeral-rider, forest-beast-passenger, drowned]
+      evidence: |
+        and after that the wolf
+
+    death_hen_bear:
+      name: The Bear
+      species: sp_bear
+      agency_modes: [agency_object_mediation]
+      traits: [funeral-rider, forest-beast-passenger, drowned]
+      evidence: |
+        the bear
+
+    death_hen_stag:
+      name: The Stag
+      species: sp_deer
+      agency_modes: [agency_object_mediation]
+      traits: [funeral-rider, forest-beast-passenger, drowned]
+      evidence: |
+        the stag
+
+    death_hen_lion:
+      name: The Lion
+      species: sp_lion
+      agency_modes: [agency_object_mediation]
+      traits: [funeral-rider, forest-beast-passenger, drowned]
+      evidence: |
+        the lion
+
+    death_hen_straw:
+      name: The Straw
+      being_type: being_animated_object
+      agency_modes: [agency_speech, agency_object_mediation]
+      traits: [bridge-volunteer, slipping-bridge, drowned]
+      evidence: |
+        A straw was lying by the stream, and it said, “I will lay
+        myself across
+
+    death_hen_coal:
+      name: The Coal
+      being_type: being_animated_object
+      agency_modes: [agency_speech, agency_object_mediation]
+      traits: [bridge-volunteer, water-toucher, hissing-extinguished, dead]
+      evidence: |
+        a coal came and said, “I am large enough, I will lay myself
+        across
+
+    death_hen_stone:
+      name: The Stone
+      being_type: being_animated_object
+      agency_modes: [agency_object_mediation]
+      affects: [affect_pity]
+      traits: [pitying-helper, successful-bridge, overload-witness]
+      evidence: |
+        When a stone saw that, it took pity on the little cock
+
+  magic_objects:
+
+    obj_death_hen_large_nut:
+      name: The Large Nut-Kernel
+      object_kind: food
+      attributes:
+        function: hoarded food that sticks in the hen's throat and begins the death chain
+      evidence: |
+        she has swallowed a large nut, and is choking
+
+    obj_death_hen_red_silk:
+      name: The Red Silk
+      object_kind: material
+      attributes:
+        function: exchange object demanded by the spring before it will give water
+      evidence: |
+        get her to give thee some red silk
+
+    obj_death_hen_wreath:
+      name: The Bride's Little Wreath
+      object_kind: garment
+      attributes:
+        function: exchange object demanded by the bride before she gives silk
+      evidence: |
+        my little wreath which is hanging to a willow
+
+    obj_death_hen_funeral_carriage:
+      name: The Little Funeral Carriage
+      object_kind: tool
+      attributes:
+        function: vehicle for carrying the dead hen to burial, then overloading at the river crossing
+      evidence: |
+        built a little carriage to carry her to her grave
+
+  locations:
+
+    loc_death_hen_nut_hill:
+      name: The Nut-Hill
+      instance_of: loc_mountain
+      evidence: |
+        went with the little cock to the nut-hill
+
+    loc_death_hen_spring:
+      name: The Spring / Stream
+      instance_of: loc_brook
+      evidence: |
+        The little cock did run as fast as he could to the spring
+
+    loc_death_hen_willow:
+      name: The Willow
+      instance_of: loc_tree
+      evidence: |
+        hanging to a willow
+
+    loc_death_hen_crossing_stream:
+      name: The Crossing Stream
+      instance_of: loc_brook
+      evidence: |
+        they reached the stream.
+
+    loc_death_hen_grave:
+      name: The Little Hen's Grave
+      instance_of: loc_tomb
+      evidence: |
+        dug a grave for her and laid her in it
+
+
+classifications:
+
+  world_laws:
+    - law_hoarded_share_chokes_holder
+    - law_contagious_lament_cascades
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_object_mediation
+    - agency_animal_aid
+    - agency_endurance
+    - agency_cunning
+
+  affects_driving:
+    - affect_greed
+    - affect_fear
+    - affect_grief
+    - affect_pity
+
+  symbol_numbers:
+    - num_6
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: death_hen_little_hen,
+      scene: "the hen and cock go to the nut-hill and agree to share any nut-kernel found" }
+  - { function: func_violation, order: 2, actor: death_hen_little_hen,
+      scene: "the hen hides the large nut and tries to eat the kernel herself" }
+  - { function: func_misfortune, order: 3, actor: death_hen_little_hen,
+      scene: "the kernel sticks in the hen's throat and she begins choking" }
+  - { function: func_errand_chain, order: 4, actor: death_hen_little_cock,
+      scene: "the cock runs from spring to bride to willow to obtain water" }
+  - { function: func_death, order: 5, actor: death_hen_little_hen,
+      scene: "the cock returns with water too late and finds the hen dead" }
+  - { function: func_lament, order: 6, actor: death_hen_little_cock,
+      scene: "the cock cries aloud and animals gather to lament the hen" }
+  - { function: func_funeral_procession, order: 7, actor: death_hen_six_mice,
+      scene: "six mice build and pull a little carriage for the funeral procession" }
+  - { function: func_accumulation, order: 8, actor: death_hen_fox,
+      scene: "the fox and forest beasts climb onto the carriage behind the cock" }
+  - { function: func_failed_crossing, order: 9, actor: death_hen_straw,
+      scene: "the straw bridge slips and the six mice drown" }
+  - { function: func_failed_crossing, order: 10, actor: death_hen_coal,
+      scene: "the coal bridge touches water, hisses, and dies" }
+  - { function: func_overload, order: 11, actor: death_hen_little_cock,
+      scene: "the cock crosses with the dead hen, but the overloaded carriage runs back and drowns the passengers" }
+  - { function: func_total_death, order: 12, actor: death_hen_little_cock,
+      scene: "the cock buries the hen, frets on the mound, dies, and everyone is dead" }
+
+
+edges:
+
+  # Broken sharing and choking
+  - { from: death_hen_little_hen, to: death_hen_little_cock, label: AGREES_TO_SHARE_WITH,
+      evidence: "whichsoever of them found a kernel of a nut should share it with the other" }
+  - { from: death_hen_little_hen, to: obj_death_hen_large_nut, label: FINDS,
+      evidence: "Then the hen found a large, large nut" }
+  - { from: death_hen_little_hen, to: death_hen_little_cock, label: HIDES_FROM,
+      evidence: "but said nothing about it" }
+  - { from: death_hen_little_hen, to: obj_death_hen_large_nut, label: TRIES_TO_EAT_ALONE,
+      evidence: "intending to eat the kernel herself" }
+  - { from: obj_death_hen_large_nut, to: death_hen_little_hen, label: CHOKES,
+      evidence: "it remained sticking in her throat" }
+  - { from: obj_death_hen_large_nut, to: law_hoarded_share_chokes_holder, label: ENACTS,
+      evidence: "she has swallowed a large nut, and is choking" }
+  - { from: death_hen_little_hen, to: death_hen_little_cock, label: REQUESTS_WATER,
+      evidence: "fetch me some water, or I shall choke" }
+
+  # Delayed aid chain
+  - { from: death_hen_little_cock, to: loc_death_hen_spring, label: RUNS_TO,
+      evidence: "run as fast as he could to the spring" }
+  - { from: death_hen_little_cock, to: death_hen_stream, label: ASKS_WATER_FROM,
+      evidence: "Stream, thou art to give me some water" }
+  - { from: death_hen_stream, to: obj_death_hen_red_silk, label: DEMANDS_FIRST,
+      evidence: "First run to the bride, and get her to give thee some red silk" }
+  - { from: death_hen_little_cock, to: death_hen_bride, label: ASKS_SILK_FROM,
+      evidence: "Bride, you are to give me some red silk" }
+  - { from: death_hen_bride, to: obj_death_hen_wreath, label: DEMANDS_FIRST,
+      evidence: "First run and bring me my little wreath" }
+  - { from: obj_death_hen_wreath, to: loc_death_hen_willow, label: HANGS_ON,
+      evidence: "hanging to a willow" }
+  - { from: death_hen_little_cock, to: obj_death_hen_wreath, label: RETRIEVES,
+      evidence: "drew the wreath from the branch" }
+  - { from: death_hen_bride, to: death_hen_little_cock, label: GIVES_WATER,
+      evidence: "the bride gave him some water for it" }
+  - { from: death_hen_little_cock, to: death_hen_little_hen, label: RETURNS_TOO_LATE_TO,
+      evidence: "when he got there the hen had choked in the meantime" }
+  - { from: death_hen_little_hen, to: death_hen_little_cock, label: LIES_DEAD_BEFORE,
+      evidence: "lay there dead and motionless" }
+
+  # Lament and funeral carriage
+  - { from: death_hen_little_cock, to: affect_grief, label: EMBODIES,
+      evidence: "so distressed that he cried aloud" }
+  - { from: death_hen_little_cock, to: law_contagious_lament_cascades, label: INITIATES,
+      evidence: "every animal came to lament the little hen" }
+  - { from: death_hen_six_mice, to: num_6, label: NUMBERED_AS,
+      evidence: "six mice" }
+  - { from: death_hen_six_mice, to: obj_death_hen_funeral_carriage, label: BUILDS,
+      evidence: "six mice built a little carriage" }
+  - { from: obj_death_hen_funeral_carriage, to: death_hen_little_hen, label: CARRIES_TO_GRAVE,
+      evidence: "to carry her to her grave" }
+  - { from: death_hen_six_mice, to: obj_death_hen_funeral_carriage, label: HARNESSED_TO,
+      evidence: "they harnessed themselves to it" }
+  - { from: death_hen_little_cock, to: obj_death_hen_funeral_carriage, label: DRIVES,
+      evidence: "the cock drove" }
+  - { from: death_hen_fox, to: death_hen_little_cock, label: ASKS_TO_JOIN,
+      evidence: "May I drive with thee?" }
+  - { from: death_hen_fox, to: obj_death_hen_funeral_carriage, label: SEATS_AT_BACK,
+      evidence: "Then the fox seated himself at the back" }
+  - { from: death_hen_wolf, to: obj_death_hen_funeral_carriage, label: JOINS_PROCESSION,
+      evidence: "and after that the wolf" }
+  - { from: death_hen_bear, to: obj_death_hen_funeral_carriage, label: JOINS_PROCESSION,
+      evidence: "the bear" }
+  - { from: death_hen_stag, to: obj_death_hen_funeral_carriage, label: JOINS_PROCESSION,
+      evidence: "the stag" }
+  - { from: death_hen_lion, to: obj_death_hen_funeral_carriage, label: JOINS_PROCESSION,
+      evidence: "the lion" }
+
+  # Crossing failures and universal death
+  - { from: death_hen_little_cock, to: loc_death_hen_crossing_stream, label: REACHES,
+      evidence: "they reached the stream" }
+  - { from: death_hen_straw, to: loc_death_hen_crossing_stream, label: LAYS_ACROSS,
+      evidence: "I will lay myself across" }
+  - { from: death_hen_straw, to: death_hen_six_mice, label: FAILS_UNDER,
+      evidence: "the straw slipped and fell into the water" }
+  - { from: death_hen_six_mice, to: loc_death_hen_crossing_stream, label: DROWN_IN,
+      evidence: "the six mice all fell in and were drowned" }
+  - { from: death_hen_coal, to: loc_death_hen_crossing_stream, label: LAYS_ACROSS,
+      evidence: "I will lay myself across and you shall drive over me" }
+  - { from: death_hen_coal, to: loc_death_hen_crossing_stream, label: TOUCHES_WATER_AND_DIES,
+      evidence: "just touched it, on which the coal hissed, was extinguished and died" }
+  - { from: death_hen_stone, to: death_hen_little_cock, label: TAKES_PITY_ON,
+      evidence: "it took pity on the little cock" }
+  - { from: death_hen_stone, to: loc_death_hen_crossing_stream, label: LAYS_OVER,
+      evidence: "laid itself over the water" }
+  - { from: death_hen_little_cock, to: obj_death_hen_funeral_carriage, label: DRAWS_ALONE,
+      evidence: "Then the cock drew the carriage himself" }
+  - { from: obj_death_hen_funeral_carriage, to: loc_death_hen_crossing_stream, label: RUNS_BACK_INTO,
+      evidence: "the carriage ran back" }
+  - { from: death_hen_fox, to: loc_death_hen_crossing_stream, label: DROWNS_IN,
+      evidence: "they all fell into the water together, and were drowned" }
+  - { from: death_hen_wolf, to: loc_death_hen_crossing_stream, label: DROWNS_IN,
+      evidence: "they all fell into the water together, and were drowned" }
+  - { from: death_hen_bear, to: loc_death_hen_crossing_stream, label: DROWNS_IN,
+      evidence: "they all fell into the water together, and were drowned" }
+  - { from: death_hen_stag, to: loc_death_hen_crossing_stream, label: DROWNS_IN,
+      evidence: "they all fell into the water together, and were drowned" }
+  - { from: death_hen_lion, to: loc_death_hen_crossing_stream, label: DROWNS_IN,
+      evidence: "they all fell into the water together, and were drowned" }
+  - { from: death_hen_little_cock, to: loc_death_hen_grave, label: DIGS,
+      evidence: "dug a grave for her and laid her in it" }
+  - { from: death_hen_little_cock, to: loc_death_hen_grave, label: FRETS_ON_MOUND_UNTIL_DEATH,
+      evidence: "made a mound above it, on which he sat down and fretted until he died too" }
+  - { from: law_contagious_lament_cascades, to: death_hen_little_cock, label: ENDS_WITH_TOTAL_DEATH,
+      evidence: "and then every one was dead" }

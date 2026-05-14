@@ -1,0 +1,8 @@
+slug: the-death-of-the-little-hen
+khm: 80
+atu: '2021'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

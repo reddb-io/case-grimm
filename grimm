@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+if [[ "${1:-}" == "setup" ]]; then
+  cd "$ROOT"
+  pnpm install
+  pnpm --dir src/embedded install
+  exit 0
+fi
+
+cd "$ROOT/src/embedded"
+
+exec pnpm exec tsx src/grimm.ts "$@"

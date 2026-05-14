@@ -1,0 +1,134 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-fox-and-the-geese
+khm: 86
+atu: '227'
+atu_name: The Geese Ask for Respite for Prayer
+canonical_source: ../../2-silver/canonical/the-fox-and-the-geese/canonical.txt
+title: The Fox and the Geese
+
+
+entities:
+
+  characters:
+
+    fox_geese_fox:
+      name: The Fox
+      archetypes: [arc_predator]
+      species: sp_fox
+      agency_modes: [agency_violence, agency_speech]
+      speech_acts_performed: [speech_command]
+      affects: [affect_hunger]
+      traits: [predatory, merciless, sequential-eater, concession-granter, prayer-waiter]
+      evidence: |
+        I come in the nick of time, you are sitting together quite
+        beautifully, so that I can eat you up one after the other.
+
+    fox_geese_flock:
+      name: The Flock of Geese
+      species: sp_goose
+      agency_modes: [agency_speech, agency_cunning, agency_endurance]
+      speech_acts_performed: [speech_prayer]
+      affects: [affect_fear]
+      traits: [fine, fat, terrified, piteous, collective-prayers, indefinitely-cackling]
+      evidence: |
+        The geese cackled with terror, sprang up, and began to wail
+        and beg piteously for their lives.
+
+    fox_geese_first_goose:
+      name: The First Goose
+      species: sp_goose
+      agency_modes: [agency_speech, agency_cunning]
+      speech_acts_performed: [speech_prayer]
+      affects: [affect_fear]
+      traits: [took-heart, delay-initiator, pious-requester, line-arranger]
+      evidence: |
+        At length one of them took heart
+
+  locations:
+
+    loc_fox_geese_meadow:
+      name: The Meadow of Geese
+      instance_of: loc_meadow
+      evidence: |
+        The fox once came to a meadow in which was a flock of fine fat
+        geese
+
+
+classifications:
+
+  world_laws:
+    - law_endless_prayer_suspends_predation
+    - law_might_unmakes_promise
+
+  moral_regimes:
+    - moral_comic_inversion
+    - moral_trickster_wins
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+    - agency_violence
+    - agency_endurance
+
+  affects_driving:
+    - affect_fear
+    - affect_hunger
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: fox_geese_flock,
+      scene: "a flock of fine fat geese sits together in a meadow" }
+  - { function: func_predatory_arrival, order: 2, actor: fox_geese_fox,
+      scene: "the fox arrives and declares the geese perfectly placed for eating one after another" }
+  - { function: func_lamentation, order: 3, actor: fox_geese_flock,
+      scene: "the geese cackle, wail, and beg for their lives" }
+  - { function: func_death_sentence, order: 4, actor: fox_geese_fox,
+      scene: "the fox refuses mercy and says the geese must die" }
+  - { function: func_delaying_request, order: 5, actor: fox_geese_first_goose,
+      scene: "one goose asks for one more prayer before the flock yields up its lives" }
+  - { function: func_permission, order: 6, actor: fox_geese_fox,
+      scene: "the fox accepts the request as reasonable and waits" }
+  - { function: func_endless_prayer, order: 7, actor: fox_geese_flock,
+      scene: "the geese begin praying and soon all cackle together without stopping" }
+  - { function: func_narrative_suspension, order: 8,
+      scene: "the narrator says the story will continue when the geese finish praying" }
+
+
+edges:
+
+  # Predator arrives among collective prey
+  - { from: fox_geese_fox, to: loc_fox_geese_meadow, label: COMES_TO,
+      evidence: "The fox once came to a meadow" }
+  - { from: loc_fox_geese_meadow, to: fox_geese_flock, label: CONTAINS,
+      evidence: "a meadow in which was a flock of fine fat geese" }
+  - { from: fox_geese_fox, to: fox_geese_flock, label: PLANS_TO_EAT,
+      evidence: "so that I can eat you up one after the other." }
+  - { from: fox_geese_fox, to: fox_geese_flock, label: THREATENS,
+      evidence: "You must die." }
+
+  # Terror turns into ritual delay
+  - { from: fox_geese_flock, to: affect_fear, label: FEELS,
+      evidence: "The geese cackled with terror" }
+  - { from: fox_geese_flock, to: fox_geese_fox, label: BEGS_FOR_LIVES,
+      evidence: "beg piteously for their lives" }
+  - { from: fox_geese_fox, to: fox_geese_flock, label: REFUSES_MERCY,
+      evidence: "There is no mercy to be had!" }
+  - { from: fox_geese_first_goose, to: fox_geese_fox, label: REQUESTS_PRAYER_DELAY,
+      evidence: "allow us one more prayer, that we may not die in our sins" }
+  - { from: fox_geese_first_goose, to: fox_geese_flock, label: PROPOSES_ORDERED_SACRIFICE,
+      evidence: "then we will place ourselves in a row" }
+  - { from: fox_geese_fox, to: speech_prayer, label: PERMITS,
+      evidence: "Pray away, I will wait till you are done." }
+
+  # Comic suspension replaces the promised eating
+  - { from: fox_geese_flock, to: speech_prayer, label: PERFORMS,
+      evidence: "Then the first began a good long prayer" }
+  - { from: fox_geese_flock, to: speech_prayer, label: EXTENDS_WITHOUT_END,
+      evidence: "as she would make no end" }
+  - { from: fox_geese_flock, to: fox_geese_flock, label: CACKLES_TOGETHER,
+      evidence: "soon they were all cackling together" }
+  - { from: law_endless_prayer_suspends_predation, to: fox_geese_flock, label: SUSPENDS_DEATH_FOR,
+      evidence: "at present they are still praying without stopping" }
+  - { from: atu_227, to: law_endless_prayer_suspends_predation, label: REALIZED_BY,
+      evidence: "When they have done praying, the story shall be continued further" }

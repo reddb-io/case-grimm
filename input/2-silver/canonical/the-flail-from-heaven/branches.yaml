@@ -1,0 +1,8 @@
+slug: the-flail-from-heaven
+khm: 112
+atu: 1889K
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

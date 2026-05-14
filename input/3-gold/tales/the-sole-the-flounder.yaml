@@ -1,0 +1,135 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-sole-the-flounder
+khm: 172
+atu: "250"
+atu_name: The Sole and the Flounder
+canonical_source: ../../2-silver/canonical/the-sole-the-flounder/canonical.txt
+title: The Sole and the Flounder
+
+
+entities:
+
+  characters:
+
+    sole_flounder_fishes:
+      name: The Discontented Fishes
+      species: sp_fish
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      affects: [affect_anger]
+      traits: [kingdom-without-order, justice-seeking-collective, race-assembly, weak-and-strong-polity]
+      evidence: |
+        The fishes had for a long time been discontented
+
+    sole_flounder_pike:
+      name: The Pike
+      species: sp_fish
+      agency_modes: [agency_extraordinary_body, agency_speech]
+      traits: [tail-signal-giver, arrow-swimmer, race-leader-contender]
+      evidence: |
+        the pike gave the signal with his tail
+
+    sole_flounder_herring:
+      name: The Herring
+      species: sp_fish
+      agency_modes: [agency_extraordinary_body]
+      affects: [affect_joy]
+      traits: [race-winner, first-fish, insulted-victor, prospective-king]
+      evidence: |
+        The herring is first!
+
+    sole_flounder_sole:
+      name: The Flat Envious Sole
+      species: sp_fish
+      agency_modes: [agency_speech, agency_extraordinary_body]
+      affects: [affect_envy, affect_anger]
+      traits: [flat-fish, race-loser, envious-insulter, jealous-creature, side-mouthed-punished-species]
+      evidence: |
+        the flat envious sole
+
+    sole_flounder_weak_fish:
+      name: The Weak Fishes
+      species: sp_fish
+      agency_modes: [agency_endurance]
+      affects: [affect_fear]
+      traits: [unprotected-weak, tail-struck, swallowed-by-strong, hoped-for-helped]
+      evidence: |
+        a strong one gave a weak one a blow with its tail
+
+  locations:
+
+    loc_sole_flounder_fish_kingdom:
+      name: The Disorderly Fish Kingdom
+      instance_of: loc_sea
+      evidence: |
+        no order prevailed in their kingdom
+
+    loc_sole_flounder_shore_start:
+      name: The Shore Race-Line
+      instance_of: loc_sea
+      evidence: |
+        placed themselves in rank and file by the shore
+
+
+classifications:
+
+  world_laws:
+    - law_envious_insult_marks_animal_body
+
+  moral_regimes:
+    - moral_retributive
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_social_rank
+    - agency_extraordinary_body
+    - agency_speech
+
+  affects_driving:
+    - affect_envy
+    - affect_anger
+
+  symbol_numbers: []
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_initial_disorder, order: 1, actor: sole_flounder_fishes,
+      scene: "the fish kingdom lacks order, law, and justice" }
+  - { function: func_collective_desire, order: 2, actor: sole_flounder_fishes,
+      scene: "the fishes desire a king who will enforce justice and help the weak" }
+  - { function: func_contest_proclamation, order: 3, actor: sole_flounder_fishes,
+      scene: "the ruler will be the fish who cleaves through water most quickly" }
+  - { function: func_race, order: 4, actor: sole_flounder_pike,
+      scene: "the pike signals with his tail and the fish race begins" }
+  - { function: func_victory, order: 5, actor: sole_flounder_herring,
+      scene: "the herring is announced as first" }
+  - { function: func_insult, order: 6, actor: sole_flounder_sole,
+      scene: "the envious sole angrily mocks the herring as naked" }
+  - { function: func_etiological_punishment, order: 7, actor: law_envious_insult_marks_animal_body,
+      scene: "the sole's mouth is placed at one side as punishment" }
+
+
+edges:
+
+  - { from: sole_flounder_fishes, to: loc_sole_flounder_fish_kingdom, label: LACKS_ORDER_IN,
+      evidence: "no order prevailed in their kingdom" }
+  - { from: sole_flounder_fishes, to: sole_flounder_weak_fish, label: FAILS_TO_PROTECT,
+      evidence: "swallowed it up without more ado" }
+  - { from: sole_flounder_fishes, to: agency_social_rank, label: DESIRES_KINGSHIP_FOR_JUSTICE,
+      evidence: "if we had a king who enforced law and justice among us" }
+  - { from: sole_flounder_fishes, to: sole_flounder_herring, label: SETS_SPEED_CONTEST_FOR,
+      evidence: "the one who could cleave through the water most quickly" }
+  - { from: sole_flounder_pike, to: sole_flounder_fishes, label: SIGNALS_START_TO,
+      evidence: "gave the signal with his tail" }
+  - { from: sole_flounder_pike, to: loc_sole_flounder_shore_start, label: DARTS_FROM,
+      evidence: "Like an arrow, the pike darted away" }
+  - { from: sole_flounder_herring, to: sole_flounder_fishes, label: WINS_RACE_BEFORE,
+      evidence: "The herring is first!" }
+  - { from: sole_flounder_sole, to: sole_flounder_herring, label: ENVIES_AND_QUESTIONS,
+      evidence: "Who is first?" }
+  - { from: sole_flounder_sole, to: sole_flounder_herring, label: INSULTS_AS_NAKED,
+      evidence: "The naked herring?" }
+  - { from: law_envious_insult_marks_animal_body, to: sole_flounder_sole, label: MARKS_BODY_OF,
+      evidence: "the sole’s mouth has been at one side for a punishment" }

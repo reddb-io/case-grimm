@@ -1,0 +1,8 @@
+slug: the-three-spinning-women
+khm: 14
+atu: '501'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

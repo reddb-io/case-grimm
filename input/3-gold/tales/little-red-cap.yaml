@@ -1,0 +1,316 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: little-red-cap
+khm: 26
+atu: '333'
+atu_name: Little Red Riding Hood
+canonical_source: ../../2-silver/canonical/little-red-cap/canonical.txt
+title: Little Red-Cap
+
+
+entities:
+
+  characters:
+
+    little_red_cap:
+      name: Little Red-Cap
+      archetypes: [arc_naive_victim]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_domestic_labor]
+      existential_states: [state_deceived, state_devoured_but_alive]
+      affects: [affect_curiosity, affect_fear, affect_grief]
+      traits: [red-cap-wearer, errand-carrier, path-leaver, flower-picker, swallowed-alive, lesson-learner]
+      evidence: |
+        "Red-Cap did not know what a wicked creature he was, and was
+        not at all afraid of him."
+
+    little_red_cap_mother:
+      name: Little Red-Cap's Mother
+      archetypes: [arc_prohibition_giver]
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank, agency_domestic_labor]
+      speech_acts_performed: [speech_command, speech_prohibition]
+      affects: [affect_maternal_love]
+      traits: [errand-setter, path-warner, greeting-instructor]
+      evidence: |
+        "walk nicely and quietly and do not run off the path"
+
+    little_red_cap_grandmother:
+      name: The Grandmother
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_endurance]
+      existential_states: [state_devoured_but_alive]
+      affects: [affect_fear]
+      traits: [sick, weak, forest-dwelling, swallowed-alive, second-wolf-trapper]
+      evidence: |
+        "the aged grandmother came out alive also, but scarcely able to
+        breathe."
+
+    little_red_cap_wolf:
+      name: The First Wolf
+      archetypes: [arc_predator, arc_disguised_villain]
+      species: sp_wolf
+      agency_modes: [agency_cunning, agency_speech, agency_violence]
+      existential_states: [state_disguised]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_greed]
+      traits: [forest-approacher, path-diverter, grandmother-devourer, bed-disguiser, stone-punished]
+      evidence: |
+        "I must act craftily, so as to catch both."
+
+    little_red_cap_huntsman:
+      name: The Huntsman
+      species: sp_human
+      agency_modes: [agency_violence, agency_cunning, agency_speech]
+      affects: [affect_anger]
+      traits: [wolf-seeker, snore-hearer, surgical-rescuer, skin-taker]
+      evidence: |
+        "Do I find thee here, thou old sinner!... I have long sought
+        thee!"
+
+    little_red_cap_second_wolf:
+      name: The Second Wolf
+      archetypes: [arc_predator, arc_disguised_villain]
+      species: sp_wolf
+      agency_modes: [agency_cunning, agency_speech, agency_violence]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_greed]
+      traits: [public-road-threat, false-red-cap, roof-waiter, sausage-water-drowned]
+      evidence: |
+        "another wolf spoke to her, and tried to entice her from the
+        path."
+
+  magic_objects:
+
+    obj_little_red_cap_red_cap:
+      name: The Red Velvet Cap
+      object_kind: garment
+      attributes:
+        function: names and identifies the child
+      evidence: |
+        "she gave her a little cap of red velvet... so she was always
+        called 'Little Red-Cap.'"
+
+    obj_little_red_cap_cake_wine:
+      name: The Cake and Bottle of Wine
+      object_kind: food
+      attributes:
+        function: errand-gift for the sick grandmother
+      evidence: |
+        "here is a piece of cake and a bottle of wine; take them to
+        your grandmother"
+
+    obj_little_red_cap_flowers:
+      name: The Forest Nosegay
+      object_kind: material
+      attributes:
+        function: distraction that draws Red-Cap deeper from the path
+      evidence: |
+        "Suppose I take grandmother a fresh nosegay"
+
+    obj_little_red_cap_grandmother_clothes:
+      name: The Grandmother's Clothes and Cap
+      object_kind: garment
+      attributes:
+        function: disguise worn by the wolf in bed
+      evidence: |
+        "Then he put on her clothes, dressed himself in her cap"
+
+    obj_little_red_cap_scissors:
+      name: The Huntsman's Scissors
+      object_kind: tool
+      attributes:
+        function: cut open wolf's belly without killing the victims
+      evidence: |
+        "took a pair of scissors, and began to cut open the stomach of
+        the sleeping wolf."
+
+    obj_little_red_cap_stones:
+      name: The Great Stones
+      object_kind: material
+      attributes:
+        function: substitute weight placed inside the wolf's body
+      evidence: |
+        "quickly fetched great stones with which they filled the wolf's
+        body"
+
+    obj_little_red_cap_sausage_water:
+      name: The Sausage-Boiling Water
+      object_kind: food
+      attributes:
+        function: smell-bait that draws the second wolf into the trough
+      evidence: |
+        "carry the water in which I boiled them to the trough"
+
+    obj_little_red_cap_trough:
+      name: The Great Stone Trough
+      object_kind: architecture
+      attributes:
+        function: drowning trap for the second wolf
+      evidence: |
+        "In front of the house was a great stone trough"
+
+  locations:
+
+    loc_little_red_cap_village:
+      name: Little Red-Cap's Village
+      evidence: |
+        "The grandmother lived out in the wood, half a league from the
+        village"
+
+    loc_little_red_cap_forest:
+      name: The Forest Path to Grandmother
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "just as Little Red-Cap entered the wood, a wolf met her."
+
+    loc_little_red_cap_deep_wood:
+      name: The Deeper Flower Wood
+      instance_of: loc_forest
+      evidence: |
+        "ran after it, and so got deeper and deeper into the wood."
+
+    loc_little_red_cap_grandmother_house:
+      name: Grandmother's House Under the Trees
+      instance_of: loc_house
+      evidence: |
+        "her house stands under the three large oak-trees, the
+        nut-trees are just below"
+
+    loc_little_red_cap_bedroom:
+      name: Grandmother's Bed-Room
+      instance_of: loc_house
+      evidence: |
+        "laid himself in bed and drew the curtains."
+
+    loc_little_red_cap_roof:
+      name: Grandmother's Roof
+      instance_of: loc_house
+      evidence: |
+        "jumped on the roof, intending to wait until Red-Cap went home"
+
+
+classifications:
+
+  world_laws:
+    - law_prohibition_invites_violation
+    - law_forest_suspends_domestic_order
+    - law_devouring_can_be_reversed
+
+  moral_regimes:
+    - moral_restorative
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+    - agency_violence
+    - agency_endurance
+
+  affects_driving:
+    - affect_fear
+    - affect_greed
+    - affect_curiosity
+    - affect_maternal_love
+
+  symbol_numbers:
+    - num_2   # two wolf episodes: first naive fall, second learned counter-trap
+    - num_3   # mother, grandmother, and child restored; three oak-trees mark the house
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+  - { function: func_interdiction, order: 1, actor: little_red_cap_mother,
+      scene: "mother sends cake and wine but forbids leaving the path" }
+  - { function: func_departure, order: 2, actor: little_red_cap,
+      scene: "Little Red-Cap enters the wood on the errand to grandmother" }
+  - { function: func_trickery, order: 3, actor: little_red_cap_wolf,
+      scene: "wolf questions her, learns grandmother's house, and diverts her toward flowers" }
+  - { function: func_violation, order: 4, actor: little_red_cap,
+      scene: "she runs from the path and goes deeper into the wood picking flowers" }
+  - { function: func_villainy, order: 5, actor: little_red_cap_wolf,
+      scene: "wolf devours grandmother and disguises himself in her bed" }
+  - { function: func_villainy, order: 6, actor: little_red_cap_wolf,
+      scene: "wolf swallows Little Red-Cap after the bed-recognition dialogue" }
+  - { function: func_rescue, order: 7, actor: little_red_cap_huntsman,
+      scene: "huntsman cuts open the sleeping wolf and rescues Red-Cap and grandmother alive" }
+  - { function: func_punishment, order: 8, actor: little_red_cap,
+      scene: "stones fill the wolf's body and kill him when he wakes" }
+  - { function: func_recognition, order: 9, actor: little_red_cap,
+      scene: "Red-Cap learns never again to leave the path against her mother's prohibition" }
+  - { function: func_trickery, order: 10, actor: little_red_cap_second_wolf,
+      scene: "a second wolf tries to entice Red-Cap from the path and later impersonates her at the door" }
+  - { function: func_victory, order: 11, actor: little_red_cap_grandmother,
+      scene: "grandmother and Red-Cap keep the door shut and prepare sausage-water bait" }
+  - { function: func_punishment, order: 12, actor: little_red_cap_second_wolf,
+      scene: "second wolf slips from the roof into the trough and drowns" }
+
+
+edges:
+
+  # Interdiction and forest diversion
+  - { from: little_red_cap_mother, to: little_red_cap, label: COMMANDS,
+      evidence: "take them to your grandmother" }
+  - { from: little_red_cap_mother, to: little_red_cap, label: WARNS,
+      evidence: "do not run off the path" }
+  - { from: little_red_cap, to: obj_little_red_cap_cake_wine, label: CARRIES,
+      evidence: "Cake and wine... poor sick grandmother is to have something good" }
+  - { from: little_red_cap, to: loc_little_red_cap_forest, label: ENTERS,
+      evidence: "just as Little Red-Cap entered the wood, a wolf met her." }
+  - { from: little_red_cap_wolf, to: little_red_cap, label: QUESTIONS,
+      evidence: "Whither away so early, Little Red-Cap?" }
+  - { from: little_red_cap, to: loc_little_red_cap_grandmother_house, label: REVEALS_LOCATION_OF,
+      evidence: "her house stands under the three large oak-trees" }
+  - { from: little_red_cap_wolf, to: little_red_cap, label: DECEIVES,
+      evidence: "See Little Red-Cap, how pretty the flowers are about here" }
+  - { from: little_red_cap, to: obj_little_red_cap_flowers, label: PICKS,
+      evidence: "ran from the path into the wood to look for flowers." }
+
+  # First wolf's devouring and disguise
+  - { from: little_red_cap_wolf, to: little_red_cap_grandmother, label: SWALLOWS_WHOLE,
+      evidence: "went straight to the grandmother's bed, and devoured her." }
+  - { from: little_red_cap_wolf, to: obj_little_red_cap_grandmother_clothes, label: USES,
+      evidence: "put on her clothes, dressed himself in her cap" }
+  - { from: little_red_cap_wolf, to: little_red_cap_grandmother, label: DISGUISES_AS,
+      evidence: "There lay her grandmother with her cap pulled far over her face" }
+  - { from: little_red_cap_wolf, to: little_red_cap, label: LIES_TO,
+      evidence: "The better to hear you with, my child" }
+  - { from: little_red_cap_wolf, to: little_red_cap, label: SWALLOWS_WHOLE,
+      evidence: "with one bound he was out of bed and swallowed up Red-Cap." }
+
+  # Rescue and retribution
+  - { from: little_red_cap_huntsman, to: little_red_cap_wolf, label: FINDS,
+      evidence: "when he came to the bed, he saw that the wolf was lying in it." }
+  - { from: little_red_cap_huntsman, to: obj_little_red_cap_scissors, label: USES,
+      evidence: "took a pair of scissors" }
+  - { from: little_red_cap_huntsman, to: little_red_cap, label: RESCUES_FROM_BELLY,
+      evidence: "the little girl sprang out" }
+  - { from: little_red_cap_huntsman, to: little_red_cap_grandmother, label: RESCUES_FROM_BELLY,
+      evidence: "the aged grandmother came out alive also" }
+  - { from: little_red_cap, to: obj_little_red_cap_stones, label: FETCHES,
+      evidence: "Red-Cap, however, quickly fetched great stones" }
+  - { from: obj_little_red_cap_stones, to: little_red_cap_wolf, label: KILLS,
+      evidence: "the stones were so heavy that he fell down at once, and fell dead." }
+  - { from: little_red_cap_huntsman, to: little_red_cap_wolf, label: TAKES_SKIN_FROM,
+      evidence: "The huntsman drew off the wolf's skin" }
+  - { from: little_red_cap, to: law_prohibition_invites_violation, label: LEARNS,
+      evidence: "I will never by myself leave the path... when my mother has forbidden me to do so." }
+
+  # Second wolf and learned counter-trap
+  - { from: little_red_cap_second_wolf, to: little_red_cap, label: TRIES_TO_ENTICE,
+      evidence: "another wolf spoke to her, and tried to entice her from the path." }
+  - { from: little_red_cap, to: little_red_cap_grandmother, label: WARNS,
+      evidence: "told her grandmother that she had met the wolf" }
+  - { from: little_red_cap_grandmother, to: little_red_cap_second_wolf, label: SHUTS_OUT,
+      evidence: "we will shut the door, that he may not come in." }
+  - { from: little_red_cap_second_wolf, to: loc_little_red_cap_roof, label: CLIMBS_ONTO,
+      evidence: "jumped on the roof" }
+  - { from: little_red_cap_grandmother, to: obj_little_red_cap_sausage_water, label: DEPLOYS_AS_BAIT,
+      evidence: "carry the water in which I boiled them to the trough." }
+  - { from: obj_little_red_cap_sausage_water, to: little_red_cap_second_wolf, label: ATTRACTS,
+      evidence: "the smell of the sausages reached the wolf" }
+  - { from: obj_little_red_cap_trough, to: little_red_cap_second_wolf, label: DROWNS,
+      evidence: "slipped down from the roof straight into the great trough, and was drowned." }

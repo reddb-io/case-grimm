@@ -1,0 +1,514 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-twelve-idle-servants
+khm: 151
+khm_variant: true
+atu: "1951"
+atu_name: The Twelve Idle Servants
+canonical_source: ../../2-silver/canonical/the-twelve-idle-servants/canonical.txt
+title: The Twelve Idle Servants
+
+
+entities:
+
+  characters:
+
+    idle_servants_collective:
+      name: The Twelve Idle Servants
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance, agency_domestic_labor]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_sloth, affect_pride]
+      traits: [twelve-servants, day-long-nonworkers, night-resters, idleness-boasters]
+      evidence: |
+        Twelve servants who had done nothing all the day
+
+    idle_servants_first:
+      name: The First Idle Servant
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance, agency_domestic_labor]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_sloth, affect_hunger, affect_pride]
+      traits: [four-meal-faster, slow-summons-answerer, body-care-worker]
+      evidence: |
+        I eat not a little and drink still more
+
+    idle_servants_second:
+      name: The Second Idle Servant
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor, agency_object_mediation]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_sloth, affect_pride]
+      traits: [horse-neglector, oat-chest-sleeper, token-comber]
+      evidence: |
+        I have a horse to look after
+
+    idle_servants_third:
+      name: The Third Idle Servant
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_sloth, affect_pride]
+      traits: [sun-sleeper, rain-endurer, skull-hole-survivor]
+      evidence: |
+        I laid myself in the sun, and fell asleep
+
+    idle_servants_fourth:
+      name: The Fourth Idle Servant
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_boast, speech_request]
+      affects: [affect_sloth, affect_pride]
+      traits: [strength-saver, helper-seeker, work-onlooker]
+      evidence: |
+        I first loiter about for an hour
+
+    idle_servants_fifth:
+      name: The Fifth Idle Servant
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor, agency_object_mediation]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_sloth, affect_pride]
+      traits: [stable-manure-worker, half-lifter, quarter-hour-rester]
+      evidence: |
+        I am to take away the manure from the horse’s stable
+
+    idle_servants_sixth:
+      name: The Sixth Idle Servant
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_sloth, affect_pride]
+      traits: [three-week-recliner, unbuckled-shoe-wearer, stair-counter]
+      evidence: |
+        I lie down for three weeks
+
+    idle_servants_seventh:
+      name: The Seventh Idle Servant
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance, agency_domestic_labor]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_sloth, affect_pride]
+      traits: [master-watched-worker, crawling-runner, carried-home-sleeper]
+      evidence: |
+        I run as fast as it is possible to do when one crawls
+
+    idle_servants_eighth:
+      name: The Eighth Idle Servant
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_sloth, affect_pride]
+      traits: [stone-avoider, mud-lying-drier, minimal-turner]
+      evidence: |
+        if a stone lie before me, I do not give myself the trouble to raise my legs
+
+    idle_servants_ninth:
+      name: The Ninth Idle Servant
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_sloth, affect_hunger, affect_pride]
+      traits: [bread-refuser, thirst-bearer, log-like-recliner]
+      evidence: |
+        I was too idle to take it, and nearly died of hunger
+
+    idle_servants_tenth:
+      name: The Tenth Idle Servant
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_sloth, affect_pride]
+      traits: [road-recliner, cart-wounded, midge-distracted]
+      evidence: |
+        Laziness has brought misfortune on me, a broken leg and swollen calf
+
+    idle_servants_eleventh:
+      name: The Eleventh Idle Servant
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_sloth, affect_pride]
+      traits: [dismissed-servant, book-carriage-refuser, dust-clothes-neglector]
+      evidence: |
+        I gave up my place yesterday
+
+    idle_servants_twelfth:
+      name: The Twelfth Idle Servant
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor, agency_object_mediation]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_sloth, affect_pride]
+      traits: [cart-sleeper, rein-dropper, harness-loser, quagmire-abandoner]
+      evidence: |
+        To-day I had to drive the cart into the country
+
+    idle_servants_master:
+      name: The Master
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_domestic_labor]
+      traits: [work-supervisor, summons-caller, dismissal-giver, cart-rescuer]
+      evidence: |
+        If the master call
+
+    idle_servants_horse:
+      name: The Neglected Horse
+      species: sp_horse
+      agency_modes: [agency_endurance]
+      traits: [unfed-service-animal, bit-left-in-mouth, nearly-loose-cart-horse]
+      evidence: |
+        I have a horse to look after
+
+  magic_objects:
+
+    obj_idle_servants_bit:
+      name: The Bit Left in the Horse's Mouth
+      object_kind: tool
+      attributes:
+        function: sign that basic animal care is refused as too much work
+      evidence: |
+        I leave the bit in his mouth
+
+    obj_idle_servants_oat_chest:
+      name: The Oat-Chest Bed
+      object_kind: tool
+      attributes:
+        function: feed storage converted into a sleeping place instead of horse care
+      evidence: |
+        lay myself in the oat-chest and sleep for four hours
+
+    obj_idle_servants_plaster:
+      name: The Skull Plaster
+      object_kind: material
+      attributes:
+        function: trivial repair for injury caused by refusing to get out of the rain
+      evidence: |
+        I put a plaster on it
+
+    obj_idle_servants_manure_fork:
+      name: The Half-Raised Manure Fork
+      object_kind: tool
+      attributes:
+        function: work implement whose tiny lift becomes an excuse for rest
+      evidence: |
+        if I have taken anything on the fork
+
+    obj_idle_servants_stone:
+      name: The Stone Not Stepped Over
+      object_kind: material
+      attributes:
+        function: minimal obstacle that makes lying down easier than lifting the legs
+      evidence: |
+        if a stone lie before me
+
+    obj_idle_servants_bread:
+      name: The Untaken Bread
+      object_kind: food
+      attributes:
+        function: food close enough to eat but still too laborious to take
+      evidence: |
+        To-day the bread was before me
+
+    obj_idle_servants_jug:
+      name: The Heavy Jug
+      object_kind: tool
+      attributes:
+        function: drink container whose weight makes thirst preferable to lifting
+      evidence: |
+        a jug stood by it
+
+    obj_idle_servants_cart:
+      name: The Country Cart
+      object_kind: tool
+      attributes:
+        function: work vehicle turned into bed, theft site, and abandoned burden
+      evidence: |
+        had to drive the cart into the country
+
+    obj_idle_servants_books:
+      name: The Heavy Books
+      object_kind: book
+      attributes:
+        function: service burden the eleventh servant refuses to carry
+      evidence: |
+        carrying the heavy books to my master
+
+    obj_idle_servants_lost_harness:
+      name: The Stolen Harness
+      object_kind: tool
+      attributes:
+        function: lost cart equipment that proves the twelfth servant slept through theft
+      evidence: |
+        the harness was gone
+
+  locations:
+
+    loc_idle_servants_grass:
+      name: The Grass Where the Servants Lie
+      evidence: |
+        laid themselves on the grass
+
+    loc_idle_servants_stable:
+      name: The Horse's Stable
+      instance_of: loc_stable
+      evidence: |
+        the manure from the horse’s stable
+
+    loc_idle_servants_road:
+      name: The Road Where the Cart Passes
+      instance_of: loc_road
+      evidence: |
+        Three of us were lying in the road
+
+    loc_idle_servants_country:
+      name: The Country Cart Route
+      instance_of: loc_field
+      evidence: |
+        drive the cart into the country
+
+    loc_idle_servants_quagmire:
+      name: The Quagmire
+      evidence: |
+        the cart had got into a quagmire and stuck fast
+
+
+classifications:
+
+  world_laws:
+    - law_idle_boast_catalogue_escalates_neglect
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_domestic_labor
+    - agency_endurance
+    - agency_object_mediation
+
+  affects_driving:
+    - affect_sloth
+    - affect_pride
+    - affect_hunger
+
+  symbol_numbers:
+    - num_12
+
+  threshold_types: []
+
+
+propp:
+
+  - function: func_assembly
+    order: 1
+    actor: idle_servants_collective
+    scene: Twelve servants who have done no work lie down together and begin boasting.
+    evidence: |
+      Twelve servants who had done nothing all the day
+
+  - function: func_boast
+    order: 2
+    actor: idle_servants_first
+    scene: The first servant makes bodily appetite and slow response to the master into his main work.
+    evidence: |
+      The care of my body is my principal work
+
+  - function: func_boast
+    order: 3
+    actor: idle_servants_second
+    scene: The second servant neglects the horse, sleeps in the oat-chest, and barely brushes it.
+    evidence: |
+      I have a horse to look after, but I leave the bit in his mouth
+
+  - function: func_boast
+    order: 4
+    actor: idle_servants_third
+    scene: The third servant lets rain injure him rather than rise from the sun.
+    evidence: |
+      I let it rain on in God’s name
+
+  - function: func_boast
+    order: 5
+    actor: idle_servants_fourth
+    scene: The fourth servant delays, asks for help, and watches another person do most work.
+    evidence: |
+      Then I let him do the chief of the work
+
+  - function: func_boast
+    order: 6
+    actor: idle_servants_fifth
+    scene: The fifth servant turns stable cleaning into tiny lifts and long rests.
+    evidence: |
+      I only half-raise it up
+
+  - function: func_boast
+    order: 7
+    actor: idle_servants_sixth
+    scene: The sixth servant lies in his clothes for weeks and counts stairs to plan rests.
+    evidence: |
+      then I count the rest of them that I may know where I must rest
+
+  - function: func_boast
+    order: 8
+    actor: idle_servants_seventh
+    scene: The seventh servant claims to run by crawling and must be carried home from sleep.
+    evidence: |
+      when they wanted to have me home, they had to carry me
+
+  - function: func_boast
+    order: 9
+    actor: idle_servants_eighth
+    scene: The eighth servant lies down rather than step over a stone and waits for the sun to dry him.
+    evidence: |
+      I stay lying until the sun has dried me again
+
+  - function: func_boast
+    order: 10
+    actor: idle_servants_ninth
+    scene: The ninth servant almost starves and bears thirst because food and drink require lifting.
+    evidence: |
+      preferred bearing thirst
+
+  - function: func_boast
+    order: 11
+    actor: idle_servants_tenth
+    scene: The tenth servant lets cart wheels run over his legs rather than draw them back.
+    evidence: |
+      the wheels went over me
+
+  - function: func_boast
+    order: 12
+    actor: idle_servants_eleventh
+    scene: The eleventh servant treats dismissal for neglected books and clothes as welcome release.
+    evidence: |
+      he gave me my dismissal
+
+  - function: func_boast
+    order: 13
+    actor: idle_servants_twelfth
+    scene: The twelfth servant sleeps on the cart, loses the harness, leaves the cart stuck, and would still be sleeping there without the master.
+    evidence: |
+      I left it standing, and stretched myself on the straw again
+
+
+edges:
+
+  - from: idle_servants_collective
+    label: LIE_ON
+    to: loc_idle_servants_grass
+    evidence: |
+      laid themselves on the grass
+
+  - from: idle_servants_collective
+    label: BOAST_OF
+    to: affect_sloth
+    evidence: |
+      boasted of their idleness
+
+  - from: idle_servants_first
+    label: DELAYS_RESPONSE_TO
+    to: idle_servants_master
+    evidence: |
+      If the master call, I do exactly as if I had not heard him
+
+  - from: idle_servants_second
+    label: NEGLECTS
+    to: idle_servants_horse
+    evidence: |
+      I have a horse to look after, but I leave the bit in his mouth
+
+  - from: idle_servants_second
+    label: SLEEPS_IN
+    to: obj_idle_servants_oat_chest
+    evidence: |
+      lay myself in the oat-chest and sleep for four hours
+
+  - from: idle_servants_third
+    label: ENDURES_RAIN_INJURY
+    to: obj_idle_servants_plaster
+    evidence: |
+      I got a hole in the skull; I put a plaster on it
+
+  - from: idle_servants_fourth
+    label: DELEGATES_WORK
+    to: agency_domestic_labor
+    evidence: |
+      I let him do the chief of the work
+
+  - from: idle_servants_fifth
+    label: HALF_RAISES
+    to: obj_idle_servants_manure_fork
+    evidence: |
+      I only half-raise it up
+
+  - from: idle_servants_sixth
+    label: RESTS_BY_COUNTING
+    to: loc_idle_servants_grass
+    evidence: |
+      I count the rest of them that I may know where I must rest
+
+  - from: idle_servants_seventh
+    label: MUST_BE_CARRIED
+    to: idle_servants_master
+    evidence: |
+      they had to carry me
+
+  - from: idle_servants_eighth
+    label: REFUSES_TO_STEP_OVER
+    to: obj_idle_servants_stone
+    evidence: |
+      if a stone lie before me
+
+  - from: idle_servants_ninth
+    label: REFUSES_TO_TAKE
+    to: obj_idle_servants_bread
+    evidence: |
+      I was too idle to take it
+
+  - from: idle_servants_ninth
+    label: REFUSES_TO_LIFT
+    to: obj_idle_servants_jug
+    evidence: |
+      did not like to lift it up
+
+  - from: idle_servants_tenth
+    label: IS_RUN_OVER_ON
+    to: loc_idle_servants_road
+    evidence: |
+      the wheels went over me
+
+  - from: idle_servants_eleventh
+    label: REFUSES_TO_CARRY
+    to: obj_idle_servants_books
+    evidence: |
+      no fancy for carrying the heavy books
+
+  - from: idle_servants_eleventh
+    label: IS_DISMISSED_BY
+    to: idle_servants_master
+    evidence: |
+      he gave me my dismissal
+
+  - from: idle_servants_twelfth
+    label: SLEEPS_ON
+    to: obj_idle_servants_cart
+    evidence: |
+      made myself a bed of straw on it
+
+  - from: idle_servants_twelfth
+    label: LOSES
+    to: obj_idle_servants_lost_harness
+    evidence: |
+      the harness was gone
+
+  - from: obj_idle_servants_cart
+    label: STICKS_IN
+    to: loc_idle_servants_quagmire
+    evidence: |
+      the cart had got into a quagmire and stuck fast
+
+  - from: idle_servants_master
+    label: PUSHES_OUT
+    to: obj_idle_servants_cart
+    evidence: |
+      the master came himself, and pushed the cart out

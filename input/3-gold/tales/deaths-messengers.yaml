@@ -1,0 +1,253 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: deaths-messengers
+khm: 177
+atu: "335"
+atu_name: Death's Messengers
+canonical_source: ../../2-silver/canonical/deaths-messengers/canonical.txt
+title: Death's Messengers
+
+
+entities:
+
+  characters:
+
+    deaths_messengers_death:
+      name: Death
+      being_type: being_death
+      agency_modes: [agency_speech, agency_violence]
+      speech_acts_performed: [speech_command, speech_promise]
+      traits: [personified-death, cosmic-office-holder, defeated-by-giant, grateful-promiser, final-summoner]
+      evidence: |
+        I am Death
+
+    deaths_messengers_giant:
+      name: The Giant on the Highway
+      species: sp_human
+      being_type: being_giant
+      agency_modes: [agency_violence, agency_speech]
+      affects: [affect_pride]
+      traits: [giant, death-defier, overpowering-fighter, mortality-disrupter]
+      evidence: |
+        a giant was once travelling on a great highway
+
+    deaths_messengers_young_man:
+      name: The Young Man Who Helps Death
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_speech, agency_endurance]
+      speech_acts_performed: [speech_request]
+      affects: [affect_pity, affect_joy]
+      traits: [strong-youth, compassionate-helper, death-rescuer, warning-expecter, mortality-denier]
+      evidence: |
+        a young man came along the road, who was strong and healthy
+
+    deaths_messengers_ailments:
+      name: Death's Bodily Messengers
+      agency_modes: [agency_violence]
+      traits: [fever, dizziness, gout, ringing-ears, toothache, darkened-sight, bodily-warning-signs]
+      evidence: |
+        Did not fever come and smite thee
+
+    deaths_messengers_sleep:
+      name: Sleep, Death's Brother
+      agency_modes: [agency_endurance]
+      traits: [death-brother, nightly-reminder, deathlike-rehearsal]
+      evidence: |
+        my own brother Sleep reminded thee every night of me
+
+  magic_objects:
+
+    obj_deaths_messengers_strengthening_draught:
+      name: The Strengthening Draught
+      object_kind: food
+      attributes:
+        function: restores the half-fainting Death after the giant has struck him down
+      evidence: |
+        poured a strengthening draught out of his flask for him
+
+    obj_deaths_messengers_promise:
+      name: Death's Warning Promise
+      object_kind: token
+      attributes:
+        function: binds Death to send messengers before coming to take the helper away
+      evidence: |
+        will send my messengers to thee before I come and take thee away
+
+  locations:
+
+    loc_deaths_messengers_highway:
+      name: The Great Highway
+      instance_of: loc_road
+      evidence: |
+        travelling on a great highway
+
+    loc_deaths_messengers_road:
+      name: The Road of Compassionate Aid
+      instance_of: loc_road
+      evidence: |
+        a young man came along the road
+
+    loc_deaths_messengers_stone:
+      name: The Stone Where Death Falls
+      evidence: |
+        he dropped by a stone
+
+
+classifications:
+
+  world_laws:
+    - law_trapped_death_suspends_mortality
+    - law_ailments_are_deaths_messengers
+
+  moral_regimes:
+    - moral_memento_mori
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_violence
+    - agency_object_mediation
+
+  affects_driving:
+    - affect_pity
+    - affect_joy
+
+  symbol_numbers: []
+
+  threshold_types: []
+
+
+propp:
+
+  - function: func_confrontation
+    order: 1
+    actor: deaths_messengers_death
+    scene: Death blocks the giant on the highway and commands obedience.
+    evidence: |
+      Halt, not one step farther!
+
+  - function: func_villainy
+    order: 2
+    actor: deaths_messengers_giant
+    scene: The giant fights Death and strikes him down beside a stone.
+    evidence: |
+      struck Death down with his fist
+
+  - function: func_cosmic_disruption
+    order: 3
+    actor: deaths_messengers_death
+    scene: Death's defeat threatens to suspend mortality for the whole world.
+    evidence: |
+      No one will die in the world
+
+  - function: func_compassionate_aid
+    order: 4
+    actor: deaths_messengers_young_man
+    beneficiary: deaths_messengers_death
+    scene: A strong young man raises Death, gives him a strengthening draught, and waits for recovery.
+    evidence: |
+      went compassionately to him, raised him up
+
+  - function: func_promise
+    order: 5
+    actor: deaths_messengers_death
+    beneficiary: deaths_messengers_young_man
+    scene: Death promises to send messengers before taking the helper away.
+    evidence: |
+      I promise thee that I will not fall on thee unexpectedly
+
+  - function: func_unheeded_warnings
+    order: 6
+    actor: deaths_messengers_ailments
+    scene: Sicknesses and sorrows torment the man, but he treats them as separate from Death's promised summons.
+    evidence: |
+      soon came sicknesses and sorrows
+
+  - function: func_summons
+    order: 7
+    actor: deaths_messengers_death
+    scene: Death comes behind the man and says the hour of departure has arrived.
+    evidence: |
+      Follow me, the hour of thy departure from this world has come.
+
+  - function: func_explanation
+    order: 8
+    actor: deaths_messengers_death
+    scene: Death names fever, dizziness, gout, toothache, failing senses, and sleep as the messengers already sent.
+    evidence: |
+      Have I not sent one messenger to thee after another?
+
+  - function: func_acceptance
+    order: 9
+    actor: deaths_messengers_young_man
+    scene: The man cannot answer and yields to his fate.
+    evidence: |
+      yielded to his fate
+
+
+edges:
+
+  - from: deaths_messengers_death
+    label: COMMANDS
+    to: deaths_messengers_giant
+    evidence: |
+      thou also must obey my commands
+
+  - from: deaths_messengers_giant
+    label: STRIKES_DOWN
+    to: deaths_messengers_death
+    evidence: |
+      struck Death down with his fist
+
+  - from: deaths_messengers_death
+    label: FALLS_BY
+    to: loc_deaths_messengers_stone
+    evidence: |
+      he dropped by a stone
+
+  - from: deaths_messengers_death
+    label: SUSPENDS_MORTALITY_WHEN_DISABLED
+    to: law_trapped_death_suspends_mortality
+    evidence: |
+      No one will die in the world
+
+  - from: deaths_messengers_young_man
+    label: RESTORES_WITH
+    to: obj_deaths_messengers_strengthening_draught
+    evidence: |
+      poured a strengthening draught out of his flask for him
+
+  - from: deaths_messengers_young_man
+    label: HELPS
+    to: deaths_messengers_death
+    evidence: |
+      helped on his legs again
+
+  - from: deaths_messengers_death
+    label: PROMISES_WARNING_BY
+    to: obj_deaths_messengers_promise
+    evidence: |
+      will send my messengers to thee before I come
+
+  - from: deaths_messengers_ailments
+    label: TORMENT
+    to: deaths_messengers_young_man
+    evidence: |
+      sicknesses and sorrows, which tormented him
+
+  - from: deaths_messengers_sleep
+    label: REMINDS_NIGHTLY
+    to: deaths_messengers_young_man
+    evidence: |
+      reminded thee every night of me
+
+  - from: law_ailments_are_deaths_messengers
+    label: FULFILLS_PROMISE_TO
+    to: deaths_messengers_young_man
+    evidence: |
+      Have I not sent one messenger to thee after another?
+
+  - from: deaths_messengers_death
+    label: TAKES_AWAY
+    to: deaths_messengers_young_man
+    evidence: |
+      went away with Death

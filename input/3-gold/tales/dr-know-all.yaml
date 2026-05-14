@@ -1,0 +1,289 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: dr-know-all
+khm: 98
+atu: '1641'
+atu_name: Doctor Know-All
+canonical_source: ../../2-silver/canonical/dr-know-all/canonical.txt
+title: Dr. Know-All
+
+
+entities:
+
+  characters:
+
+    dr_know_all_crabb:
+      name: Crabb / Doctor Knowall
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_object_mediation]
+      speech_acts_performed: [speech_boast, speech_lie]
+      affects: [affect_greed, affect_fear]
+      traits: [poor-peasant, wood-seller, status-desirer, self-made-doctor, accidental-detective, rewarded-impostor, renowned-man]
+      evidence: |
+        a poor peasant called Crabb
+
+    dr_know_all_grethe:
+      name: Grethe
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      traits: [wife, table-companion, dish-counting-addressee, carriage-passenger]
+      evidence: |
+        Grethe, my wife, must go too.
+
+    dr_know_all_real_doctor:
+      name: The Town Doctor
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_command]
+      traits: [wealthy-table-eater, role-model, credential-adviser]
+      evidence: |
+        the doctor was sitting at table
+
+    dr_know_all_lord:
+      name: The Rich and Great Lord
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      existential_states: [state_deceived]
+      speech_acts_performed: [speech_command]
+      affects: [affect_fear]
+      traits: [robbed-nobleman, carriage-sender, table-host, skill-tester, money-restored-patron]
+      evidence: |
+        a rich and great lord had some money stolen
+
+    dr_know_all_four_thieves:
+      name: The Four Thieving Servants
+      archetypes: [arc_naive_victim]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_cunning]
+      existential_states: [state_deceived]
+      speech_acts_performed: [speech_lie, speech_confession]
+      affects: [affect_fear]
+      traits: [dish-bearing-servants, money-thieves, guilty-projectors, confessors, bribers]
+      evidence: |
+        all four of them confessed to him that they had stolen the money
+
+    dr_know_all_fifth_servant:
+      name: The Fifth Servant in the Stove
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech]
+      existential_states: [state_deceived, state_hidden_identity]
+      affects: [affect_fear]
+      traits: [stove-hidden-spy, cock-book-misreader, panic-revealer]
+      evidence: |
+        The fifth servant, however, crept into the stove
+
+  magic_objects:
+
+    obj_dr_know_all_abc_book:
+      name: The ABC Book with a Cock
+      object_kind: book
+      attributes:
+        function: credential prop and accidental source of the stove-servant exposure
+      evidence: |
+        an A B C book of the kind which has a cock on the frontispiece
+
+    obj_dr_know_all_sign:
+      name: The Doctor Knowall Sign
+      object_kind: token
+      attributes:
+        function: public sign that creates Crabb's false professional identity
+      evidence: |
+        have a sign painted for thyself with the words, “I am Doctor
+        Knowall,”
+
+    obj_dr_know_all_clothes:
+      name: The Doctor's Clothes and Medical Gear
+      object_kind: garment
+      attributes:
+        function: status costume bought after selling cart and oxen
+      evidence: |
+        get thyself some clothes, and whatsoever else pertains to
+        medicine
+
+    obj_dr_know_all_stolen_money:
+      name: The Stolen Money
+      object_kind: treasure
+      attributes:
+        function: hidden property recovered through accidental omniscience
+      evidence: |
+        some money stolen
+
+    obj_dr_know_all_covered_dish:
+      name: The Covered Dish with Crabs
+      object_kind: food
+      attributes:
+        function: test object whose contents match Crabb's name
+      evidence: |
+        a dish that was covered
+
+    obj_dr_know_all_table_fare:
+      name: The Delicate Table Fare
+      object_kind: food
+      attributes:
+        function: rich eating that makes Crabb desire the doctor's status
+      evidence: |
+        how daintily he ate and drank
+
+  locations:
+
+    loc_dr_know_all_town:
+      name: The Town of the Real Doctor
+      instance_of: loc_marketplace
+      evidence: |
+        drove with two oxen a load of wood to the town
+
+    loc_dr_know_all_house:
+      name: Crabb's House-Door
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        nailed up above thy house-door
+
+    loc_dr_know_all_village:
+      name: Doctor Knowall's Village
+      instance_of: loc_village
+      evidence: |
+        Doctor Knowall who lived in such and such a village
+
+    loc_dr_know_all_castle:
+      name: The Nobleman's Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        When they came to the nobleman’s castle
+
+    loc_dr_know_all_table:
+      name: The Nobleman's Table
+      instance_of: loc_castle
+      evidence: |
+        the table was spread
+
+    loc_dr_know_all_stove:
+      name: The Stove of the Hidden Fifth Servant
+      instance_of: loc_hearth
+      evidence: |
+        crept into the stove
+
+
+classifications:
+
+  world_laws:
+    - law_accidental_utterance_performs_omniscience
+    - law_boast_generates_reputation
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+    - agency_object_mediation
+    - agency_social_rank
+
+  affects_driving:
+    - affect_greed
+    - affect_fear
+
+  symbol_numbers: []
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: dr_know_all_crabb,
+      scene: "Crabb sells wood to a doctor and envies the doctor's rich table.",
+      evidence: "his heart desired what he saw" }
+  - { function: func_transformation_by_staging, order: 2, actor: dr_know_all_real_doctor,
+      scene: "The doctor tells Crabb to buy the ABC book, sell cart and oxen, buy clothes, and put up the Knowall sign.",
+      evidence: "that is soon managed" }
+  - { function: func_false_identity, order: 3, actor: dr_know_all_crabb,
+      scene: "Crabb adopts the public identity of Doctor Knowall.",
+      evidence: "The peasant did everything that he had been told to do" }
+  - { function: func_lack, order: 4, actor: dr_know_all_lord,
+      scene: "A rich lord has money stolen and summons Doctor Knowall.",
+      evidence: "a rich and great lord had some money stolen" }
+  - { function: func_accidental_exposure, order: 5, actor: dr_know_all_crabb,
+      scene: "Crabb counts dishes to Grethe, and the thieving servants hear themselves accused.",
+      evidence: "Grethe, that was the first" }
+  - { function: func_accidental_test, order: 6, actor: dr_know_all_crabb,
+      scene: "Crabb says his own name over the covered dish, accidentally naming the crabs beneath it.",
+      evidence: "Ah, poor Crabb" }
+  - { function: func_confession, order: 7, actor: dr_know_all_four_thieves,
+      scene: "The terrified thieves confess, promise repayment and bribe, and show where the money is hidden.",
+      evidence: "all four of them confessed to him" }
+  - { function: func_second_accidental_exposure, order: 8, actor: dr_know_all_crabb,
+      scene: "Crabb searches his ABC book for the cock, and the hidden fifth servant thinks he has been detected.",
+      evidence: "I know you are there, so you had better show yourself" }
+  - { function: func_reward, order: 9, actor: dr_know_all_crabb,
+      scene: "Dr. Knowall reveals the money's location, protects the thieves' identities, receives money from both sides, and becomes renowned.",
+      evidence: "received from both sides much money in reward" }
+
+
+edges:
+
+  # Becoming Doctor Knowall
+  - { from: dr_know_all_crabb, to: dr_know_all_real_doctor, label: SELLS_WOOD_TO,
+      evidence: "sold it to a doctor for two thalers" }
+  - { from: dr_know_all_crabb, to: obj_dr_know_all_table_fare, label: DESIRES_STATUS_SEEN_IN,
+      evidence: "his heart desired what he saw" }
+  - { from: dr_know_all_real_doctor, to: obj_dr_know_all_abc_book, label: PRESCRIBES,
+      evidence: "buy thyself an A B C book" }
+  - { from: dr_know_all_real_doctor, to: obj_dr_know_all_clothes, label: PRESCRIBES,
+      evidence: "get thyself some clothes" }
+  - { from: dr_know_all_real_doctor, to: obj_dr_know_all_sign, label: PRESCRIBES,
+      evidence: "have a sign painted for thyself" }
+  - { from: obj_dr_know_all_sign, to: dr_know_all_crabb, label: CREATES_PUBLIC_IDENTITY,
+      evidence: "I am Doctor Knowall" }
+  - { from: law_boast_generates_reputation, to: dr_know_all_crabb, label: MAKES_REPUTATION_FOR,
+      evidence: "Doctor Knowall who lived in such and such a village" }
+
+  # Nobleman's theft and guilty projection
+  - { from: dr_know_all_lord, to: obj_dr_know_all_stolen_money, label: LOSES,
+      evidence: "had some money stolen" }
+  - { from: dr_know_all_lord, to: dr_know_all_crabb, label: SUMMONS,
+      evidence: "asked Crabb if he were Doctor Knowall" }
+  - { from: dr_know_all_crabb, to: dr_know_all_grethe, label: INSISTS_WIFE_COME_TOO,
+      evidence: "Grethe, my wife, must go too" }
+  - { from: dr_know_all_lord, to: dr_know_all_crabb, label: HOSTS_AT_TABLE,
+      evidence: "Crabb was told to sit down and eat" }
+  - { from: dr_know_all_crabb, to: dr_know_all_grethe, label: COUNTS_FIRST_DISH_TO,
+      evidence: "Grethe, that was the first" }
+  - { from: dr_know_all_four_thieves, to: state_deceived, label: FALL_INTO,
+      evidence: "thought he intended by that to say" }
+  - { from: dr_know_all_four_thieves, to: dr_know_all_crabb, label: FEAR_OMNISCIENCE_OF,
+      evidence: "The doctor knows all" }
+  - { from: dr_know_all_crabb, to: dr_know_all_grethe, label: COUNTS_SECOND_DISH_TO,
+      evidence: "Grethe, that is the second" }
+  - { from: dr_know_all_crabb, to: dr_know_all_grethe, label: COUNTS_THIRD_DISH_TO,
+      evidence: "Grethe, that is the third" }
+  - { from: dr_know_all_lord, to: dr_know_all_crabb, label: TESTS_WITH_COVERED_DISH,
+      evidence: "guess what was beneath the cover" }
+  - { from: dr_know_all_crabb, to: obj_dr_know_all_covered_dish, label: ACCIDENTALLY_NAMES,
+      evidence: "Ah, poor Crabb" }
+  - { from: law_accidental_utterance_performs_omniscience, to: dr_know_all_lord, label: CONVINCES,
+      evidence: "There! he knows it" }
+
+  # Confession and reward
+  - { from: dr_know_all_four_thieves, to: dr_know_all_crabb, label: CONFESS_TO,
+      evidence: "all four of them confessed to him" }
+  - { from: dr_know_all_four_thieves, to: obj_dr_know_all_stolen_money, label: REVEAL_HIDING_PLACE_OF,
+      evidence: "They led him to the spot where the money was concealed" }
+  - { from: dr_know_all_crabb, to: obj_dr_know_all_abc_book, label: CONSULTS,
+      evidence: "opened his A B C book" }
+  - { from: dr_know_all_fifth_servant, to: loc_dr_know_all_stove, label: HIDES_IN,
+      evidence: "crept into the stove" }
+  - { from: dr_know_all_crabb, to: obj_dr_know_all_abc_book, label: LOOKS_FOR_COCK_IN,
+      evidence: "looked for the cock" }
+  - { from: dr_know_all_crabb, to: dr_know_all_fifth_servant, label: ACCIDENTALLY_SUMMONS,
+      evidence: "I know you are there, so you had better show yourself" }
+  - { from: dr_know_all_fifth_servant, to: dr_know_all_crabb, label: CONFIRMS_REPUTATION_OF,
+      evidence: "That man knows everything!" }
+  - { from: dr_know_all_crabb, to: dr_know_all_lord, label: SHOWS_MONEY_TO,
+      evidence: "showed the count where the money was" }
+  - { from: dr_know_all_crabb, to: dr_know_all_four_thieves, label: DOES_NOT_DENOUNCE,
+      evidence: "did not say who had stolen it" }
+  - { from: dr_know_all_crabb, to: moral_trickster_wins, label: ENDS_WITH,
+      evidence: "became a renowned man" }

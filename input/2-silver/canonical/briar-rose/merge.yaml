@@ -1,0 +1,17 @@
+slug: briar-rose
+khm: 50
+base:
+  book: pg5314-grimm-hunt
+edits:
+- id: 1
+  op: insert_before
+  from: pg2591-grimm-taylor
+  anchor: And the wind fell, and on the trees before the castle not a leaf moved again.
+  text: 'The butler, who was slyly tasting the ale, fell asleep with the jug at his lips. '
+  label: §5 sleep tableau — butler
+- id: 2
+  op: insert_before
+  from: pg2591-grimm-taylor
+  anchor: and the maid plucked the fowl ready for the spit.
+  text: 'the butler finished his draught of ale; '
+  label: §7 awakening cascade

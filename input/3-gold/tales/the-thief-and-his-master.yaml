@@ -1,0 +1,318 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-thief-and-his-master
+khm: 68
+atu: '325'
+atu_name: The Magician and His Pupil
+canonical_source: ../../2-silver/canonical/the-thief-and-his-master/canonical.txt
+title: The Thief and His Master
+
+
+entities:
+
+  characters:
+
+    thief_master_hans:
+      name: Hans
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_bargain]
+      affects: [affect_fear, affect_greed]
+      traits: [trade-seeking-father, mistaken-divine-hearer, anxious-recognizer, bread-bringer, dog-seller, horse-seller, bridle-forgetter]
+      evidence: |
+        Hans wished to put his son to learn a trade
+
+    thief_master_youth:
+      name: Hans's Son
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_object_mediation]
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human, transform_shapeshift_duel]
+      speech_acts_performed: [speech_command]
+      traits: [thief-apprentice, witchcraft-learner, bird-disguised, greyhound-seller-trick, horse-seller-trick, bridle-bound, sparrow-fugitive, fish-duelist, fox-victor]
+      evidence: |
+        the son learns witchcraft and thieving, thoroughly.
+
+    thief_master_master_thief:
+      name: The Master-Thief / Wizard
+      archetypes: [arc_trickster]
+      being_type: being_wizard
+      agency_modes: [agency_cunning, agency_speech, agency_object_mediation]
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human, transform_shapeshift_duel]
+      speech_acts_performed: [speech_bargain]
+      affects: [affect_greed, affect_anger]
+      traits: [teacher, payment-condition-setter, transformed-son-hider, horse-buyer, sparrow-pursuer, fish-duelist, cock-victim]
+      evidence: |
+        I will teach him well.
+
+    thief_master_old_woman:
+      name: The Old Woman in the Forest House
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [forest-householder, master-thief-mother, recommender]
+      evidence: |
+        “You can learn that here quite well,” says the woman, “my son is
+        a master of it.”
+
+    thief_master_dwarf:
+      name: The Little Dwarf
+      archetypes: [arc_supernatural_donor]
+      being_type: being_dwarf
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_warning]
+      traits: [anxiety-reader, recognition-counsellor, bread-instructor]
+      evidence: |
+        Then the dwarf tells him to take a small basket of bread with
+        him
+
+    thief_master_church_clerk:
+      name: The Clerk Behind the Altar
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [hidden-speaker, false-divine-voice, trade-answerer]
+      evidence: |
+        Then the clerk got behind the altar, and said, “Thieving,
+        thieving.”
+
+    thief_master_gentleman:
+      name: The Gentleman in the Carriage
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      affects: [affect_greed]
+      traits: [carriage-traveller, greyhound-buyer, escape-victim]
+      evidence: |
+        The gentleman takes it into his carriage
+
+    thief_master_maid:
+      name: The Stable Maid
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_curiosity]
+      traits: [threshold-crosser, talking-horse-hearer, bridle-remover, accidental-liberator]
+      evidence: |
+        When the maid crosses the threshold, the horse says, “Take off
+        my bridle, take off my bridle.”
+
+  magic_objects:
+
+    obj_thief_master_black_bread:
+      name: The Basket of Black Bread
+      object_kind: food
+      attributes:
+        function: recognition lure that draws the transformed son out of the basket
+      evidence: |
+        throws a little basket full of black bread in front of the
+        basket with the bird in it
+
+    obj_thief_master_bird_basket:
+      name: The Basket on the Cross-Beam
+      object_kind: tool
+      attributes:
+        function: conceals the transformed son as a little bird during the recognition test
+      evidence: |
+        There on the cross-beam is a basket, out of which a little bird
+        is peeping
+
+    obj_thief_master_bridle:
+      name: The Bridle on the Horse-Form
+      instance_of: obj_form_binding_bridle
+      object_kind: tool
+      attributes:
+        function: prevents the youth from becoming human again until removed
+      evidence: |
+        you must take off my bridle, or I cannot become a man again.
+
+    obj_thief_master_carriage:
+      name: The Gentleman's Carriage
+      object_kind: tool
+      attributes:
+        function: temporary container from which the greyhound-form escapes
+      evidence: |
+        the dog springs out of the carriage through the window
+
+  locations:
+
+    loc_thief_master_church:
+      name: The Church
+      instance_of: loc_church
+      evidence: |
+        he went into the church and prayed to our Lord God
+
+    loc_thief_master_great_forest:
+      name: The Great Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        They walk a long time and come into a great forest
+
+    loc_thief_master_forest_house:
+      name: The Master-Thief's Little House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        where stands a little house with an old woman in it
+
+    loc_thief_master_chimney_crossbeam:
+      name: The Chimney Cross-Beam
+      instance_of: loc_house
+      evidence: |
+        stand beneath the chimney
+
+    loc_thief_master_road_home:
+      name: The Road Homeward
+      instance_of: loc_road
+      evidence: |
+        the father and son set out homeward
+
+    loc_thief_master_neighboring_fair:
+      name: The Fair in the Neighboring Town
+      instance_of: loc_marketplace
+      evidence: |
+        Next day there is a fair in the neighboring town
+
+    loc_thief_master_stable:
+      name: The Master's Stable
+      instance_of: loc_stable
+      threshold_type: threshold_doorway
+      evidence: |
+        puts it in the stable
+
+    loc_thief_master_water:
+      name: The Water of the Fish Duel
+      evidence: |
+        betakes himself to the water and is a fish
+
+
+classifications:
+
+  world_laws:
+    - law_speech_taken_literally
+    - law_shapeshift_duel_resolves_mastery
+    - law_form_binding_object_blocks_return
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_object_mediation
+
+  affects_driving:
+    - affect_fear
+    - affect_greed
+
+  symbol_numbers: []
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: thief_master_hans,
+      scene: "Hans seeks the most advantageous trade for his son" }
+  - { function: func_false_guidance, order: 2, actor: thief_master_church_clerk,
+      scene: "hidden clerk's 'Thieving' is taken as divine vocational counsel" }
+  - { function: func_departure, order: 3, actor: thief_master_hans,
+      scene: "Hans and son enter the great forest to find a teacher of thieving" }
+  - { function: func_bargain, order: 4, actor: thief_master_master_thief,
+      scene: "master-thief agrees to teach the son, with recognition deciding payment" }
+  - { function: func_donor_guidance, order: 5, actor: thief_master_dwarf,
+      scene: "dwarf tells Hans how to recognize the bird-form son with black bread" }
+  - { function: func_recognition, order: 6, actor: thief_master_hans,
+      scene: "Hans recognizes the little bird as his son and retrieves him" }
+  - { function: func_trickery, order: 7, actor: thief_master_youth,
+      scene: "youth becomes a greyhound to be sold and escapes the carriage" }
+  - { function: func_trickery, order: 8, actor: thief_master_youth,
+      scene: "youth becomes a horse to be sold, warning that the bridle must be removed" }
+  - { function: func_villainy, order: 9, actor: thief_master_hans,
+      scene: "Hans forgets to remove the bridle and sells the horse to the master-thief" }
+  - { function: func_rescue, order: 10, actor: thief_master_maid,
+      scene: "maid removes the talking horse's bridle, freeing the youth's shapeshifting" }
+  - { function: func_struggle, order: 11, actor: thief_master_youth,
+      scene: "youth and master duel as sparrows, then fish" }
+  - { function: func_victory, order: 12, actor: thief_master_youth,
+      scene: "master becomes cock, youth becomes fox and kills him" }
+
+
+edges:
+
+  # Vocational misdirection and apprenticeship bargain
+  - { from: thief_master_hans, to: loc_thief_master_church, label: PRAYS_IN,
+      evidence: "he went into the church and prayed to our Lord God" }
+  - { from: thief_master_church_clerk, to: thief_master_hans, label: SPEAKS_HIDDEN_WORD_TO,
+      evidence: "Then the clerk got behind the altar, and said, “Thieving, thieving.”" }
+  - { from: thief_master_hans, to: law_speech_taken_literally, label: ENACTS,
+      evidence: "the Lord God had said so." }
+  - { from: thief_master_hans, to: thief_master_youth, label: DIRECTS_TO_LEARN,
+      evidence: "he is to learn thieving" }
+  - { from: thief_master_hans, to: loc_thief_master_great_forest, label: TRAVELS_TO,
+      evidence: "come into a great forest" }
+  - { from: thief_master_old_woman, to: thief_master_master_thief, label: RECOMMENDS,
+      evidence: "my son is a master of it." }
+  - { from: thief_master_master_thief, to: thief_master_youth, label: TEACHES,
+      evidence: "I will teach him well." }
+  - { from: thief_master_master_thief, to: thief_master_hans, label: SETS_RECOGNITION_WAGER_FOR,
+      evidence: "if you recognize your son, I will take no payment" }
+
+  # Recognition of the transformed son
+  - { from: thief_master_dwarf, to: thief_master_hans, label: ADVISES,
+      evidence: "take a small basket of bread with him" }
+  - { from: thief_master_dwarf, to: thief_master_youth, label: REVEALS_FORM_OF,
+      evidence: "a little bird is peeping, and that is your son." }
+  - { from: thief_master_hans, to: obj_thief_master_black_bread, label: USES,
+      evidence: "throws a little basket full of black bread" }
+  - { from: obj_thief_master_black_bread, to: thief_master_youth, label: LURES_OUT,
+      evidence: "the little bird comes out" }
+  - { from: thief_master_hans, to: thief_master_youth, label: RECOGNIZES,
+      evidence: "Hollo, my son, art thou here?" }
+  - { from: thief_master_youth, to: sp_bird, label: TRANSFORMS_INTO,
+      evidence: "a little bird is peeping" }
+
+  # Profitable transformations and form binding
+  - { from: thief_master_youth, to: sp_dog, label: TRANSFORMS_INTO,
+      evidence: "I will change myself into a large greyhound" }
+  - { from: thief_master_hans, to: thief_master_gentleman, label: SELLS_TO,
+      attributes: { sold_form: sp_dog, price: thirty_thalers },
+      evidence: "Thirty thalers." }
+  - { from: thief_master_youth, to: obj_thief_master_carriage, label: ESCAPES_FROM,
+      evidence: "the dog springs out of the carriage through the window" }
+  - { from: thief_master_youth, to: sp_horse, label: TRANSFORMS_INTO,
+      evidence: "I will now change myself into a beautiful horse" }
+  - { from: thief_master_youth, to: obj_thief_master_bridle, label: WARNS_ABOUT,
+      evidence: "you must take off my bridle" }
+  - { from: obj_thief_master_bridle, to: law_form_binding_object_blocks_return, label: ACTIVATES,
+      evidence: "or I cannot become a man again." }
+  - { from: thief_master_master_thief, to: thief_master_hans, label: BUYS_FROM,
+      attributes: { bought_form: sp_horse, price: hundred_thalers },
+      evidence: "buys the horse for a hundred thalers" }
+  - { from: thief_master_hans, to: obj_thief_master_bridle, label: FORGETS_TO_REMOVE,
+      evidence: "the father forgets, and does not take off the bridle." }
+  - { from: thief_master_youth, to: thief_master_maid, label: ASKS_HELP_FROM,
+      evidence: "Take off my bridle, take off my bridle." }
+  - { from: thief_master_maid, to: obj_thief_master_bridle, label: REMOVES,
+      evidence: "takes the bridle off" }
+
+  # Shapeshift duel
+  - { from: thief_master_youth, to: sp_bird, label: TRANSFORMS_INTO,
+      evidence: "the horse becomes a sparrow" }
+  - { from: thief_master_master_thief, to: sp_bird, label: TRANSFORMS_INTO,
+      evidence: "the wizard becomes a sparrow also" }
+  - { from: thief_master_youth, to: thief_master_master_thief, label: CASTS_LOTS_WITH,
+      evidence: "they come together and cast lots" }
+  - { from: thief_master_master_thief, to: sp_fish, label: TRANSFORMS_INTO,
+      evidence: "betakes himself to the water and is a fish." }
+  - { from: thief_master_youth, to: sp_fish, label: TRANSFORMS_INTO,
+      evidence: "Then the youth also becomes a fish" }
+  - { from: thief_master_master_thief, to: sp_rooster, label: TRANSFORMS_INTO,
+      evidence: "the master changes himself into a cock" }
+  - { from: thief_master_youth, to: sp_fox, label: TRANSFORMS_INTO,
+      evidence: "the youth becomes a fox" }
+  - { from: law_shapeshift_duel_resolves_mastery, to: thief_master_youth, label: ENABLES_VICTORY_OF,
+      evidence: "bites the master’s head off" }
+  - { from: thief_master_youth, to: thief_master_master_thief, label: KILLS,
+      evidence: "bites the master’s head off, and he died" }

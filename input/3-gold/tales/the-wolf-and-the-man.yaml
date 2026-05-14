@@ -1,0 +1,200 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-wolf-and-the-man
+khm: 72
+atu: '157'
+atu_name: Learning to Fear Men
+canonical_source: ../../2-silver/canonical/the-wolf-and-the-man/canonical.txt
+title: The Wolf and the Man
+
+
+entities:
+
+  characters:
+
+    wolf_man_fox:
+      name: The Fox
+      archetypes: [arc_trickster]
+      species: sp_fox
+      agency_modes: [agency_cunning, agency_speech]
+      speech_acts_performed: [speech_warning]
+      affects: [affect_fear]
+      traits: [human-strength-knower, wolf-guide, road-watcher, prudent-retreater, boast-rebuker]
+      evidence: |
+        the fox was talking to the wolf of the strength of man
+
+    wolf_man_wolf:
+      name: The Wolf
+      archetypes: [arc_predator, arc_naive_victim]
+      species: sp_wolf
+      agency_modes: [agency_violence, agency_speech]
+      speech_acts_performed: [speech_boast, speech_testimony]
+      affects: [affect_pride, affect_fear]
+      traits: [boastful, man-seeker, hunter-attacker, wounded, weapon-misreader, braggart]
+      evidence: |
+        If I had but the chance of seeing a man for once, I would set
+        on him notwithstanding.
+
+    wolf_man_old_soldier:
+      name: The Old Discharged Soldier
+      species: sp_human
+      agency_modes: [agency_endurance]
+      traits: [old, discharged, former-man]
+      evidence: |
+        First came an old discharged soldier.
+
+    wolf_man_schoolboy:
+      name: The Schoolboy
+      species: sp_human
+      agency_modes: [agency_endurance]
+      traits: [little-boy, school-bound, future-man]
+      evidence: |
+        Afterwards came a little boy who was going to school.
+
+    wolf_man_hunter:
+      name: The Hunter
+      species: sp_human
+      agency_modes: [agency_violence, agency_object_mediation, agency_cunning]
+      speech_acts_performed: [speech_command]
+      traits: [adult-man, armed-hunter, double-barrel-bearer, hanger-bearer, wolf-wounder]
+      evidence: |
+        At length came a hunter with his double-barrelled gun at his
+        back, and hanger by his side.
+
+  magic_objects:
+
+    obj_wolf_man_double_barrelled_gun:
+      name: The Double-Barrelled Gun
+      object_kind: weapon
+      attributes:
+        function: firearm whose two shots wound the attacking wolf before close combat
+      evidence: |
+        double-barrelled gun at his back
+
+    obj_wolf_man_hanger:
+      name: The Bright Hanger
+      object_kind: weapon
+      attributes:
+        function: side blade used after the gunshots when the wolf comes close
+      evidence: |
+        drew out his bright hanger
+
+  locations:
+
+    loc_wolf_man_road:
+      name: The Huntsmen's Road
+      instance_of: loc_road
+      evidence: |
+        the road by which the huntsmen went daily
+
+    loc_wolf_man_fox_hole:
+      name: The Fox's Hole
+      attributes:
+        function: retreat-space where the fox avoids the human encounter
+      evidence: |
+        I will take myself off to my hole.
+
+
+classifications:
+
+  world_laws:
+    - law_human_artifice_overmasters_animal_force
+    - law_forest_suspends_domestic_order
+
+  moral_regimes:
+    - moral_naive_punished
+    - moral_prudential_retreat
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_violence
+    - agency_object_mediation
+
+  affects_driving:
+    - affect_pride
+    - affect_fear
+
+  symbol_numbers: []
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: wolf_man_fox,
+      scene: "the fox explains that no animal can withstand man and that animals survive by cunning" }
+  - { function: func_boast, order: 2, actor: wolf_man_wolf,
+      scene: "the wolf boasts that he would attack a man if he could see one" }
+  - { function: func_guidance, order: 3, actor: wolf_man_fox,
+      scene: "the fox takes the wolf to the huntsmen's daily road" }
+  - { function: func_false_recognition, order: 4, actor: wolf_man_wolf,
+      scene: "the wolf mistakes the old discharged soldier and schoolboy as candidates for manhood" }
+  - { function: func_interdiction, order: 5, actor: wolf_man_fox,
+      scene: "the fox identifies the hunter as a man and withdraws to his hole" }
+  - { function: func_villainy, order: 6, actor: wolf_man_wolf,
+      scene: "the wolf rushes on the hunter" }
+  - { function: func_counteraction, order: 7, actor: wolf_man_hunter,
+      scene: "the hunter fires both barrels and then cuts the wolf with his hanger" }
+  - { function: func_defeat, order: 8, actor: wolf_man_wolf,
+      scene: "the bleeding wolf runs howling back to the fox" }
+  - { function: func_recognition, order: 9, actor: wolf_man_fox,
+      scene: "the fox rebukes the wolf as a braggart who overreached his strength" }
+
+
+edges:
+
+  # Fox knowledge and wolf boast
+  - { from: wolf_man_fox, to: sp_human, label: DESCRIBES_STRENGTH_OF,
+      evidence: "the strength of man" }
+  - { from: wolf_man_fox, to: law_human_artifice_overmasters_animal_force, label: STATES,
+      evidence: "no animal could withstand him" }
+  - { from: wolf_man_fox, to: agency_cunning, label: RECOMMENDS,
+      evidence: "all were obliged to employ cunning in order to preserve themselves from him" }
+  - { from: wolf_man_wolf, to: sp_human, label: BOASTS_ATTACK_ON,
+      evidence: "I would set on him notwithstanding." }
+  - { from: wolf_man_fox, to: wolf_man_wolf, label: PROMISES_TO_SHOW,
+      evidence: "I will show thee one." }
+  - { from: wolf_man_fox, to: loc_wolf_man_road, label: TAKES_TO,
+      evidence: "the fox took him out on the road by which the huntsmen went daily" }
+
+  # Identifying manhood
+  - { from: wolf_man_wolf, to: wolf_man_old_soldier, label: ASKS_IF_MAN,
+      evidence: "Is that a man?" }
+  - { from: wolf_man_fox, to: wolf_man_old_soldier, label: IDENTIFIES_AS_FORMER_MAN,
+      evidence: "that was one." }
+  - { from: wolf_man_wolf, to: wolf_man_schoolboy, label: ASKS_IF_MAN,
+      evidence: "Is that a man?" }
+  - { from: wolf_man_fox, to: wolf_man_schoolboy, label: IDENTIFIES_AS_FUTURE_MAN,
+      evidence: "that is going to be one." }
+  - { from: wolf_man_fox, to: wolf_man_hunter, label: IDENTIFIES_AS_MAN,
+      evidence: "there comes a man" }
+  - { from: wolf_man_fox, to: loc_wolf_man_fox_hole, label: RETREATS_TO,
+      evidence: "I will take myself off to my hole." }
+
+  # Human weaponry defeats wolf force
+  - { from: wolf_man_hunter, to: obj_wolf_man_double_barrelled_gun, label: CARRIES,
+      evidence: "double-barrelled gun at his back" }
+  - { from: wolf_man_hunter, to: obj_wolf_man_hanger, label: CARRIES,
+      evidence: "hanger by his side" }
+  - { from: wolf_man_wolf, to: wolf_man_hunter, label: RUSHES_ON,
+      evidence: "The wolf then rushed on the man." }
+  - { from: wolf_man_hunter, to: wolf_man_wolf, label: FIRES_SMALL_SHOT_AT,
+      evidence: "fired his small shot in his face" }
+  - { from: wolf_man_hunter, to: wolf_man_wolf, label: FIRES_SECOND_BARREL_AT,
+      evidence: "the huntsman gave him the second barrel" }
+  - { from: wolf_man_hunter, to: wolf_man_wolf, label: CUTS,
+      evidence: "gave him a few cuts with it right and left" }
+  - { from: wolf_man_wolf, to: wolf_man_fox, label: RUNS_BACK_TO,
+      evidence: "he ran howling back to the fox" }
+  - { from: wolf_man_wolf, to: law_human_artifice_overmasters_animal_force, label: LEARNS,
+      evidence: "I never imagined the strength of man to be what it is!" }
+
+  # Wolf's comic weapon misreading
+  - { from: wolf_man_wolf, to: obj_wolf_man_double_barrelled_gun, label: MISREADS_AS_STICK,
+      evidence: "he took a stick from his shoulder" }
+  - { from: wolf_man_wolf, to: obj_wolf_man_double_barrelled_gun, label: MISREADS_SHOT_AS_BREATH,
+      evidence: "he breathed once more into the stick" }
+  - { from: wolf_man_wolf, to: obj_wolf_man_hanger, label: MISREADS_AS_WHITE_RIB,
+      evidence: "he drew a white rib out of his side" }
+  - { from: wolf_man_fox, to: wolf_man_wolf, label: REBUKES_AS_BRAGGART,
+      evidence: "See what a braggart thou art!" }

@@ -1,0 +1,414 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: frederick-and-catherine
+khm: 59
+atu: '1387/1385*/1291B/1291/1653A/1653/1383/1791'
+atu_name: Frederick and Catherine
+canonical_source: ../../2-silver/canonical/frederick-and-catherine/canonical.txt
+title: Frederick and Catherine
+
+
+entities:
+
+  characters:
+
+    frederick:
+      name: Frederick
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank, agency_domestic_labor, agency_cunning]
+      speech_acts_performed: [speech_command, speech_lie]
+      affects: [affect_anger]
+      traits: [husband, ploughman, wealth-hider, thief-pursuer, tree-hider, identity-denier]
+      evidence: |
+        The man thought, “If my wife is like this, I must look after
+        things more.”
+
+    catherine:
+      name: Catherine / Kate
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_object_mediation]
+      existential_states: [state_self_unrecognized]
+      affects: [affect_pity, affect_fear]
+      traits: [foolish-wife, failed-cook, beer-spiller, flour-waster, gold-trader, road-healer, cheese-sender, door-carrier, accidental-robber-router, self-doubter, noisy-thief]
+      evidence: |
+        I did not know that, you should have forewarned me.
+
+    catherine_spitz:
+      name: The Spitz Dog
+      species: sp_dog
+      agency_modes: [agency_violence]
+      traits: [sausage-thief, swift, furrow-runner]
+      evidence: |
+        the Spitz had the sausage in its mouth already
+
+    catherine_pedlars:
+      name: The Pedlars / Rogues Who Take the Gold
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech]
+      affects: [affect_greed]
+      traits: [cheap-pot-sellers, gold-diggers, wealth-thieves]
+      evidence: |
+        The rogues went thither, dug and found pure gold.
+
+    catherine_tree_thieves:
+      name: The Thieves under the Tree
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning]
+      affects: [affect_fear]
+      traits: [booty-sharers, falling-object-misreaders, devil-frightened, gold-abandoners]
+      evidence: |
+        the rascals came thither who carry away with them what does not
+        want to go
+
+    catherine_vagabonds:
+      name: The Village Vagabonds
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech]
+      traits: [would-be-thieves, catherine-avoiders, turnip-task-givers]
+      evidence: |
+        Outside Catherine found some vagabonds who were going to steal.
+
+    catherine_passerby:
+      name: The Man Who Sees the Supposed Devil
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      affects: [affect_fear]
+      traits: [turnip-field-witness, pastor-carrier, devil-alarm-raiser]
+      evidence: |
+        Then a man came by, saw her, and stood still and thought that
+        it was the devil
+
+    catherine_pastor:
+      name: The Pastor
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      affects: [affect_fear]
+      traits: [lame-footed, turnip-owner, devil-frightened, suddenly-fast-runner]
+      evidence: |
+        “Mr. Pastor, the devil is in your turnip-ground, rooting up
+        turnips.”
+
+  magic_objects:
+
+    obj_catherine_sausage:
+      name: The Frying Sausage
+      object_kind: food
+      attributes:
+        function: intended dinner meat lost to the dog
+      evidence: |
+        got a sausage out of the chimney, put it in the frying-pan
+
+    obj_catherine_beer_cask:
+      name: The Beer Cask and Can
+      object_kind: tool
+      attributes:
+        function: unattended drink-source emptied into the cellar
+      evidence: |
+        the beer was still running out of the cask
+
+    obj_catherine_flour:
+      name: The Sack of Finest Wheat Flour
+      object_kind: food
+      attributes:
+        function: wasted remedy used to dry the spilled beer
+      evidence: |
+        a sack of the finest wheat flour from the last fair
+
+    obj_catherine_gold:
+      name: Frederick's Gold Counters
+      object_kind: treasure
+      attributes:
+        function: hidden wealth misunderstood as game counters
+      evidence: |
+        these are counters for playing games
+
+    obj_catherine_pots:
+      name: The Pedlars' Pots and Bowls
+      object_kind: tool
+      attributes:
+        function: cheap goods exchanged for gold and broken into decorations
+      evidence: |
+        cheap earthen-bowls and pots
+
+    obj_catherine_butter:
+      name: The Road-Rut Butter
+      object_kind: food
+      attributes:
+        function: provision wasted as salve for imagined wounded earth
+      evidence: |
+        took her butter and smeared the ruts right and left
+
+    obj_catherine_cheeses:
+      name: The Six Rolling Cheeses
+      object_kind: food
+      attributes:
+        function: provisions sent one after another down the hill
+      evidence: |
+        threw down the fifth and sixth as well, and these were her last.
+
+    obj_frederick_catherine_door:
+      name: Catherine's Carried House-Door
+      instance_of: obj_displaced_house_door
+      object_kind: architecture
+      attributes:
+        function: removed security-object and final falling terror-object
+      evidence: |
+        unhinged the lower door, and took it on her back
+
+    obj_catherine_dried_pears:
+      name: The Dried Pears
+      object_kind: food
+      attributes:
+        function: hanging food dropped from the tree and mistaken for leaves
+      evidence: |
+        I will take with me a handkerchief full of dried pears
+
+    obj_catherine_vinegar_jug:
+      name: The Vinegar Jug
+      object_kind: tool
+      attributes:
+        function: drink vessel poured from the tree and mistaken for dew
+      evidence: |
+        a pitcher of vinegar for him to drink.
+
+    obj_catherine_stones:
+      name: Frederick's Stones
+      object_kind: weapon
+      attributes:
+        function: intended missiles that fail to hit the thieves
+      evidence: |
+        collected some stones together
+
+    obj_catherine_cut_clothes:
+      name: Catherine's Cut Clothes
+      object_kind: garment
+      attributes:
+        function: accidental self-alteration that triggers identity doubt
+      evidence: |
+        cut all her clothes to pieces, her apron, her gown, and her
+        shift.
+
+    obj_catherine_turnips:
+      name: The Pastor's Turnips
+      object_kind: food
+      attributes:
+        function: theft-diversion that produces the false-devil sighting
+      evidence: |
+        the pastor has some turnips in the field.
+
+  locations:
+
+    loc_frederick_catherine_house:
+      name: Frederick and Catherine's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        lived together as young married folks
+
+    loc_frederick_catherine_cellar:
+      name: The Beer Cellar
+      instance_of: loc_cellar
+      evidence: |
+        went down into the cellar to draw beer.
+
+    loc_frederick_catherine_stable:
+      name: The Stable under the Cow's Manger
+      instance_of: loc_stable
+      evidence: |
+        bury them in the stable under the cow’s manger
+
+    loc_frederick_catherine_road:
+      name: The Rutted Road and Hill
+      instance_of: loc_road
+      evidence: |
+        there were deep ruts on both sides of the road.
+
+    loc_frederick_catherine_forest:
+      name: The Forest of the Thieves
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        And now they went into the forest, and sought the rogues
+
+    loc_frederick_catherine_tree:
+      name: The Night Tree above the Thieves
+      instance_of: loc_tree
+      evidence: |
+        they climbed into a tree and resolved to spend the night there.
+
+    loc_frederick_catherine_field:
+      name: Catherine's Corn Field
+      instance_of: loc_field
+      evidence: |
+        I will go into the field and cut corn.
+
+    loc_frederick_catherine_village:
+      name: The Village after Catherine's Self-Loss
+      evidence: |
+        Catherine ran into the village
+
+    loc_frederick_catherine_turnip_field:
+      name: The Pastor's Turnip-Ground
+      instance_of: loc_field
+      evidence: |
+        the devil is in your turnip-ground
+
+
+classifications:
+
+  world_laws:
+    - law_foolish_remedy_compounds_loss
+    - law_accidental_noise_routes_rogues
+    - law_disguise_alters_social_reality
+
+  moral_regimes:
+    - moral_comic_inversion
+    - moral_trickster_wins
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_speech
+    - agency_object_mediation
+    - agency_cunning
+
+  affects_driving:
+    - affect_pity
+    - affect_fear
+    - affect_anger
+    - affect_greed
+
+  symbol_numbers: []
+
+  threshold_types:
+    - threshold_doorway
+    - threshold_forest
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: frederick,
+      scene: "Frederick and Catherine live as young married folk; he goes to plough and orders dinner and drink" }
+  - { function: func_violation, order: 2, actor: catherine,
+      scene: "Catherine leaves the sausage frying while she draws beer in the cellar" }
+  - { function: func_loss, order: 3, actor: catherine_spitz,
+      scene: "the dog takes the sausage while beer continues running from the cask" }
+  - { function: func_foolish_remedy, order: 4, actor: catherine,
+      scene: "Catherine wastes the flour to dry the spilled beer and knocks over the can" }
+  - { function: func_interdiction, order: 5, actor: frederick,
+      scene: "Frederick hides gold under the cow's manger and tells Catherine not to go near it" }
+  - { function: func_trickery, order: 6, actor: catherine_pedlars,
+      scene: "pedlars accept the 'yellow counters' and steal the gold" }
+  - { function: func_pursuit, order: 7, actor: frederick,
+      scene: "Frederick and Catherine pursue the rogues with provisions" }
+  - { function: func_foolish_remedy, order: 8, actor: catherine,
+      scene: "Catherine greases the road-ruts and sends cheeses after the first rolling cheese" }
+  - { function: func_interdiction, order: 9, actor: frederick,
+      scene: "Frederick sends Catherine back to secure the house and bring more food" }
+  - { function: func_violation, order: 10, actor: catherine,
+      scene: "Catherine removes the lower door and carries it to Frederick" }
+  - { function: func_victory, order: 11, actor: catherine,
+      scene: "falling pears, vinegar, and the door make the thieves flee and leave the gold" }
+  - { function: func_interdiction, order: 12, actor: frederick,
+      scene: "Frederick tells Catherine to work and she goes to cut corn" }
+  - { function: func_recognition_failure, order: 13, actor: catherine,
+      scene: "Catherine cuts her clothes while half asleep and doubts whether she is herself" }
+  - { function: func_exile, order: 14, actor: catherine,
+      scene: "Frederick says Catherine is already inside; Catherine leaves and joins thieves" }
+  - { function: func_comic_misrecognition, order: 15, actor: catherine_pastor,
+      scene: "Catherine in the turnip field is mistaken for the devil and the lame pastor flees" }
+
+
+edges:
+
+  # Sausage, beer, and flour: domestic loss compounds itself
+  - { from: frederick, to: catherine, label: COMMANDS,
+      evidence: "when I come back, there must be some roast meat on the table" }
+  - { from: catherine, to: obj_catherine_sausage, label: FRIES,
+      evidence: "put it in the frying-pan, put some butter to it, and set it on the fire." }
+  - { from: catherine, to: loc_frederick_catherine_cellar, label: ENTERS,
+      evidence: "went down into the cellar to draw beer." }
+  - { from: catherine_spitz, to: obj_catherine_sausage, label: STEALS,
+      evidence: "the Spitz had the sausage in its mouth already" }
+  - { from: obj_catherine_beer_cask, to: loc_frederick_catherine_cellar, label: FLOODS,
+      evidence: "it ran into the cellar and did not stop until the whole cask was empty." }
+  - { from: catherine, to: obj_catherine_flour, label: WASTES_AS_REMEDY,
+      evidence: "she would fetch that down and strew it over the beer." }
+  - { from: catherine, to: law_foolish_remedy_compounds_loss, label: ENACTS,
+      evidence: "where the one is the other ought to be also" }
+  - { from: frederick, to: catherine, label: REBUKES,
+      evidence: "you should not have done that!" }
+
+  # Gold traded for pots
+  - { from: frederick, to: obj_catherine_gold, label: HIDES,
+      evidence: "bury them in the stable under the cow’s manger" }
+  - { from: frederick, to: catherine, label: WARNS,
+      evidence: "mind you keep away from them, or it will be the worse for you." }
+  - { from: catherine, to: catherine_pedlars, label: OFFERS_COUNTERS_TO,
+      evidence: "if you have any use for yellow counters I will buy of you." }
+  - { from: catherine_pedlars, to: obj_catherine_gold, label: STEALS,
+      evidence: "dug and found pure gold." }
+  - { from: catherine, to: obj_catherine_pots, label: BREAKS_INTO_DECORATION,
+      evidence: "knocked the bottom out of every pot" }
+
+  # Road provisions
+  - { from: catherine, to: obj_catherine_butter, label: SMEARS_ON,
+      evidence: "smeared the ruts right and left" }
+  - { from: catherine, to: loc_frederick_catherine_road, label: PITIES,
+      evidence: "how they have torn and skinned and galled the poor earth" }
+  - { from: catherine, to: obj_catherine_cheeses, label: SENDS_AFTER,
+      evidence: "Perhaps they are waiting for company, and do not like to walk alone." }
+  - { from: frederick, to: catherine, label: SENDS_BACK,
+      evidence: "Then go home again, and make the house safe before we go any farther" }
+
+  # Door as displaced security and falling terror
+  - { from: catherine, to: obj_frederick_catherine_door, label: REMOVES_AND_CARRIES,
+      evidence: "unhinged the lower door, and took it on her back" }
+  - { from: obj_frederick_catherine_door, to: loc_frederick_catherine_house, label: UNSECURES,
+      evidence: "She takes the under-door off the hinges that everything may run in" }
+  - { from: catherine, to: loc_frederick_catherine_tree, label: HIDES_IN,
+      evidence: "they climbed into a tree and resolved to spend the night there." }
+  - { from: frederick, to: obj_catherine_stones, label: THROWS_AT,
+      evidence: "wished to throw them at the thieves and kill them." }
+  - { from: catherine, to: obj_catherine_dried_pears, label: DROPS,
+      evidence: "the dried pears rolled down between the branches" }
+  - { from: catherine, to: obj_catherine_vinegar_jug, label: POURS_OUT,
+      evidence: "So she emptied out the vinegar" }
+  - { from: catherine, to: obj_frederick_catherine_door, label: DROPS,
+      evidence: "Then it fell down with a violent clatter" }
+  - { from: obj_frederick_catherine_door, to: catherine_tree_thieves, label: FRIGHTENS,
+      evidence: "The devil is coming down the tree!" }
+  - { from: catherine_tree_thieves, to: obj_catherine_gold, label: ABANDONS,
+      evidence: "they ran away and left everything behind them." }
+  - { from: obj_frederick_catherine_door, to: law_accidental_noise_routes_rogues, label: ACTIVATES,
+      evidence: "The devil is coming down the tree!" }
+
+  # Field, self-unrecognition, and final false-devil episode
+  - { from: frederick, to: catherine, label: COMMANDS,
+      evidence: "you, too, must be industrious and work." }
+  - { from: catherine, to: loc_frederick_catherine_field, label: ENTERS,
+      evidence: "When Catherine got into the field" }
+  - { from: catherine, to: obj_catherine_cut_clothes, label: CUTS,
+      evidence: "cut all her clothes to pieces, her apron, her gown, and her shift." }
+  - { from: catherine, to: state_self_unrecognized, label: ENTERS_STATE,
+      evidence: "Is it I, or is it not I?" }
+  - { from: catherine, to: frederick, label: ASKS_IDENTITY_OF,
+      evidence: "I should very much like to know if Catherine is in?" }
+  - { from: frederick, to: catherine, label: DENIES_IDENTITY_TO,
+      evidence: "she must be in and asleep." }
+  - { from: catherine, to: catherine_vagabonds, label: OFFERS_HELP_TO,
+      evidence: "I will help you to steal." }
+  - { from: catherine, to: loc_frederick_catherine_village, label: ANNOUNCES_THEFT_IN,
+      evidence: "Good folks, have you anything? We want to steal." }
+  - { from: catherine_vagabonds, to: catherine, label: DIVERTS_TO,
+      evidence: "Go there and pull up some turnips for us." }
+  - { from: catherine, to: obj_catherine_turnips, label: PULLS_UP,
+      evidence: "began to pull them up" }
+  - { from: catherine_passerby, to: catherine, label: MISRECOGNIZES_AS_DEVIL,
+      evidence: "thought that it was the devil" }
+  - { from: catherine_passerby, to: catherine_pastor, label: WARNS,
+      evidence: "the devil is in your turnip-ground" }
+  - { from: catherine_pastor, to: catherine, label: FLEES_FROM,
+      evidence: "Ah, the devil!" }

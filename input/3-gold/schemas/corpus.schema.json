@@ -1,0 +1,265 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://reddb.io/grimm/corpus.schema.json",
+  "title": "Grimm Gold Corpus",
+  "description": "Materialized corpus/provenance layer derived from silver books and canonical branch manifests.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_from",
+    "counters",
+    "books",
+    "book_tales",
+    "canonical_tales",
+    "canonical_sources",
+    "canonical_branch_sections",
+    "canonical_branches",
+    "graph"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "generated_from": {
+      "type": "object",
+      "required": ["silver_books", "silver_branches", "gold_tales"],
+      "properties": {
+        "silver_books": { "type": "string" },
+        "silver_branches": { "type": "string" },
+        "gold_tales": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "counters": {
+      "type": "object",
+      "required": [
+        "book_count",
+        "book_tale_count",
+        "canonical_tale_count",
+        "canonical_source_count",
+        "branch_section_count",
+        "explicit_branch_count",
+        "graph_node_count",
+        "graph_edge_count"
+      ],
+      "properties": {
+        "book_count": { "type": "integer", "minimum": 0 },
+        "book_tale_count": { "type": "integer", "minimum": 0 },
+        "canonical_tale_count": { "type": "integer", "minimum": 0 },
+        "canonical_source_count": { "type": "integer", "minimum": 0 },
+        "branch_section_count": { "type": "integer", "minimum": 0 },
+        "explicit_branch_count": { "type": "integer", "minimum": 0 },
+        "graph_node_count": { "type": "integer", "minimum": 0 },
+        "graph_edge_count": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "books": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/book" }
+    },
+    "book_tales": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/bookTale" }
+    },
+    "canonical_tales": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/canonicalTale" }
+    },
+    "canonical_sources": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/canonicalSource" }
+    },
+    "canonical_branch_sections": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/branchSection" }
+    },
+    "canonical_branches": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/branch" }
+    },
+    "graph": { "$ref": "#/definitions/graph" }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "book": {
+      "type": "object",
+      "required": ["book_id", "tale_count", "word_count", "char_count", "language_counts"],
+      "properties": {
+        "book_id": { "type": "string", "pattern": "^pg[0-9]+-[a-z0-9-]+$" },
+        "source_file": { "type": "string" },
+        "total_declared": { "type": "integer", "minimum": 0 },
+        "tale_count": { "type": "integer", "minimum": 0 },
+        "word_count": { "type": "integer", "minimum": 0 },
+        "char_count": { "type": "integer", "minimum": 0 },
+        "language_counts": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "bookTale": {
+      "type": "object",
+      "required": ["id", "book_id", "slug"],
+      "properties": {
+        "id": { "type": "string" },
+        "book_id": { "type": "string" },
+        "slug": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+        "title": { "type": "string" },
+        "title_de": { "type": "string" },
+        "khm": { "oneOf": [{ "type": "integer" }, { "type": "string" }, { "type": "null" }] },
+        "khm_variant": { "type": "boolean" },
+        "composite_khm": { "type": "array", "items": { "type": "integer" } },
+        "atu": { "oneOf": [{ "type": "integer" }, { "type": "string" }, { "type": "null" }] },
+        "kind": { "type": "string" },
+        "language": { "type": "string" },
+        "word_count": { "type": "integer", "minimum": 0 },
+        "char_count": { "type": "integer", "minimum": 0 },
+        "body_line": { "type": "integer", "minimum": 0 },
+        "body_title": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "canonicalTale": {
+      "type": "object",
+      "required": [
+        "slug",
+        "source_count",
+        "alternative_source_count",
+        "canonical_decision_count",
+        "branch_section_count",
+        "explicit_branch_count",
+        "branch_consequence_count",
+        "plot_break_count",
+        "canonical_decision_types",
+        "explicit_branch_types",
+        "source_book_ids"
+      ],
+      "properties": {
+        "slug": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+        "title": { "type": "string" },
+        "khm": { "oneOf": [{ "type": "integer" }, { "type": "string" }, { "type": "null" }] },
+        "khm_variant": { "type": "boolean" },
+        "legend_number": { "type": "integer", "minimum": 1 },
+        "atu": { "oneOf": [{ "type": "integer" }, { "type": "string" }, { "type": "null" }] },
+        "canonical_source": { "type": "string" },
+        "base_book_id": { "type": "string" },
+        "source_count": { "type": "integer", "minimum": 0 },
+        "alternative_source_count": { "type": "integer", "minimum": 0 },
+        "canonical_decision_count": { "type": "integer", "minimum": 0 },
+        "branch_section_count": { "type": "integer", "minimum": 0 },
+        "explicit_branch_count": { "type": "integer", "minimum": 0 },
+        "branch_consequence_count": { "type": "integer", "minimum": 0 },
+        "plot_break_count": { "type": "integer", "minimum": 0 },
+        "canonical_decision_types": { "type": "array", "items": { "type": "string" } },
+        "explicit_branch_types": { "type": "array", "items": { "type": "string" } },
+        "source_book_ids": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "canonicalSource": {
+      "type": "object",
+      "required": ["canonical_slug", "book_id", "is_base"],
+      "properties": {
+        "canonical_slug": { "type": "string" },
+        "book_id": { "type": "string" },
+        "weight": { "type": "string" },
+        "is_base": { "type": "boolean" },
+        "book_tale_id": { "type": "string" },
+        "book_tale_slug": { "type": "string" },
+        "match_method": { "enum": ["slug", "khm"] }
+      },
+      "additionalProperties": false
+    },
+    "branchSection": {
+      "type": "object",
+      "required": ["id", "canonical_slug", "section_id", "kept_book_ids", "explicit_branch_count"],
+      "properties": {
+        "id": { "type": "string" },
+        "canonical_slug": { "type": "string" },
+        "section_id": { "type": "string" },
+        "title": { "type": "string" },
+        "canonical_type": { "type": "string" },
+        "canonical_rationale": { "type": "string" },
+        "kept_book_ids": { "type": "array", "items": { "type": "string" } },
+        "explicit_branch_count": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "branch": {
+      "type": "object",
+      "required": [
+        "id",
+        "section_ref",
+        "canonical_slug",
+        "section_id",
+        "branch_index",
+        "consequences",
+        "consequence_count",
+        "has_plot_break"
+      ],
+      "properties": {
+        "id": { "type": "string" },
+        "section_ref": { "type": "string" },
+        "canonical_slug": { "type": "string" },
+        "section_id": { "type": "string" },
+        "branch_index": { "type": "integer", "minimum": 1 },
+        "type": { "type": "string" },
+        "from_book_id": { "type": "string" },
+        "description": { "type": "string" },
+        "text": { "type": "string" },
+        "consequences": { "type": "array", "items": { "type": "string" } },
+        "consequence_count": { "type": "integer", "minimum": 0 },
+        "plot_breaks": { "type": "string" },
+        "has_plot_break": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "graph": {
+      "type": "object",
+      "required": ["collection", "nodes", "edges"],
+      "properties": {
+        "collection": { "const": "corpus" },
+        "nodes": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/graphNode" }
+        },
+        "edges": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/graphEdge" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "graphNode": {
+      "type": "object",
+      "required": ["label", "node_type", "name"],
+      "properties": {
+        "label": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+        "node_type": { "enum": ["book", "book_tale", "canonical_tale", "branch_section", "branch"] },
+        "name": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "graphEdge": {
+      "type": "object",
+      "required": ["from", "to", "label"],
+      "properties": {
+        "from": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+        "to": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+        "label": {
+          "enum": [
+            "CONTAINS",
+            "DERIVED_FROM",
+            "FROM_SOURCE",
+            "HAS_ALTERNATIVE",
+            "HAS_BRANCH_POINT",
+            "USES_BASE_BOOK",
+            "USES_BASE_TEXT",
+            "USES_SOURCE_BOOK"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

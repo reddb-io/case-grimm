@@ -1,0 +1,12 @@
+slug: one-eye-two-eyes-and-three-eyes
+khm: 130
+atu: '511'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg11027-grimm-gruelle
+  weight: supplementary
+- book: pg52521-grimm-olcott
+  weight: supplementary
+sections: []

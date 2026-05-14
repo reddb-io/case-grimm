@@ -1,0 +1,246 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: master-pfriem
+khm: 178
+atu: "801"
+atu_name: Master Pfriem
+canonical_source: ../../2-silver/canonical/master-pfriem/canonical.txt
+title: Master Pfriem
+
+
+entities:
+
+  characters:
+
+    master_pfriem:
+      name: Master Pfriem
+      species: sp_human
+      archetypes: [arc_fool]
+      agency_modes: [agency_speech, agency_domestic_labor, agency_violence]
+      affects: [affect_anger, affect_pride]
+      traits: [short-thin-lively, restless, shoemaker, universal-critic, always-right, dream-dead, heaven-expelled, unreformed-faultfinder]
+      evidence: |
+        He saw everything, criticised everything, knew everything best
+
+    pfriem_apprentice:
+      name: Pfriem's Apprentice
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [shoemaking-apprentice, criticized-worker, beaten-worker, truth-speaker]
+      evidence: |
+        No apprentice stayed more than a month with him
+
+    pfriem_household_workers:
+      name: Pfriem's Wife and Servants
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [fire-lighters, washing-workers, gossiping-servants, scolded-household]
+      evidence: |
+        If the servants were standing by their wash-tubs
+
+    pfriem_builders:
+      name: The Builders and Carpenters
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [house-builders, stone-layers, carpenters, conscience-appealed-workers]
+      evidence: |
+        Someone was building a new house
+
+    pfriem_saint_peter:
+      name: Saint Peter
+      being_type: being_divine
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_warning]
+      traits: [heaven-door-opener, admission-giver, warning-speaker]
+      evidence: |
+        The apostle Peter opened the door
+
+    pfriem_angels:
+      name: The Angels at Work in Heaven
+      being_type: being_divine
+      agency_modes: [agency_domestic_labor, agency_object_mediation]
+      traits: [beam-carriers, rain-waterers, cart-helpers, hidden-order-workers]
+      evidence: |
+        he saw two angels who were carrying away a beam
+
+    pfriem_good_wishes_man:
+      name: The Man with the Cart of Good Wishes
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      traits: [stuck-cart-keeper, good-wishes-carrier, safely-arrived]
+      evidence: |
+        Good wishes
+
+    pfriem_winged_horses:
+      name: The Four Winged Horses
+      species: sp_horse
+      agency_modes: [agency_extraordinary_body]
+      traits: [four, winged, heavenly-cart-lifters, hidden-solution]
+      evidence: |
+        four winged horses
+
+    pfriem_heaven_inhabitant:
+      name: The Inhabitant of Heaven
+      being_type: being_divine
+      agency_modes: [agency_violence, agency_social_rank]
+      traits: [irresistible-expeller, throat-seizer, heaven-boundary-enforcer]
+      evidence: |
+        one of the inhabitants of heaven seized him by the throat
+
+  magic_objects:
+
+    obj_pfriem_heavenly_beam:
+      name: The Obliquely Carried Beam
+      object_kind: material
+      attributes:
+        function: apparent heavenly mistake that tests Pfriem's restraint
+      evidence: |
+        It was the beam which some one had had in his own eye
+
+    obj_pfriem_leaky_bucket:
+      name: The Leaky Rain Bucket
+      object_kind: tool
+      attributes:
+        function: heavenly rain-making work that looks useless to Pfriem
+      evidence: |
+        the bucket was full of holes
+
+    obj_pfriem_good_wishes_cart:
+      name: The Cart of Good Wishes
+      object_kind: tool
+      attributes:
+        cargo: good wishes
+        problem: stuck fast in a deep hole
+      evidence: |
+        a cart which had stuck fast in a deep hole
+
+  locations:
+
+    loc_pfriem_workshop:
+      name: Pfriem's Workshop
+      evidence: |
+        ran back into his workshop
+
+    loc_pfriem_kitchen:
+      name: Pfriem's Kitchen
+      instance_of: loc_house
+      evidence: |
+        ran bare-footed into the kitchen
+
+    loc_pfriem_building_site:
+      name: The New House Building Site
+      evidence: |
+        Someone was building a new house
+
+    loc_pfriem_heaven_door:
+      name: The Door of Heaven
+      instance_of: loc_heaven
+      threshold_type: threshold_doorway
+      evidence: |
+        knocked loudly at the door
+
+    loc_pfriem_heaven_expanses:
+      name: The Wide Expanses of Heaven
+      instance_of: loc_heaven
+      evidence: |
+        walked up and down the wide expanses of heaven
+
+    loc_pfriem_heaven_gateway:
+      name: The Gateway of Heaven
+      instance_of: loc_heaven
+      threshold_type: threshold_gate
+      evidence: |
+        Beneath the gateway
+
+
+classifications:
+
+  world_laws:
+    - law_heavenly_appearances_exceed_faultfinding_judgment
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_domestic_labor
+    - agency_social_rank
+
+  affects_driving:
+    - affect_anger
+    - affect_pride
+
+  symbol_numbers: []
+
+  threshold_types:
+    - threshold_doorway
+    - threshold_gate
+
+
+propp:
+  - { function: func_character_exposition, order: 1, actor: master_pfriem,
+      scene: "Pfriem is introduced as a restless shoemaker who criticizes everything" }
+  - { function: func_domestic_faultfinding, order: 2, actor: master_pfriem,
+      scene: "he scolds apprentices, wife, servants, builders, carpenters, and peasants" }
+  - { function: func_corrective_exposure, order: 3, actor: pfriem_apprentice,
+      scene: "the apprentice reveals that the badly cut shoe is Pfriem's own work" }
+  - { function: func_dream_death, order: 4, actor: master_pfriem,
+      scene: "Pfriem dreams he is dead and on the way to heaven" }
+  - { function: func_conditional_admission, order: 5, actor: pfriem_saint_peter,
+      scene: "Saint Peter admits him but warns him to find fault with nothing in heaven" }
+  - { function: func_suppressed_criticism, order: 6, actor: master_pfriem,
+      scene: "Pfriem silently judges the beam, bucket, and cart while restraining his tongue" }
+  - { function: func_failed_restraint, order: 7, actor: master_pfriem,
+      scene: "the backward harnessing of horses makes Pfriem burst out in criticism" }
+  - { function: func_expulsion, order: 8, actor: pfriem_heaven_inhabitant,
+      scene: "an inhabitant of heaven seizes Pfriem and pushes him forth" }
+  - { function: func_hidden_order_revealed, order: 9, actor: pfriem_winged_horses,
+      scene: "Pfriem sees the cart rise into the air by four winged horses" }
+  - { function: func_waking_nonreform, order: 10, actor: master_pfriem,
+      scene: "Pfriem wakes, excuses heaven somewhat, but remains ready to correct his household" }
+
+
+edges:
+
+  - { from: master_pfriem, to: agency_speech, label: CRITICIZES_EVERYTHING_THROUGH,
+      evidence: "criticised everything" }
+  - { from: master_pfriem, to: pfriem_apprentice, label: FINDS_FAULT_WITH_WORK_OF,
+      evidence: "he had always some fault to find with the very best work" }
+  - { from: master_pfriem, to: pfriem_apprentice, label: BEATS_AS_INSTRUCTION,
+      evidence: "gave him a couple of strokes across the back" }
+  - { from: master_pfriem, to: pfriem_household_workers, label: SCOLDS_HOUSEHOLD_WORKERS,
+      evidence: "There stand the geese cackling" }
+  - { from: master_pfriem, to: pfriem_household_workers, label: FLOODS_KITCHEN_BY_INTERFERENCE,
+      evidence: "knock a pail full of soap and water over" }
+  - { from: master_pfriem, to: pfriem_builders, label: CRITICIZES_BUILDING_WORK,
+      evidence: "No one will ever be healthy in that house" }
+  - { from: master_pfriem, to: pfriem_builders, label: SNATCHES_AXE_FROM,
+      evidence: "He snatched an axe out of a carpenter’s hand" }
+  - { from: pfriem_apprentice, to: master_pfriem, label: EXPOSES_MASTER_AS_SOURCE_OF_BAD_SHOE,
+      evidence: "it is the one which you yourself cut out" }
+  - { from: master_pfriem, to: loc_pfriem_heaven_door, label: KNOCKS_LOUDLY_AT,
+      evidence: "knocked loudly at the door" }
+  - { from: pfriem_saint_peter, to: master_pfriem, label: ADMITS_WITH_WARNING,
+      evidence: "I warn you that you must give up that habit of yours" }
+  - { from: master_pfriem, to: loc_pfriem_heaven_expanses, label: WALKS_THROUGH,
+      evidence: "walked up and down the wide expanses of heaven" }
+  - { from: pfriem_angels, to: obj_pfriem_heavenly_beam, label: CARRY_OBLIQUELY,
+      evidence: "They did not, however, carry the beam lengthways, but obliquely" }
+  - { from: pfriem_angels, to: obj_pfriem_leaky_bucket, label: DRAW_WATER_WITH,
+      evidence: "the bucket was full of holes" }
+  - { from: obj_pfriem_leaky_bucket, to: loc_heaven, label: WATERS_EARTH_WITH_RAIN_FROM,
+      evidence: "They were watering the earth with rain" }
+  - { from: obj_pfriem_good_wishes_cart, to: pfriem_good_wishes_man, label: CARRIES_GOOD_WISHES_FOR,
+      evidence: "Good wishes" }
+  - { from: pfriem_angels, to: pfriem_winged_horses, label: HARNESSES_BEHIND_CART,
+      evidence: "did not, however, harness them in front of it, but behind" }
+  - { from: master_pfriem, to: pfriem_angels, label: BURSTS_OUT_AGAINST,
+      evidence: "Clumsy creature" }
+  - { from: pfriem_heaven_inhabitant, to: master_pfriem, label: EXPELS_FROM_HEAVEN,
+      evidence: "seized him by the throat and pushed him forth" }
+  - { from: pfriem_winged_horses, to: obj_pfriem_good_wishes_cart, label: RAISE_INTO_AIR,
+      evidence: "being raised into the air by four winged horses" }
+  - { from: law_heavenly_appearances_exceed_faultfinding_judgment, to: master_pfriem, label: TESTS_AND_EXPELS_FAULTFINDER,
+      evidence: "you must give up that habit of yours" }
+  - { from: master_pfriem, to: loc_pfriem_workshop, label: WAKES_AND_RETURNS_TO_EARTHLY_CORRECTION,
+      evidence: "It is a lucky thing for me though, that I am not really dead" }

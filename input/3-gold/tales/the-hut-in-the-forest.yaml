@@ -1,0 +1,358 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-hut-in-the-forest
+khm: 169
+atu: "431"
+atu_name: The Hut in the Forest
+canonical_source: ../../2-silver/canonical/the-hut-in-the-forest/canonical.txt
+title: The Hut in the Forest
+
+
+entities:
+
+  characters:
+
+    hut_forest_woodcutter:
+      name: The Poor Wood-Cutter
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_command]
+      affects: [affect_fear]
+      traits: [poor-father, forest-worker, dinner-requester, seed-trail-maker, hungry-returner]
+      evidence: |
+        A poor wood-cutter lived with his wife and three daughters
+
+    hut_forest_mother:
+      name: The Wood-Cutter's Wife
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      speech_acts_performed: [speech_command]
+      affects: [affect_grief, affect_fear, affect_maternal_love]
+      traits: [three-daughter-mother, dinner-sender, youngest-protector, worried-wife]
+      evidence: |
+        “Am I to lose my dearest child, as well?”
+
+    hut_forest_eldest_daughter:
+      name: The Eldest Daughter
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      speech_acts_performed: [speech_request]
+      affects: [affect_fear]
+      traits: [dinner-carrier, lost-forest-wanderer, animal-neglecter, cellar-punished]
+      evidence: |
+        my eldest daughter
+
+    hut_forest_second_daughter:
+      name: The Second Daughter
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      speech_acts_performed: [speech_request]
+      affects: [affect_fear]
+      traits: [second-dinner-carrier, lost-forest-wanderer, animal-neglecter, cellar-punished]
+      evidence: |
+        the second daughter
+
+    hut_forest_youngest_daughter:
+      name: The Youngest Daughter
+      archetypes: [arc_oppressed_maiden]
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_animal_aid, agency_endurance]
+      speech_acts_performed: [speech_request, speech_prayer]
+      affects: [affect_pity, affect_grief, affect_joy]
+      traits: [good-obedient-youngest, lost-dinner-carrier, animal-feeder, prayerful-sleeper, disenchanting-bride]
+      evidence: |
+        she has always been good and obedient
+
+    hut_forest_forest_birds:
+      name: The Seed-Eating Forest Birds
+      species: sp_bird
+      agency_modes: [agency_animal_aid]
+      traits: [millet-eaters, lentil-eaters, pea-eaters, path-erasing-birds]
+      evidence: |
+        the field-sparrows, and wood-sparrows, larks and finches, blackbirds and siskins had picked up the millet
+
+    hut_forest_old_man_prince:
+      name: The Old Gray-Haired Man / King's Son
+      archetypes: [arc_enchanted_prince, arc_supernatural_donor]
+      species: sp_human
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_animal_human]
+      agency_modes: [agency_speech, agency_social_rank, agency_object_mediation]
+      speech_acts_performed: [speech_command, speech_testimony]
+      affects: [affect_joy]
+      traits: [white-bearded-host, animal-consulter, trapdoor-punisher, bewitched-kings-son, restored-bridegroom]
+      evidence: |
+        an old gray-haired man was sitting at the table
+
+    hut_forest_hen:
+      name: The Pretty Little Hen
+      species: sp_hen
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human]
+      agency_modes: [agency_speech, agency_animal_aid, agency_domestic_labor]
+      traits: [transformed-attendant, stove-animal, hospitality-judge, barley-fed, water-drinker, disenchanted]
+      evidence: |
+        By the stove lay three animals, a hen, a cock, and a brindled cow
+
+    hut_forest_cock:
+      name: The Pretty Little Cock
+      species: sp_rooster
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human]
+      agency_modes: [agency_speech, agency_animal_aid, agency_domestic_labor]
+      traits: [transformed-attendant, stove-animal, hospitality-judge, barley-fed, water-drinker, disenchanted]
+      evidence: |
+        Pretty little cock
+
+    hut_forest_brindled_cow:
+      name: The Beautiful Brindled Cow
+      species: sp_cattle
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human]
+      agency_modes: [agency_speech, agency_animal_aid, agency_domestic_labor]
+      traits: [transformed-attendant, stove-animal, hospitality-judge, hay-fed, water-drinker, disenchanted]
+      evidence: |
+        pretty brindled cow
+
+    hut_forest_wicked_witch:
+      name: The Wicked Witch
+      being_type: being_witch
+      agency_modes: [agency_violence, agency_cunning]
+      traits: [offstage-enchantress, prince-bewitcher, attendant-transformer, forest-curse-maker]
+      evidence: |
+        bewitched by a wicked witch
+
+    hut_forest_charcoal_burner:
+      name: The Charcoal-Burner
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [forest-servitude-master, punishment-destination]
+      evidence: |
+        servants to a charcoal-burner
+
+  magic_objects:
+
+    obj_hut_forest_seed_trails:
+      name: The Millet, Lentil, and Pea Trails
+      object_kind: trail
+      attributes:
+        function: path markers that birds eat before each daughter can follow them
+      evidence: |
+        strew the seeds on the path
+
+    obj_hut_forest_dinner_soup:
+      name: The Bowl of Soup
+      object_kind: food
+      attributes:
+        function: dinner meant for the wood-cutter and later kitchen food in the enchanted hut
+      evidence: |
+        set out on her way with a bowl of soup
+
+    obj_hut_forest_barley_hay_water:
+      name: Barley, Hay, and Water for the Animals
+      object_kind: food
+      attributes:
+        function: animal hospitality offering that marks the youngest daughter as worthy
+      evidence: |
+        brought some barley and stewed it for the cock and hen
+
+    obj_hut_forest_feather_beds:
+      name: The Two Feather-Beds with White Linen
+      object_kind: tool
+      attributes:
+        function: bedding prepared correctly by the youngest daughter before the enchanted midnight release
+      evidence: |
+        shook the feather-beds, and laid clean sheets on them
+
+    obj_hut_forest_trapdoor:
+      name: The Trap-Door to the Cellar
+      object_kind: architecture
+      attributes:
+        function: punishment mechanism for the sisters who neglect the animals
+      evidence: |
+        he opened a trap-door, and let her down into the cellar
+
+  locations:
+
+    loc_hut_forest_family_hut:
+      name: The Wood-Cutter's Little Hut
+      instance_of: loc_house
+      threshold_type: threshold_forest
+      evidence: |
+        in a little hut on the edge of a lonely forest
+
+    loc_hut_forest_lost_forest:
+      name: The Lonely Forest and Vanished Track
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        the girl could not find the track
+
+    loc_hut_forest_enchanted_house:
+      name: The Lighted House in the Forest
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        came to a house the windows of which were all lighted up
+
+    loc_hut_forest_hearth:
+      name: The Stove Where the Animals Lie
+      instance_of: loc_hearth
+      evidence: |
+        By the stove lay three animals
+
+    loc_hut_forest_bedroom:
+      name: The Upstairs Room with Two Beds
+      instance_of: loc_bedchamber
+      evidence: |
+        thou wilt find a room with two beds
+
+    loc_hut_forest_cellar:
+      name: The Cellar Under the Trap-Door
+      instance_of: loc_cellar
+      evidence: |
+        let her down into the cellar
+
+    loc_hut_forest_royal_palace:
+      name: The Restored Royal Palace
+      instance_of: loc_castle
+      evidence: |
+        the old hut in the forest was changed back again into my royal palace
+
+
+classifications:
+
+  world_laws:
+    - law_animal_hospitality_breaks_house_enchantment
+    - law_kindness_to_hidden_donors_rewarded
+    - law_forest_suspends_domestic_order
+
+  moral_regimes:
+    - moral_kindness_rewarded
+    - moral_retributive
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_speech
+    - agency_animal_aid
+    - agency_social_rank
+
+  affects_driving:
+    - affect_fear
+    - affect_pity
+    - affect_grief
+    - affect_joy
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: hut_forest_woodcutter,
+      scene: "a poor wood-cutter lives with wife and three daughters at the forest edge" }
+  - { function: func_absentation, order: 2, actor: hut_forest_woodcutter,
+      scene: "the father goes to work in the forest and asks for dinner to be sent" }
+  - { function: func_path_marker, order: 3, actor: hut_forest_woodcutter,
+      scene: "he scatters seed-trails so each daughter can find him" }
+  - { function: func_loss_of_path, order: 4, actor: hut_forest_forest_birds,
+      scene: "forest birds eat the seed-trails and the daughters lose the track" }
+  - { function: func_arrival, order: 5, actor: hut_forest_eldest_daughter,
+      scene: "the elder daughters reach the lighted forest house and ask shelter" }
+  - { function: func_donor_test_failed, order: 6, actor: hut_forest_eldest_daughter,
+      scene: "the elder daughters eat with the old man but neglect the animals" }
+  - { function: func_punishment, order: 7, actor: hut_forest_old_man_prince,
+      scene: "the old man lets each negligent daughter down into the cellar" }
+  - { function: func_donor_test, order: 8, actor: hut_forest_youngest_daughter,
+      scene: "the youngest daughter pets, feeds, and waters the animals before eating" }
+  - { function: func_blessed_sleep, order: 9, actor: hut_forest_youngest_daughter,
+      scene: "she prepares both beds, says her prayers, and sleeps quietly" }
+  - { function: func_disenchantment, order: 10, actor: law_animal_hospitality_breaks_house_enchantment,
+      scene: "at midnight the enchanted hut breaks apart and becomes a palace" }
+  - { function: func_recognition, order: 11, actor: hut_forest_old_man_prince,
+      scene: "the king's son reveals the witch's spell and the transformed attendants" }
+  - { function: func_wedding_preparation, order: 12, actor: hut_forest_old_man_prince,
+      scene: "the attendants are sent to fetch the girl's parents to the marriage feast" }
+  - { function: func_punishment, order: 13, actor: hut_forest_old_man_prince,
+      scene: "the two sisters are sentenced to forest service until they grow kinder" }
+
+
+edges:
+
+  # Seed trails and forest loss
+  - { from: hut_forest_woodcutter, to: obj_hut_forest_seed_trails, label: STREWS,
+      evidence: "I will take a bag of millet with me and strew the seeds on the path" }
+  - { from: hut_forest_eldest_daughter, to: obj_hut_forest_dinner_soup, label: CARRIES,
+      evidence: "set out on her way with a bowl of soup" }
+  - { from: hut_forest_forest_birds, to: obj_hut_forest_seed_trails, label: EAT,
+      evidence: "had picked up the millet long before" }
+  - { from: hut_forest_eldest_daughter, to: loc_hut_forest_lost_forest, label: LOSES_TRACK_IN,
+      evidence: "the girl could not find the track" }
+  - { from: hut_forest_eldest_daughter, to: loc_hut_forest_enchanted_house, label: REACHES_BY_LIGHT,
+      evidence: "she perceived a light which glimmered between the trees" }
+  - { from: hut_forest_second_daughter, to: loc_hut_forest_enchanted_house, label: REPEATS_JOURNEY_TO,
+      evidence: "she too reached the house of the old man" }
+  - { from: hut_forest_youngest_daughter, to: loc_hut_forest_enchanted_house, label: REACHES_BY_LIGHT,
+      evidence: "she saw the light and came to the house in the forest" }
+
+  # Failed hospitality of the elder sisters
+  - { from: hut_forest_old_man_prince, to: hut_forest_hen, label: CONSULTS,
+      evidence: "Pretty little hen" }
+  - { from: hut_forest_old_man_prince, to: hut_forest_cock, label: CONSULTS,
+      evidence: "Pretty little cock" }
+  - { from: hut_forest_old_man_prince, to: hut_forest_brindled_cow, label: CONSULTS,
+      evidence: "pretty brindled cow" }
+  - { from: hut_forest_hen, to: hut_forest_eldest_daughter, label: CONSENTS_TO_SHELTER,
+      evidence: "We are willing" }
+  - { from: hut_forest_eldest_daughter, to: hut_forest_old_man_prince, label: EATS_WITH,
+      evidence: "ate and satisfied her hunger" }
+  - { from: hut_forest_eldest_daughter, to: hut_forest_hen, label: NEGLECTS,
+      evidence: "had no thought of the animals" }
+  - { from: hut_forest_hen, to: hut_forest_eldest_daughter, label: REBUKES,
+      evidence: "Thou hast had no thought for us" }
+  - { from: hut_forest_old_man_prince, to: obj_hut_forest_trapdoor, label: OPENS_AGAINST,
+      evidence: "opened a trap-door, and let her down into the cellar" }
+  - { from: hut_forest_old_man_prince, to: hut_forest_second_daughter, label: PUNISHES_SAME_WAY,
+      evidence: "let her down into the cellar" }
+
+  # Youngest daughter's animal hospitality
+  - { from: hut_forest_youngest_daughter, to: hut_forest_hen, label: PETS,
+      evidence: "petted the cock and hen" }
+  - { from: hut_forest_youngest_daughter, to: hut_forest_brindled_cow, label: CARESSES,
+      evidence: "caressed the brindled cow between her horns" }
+  - { from: hut_forest_youngest_daughter, to: obj_hut_forest_barley_hay_water, label: PREPARES_FOR_ANIMALS,
+      evidence: "brought some barley and stewed it for the cock and hen" }
+  - { from: hut_forest_youngest_daughter, to: hut_forest_brindled_cow, label: FEEDS_HAY,
+      evidence: "a whole armful of sweet-smelling hay for the cow" }
+  - { from: hut_forest_youngest_daughter, to: hut_forest_hen, label: WATERS,
+      evidence: "fetched in a bucketful of water" }
+  - { from: hut_forest_youngest_daughter, to: hut_forest_old_man_prince, label: EATS_LEFTOVERS_WITH,
+      evidence: "ate what he had left" }
+  - { from: hut_forest_hen, to: hut_forest_youngest_daughter, label: BLESSES_GOOD_NIGHT,
+      evidence: "Thou hast had kind thought for all of us" }
+  - { from: hut_forest_youngest_daughter, to: obj_hut_forest_feather_beds, label: PREPARES,
+      evidence: "shook the feather-beds, and laid clean sheets on them" }
+  - { from: hut_forest_youngest_daughter, to: speech_prayer, label: PERFORMS,
+      evidence: "said her prayers" }
+
+  # Disenchantment and palace restoration
+  - { from: law_animal_hospitality_breaks_house_enchantment, to: loc_hut_forest_royal_palace, label: RESTORES,
+      evidence: "the old hut in the forest was changed back again into my royal palace" }
+  - { from: hut_forest_old_man_prince, to: hut_forest_wicked_witch, label: TESTIFIES_CURSE_BY,
+      evidence: "bewitched by a wicked witch" }
+  - { from: hut_forest_old_man_prince, to: hut_forest_hen, label: REVEALS_ATTENDANT_FORM,
+      evidence: "my three attendants in the form of a cock, a hen, and a brindled cow" }
+  - { from: hut_forest_youngest_daughter, to: law_animal_hospitality_breaks_house_enchantment, label: FULFILLS,
+      evidence: "showed herself full of love, not only towards mankind, but towards animals" }
+  - { from: law_animal_hospitality_breaks_house_enchantment, to: hut_forest_old_man_prince, label: SETS_FREE,
+      evidence: "by thee at midnight we were set free" }
+  - { from: hut_forest_old_man_prince, to: hut_forest_youngest_daughter, label: PREPARES_MARRIAGE_FEAST_WITH,
+      evidence: "fetch the father and mother of the girl to the marriage feast" }
+  - { from: hut_forest_old_man_prince, to: hut_forest_eldest_daughter, label: SENTENCES_TO_SERVICE,
+      evidence: "shall live as servants to a charcoal-burner" }
+  - { from: hut_forest_old_man_prince, to: hut_forest_second_daughter, label: SENTENCES_TO_SERVICE,
+      evidence: "until they have grown kinder" }

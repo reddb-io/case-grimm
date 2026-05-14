@@ -1,0 +1,10 @@
+slug: clever-grethel
+khm: 77
+atu: '1741'
+base: pg5314-grimm-hunt
+sources:
+- book: pg2591-grimm-taylor
+  weight: supplementary
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

@@ -1,0 +1,8 @@
+slug: the-master-thief
+khm: 192
+atu: 1525A
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

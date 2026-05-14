@@ -1,0 +1,361 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-master-thief
+khm: 192
+atu: "1525A"
+atu_name: The Master Thief
+canonical_source: ../../2-silver/canonical/the-master-thief/canonical.txt
+title: The Master Thief
+
+entities:
+  characters:
+    master_thief_son:
+      name: The Master-Thief / Arch-Thief
+      archetypes: [arc_master_thief, arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_object_mediation]
+      existential_states: [state_disguised]
+      speech_acts_performed: [speech_bargain, speech_boast, speech_lie, speech_command, speech_testimony]
+      affects: [affect_pride]
+      traits: [runaway-son, bean-marked, rich-returner, master-thief, poor-sparing, count-godson, old-woman-disguised, corpse-decoy-user, count-voice-imitator, false-peter, arch-thief, exiled-winner]
+      evidence: |
+        I have become a thief, but do not be alarmed, I am a master-thief
+
+    master_thief_father:
+      name: The Old Peasant Father
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      speech_acts_performed: [speech_warning, speech_testimony]
+      affects: [affect_love, affect_fear]
+      traits: [old, poor, gardener, potato-host, lost-son-father, bean-mark-recognizer, theft-disapprover, gallows-warner]
+      evidence: |
+        an old man and his wife were sitting in front of a miserable house
+
+    master_thief_mother:
+      name: The Mother
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_joy, affect_grief, affect_love]
+      traits: [potato-cook, returning-son-weeper, joy-and-grief-mother]
+      evidence: |
+        The wife went into the kitchen
+
+    master_thief_count:
+      name: The Count / Godfather
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command, speech_bargain, speech_warning, speech_testimony]
+      affects: [affect_fear, affect_pride]
+      traits: [castle-lord, godfather, merciful-judge, three-task-setter, horse-owner, bedchamber-watcher, corpse-burier, final-exiler]
+      evidence: |
+        our Lord, the count up there in the castle
+
+    master_thief_countess:
+      name: The Countess
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_testimony]
+      traits: [ring-guarding-wife, deceived-by-count-voice, reluctant-ring-giver]
+      evidence: |
+        the countess went to bed that night
+
+    master_thief_soldiers:
+      name: The Stable Soldiers
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech]
+      existential_states: [state_enchanted_sleep]
+      speech_acts_performed: [speech_request, speech_testimony]
+      affects: [affect_hunger]
+      traits: [stable-watchers, fire-warmers, wine-drinkers, drugged-sleepers, suspended-rider]
+      evidence: |
+        In front of the door of the stable some soldiers were lying round a fire
+
+    master_thief_parson:
+      name: The Parson
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      existential_states: [state_deceived, state_trapped]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_fear]
+      traits: [church-neighbour, apocalypse-believer, precedence-claimer, sack-captive, false-heaven-traveller]
+      evidence: |
+        The parson and clerk who lived nearest to the church
+
+    master_thief_clerk:
+      name: The Clerk
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      existential_states: [state_deceived, state_trapped]
+      speech_acts_performed: [speech_request, speech_testimony]
+      affects: [affect_fear]
+      traits: [church-neighbour, parson-nudger, sack-captive, false-heaven-traveller]
+      evidence: |
+        The parson and clerk who lived nearest to the church
+
+  magic_objects:
+    obj_master_thief_bean_birthmark:
+      name: The Bean-Shaped Birthmark
+      object_kind: token
+      attributes:
+        function: bodily recognition token proving the rich stranger is the lost son
+      evidence: |
+        a birth-mark on his shoulder, that looks like a bean
+
+    obj_master_thief_carriage:
+      name: The Splendid Carriage with Four Black Horses
+      object_kind: treasure
+      attributes:
+        function: sign of the son's illicit wealth and lordly disguise on return
+      evidence: |
+        a splendid carriage with four black horses
+
+    obj_master_thief_count_horse:
+      name: The Count's Riding-Horse
+      object_kind: creature_object
+      attributes:
+        function: first task target stolen from watched stable
+      evidence: |
+        the horse I keep for my own riding
+
+    obj_master_thief_sleeping_wine:
+      name: The Hungary Wine with Sleeping-Drink
+      instance_of: obj_sleeping_draught
+      object_kind: food
+      attributes:
+        function: drugged wine used to put stable guards to sleep
+      evidence: |
+        old Hungary wine in which was mixed a powerful sleeping-drink
+
+    obj_master_thief_sheet:
+      name: The Count's Bed Sheet
+      object_kind: garment
+      attributes:
+        function: second task target taken from beneath the sleeping couple
+      evidence: |
+        the sheet from beneath the bodies of my wife and myself
+
+    obj_master_thief_wedding_ring:
+      name: The Countess's Wedding-Ring
+      object_kind: token
+      attributes:
+        function: intimate second task target surrendered to the thief in the count's voice
+      evidence: |
+        the wedding-ring of my wife
+
+    obj_master_thief_gallows_body:
+      name: The Gallows Body
+      object_kind: relic
+      attributes:
+        function: corpse decoy used to draw the count out of the bedchamber
+      evidence: |
+        cut a poor sinner who was hanging there down from the halter
+
+    obj_master_thief_crab_lights:
+      name: The Candle-Bearing Crabs
+      object_kind: creature_object
+      attributes:
+        function: moving graveyard lights that simulate the dead collecting bones
+      evidence: |
+        stuck a wax-candle on his back
+
+    obj_master_thief_sack:
+      name: The Long Sack
+      object_kind: tool
+      attributes:
+        function: false heaven vehicle that traps the parson and clerk
+      evidence: |
+        a long sack on his back
+
+  locations:
+    loc_master_thief_miserable_house:
+      name: The Miserable House
+      instance_of: loc_house
+      evidence: |
+        in front of a miserable house
+
+    loc_master_thief_garden:
+      name: The Peasant's Garden
+      instance_of: loc_garden
+      evidence: |
+        Come into my garden with me
+
+    loc_master_thief_castle:
+      name: The Count's Castle
+      instance_of: loc_castle
+      evidence: |
+        drove to the castle
+
+    loc_master_thief_courtyard:
+      name: The Castle Courtyard
+      instance_of: loc_courtyard
+      evidence: |
+        sat down on a stone in the court-yard
+
+    loc_master_thief_stable:
+      name: The Count's Stable
+      instance_of: loc_stable
+      evidence: |
+        the stable
+
+    loc_master_thief_bedchamber:
+      name: The Count's Bedroom
+      instance_of: loc_bedchamber
+      evidence: |
+        the countess’s bedroom
+
+    loc_master_thief_gallows:
+      name: The Gallows
+      instance_of: loc_gallows
+      evidence: |
+        went in the dark to the gallows
+
+    loc_master_thief_church:
+      name: The Village Church
+      instance_of: loc_church
+      evidence: |
+        the village-church
+
+    loc_master_thief_churchyard:
+      name: The Churchyard
+      instance_of: loc_church
+      evidence: |
+        sat down in the churchyard
+
+    loc_master_thief_pigeon_house:
+      name: The Castle Pigeon-House
+      instance_of: loc_house
+      evidence: |
+        pushed the sack into the pigeon-house
+
+classifications:
+  world_laws:
+    - law_master_thief_trials_escalate_guarded_intimate_sacred_theft
+    - law_disguise_alters_social_reality
+  moral_regimes:
+    - moral_trickster_wins
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_object_mediation
+  affects_driving:
+    - affect_pride
+    - affect_fear
+    - affect_joy
+  symbol_numbers:
+    - num_3
+  threshold_types: []
+
+propp:
+  - { function: func_return_home, order: 1, actor: master_thief_son,
+      scene: "the rich stranger returns to the miserable house and is recognized as the lost son" }
+  - { function: func_identity_revealed, order: 2, actor: obj_master_thief_bean_birthmark,
+      scene: "the bean-shaped birthmark proves the stranger is the peasant's son" }
+  - { function: func_profession_confessed, order: 3, actor: master_thief_son,
+      scene: "the son confesses that he has become a master-thief" }
+  - { function: func_godfather_judgment, order: 4, actor: master_thief_count,
+      victim: master_thief_son,
+      scene: "the count spares his godson but sets three theft tasks under death threat" }
+  - { function: func_first_task, order: 5, actor: master_thief_son,
+      scene: "disguised as an old woman, he drugs the stable soldiers and steals the riding-horse" }
+  - { function: func_second_task, order: 6, actor: master_thief_son,
+      scene: "he uses a gallows corpse to draw the count away and steals the sheet and ring" }
+  - { function: func_third_task, order: 7, actor: master_thief_son,
+      scene: "he stages the Last Day with candle-bearing crabs and sacks the parson and clerk" }
+  - { function: func_wager_won, order: 8, actor: master_thief_count,
+      beneficiary: master_thief_son,
+      scene: "the count admits the arch-thief has won but banishes him from the land" }
+  - { function: func_departure, order: 9, actor: master_thief_son,
+      scene: "the arch-thief leaves his parents and goes back into the wide world" }
+
+edges:
+  - { from: master_thief_son, to: obj_master_thief_carriage, label: ARRIVES_IN,
+      evidence: "a splendid carriage with four black horses" }
+  - { from: master_thief_father, to: master_thief_son, label: DESCRIBES_RUNAWAY_SON,
+      evidence: "He was a ne’er-do-well; sharp, and knowing" }
+  - { from: master_thief_father, to: obj_master_thief_bean_birthmark, label: NAMES_RECOGNITION_MARK,
+      evidence: "a birth-mark on his shoulder, that looks like a bean" }
+  - { from: master_thief_son, to: obj_master_thief_bean_birthmark, label: REVEALS,
+      evidence: "showed the peasant the bean" }
+  - { from: master_thief_father, to: master_thief_son, label: RECOGNIZES_AS_SON,
+      evidence: "Thou art really my son" }
+  - { from: master_thief_son, to: arc_master_thief, label: CONFESSES_ROLE,
+      evidence: "I have become a thief" }
+  - { from: master_thief_son, to: master_thief_father, label: CLAIMS_POOR_ARE_SAFE,
+      evidence: "Poor people are safe" }
+  - { from: master_thief_father, to: master_thief_son, label: WARNS_THIEF_ENDS_BADLY,
+      evidence: "a thief is still a thief" }
+  - { from: master_thief_mother, to: affect_joy, label: WEEPS_FOR_RETURN,
+      evidence: "she wept for joy" }
+  - { from: master_thief_father, to: loc_master_thief_castle, label: WARNS_OF_COUNT,
+      evidence: "the count up there in the castle" }
+  - { from: master_thief_son, to: master_thief_count, label: REVEALS_SELF_TO,
+      evidence: "the stranger made himself known" }
+  - { from: master_thief_count, to: master_thief_son, label: SPARES_GODSON_FOR_TEST,
+      evidence: "mercy shall take the place of justice" }
+  - { from: master_thief_count, to: law_master_thief_trials_escalate_guarded_intimate_sacred_theft, label: SETS_THREE_TASKS,
+      evidence: "Think of three things" }
+  - { from: master_thief_count, to: obj_master_thief_count_horse, label: ORDERS_HORSE_STOLEN,
+      evidence: "thou shalt steal the horse I keep for my own riding" }
+  - { from: master_thief_count, to: obj_master_thief_sheet, label: ORDERS_SHEET_STOLEN,
+      evidence: "thou shalt steal the sheet from beneath the bodies of my wife and myself" }
+  - { from: master_thief_count, to: obj_master_thief_wedding_ring, label: ORDERS_RING_STOLEN,
+      evidence: "the wedding-ring of my wife as well" }
+  - { from: master_thief_count, to: master_thief_parson, label: ORDERS_CLERGY_STOLEN,
+      evidence: "thou shalt steal away out of the church, the parson and clerk" }
+  - { from: master_thief_son, to: state_disguised, label: DISGUISES_AS_OLD_WOMAN,
+      evidence: "bought the clothes of an old peasant woman, and put them on" }
+  - { from: master_thief_son, to: obj_master_thief_sleeping_wine, label: CARRIES_DRUGGED_WINE,
+      evidence: "old Hungary wine in which was mixed a powerful sleeping-drink" }
+  - { from: master_thief_son, to: loc_master_thief_courtyard, label: ENTERS_COURTYARD_DISGUISED,
+      evidence: "sat down on a stone in the court-yard" }
+  - { from: master_thief_soldiers, to: obj_master_thief_sleeping_wine, label: DRINK,
+      evidence: "had another poured out for himself, and the rest followed his example" }
+  - { from: obj_master_thief_sleeping_wine, to: master_thief_soldiers, label: PUTS_TO_SLEEP,
+      evidence: "fell down and began to snore" }
+  - { from: master_thief_son, to: obj_master_thief_count_horse, label: STEALS_FROM_STABLE,
+      evidence: "unloosed the horse from the chain" }
+  - { from: master_thief_son, to: obj_master_thief_count_horse, label: MUFFLES_HOOFS,
+      evidence: "wrapped the horse’s hoofs in old rags" }
+  - { from: master_thief_son, to: master_thief_count, label: RETURNS_ON_STOLEN_HORSE,
+      evidence: "here is the horse" }
+  - { from: master_thief_son, to: loc_master_thief_gallows, label: FETCHES_CORPSE_FROM,
+      evidence: "went in the dark to the gallows" }
+  - { from: master_thief_son, to: obj_master_thief_gallows_body, label: CUTS_DOWN,
+      evidence: "cut a poor sinner who was hanging there down from the halter" }
+  - { from: master_thief_count, to: obj_master_thief_gallows_body, label: SHOOTS_DECOY,
+      evidence: "fired a pistol at him" }
+  - { from: master_thief_count, to: loc_master_thief_garden, label: BURIES_DECOY_IN,
+      evidence: "began to dig a hole in which to lay it" }
+  - { from: master_thief_son, to: loc_master_thief_bedchamber, label: ENTERS_BY_LADDER,
+      evidence: "climbed up the ladder straight into the countess’s bedroom" }
+  - { from: master_thief_son, to: master_thief_countess, label: IMITATES_COUNT_VOICE,
+      evidence: "began in the count’s voice" }
+  - { from: master_thief_countess, to: obj_master_thief_sheet, label: GIVES_SHEET,
+      evidence: "The countess gave him the sheet" }
+  - { from: master_thief_countess, to: obj_master_thief_wedding_ring, label: GIVES_RING,
+      evidence: "she drew the ring from her finger, and gave it to him" }
+  - { from: master_thief_son, to: obj_master_thief_sheet, label: STEALS,
+      evidence: "brought him the sheet and the ring" }
+  - { from: master_thief_son, to: obj_master_thief_crab_lights, label: MAKES_MOVING_CHURCHYARD_LIGHTS,
+      evidence: "stuck a wax-candle on his back" }
+  - { from: master_thief_son, to: state_disguised, label: DISGUISES_AS_FALSE_PETER,
+      evidence: "put on a long black garment that looked like a monk’s cowl" }
+  - { from: master_thief_son, to: loc_master_thief_church, label: PREACHES_FALSE_LAST_DAY,
+      evidence: "The last day is at hand" }
+  - { from: master_thief_son, to: obj_master_thief_sack, label: OFFERS_SACK_AS_HEAVEN_PATH,
+      evidence: "Whosoever wishes to go to heaven with me must creep into the sack" }
+  - { from: master_thief_parson, to: obj_master_thief_sack, label: CREEPS_IN_FIRST,
+      evidence: "The parson crept in first" }
+  - { from: master_thief_clerk, to: obj_master_thief_sack, label: CREEPS_IN_SECOND,
+      evidence: "and then the clerk" }
+  - { from: master_thief_son, to: obj_master_thief_sack, label: DRAGS_CAPTIVES_TO_CASTLE,
+      evidence: "dragging them up the steps of the castle" }
+  - { from: master_thief_son, to: loc_master_thief_pigeon_house, label: LOCKS_SACK_IN,
+      evidence: "pushed the sack into the pigeon-house" }
+  - { from: master_thief_count, to: master_thief_son, label: ACKNOWLEDGES_WAGER_WON,
+      evidence: "Thou art an arch-thief, and hast won thy wager" }
+  - { from: master_thief_count, to: master_thief_son, label: BANISHES_FROM_LAND,
+      evidence: "see that thou leavest my land" }
+  - { from: master_thief_son, to: master_thief_father, label: TAKES_LEAVE_OF_PARENTS,
+      evidence: "took leave of his parents" }

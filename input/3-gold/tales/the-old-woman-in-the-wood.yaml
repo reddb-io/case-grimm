@@ -1,0 +1,535 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-old-woman-in-the-wood
+khm: 123
+atu: '442'
+atu_name: The Old Woman in the Wood
+canonical_source: ../../2-silver/canonical/the-old-woman-in-the-wood/canonical.txt
+title: The Old Woman in the Wood
+
+
+entities:
+
+  characters:
+
+    old_woman_wood_servant_girl:
+      name: The Poor Servant-Girl
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_object_mediation, agency_cunning]
+      speech_acts_performed: [speech_request]
+      affects: [affect_fear, affect_grief, affect_hunger, affect_joy]
+      traits: [poor-servant, robber-massacre-survivor, forest-lost-maiden, dove-provided-dependent, silent-task-obeyer, plain-ring-retriever, prince-deliverer, bride]
+      evidence: |
+        A poor servant-girl was once travelling with the family
+
+    old_woman_wood_murdered_family:
+      name: The Murdered Travelling Family
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [employers, forest-travellers, robber-victims]
+      evidence: |
+        the family with which she was in service
+
+    old_woman_wood_robbers:
+      name: The Robbers from the Thicket
+      archetypes: [arc_predator]
+      species: sp_human
+      agency_modes: [agency_violence, agency_cunning]
+      traits: [forest-ambushers, murderers, booty-takers]
+      evidence: |
+        robbers came out of the thicket
+
+    old_woman_wood_white_dove:
+      name: The White Dove Helper
+      species: sp_bird
+      agency_modes: [agency_animal_aid, agency_speech, agency_object_mediation]
+      transformations: [transform_animal_human]
+      speech_acts_performed: [speech_command, speech_request]
+      traits: [white-dove, key-bringer, tree-provider, ring-task-giver, enchanted-prince-form]
+      evidence: |
+        a white dove came flying to her with a little golden key in its mouth
+
+    old_woman_wood_wicked_witch:
+      name: The Old Woman in the Little House
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_speech, agency_violence, agency_object_mediation]
+      speech_acts_performed: [speech_command]
+      affects: [affect_anger]
+      traits: [house-guardian, greeting-tempter, gown-seizer, ring-concealer, bird-cage-thief, enchantress]
+      evidence: |
+        the power of the old woman, who is a wicked witch
+
+    old_woman_wood_caged_bird:
+      name: The Caged Bird with the Plain Ring
+      species: sp_bird
+      agency_modes: [agency_object_mediation]
+      traits: [caged-bird, plain-ring-holder, witch-carried-token-bearer]
+      evidence: |
+        a bird was inside which had the plain ring in its bill
+
+    old_woman_wood_tree_prince:
+      name: The Prince Changed into Tree and Dove
+      archetypes: [arc_enchanted_prince]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_social_rank]
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_plant_human, transform_animal_human]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_joy]
+      traits: [tree-bound-prince, two-hour-dove, ring-bound, released-bridegroom, king-son]
+      evidence: |
+        the tree was a handsome man
+
+    old_woman_wood_tree_servants:
+      name: The Servants Changed into Trees
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_social_rank]
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_plant_human]
+      traits: [enchanted-retainers, tree-formed-household, released-servants]
+      evidence: |
+        his servants and his horses, who had likewise been changed into trees
+
+    old_woman_wood_tree_horses:
+      name: The Horses Changed into Trees
+      species: sp_horse
+      agency_modes: [agency_endurance]
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_plant_human]
+      traits: [enchanted-horses, tree-formed-royal-transport, released-horses]
+      evidence: |
+        his servants and his horses, who had likewise been changed into trees
+
+  magic_objects:
+
+    obj_old_woman_wood_golden_keys:
+      name: The Three Little Golden Keys
+      object_kind: token
+      attributes:
+        function: open tree-locks containing food, bed, and splendid clothing
+      evidence: |
+        with a little golden key in its mouth
+
+    obj_old_woman_wood_tree_food:
+      name: The Milk and White Bread Inside the Tree
+      object_kind: food
+      attributes:
+        function: feeds the starving servant-girl in the forest
+      evidence: |
+        found milk in a little dish, and white bread
+
+    obj_old_woman_wood_white_bed:
+      name: The Beautiful White Bed Inside the Tree
+      object_kind: material
+      attributes:
+        function: gives the servant-girl safe sleep in the forest
+      evidence: |
+        found a beautiful white bed
+
+    obj_old_woman_wood_splendid_garments:
+      name: The Gold and Jewel Garments Inside the Tree
+      object_kind: garment
+      attributes:
+        function: clothes the servant-girl more splendidly than a king's daughter
+      evidence: |
+        garments beset with gold and with jewels
+
+    obj_old_woman_wood_glittering_rings:
+      name: The Glittering Decoy Rings
+      object_kind: token
+      attributes:
+        function: distract from the plain ring required for disenchantment
+      evidence: |
+        a quantity of rings of all kinds are lying
+
+    obj_old_woman_wood_plain_ring:
+      name: The Plain Form-Binding Ring
+      instance_of: obj_form_binding_ring
+      object_kind: token
+      attributes:
+        function: releases the prince from the witch's tree-dove enchantment when recovered
+      evidence: |
+        the plain ring in its bill
+
+    obj_old_woman_wood_bird_cage:
+      name: The Bird-Cage Carried by the Witch
+      object_kind: token
+      attributes:
+        function: conceals and transports the bird holding the plain ring
+      evidence: |
+        a bird-cage which she had in her hand
+
+  locations:
+
+    loc_old_woman_wood_great_forest:
+      name: The Great Forest of Robbers and Aid
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        through a great forest
+
+    loc_old_woman_wood_massacre_tree:
+      name: The Tree Behind Which the Girl Hides
+      instance_of: loc_tree
+      evidence: |
+        hidden herself behind a tree
+
+    loc_old_woman_wood_waiting_tree:
+      name: The Tree Under Which She Waits
+      instance_of: loc_tree
+      evidence: |
+        she seated herself under a tree
+
+    loc_old_woman_wood_food_tree:
+      name: The Food Tree with a Little Lock
+      instance_of: loc_tree
+      evidence: |
+        therein is a little lock
+
+    loc_old_woman_wood_bed_tree:
+      name: The Bed Tree
+      instance_of: loc_tree
+      evidence: |
+        Open that tree there, and thou willt find a bed
+
+    loc_old_woman_wood_clothing_tree:
+      name: The Clothing Tree
+      instance_of: loc_tree
+      evidence: |
+        Open that tree there, and thou wilt find clothes
+
+    loc_old_woman_wood_witch_house:
+      name: The Old Woman's Small House
+      instance_of: loc_witch_house
+      threshold_type: threshold_doorway
+      evidence: |
+        guide thee to a small house
+
+    loc_old_woman_wood_fireplace:
+      name: The Old Woman's Fire
+      instance_of: loc_hearth
+      evidence: |
+        an old woman will be sitting by the fire
+
+    loc_old_woman_wood_ring_room:
+      name: The Room of Rings
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        thou wilt enter into a room where a quantity of rings of all kinds are lying
+
+    loc_old_woman_wood_releasing_tree:
+      name: The Tree That Becomes the Prince
+      instance_of: loc_tree
+      evidence: |
+        the tree was soft and pliant
+
+    loc_old_woman_wood_prince_kingdom:
+      name: The Prince's Kingdom
+      instance_of: loc_castle
+      threshold_type: threshold_gate
+      evidence: |
+        he led them forth to his kingdom
+
+
+classifications:
+
+  world_laws:
+    - law_forest_suspends_domestic_order
+    - law_plain_ring_breaks_tree_dove_enchantment
+
+  moral_regimes:
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_animal_aid
+    - agency_object_mediation
+    - agency_endurance
+    - agency_cunning
+    - agency_speech
+
+  affects_driving:
+    - affect_fear
+    - affect_grief
+    - affect_hunger
+    - affect_joy
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+    - threshold_gate
+
+
+propp:
+
+  - function: func_initial_villainy
+    order: 1
+    actor: old_woman_wood_robbers
+    victim: old_woman_wood_murdered_family
+    scene: Robbers come from the thicket and murder the travelling household in the forest.
+    evidence: |
+      murdered all they found
+
+  - function: func_survival
+    order: 2
+    actor: old_woman_wood_servant_girl
+    scene: The servant-girl escapes by jumping from the carriage and hiding behind a tree.
+    evidence: |
+      hidden herself behind a tree
+
+  - function: func_lack
+    order: 3
+    actor: old_woman_wood_servant_girl
+    scene: Lost in the forest, she weeps that she cannot get out and will starve.
+    evidence: |
+      I do not know how to get out of the forest
+
+  - function: func_donor_aid
+    order: 4
+    actor: old_woman_wood_white_dove
+    beneficiary: old_woman_wood_servant_girl
+    scene: The dove brings golden keys that open trees containing food, bed, and clothing.
+    evidence: |
+      the dove came every day and provided her with all she needed
+
+  - function: func_task_assignment
+    order: 5
+    actor: old_woman_wood_white_dove
+    beneficiary: old_woman_wood_servant_girl
+    scene: The dove asks her to enter the old woman's house silently and retrieve the plain ring.
+    evidence: |
+      seek out a plain one
+
+  - function: func_interdiction
+    order: 6
+    actor: old_woman_wood_white_dove
+    victim: old_woman_wood_servant_girl
+    scene: The dove warns that she must not answer the old woman's greeting.
+    evidence: |
+      on thy life give her no answer
+
+  - function: func_resistance
+    order: 7
+    actor: old_woman_wood_servant_girl
+    scene: She keeps silent, passes the old woman on the right, and enters the ring room.
+    evidence: |
+      The girl gave her no answer
+
+  - function: func_recognition_task
+    order: 8
+    actor: old_woman_wood_servant_girl
+    scene: She ignores the glittering rings and finds the plain ring inside the bird-cage.
+    evidence: |
+      a bird was inside which had the plain ring in its bill
+
+  - function: func_return_and_waiting
+    order: 9
+    actor: old_woman_wood_servant_girl
+    scene: The girl returns joyfully, waits for the dove by a tree, and leans against it.
+    evidence: |
+      determined to wait for the dove
+
+  - function: func_disenchantment
+    order: 10
+    actor: obj_old_woman_wood_plain_ring
+    beneficiary: old_woman_wood_tree_prince
+    scene: The tree softens into a man, and the prince explains that the ring has freed him from the witch.
+    evidence: |
+      Thou hast delivered me from the power of the old woman
+
+  - function: func_household_release
+    order: 11
+    actor: obj_old_woman_wood_plain_ring
+    beneficiary: old_woman_wood_tree_servants
+    scene: The prince's servants and horses are released from tree form as well.
+    evidence: |
+      were freed from the enchantment also
+
+  - function: func_wedding
+    order: 12
+    actor: old_woman_wood_tree_prince
+    beneficiary: old_woman_wood_servant_girl
+    scene: The king's son leads them to his kingdom and marries the girl.
+    evidence: |
+      they married, and lived happily
+
+
+edges:
+
+  - from: old_woman_wood_servant_girl
+    label: TRAVELS_WITH
+    to: old_woman_wood_murdered_family
+    evidence: |
+      travelling with the family with which she was in service
+
+  - from: old_woman_wood_robbers
+    label: MURDERS
+    to: old_woman_wood_murdered_family
+    evidence: |
+      murdered all they found
+
+  - from: old_woman_wood_servant_girl
+    label: HIDES_BEHIND
+    to: loc_old_woman_wood_massacre_tree
+    evidence: |
+      hidden herself behind a tree
+
+  - from: old_woman_wood_servant_girl
+    label: WAITS_UNDER
+    to: loc_old_woman_wood_waiting_tree
+    evidence: |
+      seated herself under a tree
+
+  - from: old_woman_wood_white_dove
+    label: BRINGS
+    to: obj_old_woman_wood_golden_keys
+    evidence: |
+      with a little golden key in its mouth
+
+  - from: obj_old_woman_wood_golden_keys
+    label: OPENS
+    to: loc_old_woman_wood_food_tree
+    evidence: |
+      it opens with the tiny key
+
+  - from: loc_old_woman_wood_food_tree
+    label: CONTAINS
+    to: obj_old_woman_wood_tree_food
+    evidence: |
+      found milk in a little dish, and white bread
+
+  - from: loc_old_woman_wood_bed_tree
+    label: CONTAINS
+    to: obj_old_woman_wood_white_bed
+    evidence: |
+      found a beautiful white bed
+
+  - from: loc_old_woman_wood_clothing_tree
+    label: CONTAINS
+    to: obj_old_woman_wood_splendid_garments
+    evidence: |
+      garments beset with gold and with jewels
+
+  - from: old_woman_wood_white_dove
+    label: ASKS_HELP_FROM
+    to: old_woman_wood_servant_girl
+    evidence: |
+      Wilt thou do something for my sake?
+
+  - from: old_woman_wood_white_dove
+    label: COMMANDS_SILENCE_BEFORE
+    to: old_woman_wood_wicked_witch
+    evidence: |
+      give her no answer
+
+  - from: old_woman_wood_wicked_witch
+    label: SEIZES
+    to: old_woman_wood_servant_girl
+    evidence: |
+      seized her by the gown
+
+  - from: old_woman_wood_servant_girl
+    label: ENTERS
+    to: loc_old_woman_wood_ring_room
+    evidence: |
+      went straight into the room
+
+  - from: old_woman_wood_servant_girl
+    label: SEARCHES_AMONG
+    to: obj_old_woman_wood_glittering_rings
+    evidence: |
+      She turned them over and looked for the plain one
+
+  - from: old_woman_wood_wicked_witch
+    label: TRIES_TO_ESCAPE_WITH
+    to: obj_old_woman_wood_bird_cage
+    evidence: |
+      wanting to get off with a bird-cage
+
+  - from: old_woman_wood_caged_bird
+    label: HOLDS
+    to: obj_old_woman_wood_plain_ring
+    evidence: |
+      had the plain ring in its bill
+
+  - from: old_woman_wood_servant_girl
+    label: TAKES
+    to: obj_old_woman_wood_plain_ring
+    evidence: |
+      Then she took the ring
+
+  - from: old_woman_wood_servant_girl
+    label: WAITS_BY
+    to: loc_old_woman_wood_releasing_tree
+    evidence: |
+      determined to wait for the dove
+
+  - from: loc_old_woman_wood_releasing_tree
+    label: EMBRACES
+    to: old_woman_wood_servant_girl
+    evidence: |
+      the branches twined around her
+
+  - from: loc_old_woman_wood_releasing_tree
+    label: TRANSFORMS_INTO
+    to: old_woman_wood_tree_prince
+    evidence: |
+      the tree was a handsome man
+
+  - from: old_woman_wood_tree_prince
+    label: TESTIFIES_ABOUT
+    to: old_woman_wood_wicked_witch
+    evidence: |
+      who is a wicked witch
+
+  - from: old_woman_wood_wicked_witch
+    label: CHANGED_INTO_TREE
+    to: old_woman_wood_tree_prince
+    evidence: |
+      She had changed me into a tree
+
+  - from: old_woman_wood_tree_prince
+    label: BECAME_DOVE_DAILY
+    to: old_woman_wood_white_dove
+    evidence: |
+      every day for two hours I was a white dove
+
+  - from: old_woman_wood_wicked_witch
+    label: POSSESSED
+    to: obj_old_woman_wood_plain_ring
+    evidence: |
+      so long as she possessed the ring
+
+  - from: obj_old_woman_wood_plain_ring
+    label: RELEASES
+    to: old_woman_wood_tree_prince
+    evidence: |
+      I could not regain my human form
+
+  - from: obj_old_woman_wood_plain_ring
+    label: RELEASES
+    to: old_woman_wood_tree_servants
+    evidence: |
+      were freed from the enchantment also
+
+  - from: obj_old_woman_wood_plain_ring
+    label: RELEASES
+    to: old_woman_wood_tree_horses
+    evidence: |
+      were freed from the enchantment also
+
+  - from: old_woman_wood_tree_prince
+    label: LEADS_TO
+    to: loc_old_woman_wood_prince_kingdom
+    evidence: |
+      led them forth to his kingdom
+
+  - from: old_woman_wood_tree_prince
+    label: MARRIES
+    to: old_woman_wood_servant_girl
+    evidence: |
+      they married

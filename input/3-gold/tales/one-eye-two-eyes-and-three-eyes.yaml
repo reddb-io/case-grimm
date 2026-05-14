@@ -1,0 +1,385 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: one-eye-two-eyes-and-three-eyes
+khm: 130
+atu: '511'
+atu_name: One-Eye, Two-Eyes, and Three-Eyes
+canonical_source: ../../2-silver/canonical/one-eye-two-eyes-and-three-eyes/canonical.txt
+title: One-Eye, Two-Eyes, and Three-Eyes
+
+
+entities:
+
+  characters:
+
+    one_two_three_two_eyes:
+      name: Two-Eyes
+      archetypes: [arc_oppressed_maiden]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_object_mediation, agency_domestic_labor]
+      speech_acts_performed: [speech_wish, speech_command, speech_prayer]
+      affects: [affect_grief, affect_hunger, affect_joy]
+      traits: [ordinary-eyed, despised-daughter, goat-herd, formula-speaker, rightful-tree-owner, merciful-sister]
+      evidence: |
+        Two-eyes saw just as other human beings did
+
+    one_two_three_mother:
+      name: The Envious Mother
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command]
+      affects: [affect_envy, affect_anger]
+      traits: [persecuting-mother, surveillance-organizer, goat-killer, fruit-claimer]
+      evidence: |
+        my sisters and mother hate me for it
+
+    one_two_three_one_eye:
+      name: One-Eye
+      archetypes: [arc_envious_kin_persecutor]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_social_rank]
+      affects: [affect_envy]
+      traits: [single-eyed-elder-sister, first-spy, sleep-charmed, false-tree-claimant, later-beggar]
+      evidence: |
+        called One-eye, because she had only one eye in the middle of her forehead
+
+    one_two_three_three_eyes:
+      name: Three-Eyes
+      archetypes: [arc_envious_kin_persecutor]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_envy]
+      traits: [three-eyed-youngest-sister, successful-spy, third-eye-witness, false-tree-claimant, later-beggar]
+      evidence: |
+        the youngest, Three-eyes, because she had three eyes
+
+    one_two_three_wise_woman:
+      name: The Wise Woman
+      archetypes: [arc_supernatural_donor, arc_wise_helper]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_command]
+      traits: [field-appearing-helper, formula-giver, entrails-counsellor]
+      evidence: |
+        a woman was standing beside her
+
+    one_two_three_goat:
+      name: Two-Eyes' Goat
+      species: sp_goat
+      agency_modes: [agency_animal_aid, agency_object_mediation]
+      existential_states: [state_liminal_dead]
+      traits: [pasture-goat, formulaic-provider, slaughtered-helper, tree-source]
+      evidence: |
+        The goat which covered the table for me every day
+
+    one_two_three_knight:
+      name: The Young Knight
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_love]
+      traits: [handsome-lord, tree-admirer, public-recognizer, rescuer-husband]
+      evidence: |
+        a young knight came up
+
+    one_two_three_poor_sisters:
+      name: The Two Poor Repentant Sisters
+      archetypes: [arc_repentant_sinner]
+      species: sp_human
+      agency_modes: [agency_endurance]
+      affects: [affect_repentance]
+      traits: [fallen-into-poverty, wandering-beggars, repentant-kin]
+      evidence: |
+        recognized her sisters, One-eye, and Three-eyes
+
+  magic_objects:
+
+    obj_one_two_three_food_table:
+      name: The Goat-Summoned Food Table
+      instance_of: obj_wishing_table
+      object_kind: architecture
+      attributes:
+        start_formula: "Bleat, my little goat, bleat"
+        stop_formula: "take the table quite away"
+        function: feeds Two-Eyes secretly in the field
+      evidence: |
+        a little table, covered with a white cloth, was standing there
+
+    obj_one_two_three_goat_entrails:
+      name: The Slaughtered Goat's Entrails
+      object_kind: creature_object
+      attributes:
+        source: one_two_three_goat
+        function: buried seed of the silver-leaf and golden-fruit tree
+      evidence: |
+        give me the entrails
+
+    obj_one_two_three_golden_apples:
+      name: The Golden Apples
+      object_kind: treasure
+      attributes:
+        tree_source: loc_one_two_three_rightful_tree
+        function: reveal rightful ownership and expose false claims
+      evidence: |
+        fruit of gold hanging among them
+
+    obj_one_two_three_silver_branch:
+      name: The Silver-Leafed Golden-Fruit Branch
+      object_kind: treasure
+      attributes:
+        given_to: one_two_three_knight
+        function: exchange-token for Two-Eyes' rescue from hunger and want
+      evidence: |
+        a branch with beautiful silver leaves and golden fruit
+
+    obj_one_two_three_barrel:
+      name: The Empty Barrel
+      object_kind: material
+      attributes:
+        function: hides Two-Eyes from the knight and fails as concealment
+      evidence: |
+        turned an empty barrel which was standing close by the tree over poor Two-eyes
+
+  locations:
+
+    loc_one_two_three_household:
+      name: The Hostile Family House
+      instance_of: loc_house
+      evidence: |
+        In the evening, when she went home with her goat
+
+    loc_one_two_three_field_ridge:
+      name: The Field Ridge of Weeping
+      instance_of: loc_field
+      evidence: |
+        seated herself on the ridge of grass at the edge of the field
+
+    loc_one_two_three_pasture:
+      name: The Goat Pasture
+      instance_of: loc_meadow
+      evidence: |
+        drive her goat to the pasture
+
+    loc_one_two_three_house_door:
+      name: The Ground Before the House-Door
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        in front of the house-door
+
+    loc_one_two_three_rightful_tree:
+      name: The Silver-Leafed Golden-Fruit Tree
+      instance_of: loc_tree
+      attributes:
+        grown_from: obj_one_two_three_goat_entrails
+        follows_owner: one_two_three_two_eyes
+      evidence: |
+        there stood a strangely magnificent tree with leaves of silver, and fruit of gold
+
+    loc_one_two_three_knight_castle:
+      name: The Knight's Father's Castle
+      instance_of: loc_castle
+      evidence: |
+        took her home with him to his father’s castle
+
+
+classifications:
+
+  world_laws:
+    - law_formula_commands_magic_objects
+    - law_sacrificed_helper_body_becomes_rightful_tree
+    - law_true_fit_reveals_identity
+
+  moral_regimes:
+    - moral_restorative
+    - moral_mercy_over_judgment
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_speech
+    - agency_object_mediation
+    - agency_social_rank
+    - agency_violence
+
+  affects_driving:
+    - affect_hunger
+    - affect_grief
+    - affect_envy
+    - affect_joy
+    - affect_repentance
+
+  symbol_numbers:
+    - num_1
+    - num_2
+    - num_3
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_villainy
+    order: 1
+    actor: one_two_three_mother
+    victim: one_two_three_two_eyes
+    scene: "the mother and sisters despise Two-Eyes for having ordinary human eyes and deprive her of food"
+    evidence: "gave her nothing to eat but what they left"
+
+  - function: func_departure
+    order: 2
+    actor: one_two_three_two_eyes
+    scene: "Two-Eyes goes hungry into the fields to tend the goat"
+    evidence: "Two-eyes had to go out into the fields and tend the goat"
+
+  - function: func_donor_sequence
+    order: 3
+    actor: one_two_three_wise_woman
+    beneficiary: one_two_three_two_eyes
+    scene: "the wise woman gives Two-Eyes the formula for summoning and dismissing the food table"
+    evidence: "I will tell thee something to stop thee ever suffering from hunger again"
+
+  - function: func_magical_agent
+    order: 4
+    actor: one_two_three_goat
+    beneficiary: one_two_three_two_eyes
+    scene: "the goat mediates the spoken charm that covers the table with food"
+    evidence: "Cover the table with something to eat"
+
+  - function: func_villainy
+    order: 5
+    actor: one_two_three_mother
+    victim: one_two_three_goat
+    scene: "after Three-Eyes discovers the secret, the mother kills the goat"
+    evidence: "thrust it into the heart of the goat"
+
+  - function: func_donor_sequence
+    order: 6
+    actor: one_two_three_wise_woman
+    beneficiary: one_two_three_two_eyes
+    scene: "the wise woman instructs Two-Eyes to bury the slaughtered goat's entrails before the house"
+    evidence: "bury them in the ground in front of the house"
+
+  - function: func_magical_agent
+    order: 7
+    actor: loc_one_two_three_rightful_tree
+    beneficiary: one_two_three_two_eyes
+    scene: "the buried entrails become a silver-leafed tree with golden fruit that only Two-Eyes can pluck"
+    evidence: "came into her hand of their own accord"
+
+  - function: func_false_claims
+    order: 8
+    actor: one_two_three_one_eye
+    scene: "One-Eye and Three-Eyes claim the tree before the knight but cannot break off its branch"
+    evidence: "They again asserted that the tree was their property"
+
+  - function: func_recognition
+    order: 9
+    actor: one_two_three_knight
+    beneficiary: one_two_three_two_eyes
+    scene: "Two-Eyes rolls out golden apples, comes from beneath the barrel, and proves the tree is hers"
+    evidence: "Two-eyes, come forth"
+
+  - function: func_rescue
+    order: 10
+    actor: one_two_three_knight
+    beneficiary: one_two_three_two_eyes
+    scene: "the knight takes Two-Eyes away from hunger, thirst, grief, and want"
+    evidence: "if you would take me with you"
+
+  - function: func_wedding
+    order: 11
+    actor: one_two_three_knight
+    beneficiary: one_two_three_two_eyes
+    scene: "the knight marries Two-Eyes at his father's castle"
+    evidence: "he married her"
+
+  - function: func_punishment
+    order: 12
+    actor: loc_one_two_three_rightful_tree
+    victim: one_two_three_one_eye
+    scene: "the tree vanishes from the persecutors' house and follows Two-Eyes"
+    evidence: "the tree had vanished"
+
+  - function: func_forgiveness
+    order: 13
+    actor: one_two_three_two_eyes
+    beneficiary: one_two_three_poor_sisters
+    scene: "Two-Eyes receives her fallen sisters, cares for them, and they repent"
+    evidence: "made them welcome, and was kind to them"
+
+
+edges:
+
+  - { from: one_two_three_mother, to: one_two_three_two_eyes, label: PERSECUTES,
+      evidence: "could not endure her" }
+  - { from: one_two_three_one_eye, to: one_two_three_two_eyes, label: PERSECUTES,
+      evidence: "pushed her about, and threw old clothes to her" }
+  - { from: one_two_three_three_eyes, to: one_two_three_two_eyes, label: PERSECUTES,
+      evidence: "did everything that they could to make her unhappy" }
+  - { from: one_two_three_two_eyes, to: one_two_three_goat, label: TENDS,
+      evidence: "tend the goat" }
+  - { from: one_two_three_two_eyes, to: loc_one_two_three_field_ridge, label: WEEPS_AT,
+      evidence: "sat down on a ridge and began to weep" }
+  - { from: one_two_three_wise_woman, to: one_two_three_two_eyes, label: TEACHES_FORMULA_TO,
+      evidence: "just say to thy goat" }
+  - { from: one_two_three_two_eyes, to: one_two_three_goat, label: COMMANDS_BY_FORMULA,
+      evidence: "Bleat, my little goat, bleat" }
+  - { from: one_two_three_goat, to: obj_one_two_three_food_table, label: SUMMONS,
+      evidence: "Cover the table with something to eat" }
+  - { from: obj_one_two_three_food_table, to: one_two_three_two_eyes, label: FEEDS,
+      evidence: "ate and drank until she was satisfied" }
+  - { from: one_two_three_two_eyes, to: obj_one_two_three_food_table, label: DISMISSES_BY_FORMULA,
+      evidence: "take the table quite away" }
+  - { from: one_two_three_mother, to: one_two_three_one_eye, label: SENDS_TO_SPY,
+      evidence: "resolved to send One-eye with Two-eyes" }
+  - { from: one_two_three_two_eyes, to: one_two_three_one_eye, label: PUTS_TO_SLEEP,
+      evidence: "One-eye shut her one eye, and fell asleep" }
+  - { from: one_two_three_mother, to: one_two_three_three_eyes, label: SENDS_TO_SPY,
+      evidence: "This time thou shalt go and observe" }
+  - { from: one_two_three_three_eyes, to: obj_one_two_three_food_table, label: WITNESSES,
+      evidence: "Three-eyes had seen everything" }
+  - { from: one_two_three_three_eyes, to: one_two_three_mother, label: REPORTS_SECRET_TO,
+      evidence: "Now, I know why that high-minded thing there does not eat" }
+  - { from: one_two_three_mother, to: one_two_three_goat, label: KILLS,
+      evidence: "fetched a butcher’s knife" }
+  - { from: one_two_three_wise_woman, to: one_two_three_two_eyes, label: COUNSELS,
+      evidence: "I will give thee a piece of good advice" }
+  - { from: one_two_three_two_eyes, to: obj_one_two_three_goat_entrails, label: REQUESTS,
+      evidence: "give me the entrails" }
+  - { from: one_two_three_two_eyes, to: loc_one_two_three_house_door, label: BURIES_ENTRAILS_AT,
+      evidence: "buried them quietly in the evening" }
+  - { from: obj_one_two_three_goat_entrails, to: loc_one_two_three_rightful_tree, label: GROWS_INTO,
+      evidence: "grown up out of the entrails of the goat" }
+  - { from: one_two_three_mother, to: one_two_three_one_eye, label: COMMANDS_FRUIT_GATHERING,
+      evidence: "Climb up, my child, and gather some of the fruit" }
+  - { from: loc_one_two_three_rightful_tree, to: one_two_three_one_eye, label: REFUSES_FRUIT_TO,
+      evidence: "the branch escaped from her hands" }
+  - { from: loc_one_two_three_rightful_tree, to: one_two_three_three_eyes, label: REFUSES_FRUIT_TO,
+      evidence: "the golden apples always escaped her" }
+  - { from: loc_one_two_three_rightful_tree, to: one_two_three_two_eyes, label: GIVES_FRUIT_TO,
+      evidence: "came into her hand of their own accord" }
+  - { from: one_two_three_one_eye, to: obj_one_two_three_barrel, label: HIDES_TWO_EYES_UNDER,
+      evidence: "creep under this, and don’t disgrace us" }
+  - { from: one_two_three_three_eyes, to: obj_one_two_three_barrel, label: HIDES_TWO_EYES_UNDER,
+      evidence: "over poor Two-eyes" }
+  - { from: one_two_three_two_eyes, to: obj_one_two_three_golden_apples, label: ROLLS_OUT,
+      evidence: "rolled out a couple of golden apples" }
+  - { from: one_two_three_knight, to: one_two_three_two_eyes, label: SUMMONS_FROM_HIDING,
+      evidence: "Two-eyes, come forth" }
+  - { from: one_two_three_two_eyes, to: obj_one_two_three_silver_branch, label: BREAKS_OFF,
+      evidence: "with the greatest ease broke off a branch" }
+  - { from: one_two_three_two_eyes, to: one_two_three_knight, label: ASKS_DELIVERANCE_FROM,
+      evidence: "I suffer from hunger and thirst, grief and want" }
+  - { from: one_two_three_knight, to: one_two_three_two_eyes, label: RESCUES,
+      evidence: "lifted Two-eyes on to his horse" }
+  - { from: one_two_three_knight, to: one_two_three_two_eyes, label: MARRIES,
+      evidence: "he married her" }
+  - { from: loc_one_two_three_rightful_tree, to: loc_one_two_three_knight_castle, label: FOLLOWS_OWNER_TO,
+      evidence: "it had followed her" }
+  - { from: one_two_three_two_eyes, to: one_two_three_poor_sisters, label: FORGIVES_AND_CARES_FOR,
+      evidence: "was kind to them, and took care of them" }
+  - { from: one_two_three_poor_sisters, to: one_two_three_two_eyes, label: REPENT_BEFORE,
+      evidence: "repented the evil that they had done their sister" }

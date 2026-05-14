@@ -1,0 +1,274 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-spirit-in-the-bottle
+khm: 99
+atu: '331'
+atu_name: The Spirit in the Bottle
+canonical_source: ../../2-silver/canonical/the-spirit-in-the-bottle/canonical.txt
+title: The Spirit in the Bottle
+
+
+entities:
+
+  characters:
+
+    spirit_bottle_woodcutter:
+      name: The Poor Woodcutter Father
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_grief, affect_anger]
+      traits: [toiling-father, education-funder, daily-bread-worker, axe-borrower, son-doubter, restored-householder]
+      evidence: |
+        There was once a poor woodcutter who toiled from early morning
+        till late night.
+
+    spirit_bottle_scholar:
+      name: The Woodcutter's Scholar Son
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_object_mediation, agency_domestic_labor]
+      affects: [affect_courage, affect_joy]
+      traits: [only-child, high-school-scholar, returned-student, forest-wanderer, bottle-opener, spirit-reconfiner, plaster-winner, silver-axe-maker, famous-doctor]
+      evidence: |
+        Then the boy went to a High School and learned diligently
+
+    spirit_bottle_mercurius:
+      name: Mighty Mercurius
+      species: sp_human
+      being_type: being_spirit
+      agency_modes: [agency_speech, agency_violence, agency_object_mediation]
+      speech_acts_performed: [speech_command, speech_promise]
+      affects: [affect_anger, affect_pride]
+      traits: [bottle-imprisoned-spirit, frog-shaped-in-glass, giant-sized-threatener, strangling-claimant, reconfined, coerced-rewarder]
+      evidence: |
+        I am the mighty Mercurius.
+
+    spirit_bottle_neighbor:
+      name: The Axe-Lending Neighbour
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [axe-owner, creditor-by-damage, overpaid-neighbour]
+      evidence: |
+        he will lend you his axe
+
+    spirit_bottle_goldsmith:
+      name: The Town Goldsmith
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [silver-tester, scale-user, partial-buyer, debtor]
+      evidence: |
+        carried it into town to a goldsmith
+
+  magic_objects:
+
+    obj_spirit_bottle_glass_bottle:
+      name: The Glass Bottle under the Oak Roots
+      object_kind: relic
+      attributes:
+        function: prison of Mercurius and leverage for renegotiation
+      evidence: |
+        found a glass bottle in a little hollow
+
+    obj_spirit_bottle_cork:
+      name: The Bottle Cork
+      object_kind: token
+      attributes:
+        function: seals Mercurius inside after the reconfinement trick
+      evidence: |
+        thrust the cork he had drawn back into the bottle
+
+    obj_spirit_bottle_plaster:
+      name: The Two-Ended Healing and Silvering Plaster
+      object_kind: material
+      attributes:
+        first_end: heals wounds
+        second_end: changes steel or iron into silver
+      evidence: |
+        handed the scholar a little bag just like a plaster
+
+    obj_spirit_bottle_borrowed_axe:
+      name: The Borrowed Axe
+      object_kind: tool
+      attributes:
+        function: work tool transformed into silver and sold to restore the household
+      evidence: |
+        he will lend you his axe
+
+    obj_spirit_bottle_silver_axe:
+      name: The Silver Axe
+      object_kind: treasure
+      attributes:
+        function: transformed axe worth hundreds of thalers
+      evidence: |
+        the iron had changed into silver
+
+    obj_spirit_bottle_school_money:
+      name: The Thalers from the Goldsmith
+      object_kind: treasure
+      attributes:
+        function: pays the neighbour, supports father, and funds renewed schooling
+      evidence: |
+        The goldsmith gave him three hundred thalers
+
+  locations:
+
+    loc_spirit_bottle_house:
+      name: The Woodcutter's House
+      instance_of: loc_house
+      evidence: |
+        I am obliged to stay at home
+
+    loc_spirit_bottle_school:
+      name: The High School
+      evidence: |
+        went to a High School
+
+    loc_spirit_bottle_forest:
+      name: The Woodcutting Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        went out into the forest together
+
+    loc_spirit_bottle_oak:
+      name: The Dangerous-Looking Oak
+      instance_of: loc_tree
+      evidence: |
+        a great dangerous-looking oak
+
+    loc_spirit_bottle_roots:
+      name: The Oak-Root Hollow
+      instance_of: loc_tree
+      evidence: |
+        down here amongst the roots of the oak-tree
+
+    loc_spirit_bottle_town_goldsmith:
+      name: The Town Goldsmith's Shop
+      instance_of: loc_marketplace
+      evidence: |
+        carried it into town to a goldsmith
+
+
+classifications:
+
+  world_laws:
+    - law_reconfinement_tricks_dangerous_spirit
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+    - agency_object_mediation
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_grief
+    - affect_anger
+    - affect_courage
+    - affect_joy
+
+  symbol_numbers: []
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: spirit_bottle_woodcutter,
+      scene: "A poor woodcutter spends his saved wages on his only son's education.",
+      evidence: "I will spend the money which I have earned with the sweat of my brow on your education" }
+  - { function: func_lack, order: 2, actor: spirit_bottle_scholar,
+      scene: "The money runs out before the son completes his schooling, so he returns home.",
+      evidence: "the little pittance which the father had earned was all spent" }
+  - { function: func_departure, order: 3, actor: spirit_bottle_scholar,
+      scene: "The scholar accompanies his father into the forest with a borrowed axe.",
+      evidence: "they went out into the forest together" }
+  - { function: func_reconnaissance, order: 4, actor: spirit_bottle_scholar,
+      scene: "During the meal break he wanders through the forest and hears a smothered voice under the oak.",
+      evidence: "Let me out, let me out!" }
+  - { function: func_release, order: 5, actor: spirit_bottle_scholar,
+      scene: "He finds the glass bottle and releases the frog-shaped spirit.",
+      evidence: "drew the cork out of the bottle" }
+  - { function: func_villainy, order: 6, actor: spirit_bottle_mercurius,
+      scene: "Mercurius grows huge and declares that his reward is to strangle the liberator.",
+      evidence: "I must strangle thee for it" }
+  - { function: func_trickery, order: 7, actor: spirit_bottle_scholar,
+      scene: "The scholar asks the spirit to prove he can fit back into the bottle.",
+      evidence: "If, indeed, thou canst get in again, I will believe" }
+  - { function: func_victory, order: 8, actor: spirit_bottle_scholar,
+      scene: "When Mercurius re-enters, the scholar corks the bottle and restores his leverage.",
+      evidence: "the spirit was betrayed" }
+  - { function: func_magical_agent, order: 9, actor: spirit_bottle_mercurius,
+      scene: "Released under new terms, the spirit grants the two-ended plaster.",
+      evidence: "Now thou shalt have thy reward" }
+  - { function: func_testing, order: 10, actor: spirit_bottle_scholar,
+      scene: "The scholar tests the plaster on tree bark and confirms its healing power.",
+      evidence: "It immediately closed together and was healed" }
+  - { function: func_liquidation, order: 11, actor: spirit_bottle_scholar,
+      scene: "The plaster turns the borrowed axe into silver, producing money for his father and renewed study.",
+      evidence: "It is worth four hundred thalers" }
+  - { function: func_return, order: 12, actor: spirit_bottle_scholar,
+      scene: "The son returns to school and becomes the most famous doctor in the world.",
+      evidence: "became the most famous doctor in the whole world" }
+
+
+edges:
+
+  # Poverty, education, and forest threshold
+  - { from: spirit_bottle_woodcutter, to: spirit_bottle_scholar, label: FUNDS_EDUCATION_OF,
+      evidence: "spend the money which I have earned with the sweat of my brow on your education" }
+  - { from: spirit_bottle_scholar, to: loc_spirit_bottle_school, label: STUDIES_AT,
+      evidence: "went to a High School and learned diligently" }
+  - { from: spirit_bottle_scholar, to: spirit_bottle_woodcutter, label: RETURNS_TO,
+      evidence: "the boy was obliged to return home to him" }
+  - { from: spirit_bottle_neighbor, to: obj_spirit_bottle_borrowed_axe, label: LENDS,
+      evidence: "he will lend you his axe" }
+  - { from: spirit_bottle_woodcutter, to: loc_spirit_bottle_forest, label: ENTERS_WITH_SON,
+      evidence: "they went out into the forest together" }
+  - { from: spirit_bottle_scholar, to: loc_spirit_bottle_oak, label: DISCOVERS,
+      evidence: "a great dangerous-looking oak" }
+
+  # Bottle release and reconfinement
+  - { from: spirit_bottle_mercurius, to: spirit_bottle_scholar, label: CALLS_FROM_UNDER_ROOTS,
+      evidence: "Let me out, let me out!" }
+  - { from: spirit_bottle_scholar, to: obj_spirit_bottle_glass_bottle, label: FINDS,
+      evidence: "found a glass bottle in a little hollow" }
+  - { from: obj_spirit_bottle_glass_bottle, to: spirit_bottle_mercurius, label: CONTAINS,
+      evidence: "saw a creature shaped like a frog" }
+  - { from: spirit_bottle_scholar, to: obj_spirit_bottle_cork, label: DRAWS_OUT,
+      evidence: "drew the cork out of the bottle" }
+  - { from: spirit_bottle_mercurius, to: spirit_bottle_scholar, label: THREATENS_TO_STRANGLE,
+      evidence: "I must strangle thee for it" }
+  - { from: spirit_bottle_scholar, to: spirit_bottle_mercurius, label: DEMANDS_PROOF_OF_CONTAINMENT,
+      evidence: "I must first know that thou really wert shut up in that little bottle" }
+  - { from: spirit_bottle_mercurius, to: obj_spirit_bottle_glass_bottle, label: REENTERS,
+      evidence: "crept through the same opening" }
+  - { from: spirit_bottle_scholar, to: obj_spirit_bottle_cork, label: SEALS_BOTTLE_WITH,
+      evidence: "thrust the cork he had drawn back into the bottle" }
+  - { from: law_reconfinement_tricks_dangerous_spirit, to: spirit_bottle_mercurius, label: DEFEATS,
+      evidence: "the spirit was betrayed" }
+
+  # Renegotiated gift and household restoration
+  - { from: spirit_bottle_mercurius, to: spirit_bottle_scholar, label: PROMISES_REWARD,
+      evidence: "will reward thee richly" }
+  - { from: spirit_bottle_mercurius, to: obj_spirit_bottle_plaster, label: GIVES,
+      evidence: "handed the scholar a little bag just like a plaster" }
+  - { from: obj_spirit_bottle_plaster, to: loc_spirit_bottle_oak, label: HEALS_WOUND_ON,
+      evidence: "It immediately closed together and was healed" }
+  - { from: obj_spirit_bottle_plaster, to: obj_spirit_bottle_borrowed_axe, label: SILVERS,
+      evidence: "the iron had changed into silver" }
+  - { from: spirit_bottle_woodcutter, to: spirit_bottle_scholar, label: FEARS_DEBT_FOR_AXE,
+      evidence: "now I shall have to pay for that" }
+  - { from: spirit_bottle_scholar, to: spirit_bottle_goldsmith, label: SELLS_SILVER_AXE_TO,
+      evidence: "carried it into town to a goldsmith" }
+  - { from: spirit_bottle_goldsmith, to: obj_spirit_bottle_school_money, label: PAYS,
+      evidence: "gave him three hundred thalers" }
+  - { from: spirit_bottle_scholar, to: spirit_bottle_woodcutter, label: SUPPORTS,
+      evidence: "You shall never know want" }
+  - { from: spirit_bottle_scholar, to: loc_spirit_bottle_school, label: RETURNS_TO_STUDY,
+      evidence: "went back to the High School" }
+  - { from: obj_spirit_bottle_plaster, to: spirit_bottle_scholar, label: MAKES_FAMOUS_DOCTOR,
+      evidence: "he could heal all wounds with his plaster" }

@@ -1,0 +1,242 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-grave-mound
+khm: 195
+atu: "815"
+atu_name: The Devil's Money / The Grave-Mound
+canonical_source: ../../2-silver/canonical/the-grave-mound/canonical.txt
+title: The Grave-Mound
+
+entities:
+  characters:
+    grave_mound_rich_farmer:
+      name: The Rich Farmer
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_bargain, speech_command]
+      affects: [affect_greed, affect_fear, affect_pity]
+      traits: [wealth-inspector, avaricious, conscience-struck, pitiless, conditional-benefactor, sudden-dead, devil-claimed-soul]
+      evidence: |
+        A rich farmer was one day standing in his yard
+
+    grave_mound_heart_voice:
+      name: The Farmer's Speaking Heart
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_testimony, speech_warning]
+      affects: [affect_greed]
+      traits: [conscience-voice, self-accusing, moral-interrogator, hidden-truth-speaker]
+      evidence: |
+        The knock was not at the door of his room, but at the door of his heart.
+
+    grave_mound_poor_neighbor:
+      name: The Poor Neighbour
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_request, speech_promise, speech_testimony]
+      affects: [affect_hunger, affect_fear, affect_loyalty]
+      traits: [hungry-children-father, corn-recipient, promise-keeper, grave-watcher, grateful-debtor, gold-sharer]
+      evidence: |
+        his neighbour, a poor man who had a number of children
+
+    grave_mound_paid_off_soldier:
+      name: The Paid-Off Soldier
+      archetypes: [arc_discharged_soldier, arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_object_mediation, agency_endurance]
+      existential_states: [state_fearless]
+      speech_acts_performed: [speech_bargain, speech_boast, speech_testimony]
+      affects: [affect_greed]
+      traits: [scarred, poor, shelterless, fearless, grave-watch-helper, boot-trickster, devil-defier, gold-renouncer]
+      evidence: |
+        I am nothing but a paid-off soldier
+
+    grave_mound_devil:
+      name: The Evil One
+      being_type: being_devil
+      agency_modes: [agency_speech, agency_violence, agency_object_mediation]
+      speech_acts_performed: [speech_command, speech_bargain, speech_warning]
+      affects: [affect_greed, affect_anger]
+      traits: [red-feathered, soul-claimer, neck-threatener, bribery-user, money-fetcher, bottomless-boot-duped, sunrise-fleeing]
+      evidence: |
+        the two watchers perceived the Evil One standing bodily before them
+
+  magic_objects:
+    obj_grave_mound_wealth_chest:
+      name: The Farmer's Iron Money Chest
+      object_kind: treasure
+      attributes:
+        function: visible store of hoarded wealth that triggers the conscience reckoning
+      evidence: |
+        the iron chest in which his money lay
+
+    obj_grave_mound_eight_measures_corn:
+      name: The Eight Measures of Corn
+      object_kind: food
+      attributes:
+        function: mercy-gift to the hungry neighbour, bound to the later grave-watch promise
+      evidence: |
+        I will make thee a present of eight
+
+    obj_grave_mound_cut_boot:
+      name: The Cut-Soled Boot
+      object_kind: garment
+      attributes:
+        function: false container placed over a hidden hole so the Devil cannot fill it with gold
+      evidence: |
+        He cut the sole off the boot
+
+    obj_grave_mound_gold:
+      name: The Devil's Gold
+      object_kind: treasure
+      attributes:
+        function: bribe offered to remove the grave-watchers and later redirected toward the poor
+      evidence: |
+        a small bag of gold in his hand
+
+  locations:
+    loc_grave_mound_farmyard:
+      name: The Rich Farmer's Yard
+      instance_of: loc_courtyard
+      evidence: |
+        standing in his yard
+
+    loc_grave_mound_fields:
+      name: The Farmer's Fields and Gardens
+      instance_of: loc_field
+      evidence: |
+        inspecting his fields and gardens
+
+    loc_grave_mound_stable:
+      name: The Farmer's Stable
+      instance_of: loc_stable
+      evidence: |
+        Then he went into the stable
+
+    loc_grave_mound_sitting_room:
+      name: The Farmer's Sitting-Room
+      instance_of: loc_house
+      evidence: |
+        he went back into his sitting-room
+
+    loc_grave_mound_churchyard:
+      name: The Churchyard
+      instance_of: loc_churchyard
+      threshold_type: threshold_grave
+      evidence: |
+        he went into the churchyard
+
+    loc_grave_mound_grave:
+      name: The Grave-Mound
+      instance_of: loc_tomb
+      threshold_type: threshold_grave
+      evidence: |
+        seated himself on the grave-mound
+
+    loc_grave_mound_boot_hole:
+      name: The Half-Overgrown Hole
+      instance_of: loc_field
+      evidence: |
+        the edge of a hole that was half over-grown
+
+classifications:
+  world_laws:
+    - law_grave_watch_promise_defends_sinner_soul
+    - law_bottomless_boot_delays_devil_until_sunrise
+  moral_regimes:
+    - moral_restorative
+    - moral_trickster_wins
+  agency_modes_dominant:
+    - agency_speech
+    - agency_endurance
+    - agency_cunning
+    - agency_object_mediation
+  affects_driving:
+    - affect_greed
+    - affect_fear
+    - affect_hunger
+    - affect_loyalty
+  symbol_numbers:
+    - num_3
+  threshold_types:
+    - threshold_grave
+
+propp:
+  - { function: func_wealth_survey, order: 1, actor: grave_mound_rich_farmer,
+      scene: "the rich farmer surveys fields, stable, grain, and money chest" }
+  - { function: func_conscience_interrogation, order: 2, actor: grave_mound_heart_voice,
+      victim: grave_mound_rich_farmer,
+      scene: "the knock at the door of the heart asks whether wealth has served kin and poor" }
+  - { function: func_mercy_gift_condition, order: 3, actor: grave_mound_rich_farmer,
+      beneficiary: grave_mound_poor_neighbor,
+      scene: "the farmer gives eight measures of corn on condition of a three-night grave watch" }
+  - { function: func_death, order: 4, actor: grave_mound_rich_farmer,
+      scene: "after three days the rich man drops down dead" }
+  - { function: func_grave_watch, order: 5, actor: grave_mound_poor_neighbor,
+      scene: "the poor neighbour keeps the promise and watches the grave-mound" }
+  - { function: func_helper_arrival, order: 6, actor: grave_mound_paid_off_soldier,
+      scene: "the fearless discharged soldier joins the third-night vigil" }
+  - { function: func_infernal_claim, order: 7, actor: grave_mound_devil,
+      victim: grave_mound_rich_farmer,
+      scene: "the Devil appears at midnight and claims the buried man" }
+  - { function: func_defiance, order: 8, actor: grave_mound_paid_off_soldier,
+      scene: "the soldier refuses to obey or fear the Devil" }
+  - { function: func_bargain, order: 9, actor: grave_mound_paid_off_soldier,
+      beneficiary: grave_mound_poor_neighbor,
+      scene: "the soldier asks for enough gold to fill one boot" }
+  - { function: func_trickery, order: 10, actor: grave_mound_paid_off_soldier,
+      scene: "the soldier cuts the boot sole and sets it over a hole" }
+  - { function: func_infernal_delay, order: 11, actor: grave_mound_devil,
+      scene: "the Devil repeatedly fetches gold but cannot fill the boot" }
+  - { function: func_soul_rescue, order: 12, actor: law_bottomless_boot_delays_devil_until_sunrise,
+      beneficiary: grave_mound_rich_farmer,
+      scene: "sunrise forces the Devil to flee and the poor soul is saved" }
+  - { function: func_restorative_distribution, order: 13, actor: grave_mound_paid_off_soldier,
+      beneficiary: grave_mound_poor_neighbor,
+      scene: "the soldier directs his share to the poor and joins the peasant in peace" }
+
+edges:
+  - { from: grave_mound_rich_farmer, to: loc_grave_mound_farmyard, label: SURVEYS_FROM,
+      evidence: "standing in his yard inspecting his fields" }
+  - { from: grave_mound_rich_farmer, to: obj_grave_mound_wealth_chest, label: HOARDS,
+      evidence: "the iron chest in which his money lay" }
+  - { from: grave_mound_heart_voice, to: grave_mound_rich_farmer, label: INTERROGATES_CONSCIENCE,
+      evidence: "Hast thou shared thy bread with the hungry?" }
+  - { from: grave_mound_rich_farmer, to: affect_greed, label: CONFESSES_GREED,
+      evidence: "I should still not have had enough" }
+  - { from: grave_mound_rich_farmer, to: grave_mound_poor_neighbor, label: GIVES_CORN_TO,
+      evidence: "I will make thee a present of eight" }
+  - { from: grave_mound_rich_farmer, to: grave_mound_poor_neighbor, label: DEMANDS_GRAVE_WATCH_FROM,
+      evidence: "When I am dead, thou shalt watch for three nights by my grave" }
+  - { from: grave_mound_poor_neighbor, to: speech_promise, label: KEEPS_PROMISE,
+      evidence: "where I have once given my promise I must keep it" }
+  - { from: grave_mound_poor_neighbor, to: loc_grave_mound_churchyard, label: ENTERS_AT_NIGHT,
+      evidence: "At nightfall he went into the churchyard" }
+  - { from: grave_mound_poor_neighbor, to: loc_grave_mound_grave, label: WATCHES,
+      evidence: "seated himself on the grave-mound" }
+  - { from: grave_mound_paid_off_soldier, to: grave_mound_poor_neighbor, label: JOINS_WATCH,
+      evidence: "stay with me, and help me to watch that grave there" }
+  - { from: grave_mound_paid_off_soldier, to: state_fearless, label: CLAIMS_FEARLESSNESS,
+      evidence: "I am afraid of nothing" }
+  - { from: grave_mound_devil, to: grave_mound_rich_farmer, label: CLAIMS_SOUL_OF,
+      evidence: "the man who lies in that grave belongs to me" }
+  - { from: grave_mound_devil, to: grave_mound_poor_neighbor, label: THREATENS,
+      evidence: "I will wring your necks" }
+  - { from: grave_mound_devil, to: grave_mound_paid_off_soldier, label: OFFERS_BRIBE_TO,
+      evidence: "asked quite kindly, if they would not accept a bag of money" }
+  - { from: grave_mound_paid_off_soldier, to: obj_grave_mound_cut_boot, label: SETS_BARGAIN_MEASURE,
+      evidence: "as much as will go into one of my boots" }
+  - { from: grave_mound_paid_off_soldier, to: obj_grave_mound_cut_boot, label: CUTS_SOLE_FROM,
+      evidence: "He cut the sole off the boot" }
+  - { from: grave_mound_paid_off_soldier, to: loc_grave_mound_boot_hole, label: PLACES_BOOT_OVER,
+      evidence: "the edge of a hole that was half over-grown" }
+  - { from: grave_mound_devil, to: obj_grave_mound_gold, label: POURS_INTO_BOOT,
+      evidence: "the gold fell through, and the boot remained empty" }
+  - { from: grave_mound_devil, to: loc_grave_mound_grave, label: FLEES_AT_SUNRISE,
+      evidence: "the first ray of the rising sun broke forth from the sky" }
+  - { from: law_bottomless_boot_delays_devil_until_sunrise, to: grave_mound_rich_farmer, label: SAVES_SOUL_OF,
+      evidence: "The poor soul was saved" }
+  - { from: grave_mound_paid_off_soldier, to: obj_grave_mound_gold, label: REDIRECTS_SHARE_TO_POOR,
+      evidence: "Give what falls to my lot to the poor" }
+  - { from: grave_mound_paid_off_soldier, to: grave_mound_poor_neighbor, label: LIVES_IN_PEACE_WITH,
+      evidence: "together we will live in rest and peace" }

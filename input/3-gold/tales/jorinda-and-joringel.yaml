@@ -1,0 +1,277 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: jorinda-and-joringel
+khm: 69
+atu: '405'
+atu_name: Jorinde and Joringel
+canonical_source: ../../2-silver/canonical/jorinda-and-joringel/canonical.txt
+title: Jorinda and Joringel
+
+
+entities:
+
+  characters:
+
+    jorinda_joringel_jorinda:
+      name: Jorinda
+      archetypes: [arc_imprisoned_maiden]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_animal_human, transform_curse]
+      affects: [affect_grief, affect_fear, affect_loyalty]
+      traits: [fair-maiden, betrothed, sorrowful-singer, nightingale-transformed, caged-bird, restored-bride]
+      evidence: |
+        Joringel looked for Jorinda. She was changed into a
+        nightingale, and sang, “jug, jug, jug.”
+
+    jorinda_joringel_joringel:
+      name: Joringel
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_warning]
+      affects: [affect_fear, affect_grief, affect_loyalty]
+      traits: [handsome-youth, betrothed, castle-warner, immobilized-lover, shepherd, dream-guided, flower-seeker, rescuer, bridegroom]
+      evidence: |
+        Joringel could not move: he stood there like a stone, and could
+        neither weep nor speak, nor move hand or foot.
+
+    jorinda_joringel_witch:
+      name: The Witch in the Castle
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_cunning, agency_violence, agency_speech, agency_object_mediation]
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human]
+      speech_acts_performed: [speech_command]
+      affects: [affect_anger]
+      traits: [old, solitary, cat-form, screech-owl-form, beast-lurer, bird-maiden-cager, zachiel-speaker, disarmed-by-flower]
+      evidence: |
+        in it an old woman who was a witch dwelt all alone.
+
+    jorinda_joringel_caged_maidens:
+      name: The Caged Maidens
+      archetypes: [arc_imprisoned_maiden]
+      species: sp_human
+      agency_modes: [agency_endurance]
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_animal_human, transform_curse]
+      affects: [affect_grief]
+      traits: [innocent-maidens, bird-transformed, caged, restored-to-human-form]
+      evidence: |
+        whenever an innocent maiden came within this circle, she
+        changed her into a bird
+
+  magic_objects:
+
+    obj_jorinda_joringel_blood_red_flower:
+      name: The Blood-Red Flower
+      instance_of: obj_disenchanting_flower
+      object_kind: material
+      attributes:
+        color: blood-red
+        mark: pearl-like dew-drop
+        function: contact counter-magic that frees beings and spaces from enchantment
+      evidence: |
+        he found the blood-red flower. In the middle of it there was a
+        large dew-drop, as big as the finest pearl.
+
+    obj_jorinda_joringel_wicker_cages:
+      name: The Wicker-Work Bird Cages
+      object_kind: architecture
+      attributes:
+        function: containers for maidens transformed into birds
+        count: 7000
+      evidence: |
+        shut her up in a wicker-work cage
+
+  locations:
+
+    loc_jorinda_joringel_forest:
+      name: The Large Thick Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        in the midst of a large and thick forest
+
+    loc_jorinda_joringel_witch_castle:
+      name: The Witch's Castle
+      instance_of: loc_witch_house
+      threshold_type: threshold_enchantment_circle
+      evidence: |
+        There was once an old castle in the midst of a large and thick
+        forest
+
+    loc_jorinda_joringel_hundred_pace_circle:
+      name: The Hundred-Pace Circle
+      threshold_type: threshold_enchantment_circle
+      attributes:
+        radius_paces: 100
+        effect: immobilizes intruders and transforms innocent maidens into birds
+      evidence: |
+        If any one came within one hundred paces of the castle he was
+        obliged to stand still
+
+    loc_jorinda_joringel_village:
+      name: The Strange Village
+      instance_of: loc_village
+      evidence: |
+        at last came to a strange village
+
+    loc_jorinda_joringel_bird_room:
+      name: The Bird-Cage Room
+      instance_of: loc_castle
+      evidence: |
+        carried the cage into a room in the castle
+
+
+classifications:
+
+  world_laws:
+    - law_curse_requires_counter_condition
+    - law_enchanted_perimeter_immobilizes_intruders
+    - law_disenchanting_flower_breaks_witchcraft
+
+  moral_regimes:
+    - moral_restorative
+    - moral_prudential_retreat
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_endurance
+    - agency_speech
+    - agency_cunning
+    - agency_violence
+
+  affects_driving:
+    - affect_fear
+    - affect_grief
+    - affect_loyalty
+    - affect_anger
+
+  symbol_numbers:
+    - num_3
+    - num_9
+    - num_100
+
+  threshold_types:
+    - threshold_forest
+    - threshold_enchantment_circle
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: jorinda_joringel_witch,
+      scene: "a witch dwells alone in a castle whose circle immobilizes intruders and turns maidens into birds" }
+  - { function: func_initial_situation, order: 2, actor: jorinda_joringel_jorinda,
+      scene: "Jorinda and Joringel are betrothed and happy together" }
+  - { function: func_interdiction, order: 3, actor: jorinda_joringel_joringel,
+      scene: "Joringel warns Jorinda not to go too near the castle" }
+  - { function: func_violation, order: 4, actor: jorinda_joringel_jorinda,
+      scene: "the betrothed pair lose their way and come close to the castle walls" }
+  - { function: func_villainy, order: 5, actor: jorinda_joringel_witch,
+      victim: jorinda_joringel_jorinda,
+      scene: "the witch changes Jorinda into a nightingale and carries her away" }
+  - { function: func_villainy, order: 6, actor: law_enchanted_perimeter_immobilizes_intruders,
+      victim: jorinda_joringel_joringel,
+      scene: "Joringel is held speechless and motionless until the witch releases him" }
+  - { function: func_lack, order: 7, actor: jorinda_joringel_joringel,
+      scene: "Joringel begs for Jorinda but the witch refuses to return her" }
+  - { function: func_departure, order: 8, actor: jorinda_joringel_joringel,
+      scene: "Joringel goes to a strange village and keeps sheep while circling the castle at a distance" }
+  - { function: func_donor_guidance, order: 9, actor: obj_jorinda_joringel_blood_red_flower,
+      beneficiary: jorinda_joringel_joringel,
+      scene: "a dream reveals the blood-red flower that frees everything it touches" }
+  - { function: func_acquisition, order: 10, actor: jorinda_joringel_joringel,
+      scene: "after nine days of seeking he finds the blood-red flower with pearl-like dew" }
+  - { function: func_return, order: 11, actor: jorinda_joringel_joringel,
+      scene: "the flower lets him cross the hundred-pace boundary and enter the castle" }
+  - { function: func_recognition, order: 12, actor: jorinda_joringel_joringel,
+      scene: "he recognizes the witch's attempt to remove the cage containing Jorinda" }
+  - { function: func_liquidation, order: 13, actor: obj_jorinda_joringel_blood_red_flower,
+      beneficiary: jorinda_joringel_jorinda,
+      scene: "the flower breaks the witch's power and restores Jorinda and the other bird-maidens" }
+  - { function: func_wedding, order: 14, actor: jorinda_joringel_joringel,
+      beneficiary: jorinda_joringel_jorinda,
+      scene: "Joringel takes Jorinda home and marries her" }
+
+
+edges:
+
+  # Enchanted castle order
+  - { from: jorinda_joringel_witch, to: loc_jorinda_joringel_witch_castle, label: DWELLS_IN,
+      evidence: "in it an old woman who was a witch dwelt all alone" }
+  - { from: jorinda_joringel_witch, to: sp_cat, label: TRANSFORMS_INTO,
+      evidence: "changed herself into a cat or a screech-owl" }
+  - { from: jorinda_joringel_witch, to: sp_bird, label: TRANSFORMS_INTO,
+      evidence: "changed herself into a cat or a screech-owl" }
+  - { from: jorinda_joringel_witch, to: sp_human, label: RETURNS_TO_FORM,
+      evidence: "she took her proper shape again as a human being" }
+  - { from: jorinda_joringel_witch, to: sp_bird, label: LURES,
+      evidence: "She could lure wild beasts and birds to her" }
+  - { from: jorinda_joringel_witch, to: sp_bird, label: KILLS_AND_COOKS,
+      evidence: "she killed and boiled and roasted them" }
+  - { from: law_enchanted_perimeter_immobilizes_intruders, to: loc_jorinda_joringel_hundred_pace_circle, label: GOVERNS,
+      evidence: "within one hundred paces of the castle" }
+  - { from: law_enchanted_perimeter_immobilizes_intruders, to: jorinda_joringel_joringel, label: IMMOBILIZES,
+      evidence: "he stood there like a stone" }
+
+  # Transformation and captivity
+  - { from: jorinda_joringel_joringel, to: jorinda_joringel_jorinda, label: WARNS,
+      evidence: "Take care,” said Joringel, “that you do not go too near the castle." }
+  - { from: jorinda_joringel_jorinda, to: affect_grief, label: FEELS,
+      evidence: "Jorinda wept now and then" }
+  - { from: jorinda_joringel_joringel, to: affect_fear, label: FEELS,
+      evidence: "He was horror-stricken and filled with deadly fear." }
+  - { from: jorinda_joringel_witch, to: jorinda_joringel_jorinda, label: TRANSFORMS,
+      evidence: "She was changed into a nightingale" }
+  - { from: jorinda_joringel_jorinda, to: sp_bird, label: BECOMES,
+      evidence: "She was changed into a nightingale" }
+  - { from: jorinda_joringel_witch, to: jorinda_joringel_jorinda, label: CATCHES_AND_TAKES,
+      evidence: "caught the nightingale, and took it away in her hand" }
+  - { from: jorinda_joringel_witch, to: obj_jorinda_joringel_wicker_cages, label: IMPRISONS_MAIDENS_IN,
+      evidence: "shut her up in a wicker-work cage" }
+  - { from: jorinda_joringel_witch, to: jorinda_joringel_caged_maidens, label: TRANSFORMS,
+      evidence: "she changed her into a bird" }
+  - { from: jorinda_joringel_witch, to: obj_jorinda_joringel_wicker_cages, label: KEEPS,
+      evidence: "She had about seven thousand cages of rare birds in the castle." }
+
+  # Refusal and search
+  - { from: jorinda_joringel_witch, to: jorinda_joringel_joringel, label: RELEASES_BY_FORMULA,
+      evidence: "let him loose at once" }
+  - { from: jorinda_joringel_joringel, to: jorinda_joringel_witch, label: BEGS,
+      evidence: "begged that she would give him back his Jorinda" }
+  - { from: jorinda_joringel_witch, to: jorinda_joringel_jorinda, label: REFUSES_TO_RETURN,
+      evidence: "he should never have her again" }
+  - { from: jorinda_joringel_joringel, to: loc_jorinda_joringel_village, label: GOES_TO,
+      evidence: "at last came to a strange village" }
+  - { from: jorinda_joringel_joringel, to: obj_jorinda_joringel_blood_red_flower, label: DREAMS_OF,
+      evidence: "he dreamt one night that he found a blood-red flower" }
+  - { from: obj_jorinda_joringel_blood_red_flower, to: law_disenchanting_flower_breaks_witchcraft, label: ENACTS,
+      evidence: "everything he touched with the flower was freed from enchantment" }
+  - { from: jorinda_joringel_joringel, to: obj_jorinda_joringel_blood_red_flower, label: FINDS,
+      evidence: "he found the blood-red flower" }
+
+  # Disenchantment and return
+  - { from: obj_jorinda_joringel_blood_red_flower, to: law_enchanted_perimeter_immobilizes_intruders, label: NEUTRALIZES,
+      evidence: "he was not held fast" }
+  - { from: jorinda_joringel_joringel, to: loc_jorinda_joringel_witch_castle, label: ENTERS,
+      evidence: "walked on to the door" }
+  - { from: obj_jorinda_joringel_blood_red_flower, to: loc_jorinda_joringel_witch_castle, label: OPENS,
+      evidence: "touched the door with the flower, and it sprang open" }
+  - { from: jorinda_joringel_witch, to: affect_anger, label: FEELS,
+      evidence: "she was angry, very angry" }
+  - { from: obj_jorinda_joringel_blood_red_flower, to: jorinda_joringel_witch, label: BLOCKS_APPROACH,
+      evidence: "she could not come within two paces of him" }
+  - { from: jorinda_joringel_joringel, to: obj_jorinda_joringel_wicker_cages, label: TOUCHES_WITH_FLOWER,
+      evidence: "touched the cage with the flower" }
+  - { from: jorinda_joringel_joringel, to: jorinda_joringel_witch, label: TOUCHES_WITH_FLOWER,
+      evidence: "and also the old woman" }
+  - { from: obj_jorinda_joringel_blood_red_flower, to: jorinda_joringel_witch, label: DISABLES_MAGIC,
+      evidence: "She could now no longer bewitch any one" }
+  - { from: obj_jorinda_joringel_blood_red_flower, to: jorinda_joringel_jorinda, label: RESTORES,
+      evidence: "Jorinda was standing there, clasping him round the neck" }
+  - { from: jorinda_joringel_joringel, to: jorinda_joringel_caged_maidens, label: RESTORES,
+      evidence: "they all took their old forms again" }
+  - { from: jorinda_joringel_joringel, to: jorinda_joringel_jorinda, label: MARRIES,
+      evidence: "they were married, and lived happily together many years" }

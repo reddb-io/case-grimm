@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://reddb.io/grimm/tale.schema.json",
+  "title": "Grimm Gold Tale",
+  "description": "Per-tale graph file. Hybrid structure: entity subtrees (characters/magic_objects/locations as type-instances) + classification sections (themes/world_laws/etc.) + Propp ordering + narrative edges.",
+  "type": "object",
+  "required": [
+    "slug",
+    "khm",
+    "canonical_source",
+    "entities",
+    "classifications",
+    "propp",
+    "edges"
+  ],
+  "properties": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Canonical slug (matches silver/canonical/<slug>/)."
+    },
+    "khm": {
+      "oneOf": [
+        { "type": "integer", "minimum": 1 },
+        { "type": "string", "description": "Composite KHMs like '10/41/80' allowed." },
+        { "type": "null" }
+      ]
+    },
+    "khm_variant": { "type": "boolean", "default": false },
+    "legend_number": { "type": "integer", "minimum": 1 },
+    "atu": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "null" }
+      ]
+    },
+    "atu_name": { "type": "string" },
+    "canonical_source": {
+      "type": "string",
+      "description": "Path to the canonical.txt (relative or absolute)."
+    },
+    "title": { "type": "string" },
+
+    "entities": {
+      "type": "object",
+      "required": ["characters"],
+      "properties": {
+        "characters": {
+          "type": "object",
+          "minProperties": 1,
+          "patternProperties": {
+            "^[a-z][a-z0-9_]*$": { "$ref": "#/definitions/character" }
+          },
+          "additionalProperties": false
+        },
+        "magic_objects": {
+          "type": "object",
+          "patternProperties": {
+            "^obj_[a-z0-9_]+$": { "$ref": "#/definitions/magicObject" }
+          },
+          "additionalProperties": false
+        },
+        "locations": {
+          "type": "object",
+          "patternProperties": {
+            "^loc_[a-z0-9_]+$": { "$ref": "#/definitions/location" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "classifications": {
+      "type": "object",
+      "required": ["world_laws", "moral_regimes"],
+      "properties": {
+        "world_laws": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "pattern": "^law_[a-z0-9_]+$" }
+        },
+        "moral_regimes": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "pattern": "^moral_[a-z0-9_]+$" }
+        },
+        "agency_modes_dominant": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^agency_[a-z0-9_]+$" }
+        },
+        "affects_driving": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^affect_[a-z0-9_]+$" }
+        },
+        "symbol_numbers": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^num_[0-9]+$" }
+        },
+        "threshold_types": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^threshold_[a-z0-9_]+$" }
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "propp": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["function", "order"],
+        "properties": {
+          "function": { "type": "string", "pattern": "^func_[a-z0-9_]+$" },
+          "order": { "type": "integer", "minimum": 1 },
+          "actor": { "type": "string" },
+          "beneficiary": { "type": "string" },
+          "victim": { "type": "string" },
+          "scene": { "type": "string" },
+          "evidence": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+
+    "edges": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["from", "label", "to"],
+        "properties": {
+          "from": { "type": "string" },
+          "to": { "type": "string" },
+          "label": { "type": "string", "pattern": "^[A-Z][A-Z_]*$" },
+          "evidence": { "type": "string" },
+          "attributes": { "type": "object" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+
+  "definitions": {
+    "character": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string" },
+        "archetypes": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^arc_[a-z0-9_]+$" }
+        },
+        "species": { "type": "string", "pattern": "^sp_[a-z0-9_]+$" },
+        "being_type": { "type": "string", "pattern": "^being_[a-z0-9_]+$" },
+        "agency_modes": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^agency_[a-z0-9_]+$" }
+        },
+        "existential_states": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^state_[a-z0-9_]+$" }
+        },
+        "transformations": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^transform_[a-z0-9_]+$" }
+        },
+        "speech_acts_performed": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^speech_[a-z0-9_]+$" }
+        },
+        "affects": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^affect_[a-z0-9_]+$" }
+        },
+        "traits": { "type": "array", "items": { "type": "string" } },
+        "evidence": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "magicObject": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string" },
+        "instance_of": {
+          "type": "string",
+          "pattern": "^obj_[a-z0-9_]+$",
+          "description": "Universal type in ontology.yaml. Optional — present only when this object is a tale-instance of a universal."
+        },
+        "object_kind": {
+          "enum": ["tool", "weapon", "instrument", "garment", "token", "food", "treasure", "book", "architecture", "material", "trail", "creature_object", "relic"]
+        },
+        "attributes": { "type": "object" },
+        "evidence": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "instance_of": {
+          "type": "string",
+          "pattern": "^loc_[a-z0-9_]+$",
+          "description": "Universal type in ontology.yaml."
+        },
+        "threshold_type": {
+          "type": "string",
+          "pattern": "^threshold_[a-z0-9_]+$"
+        },
+        "attributes": { "type": "object" },
+        "evidence": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,316 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: maid-maleen
+khm: 198
+atu: "870"
+atu_name: The Three Black Princesses / Maid Maleen
+canonical_source: ../../2-silver/canonical/maid-maleen/canonical.txt
+title: Maid Maleen
+
+entities:
+  characters:
+    maid_maleen:
+      name: Maid Maleen
+      archetypes: [arc_imprisoned_maiden, arc_oppressed_maiden]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_cunning, agency_domestic_labor, agency_object_mediation]
+      existential_states: [state_imprisoned, state_hidden_identity, state_disguised]
+      speech_acts_performed: [speech_promise, speech_testimony, speech_warning]
+      affects: [affect_love, affect_fear, affect_hunger, affect_loyalty]
+      traits: [beautiful, steadfast-betrothed, tower-walled, seven-year-captive, bread-knife-escapee, nettle-eater, scullery-maid, coerced-substitute-bride, true-wife, chain-recognized]
+      evidence: |
+        she was called Maid Maleen, and was very beautiful
+
+    maid_maleen_waiting_woman:
+      name: Maid Maleen's Waiting-Woman
+      species: sp_human
+      agency_modes: [agency_endurance, agency_domestic_labor, agency_object_mediation]
+      existential_states: [state_imprisoned]
+      affects: [affect_fear, affect_hunger]
+      traits: [loyal-attendant, tower-captive, mortar-picker, first-to-descend, wandering-companion, scullion]
+      evidence: |
+        she and her waiting-woman were led into it and walled up
+
+    maid_maleen_father_king:
+      name: Maid Maleen's Father
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command]
+      affects: [affect_anger]
+      traits: [mighty-king, alternate-marriage-planner, enraged-father, tower-builder, seven-year-jailer, absent-releaser, kingdom-loser]
+      evidence: |
+        her father wished to give her to another
+
+    maid_maleen_prince:
+      name: The King's Son / Bridegroom
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_social_rank, agency_violence]
+      speech_acts_performed: [speech_request, speech_testimony, speech_command]
+      affects: [affect_love, affect_grief, affect_fear, affect_joy]
+      traits: [true-betrothed, tower-caller, coerced-bridegroom, church-husband, saying-questioner, chain-giver, voice-hearer, true-bride-recognizer]
+      evidence: |
+        they both loved each other with all their hearts
+
+    maid_maleen_false_bride:
+      name: The False Bride
+      archetypes: [arc_false_bride]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_violence, agency_object_mediation]
+      existential_states: [state_disguised]
+      speech_acts_performed: [speech_lie, speech_command]
+      affects: [affect_shame, affect_fear, affect_anger]
+      traits: [ugly-hearted, ugly-faced, chamber-hidden, mockery-fearing, substitution-commander, death-threatener, veil-deceiver, saying-thief, execution-orderer, beheaded]
+      evidence: |
+        whose face was as ugly as her heart was wicked
+
+    maid_maleen_cook:
+      name: The Palace Cook
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [kitchen-gatekeeper, reluctant-helper, scullion-employer]
+      evidence: |
+        the cook said that they might stay in the kitchen and be scullions
+
+    maid_maleen_servants:
+      name: The False Bride's Servants
+      species: sp_human
+      agency_modes: [agency_violence, agency_social_rank]
+      traits: [execution-order-followers, courtyard-draggers, interrupted-beheaders]
+      evidence: |
+        The servants laid hold of Maid Maleen
+
+  magic_objects:
+    obj_maid_maleen_bread_knife:
+      name: The Bread-Knife
+      object_kind: tool
+      attributes:
+        function: cuts and bores mortar until the tower wall opens
+      evidence: |
+        She took the bread-knife, and picked and bored at the mortar of a stone
+
+    obj_maid_maleen_nettles:
+      name: The Nettles Eaten in Exile
+      object_kind: food
+      attributes:
+        function: hunger food later remembered in the wedding-road saying
+      evidence: |
+        forced to appease their hunger with nettles
+
+    obj_maid_maleen_wedding_clothes:
+      name: The False Bride's Wedding-Clothes and Jewels
+      object_kind: garment
+      attributes:
+        function: disguise that lets Maid Maleen take the false bride's place at church
+      evidence: |
+        put on the bride’s magnificent clothes and all her jewels
+
+    obj_maid_maleen_gold_chain:
+      name: The Bridegroom's Precious Chain
+      instance_of: obj_betrothal_recognition_token
+      object_kind: token
+      attributes:
+        function: private wedding-procession token proving which woman went to church
+      evidence: |
+        he took out a precious chain, put it round her neck
+
+    obj_maid_maleen_gray_gown:
+      name: Maid Maleen's Gray Gown
+      object_kind: garment
+      attributes:
+        function: scullery clothing restored after the church wedding to hide the true bride again
+      evidence: |
+        dressed herself in her gray gown
+
+  locations:
+    loc_maid_maleen_dark_tower:
+      name: The Dark Walled Tower
+      instance_of: loc_tower
+      threshold_type: threshold_doorway
+      evidence: |
+        ordered a dark tower to be built
+
+    loc_maid_maleen_ruined_kingdom:
+      name: The Ruined Kingdom Outside the Tower
+      instance_of: loc_field
+      evidence: |
+        the fields far and wide laid to waste
+
+    loc_maid_maleen_foreign_palace:
+      name: The Foreign Royal Palace
+      instance_of: loc_castle
+      evidence: |
+        went to the royal palace
+
+    loc_maid_maleen_palace_kitchen:
+      name: The Palace Kitchen
+      instance_of: loc_hearth
+      evidence: |
+        stay in the kitchen and be scullions
+
+    loc_maid_maleen_bride_chamber:
+      name: The False Bride's Chamber
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        she shut herself in her room
+
+    loc_maid_maleen_nettle_wayside:
+      name: The Wayside Nettle-Plant
+      instance_of: loc_road
+      evidence: |
+        On the way was a nettle-plant
+
+    loc_maid_maleen_foot_bridge:
+      name: The Foot-Bridge into the Churchyard
+      instance_of: loc_bridge
+      threshold_type: threshold_doorway
+      evidence: |
+        the foot-plank into the churchyard
+
+    loc_maid_maleen_church_door:
+      name: The Church-Door
+      instance_of: loc_church
+      threshold_type: threshold_doorway
+      evidence: |
+        When they came to the church-door
+
+    loc_maid_maleen_courtyard:
+      name: The Execution Courtyard
+      instance_of: loc_courtyard
+      evidence: |
+        take her out into the court-yard
+
+classifications:
+  world_laws:
+    - law_tower_confinement_outlasts_ruined_kingdom
+    - law_liminal_bride_sayings_and_token_expose_substitution
+    - law_voice_recognizes_forgotten_bride
+  moral_regimes:
+    - moral_restorative
+    - moral_retributive
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_speech
+    - agency_object_mediation
+    - agency_domestic_labor
+  affects_driving:
+    - affect_love
+    - affect_fear
+    - affect_hunger
+    - affect_shame
+  symbol_numbers:
+    - num_7
+  threshold_types:
+    - threshold_doorway
+
+propp:
+  - { function: func_betrothal_blocked, order: 1, actor: maid_maleen_father_king,
+      victim: maid_maleen,
+      scene: "Maid Maleen's father rejects the prince and tries to give her to another" }
+  - { function: func_interdiction_refused, order: 2, actor: maid_maleen,
+      scene: "Maid Maleen refuses any husband except her beloved prince" }
+  - { function: func_tower_imprisonment, order: 3, actor: maid_maleen_father_king,
+      victim: maid_maleen,
+      scene: "the king walls Maid Maleen and her waiting-woman into a dark tower for seven years" }
+  - { function: func_forgotten_release, order: 4, actor: maid_maleen,
+      scene: "the expected release never comes and the captives face starvation" }
+  - { function: func_escape, order: 5, actor: maid_maleen,
+      scene: "Maid Maleen and the waiting-woman bore through the wall with a bread-knife" }
+  - { function: func_wasteland_discovery, order: 6, actor: maid_maleen,
+      scene: "outside the tower, the kingdom is ruined and empty" }
+  - { function: func_lowering_to_service, order: 7, actor: maid_maleen_cook,
+      beneficiary: maid_maleen,
+      scene: "the cook allows the hungry wanderers to stay as kitchen scullions" }
+  - { function: func_false_bride_substitution, order: 8, actor: maid_maleen_false_bride,
+      victim: maid_maleen,
+      scene: "the false bride forces Maid Maleen to wear the wedding clothes and go to church" }
+  - { function: func_liminal_truth_sayings, order: 9, actor: maid_maleen,
+      scene: "Maid Maleen speaks truth to nettle, foot-bridge, and church-door" }
+  - { function: func_token_bestowal, order: 10, actor: maid_maleen_prince,
+      beneficiary: maid_maleen,
+      scene: "the prince fastens a precious chain around the apparent bride's neck" }
+  - { function: func_false_bride_testing, order: 11, actor: maid_maleen_prince,
+      victim: maid_maleen_false_bride,
+      scene: "the prince questions the veiled bride about the sayings and the chain" }
+  - { function: func_execution_attempt, order: 12, actor: maid_maleen_false_bride,
+      victim: maid_maleen,
+      scene: "the false bride orders the scullery-maid beheaded as an impostor" }
+  - { function: func_recognition, order: 13, actor: maid_maleen_prince,
+      beneficiary: maid_maleen,
+      scene: "the prince hears Maid Maleen's voice and sees the chain on her neck" }
+  - { function: func_true_marriage_confirmed, order: 14, actor: maid_maleen,
+      beneficiary: maid_maleen_prince,
+      scene: "Maid Maleen names herself and claims the church marriage as lawful" }
+  - { function: func_false_bride_punished, order: 15, actor: maid_maleen_prince,
+      victim: maid_maleen_false_bride,
+      scene: "the false bride is beheaded for the substitution" }
+
+edges:
+  - { from: maid_maleen_prince, to: maid_maleen, label: ASKS_TO_MARRY,
+      evidence: "asked in marriage the daughter of a mighty King" }
+  - { from: maid_maleen, to: maid_maleen_prince, label: LOVES,
+      evidence: "they both loved each other with all their hearts" }
+  - { from: maid_maleen, to: maid_maleen_father_king, label: REFUSES_OTHER_HUSBAND,
+      evidence: "I can and will take no other for my husband" }
+  - { from: maid_maleen_father_king, to: loc_maid_maleen_dark_tower, label: ORDERS_BUILT,
+      evidence: "ordered a dark tower to be built" }
+  - { from: maid_maleen_father_king, to: maid_maleen, label: IMPRISONS_FOR_SEVEN_YEARS,
+      evidence: "Therein shalt thou be imprisoned for seven years" }
+  - { from: maid_maleen, to: loc_maid_maleen_dark_tower, label: WALLED_UP_IN,
+      evidence: "led into it and walled up" }
+  - { from: maid_maleen_prince, to: loc_maid_maleen_dark_tower, label: CALLS_AROUND,
+      evidence: "often went round and round the tower, and called their names" }
+  - { from: maid_maleen, to: obj_maid_maleen_bread_knife, label: BORES_WALL_WITH,
+      evidence: "picked and bored at the mortar of a stone" }
+  - { from: maid_maleen_waiting_woman, to: obj_maid_maleen_bread_knife, label: TAKES_TURN_WITH,
+      evidence: "the waiting-maid took her turn" }
+  - { from: maid_maleen, to: loc_maid_maleen_ruined_kingdom, label: EMERGES_INTO,
+      evidence: "Her father’s castle lay in ruins" }
+  - { from: maid_maleen, to: obj_maid_maleen_nettles, label: EATS_IN_HUNGER,
+      evidence: "forced to appease their hunger with nettles" }
+  - { from: maid_maleen_cook, to: maid_maleen, label: ADMITS_AS_SCULLION,
+      evidence: "the cook said that they might stay in the kitchen and be scullions" }
+  - { from: maid_maleen_prince, to: maid_maleen_false_bride, label: ASSIGNED_TO_MARRY,
+      evidence: "His father had chosen another bride for him" }
+  - { from: maid_maleen_false_bride, to: loc_maid_maleen_bride_chamber, label: HIDES_IN,
+      evidence: "she shut herself in her room" }
+  - { from: maid_maleen_false_bride, to: maid_maleen, label: COMMANDS_BRIDAL_SUBSTITUTION,
+      evidence: "thou shalt put on my wedding-clothes and take my place" }
+  - { from: maid_maleen_false_bride, to: maid_maleen, label: THREATENS_DEATH,
+      evidence: "thy head will lie at thy feet" }
+  - { from: maid_maleen, to: obj_maid_maleen_wedding_clothes, label: WEARS_UNDER_COERCION,
+      evidence: "put on the bride’s magnificent clothes and all her jewels" }
+  - { from: maid_maleen_prince, to: maid_maleen, label: LEADS_TO_CHURCH,
+      evidence: "He took her by the hand and led her to church" }
+  - { from: maid_maleen, to: loc_maid_maleen_nettle_wayside, label: ADDRESSES_WITH_MEMORY,
+      evidence: "When I ate thee unboiled" }
+  - { from: maid_maleen, to: loc_maid_maleen_foot_bridge, label: CONFESSES_NOT_TRUE_BRIDE_TO,
+      evidence: "Foot-bridge, do not break" }
+  - { from: maid_maleen, to: loc_maid_maleen_church_door, label: CONFESSES_NOT_TRUE_BRIDE_TO,
+      evidence: "Church-door, break not" }
+  - { from: maid_maleen_prince, to: obj_maid_maleen_gold_chain, label: FASTENS_ON,
+      evidence: "put it round her neck, and fastened the clasp" }
+  - { from: maid_maleen, to: maid_maleen_prince, label: MARRIES_IN_CHURCH,
+      evidence: "the priest joined their hands together before the altar, and married them" }
+  - { from: maid_maleen, to: obj_maid_maleen_gray_gown, label: RETURNS_TO,
+      evidence: "dressed herself in her gray gown" }
+  - { from: maid_maleen_false_bride, to: maid_maleen_prince, label: VEILS_DECEPTION_FROM,
+      evidence: "she let her veil fall over her face" }
+  - { from: maid_maleen_false_bride, to: maid_maleen, label: STEALS_SAYINGS_FROM,
+      evidence: "I must go out unto my maid, Who keeps my thoughts for me" }
+  - { from: maid_maleen_prince, to: maid_maleen_false_bride, label: EXPOSES_BY_CHAIN_QUESTION,
+      evidence: "where hast thou the jewel which I gave thee at the church-door" }
+  - { from: maid_maleen_false_bride, to: maid_maleen, label: ORDERS_EXECUTION_OF,
+      evidence: "take her out into the court-yard and strike off her head" }
+  - { from: maid_maleen, to: maid_maleen_prince, label: SCREAMS_FOR_HELP_TO,
+      evidence: "she screamed so loudly for help" }
+  - { from: maid_maleen_prince, to: maid_maleen, label: RECOGNIZES_BY_VOICE_AND_CHAIN,
+      evidence: "he saw on her neck the gold chain" }
+  - { from: maid_maleen, to: maid_maleen_prince, label: REVEALS_IDENTITY_TO,
+      evidence: "I am Maid Maleen" }
+  - { from: maid_maleen, to: law_tower_confinement_outlasts_ruined_kingdom, label: EXEMPLIFIES,
+      evidence: "for thy sake was imprisoned seven years in the darkness" }
+  - { from: law_liminal_bride_sayings_and_token_expose_substitution, to: maid_maleen_false_bride, label: EXPOSES,
+      evidence: "if thou dost not know that, thou art not the true bride" }
+  - { from: maid_maleen_false_bride, to: moral_retributive, label: RECEIVES_PUNISHMENT,
+      evidence: "having her head cut off" }

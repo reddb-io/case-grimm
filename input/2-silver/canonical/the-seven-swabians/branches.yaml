@@ -1,0 +1,8 @@
+slug: the-seven-swabians
+khm: 119
+atu: '1297'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

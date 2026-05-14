@@ -1,0 +1,439 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-king-of-the-golden-mountain
+khm: 92
+atu: '401A/400/560/518/810'
+atu_name: Enchanted Princess in Her Castle / Lost Wife and Magic Objects
+canonical_source: ../../2-silver/canonical/the-king-of-the-golden-mountain/canonical.txt
+title: The King of the Golden Mountain
+
+
+entities:
+
+  characters:
+
+    golden_mountain_merchant:
+      name: The Merchant Father
+      species: sp_human
+      existential_states: [state_bound_by_promise]
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_grief, affect_fear]
+      traits: [ship-ruined, impoverished, field-walker, child-pledger, anxious-twelve-year-father]
+      evidence: |
+        instead of being a rich man he was a poor one
+
+    golden_mountain_son:
+      name: The Merchant's Son / King of the Golden Mountain
+      archetypes: [arc_dragon_slayer]
+      species: sp_human
+      existential_states: [state_bound_by_promise, state_disguised]
+      agency_modes: [agency_endurance, agency_speech, agency_cunning, agency_object_mediation, agency_violence]
+      speech_acts_performed: [speech_promise, speech_wish, speech_command]
+      affects: [affect_loyalty, affect_anger, affect_grief]
+      traits: [promised-child, blessed, circle-protected, boat-castaway, silent-sufferer, enchanted-princess-rescuer, wishing-ring-breaker, lost-wife-seeker, invisible-returner, sovereign-slayer]
+      evidence: |
+        The black man has no power over me.
+
+    golden_mountain_black_dwarf:
+      name: The Little Black Mannikin / Black Dwarf
+      being_type: being_dwarf
+      agency_modes: [agency_speech, agency_cunning, agency_object_mediation]
+      speech_acts_performed: [speech_bargain]
+      traits: [sudden-field-appearing, poverty-helper, written-promise-holder, twelve-year-claimer]
+      evidence: |
+        a little black mannikin stood suddenly by his side
+
+    golden_mountain_princess:
+      name: The Enchanted Snake Princess / Queen
+      archetypes: [arc_enchanted_prince, arc_false_bride]
+      species: sp_snake
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_animal_human]
+      agency_modes: [agency_speech, agency_object_mediation, agency_cunning]
+      speech_acts_performed: [speech_warning, speech_promise, speech_wish]
+      affects: [affect_loyalty, affect_grief, affect_anger]
+      traits: [snake-form, twelve-year-waiting, castle-bound, water-of-life-bringer, queen, promise-warner, ring-thief, deserter, false-wedding-bride]
+      evidence: |
+        The snake, however, was an enchanted maiden
+
+    golden_mountain_child:
+      name: The Fine Boy
+      species: sp_human
+      traits: [golden-mountain-child, summoned-with-mother, carried-away]
+      evidence: |
+        the Queen bore a fine boy
+
+    golden_mountain_black_men:
+      name: The Chained Black Men
+      being_type: being_spirit
+      agency_modes: [agency_violence]
+      traits: [chain-covered, tormenting, midnight-bound, head-cutters, silence-testers]
+      evidence: |
+        twelve black men, covered with chains
+
+    golden_mountain_parents:
+      name: The Merchant's Parents
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [mourning, nonrecognizing, raspberry-mark-recognizers, shepherd-coat-skeptics]
+      evidence: |
+        our son had a raspberry mark under his right arm
+
+    golden_mountain_shepherd:
+      name: The Shepherd
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [sheep-watcher, coat-exchanger]
+      evidence: |
+        a shepherd was watching his sheep
+
+    golden_mountain_three_giants:
+      name: The Three Quarreling Giants
+      being_type: being_giant
+      agency_modes: [agency_speech, agency_object_mediation, agency_violence]
+      traits: [inheritance-disputers, magic-object-owners, tricked-arbitrants]
+      evidence: |
+        three giants were standing, disputing with each other
+
+    golden_mountain_false_wedding_guests:
+      name: The False Wedding Assembly
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_violence]
+      traits: [kings, princes, councillors, mockers, beheaded-assembly]
+      evidence: |
+        The kings, princes, and councillors who were assembled there
+
+  magic_objects:
+
+    obj_golden_mountain_promise_document:
+      name: The Written and Sealed Promise
+      object_kind: book
+      attributes:
+        function: contract binding the merchant to return the first leg-clinging being in twelve years
+      evidence: |
+        gave the black man a written and sealed promise
+
+    obj_golden_mountain_boat:
+      name: The Little Boat on Flowing Water
+      object_kind: tool
+      attributes:
+        function: compromise vehicle transferring the promised son to water rather than father or dwarf
+      evidence: |
+        seat himself in a small boat
+
+    obj_golden_mountain_magic_circle:
+      name: The Protective Circle
+      object_kind: material
+      attributes:
+        function: blessed boundary in which the son confronts the dwarf
+      evidence: |
+        the son made a circle and placed himself inside it
+
+    obj_golden_mountain_water_of_life:
+      name: The Bottle of Water of Life
+      instance_of: obj_water_of_life
+      object_kind: relic
+      attributes:
+        function: resurrection substance used after the silent ordeal
+      evidence: |
+        in a bottle, some of the water of life
+
+    obj_golden_mountain_wishing_ring:
+      name: The Queen's Wishing-Ring
+      instance_of: obj_wishing_ring
+      object_kind: token
+      attributes:
+        function: transports the king and later summons wife and child in violation of promise
+      evidence: |
+        she gave him a wishing-ring
+
+    obj_golden_mountain_shepherd_coat:
+      name: The Shepherd's Coat
+      object_kind: garment
+      attributes:
+        function: disguise that lets the richly dressed king enter his home town
+      evidence: |
+        put on his old shepherd’s-coat
+
+    obj_golden_mountain_slipper:
+      name: The Abandoned Slipper
+      object_kind: garment
+      attributes:
+        function: token left after the queen removes herself from under the sleeping king
+      evidence: |
+        the slipper only was still there as a token
+
+    obj_golden_mountain_sword:
+      name: The Decapitating Sword
+      instance_of: obj_decapitating_sword
+      object_kind: weapon
+      attributes:
+        formula: All heads off but mine
+      evidence: |
+        All heads off but mine
+
+    obj_golden_mountain_cloak:
+      name: The Invisibility Cloak
+      instance_of: obj_invisibility_cloak
+      object_kind: garment
+      attributes:
+        function: makes the hero invisible and lets him enter the false wedding unseen
+      evidence: |
+        a cloak which made any one who put it on invisible
+
+    obj_golden_mountain_boots:
+      name: The Transporting Boots
+      instance_of: obj_many_league_boots
+      object_kind: garment
+      attributes:
+        function: wish-footwear that carries the hero back to the Golden Mountain
+      evidence: |
+        a pair of boots which could transport the wearer to any place
+
+  locations:
+
+    loc_golden_mountain_field:
+      name: The Last Field Outside Town
+      instance_of: loc_field
+      evidence: |
+        one field outside the town
+
+    loc_golden_mountain_flowing_water:
+      name: The Flowing Water
+      instance_of: loc_river
+      evidence: |
+        water which was flowing away from them
+
+    loc_golden_mountain_unknown_shore:
+      name: The Unknown Shore
+      evidence: |
+        stopped by an unknown shore
+
+    loc_golden_mountain_castle:
+      name: The Bewitched Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        he found that it was bewitched
+
+    loc_golden_mountain_kingdom:
+      name: The Golden Mountain Kingdom
+      instance_of: loc_mountain
+      evidence: |
+        King of the Golden Mountain
+
+    loc_golden_mountain_home_town:
+      name: The Father's Town
+      instance_of: loc_town
+      threshold_type: threshold_gate
+      evidence: |
+        outside the town where his father lived
+
+    loc_golden_mountain_giant_hill:
+      name: The Giants' Hill
+      instance_of: loc_mountain
+      evidence: |
+        came at length to a hill by which three giants were standing
+
+    loc_golden_mountain_false_wedding_hall:
+      name: The False Wedding Dining-Hall
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        entered the dining-hall
+
+
+classifications:
+
+  world_laws:
+    - law_promise_binds_reality
+    - law_silent_torment_releases_enchanted_princess
+    - law_wishing_ring_obeys_but_exposes_broken_promise
+    - law_quarreling_giants_lose_magic_objects
+
+  moral_regimes:
+    - moral_restorative
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_speech
+    - agency_object_mediation
+    - agency_cunning
+    - agency_violence
+
+  affects_driving:
+    - affect_grief
+    - affect_fear
+    - affect_loyalty
+    - affect_anger
+
+  symbol_numbers:
+    - num_3
+    - num_8
+    - num_12
+
+  threshold_types:
+    - threshold_doorway
+    - threshold_gate
+
+
+propp:
+  - { function: func_initial_misfortune, order: 1, actor: golden_mountain_merchant,
+      scene: "the merchant loses his ships and property and walks in his last field" }
+  - { function: func_bargain, order: 2, actor: golden_mountain_black_dwarf,
+      scene: "the black dwarf offers wealth for the first homecoming being that clings to the merchant's leg" }
+  - { function: func_unwitting_pledge, order: 3, actor: golden_mountain_merchant,
+      scene: "the merchant seals the promise and discovers it binds his little son" }
+  - { function: func_countermeasure, order: 4, actor: golden_mountain_son,
+      scene: "the blessed son stands in a circle and negotiates a water compromise" }
+  - { function: func_departure_by_water, order: 5, actor: golden_mountain_son,
+      scene: "the little boat capsizes but safely carries him to an unknown shore" }
+  - { function: func_enchanted_castle, order: 6, actor: golden_mountain_princess,
+      scene: "the snake-princess explains the three-night silent torment required to free her kingdom" }
+  - { function: func_silent_ordeal, order: 7, actor: golden_mountain_son,
+      scene: "the black men torment and kill him without forcing speech" }
+  - { function: func_resurrection_and_marriage, order: 8, actor: golden_mountain_princess,
+      scene: "the princess revives him with water of life and marries him" }
+  - { function: func_return_home, order: 9, actor: golden_mountain_son,
+      scene: "after eight years he uses the wishing ring to visit his parents" }
+  - { function: func_promise_violation, order: 10, actor: golden_mountain_son,
+      scene: "anger at his father's disbelief makes him summon wife and child against his promise" }
+  - { function: func_loss, order: 11, actor: golden_mountain_princess,
+      scene: "the queen steals the ring and returns with the child to her kingdom" }
+  - { function: func_magic_object_acquisition, order: 12, actor: golden_mountain_son,
+      scene: "he tricks three giants out of sword, invisibility cloak, and transport boots" }
+  - { function: func_return_to_kingdom, order: 13, actor: golden_mountain_son,
+      scene: "the boots carry him back to the Golden Mountain during the false wedding" }
+  - { function: func_invisible_rebuke, order: 14, actor: golden_mountain_son,
+      scene: "he invisibly eats and drinks the queen's portions before confronting her" }
+  - { function: func_final_punishment, order: 15, actor: golden_mountain_son,
+      scene: "the command sword ends the false wedding and restores his kingship" }
+
+
+edges:
+
+  # Bargain, promised child, and water compromise
+  - { from: golden_mountain_merchant, to: loc_golden_mountain_field, label: HAS_ONLY_LEFT,
+      evidence: "nothing left but one field outside the town" }
+  - { from: golden_mountain_black_dwarf, to: golden_mountain_merchant, label: OFFERS_HELP_TO,
+      evidence: "Perhaps, I can help thee" }
+  - { from: golden_mountain_black_dwarf, to: golden_mountain_merchant, label: DEMANDS_FIRST_LEG_CLINGER,
+      evidence: "the first thing that rubs itself against thy leg" }
+  - { from: golden_mountain_black_dwarf, to: golden_mountain_merchant, label: SETS_TWELVE_YEAR_TERM,
+      evidence: "in twelve years’ time" }
+  - { from: golden_mountain_merchant, to: obj_golden_mountain_promise_document, label: SEALS,
+      evidence: "written and sealed promise" }
+  - { from: golden_mountain_son, to: golden_mountain_merchant, label: CLINGS_TO_LEGS,
+      evidence: "seized him fast by the legs" }
+  - { from: obj_golden_mountain_promise_document, to: golden_mountain_son, label: BINDS,
+      evidence: "now knew what he had pledged himself to do" }
+  - { from: golden_mountain_son, to: obj_golden_mountain_magic_circle, label: STANDS_IN,
+      evidence: "made a circle and placed himself inside it" }
+  - { from: golden_mountain_son, to: golden_mountain_black_dwarf, label: DEMANDS_WRITING_BACK,
+      evidence: "give back the writing" }
+  - { from: golden_mountain_son, to: obj_golden_mountain_boat, label: SEATS_SELF_IN,
+      evidence: "placed himself in a little boat" }
+  - { from: golden_mountain_merchant, to: obj_golden_mountain_boat, label: PUSHES_OFF,
+      evidence: "push it off with his own foot" }
+  - { from: obj_golden_mountain_boat, to: loc_golden_mountain_unknown_shore, label: FLOATS_TO,
+      evidence: "stopped by an unknown shore" }
+
+  # Silent torment and release
+  - { from: golden_mountain_son, to: loc_golden_mountain_castle, label: ENTERS,
+      evidence: "entered it" }
+  - { from: golden_mountain_princess, to: state_cursed, label: EMBODIES,
+      evidence: "this kingdom is bewitched" }
+  - { from: golden_mountain_princess, to: golden_mountain_son, label: NAMES_DELIVERER,
+      evidence: "Hast thou come, oh, my deliverer?" }
+  - { from: golden_mountain_princess, to: golden_mountain_son, label: COMMANDS_SILENCE,
+      evidence: "keep silent; give them no answer" }
+  - { from: golden_mountain_black_men, to: golden_mountain_son, label: TORMENT,
+      evidence: "they will torment thee, beat thee, stab thee" }
+  - { from: golden_mountain_black_men, to: golden_mountain_son, label: CUT_OFF_HEAD,
+      evidence: "will cut off thy head" }
+  - { from: law_silent_torment_releases_enchanted_princess, to: golden_mountain_princess, label: RELEASES,
+      evidence: "the snake became a beautiful princess" }
+  - { from: golden_mountain_princess, to: obj_golden_mountain_water_of_life, label: BRINGS,
+      evidence: "some of the water of life" }
+  - { from: obj_golden_mountain_water_of_life, to: golden_mountain_son, label: RESTORES,
+      evidence: "brought him back to life again" }
+  - { from: golden_mountain_son, to: golden_mountain_princess, label: MARRIES,
+      evidence: "their marriage was celebrated" }
+  - { from: golden_mountain_son, to: loc_golden_mountain_kingdom, label: BECOMES_KING_OF,
+      evidence: "King of the Golden Mountain" }
+
+  # Ring, return, and broken condition
+  - { from: golden_mountain_princess, to: golden_mountain_child, label: BEARS,
+      evidence: "the Queen bore a fine boy" }
+  - { from: golden_mountain_son, to: golden_mountain_parents, label: WISHES_TO_VISIT,
+      evidence: "wished to visit him" }
+  - { from: golden_mountain_princess, to: obj_golden_mountain_wishing_ring, label: GIVES,
+      evidence: "she gave him a wishing-ring" }
+  - { from: obj_golden_mountain_wishing_ring, to: golden_mountain_son, label: TRANSPORTS,
+      evidence: "then thou wilt immediately be transported" }
+  - { from: golden_mountain_son, to: golden_mountain_princess, label: PROMISES_NOT_TO_WISH_AWAY,
+      evidence: "only thou must promise me not to use it in wishing me away" }
+  - { from: golden_mountain_son, to: loc_golden_mountain_home_town, label: WISHES_SELF_TO,
+      evidence: "wished himself at home" }
+  - { from: golden_mountain_son, to: obj_golden_mountain_shepherd_coat, label: DISGUISES_WITH,
+      evidence: "changed clothes with him" }
+  - { from: golden_mountain_parents, to: golden_mountain_son, label: RECOGNIZE_BY_MARK,
+      evidence: "raspberry mark under his right arm" }
+  - { from: golden_mountain_son, to: obj_golden_mountain_wishing_ring, label: BREAKS_PROMISE_WITH,
+      evidence: "without thinking of his promise, turned his ring round" }
+  - { from: law_wishing_ring_obeys_but_exposes_broken_promise, to: golden_mountain_princess, label: SUMMONS,
+      evidence: "wished both his wife and child with him" }
+  - { from: golden_mountain_princess, to: golden_mountain_son, label: REPROACHES,
+      evidence: "he had broken his word" }
+  - { from: golden_mountain_princess, to: obj_golden_mountain_wishing_ring, label: STEALS,
+      evidence: "drew the ring from his finger" }
+  - { from: golden_mountain_princess, to: golden_mountain_child, label: CARRIES_AWAY,
+      evidence: "took her child in her arms" }
+  - { from: golden_mountain_princess, to: loc_golden_mountain_kingdom, label: WISHES_SELF_BACK_TO,
+      evidence: "wished herself back in her own kingdom" }
+  - { from: golden_mountain_princess, to: obj_golden_mountain_slipper, label: LEAVES_TOKEN,
+      evidence: "the slipper only was still there as a token" }
+
+  # Giants' inheritance and return
+  - { from: golden_mountain_three_giants, to: loc_golden_mountain_giant_hill, label: DISPUTE_ON,
+      evidence: "three giants were standing, disputing with each other" }
+  - { from: golden_mountain_three_giants, to: golden_mountain_son, label: ASK_TO_DIVIDE_INHERITANCE,
+      evidence: "divide their inheritance for them" }
+  - { from: golden_mountain_three_giants, to: obj_golden_mountain_sword, label: OWN,
+      evidence: "consisted of a sword" }
+  - { from: golden_mountain_three_giants, to: obj_golden_mountain_cloak, label: OWN,
+      evidence: "a cloak which made any one who put it on invisible" }
+  - { from: golden_mountain_three_giants, to: obj_golden_mountain_boots, label: OWN,
+      evidence: "a pair of boots" }
+  - { from: obj_golden_mountain_cloak, to: golden_mountain_son, label: MAKES_INVISIBLE,
+      evidence: "he was invisible" }
+  - { from: obj_golden_mountain_sword, to: golden_mountain_son, label: CUTS_TREE_FOR,
+      evidence: "cut in two the trunk of a tree" }
+  - { from: obj_golden_mountain_boots, to: golden_mountain_son, label: TRANSPORTS_TO_GOLDEN_MOUNTAIN,
+      evidence: "if I were but on the Golden Mountain" }
+  - { from: law_quarreling_giants_lose_magic_objects, to: golden_mountain_son, label: AWARDS_OBJECTS_TO,
+      evidence: "thus their inheritance was divided" }
+
+  # False wedding and violent restoration
+  - { from: golden_mountain_princess, to: loc_golden_mountain_false_wedding_hall, label: CELEBRATES_FALSE_WEDDING_IN,
+      evidence: "celebrating her wedding with another" }
+  - { from: golden_mountain_son, to: obj_golden_mountain_cloak, label: ENTERS_UNSEEN_WITH,
+      evidence: "unseen by all went into the palace" }
+  - { from: golden_mountain_son, to: golden_mountain_princess, label: STEALS_FOOD_AND_WINE_FROM,
+      evidence: "plate and glass disappeared immediately" }
+  - { from: golden_mountain_princess, to: affect_shame, label: FEELS,
+      evidence: "dismayed and ashamed" }
+  - { from: golden_mountain_son, to: golden_mountain_princess, label: STRIKES_AND_ACCUSES,
+      evidence: "thou traitor" }
+  - { from: golden_mountain_son, to: golden_mountain_false_wedding_guests, label: ANNOUNCES_RETURN_TO,
+      evidence: "the true King has returned" }
+  - { from: golden_mountain_false_wedding_guests, to: golden_mountain_son, label: MOCK,
+      evidence: "ridiculed and mocked him" }
+  - { from: golden_mountain_son, to: obj_golden_mountain_sword, label: COMMANDS,
+      evidence: "All heads off but mine" }
+  - { from: obj_golden_mountain_sword, to: golden_mountain_false_wedding_guests, label: DECAPITATES,
+      evidence: "all the heads rolled on the ground" }
+  - { from: golden_mountain_son, to: loc_golden_mountain_kingdom, label: REGAINS_MASTERY_OF,
+      evidence: "once more King of the Golden Mountain" }

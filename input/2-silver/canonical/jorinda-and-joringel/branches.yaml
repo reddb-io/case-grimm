@@ -1,0 +1,96 @@
+slug: jorinda-and-joringel
+khm: 69
+atu: '405'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg2591-grimm-taylor
+  weight: supplementary
+
+sections:
+- id: jorindas-song
+  title: Jorinda's song before transformation
+  canonical:
+    kept: pg5314-grimm-hunt
+    type: stylistic
+    rationale: |
+      Hunt's "My little bird, with the necklace red" is closer to KHM
+      "Mein Vögelein mit dem Ringlein rot". Both translations preserve
+      the dove-bird soul-symbol; Hunt's matches the original meter.
+  branches:
+  - type: fork
+    from: pg2591-grimm-taylor
+    description: alternative translation of Jorinda's pre-curse song
+    text: |
+      The ring-dove sang from the willow spray,
+      Well-a-day! Well-a-day!
+      He mourn’d for the fate of his darling mate,
+      Well-a-day!
+    consequences:
+    - shifts the bird from "little bird with red necklace" (KHM-faithful) to "ring-dove on willow spray" (English pastoral)
+    - the dove-as-bereaved-lover motif is preserved but with stronger English ballad register
+    plot_breaks: none — song substitution only
+
+- id: witchs-incantation
+  title: witch's incantation upon returning
+  canonical:
+    kept: pg5314-grimm-hunt
+    type: stylistic
+    rationale: |
+      Hunt preserves the KHM-faithful invocation: "Greet thee, Zachiel.
+      If the moon shines on the cage, Zachiel, let him loose at once."
+      "Zachiel" is the demon-name the witch addresses. Taylor replaces
+      this with a poetic English incantation, losing the demon-naming.
+  branches:
+  - type: fork
+    from: pg2591-grimm-taylor
+    description: English poetic incantation replacing the demon-name "Zachiel"
+    text: |
+      Till the prisoner is fast,
+      And her doom is cast,
+      There stay! Oh, stay!
+      When the charm is around her,
+      And the spell has bound her,
+      Hie away! away!
+    consequences:
+    - removes the demon-name (Zachiel) reference — witch becomes generically magical, not Goetic
+    - the speech_act type shifts from speech_command (named-demon invocation) to speech_curse (anonymous spell)
+    plot_breaks: |
+      In the KHM tradition the demon-name is a structural element
+      (parallels Rumpelstiltskin's naming-as-power). Removing it
+      weakens the world_law of name-grants-power across the corpus.
+
+- id: cages-count
+  title: number of bird cages in the castle
+  canonical:
+    kept: pg5314-grimm-hunt
+    type: conflict
+    rationale: |
+      Hunt: 7000 cages (KHM "siebentausend"). Taylor: 700 cages.
+      Hunt is faithful; Taylor's smaller number reduces the scale of
+      the witch's collection.
+  branches:
+  - type: fork
+    from: pg2591-grimm-taylor
+    description: 700 cages (one order of magnitude smaller)
+    text: There were seven hundred of these cages hanging in the castle, and all with beautiful birds in them.
+    consequences:
+    - witch's collection scale reduces 10× — symbol_number shifts
+    - changes how the search for Jorinda among the nightingales feels (hundreds vs thousands)
+    plot_breaks: none — quantitative only
+
+- id: ending
+  title: Taylor's full closing passage restored
+  canonical:
+    kept: pg5314-grimm-hunt + pg2591-grimm-taylor
+    type: enrichment
+    rationale: |
+      Hunt truncates at the moment of Jorinda's transformation back —
+      stops at "she was as beautiful as ever!". Taylor preserves three
+      additional beats: (a) transforming the other captive birds back
+      into maidens, (b) the marriage, (c) a comic coda about other lads
+      whose maidens were freed. The other-birds-restored detail is KHM
+      canonical and structurally important (the witch's economy of
+      captives is undone, not just Jorinda's). Restored via
+      merge.yaml#edit-1.

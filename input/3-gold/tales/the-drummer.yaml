@@ -1,0 +1,372 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-drummer
+khm: 193
+atu: "400"
+atu_name: The Man on a Quest for His Lost Wife
+canonical_source: ../../2-silver/canonical/the-drummer/canonical.txt
+title: The Drummer
+
+entities:
+  characters:
+    drummer_drummer:
+      name: The Young Drummer
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_music, agency_speech, agency_object_mediation]
+      existential_states: [state_forgotten_bride]
+      speech_acts_performed: [speech_bargain, speech_boast, speech_request, speech_testimony]
+      affects: [affect_pity, affect_love, affect_fear]
+      traits: [young, fearless, linen-finder, drum-beater, giant-bluffer, saddle-trickster, witch-task-bound, sleeping-helper-aided, witch-burner, right-cheek-forgetter, restored-bridegroom]
+      evidence: |
+        A young drummer went out quite alone one evening into the country
+
+    drummer_king_daughter:
+      name: The King's Daughter on the Glass-Mountain
+      archetypes: [arc_imprisoned_maiden]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_domestic_labor]
+      existential_states: [state_imprisoned, state_forgotten_bride]
+      speech_acts_performed: [speech_request, speech_warning, speech_bargain, speech_command, speech_testimony]
+      affects: [affect_fear, affect_love, affect_loyalty, affect_grief]
+      traits: [witch-captive, winged-bather, dress-dependent, wishing-ring-bearer, impossible-task-helper, log-enchanted, precious-stone-carrier, abandoned-at-town-gate, forest-hut-waiter, celestial-dress-trader, true-bride]
+      evidence: |
+        I am the daughter of a mighty King
+
+    drummer_witch:
+      name: The Old Witch on the Glass-Mountain
+      being_type: being_witch
+      agency_modes: [agency_speech, agency_object_mediation, agency_violence]
+      speech_acts_performed: [speech_command, speech_testimony]
+      affects: [affect_anger]
+      traits: [brown-faced, red-eyed, bespectacled, task-setter, malicious, cold-by-fire, maiden-captor, burned]
+      evidence: |
+        an old woman with a brown face and red eyes
+
+    drummer_giants:
+      name: The Three Forest Giants
+      being_type: being_giant
+      agency_modes: [agency_violence, agency_speech, agency_extraordinary_body]
+      speech_acts_performed: [speech_warning, speech_bargain]
+      affects: [affect_anger, affect_fear]
+      traits: [man-eaters, forest-sleepers, drum-wakened, army-bluffed, shoulder-carrier, buttonhole-carrier, hat-rim-carrier]
+      evidence: |
+        a giant who had been lying sleeping among the grass
+
+    drummer_quarreling_men:
+      name: The Two Men with the Wishing Saddle
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_anger]
+      traits: [saddle-quarrelers, wish-transport-owners, tricked-racers]
+      evidence: |
+        two men who were struggling fiercely together
+
+    drummer_parents:
+      name: The Drummer's Parents
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_joy]
+      traits: [recognition-failing, right-cheek-kissers, castle-builders, false-bride-selectors, final-consent-givers]
+      evidence: |
+        his parents fell on his neck with joy
+
+    drummer_false_bride:
+      name: The Intended False Bride
+      archetypes: [arc_false_bride]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_bargain]
+      affects: [affect_greed]
+      traits: [parent-chosen, dress-coveting, sleeping-draught-user, compensated]
+      evidence: |
+        I have found a maiden for thee
+
+  magic_objects:
+    obj_drummer_white_linen_dress:
+      name: The White Linen Dress
+      object_kind: garment
+      attributes:
+        function: stolen bathing dress without which the princess cannot fly back to the glass-mountain
+      evidence: |
+        three pieces of white linen lying
+
+    obj_drummer_drum:
+      name: The Drummer's Drum
+      object_kind: instrument
+      attributes:
+        function: noise instrument used to wake and intimidate the forest giants
+      evidence: |
+        buckled on his drum
+
+    obj_drummer_wishing_saddle:
+      name: The Wishing Saddle
+      object_kind: tool
+      attributes:
+        function: transport object stolen from quarrelers to reach the glass-mountain summit
+      evidence: |
+        whosoever sits on it, and wishes himself in any place
+
+    obj_drummer_wishing_ring:
+      name: The King's Daughter's Wishing-Ring
+      instance_of: obj_wishing_ring
+      object_kind: token
+      attributes:
+        function: completes witch tasks, transports the pair, and produces celestial dresses
+      evidence: |
+        She turned her wishing-ring
+
+    obj_drummer_thimble:
+      name: The Witch's Thimble
+      object_kind: tool
+      attributes:
+        function: impossible tool for emptying the pond
+      evidence: |
+        took a thimble from her wrinkled finger
+
+    obj_drummer_lead_axe_tin_tools:
+      name: The Lead Axe, Tin Mallet, and Tin Wedges
+      object_kind: tool
+      attributes:
+        function: impossible tools for cutting and splitting the whole forest
+      evidence: |
+        the axe was made of lead, and the mallet and wedges were of tin
+
+    obj_drummer_log_maiden:
+      name: The Unburnt Log / Enchanted Maiden
+      object_kind: relic
+      attributes:
+        function: transformed body of the princess recovered from the witch's fire task
+      evidence: |
+        there is a log lying there which won’t burn
+
+    obj_drummer_witch_treasure:
+      name: The Witch's Precious Stones
+      object_kind: treasure
+      attributes:
+        function: portable wealth taken from the glass-mountain
+      evidence: |
+        took only the precious stones
+
+    obj_drummer_celestial_dresses:
+      name: The Sun, Moon, and Star Dresses
+      instance_of: obj_celestial_dresses
+      object_kind: garment
+      attributes:
+        sequence: [sun, moon, stars]
+        function: wonder gifts bartered for three nights near the forgotten drummer
+      evidence: |
+        A dress as bright as the sun
+
+    obj_drummer_sleeping_draught:
+      name: The False Bride's Sleeping-Draught
+      instance_of: obj_sleeping_draught
+      object_kind: food
+      attributes:
+        function: drugged wine that prevents the drummer from hearing the first two laments
+      evidence: |
+        mixed a sleeping-draught with the wine
+
+  locations:
+    loc_drummer_lake:
+      name: The Lake Shore
+      instance_of: loc_lake
+      evidence: |
+        came to a lake
+
+    loc_drummer_bedroom:
+      name: The Drummer's Bedroom
+      instance_of: loc_bedchamber
+      evidence: |
+        hovering about his bed
+
+    loc_drummer_great_forest:
+      name: The Great Forest of Man-Eaters
+      instance_of: loc_forest
+      evidence: |
+        the great forest, in which the man-eaters live
+
+    loc_drummer_glass_mountain:
+      name: The Glass-Mountain
+      instance_of: loc_mountain
+      evidence: |
+        the glass-mountain
+
+    loc_drummer_witch_house:
+      name: The Old Stone House
+      instance_of: loc_house
+      evidence: |
+        there stood an old stone house
+
+    loc_drummer_fish_pond:
+      name: The Great Fish-Pond
+      instance_of: loc_pond
+      evidence: |
+        in front of the house lay a great fish-pond
+
+    loc_drummer_town_gate:
+      name: The Town-Gate
+      instance_of: loc_gate
+      evidence: |
+        wish us in front of the town-gate
+
+    loc_drummer_parent_house:
+      name: The Parents' House
+      instance_of: loc_house
+      evidence: |
+        went into his father’s house
+
+    loc_drummer_forest_hut:
+      name: The Solitary Forest Hut
+      instance_of: loc_house
+      evidence: |
+        wished herself into a solitary little hut in a forest
+
+    loc_drummer_wedding_bedroom_door:
+      name: Outside the Bridegroom's Bedroom Door
+      instance_of: loc_bedchamber
+      evidence: |
+        outside the door of the room where your betrothed sleeps
+
+classifications:
+  world_laws:
+    - law_wishing_ring_completes_witch_tasks_while_hero_sleeps
+    - law_homecoming_kiss_erases_bride_memory
+    - law_wonder_gifts_purchase_recognition_nights
+    - law_voice_recognizes_forgotten_bride
+  moral_regimes:
+    - moral_restorative
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_cunning
+    - agency_music
+    - agency_speech
+  affects_driving:
+    - affect_love
+    - affect_loyalty
+    - affect_fear
+    - affect_grief
+  symbol_numbers:
+    - num_3
+  threshold_types: []
+
+propp:
+  - { function: func_object_taken, order: 1, actor: drummer_drummer,
+      scene: "the drummer pockets one piece of white linen from the lake shore" }
+  - { function: func_captive_reveals_need, order: 2, actor: drummer_king_daughter,
+      scene: "the princess asks for her dress and reveals the glass-mountain captivity" }
+  - { function: func_rescue_vow, order: 3, actor: drummer_drummer,
+      beneficiary: drummer_king_daughter,
+      scene: "the drummer resolves to reach the glass-mountain through the man-eater forest" }
+  - { function: func_giant_transport, order: 4, actor: drummer_giants,
+      beneficiary: drummer_drummer,
+      scene: "the drummer bluffs the giants with an imaginary army and is carried near the mountain" }
+  - { function: func_magic_object_stolen, order: 5, actor: drummer_drummer,
+      scene: "the drummer tricks two quarrelers and takes the wishing saddle to the summit" }
+  - { function: func_witch_tasks, order: 6, actor: drummer_witch,
+      victim: drummer_drummer,
+      scene: "the witch sets three impossible services at the glass-mountain house" }
+  - { function: func_helper_tasks, order: 7, actor: drummer_king_daughter,
+      beneficiary: drummer_drummer,
+      scene: "the princess turns the wishing-ring while he sleeps and completes each task" }
+  - { function: func_witch_destroyed, order: 8, actor: drummer_drummer,
+      victim: drummer_witch,
+      scene: "the drummer obeys the princess, pulls the log from the fire, and throws the witch into the flames" }
+  - { function: func_betrothal_and_escape, order: 9, actor: drummer_king_daughter,
+      beneficiary: drummer_drummer,
+      scene: "the rescued princess promises marriage and wishes them to the town-gate" }
+  - { function: func_forgetting, order: 10, actor: drummer_parents,
+      victim: drummer_king_daughter,
+      scene: "the right-cheek homecoming kiss erases the drummer's memory of the princess" }
+  - { function: func_recognition_nights, order: 11, actor: drummer_king_daughter,
+      scene: "the forgotten bride trades sun, moon, and star dresses for three nights by the bridegroom's door" }
+  - { function: func_memory_restored, order: 12, actor: drummer_drummer,
+      beneficiary: drummer_king_daughter,
+      scene: "on the third night he avoids the sleeping-draught, hears her voice, and remembers" }
+  - { function: func_true_wedding, order: 13, actor: drummer_drummer,
+      beneficiary: drummer_king_daughter,
+      scene: "the true bride is acknowledged and the real wedding is solemnized" }
+
+edges:
+  - { from: drummer_drummer, to: obj_drummer_white_linen_dress, label: TAKES_FROM_LAKE,
+      evidence: "put one piece in his pocket" }
+  - { from: drummer_king_daughter, to: obj_drummer_white_linen_dress, label: REQUESTS_BACK,
+      evidence: "Give me back my dress" }
+  - { from: drummer_king_daughter, to: loc_drummer_glass_mountain, label: IMPRISONED_ON,
+      evidence: "am shut up on the glass-mountain" }
+  - { from: obj_drummer_white_linen_dress, to: drummer_king_daughter, label: ENABLES_FLIGHT,
+      evidence: "I cannot fly back again without my dress" }
+  - { from: drummer_drummer, to: loc_drummer_great_forest, label: ENTERS_WITHOUT_FEAR,
+      evidence: "went without fear straight into the forest" }
+  - { from: drummer_drummer, to: obj_drummer_drum, label: BEATS_REVEILLE,
+      evidence: "beat such a reveille" }
+  - { from: drummer_drummer, to: drummer_giants, label: BLUFFS_WITH_IMAGINARY_ARMY,
+      evidence: "many thousands who are following me" }
+  - { from: drummer_giants, to: loc_drummer_glass_mountain, label: CARRY_TO_FOOT_OF,
+      evidence: "they reached the foot of the mountain" }
+  - { from: drummer_quarreling_men, to: obj_drummer_wishing_saddle, label: QUARREL_OVER,
+      evidence: "disputing about a saddle" }
+  - { from: obj_drummer_wishing_saddle, to: loc_drummer_glass_mountain, label: TRANSPORTS_TO_SUMMIT,
+      evidence: "wished himself on the glass-mountain" }
+  - { from: drummer_witch, to: drummer_drummer, label: DEMANDS_THREE_SERVICES,
+      evidence: "if thou wilt perform three services in return" }
+  - { from: drummer_witch, to: obj_drummer_thimble, label: GIVES_IMPOSSIBLE_POND_TOOL,
+      evidence: "empty out the pond with this thimble" }
+  - { from: drummer_king_daughter, to: obj_drummer_wishing_ring, label: TURNS_FOR_POND_TASK,
+      evidence: "she turned a wishing-ring" }
+  - { from: obj_drummer_wishing_ring, to: loc_drummer_fish_pond, label: EMPTIES_AND_SORTS,
+      evidence: "the fishes sprang on the shore and laid themselves side by side" }
+  - { from: drummer_drummer, to: drummer_witch, label: THROWS_ODD_FISH_AT,
+      evidence: "he threw the fish in her face" }
+  - { from: drummer_witch, to: obj_drummer_lead_axe_tin_tools, label: GIVES_FALSE_FOREST_TOOLS,
+      evidence: "the axe was made of lead, and the mallet and wedges were of tin" }
+  - { from: obj_drummer_wishing_ring, to: loc_drummer_great_forest, label: FELLS_AND_STACKS,
+      evidence: "the whole forest fell down with a crash" }
+  - { from: drummer_drummer, to: drummer_witch, label: STRIKES_WITH_LEFT_BOUGH,
+      evidence: "gave her a blow with it" }
+  - { from: obj_drummer_wishing_ring, to: loc_drummer_great_forest, label: BURNS_WOOD_PILE,
+      evidence: "the entire pile of wood was burning in one enormous flame" }
+  - { from: drummer_drummer, to: obj_drummer_log_maiden, label: CARRIES_FROM_FIRE,
+      evidence: "He carried the log out" }
+  - { from: obj_drummer_log_maiden, to: drummer_king_daughter, label: TRANSFORMS_BACK_INTO,
+      evidence: "the beautiful maiden who had helped him in his need stood before him" }
+  - { from: drummer_drummer, to: drummer_witch, label: THROWS_INTO_FIRE,
+      evidence: "threw her into the jaws of the fire" }
+  - { from: drummer_king_daughter, to: obj_drummer_witch_treasure, label: TAKES_PRECIOUS_STONES,
+      evidence: "took only the precious stones" }
+  - { from: drummer_king_daughter, to: obj_drummer_wishing_ring, label: WISHES_PAIR_TO_TOWN_GATE,
+      evidence: "wish us in front of the town-gate" }
+  - { from: drummer_king_daughter, to: drummer_drummer, label: WARNS_AGAINST_RIGHT_CHEEK_KISS,
+      evidence: "do not kiss thy parents on the right cheek" }
+  - { from: drummer_parents, to: drummer_drummer, label: KISS_BOTH_CHEEKS,
+      evidence: "kissed them on both cheeks" }
+  - { from: drummer_drummer, to: law_homecoming_kiss_erases_bride_memory, label: FORGETS_BY,
+      evidence: "every thought of the King’s daughter vanished from him" }
+  - { from: drummer_king_daughter, to: loc_drummer_forest_hut, label: RETREATS_TO,
+      evidence: "wished herself into a solitary little hut in a forest" }
+  - { from: drummer_false_bride, to: drummer_drummer, label: SCHEDULED_TO_MARRY,
+      evidence: "the wedding shall be in three days" }
+  - { from: drummer_king_daughter, to: obj_drummer_celestial_dresses, label: WISHES_SUN_DRESS,
+      evidence: "A dress as bright as the sun" }
+  - { from: drummer_king_daughter, to: drummer_false_bride, label: BARTERS_DRESS_FOR_NIGHT,
+      evidence: "if I may pass the first night outside the door" }
+  - { from: drummer_false_bride, to: obj_drummer_sleeping_draught, label: DRUGS_BRIDEGROOM_WINE,
+      evidence: "mixed a sleeping-draught with the wine" }
+  - { from: drummer_king_daughter, to: loc_drummer_wedding_bedroom_door, label: LAMENTS_OUTSIDE,
+      evidence: "crouched down by the door of the bedroom" }
+  - { from: obj_drummer_sleeping_draught, to: drummer_drummer, label: PREVENTS_HEARING,
+      evidence: "the drummer did not awake" }
+  - { from: drummer_king_daughter, to: obj_drummer_celestial_dresses, label: WISHES_MOON_DRESS,
+      evidence: "A dress as silvery as the moon" }
+  - { from: drummer_king_daughter, to: obj_drummer_celestial_dresses, label: WISHES_STAR_DRESS,
+      evidence: "A dress glittering like the stars" }
+  - { from: drummer_drummer, to: obj_drummer_sleeping_draught, label: AVOIDS_THIRD_DRAUGHT,
+      evidence: "poured it behind the bed" }
+  - { from: drummer_king_daughter, to: law_voice_recognizes_forgotten_bride, label: RESTORES_MEMORY_BY_VOICE,
+      evidence: "Suddenly, his memory returned to him" }
+  - { from: drummer_drummer, to: drummer_king_daughter, label: NAMES_TRUE_BRIDE,
+      evidence: "This is my true bride" }
+  - { from: drummer_false_bride, to: obj_drummer_celestial_dresses, label: RECEIVES_COMPENSATION,
+      evidence: "received the beautiful dresses as a compensation" }

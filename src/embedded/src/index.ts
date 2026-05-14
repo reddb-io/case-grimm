@@ -3,6 +3,12 @@ import { mkdirSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { loadGraph, type GrimmGraph } from '../../shared/load-graph.ts'
+import {
+  edgeInsertBatches,
+  insertSql,
+  nodeInsertBatches,
+  type EntityId,
+} from '../../shared/graph-sql.ts'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 // src/embedded/src/index.ts → repo root is 3 levels up
@@ -33,30 +39,7 @@ function header(label: string): void {
 // Ingestion
 // ---------------------------------------------------------------------------
 
-type EntityId = string | number
-
-/**
- * RedDB reserves the first ~100 ids per collection for internal metadata
- * (column descriptors, schema bookkeeping). The first user-inserted NODE
- * gets entity_id `ID_OFFSET + 1`. Empirically confirmed against v1.0.7 on
- * both `memory://` and `file://` DBs.
- *
- * The SDK in v1.0.7 doesn't surface inserted entity ids (insert returns
- * `{affected: 1}` only), and `MATCH … RETURN n.foo` projects empty objects,
- * so we can't read them back post-hoc. We rely on this offset + insertion
- * order instead, then `calibrateOffset` cross-checks it via `GRAPH
- * NEIGHBORHOOD` on the first node.
- */
-const ID_OFFSET = 101
-
-/**
- * Inserts every node into the collection and returns a `label → entity_id`
- * map built from **insertion order** (with the engine's reserved offset).
- *
- * This holds only for a **fresh** collection. If the script is run twice
- * against the same file-backed DB without wiping it, ids will not align —
- * `existingCount` short-circuits the whole ingest to prevent that.
- */
+/** Inserts every node into the graph collection. */
 const NODE_CHUNK = 100
 const EDGE_CHUNK = 50
 
@@ -94,60 +77,54 @@ async function ingestNodes(
   db: RedDB,
   graph: GrimmGraph,
   logCollection: string,
-): Promise<Map<string, EntityId>> {
+): Promise<void> {
   const C = graph.collection
   console.log(`Inserting ${graph.nodes.length} nodes into '${C}' in chunks of ${NODE_CHUNK}...`)
   const start = Date.now()
+  let inserted = 0
 
-  const labelToId = new Map<string, EntityId>()
-
-  // Multi-row VALUES is ~3× faster than one-row-per-call.
-  for (let i = 0; i < graph.nodes.length; i += NODE_CHUNK) {
-    const batchStart = Date.now()
-    const batch = graph.nodes.slice(i, i + NODE_CHUNK)
-    const tuples = batch
-      .map((n) => `(${sqlString(n.label)}, ${sqlString(n.node_type)}, ${sqlString(n.name)})`)
-      .join(', ')
-    await db.query(`INSERT INTO ${C} NODE (label, node_type, name) VALUES ${tuples}`)
-    for (let j = 0; j < batch.length; j++) {
-      labelToId.set(batch[j].label, i + j + 1 + ID_OFFSET)
+  for (const group of nodeInsertBatches(graph.nodes)) {
+    for (let i = 0; i < group.rows.length; i += NODE_CHUNK) {
+      const batchStart = Date.now()
+      const rows = group.rows.slice(i, i + NODE_CHUNK)
+      await db.query(insertSql(C, 'NODE', group.columns, rows))
+      const batchMs = Date.now() - batchStart
+      inserted += rows.length
+      await logPoint(db, logCollection, 'nodes_batch_ms', batchMs, {
+        phase: 'nodes',
+        batch_idx: Math.floor(inserted / NODE_CHUNK),
+        batch_size: rows.length,
+      })
+      await logPoint(db, logCollection, 'nodes_inserted', rows.length, { phase: 'nodes' })
+      process.stdout.write(`  ${inserted}/${graph.nodes.length}\r`)
     }
-    const batchMs = Date.now() - batchStart
-    await logPoint(db, logCollection, 'nodes_batch_ms', batchMs, {
-      phase: 'nodes',
-      batch_idx: Math.floor(i / NODE_CHUNK),
-      batch_size: batch.length,
-    })
-    await logPoint(db, logCollection, 'nodes_inserted', batch.length, { phase: 'nodes' })
-    process.stdout.write(`  ${Math.min(i + NODE_CHUNK, graph.nodes.length)}/${graph.nodes.length}\r`)
   }
   const total = Date.now() - start
   console.log(`  ${graph.nodes.length}/${graph.nodes.length} nodes in ${total}ms`)
   await logPoint(db, logCollection, 'nodes_total_ms', total, { phase: 'nodes' })
-  console.log(`  built label → entity_id map for ${labelToId.size} nodes (offset = ${ID_OFFSET})`)
+}
 
-  // Calibrate: ask RedDB for the node at the first user id and confirm its
-  // label matches what we inserted first. Fails loudly if the offset changed.
-  const firstLabel = graph.nodes[0]?.label
-  const firstId = labelToId.get(firstLabel)
-  if (firstLabel && firstId !== undefined) {
-    try {
-      const probe = await db.query(`GRAPH NEIGHBORHOOD '${firstId}'`)
-      const me = (probe.rows ?? []).find((r) => Number(r['depth']) === 0)
-      const observedLabel = me?.['label']
-      if (observedLabel !== firstLabel) {
-        console.warn(
-          `  ⚠ calibration mismatch: id ${firstId} resolves to '${observedLabel}', expected '${firstLabel}'.\n` +
-            `    Edges will likely point at the wrong nodes. Check ID_OFFSET.`,
-        )
-      } else {
-        console.log(`  calibration ok — '${firstLabel}' is at id ${firstId}`)
-      }
-    } catch (err) {
-      console.warn(`  ⚠ calibration probe failed: ${err instanceof Error ? err.message : err}`)
-    }
+async function buildLabelToId(db: RedDB, graph: GrimmGraph): Promise<Map<string, EntityId>> {
+  const expected = new Set(graph.nodes.map((n) => n.label))
+  const labelToId = new Map<string, EntityId>()
+  const result = await db.query(`GRAPH CENTRALITY LIMIT ${graph.nodes.length}`)
+  for (const row of result.rows ?? []) {
+    const label = row['label']
+    const id = row['node_id']
+    if (typeof label !== 'string' || !expected.has(label)) continue
+    if (typeof id === 'string' || typeof id === 'number') labelToId.set(label, id)
   }
 
+  const missing = graph.nodes
+    .map((n) => n.label)
+    .filter((label) => !labelToId.has(label))
+  if (missing.length > 0) {
+    throw new Error(
+      `Could not resolve ${missing.length} graph node ids from RedDB; first missing labels: ${missing.slice(0, 10).join(', ')}`,
+    )
+  }
+
+  console.log(`  resolved label → node_id map for ${labelToId.size} nodes from RedDB`)
   return labelToId
 }
 
@@ -162,40 +139,28 @@ async function ingestEdges(
   console.log(`Inserting ${graph.edges.length} edges into '${C}' in chunks of ${EDGE_CHUNK}...`)
   const start = Date.now()
 
-  // First pass: filter out edges with unresolved endpoints so we can batch
-  // the survivors cleanly.
-  const valid: Array<[string, EntityId, EntityId]> = []
-  const unresolved = new Set<string>()
-  for (const e of graph.edges) {
-    const from = labelToId.get(e.from)
-    const to = labelToId.get(e.to)
-    if (from === undefined || to === undefined) {
-      if (from === undefined) unresolved.add(e.from)
-      if (to === undefined) unresolved.add(e.to)
-      continue
-    }
-    valid.push([e.label, from, to])
-  }
-  const skipped = graph.edges.length - valid.length
+  const { batches, skipped, unresolved } = edgeInsertBatches(graph.edges, labelToId)
+  const validCount = graph.edges.length - skipped
+  let inserted = 0
 
-  for (let i = 0; i < valid.length; i += EDGE_CHUNK) {
-    const batchStart = Date.now()
-    const batch = valid.slice(i, i + EDGE_CHUNK)
-    const tuples = batch
-      .map(([label, from, to]) => `(${sqlString(label)}, ${from}, ${to})`)
-      .join(', ')
-    await db.query(`INSERT INTO ${C} EDGE (label, from, to) VALUES ${tuples}`)
-    const batchMs = Date.now() - batchStart
-    await logPoint(db, logCollection, 'edges_batch_ms', batchMs, {
-      phase: 'edges',
-      batch_idx: Math.floor(i / EDGE_CHUNK),
-      batch_size: batch.length,
-    })
-    await logPoint(db, logCollection, 'edges_inserted', batch.length, { phase: 'edges' })
-    process.stdout.write(`  ${Math.min(i + EDGE_CHUNK, valid.length)}/${valid.length}\r`)
+  for (const group of batches) {
+    for (let i = 0; i < group.rows.length; i += EDGE_CHUNK) {
+      const batchStart = Date.now()
+      const rows = group.rows.slice(i, i + EDGE_CHUNK)
+      await db.query(insertSql(C, 'EDGE', group.columns, rows))
+      const batchMs = Date.now() - batchStart
+      inserted += rows.length
+      await logPoint(db, logCollection, 'edges_batch_ms', batchMs, {
+        phase: 'edges',
+        batch_idx: Math.floor(inserted / EDGE_CHUNK),
+        batch_size: rows.length,
+      })
+      await logPoint(db, logCollection, 'edges_inserted', rows.length, { phase: 'edges' })
+      process.stdout.write(`  ${inserted}/${validCount}\r`)
+    }
   }
   const total = Date.now() - start
-  console.log(`  ${valid.length}/${graph.edges.length} edges in ${total}ms`)
+  console.log(`  ${validCount}/${graph.edges.length} edges in ${total}ms`)
   await logPoint(db, logCollection, 'edges_total_ms', total, { phase: 'edges' })
   if (skipped > 0) await logPoint(db, logCollection, 'edges_skipped', skipped, { phase: 'edges' })
   if (skipped > 0) {
@@ -245,10 +210,8 @@ async function runDemos(
   // ---------------------------------------------------------------------
   // Aggregate SQL — these return real rows in RedDB 1.0.7.
   //
-  // (Caveats: plain row-projection SELECT — `SELECT name FROM tales WHERE
-  // node_type = 'character'` — currently returns empty rows, and MATCH
-  // RETURN n.foo also returns empty objects. Aggregates with GROUP BY are
-  // the reliable path.)
+  // Aggregates exercise the graph collection through SQL's row-shaped
+  // projection path, complementing the graph-native analytics below.
   // ---------------------------------------------------------------------
 
   header('Entity-type distribution')
@@ -312,11 +275,11 @@ async function runDemos(
   // ---------------------------------------------------------------------
 
   const pathPairs: Array<[string, string]> = [
-    ['evil_queen', 'snow_white'],   // antagonist → protagonist in Snowdrop
-    ['lrc_wolf', 'wsk_wolf'],       // wolf → wolf across two tales
-    ['cinderella', 'snow_white'],   // Cinderella → Snow White (cross-tale)
+    ['snow_white_stepmother_queen', 'snow_white'], // antagonist → protagonist in Snow White
+    ['little_red_cap_wolf', 'seven_kids_wolf'],    // wolf → wolf across two tales
+    ['cinderella', 'snow_white'],                  // Cinderella → Snow White (cross-tale)
     ['hansel', 'gretel'],           // sibling
-    ['gingerbread_witch', 'evil_queen'], // two witches across tales
+    ['hansel_gretel_witch', 'snow_white_stepmother_queen'], // two witches across tales
   ]
   header('Shortest paths between iconic character pairs')
   for (const [from, to] of pathPairs) {
@@ -377,15 +340,13 @@ async function main(): Promise<void> {
         `\nCollection '${graph.collection}' already has ${existing} entities — skipping ingest.\n` +
           `Delete ${dbFile} (or set REDDB_URI=memory://) to re-ingest.`,
       )
-      // Rebuild the map from the in-memory graph definition. As long as the
-      // graph file hasn't changed since the last ingest, insertion order
-      // (alphabetical by source file) still gives correct ids.
-      labelToId = new Map(graph.nodes.map((n, i) => [n.label, i + 1 + ID_OFFSET]))
+      labelToId = await buildLabelToId(db, graph)
     } else {
       console.log()
       const overallStart = Date.now()
       const logCol = await ensureIngestLog(db)
-      labelToId = await ingestNodes(db, graph, logCol)
+      await ingestNodes(db, graph, logCol)
+      labelToId = await buildLabelToId(db, graph)
       await ingestEdges(db, graph, labelToId, logCol)
       await logPoint(db, logCol, 'ingest_total_ms', Date.now() - overallStart, { phase: 'overall' })
       await logPoint(db, logCol, 'nodes_total', graph.nodes.length, { phase: 'overall' })

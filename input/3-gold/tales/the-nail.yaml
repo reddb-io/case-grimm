@@ -1,0 +1,189 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-nail
+khm: 184
+atu: "760"
+atu_name: The Nail
+canonical_source: ../../2-silver/canonical/the-nail/canonical.txt
+title: The Nail
+
+
+entities:
+
+  characters:
+
+    nail_merchant:
+      name: The Merchant
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_endurance, agency_object_mediation]
+      speech_acts_performed: [speech_command, speech_testimony]
+      traits: [successful-at-fair, gold-and-silver-carrier, homeward-rider, hurried, warning-dismissive, forced-foot-traveller, late-arriver]
+      evidence: |
+        A merchant had done good business at the fair
+
+    nail_horse:
+      name: The Merchant's Horse
+      species: sp_horse
+      agency_modes: [agency_endurance]
+      traits: [money-trunk-carrier, missing-nail, missing-shoe, limping, stumbling, broken-legged, abandoned]
+      evidence: |
+        packed his trunk with the money on his horse
+
+    nail_stable_boys:
+      name: The Stable-Boys
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      speech_acts_performed: [speech_warning, speech_request]
+      traits: [horse-inspectors, nail-warning-giver, shoe-warning-giver, blacksmith-proposers]
+      evidence: |
+        the stable-boy brought out his horse
+
+  magic_objects:
+
+    obj_nail_money_bags:
+      name: The Merchant's Money-Bags
+      object_kind: treasure
+      attributes:
+        contents: gold and silver
+        function: profit that motivates the hurried homeward ride
+      evidence: |
+        lined his money-bags with gold and silver
+
+    obj_nail_trunk:
+      name: The Trunk of Money
+      object_kind: token
+      attributes:
+        function: load first carried by the horse and later by the merchant
+      evidence: |
+        packed his trunk with the money on his horse
+
+    obj_nail_missing_nail:
+      name: The Missing Nail
+      object_kind: tool
+      attributes:
+        function: small unrepaired defect that begins the disaster cascade
+      evidence: |
+        A nail is wanting
+
+    obj_nail_missing_shoe:
+      name: The Missing Horseshoe
+      object_kind: tool
+      attributes:
+        function: second-stage failure after the nail is ignored
+      evidence: |
+        a shoe is missing
+
+  locations:
+
+    loc_nail_fair:
+      name: The Fair
+      instance_of: loc_town
+      evidence: |
+        at the fair
+
+    loc_nail_town_noon:
+      name: The Noon Town
+      instance_of: loc_town
+      evidence: |
+        At noon he rested in a town
+
+    loc_nail_stable:
+      name: The Stable
+      instance_of: loc_stable
+      evidence: |
+        the stable-boy brought out his horse
+
+    loc_nail_home_road:
+      name: The Homeward Road
+      instance_of: loc_road
+      evidence: |
+        rode away
+
+    loc_nail_home_house:
+      name: The Merchant's House
+      instance_of: loc_house
+      evidence: |
+        be in his own house before nightfall
+
+
+classifications:
+
+  world_laws:
+    - law_unrepaired_small_defect_cascades_into_disaster
+
+  moral_regimes:
+    - moral_prudent_pacing
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_speech
+    - agency_endurance
+
+  affects_driving: []
+
+  symbol_numbers:
+    - num_1
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_initial_profit, order: 1, actor: nail_merchant,
+      scene: "the merchant sells his wares and rides home with gold and silver" }
+  - { function: func_first_warning, order: 2, actor: nail_stable_boys,
+      beneficiary: nail_merchant,
+      scene: "the stable-boy warns that one nail is missing from the horse's shoe" }
+  - { function: func_warning_rejected, order: 3, actor: nail_merchant,
+      scene: "the merchant refuses repair because he is in a hurry" }
+  - { function: func_second_warning, order: 4, actor: nail_stable_boys,
+      beneficiary: nail_merchant,
+      scene: "the stable-boy warns that the whole shoe is missing" }
+  - { function: func_warning_rejected, order: 5, actor: nail_merchant,
+      scene: "the merchant again refuses the blacksmith because he is in haste" }
+  - { function: func_cascade_failure, order: 6, actor: law_unrepaired_small_defect_cascades_into_disaster,
+      victim: nail_horse,
+      scene: "the horse limps, stumbles, falls, and breaks its leg" }
+  - { function: func_loss_of_transport, order: 7, actor: nail_merchant,
+      scene: "the merchant leaves the horse and carries the trunk home on his back" }
+  - { function: func_proverbial_moral, order: 8, actor: moral_prudent_pacing,
+      scene: "the merchant names the unlucky nail as the cause and the tale closes with 'Hasten slowly'" }
+
+
+edges:
+
+  - { from: nail_merchant, to: obj_nail_money_bags, label: FILLS_WITH_PROFIT,
+      evidence: "lined his money-bags with gold and silver" }
+  - { from: nail_merchant, to: obj_nail_trunk, label: PACKS_WITH_MONEY,
+      evidence: "packed his trunk with the money" }
+  - { from: nail_horse, to: obj_nail_trunk, label: CARRIES,
+      evidence: "on his horse" }
+  - { from: nail_merchant, to: loc_nail_home_house, label: HURRIES_TOWARD,
+      evidence: "be in his own house before nightfall" }
+  - { from: nail_stable_boys, to: obj_nail_missing_nail, label: WARNS_ABOUT,
+      evidence: "A nail is wanting" }
+  - { from: obj_nail_missing_nail, to: nail_horse, label: AFFECTS_LEFT_HIND_SHOE,
+      evidence: "in the shoe of its left hind foot" }
+  - { from: nail_merchant, to: obj_nail_missing_nail, label: DISMISSES_REPAIR,
+      evidence: "Let it be wanting" }
+  - { from: nail_merchant, to: moral_prudent_pacing, label: VIOLATES_BY_HASTE,
+      evidence: "I am in a hurry" }
+  - { from: nail_stable_boys, to: obj_nail_missing_shoe, label: WARNS_ABOUT,
+      evidence: "a shoe is missing" }
+  - { from: nail_stable_boys, to: nail_merchant, label: OFFERS_BLACKSMITH_REPAIR,
+      evidence: "Shall I take him to the blacksmith?" }
+  - { from: nail_merchant, to: obj_nail_missing_shoe, label: DISMISSES_SECOND_REPAIR,
+      evidence: "Let it still be wanting" }
+  - { from: obj_nail_missing_nail, to: law_unrepaired_small_defect_cascades_into_disaster, label: INITIATES_CASCADE,
+      evidence: "that unlucky nail" }
+  - { from: nail_horse, to: law_unrepaired_small_defect_cascades_into_disaster, label: LIMPS_THEN_STUMBLES_THEN_FALLS,
+      evidence: "began to limp" }
+  - { from: law_unrepaired_small_defect_cascades_into_disaster, to: nail_horse, label: BREAKS_LEG,
+      evidence: "broke its leg" }
+  - { from: nail_merchant, to: nail_horse, label: LEAVES_BEHIND,
+      evidence: "forced to leave the horse where it was" }
+  - { from: nail_merchant, to: obj_nail_trunk, label: CARRIES_ON_BACK,
+      evidence: "take it on his back" }
+  - { from: nail_merchant, to: loc_nail_home_house, label: ARRIVES_LATE,
+      evidence: "did not arrive until quite late at night" }
+  - { from: moral_prudent_pacing, to: nail_merchant, label: SUMMARIZED_BY_PROVERB,
+      evidence: "Hasten slowly" }

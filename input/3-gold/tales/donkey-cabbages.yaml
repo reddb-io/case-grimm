@@ -1,0 +1,661 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: donkey-cabbages
+khm: 122
+atu: '566'
+atu_name: Donkey Cabbages
+canonical_source: ../../2-silver/canonical/donkey-cabbages/canonical.txt
+title: Donkey Cabbages
+
+
+entities:
+
+  characters:
+
+    donkey_cabbages_huntsman:
+      name: The Young Huntsman
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_violence, agency_cunning, agency_speech, agency_endurance]
+      existential_states: [state_deceived, state_transformed, state_disguised]
+      transformations: [transform_animal_human]
+      speech_acts_performed: [speech_wish, speech_lie, speech_request]
+      affects: [affect_pity, affect_love, affect_hunger, affect_anger]
+      traits: [joyous-huntsman, donor-kind, bird-heart-eater, wishing-cloak-bearer, love-befuddled-victim, mountain-stranded, donkey-transformed, disguised-messenger, cabbage-avenger, pity-restorer, bridegroom]
+      evidence: |
+        There was once a young huntsman who went into the forest to lie in wait
+
+    donkey_cabbages_wise_crone:
+      name: The Poor Old Wise Woman
+      archetypes: [arc_supernatural_donor]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_request, speech_warning]
+      affects: [affect_hunger]
+      traits: [hungry-crone, donor-test-figure, bird-cloak-prophet, reward-giver]
+      evidence: |
+        an ugly old crone came up
+
+    donkey_cabbages_old_witch:
+      name: The Old Witch at the Castle Window
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_cunning, agency_speech, agency_violence, agency_object_mediation]
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human]
+      speech_acts_performed: [speech_command, speech_lie]
+      affects: [affect_greed, affect_anger]
+      traits: [castle-witch, treasure-seer, daughter-coercer, bird-heart-thief, wishing-cloak-thief, bad-cabbage-eater, beaten-donkey, dead-donkey]
+      evidence: |
+        The old woman, however, was a witch
+
+    donkey_cabbages_maiden:
+      name: The Beautiful Young Witch / Maiden
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_cunning, agency_speech, agency_object_mediation]
+      existential_states: [state_deceived, state_transformed]
+      transformations: [transform_animal_human]
+      speech_acts_performed: [speech_lie, speech_request]
+      affects: [affect_love, affect_fear, affect_greed]
+      traits: [beautiful-maiden, coerced-daughter, seducer, bird-heart-recipient, wishing-cloak-thief, garnet-mountain-betrayer, donkey-punished, repentant-bride]
+      evidence: |
+        with a wonderfully beautiful maiden
+
+    donkey_cabbages_servant_girl:
+      name: The Maid-Servant Who Tastes the Salad
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human]
+      affects: [affect_hunger]
+      traits: [kitchen-servant, habitual-taster, accidental-donkey, mildly-punished]
+      evidence: |
+        Presently the maid-servant entered the kitchen
+
+    donkey_cabbages_birds:
+      name: The Nine Birds Fighting Over the Cloak
+      species: sp_bird
+      agency_modes: [agency_violence]
+      traits: [nine-birds, cloak-fighters, donor-sign]
+      evidence: |
+        nine birds are sitting which have a cloak in their claws
+
+    donkey_cabbages_dead_bird:
+      name: The Dead Bird with the Gold-Heart
+      species: sp_bird
+      traits: [shot-bird, heart-source, gold-generating-organ-bearer]
+      evidence: |
+        one of the birds will be hurt, and will drop down dead
+
+    donkey_cabbages_giants:
+      name: The Three Wild Giants of the Garnet Mountain
+      being_type: being_giant
+      agency_modes: [agency_speech, agency_violence]
+      speech_acts_performed: [speech_warning]
+      traits: [mountain-dwellers, sleeping-man-observers, cloud-route-revealers]
+      evidence: |
+        three of them coming towards him
+
+    donkey_cabbages_miller:
+      name: The Miller Who Keeps the Three Donkeys
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_violence, agency_speech]
+      speech_acts_performed: [speech_request]
+      traits: [stable-keeper, donkey-manager, beating-dispenser, pity-reporting-messenger]
+      evidence: |
+        the miller put out his head, and asked what he wanted
+
+    donkey_cabbages_parents:
+      name: The Huntsman's Parents
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [home-family, leave-taking-recipients]
+      evidence: |
+        He then took leave of his parents
+
+  magic_objects:
+
+    obj_donkey_cabbages_wishing_cloak:
+      name: The Wishing-Cloak
+      instance_of: obj_wishing_cloak
+      object_kind: garment
+      attributes:
+        function: transports the wearer instantly to the wished place
+      evidence: |
+        it is a wishing-cloak
+
+    obj_donkey_cabbages_bird_heart:
+      name: The Gold-Generating Bird Heart
+      instance_of: obj_magic_bird_heart_liver
+      object_kind: food
+      attributes:
+        function: produces one gold piece beneath the eater's pillow each morning
+      evidence: |
+        every morning early, when you get up, you will find a gold piece under your pillow
+
+    obj_donkey_cabbages_gold_pieces:
+      name: The Morning Gold Pieces
+      object_kind: treasure
+      attributes:
+        function: recurrent wealth generated by the swallowed bird heart
+      evidence: |
+        the gold piece shone in his eyes
+
+    obj_donkey_cabbages_huntsman_gun:
+      name: The Huntsman's Gun
+      object_kind: weapon
+      attributes:
+        function: shoots into the birds so the cloak and dead bird fall
+      evidence: |
+        take your gun and shoot into the midst of them
+
+    obj_donkey_cabbages_sleeping_drink:
+      name: The Witch's Sleeping Drink
+      instance_of: obj_sleeping_draught
+      object_kind: food
+      attributes:
+        function: makes the huntsman vomit up the bird heart
+      evidence: |
+        She prepared a drink
+
+    obj_donkey_cabbages_garnets:
+      name: The Garnet Mountain Precious Stones
+      object_kind: treasure
+      attributes:
+        function: bait used to make the huntsman transport the maiden by cloak
+      evidence: |
+        Precious stones were glistening on every side
+
+    obj_donkey_cabbages_bad_cabbage:
+      name: The Donkey-Making Cabbage
+      instance_of: obj_transforming_cabbages
+      object_kind: food
+      attributes:
+        function: changes humans into donkeys or asses when eaten
+      evidence: |
+        Four legs grew on him, a large head and two thick ears
+
+    obj_donkey_cabbages_good_cabbage:
+      name: The Human-Restoring Cabbage
+      instance_of: obj_transforming_cabbages
+      object_kind: food
+      attributes:
+        function: restores donkey-form back to human shape
+      evidence: |
+        reassumed his former human shape
+
+    obj_donkey_cabbages_rope:
+      name: The Rope Binding the Three Donkeys
+      object_kind: tool
+      attributes:
+        function: binds the transformed witch, servant, and maiden for transport to the mill
+      evidence: |
+        bound them together, all three with one rope
+
+    obj_donkey_cabbages_cupboard_cloak:
+      name: The Stolen Cloak in the Cupboard
+      instance_of: obj_wishing_cloak
+      object_kind: garment
+      attributes:
+        function: recovered object held in the castle after the maiden's repentance
+      evidence: |
+        Your wishing-cloak hangs in a cupboard
+
+  locations:
+
+    loc_donkey_cabbages_first_forest:
+      name: The Huntsman's First Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        went into the forest to lie in wait
+
+    loc_donkey_cabbages_bird_tree:
+      name: The Tree of the Nine Birds
+      instance_of: loc_tree
+      evidence: |
+        you will come to a tree
+
+    loc_donkey_cabbages_home:
+      name: The Huntsman's Home
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        took the cloak home with him
+
+    loc_donkey_cabbages_dense_forest:
+      name: The Dense Forest Before the Castle
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        one day he travelled through a dense forest
+
+    loc_donkey_cabbages_witch_castle:
+      name: The Witch's Fine Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        in the plain before him stood a fine castle
+
+    loc_donkey_cabbages_castle_window:
+      name: The Castle Window of Witch-Sight
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        looking out of one of the windows
+
+    loc_donkey_cabbages_garnet_mountain:
+      name: The Wild Garnet Mountain
+      instance_of: loc_mountain
+      evidence: |
+        over yonder lies the Garnet Mountain
+
+    loc_donkey_cabbages_cloud_route:
+      name: The Cloud Route from the Mountain
+      instance_of: loc_mountain
+      evidence: |
+        a cloud floated towards him, caught him up
+
+    loc_donkey_cabbages_cabbage_garden:
+      name: The Walled Cabbage-Garden
+      instance_of: loc_garden
+      threshold_type: threshold_gate
+      evidence: |
+        a great cabbage-garden, girt round by walls
+
+    loc_donkey_cabbages_kitchen:
+      name: The Witch's Kitchen
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        she herself went into the kitchen and dressed it
+
+    loc_donkey_cabbages_courtyard:
+      name: The Courtyard of Donkeys
+      instance_of: loc_courtyard
+      evidence: |
+        she ran out into the courtyard in the form of an ass
+
+    loc_donkey_cabbages_mill:
+      name: The Miller's Mill
+      instance_of: loc_mill
+      threshold_type: threshold_doorway
+      evidence: |
+        he came to a mill
+
+    loc_donkey_cabbages_stable:
+      name: The Mill Stable
+      instance_of: loc_stable
+      evidence: |
+        give them food and stable room
+
+
+classifications:
+
+  world_laws:
+    - law_kindness_to_hidden_donors_rewarded
+    - law_magic_bird_organs_generate_gold
+    - law_transforming_cabbages_alternate_human_donkey_form
+
+  moral_regimes:
+    - moral_retributive
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_cunning
+    - agency_speech
+    - agency_violence
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_pity
+    - affect_love
+    - affect_greed
+    - affect_hunger
+    - affect_anger
+
+  symbol_numbers:
+    - num_3
+    - num_9
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+    - threshold_gate
+
+
+propp:
+
+  - function: func_donor_test
+    order: 1
+    actor: donkey_cabbages_wise_crone
+    beneficiary: donkey_cabbages_huntsman
+    scene: The hungry crone asks the merry huntsman for alms, and he gives what he can.
+    evidence: |
+      do give me an alms
+
+  - function: func_donor_reward
+    order: 2
+    actor: donkey_cabbages_wise_crone
+    beneficiary: donkey_cabbages_huntsman
+    scene: In return for kindness, she tells him how to obtain the wishing-cloak and gold-producing bird heart.
+    evidence: |
+      I will make you a present in return for your kindness
+
+  - function: func_magical_agent_acquisition
+    order: 3
+    actor: donkey_cabbages_huntsman
+    scene: The huntsman shoots among the nine birds, takes the cloak, and swallows the dead bird's heart.
+    evidence: |
+      swallowed it down, and took the cloak home with him
+
+  - function: func_departure
+    order: 4
+    actor: donkey_cabbages_huntsman
+    scene: After accumulating gold, he leaves home to see the world.
+    evidence: |
+      I will go forth and see the world
+
+  - function: func_villainy_planning
+    order: 5
+    actor: donkey_cabbages_old_witch
+    victim: donkey_cabbages_huntsman
+    scene: The old witch sees the treasure in his body and instructs her daughter to steal it.
+    evidence: |
+      we must filch it from him
+
+  - function: func_deception
+    order: 6
+    actor: donkey_cabbages_maiden
+    victim: donkey_cabbages_huntsman
+    scene: The maiden makes the huntsman fall in love and helps remove the bird heart with the prepared drink.
+    evidence: |
+      he was so much in love with the young witch
+
+  - function: func_theft
+    order: 7
+    actor: donkey_cabbages_maiden
+    victim: donkey_cabbages_huntsman
+    scene: The maiden steals the wishing-cloak while he sleeps on the Garnet Mountain.
+    evidence: |
+      she unfastened the mantle from his shoulders
+
+  - function: func_abandonment
+    order: 8
+    actor: donkey_cabbages_maiden
+    victim: donkey_cabbages_huntsman
+    scene: She wishes herself home with the cloak and leaves him alone on the wild mountain.
+    evidence: |
+      left him alone on the wild mountain
+
+  - function: func_escape_guidance
+    order: 9
+    actor: donkey_cabbages_giants
+    beneficiary: donkey_cabbages_huntsman
+    scene: The giants unknowingly reveal that clouds can carry him from the mountain summit.
+    evidence: |
+      the clouds will lay hold of him and bear him away
+
+  - function: func_transformation_discovery
+    order: 10
+    actor: obj_donkey_cabbages_bad_cabbage
+    victim: donkey_cabbages_huntsman
+    scene: Hungry in the cabbage garden, the huntsman eats leaves and becomes an ass.
+    evidence: |
+      he was changed into an ass
+
+  - function: func_counteragent_discovery
+    order: 11
+    actor: obj_donkey_cabbages_good_cabbage
+    beneficiary: donkey_cabbages_huntsman
+    scene: Eating a different cabbage restores his human form.
+    evidence: |
+      reassumed his former human shape
+
+  - function: func_return_in_disguise
+    order: 12
+    actor: donkey_cabbages_huntsman
+    scene: He dyes his face, returns as a king's messenger, and offers the witch the bad cabbage as exquisite salad.
+    evidence: |
+      I am a King’s messenger
+
+  - function: func_punishment
+    order: 13
+    actor: obj_donkey_cabbages_bad_cabbage
+    victim: donkey_cabbages_old_witch
+    scene: The witch, servant, and maiden all eat the bad cabbage and become asses.
+    evidence: |
+      was, like the others, immediately deprived of her human form
+
+  - function: func_retributive_service
+    order: 14
+    actor: donkey_cabbages_huntsman
+    victim: donkey_cabbages_old_witch
+    scene: He sends the three transformed women to the mill under unequal beating and feeding terms.
+    evidence: |
+      three beatings and one meal daily to the old donkey
+
+  - function: func_pity_restoration
+    order: 15
+    actor: donkey_cabbages_huntsman
+    beneficiary: donkey_cabbages_maiden
+    scene: After the old witch dies and the other two sadden, he restores them with the good cabbage.
+    evidence: |
+      he gave them some of the good salad, so that they became human again
+
+  - function: func_wedding
+    order: 16
+    actor: donkey_cabbages_huntsman
+    beneficiary: donkey_cabbages_maiden
+    scene: The maiden repents, offers back the stolen magic, and the huntsman marries her.
+    evidence: |
+      I will take thee for my true wife
+
+
+edges:
+
+  - from: donkey_cabbages_huntsman
+    label: GIVES_ALMS_TO
+    to: donkey_cabbages_wise_crone
+    evidence: |
+      gave her what he could afford
+
+  - from: donkey_cabbages_wise_crone
+    label: REWARDS
+    to: donkey_cabbages_huntsman
+    evidence: |
+      in return for your kindness
+
+  - from: donkey_cabbages_wise_crone
+    label: FORETELLS
+    to: donkey_cabbages_birds
+    evidence: |
+      nine birds are sitting which have a cloak in their claws
+
+  - from: donkey_cabbages_huntsman
+    label: SHOOTS_AMONG
+    to: donkey_cabbages_birds
+    evidence: |
+      fired right into the midst of them
+
+  - from: donkey_cabbages_birds
+    label: DROP
+    to: obj_donkey_cabbages_wishing_cloak
+    evidence: |
+      the cloak fell at the same time
+
+  - from: donkey_cabbages_huntsman
+    label: SWALLOWS
+    to: obj_donkey_cabbages_bird_heart
+    evidence: |
+      swallowed it down
+
+  - from: obj_donkey_cabbages_bird_heart
+    label: PRODUCES
+    to: obj_donkey_cabbages_gold_pieces
+    evidence: |
+      every morning early, when you get up, you will find a gold piece under your pillow
+
+  - from: donkey_cabbages_old_witch
+    label: COVETS
+    to: obj_donkey_cabbages_bird_heart
+    evidence: |
+      we must filch it from him
+
+  - from: donkey_cabbages_old_witch
+    label: COMMANDS
+    to: donkey_cabbages_maiden
+    evidence: |
+      She told her what she was to do to get it
+
+  - from: donkey_cabbages_maiden
+    label: DECEIVES
+    to: donkey_cabbages_huntsman
+    evidence: |
+      drink to me
+
+  - from: obj_donkey_cabbages_sleeping_drink
+    label: EXPELS
+    to: obj_donkey_cabbages_bird_heart
+    evidence: |
+      he brought up the heart of the bird
+
+  - from: donkey_cabbages_maiden
+    label: SWALLOWS
+    to: obj_donkey_cabbages_bird_heart
+    evidence: |
+      swallow it herself
+
+  - from: obj_donkey_cabbages_bird_heart
+    label: TRANSFERS_GOLD_TO
+    to: donkey_cabbages_maiden
+    evidence: |
+      it lay instead under that of the maiden
+
+  - from: donkey_cabbages_old_witch
+    label: DEMANDS
+    to: obj_donkey_cabbages_wishing_cloak
+    evidence: |
+      I must and will have it!
+
+  - from: donkey_cabbages_huntsman
+    label: TRANSPORTS_WITH
+    to: obj_donkey_cabbages_wishing_cloak
+    evidence: |
+      wished himself on the Garnet Mountain
+
+  - from: donkey_cabbages_maiden
+    label: STEALS
+    to: obj_donkey_cabbages_wishing_cloak
+    evidence: |
+      unfastened the mantle from his shoulders
+
+  - from: donkey_cabbages_maiden
+    label: ABANDONS_ON
+    to: loc_donkey_cabbages_garnet_mountain
+    evidence: |
+      left him alone on the wild mountain
+
+  - from: donkey_cabbages_giants
+    label: REVEAL_ESCAPE_BY
+    to: loc_donkey_cabbages_cloud_route
+    evidence: |
+      the clouds will lay hold of him and bear him away
+
+  - from: loc_donkey_cabbages_cloud_route
+    label: CARRIES
+    to: donkey_cabbages_huntsman
+    evidence: |
+      caught him up, carried him away
+
+  - from: obj_donkey_cabbages_bad_cabbage
+    label: TRANSFORMS_INTO_DONKEY
+    to: donkey_cabbages_huntsman
+    evidence: |
+      he was changed into an ass
+
+  - from: obj_donkey_cabbages_good_cabbage
+    label: RESTORES_HUMAN_FORM_TO
+    to: donkey_cabbages_huntsman
+    evidence: |
+      reassumed his former human shape
+
+  - from: donkey_cabbages_huntsman
+    label: DISGUISES_AS
+    to: donkey_cabbages_huntsman
+    evidence: |
+      I am a King’s messenger
+
+  - from: donkey_cabbages_huntsman
+    label: GIVES_BAD_CABBAGE_TO
+    to: donkey_cabbages_old_witch
+    evidence: |
+      handed her the bad cabbage
+
+  - from: obj_donkey_cabbages_bad_cabbage
+    label: TRANSFORMS_INTO_DONKEY
+    to: donkey_cabbages_old_witch
+    evidence: |
+      ran out into the courtyard in the form of an ass
+
+  - from: obj_donkey_cabbages_bad_cabbage
+    label: TRANSFORMS_INTO_DONKEY
+    to: donkey_cabbages_servant_girl
+    evidence: |
+      she likewise became an ass
+
+  - from: obj_donkey_cabbages_bad_cabbage
+    label: TRANSFORMS_INTO_DONKEY
+    to: donkey_cabbages_maiden
+    evidence: |
+      ran out into the courtyard in the shape of an ass
+
+  - from: donkey_cabbages_huntsman
+    label: BINDS
+    to: obj_donkey_cabbages_rope
+    evidence: |
+      bound them together, all three with one rope
+
+  - from: donkey_cabbages_huntsman
+    label: DELIVERS_TO
+    to: donkey_cabbages_miller
+    evidence: |
+      Will you take them in
+
+  - from: donkey_cabbages_huntsman
+    label: ORDERS_BEATINGS_OF
+    to: donkey_cabbages_old_witch
+    evidence: |
+      three beatings and one meal daily to the old donkey
+
+  - from: donkey_cabbages_old_witch
+    label: DIES_AS_DONKEY
+    to: loc_donkey_cabbages_stable
+    evidence: |
+      the old ass which had received three beatings and only one meal daily was dead
+
+  - from: donkey_cabbages_huntsman
+    label: RESTORES
+    to: donkey_cabbages_maiden
+    evidence: |
+      he gave them some of the good salad, so that they became human again
+
+  - from: donkey_cabbages_maiden
+    label: CONFESSES_COERCION_TO
+    to: donkey_cabbages_huntsman
+    evidence: |
+      my mother drove me to it
+
+  - from: donkey_cabbages_maiden
+    label: OFFERS_RETURN_OF
+    to: obj_donkey_cabbages_cupboard_cloak
+    evidence: |
+      Your wishing-cloak hangs in a cupboard
+
+  - from: donkey_cabbages_huntsman
+    label: MARRIES
+    to: donkey_cabbages_maiden
+    evidence: |
+      I will take thee for my true wife

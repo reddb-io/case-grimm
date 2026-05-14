@@ -1,0 +1,252 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-shroud
+khm: 109
+atu: '769'
+atu_name: The Shroud
+canonical_source: ../../2-silver/canonical/the-shroud/canonical.txt
+title: The Shroud
+
+
+entities:
+
+  characters:
+
+    shroud_mother:
+      name: The Grieving Mother
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      affects: [affect_grief, affect_fear, affect_love]
+      traits: [devoted-mother, inconsolable-mourner, night-weeper, grief-relinquisher]
+      evidence: |
+        she herself worshipped him above everything in the world
+
+    shroud_child:
+      name: The Dead Little Boy
+      species: sp_human
+      being_type: being_spirit
+      agency_modes: [agency_speech, agency_object_mediation]
+      existential_states: [state_liminal_dead]
+      speech_acts_performed: [speech_warning]
+      affects: [affect_grief]
+      traits: [seven-year-old-child, lovable-boy, night-returner, shroud-burdened-dead, grave-rest-seeker]
+      evidence: |
+        it appeared by night in the places where it had sat and played during its life
+
+    shroud_god:
+      name: God
+      being_type: being_divine
+      agency_modes: [agency_social_rank]
+      traits: [divine-receiver-of-the-child, sorrow-keeper]
+      evidence: |
+        God took him to himself
+
+  magic_objects:
+
+    obj_shroud_child_shroud:
+      name: The Little White Shroud
+      instance_of: obj_burial_shroud
+      object_kind: garment
+      attributes:
+        function: registers the mother's tears and prevents the child from resting until it dries
+      evidence: |
+        the little white shroud in which it had been laid in its coffin
+
+    obj_shroud_flower_wreath:
+      name: The Child's Wreath of Flowers
+      object_kind: token
+      attributes:
+        function: marks the returned child as still belonging to burial ritual
+      evidence: |
+        with its wreath of flowers round its head
+
+    obj_shroud_little_light:
+      name: The Child's Little Light
+      object_kind: token
+      attributes:
+        function: announces that the shroud is nearly dry and grave-rest is near
+      evidence: |
+        held a little light in its hand
+
+  locations:
+
+    loc_shroud_mother_house:
+      name: The Mother's House
+      instance_of: loc_house
+      evidence: |
+        in the places where it had sat and played during its life
+
+    loc_shroud_mother_bed:
+      name: The Mother's Bed
+      instance_of: loc_bedchamber
+      evidence: |
+        stood on the bed at her feet
+
+    loc_shroud_child_coffin:
+      name: The Child's Coffin
+      instance_of: loc_tomb
+      threshold_type: threshold_grave
+      evidence: |
+        fall asleep in my coffin
+
+    loc_shroud_child_grave:
+      name: The Child's Grave / Little Bed Beneath the Earth
+      instance_of: loc_tomb
+      threshold_type: threshold_grave
+      evidence: |
+        slept in its little bed beneath the earth
+
+
+classifications:
+
+  world_laws:
+    - law_excessive_mourning_burdens_dead_child
+
+  moral_regimes:
+    - moral_restorative
+    - moral_mercy_over_judgment
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_speech
+    - agency_object_mediation
+
+  affects_driving:
+    - affect_grief
+    - affect_love
+    - affect_fear
+
+  symbol_numbers:
+    - num_7
+
+  threshold_types:
+    - threshold_grave
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: shroud_mother
+    scene: The mother's love is concentrated wholly in the child.
+    evidence: |
+      she herself worshipped him above everything in the world
+
+  - function: func_departure
+    order: 2
+    actor: shroud_child
+    scene: God takes the child from life into death.
+    evidence: |
+      God took him to himself
+
+  - function: func_return
+    order: 3
+    actor: shroud_child
+    scene: The dead child returns at night wherever it had played in life.
+    evidence: |
+      it appeared by night in the places where it had sat and played during its life
+
+  - function: func_warning
+    order: 4
+    actor: shroud_child
+    beneficiary: shroud_mother
+    scene: The child explains that the mother's tears keep the shroud wet and prevent rest.
+    evidence: |
+      my shroud will not dry because of all thy tears
+
+  - function: func_compliance
+    order: 5
+    actor: shroud_mother
+    beneficiary: shroud_child
+    scene: Fear and love turn mourning into patient restraint.
+    evidence: |
+      The mother was afraid when she heard that, and wept no more.
+
+  - function: func_resolution
+    order: 6
+    actor: shroud_child
+    scene: The shroud dries, the child rests, and the haunting ceases.
+    evidence: |
+      my shroud is nearly dry, and I can rest in my grave
+
+
+edges:
+
+  - from: shroud_god
+    label: TAKES_TO_HIMSELF
+    to: shroud_child
+    evidence: |
+      God took him to himself
+
+  - from: shroud_mother
+    label: LOVES
+    to: shroud_child
+    evidence: |
+      she herself worshipped him above everything in the world
+
+  - from: shroud_mother
+    label: WEEPS_FOR
+    to: shroud_child
+    evidence: |
+      wept both day and night
+
+  - from: shroud_child
+    label: RETURNS_TO
+    to: loc_shroud_mother_house
+    evidence: |
+      it appeared by night in the places where it had sat and played during its life
+
+  - from: shroud_mother
+    label: WETS_WITH_TEARS
+    to: obj_shroud_child_shroud
+    evidence: |
+      my shroud will not dry because of all thy tears
+
+  - from: law_excessive_mourning_burdens_dead_child
+    label: PREVENTS_REST_OF
+    to: shroud_child
+    evidence: |
+      I shall never fall asleep in my coffin
+
+  - from: shroud_child
+    label: ASKS
+    to: shroud_mother
+    evidence: |
+      Oh, mother, do stop crying
+
+  - from: shroud_child
+    label: APPEARS_WITH
+    to: obj_shroud_flower_wreath
+    evidence: |
+      with its wreath of flowers round its head
+
+  - from: shroud_child
+    label: CARRIES
+    to: obj_shroud_little_light
+    evidence: |
+      held a little light in its hand
+
+  - from: shroud_mother
+    label: CEASES_WEEPING
+    to: shroud_child
+    evidence: |
+      wept no more
+
+  - from: obj_shroud_child_shroud
+    label: DRIES
+    to: shroud_child
+    evidence: |
+      my shroud is nearly dry
+
+  - from: shroud_mother
+    label: ENTRUSTS_SORROW_TO
+    to: shroud_god
+    evidence: |
+      gave her sorrow into God’s keeping
+
+  - from: shroud_child
+    label: RESTS_IN
+    to: loc_shroud_child_grave
+    evidence: |
+      slept in its little bed beneath the earth

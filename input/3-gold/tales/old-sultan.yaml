@@ -1,0 +1,240 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: old-sultan
+khm: 48
+atu: '101'
+atu_name: Old Sultan
+canonical_source: ../../2-silver/canonical/old-sultan/canonical.txt
+title: Old Sultan
+
+
+entities:
+
+  characters:
+
+    old_sultan:
+      name: Old Sultan
+      archetypes: [arc_discarded_service_animal]
+      species: sp_dog
+      agency_modes: [agency_cunning, agency_speech, agency_endurance, agency_domestic_labor]
+      affects: [affect_loyalty, affect_fear]
+      traits: [faithful, old, toothless, threatened-with-shooting, staged-child-rescuer, restored-household-dog, master-loyal, wolf-reconciler]
+      evidence: |
+        "A farmer once had a faithful dog called Sultan, who had grown old"
+
+    old_sultan_farmer:
+      name: The Farmer
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence, agency_domestic_labor]
+      affects: [affect_anger]
+      traits: [utilitarian-master, planned-dog-shooter, grateful-father, wolf-flailer]
+      evidence: |
+        "To-morrow I intend to shoot Old Sultan"
+
+    old_sultan_farmer_wife:
+      name: The Farmer's Wife
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      affects: [affect_maternal_love]
+      traits: [pitying-wife, faithful-service-defender, bread-sop-maker]
+      evidence: |
+        "His wife, who felt pity for the faithful beast"
+
+    old_sultan_child:
+      name: The Farmer's Little Child
+      species: sp_human
+      traits: [hayfield-child, staged-abduction-object, returned-safely]
+      evidence: |
+        "they will take their little child with them"
+
+    old_sultan_wolf:
+      name: The Wolf Gossip
+      archetypes: [arc_predator, arc_trickster]
+      species: sp_wolf
+      agency_modes: [agency_cunning, agency_speech, agency_violence]
+      affects: [affect_greed, affect_fear]
+      traits: [forest-friend, staged-abductor, sheep-thief, flailed-predator, revenge-challenger, timid-tree-hider, reconciled-enemy]
+      evidence: |
+        "He had a good friend, the wolf"
+
+    old_sultan_boar:
+      name: The Wild Boar
+      species: sp_boar
+      agency_modes: [agency_speech, agency_violence]
+      affects: [affect_fear]
+      traits: [wolf-second, challenge-messenger, cat-tail-misreader, underwood-hider, ear-bitten]
+      evidence: |
+        "the wolf sent the boar to challenge the dog"
+
+    old_sultan_cat:
+      name: The Three-Legged Cat
+      archetypes: [arc_animal_helper]
+      species: sp_cat
+      agency_modes: [agency_animal_aid, agency_endurance, agency_violence]
+      traits: [three-legged, limping-ally, tail-raised, sabre-misread, mouse-misreader, boar-ear-biter]
+      evidence: |
+        "a cat with only three legs"
+
+  locations:
+
+    loc_old_sultan_house_door:
+      name: The Farmer's House-Door
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        "standing with his wife before the house-door"
+
+    loc_old_sultan_forest:
+      name: The Wolf's Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "crept out in the evening into the forest to him"
+
+    loc_old_sultan_hayfield:
+      name: The Haymaking Field
+      instance_of: loc_field
+      evidence: |
+        "your master is going with his wife to make hay"
+
+    loc_old_sultan_hedge:
+      name: The Hedge Shade
+      instance_of: loc_field
+      evidence: |
+        "lay the child under the hedge in the shade"
+
+    loc_old_sultan_sheepfold:
+      name: The Master's Sheep
+      instance_of: loc_meadow
+      evidence: |
+        "carry off one of your master’s fat sheep."
+
+    loc_old_sultan_duel_spot:
+      name: The Forest Challenge-Spot
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "come out into the forest so that they might settle the affair."
+
+    loc_old_sultan_underwood:
+      name: The Underwood
+      instance_of: loc_forest
+      evidence: |
+        "the wild boar crept into the under-wood"
+
+
+classifications:
+
+  world_laws:
+    - law_staged_rescue_restores_worth
+
+  moral_regimes:
+    - moral_faithful_service_rewarded
+    - moral_retributive
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_endurance
+    - agency_domestic_labor
+    - agency_violence
+
+  affects_driving:
+    - affect_loyalty
+    - affect_fear
+    - affect_greed
+
+  threshold_types:
+    - threshold_doorway
+    - threshold_forest
+
+
+propp:
+  - { function: func_lack, order: 1, actor: old_sultan,
+      scene: "old toothless dog is judged useless and marked for shooting" }
+  - { function: func_mediation, order: 2, actor: old_sultan,
+      scene: "Sultan hears the farmer's death plan and seeks help from his wolf friend" }
+  - { function: func_trickery, order: 3, actor: old_sultan_wolf,
+      beneficiary: old_sultan,
+      scene: "wolf proposes a staged child-abduction and rescue" }
+  - { function: func_liquidation, order: 4, actor: old_sultan,
+      scene: "Sultan returns the child and wins lifelong care from the farmer" }
+  - { function: func_testing, order: 5, actor: old_sultan_wolf,
+      scene: "wolf asks Sultan to wink at a future sheep theft" }
+  - { function: func_rejection, order: 6, actor: old_sultan,
+      scene: "Sultan refuses to betray his master and warns the farmer" }
+  - { function: func_punishment, order: 7, actor: old_sultan_farmer,
+      victim: old_sultan_wolf,
+      scene: "farmer catches and beats the sheep-stealing wolf with a flail" }
+  - { function: func_challenge, order: 8, actor: old_sultan_boar,
+      scene: "boar summons Sultan to the forest to settle the wolf's grievance" }
+  - { function: func_comic_misrecognition, order: 9, actor: old_sultan_wolf,
+      scene: "wolf and boar mistake the lame cat's tail for a sabre and her limp for stone-throwing" }
+  - { function: func_reconciliation, order: 10, actor: old_sultan_wolf,
+      scene: "wolf is ashamed of cowardice and makes friends again with the dog" }
+
+
+edges:
+
+  # Threat of disposal
+  - { from: old_sultan_farmer, to: old_sultan, label: PLANS_TO_SHOOT,
+      evidence: "To-morrow I intend to shoot Old Sultan" }
+  - { from: old_sultan_farmer_wife, to: old_sultan, label: PITIES,
+      evidence: "felt pity for the faithful beast" }
+  - { from: old_sultan_farmer_wife, to: old_sultan, label: DEFENDS_SERVICE_OF,
+      evidence: "He has served us so long, and been so faithful" }
+  - { from: old_sultan, to: old_sultan_wolf, label: SEEKS_HELP_FROM,
+      evidence: "crept out in the evening into the forest to him" }
+  - { from: old_sultan, to: affect_fear, label: FEELS,
+      evidence: "was sorry that the morrow was to be his last day." }
+
+  # Staged rescue
+  - { from: old_sultan_wolf, to: old_sultan, label: PROPOSES_PLAN_TO,
+      evidence: "I have thought of something." }
+  - { from: old_sultan_wolf, to: old_sultan_child, label: STAGES_ABDUCTION_OF,
+      evidence: "Then I will come out of the wood, and carry off the child." }
+  - { from: old_sultan, to: loc_old_sultan_hedge, label: GUARDS_AT,
+      evidence: "lay yourself there too, just as if you wished to guard it." }
+  - { from: old_sultan, to: old_sultan_wolf, label: CHASES_AS_IF_SEIZING,
+      evidence: "You must rush swiftly after me, as if you would seize it again from me." }
+  - { from: old_sultan, to: old_sultan_child, label: RETURNS_TO_PARENTS,
+      evidence: "Old Sultan brought it back" }
+  - { from: old_sultan, to: law_staged_rescue_restores_worth, label: ENACTS,
+      evidence: "who will think that you have saved it" }
+  - { from: old_sultan_farmer, to: old_sultan, label: SPARES_AND_REWARDS,
+      evidence: "Not a hair of yours shall be hurt" }
+  - { from: old_sultan_farmer, to: old_sultan, label: GRANTS_LIFELONG_KEEP,
+      evidence: "you shall eat my bread free as long as you live." }
+
+  # Loyalty test and wolf punishment
+  - { from: old_sultan_wolf, to: loc_old_sultan_sheepfold, label: WANTS_TO_RAID,
+      evidence: "carry off one of your master’s fat sheep." }
+  - { from: old_sultan, to: old_sultan_wolf, label: REFUSES_COMPLICITY_WITH,
+      evidence: "I will remain true to my master; I cannot agree to that." }
+  - { from: old_sultan, to: old_sultan_farmer, label: WARNS,
+      evidence: "the faithful Sultan had told the wolf’s plan" }
+  - { from: old_sultan_farmer, to: old_sultan_wolf, label: BEATS_WITH_FLAIL,
+      evidence: "dressed his hide soundly with the flail." }
+  - { from: old_sultan_wolf, to: old_sultan, label: THREATENS_REVENGE,
+      evidence: "you shall pay for this." }
+
+  # Challenge and comic misrecognition
+  - { from: old_sultan_wolf, to: old_sultan_boar, label: SENDS_AS_CHALLENGER,
+      evidence: "the wolf sent the boar to challenge the dog" }
+  - { from: old_sultan, to: old_sultan_cat, label: FINDS_ALLY_IN,
+      evidence: "could find no one to stand by him but a cat with only three legs" }
+  - { from: old_sultan_wolf, to: old_sultan_cat, label: MISTAKES_TAIL_FOR_SABRE,
+      evidence: "mistook the outstretched tail of the cat for one." }
+  - { from: old_sultan_boar, to: old_sultan_cat, label: FEARS_STONE_THROWING,
+      evidence: "it was picking up a stone to throw at them." }
+  - { from: old_sultan_boar, to: loc_old_sultan_underwood, label: HIDES_IN,
+      evidence: "the wild boar crept into the under-wood" }
+  - { from: old_sultan_wolf, to: loc_old_sultan_duel_spot, label: HIDES_UP_TREE,
+      evidence: "the wolf jumped up a tree." }
+  - { from: old_sultan_cat, to: old_sultan_boar, label: BITES_EAR_OF,
+      evidence: "jumped upon it and bit it hard." }
+  - { from: old_sultan_boar, to: old_sultan_wolf, label: EXPOSES,
+      evidence: "The guilty one is up in the tree." }
+  - { from: old_sultan_wolf, to: old_sultan, label: MAKES_FRIENDS_WITH,
+      evidence: "made friends with the dog." }

@@ -1,0 +1,688 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-golden-bird
+khm: 57
+atu: '550'
+atu_name: The Quest for the Golden Bird
+canonical_source: ../../2-silver/canonical/the-golden-bird/canonical.txt
+title: The Golden Bird
+
+
+entities:
+
+  characters:
+
+    golden_bird_old_king:
+      name: The King Whose Apples Are Stolen
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_command]
+      affects: [affect_greed]
+      traits: [garden-owner, apple-counter, son-sender, feather-greedy, final-judge]
+      evidence: |
+        one alone will not do for me; I must and will have the whole
+        bird!
+
+    golden_bird_eldest_brother:
+      name: The Eldest Son
+      archetypes: [arc_false_hero]
+      species: sp_human
+      agency_modes: [agency_violence, agency_cunning, agency_social_rank]
+      existential_states: [state_deceived]
+      traits: [sleeping-watchman, fox-shooter, revel-chooser, gallows-condemned, well-betrayer, false-claimant, executed]
+      evidence: |
+        he went into the cheerful one, lived there in riot and revel,
+        and forgot the bird and his father
+
+    golden_bird_second_brother:
+      name: The Second Son
+      archetypes: [arc_false_hero]
+      species: sp_human
+      agency_modes: [agency_violence, agency_cunning, agency_social_rank]
+      existential_states: [state_deceived]
+      traits: [sleeping-watchman, advice-ignorer, revel-joiner, gallows-condemned, well-betrayer, false-claimant, executed]
+      evidence: |
+        He could not resist, but went inside and lived only for pleasure.
+
+    golden_bird_youngest_prince:
+      name: The Youngest King's Son
+      archetypes: [arc_wise_helper]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_cunning, agency_violence]
+      affects: [affect_fear, affect_grief]
+      traits: [distrusted-youngest, wakeful-watchman, feather-shooter, fox-sparer, partial-advice-obeyer, repeated-captive, hill-remover-beneficiary, brother-rescuer, well-victim, disguised-returner, true-bridegroom, fox-releaser, heir]
+      evidence: |
+        The youth was good-natured, and said, “Be easy, little Fox, I
+        will do you no harm.”
+
+    golden_bird_fox:
+      name: The Trusty Fox
+      archetypes: [arc_animal_helper, arc_enchanted_prince]
+      species: sp_fox
+      agency_modes: [agency_speech, agency_animal_aid, agency_cunning, agency_endurance]
+      speech_acts_performed: [speech_warning, speech_command]
+      transformations: [transform_animal_human]
+      affects: [affect_loyalty]
+      traits: [life-begging, counsel-giving, tail-carrier, repeated-rescuer, task-performer, warning-giver, cursed-brother, death-requesting, released-man]
+      evidence: |
+        the trusty Fox
+
+    golden_bird_bird_king:
+      name: The King Who Holds the Golden Bird
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      traits: [bird-holder, court-judge, death-sentencer, horse-demanding]
+      evidence: |
+        if he brought him the Golden Horse which ran faster than the
+        wind
+
+    golden_bird_horse_king:
+      name: The King Who Holds the Golden Horse
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      traits: [horse-holder, court-judge, death-sentencer, princess-demanding]
+      evidence: |
+        if he could bring back the beautiful princess from the Golden
+        Castle.
+
+    golden_bird_golden_castle_king:
+      name: The Princess's Father at the Golden Castle
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      traits: [awakened-father, mountain-task-setter, word-bound, daughter-giver]
+      evidence: |
+        if you take away the hill which stands in front of my windows
+
+    golden_bird_princess:
+      name: The Beautiful Princess from the Golden Castle
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      affects: [affect_grief, affect_love_at_first_sight]
+      traits: [golden-castle-maiden, bathhouse-abducted, tearful-farewell-asker, horse-owner, false-hero-threatened, true-bridegroom-recognizer, happy-bride]
+      evidence: |
+        the beautiful princess from the Golden Castle.
+
+    golden_bird_poor_man:
+      name: The Poor Man on the Road
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [clothing-exchanger, disguise-enabler]
+      evidence: |
+        a poor man was sitting upon the road, with whom the youth
+        changed clothes
+
+    golden_bird_watchers:
+      name: The Brothers' Wood Watchers
+      species: sp_human
+      agency_modes: [agency_violence]
+      traits: [wood-surrounders, youngest-killers-if-seen]
+      evidence: |
+        surrounded the wood with watchers, who are to kill you
+
+  magic_objects:
+
+    obj_golden_bird_apples:
+      name: The Golden Apples
+      object_kind: food
+      attributes:
+        function: stolen royal fruit that initiates the quest
+      evidence: |
+        a tree that bore golden apples.
+
+    obj_golden_bird_feather:
+      name: The Golden Feather
+      object_kind: token
+      attributes:
+        function: proof of the bird and value-trigger for wanting the whole bird
+      evidence: |
+        one of his golden feathers fell down.
+
+    obj_golden_bird_khm57:
+      name: The Golden Bird
+      instance_of: obj_golden_bird
+      object_kind: creature_object
+      attributes:
+        function: stolen bird, quest prize, and final recognition sign
+      evidence: |
+        a bird coming whose feathers were all shining with gold.
+
+    obj_golden_bird_wooden_cage:
+      name: The Common Wooden Cage
+      object_kind: architecture
+      attributes:
+        function: correct humble container for removing the Golden Bird silently
+      evidence: |
+        a Golden Bird is hanging in a wooden cage.
+
+    obj_golden_bird_gold_cage:
+      name: The Empty Golden Cage
+      object_kind: treasure
+      attributes:
+        function: splendid wrong option that makes the bird cry out
+      evidence: |
+        there stands an empty gold cage for show
+
+    obj_golden_horse_khm57:
+      name: The Golden Horse Faster than the Wind
+      instance_of: obj_golden_horse
+      object_kind: creature_object
+      attributes:
+        function: second quest prize and recognition sign
+      evidence: |
+        the Golden Horse which ran faster than the wind
+
+    obj_golden_bird_common_saddle:
+      name: The Common Saddle of Wood and Leather
+      object_kind: tool
+      attributes:
+        function: correct plain saddle required by the fox's advice
+      evidence: |
+        put on him the common saddle of wood and leather
+
+    obj_golden_bird_golden_saddle:
+      name: The Golden Saddle
+      object_kind: treasure
+      attributes:
+        function: splendid wrong option that makes the horse neigh
+      evidence: |
+        the golden one, which hangs close by
+
+    obj_golden_bird_removed_hill:
+      name: The Hill before the Golden Castle Windows
+      object_kind: material
+      attributes:
+        function: impossible task removed by the fox in one night
+      evidence: |
+        the hill which stands in front of my windows
+
+    obj_golden_bird_well:
+      name: The Well of Betrayal
+      object_kind: architecture
+      attributes:
+        function: site where the false heroes throw the youngest brother down
+      evidence: |
+        sat down upon the edge of the well
+
+    obj_golden_bird_fox_head_feet:
+      name: The Fox's Severed Head and Feet
+      object_kind: relic
+      attributes:
+        function: violent release condition that restores the fox to human form
+      evidence: |
+        shoot me dead, and chop off my head and feet.
+
+  locations:
+
+    loc_golden_bird_palace_garden:
+      name: The Palace Pleasure-garden
+      instance_of: loc_garden
+      evidence: |
+        behind his palace a beautiful pleasure-garden
+
+    loc_golden_bird_apple_tree:
+      name: The Golden-Apple Tree
+      instance_of: loc_tree
+      evidence: |
+        a tree that bore golden apples.
+
+    loc_golden_bird_fox_wood_edge:
+      name: The Fox at the Edge of the Wood
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        a Fox sitting at the edge of a wood
+
+    loc_golden_bird_village_inns:
+      name: The Village of the Two Inns
+      instance_of: loc_inn
+      threshold_type: threshold_doorway
+      evidence: |
+        two inns opposite to one another.
+
+    loc_golden_bird_castle:
+      name: The Castle of the Golden Bird
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        at last you will come to a castle
+
+    loc_golden_bird_chamber:
+      name: The Chamber of the Bird Cages
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        you will come to a chamber where a Golden Bird is hanging
+
+    loc_golden_horse_stable:
+      name: The Stable of the Golden Horse
+      instance_of: loc_stable
+      threshold_type: threshold_doorway
+      evidence: |
+        in the stable stands the horse.
+
+    loc_golden_castle:
+      name: The Golden Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        This road takes you straight to the Golden Castle
+
+    loc_golden_castle_bathing_house:
+      name: The Princess's Bathing-house
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        the beautiful princess goes to the bathing-house to bathe.
+
+    loc_golden_bird_betrayal_well:
+      name: The Well in the Wood
+      instance_of: loc_well
+      evidence: |
+        They came to the wood where the Fox had first met them
+
+    loc_golden_bird_final_palace:
+      name: The Father's Palace of Recognition
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        in this way he got to the King’s palace.
+
+
+classifications:
+
+  world_laws:
+    - law_animal_advice_requires_exact_obedience
+    - law_rescued_animals_repay_kindness
+    - law_true_fit_reveals_identity
+
+  moral_regimes:
+    - moral_retributive
+    - moral_restorative
+    - moral_disobedience_punished
+
+  agency_modes_dominant:
+    - agency_animal_aid
+    - agency_speech
+    - agency_endurance
+    - agency_cunning
+    - agency_social_rank
+    - agency_violence
+
+  affects_driving:
+    - affect_greed
+    - affect_fear
+    - affect_grief
+    - affect_loyalty
+    - affect_love_at_first_sight
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: golden_bird_old_king
+    scene: "golden apples disappear from the king's garden"
+    evidence: "on the very next morning one was missing."
+
+  - function: func_villainy
+    order: 2
+    actor: obj_golden_bird_khm57
+    victim: golden_bird_old_king
+    scene: "golden bird steals an apple and loses a feather"
+    evidence: "had just plucked off an apple"
+
+  - function: func_departure
+    order: 3
+    actor: golden_bird_eldest_brother
+    scene: "eldest son sets out to find the bird and ignores fox advice"
+    evidence: "The eldest son set out"
+
+  - function: func_violation
+    order: 4
+    actor: golden_bird_eldest_brother
+    scene: "eldest chooses the cheerful inn and forgets the quest"
+    evidence: "forgot the bird and his father"
+
+  - function: func_repetition
+    order: 5
+    actor: golden_bird_second_brother
+    scene: "second brother repeats the same failure"
+    evidence: "went inside and lived only for pleasure."
+
+  - function: func_donor_sequence
+    order: 6
+    actor: golden_bird_fox
+    beneficiary: golden_bird_youngest_prince
+    scene: "youngest spares the fox and receives transport and advice"
+    evidence: "Be easy, little Fox, I will do you no harm."
+
+  - function: func_interdiction
+    order: 7
+    actor: golden_bird_fox
+    victim: golden_bird_youngest_prince
+    scene: "fox warns him to keep bird in wooden cage"
+    evidence: "beware of taking the bird out of the common cage"
+
+  - function: func_violation
+    order: 8
+    actor: golden_bird_youngest_prince
+    scene: "youngest puts the bird in the golden cage and is captured"
+    evidence: "put it into the golden cage."
+
+  - function: func_task
+    order: 9
+    actor: golden_bird_bird_king
+    victim: golden_bird_youngest_prince
+    scene: "life is spared if he brings the Golden Horse"
+    evidence: "if he brought him the Golden Horse"
+
+  - function: func_violation
+    order: 10
+    actor: golden_bird_youngest_prince
+    scene: "youngest uses the golden saddle and is captured again"
+    evidence: "the golden saddle touched the horse"
+
+  - function: func_task
+    order: 11
+    actor: golden_bird_horse_king
+    victim: golden_bird_youngest_prince
+    scene: "life is spared if he brings the princess"
+    evidence: "bring back the beautiful princess from the Golden Castle."
+
+  - function: func_violation
+    order: 12
+    actor: golden_bird_youngest_prince
+    scene: "youngest lets the princess say farewell and is captured"
+    evidence: "he at last gave in."
+
+  - function: func_difficult_task
+    order: 13
+    actor: golden_bird_golden_castle_king
+    victim: golden_bird_youngest_prince
+    scene: "king demands that the hill be removed in eight days"
+    evidence: "take away the hill which stands in front of my windows"
+
+  - function: func_magical_agent
+    order: 14
+    actor: golden_bird_fox
+    beneficiary: golden_bird_youngest_prince
+    scene: "fox removes the hill overnight"
+    evidence: "the hill had gone."
+
+  - function: func_retrieval
+    order: 15
+    actor: golden_bird_youngest_prince
+    scene: "fox plan recovers princess, horse, and bird"
+    evidence: "ride home with his treasures"
+
+  - function: func_interdiction
+    order: 16
+    actor: golden_bird_fox
+    victim: golden_bird_youngest_prince
+    scene: "fox warns him not to buy gallows-flesh or sit by a well"
+    evidence: "Buy no gallows’-flesh, and do not sit at the edge of any well."
+
+  - function: func_violation
+    order: 17
+    actor: golden_bird_youngest_prince
+    scene: "youngest buys his brothers free and sits by the well"
+    evidence: "paid for them"
+
+  - function: func_villainy
+    order: 18
+    actor: golden_bird_eldest_brother
+    victim: golden_bird_youngest_prince
+    scene: "false brothers throw him into the well and steal the prizes"
+    evidence: "threw him backwards into the well"
+
+  - function: func_rescue
+    order: 19
+    actor: golden_bird_fox
+    beneficiary: golden_bird_youngest_prince
+    scene: "fox pulls the youngest brother out of the dry well"
+    evidence: "then he pulled him up."
+
+  - function: func_recognition
+    order: 20
+    actor: obj_golden_bird_khm57
+    beneficiary: golden_bird_youngest_prince
+    scene: "bird, horse, and princess recognize the true hero's return"
+    evidence: "the Bird began to sing, the Horse began to eat"
+
+  - function: func_punishment
+    order: 21
+    actor: golden_bird_old_king
+    victim: golden_bird_eldest_brother
+    scene: "wicked brothers are seized and put to death"
+    evidence: "The wicked brothers were seized and put to death"
+
+  - function: func_transfiguration
+    order: 22
+    actor: golden_bird_youngest_prince
+    beneficiary: golden_bird_fox
+    scene: "youngest obeys the fox's final request and releases him into human form"
+    evidence: "the Fox was changed into a man"
+
+
+edges:
+
+  # Apple theft and first quest
+  - from: obj_golden_bird_khm57
+    to: obj_golden_bird_apples
+    label: STEALS
+    evidence: "had just plucked off an apple"
+
+  - from: golden_bird_youngest_prince
+    to: obj_golden_bird_khm57
+    label: SHOOTS_AT
+    evidence: "shot an arrow at him"
+
+  - from: obj_golden_bird_khm57
+    to: obj_golden_bird_feather
+    label: LOSES
+    evidence: "one of his golden feathers fell down."
+
+  - from: golden_bird_old_king
+    to: obj_golden_bird_khm57
+    label: DESIRES
+    evidence: "I must and will have the whole bird!"
+
+  - from: golden_bird_fox
+    to: golden_bird_eldest_brother
+    label: ADVISES
+    evidence: "in return I will give you some good counsel."
+
+  - from: golden_bird_eldest_brother
+    to: golden_bird_fox
+    label: SHOOTS_AT
+    evidence: "he cocked his gun and took aim at him."
+
+  - from: golden_bird_eldest_brother
+    to: loc_golden_bird_village_inns
+    label: CHOOSES_WRONG_INN
+    evidence: "he went into the cheerful one"
+
+  - from: golden_bird_second_brother
+    to: loc_golden_bird_village_inns
+    label: CHOOSES_WRONG_INN
+    evidence: "went inside and lived only for pleasure."
+
+  # Fox alliance and repeated instruction failures
+  - from: golden_bird_youngest_prince
+    to: golden_bird_fox
+    label: SPARES
+    evidence: "I will do you no harm."
+
+  - from: golden_bird_fox
+    to: golden_bird_youngest_prince
+    label: CARRIES
+    evidence: "get up behind on my tail."
+
+  - from: golden_bird_fox
+    to: golden_bird_youngest_prince
+    label: WARNS
+    evidence: "go rather into the other, even though it seems a bad one."
+
+  - from: golden_bird_youngest_prince
+    to: loc_golden_bird_village_inns
+    label: CHOOSES_RIGHT_INN
+    evidence: "turned into the little inn"
+
+  - from: golden_bird_fox
+    to: obj_golden_bird_wooden_cage
+    label: COMMANDS_USE_OF
+    evidence: "do not trouble yourself about them"
+
+  - from: golden_bird_youngest_prince
+    to: obj_golden_bird_gold_cage
+    label: CHOOSES_WRONG_OBJECT
+    evidence: "put it into the golden cage."
+
+  - from: obj_golden_bird_khm57
+    to: golden_bird_youngest_prince
+    label: EXPOSES
+    evidence: "the bird uttered a shrill cry."
+
+  - from: golden_bird_bird_king
+    to: golden_bird_youngest_prince
+    label: ASSIGNS_TASK_TO
+    evidence: "if he brought him the Golden Horse"
+
+  - from: golden_bird_fox
+    to: obj_golden_bird_common_saddle
+    label: COMMANDS_USE_OF
+    evidence: "put on him the common saddle of wood and leather"
+
+  - from: golden_bird_youngest_prince
+    to: obj_golden_bird_golden_saddle
+    label: CHOOSES_WRONG_OBJECT
+    evidence: "the golden saddle touched the horse"
+
+  - from: obj_golden_horse_khm57
+    to: golden_bird_youngest_prince
+    label: EXPOSES
+    evidence: "he began to neigh loudly."
+
+  - from: golden_bird_horse_king
+    to: golden_bird_youngest_prince
+    label: ASSIGNS_TASK_TO
+    evidence: "bring back the beautiful princess"
+
+  - from: golden_bird_youngest_prince
+    to: golden_bird_princess
+    label: ABDUCTS
+    evidence: "run up to her and give her a kiss"
+
+  - from: golden_bird_youngest_prince
+    to: golden_bird_princess
+    label: GRANTS_FAREWELL
+    evidence: "he at last gave in."
+
+  - from: golden_bird_golden_castle_king
+    to: golden_bird_youngest_prince
+    label: ASSIGNS_TASK_TO
+    evidence: "finish it all within eight days."
+
+  - from: golden_bird_fox
+    to: obj_golden_bird_removed_hill
+    label: REMOVES
+    evidence: "the hill had gone."
+
+  # Recovery of prizes
+  - from: golden_bird_youngest_prince
+    to: golden_bird_princess
+    label: CARRIES_OFF
+    evidence: "carried off the beautiful princess on the Golden Horse."
+
+  - from: golden_bird_youngest_prince
+    to: obj_golden_horse_khm57
+    label: WINS
+    evidence: "the Golden Horse also belongs to the maiden"
+
+  - from: golden_bird_youngest_prince
+    to: obj_golden_bird_khm57
+    label: WINS
+    evidence: "they will bring out the Golden Bird for you."
+
+  - from: golden_bird_fox
+    to: golden_bird_youngest_prince
+    label: WARNS
+    evidence: "Buy no gallows’-flesh, and do not sit at the edge of any well."
+
+  # False heroes and recognition
+  - from: golden_bird_youngest_prince
+    to: golden_bird_eldest_brother
+    label: BUYS_FREE
+    evidence: "paid for them"
+
+  - from: golden_bird_youngest_prince
+    to: golden_bird_second_brother
+    label: BUYS_FREE
+    evidence: "paid for them"
+
+  - from: golden_bird_eldest_brother
+    to: golden_bird_youngest_prince
+    label: THROWS_INTO_WELL
+    evidence: "threw him backwards into the well"
+
+  - from: golden_bird_second_brother
+    to: golden_bird_princess
+    label: STEALS_CLAIM_TO
+    evidence: "took the maiden, the Horse, and the Bird"
+
+  - from: golden_bird_fox
+    to: golden_bird_youngest_prince
+    label: RESCUES
+    evidence: "he pulled him up."
+
+  - from: golden_bird_youngest_prince
+    to: golden_bird_poor_man
+    label: EXCHANGES_CLOTHES_WITH
+    evidence: "changed clothes"
+
+  - from: obj_golden_bird_khm57
+    to: golden_bird_youngest_prince
+    label: RECOGNIZES
+    evidence: "the Bird began to sing"
+
+  - from: obj_golden_horse_khm57
+    to: golden_bird_youngest_prince
+    label: RECOGNIZES
+    evidence: "the Horse began to eat"
+
+  - from: golden_bird_princess
+    to: golden_bird_youngest_prince
+    label: RECOGNIZES
+    evidence: "my true bridegroom had come."
+
+  - from: golden_bird_old_king
+    to: golden_bird_eldest_brother
+    label: EXECUTES
+    evidence: "The wicked brothers were seized and put to death"
+
+  - from: golden_bird_old_king
+    to: golden_bird_second_brother
+    label: EXECUTES
+    evidence: "The wicked brothers were seized and put to death"
+
+  - from: golden_bird_youngest_prince
+    to: golden_bird_princess
+    label: MARRIES
+    evidence: "he was married to the beautiful maiden"
+
+  - from: golden_bird_youngest_prince
+    to: obj_golden_bird_fox_head_feet
+    label: CUTS_OFF
+    evidence: "chop off his head and feet."
+
+  - from: obj_golden_bird_fox_head_feet
+    to: golden_bird_fox
+    label: RELEASES
+    evidence: "the Fox was changed into a man"

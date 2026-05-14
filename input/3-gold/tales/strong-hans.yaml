@@ -1,0 +1,439 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: strong-hans
+khm: 166
+atu: "301B"
+atu_name: Strong Hans / Underground Princess Recovery with Betraying Companions
+canonical_source: ../../2-silver/canonical/strong-hans/canonical.txt
+title: Strong Hans
+
+
+entities:
+
+  characters:
+
+    strong_hans:
+      name: Strong Hans
+      archetypes: [arc_superstrong_youth]
+      species: sp_human
+      agency_modes: [agency_extraordinary_body, agency_violence, agency_object_mediation, agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_request, speech_command]
+      affects: [affect_pity, affect_anger, affect_love_at_first_sight, affect_joy]
+      traits: [robber-cave-child, fir-club-maker, mother-rescuer, hundredweight-stick-traveller, dwarf-slayer, betrayed-underworld-rescuer, ring-master, bridegroom]
+      evidence: |
+        Hans grew tall and strong.
+
+    strong_hans_mother:
+      name: Hans's Mother
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_endurance]
+      speech_acts_performed: [speech_request, speech_testimony]
+      affects: [affect_fear, affect_maternal_love]
+      traits: [abducted-mother, robber-cave-housekeeper, knight-tale-teacher, father-secret-keeper, freed-wife]
+      evidence: |
+        The woman stayed many years with the robbers
+
+    strong_hans_father:
+      name: Hans's Father
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      affects: [affect_joy, affect_grief]
+      traits: [solitary-valley-father, bereaved-husband, restored-householder, farm-builder]
+      evidence: |
+        The father was sitting in the doorway.
+
+    strong_hans_robbers:
+      name: The Robbers of the Black Forest
+      archetypes: [arc_predator]
+      species: sp_human
+      agency_modes: [agency_violence, agency_cunning, agency_domestic_labor]
+      affects: [affect_greed]
+      traits: [black-forest-kidnappers, stone-hearted-captors, cave-gamblers, defeated-by-club]
+      evidence: |
+        Suddenly two robbers sprang out of the thicket
+
+    strong_hans_robber_captain:
+      name: The Robber Captain
+      archetypes: [arc_predator]
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_command]
+      affects: [affect_greed]
+      traits: [cave-chief, domestic-coercer, father-answer-withholder, beaten-captain]
+      evidence: |
+        the captain sat at the head of it
+
+    strong_hans_fir_twister:
+      name: Fir-Twister
+      archetypes: [arc_extraordinary_companion, arc_false_hero]
+      species: sp_human
+      agency_modes: [agency_extraordinary_body, agency_violence, agency_cunning]
+      affects: [affect_greed, affect_fear]
+      traits: [tree-twisting-companion, meat-refuser, dwarf-beaten, silent-failure, betraying-comrade, sea-fugitive]
+      evidence: |
+        a great fellow who had laid hold of the tree and was twisting it like a willow-wand
+
+    strong_hans_rock_splitter:
+      name: Rock-Splitter
+      archetypes: [arc_extraordinary_companion, arc_false_hero]
+      being_type: being_giant
+      agency_modes: [agency_extraordinary_body, agency_violence, agency_cunning]
+      affects: [affect_greed, affect_fear]
+      traits: [rock-striking-companion, house-building-giant, dwarf-beaten, silent-failure, betraying-comrade, sea-fugitive]
+      evidence: |
+        before which a giant was standing and striking great pieces of it away with his fist
+
+    strong_hans_dwarf:
+      name: The Meat-Begging Dwarf Watchman
+      being_type: being_dwarf
+      agency_modes: [agency_violence, agency_speech, agency_cunning]
+      speech_acts_performed: [speech_request]
+      affects: [affect_anger]
+      traits: [shrivelled-mannikin, meat-beggar, giant-beater, rock-hole-fugitive, chained-princess-watchman, ring-bearer, slain-dwarf]
+      evidence: |
+        a little shrivelled-up old mannikin came to him in the castle
+
+    strong_hans_princess:
+      name: The Imprisoned King's Daughter
+      archetypes: [arc_imprisoned_maiden]
+      species: sp_human
+      existential_states: [state_imprisoned]
+      agency_modes: [agency_speech, agency_social_rank, agency_endurance]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_fear, affect_grief, affect_joy]
+      traits: [king-daughter, chained-rock-prisoner, stolen-by-count, dwarf-guarded, rescued-twice, bride]
+      evidence: |
+        She told him she was a King’s daughter
+
+    strong_hans_air_spirits:
+      name: The Spirits of the Air
+      being_type: being_spirit
+      agency_modes: [agency_object_mediation, agency_speech, agency_extraordinary_body]
+      speech_acts_performed: [speech_request]
+      traits: [ring-summoned, master-recognizing, aerial-transporters, sea-pursuit-helpers]
+      evidence: |
+        spirits of the air hovering above
+
+    strong_hans_savage_count:
+      name: The Savage Count
+      species: sp_human
+      agency_modes: [agency_violence, agency_social_rank]
+      affects: [affect_longing]
+      traits: [offstage-abductor, rejected-suitor, dwarf-employer, rock-prisoner-maker]
+      evidence: |
+        a savage count had stolen away from her home
+
+    strong_hans_wild_boar:
+      name: The Wild Boar
+      species: sp_boar
+      agency_modes: [agency_violence]
+      traits: [castle-garden-beast, food-source, club-slain]
+      evidence: |
+        a wild boar rushed at him
+
+  magic_objects:
+
+    obj_strong_hans_fir_club:
+      name: Hans's Fir Club
+      object_kind: weapon
+      attributes:
+        function: childhood weapon that lets Hans overpower the robber household and later kill the dwarf
+      evidence: |
+        he made himself a strong club out of a branch of fir
+
+    obj_strong_hans_entrance_key:
+      name: The Robber-Cave Entrance Key
+      object_kind: token
+      attributes:
+        function: key taken from the robber captain to open the hidden cave passage
+      evidence: |
+        She took from the captain the key to the entrance-door
+
+    obj_strong_hans_meal_sack_treasure:
+      name: The Meal-Sack of Robber Treasure
+      object_kind: treasure
+      attributes:
+        function: stolen robber wealth that funds the restored family house and farm
+      evidence: |
+        Hans fetched a great meal-sack and packed into it gold and silver
+
+    obj_strong_hans_hundredweight_stick:
+      name: The Hundredweight Walking-Stick
+      object_kind: weapon
+      attributes:
+        function: travel weapon whose excessive weight nearly drowns Hans during the sea pursuit
+      evidence: |
+        a walking-stick that weighs a hundred-weight
+
+    obj_strong_hans_basket_rope:
+      name: The Basket and Rope
+      object_kind: tool
+      attributes:
+        function: vertical descent apparatus that lets Hans reach the rock prison but also enables companion betrayal
+      evidence: |
+        they took a basket and a rope
+
+    obj_strong_hans_summoning_ring:
+      name: The Dwarf's Sparkling Summoning Ring
+      instance_of: obj_wishing_ring
+      object_kind: token
+      attributes:
+        function: ring that summons air spirits when turned on the finger
+      evidence: |
+        the dwarf had a ring on his finger which shone and sparkled
+
+  locations:
+
+    loc_strong_hans_solitary_valley:
+      name: The Solitary Valley
+      instance_of: loc_house
+      evidence: |
+        lived quite alone in a solitary valley
+
+    loc_strong_hans_black_forest:
+      name: The Black Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        into the black forest, where no one ever came from one year’s end to another
+
+    loc_strong_hans_robber_cave:
+      name: The Robber Cavern Behind the Rock Door
+      instance_of: loc_cave
+      threshold_type: threshold_doorway
+      evidence: |
+        came to a rock where there was a door
+
+    loc_strong_hans_family_house:
+      name: The Family's Little House and New Farm
+      instance_of: loc_house
+      evidence: |
+        into their lonely valley and to their little house
+
+    loc_strong_hans_deep_forest:
+      name: The Deep Dark Forest of Companions
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        came to a deep, dark forest
+
+    loc_strong_hans_deserted_castle:
+      name: The Old Deserted Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        they came to an old deserted castle
+
+    loc_strong_hans_rock_hole:
+      name: The Hole in the Rock
+      instance_of: loc_cave
+      threshold_type: threshold_well
+      evidence: |
+        saw him slip into a hole in the rock
+
+    loc_strong_hans_underworld_chamber:
+      name: The Chained Princess's Rock Chamber
+      instance_of: loc_cave
+      threshold_type: threshold_well
+      evidence: |
+        a maiden was sitting there who was lovely as any picture
+
+    loc_strong_hans_sea_shore:
+      name: The Sea-Shore
+      instance_of: loc_sea
+      evidence: |
+        until he came to the sea-shore
+
+    loc_strong_hans_little_boat:
+      name: The Little Boat of the Faithless Comrades
+      instance_of: loc_ship
+      evidence: |
+        a little boat in which his faithless comrades were sitting
+
+
+classifications:
+
+  world_laws:
+    - law_underworld_basket_descent_invites_companion_betrayal
+    - law_summoning_ring_commands_air_spirits
+    - law_forest_suspends_domestic_order
+
+  moral_regimes:
+    - moral_retributive
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_extraordinary_body
+    - agency_violence
+    - agency_object_mediation
+    - agency_speech
+    - agency_cunning
+
+  affects_driving:
+    - affect_maternal_love
+    - affect_pity
+    - affect_anger
+    - affect_joy
+
+  symbol_numbers:
+    - num_2
+    - num_3
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+    - threshold_well
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: strong_hans_mother,
+      scene: "Hans lives with his parents in a solitary valley" }
+  - { function: func_abduction, order: 2, actor: strong_hans_robbers,
+      victim: strong_hans_mother, scene: "robbers seize the mother and child in the forest" }
+  - { function: func_captivity, order: 3, actor: strong_hans_robber_captain,
+      victim: strong_hans_mother, scene: "the mother is made to keep house in the robber cavern" }
+  - { function: func_growth, order: 4, actor: strong_hans,
+      scene: "Hans grows tall and strong in the cave" }
+  - { function: func_combat, order: 5, actor: strong_hans,
+      scene: "Hans beats the captain and robbers with his fir club" }
+  - { function: func_return, order: 6, actor: strong_hans_mother,
+      beneficiary: strong_hans_father, scene: "mother and son return with robber treasure to the father" }
+  - { function: func_departure, order: 7, actor: strong_hans,
+      scene: "Hans leaves home with a hundredweight walking-stick" }
+  - { function: func_companion_recruitment, order: 8, actor: strong_hans,
+      beneficiary: strong_hans_fir_twister, scene: "Hans recruits Fir-Twister in the deep forest" }
+  - { function: func_companion_recruitment, order: 9, actor: strong_hans,
+      beneficiary: strong_hans_rock_splitter, scene: "Hans recruits Rock-Splitter at the mighty rock" }
+  - { function: func_donor_test_failed, order: 10, actor: strong_hans_dwarf,
+      victim: strong_hans_fir_twister, scene: "the dwarf beats the greedy companions when they refuse meat" }
+  - { function: func_donor_test_reversed, order: 11, actor: strong_hans,
+      scene: "Hans gives meat twice, refuses the third demand, and beats the dwarf" }
+  - { function: func_descent, order: 12, actor: strong_hans,
+      scene: "the companions lower Hans and his club through the rock-hole in a basket" }
+  - { function: func_rescue, order: 13, actor: strong_hans,
+      beneficiary: strong_hans_princess, scene: "Hans kills the dwarf watchman and the princess's chains fall" }
+  - { function: func_betrayal, order: 14, actor: strong_hans_fir_twister,
+      victim: strong_hans, scene: "the companions draw up the maiden and drop the basket meant for Hans" }
+  - { function: func_magical_escape, order: 15, actor: strong_hans_air_spirits,
+      beneficiary: strong_hans, scene: "the air spirits carry Hans above again" }
+  - { function: func_pursuit, order: 16, actor: strong_hans,
+      scene: "Hans uses the ring to find the companions at sea" }
+  - { function: func_punishment, order: 17, actor: strong_hans,
+      victim: strong_hans_fir_twister, scene: "Hans throws the wicked comrades into the water" }
+  - { function: func_wedding, order: 18, actor: strong_hans,
+      beneficiary: strong_hans_princess, scene: "Hans delivers the maiden for the second time and marries her" }
+
+
+edges:
+
+  # Abduction and robber-cave childhood
+  - { from: strong_hans_mother, to: loc_strong_hans_black_forest, label: ENTERS_WITH_CHILD,
+      evidence: "went still further onwards with him into the forest" }
+  - { from: strong_hans_robbers, to: strong_hans_mother, label: SEIZES,
+      evidence: "seized the mother and child" }
+  - { from: strong_hans_robbers, to: loc_strong_hans_robber_cave, label: CARRIES_CAPTIVES_TO,
+      evidence: "at last came into a great cavern" }
+  - { from: strong_hans_robber_captain, to: strong_hans_mother, label: COMMANDS_HOUSEKEEPING,
+      evidence: "she must look after the house-keeping" }
+  - { from: strong_hans_mother, to: strong_hans, label: TEACHES_READING_AND_TALES,
+      evidence: "taught him to read an old book of tales about knights" }
+  - { from: strong_hans, to: obj_strong_hans_fir_club, label: MAKES_AND_HIDES,
+      evidence: "made himself a strong club out of a branch of fir, hid it behind the bed" }
+  - { from: strong_hans, to: strong_hans_robber_captain, label: DEMANDS_FATHER_IDENTITY,
+      evidence: "I now wish to know who is my father" }
+  - { from: strong_hans_robber_captain, to: strong_hans, label: STRIKES_DOWN,
+      evidence: "gave Hans such a box on the ear that he rolled under the table" }
+  - { from: strong_hans, to: strong_hans_robbers, label: BEATS_UNMOVING,
+      evidence: "beat the captain and the robbers so with his club" }
+  - { from: strong_hans_mother, to: obj_strong_hans_entrance_key, label: TAKES,
+      evidence: "took from the captain the key to the entrance-door" }
+  - { from: strong_hans, to: obj_strong_hans_meal_sack_treasure, label: PACKS,
+      evidence: "packed into it gold and silver" }
+  - { from: strong_hans, to: strong_hans_father, label: RETURNS_TO,
+      evidence: "heard that Hans was his son" }
+  - { from: obj_strong_hans_meal_sack_treasure, to: loc_strong_hans_family_house, label: FUNDS_REBUILDING,
+      evidence: "there, in that sack, is more than is wanting for a new house" }
+
+  # Extraordinary companions and castle meat tests
+  - { from: strong_hans, to: obj_strong_hans_hundredweight_stick, label: COMMISSIONS,
+      evidence: "get a walking-stick that weighs a hundred-weight made for me" }
+  - { from: strong_hans, to: loc_strong_hans_deep_forest, label: ENTERS,
+      evidence: "came to a deep, dark forest" }
+  - { from: strong_hans_fir_twister, to: loc_strong_hans_deep_forest, label: TWISTS_TREE_IN,
+      evidence: "twisting it like a willow-wand" }
+  - { from: strong_hans, to: strong_hans_fir_twister, label: NAMES_AND_RECRUITS,
+      evidence: "Thy name is now Fir-twister" }
+  - { from: strong_hans_rock_splitter, to: loc_strong_hans_deep_forest, label: SPLITS_ROCK_IN,
+      evidence: "striking great pieces of it away with his fist" }
+  - { from: strong_hans, to: strong_hans_rock_splitter, label: NAMES_AND_RECRUITS,
+      evidence: "thou shalt be called Rock-splitter" }
+  - { from: strong_hans, to: loc_strong_hans_deserted_castle, label: ENTERS_WITH_COMPANIONS,
+      evidence: "they came to an old deserted castle" }
+  - { from: strong_hans_wild_boar, to: strong_hans, label: RUSHES_AT,
+      evidence: "a wild boar rushed at him" }
+  - { from: strong_hans, to: strong_hans_wild_boar, label: KILLS_FOR_FOOD,
+      evidence: "gave it such a blow with his club that it fell directly" }
+  - { from: strong_hans_dwarf, to: strong_hans_fir_twister, label: DEMANDS_MEAT_FROM,
+      evidence: "asked for some meat" }
+  - { from: strong_hans_dwarf, to: strong_hans_fir_twister, label: BEATS,
+      evidence: "belaboured him so with his fists" }
+  - { from: strong_hans_dwarf, to: strong_hans_rock_splitter, label: BEATS,
+      evidence: "he was very ill-treated by the dwarf" }
+  - { from: strong_hans, to: strong_hans_dwarf, label: FEEDS_TWICE,
+      evidence: "good-natured Hans gave it to him" }
+  - { from: strong_hans, to: strong_hans_dwarf, label: REFUSES_THIRD_DEMAND,
+      evidence: "Thou art shameless!" }
+  - { from: strong_hans, to: strong_hans_dwarf, label: BEATS_DOWN_STEPS,
+      evidence: "gave him a couple of blows which made him jump down the castle steps" }
+  - { from: strong_hans_dwarf, to: loc_strong_hans_rock_hole, label: FLEES_INTO,
+      evidence: "saw him slip into a hole in the rock" }
+
+  # Descent, rescue, betrayal
+  - { from: strong_hans, to: obj_strong_hans_basket_rope, label: USES_FOR_DESCENT,
+      evidence: "let Hans and his club down in the basket" }
+  - { from: strong_hans, to: loc_strong_hans_underworld_chamber, label: OPENS_DOOR_TO,
+      evidence: "he found a door, and when he opened it a maiden was sitting there" }
+  - { from: strong_hans_princess, to: strong_hans_dwarf, label: IS_GUARDED_BY,
+      evidence: "set the dwarf as a watchman" }
+  - { from: strong_hans_princess, to: strong_hans, label: MOVES_TO_PITY,
+      evidence: "Hans felt great pity for her" }
+  - { from: strong_hans, to: strong_hans_dwarf, label: KILLS,
+      evidence: "gave him such a blow with his club that he fell down dead" }
+  - { from: strong_hans_princess, to: state_imprisoned, label: IS_RELEASED_FROM,
+      evidence: "Immediately the chains fell from the maiden" }
+  - { from: strong_hans_princess, to: strong_hans_savage_count, label: TESTIFIES_ABDUCTION_BY,
+      evidence: "whom a savage count had stolen away from her home" }
+  - { from: strong_hans, to: obj_strong_hans_basket_rope, label: SENDS_MAIDEN_UP,
+      evidence: "placed the maiden in the basket and had her drawn up" }
+  - { from: law_underworld_basket_descent_invites_companion_betrayal, to: strong_hans, label: ENDANGERS,
+      evidence: "they let it fall again" }
+  - { from: strong_hans_fir_twister, to: strong_hans_princess, label: ABDUCTS_FALSE_RESCUE,
+      evidence: "had taken the beautiful maiden with them" }
+  - { from: strong_hans_rock_splitter, to: strong_hans_princess, label: ABDUCTS_FALSE_RESCUE,
+      evidence: "had taken the beautiful maiden with them" }
+
+  # Ring, aerial rescue, sea pursuit, and restoration
+  - { from: strong_hans, to: obj_strong_hans_summoning_ring, label: TAKES_FROM_DWARF,
+      evidence: "drew it off and put it on" }
+  - { from: obj_strong_hans_summoning_ring, to: strong_hans_air_spirits, label: SUMMONS,
+      evidence: "when he turned it round on his finger" }
+  - { from: strong_hans_air_spirits, to: strong_hans, label: RECOGNIZE_AS_MASTER,
+      evidence: "told him he was their master" }
+  - { from: law_summoning_ring_commands_air_spirits, to: strong_hans, label: CARRIES_UP,
+      evidence: "They obeyed instantly" }
+  - { from: strong_hans_air_spirits, to: strong_hans_fir_twister, label: LOCATES_AT_SEA,
+      evidence: "told him that the two were on the sea" }
+  - { from: strong_hans, to: loc_strong_hans_sea_shore, label: RUNS_TO,
+      evidence: "until he came to the sea-shore" }
+  - { from: obj_strong_hans_hundredweight_stick, to: strong_hans, label: DRAGS_DOWN,
+      evidence: "dragged him deep down until he was all but drowned" }
+  - { from: strong_hans_air_spirits, to: loc_strong_hans_little_boat, label: CARRY_HANS_TO,
+      evidence: "bore him as swift as lightning into the boat" }
+  - { from: strong_hans, to: strong_hans_fir_twister, label: THROWS_INTO_WATER,
+      evidence: "threw them into the water" }
+  - { from: strong_hans, to: strong_hans_rock_splitter, label: THROWS_INTO_WATER,
+      evidence: "threw them into the water" }
+  - { from: strong_hans, to: strong_hans_princess, label: DELIVERS_SECOND_TIME,
+      evidence: "whom he delivered for the second time" }
+  - { from: strong_hans, to: strong_hans_princess, label: MARRIES,
+      evidence: "married her, and all rejoiced exceedingly" }

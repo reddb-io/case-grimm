@@ -1,0 +1,370 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-poor-millers-boy-and-the-cat
+khm: 106
+atu: '402'
+atu_name: The Animal Bride
+canonical_source: ../../2-silver/canonical/the-poor-millers-boy-and-the-cat/canonical.txt
+title: The Poor Miller's Boy and the Cat
+
+
+entities:
+
+  characters:
+
+    poor_millers_boy_hans:
+      name: Stupid Hans / The Poor Miller's Boy
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_domestic_labor, agency_object_mediation, agency_speech]
+      affects: [affect_grief, affect_joy, affect_love]
+      traits: [third-apprentice, drudge, mocked-fool, deserted-companion, faithful-cat-servant, silver-tool-worker, ragged-returnee, chosen-bridegroom, rich-man]
+      evidence: |
+        The third of the boys was, however, the drudge
+
+    poor_millers_cat_princess:
+      name: The Small Tabby-Cat / King's Daughter
+      archetypes: [arc_enchanted_animal_bride, arc_animal_helper]
+      species: sp_cat
+      existential_states: [state_transformed]
+      transformations: [transform_animal_human]
+      agency_modes: [agency_speech, agency_animal_aid, agency_object_mediation, agency_social_rank]
+      speech_acts_performed: [speech_promise, speech_command]
+      affects: [affect_love, affect_joy]
+      traits: [enchanted-castle-mistress, seven-year-employer, horse-promiser, dancer, hidden-princess, splendid-coach-arriver, faithful-hans-claimer, bride]
+      evidence: |
+        he met a small tabby-cat
+
+    poor_millers_old_miller:
+      name: The Old Miller
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank, agency_domestic_labor]
+      speech_acts_performed: [speech_command, speech_promise]
+      traits: [childless-miller, old-master, mill-prize-setter, ragged-hans-excluder, final-mill-keeper]
+      evidence: |
+        In a certain mill lived an old miller
+
+    poor_millers_two_apprentices:
+      name: The Two Sharp Apprentices
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_object_mediation]
+      affects: [affect_greed, affect_pride]
+      traits: [older-apprentices, hans-mockers, cave-deserters, defective-horse-bringers, goose-house-excluders]
+      evidence: |
+        The two sharp ones waited until Hans had fallen asleep
+
+    poor_millers_cat_servants:
+      name: The Cat Servants of the Enchanted Castle
+      species: sp_cat
+      agency_modes: [agency_domestic_labor, agency_music, agency_object_mediation]
+      traits: [castle-servants, musicians, bed-attendants, dressing-attendants, washing-attendants]
+      evidence: |
+        there were nothing but cats who were her servants
+
+    poor_millers_princess_servants:
+      name: The Princess's Human Servants
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation]
+      traits: [coach-servants, seventh-horse-bringers, garment-unpackers, hans-washers]
+      evidence: |
+        The servants unpacked splendid garments
+
+  magic_objects:
+
+    obj_poor_millers_best_horse_prize:
+      name: The Best Horse Condition
+      object_kind: token
+      attributes:
+        function: contest-object that determines who receives the mill and cares for the old miller
+      evidence: |
+        brings me the best horse home
+
+    obj_poor_millers_silver_wood_tools:
+      name: The Silver Woodcutting Tools
+      object_kind: tool
+      attributes:
+        components: silver axe, silver wedge, silver saw, copper mallet
+        function: tools for Hans's daily service chopping wood
+      evidence: |
+        he had an axe of silver
+
+    obj_poor_millers_silver_scythe:
+      name: The Silver Scythe and Golden Whetstone
+      object_kind: tool
+      attributes:
+        function: tools for mowing and drying the cat's meadow
+      evidence: |
+        a scythe of silver, and a whetstone of gold
+
+    obj_poor_millers_silver_building_tools:
+      name: The Silver Building Tools and Timber
+      object_kind: tool
+      attributes:
+        function: build the small house that later appears as a great castle
+      evidence: |
+        timber of silver, carpenter’s axe, square
+
+    obj_poor_millers_twelve_horses:
+      name: The Twelve Bright Horses
+      object_kind: creature_object
+      attributes:
+        count: twelve
+        function: preview of the cat's supernatural wealth and promised reward
+      evidence: |
+        there stood twelve horses
+
+    obj_poor_millers_seventh_horse:
+      name: The Seventh Horse for Hans
+      object_kind: creature_object
+      attributes:
+        function: superior horse that proves Hans wins the miller's contest
+      evidence: |
+        brought a seventh as well
+
+    obj_poor_millers_defective_horses:
+      name: The Blind and Lame Horses
+      object_kind: creature_object
+      attributes:
+        function: inferior horses brought by the two sharp apprentices
+      evidence: |
+        one of them was a blind one, and the other lame
+
+    obj_poor_millers_smock_frock:
+      name: Hans's Dirty Old Smock-Frock
+      object_kind: garment
+      attributes:
+        function: visible poverty that causes exclusion before the princess reveals him
+      evidence: |
+        his dirty old smock-frock
+
+    obj_poor_millers_splendid_garments:
+      name: The Splendid Garments
+      object_kind: garment
+      attributes:
+        function: restore Hans's public appearance before marriage and ascent
+      evidence: |
+        The servants unpacked splendid garments
+
+  locations:
+
+    loc_poor_millers_mill:
+      name: The Old Miller's Mill
+      instance_of: loc_mill
+      evidence: |
+        In a certain mill lived an old miller
+
+    loc_poor_millers_village:
+      name: The Village Where the Apprentices Mock Hans
+      instance_of: loc_village
+      evidence: |
+        when they came to the village
+
+    loc_poor_millers_cave:
+      name: The Cave Where Hans Is Deserted
+      instance_of: loc_cave
+      threshold_type: threshold_forest
+      evidence: |
+        a cave in which they lay down to sleep
+
+    loc_poor_millers_forest:
+      name: The Forest of the Tabby-Cat
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        went into the forest
+
+    loc_poor_millers_enchanted_castle:
+      name: The Cat's Enchanted Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        her enchanted castle
+
+    loc_poor_millers_meadow:
+      name: The Cat's Meadow
+      instance_of: loc_meadow
+      evidence: |
+        mow my meadow, and dry the grass
+
+    loc_poor_millers_small_house:
+      name: The Small House Built with Silver Tools
+      instance_of: loc_house
+      evidence: |
+        build me a small house
+
+    loc_poor_millers_goose_house:
+      name: The Goose-House Where Hans Sleeps
+      instance_of: loc_stable
+      evidence: |
+        creep into the goose-house
+
+    loc_poor_millers_great_castle:
+      name: The Great Castle of Silver and Gold
+      instance_of: loc_castle
+      evidence: |
+        it was a great castle
+
+
+classifications:
+
+  world_laws:
+    - law_faithful_service_to_animal_bride_reveals_reward
+    - law_promise_binds_reality
+
+  moral_regimes:
+    - moral_restorative
+    - moral_kindness_rewarded
+    - moral_humbling_reform
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_domestic_labor
+    - agency_object_mediation
+    - agency_animal_aid
+    - agency_speech
+
+  affects_driving:
+    - affect_grief
+    - affect_greed
+    - affect_pride
+    - affect_joy
+    - affect_love
+
+  symbol_numbers:
+    - num_3
+    - num_7
+    - num_12
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: poor_millers_old_miller,
+      scene: "An old childless miller has three apprentices and wants to retire to the chimney-corner.",
+      evidence: "three apprentices served under him" }
+  - { function: func_task, order: 2, actor: poor_millers_old_miller,
+      scene: "He promises the mill to whichever apprentice brings home the best horse and cares for him until death.",
+      evidence: "whichsoever of you brings me the best horse home" }
+  - { function: func_mocked_third, order: 3, actor: poor_millers_two_apprentices,
+      scene: "The two sharp apprentices mock Hans as stupid and begrudge him the mill.",
+      evidence: "they begrudged the mill to him" }
+  - { function: func_abandonment, order: 4, actor: poor_millers_two_apprentices,
+      scene: "They leave sleeping Hans in a cave and think they have done a clever thing.",
+      evidence: "went away leaving him where he was" }
+  - { function: func_forest_lack, order: 5, actor: poor_millers_boy_hans,
+      scene: "Hans wakes alone, climbs out, enters the forest, and wonders how he will obtain a horse.",
+      evidence: "how shall I obtain a horse now" }
+  - { function: func_donor_encounter, order: 6, actor: poor_millers_cat_princess,
+      scene: "A small tabby-cat knows Hans's desire and offers a beautiful horse after seven years of faithful service.",
+      evidence: "be my faithful servant for seven years long" }
+  - { function: func_enchanted_household, order: 7, actor: poor_millers_cat_princess,
+      scene: "The cat takes Hans into her enchanted castle full of cat servants and music.",
+      evidence: "there were nothing but cats who were her servants" }
+  - { function: func_service_wood, order: 8, actor: poor_millers_boy_hans,
+      scene: "Hans serves by chopping wood with silver and copper tools.",
+      evidence: "had to serve the cat, and chop some wood every day" }
+  - { function: func_service_meadow, order: 9, actor: poor_millers_boy_hans,
+      scene: "Hans mows and dries the cat's meadow with a silver scythe and golden whetstone.",
+      evidence: "Go and mow my meadow, and dry the grass" }
+  - { function: func_service_building, order: 10, actor: poor_millers_boy_hans,
+      scene: "Hans builds a small house with silver timber and tools.",
+      evidence: "build me a small house" }
+  - { function: func_reward_deferred, order: 11, actor: poor_millers_cat_princess,
+      scene: "After seven years the cat shows twelve horses but sends Hans home without his horse, promising to follow in three days.",
+      evidence: "in three days’ time I will follow thee and bring it" }
+  - { function: func_humiliation_return, order: 12, actor: poor_millers_boy_hans,
+      scene: "Hans returns in a too-small dirty smock-frock and is denied table and bed.",
+      evidence: "so ragged and torn" }
+  - { function: func_arrival_of_reward, order: 13, actor: poor_millers_cat_princess,
+      scene: "After three days the cat arrives as a magnificent princess with six coach-horses and a seventh horse for Hans.",
+      evidence: "this princess was the little tabby-cat" }
+  - { function: func_recognition_and_dressing, order: 14, actor: poor_millers_princess_servants,
+      scene: "The princess has Hans brought from the goose-house, washed, dressed, and made handsome.",
+      evidence: "washed him and dressed him" }
+  - { function: func_victory, order: 15, actor: poor_millers_cat_princess,
+      scene: "The princess exposes the other apprentices' blind and lame horses and presents the seventh horse for Hans.",
+      evidence: "that is for the third miller’s boy" }
+  - { function: func_liquidation, order: 16, actor: poor_millers_cat_princess,
+      scene: "The miller keeps his mill, while the princess takes faithful Hans away.",
+      evidence: "took her faithful Hans and set him in the coach" }
+  - { function: func_transfiguration, order: 17, actor: loc_poor_millers_small_house,
+      scene: "The small house Hans built is revealed as a great castle of silver and gold.",
+      evidence: "everything inside it was of silver and gold" }
+  - { function: func_wedding, order: 18, actor: poor_millers_cat_princess,
+      scene: "The princess marries Hans and he becomes rich for life.",
+      evidence: "then she married him" }
+
+
+edges:
+
+  # Contest and abandonment
+  - { from: poor_millers_old_miller, to: obj_poor_millers_best_horse_prize, label: SETS_CONTEST_BY,
+      evidence: "brings me the best horse home" }
+  - { from: poor_millers_old_miller, to: loc_poor_millers_mill, label: PROMISES_TO_WINNER,
+      evidence: "to him will I give the mill" }
+  - { from: poor_millers_two_apprentices, to: poor_millers_boy_hans, label: MOCK_AS_STUPID,
+      evidence: "stupid Hans" }
+  - { from: poor_millers_two_apprentices, to: loc_poor_millers_cave, label: ABANDON_HANS_IN,
+      evidence: "went away leaving him where he was" }
+  - { from: poor_millers_boy_hans, to: loc_poor_millers_forest, label: ENTERS_ALONE,
+      evidence: "went into the forest" }
+
+  # Animal-bride service
+  - { from: poor_millers_cat_princess, to: poor_millers_boy_hans, label: KNOWS_DESIRE_OF,
+      evidence: "I well know your desire" }
+  - { from: poor_millers_cat_princess, to: poor_millers_boy_hans, label: OFFERS_HORSE_FOR_SERVICE,
+      evidence: "be my faithful servant for seven years long" }
+  - { from: poor_millers_cat_princess, to: loc_poor_millers_enchanted_castle, label: TAKES_TO,
+      evidence: "took him with her into her enchanted castle" }
+  - { from: poor_millers_cat_servants, to: poor_millers_cat_princess, label: SERVE,
+      evidence: "cats who were her servants" }
+  - { from: poor_millers_cat_servants, to: agency_music, label: PERFORM,
+      evidence: "three of them had to make music" }
+  - { from: poor_millers_cat_princess, to: poor_millers_boy_hans, label: INVITES_TO_DANCE,
+      evidence: "come and dance with me" }
+  - { from: poor_millers_boy_hans, to: poor_millers_cat_princess, label: REFUSES_CAT_DANCE,
+      evidence: "I won’t dance with a pussy cat" }
+  - { from: poor_millers_boy_hans, to: obj_poor_millers_silver_wood_tools, label: USES_DAILY,
+      evidence: "chop some wood every day" }
+  - { from: poor_millers_boy_hans, to: obj_poor_millers_silver_scythe, label: USES_TO_MOW,
+      evidence: "Go and mow my meadow" }
+  - { from: poor_millers_boy_hans, to: obj_poor_millers_silver_building_tools, label: USES_TO_BUILD,
+      evidence: "Then Hans built the small house" }
+  - { from: poor_millers_cat_princess, to: obj_poor_millers_twelve_horses, label: SHOWS,
+      evidence: "there stood twelve horses" }
+  - { from: law_faithful_service_to_animal_bride_reveals_reward, to: poor_millers_boy_hans, label: REWARDS_SERVICE_OF,
+      evidence: "the seven years had gone by with him as if they were six months" }
+
+  # Return humiliation and revealed prize
+  - { from: poor_millers_boy_hans, to: obj_poor_millers_smock_frock, label: RETURNS_WEARING,
+      evidence: "his dirty old smock-frock" }
+  - { from: poor_millers_two_apprentices, to: obj_poor_millers_defective_horses, label: BRING,
+      evidence: "one of them was a blind one, and the other lame" }
+  - { from: poor_millers_old_miller, to: poor_millers_boy_hans, label: EXCLUDES_FROM_TABLE,
+      evidence: "he should not sit down to table" }
+  - { from: poor_millers_two_apprentices, to: poor_millers_boy_hans, label: DENY_BED_TO,
+      evidence: "would not let him have a bed" }
+  - { from: poor_millers_boy_hans, to: loc_poor_millers_goose_house, label: SLEEPS_IN,
+      evidence: "creep into the goose-house" }
+  - { from: poor_millers_cat_princess, to: poor_millers_boy_hans, label: ARRIVES_FOR,
+      evidence: "a magnificent princess alighted from the coach" }
+  - { from: poor_millers_cat_princess, to: transform_animal_human, label: REVEALED_BY,
+      evidence: "this princess was the little tabby-cat" }
+  - { from: poor_millers_princess_servants, to: obj_poor_millers_splendid_garments, label: UNPACK,
+      evidence: "unpacked splendid garments" }
+  - { from: poor_millers_princess_servants, to: poor_millers_boy_hans, label: WASH_AND_DRESS,
+      evidence: "washed him and dressed him" }
+  - { from: poor_millers_princess_servants, to: obj_poor_millers_seventh_horse, label: BRING,
+      evidence: "ordered the servant to bring the seventh horse" }
+  - { from: obj_poor_millers_seventh_horse, to: poor_millers_boy_hans, label: BELONGS_TO,
+      evidence: "that is for the third miller’s boy" }
+  - { from: poor_millers_cat_princess, to: poor_millers_boy_hans, label: TAKES_AWAY_AS_FAITHFUL,
+      evidence: "took her faithful Hans" }
+  - { from: loc_poor_millers_small_house, to: loc_poor_millers_great_castle, label: REVEALS_AS,
+      evidence: "it was a great castle" }
+  - { from: poor_millers_cat_princess, to: poor_millers_boy_hans, label: MARRIES,
+      evidence: "then she married him" }
+  - { from: poor_millers_boy_hans, to: moral_restorative, label: EXEMPLIFIES,
+      evidence: "let no one ever say that anyone who is silly can never become a person of importance" }

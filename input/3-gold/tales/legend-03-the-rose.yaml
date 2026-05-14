@@ -1,0 +1,86 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: legend-03-the-rose
+khm: null
+legend_number: 3
+canonical_source: ../../2-silver/canonical/legend-03-the-rose/canonical.txt
+title: The Rose
+
+entities:
+  characters:
+    rose_poor_mother:
+      name: The Poor Mother
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [poor, two-child-mother, unbelieving-at-first, rose-keeper, death-witness]
+      evidence: |
+        There was once a poor woman who had two children
+
+    rose_youngest_child:
+      name: The Youngest Wood-Gathering Child
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_joy]
+      traits: [youngest, forest-worker, helped-by-divine-child, rose-recipient, happy-dead]
+      evidence: |
+        The youngest had to go every day into the forest to fetch wood
+
+    rose_divine_child:
+      name: The Strong Beautiful Child
+      being_type: being_divine
+      archetypes: [arc_supernatural_donor]
+      agency_modes: [agency_domestic_labor, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_testimony]
+      traits: [little-child-form, strong, wood-helper, sudden-vanisher, rose-giver, return-promiser]
+      evidence: |
+        a little child, who was quite strong
+
+  magic_objects:
+    obj_rose_blooming_rose:
+      name: The Blooming Rose
+      object_kind: relic
+      evidence: |
+        when it was in full bloom, he would return
+
+  locations:
+    loc_rose_forest:
+      name: The Forest Wood-Gathering Place
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        go every day into the forest to fetch wood
+
+classifications:
+  world_laws:
+    - law_blooming_rose_marks_heavenly_child_return
+  moral_regimes:
+    - moral_providential_protection
+  agency_modes_dominant: [agency_domestic_labor, agency_object_mediation]
+  affects_driving: [affect_joy]
+  symbol_numbers: []
+  threshold_types: [threshold_forest]
+
+propp:
+  - { function: func_child_labour, order: 1, actor: rose_youngest_child,
+      scene: "the youngest child fetches wood daily in the forest" }
+  - { function: func_divine_help, order: 2, actor: rose_divine_child,
+      beneficiary: rose_youngest_child,
+      scene: "a strong beautiful child helps carry the wood and disappears" }
+  - { function: func_rose_token, order: 3, actor: rose_divine_child,
+      beneficiary: rose_youngest_child,
+      scene: "the divine child gives a rose whose full bloom marks his return" }
+  - { function: func_heavenly_return, order: 4, actor: law_blooming_rose_marks_heavenly_child_return,
+      beneficiary: rose_youngest_child,
+      scene: "the child dies happily on the morning the rose blooms" }
+
+edges:
+  - { from: rose_youngest_child, to: loc_rose_forest, label: FETCHES_WOOD_IN,
+      evidence: "go every day into the forest to fetch wood" }
+  - { from: rose_divine_child, to: rose_youngest_child, label: HELPS_CARRY_WOOD,
+      evidence: "helped her industriously to pick up the wood and carry it home" }
+  - { from: rose_divine_child, to: obj_rose_blooming_rose, label: GIVES,
+      evidence: "the beautiful child had given her this rose" }
+  - { from: obj_rose_blooming_rose, to: rose_youngest_child, label: MARKS_DEATH_OF,
+      evidence: "the rose was in full bloom" }
+  - { from: rose_youngest_child, to: moral_providential_protection, label: DIES_HAPPILY_UNDER,
+      evidence: "she lay looking very happy" }

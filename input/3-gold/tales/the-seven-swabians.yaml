@@ -1,0 +1,482 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-seven-swabians
+khm: 119
+atu: '1297'
+atu_name: The Seven Swabians
+canonical_source: ../../2-silver/canonical/the-seven-swabians/canonical.txt
+title: The Seven Swabians
+
+
+entities:
+
+  characters:
+
+    seven_swabians_allies:
+      name: The Seven Swabian Allies
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_speech, agency_violence]
+      existential_states: [state_deceived]
+      speech_acts_performed: [speech_boast, speech_request]
+      affects: [affect_pride, affect_fear, affect_shame, affect_joy]
+      traits: [collective-adventurers, shared-spear-bearers, cowardly-heroes, misrecognizers, oath-keepers, drowned-allies]
+      evidence: |
+        all seven had made up their minds to travel about the world to seek adventures, and perform great deeds
+
+    seven_swabians_master_schulz:
+      name: Master Schulz
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_speech, agency_violence]
+      existential_states: [state_deceived]
+      speech_acts_performed: [speech_boast, speech_prayer, speech_request]
+      affects: [affect_fear, affect_shame, affect_joy]
+      traits: [first-swabian, front-spear-bearer, declared-boldest, hornet-panicker, rake-struck-surrenderer, hare-attacker, river-mishearer, drowned-leader]
+      evidence: |
+        in front walked the boldest and bravest, and that was Master Schulz
+
+    seven_swabians_jackli:
+      name: Jackli
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_speech]
+      existential_states: [state_deceived]
+      affects: [affect_fear]
+      traits: [second-swabian, powder-smell-interpreter, spear-holder, drowned-follower]
+      evidence: |
+        The first was Master Schulz; the second, Jackli
+
+    seven_swabians_marli:
+      name: Marli
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_speech]
+      existential_states: [state_deceived]
+      affects: [affect_fear]
+      traits: [third-swabian, rearward-courage-strategist, drowned-follower]
+      evidence: |
+        the third, Marli
+
+    seven_swabians_jergli:
+      name: Jergli
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_speech]
+      existential_states: [state_deceived]
+      affects: [affect_fear]
+      traits: [fourth-swabian, devil-kin-interpreter, drowned-follower]
+      evidence: |
+        the fourth, Jergli
+
+    seven_swabians_michal:
+      name: Michal
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_speech]
+      existential_states: [state_deceived]
+      affects: [affect_fear]
+      traits: [fifth-swabian, devil-interpreter, drowned-follower]
+      evidence: |
+        the fifth, Michal
+
+    seven_swabians_hans:
+      name: Hans
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_speech]
+      existential_states: [state_deceived]
+      affects: [affect_fear]
+      traits: [sixth-swabian, verse-counterer, drowned-follower]
+      evidence: |
+        the sixth, Hans
+
+    seven_swabians_veitli:
+      name: Veitli
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_speech, agency_violence]
+      existential_states: [state_deceived]
+      speech_acts_performed: [speech_boast]
+      affects: [affect_fear, affect_pride]
+      traits: [seventh-swabian, rear-spear-bearer, back-rank-brave, lance-pusher, drowned-follower]
+      evidence: |
+        the seventh, Veitli
+
+    seven_swabians_beetle_hornet:
+      name: The Humming Beetle or Hornet
+      species: sp_insect
+      agency_modes: [agency_violence]
+      traits: [harmless-insect, menacing-hummer, drum-misrecognized]
+      evidence: |
+        a great beetle or hornet flew by them from behind a bush
+
+    seven_swabians_hare:
+      name: The Sleeping Hare
+      species: sp_hare
+      agency_modes: [agency_endurance]
+      affects: [affect_fear]
+      traits: [sleeping-prey, dragon-misrecognized, field-fleeing-animal]
+      evidence: |
+        a hare was sitting sleeping in the sun
+
+    seven_swabians_river_worker:
+      name: The Man Across the Moselle
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      speech_acts_performed: [speech_request]
+      traits: [opposite-bank-worker, misunderstood-speaker]
+      evidence: |
+        a man who was working on the opposite side of the river
+
+    seven_swabians_frog:
+      name: The Croaking Frog Beside the Hat
+      species: sp_frog
+      agency_modes: [agency_speech]
+      traits: [hat-side-croaker, fatal-echo, mistaken-leader-voice]
+      evidence: |
+        a frog sat down beside it, and croaked “Wat, wat, wat.”
+
+  magic_objects:
+
+    obj_seven_swabians_long_spear:
+      name: The One Long Shared Spear
+      object_kind: weapon
+      attributes:
+        function: absurd collective weapon carried by all seven Swabians at once
+      evidence: |
+        one solitary, but very strong, and very long spear made for them
+
+    obj_seven_swabians_rake:
+      name: The Hay-Making Rake
+      object_kind: tool
+      attributes:
+        function: accidental instrument that strikes Schulz and confirms his panic
+      evidence: |
+        the handle of it struck against his face and gave him a tremendous blow
+
+    obj_seven_swabians_schulz_hat:
+      name: Master Schulz's Blown Hat
+      object_kind: garment
+      attributes:
+        function: drift marker beside which the frog croaks after Schulz sinks
+      evidence: |
+        his hat was blown on the opposite shore by the wind
+
+  locations:
+
+    loc_seven_swabians_road:
+      name: The Adventure Road
+      instance_of: loc_road
+      evidence: |
+        travel about the world to seek adventures
+
+    loc_seven_swabians_night_village:
+      name: The Intended Night Village
+      instance_of: loc_village
+      evidence: |
+        the village where they were to pass the night
+
+    loc_seven_swabians_meadow:
+      name: The Twilight Meadow
+      instance_of: loc_meadow
+      evidence: |
+        they were in a meadow in the twilight
+
+    loc_seven_swabians_fallow_field:
+      name: The Fallow-Field of the Hare
+      instance_of: loc_field
+      evidence: |
+        their path led them through a fallow-field
+
+    loc_seven_swabians_moselle:
+      name: The Deep Moselle
+      instance_of: loc_river
+      threshold_type: threshold_river
+      evidence: |
+        came to the Moselle, a mossy, quiet, deep river
+
+    loc_seven_swabians_opposite_bank:
+      name: The Opposite River Bank
+      instance_of: loc_field
+      evidence: |
+        the opposite side of the river
+
+
+classifications:
+
+  world_laws:
+    - law_fearful_misrecognition_turns_signs_deadly
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_speech
+    - agency_violence
+
+  affects_driving:
+    - affect_fear
+    - affect_pride
+    - affect_shame
+    - affect_joy
+
+  symbol_numbers:
+    - num_7
+
+  threshold_types:
+    - threshold_river
+
+
+propp:
+
+  - function: func_initial_situation
+    order: 1
+    actor: seven_swabians_allies
+    scene: Seven named Swabians decide to seek adventures and great deeds.
+    evidence: |
+      travel about the world to seek adventures, and perform great deeds
+
+  - function: func_equipping
+    order: 2
+    actor: seven_swabians_allies
+    scene: They make one long spear and all hold it at once for security.
+    evidence: |
+      This spear all seven of them took in their hands at once
+
+  - function: func_false_threat
+    order: 3
+    actor: seven_swabians_beetle_hornet
+    victim: seven_swabians_master_schulz
+    scene: A humming insect is misheard as a drum and starts the first panic.
+    evidence: |
+      I hear a drum
+
+  - function: func_panic
+    order: 4
+    actor: seven_swabians_master_schulz
+    scene: Schulz flees over a hedge, lands on a rake, and surrenders to an enemy who is not there.
+    evidence: |
+      Take me prisoner; I surrender! I surrender!
+
+  - function: func_collective_contagion
+    order: 5
+    actor: seven_swabians_allies
+    scene: The other six imitate Schulz's surrender and then swear silence about the mistake.
+    evidence: |
+      If you surrender, I surrender too!
+
+  - function: func_second_false_threat
+    order: 6
+    actor: seven_swabians_hare
+    victim: seven_swabians_allies
+    scene: The sleeping hare is taken for a horrible wild beast that might swallow them.
+    evidence: |
+      All of them were alarmed at the sight of the horrible wild beast
+
+  - function: func_mock_combat
+    order: 7
+    actor: seven_swabians_allies
+    scene: The allies advance with battle verse, prayer, and anguish against the supposed dragon.
+    evidence: |
+      Hereupon they all together set on the dragon
+
+  - function: func_exposure
+    order: 8
+    actor: seven_swabians_hare
+    scene: The hare wakes and runs away, revealing that the monster is only a hare.
+    evidence: |
+      The monster’s nothing but a hare!
+
+  - function: func_crossing_question
+    order: 9
+    actor: seven_swabians_allies
+    scene: At the Moselle, they ask a man across the river how people get over.
+    evidence: |
+      to know how people contrived to get across
+
+  - function: func_misheard_answer
+    order: 10
+    actor: seven_swabians_river_worker
+    victim: seven_swabians_master_schulz
+    scene: The man's "What? what?" is misheard as an instruction to wade.
+    evidence: |
+      Master Schulz thought he was saying, “Wade, wade through the water,”
+
+  - function: func_drowning
+    order: 11
+    actor: loc_seven_swabians_moselle
+    victim: seven_swabians_master_schulz
+    scene: Schulz enters the Moselle and sinks in mud and deep waves.
+    evidence: |
+      he sank in the mud and the deep waves
+
+  - function: func_fatal_echo
+    order: 12
+    actor: seven_swabians_frog
+    victim: seven_swabians_allies
+    scene: The frog croaks beside Schulz's hat and the six hear it as their leader calling them.
+    evidence: |
+      Master Schulz is calling us
+
+  - function: func_anti_return
+    order: 13
+    actor: loc_seven_swabians_moselle
+    victim: seven_swabians_allies
+    scene: The remaining six jump in and all the Swabian allies die away from home.
+    evidence: |
+      not one of the Swabian allies ever reached home again
+
+
+edges:
+
+  - from: seven_swabians_allies
+    label: SEEK_ADVENTURES
+    to: loc_seven_swabians_road
+    evidence: |
+      seek adventures, and perform great deeds
+
+  - from: seven_swabians_allies
+    label: CARRIES_TOGETHER
+    to: obj_seven_swabians_long_spear
+    evidence: |
+      This spear all seven of them took in their hands at once
+
+  - from: seven_swabians_master_schulz
+    label: LEADS
+    to: seven_swabians_allies
+    evidence: |
+      in front walked the boldest and bravest
+
+  - from: seven_swabians_veitli
+    label: FOLLOWS_LAST
+    to: seven_swabians_allies
+    evidence: |
+      Veitli was the last
+
+  - from: seven_swabians_beetle_hornet
+    label: HUMS_NEAR
+    to: seven_swabians_master_schulz
+    evidence: |
+      hummed in a menacing manner
+
+  - from: seven_swabians_master_schulz
+    label: MISRECOGNIZES_AS_DRUM
+    to: seven_swabians_beetle_hornet
+    evidence: |
+      Good heavens! I hear a drum.
+
+  - from: seven_swabians_jackli
+    label: MISREADS_SMELL_AS_POWDER
+    to: seven_swabians_beetle_hornet
+    evidence: |
+      I taste powder and matches
+
+  - from: obj_seven_swabians_rake
+    label: STRIKES
+    to: seven_swabians_master_schulz
+    evidence: |
+      struck against his face and gave him a tremendous blow
+
+  - from: seven_swabians_master_schulz
+    label: SURRENDERS_TO_ABSENT_ENEMY
+    to: loc_seven_swabians_meadow
+    evidence: |
+      Take me prisoner; I surrender! I surrender!
+
+  - from: seven_swabians_allies
+    label: SWEARS_SILENCE
+    to: seven_swabians_allies
+    evidence: |
+      they all swore to each other to hold their peace about it
+
+  - from: seven_swabians_allies
+    label: ENCOUNTERS
+    to: seven_swabians_hare
+    evidence: |
+      a hare was sitting sleeping in the sun
+
+  - from: seven_swabians_allies
+    label: MISRECOGNIZES_AS_MONSTER
+    to: seven_swabians_hare
+    evidence: |
+      the horrible wild beast
+
+  - from: seven_swabians_veitli
+    label: URGES_ATTACK
+    to: seven_swabians_allies
+    evidence: |
+      Strike home, in every Swabian’s name
+
+  - from: seven_swabians_master_schulz
+    label: PRAYS_FOR_ASSISTANCE
+    to: seven_swabians_hare
+    evidence: |
+      prayed for God’s assistance
+
+  - from: seven_swabians_hare
+    label: FLEES_FROM
+    to: seven_swabians_allies
+    evidence: |
+      darted swiftly away
+
+  - from: seven_swabians_allies
+    label: ARRIVES_AT
+    to: loc_seven_swabians_moselle
+    evidence: |
+      came to the Moselle
+
+  - from: seven_swabians_allies
+    label: ASKS_CROSSING_ADVICE_FROM
+    to: seven_swabians_river_worker
+    evidence: |
+      called to a man who was working on the opposite side of the river
+
+  - from: seven_swabians_master_schulz
+    label: MISHEARS_AS_WADE
+    to: seven_swabians_river_worker
+    evidence: |
+      Wade, wade through the water
+
+  - from: seven_swabians_master_schulz
+    label: ENTERS
+    to: loc_seven_swabians_moselle
+    evidence: |
+      went into the moselle
+
+  - from: loc_seven_swabians_moselle
+    label: DROWNS
+    to: seven_swabians_master_schulz
+    evidence: |
+      he sank in the mud and the deep waves
+
+  - from: obj_seven_swabians_schulz_hat
+    label: BLOWS_TO
+    to: loc_seven_swabians_opposite_bank
+    evidence: |
+      his hat was blown on the opposite shore by the wind
+
+  - from: seven_swabians_frog
+    label: CROAKS_BESIDE
+    to: obj_seven_swabians_schulz_hat
+    evidence: |
+      a frog sat down beside it, and croaked “Wat, wat, wat.”
+
+  - from: seven_swabians_allies
+    label: MISHEARS_AS_CALL
+    to: seven_swabians_frog
+    evidence: |
+      Master Schulz is calling us
+
+  - from: loc_seven_swabians_moselle
+    label: DROWNS
+    to: seven_swabians_allies
+    evidence: |
+      So they all jumped into the water together in a great hurry, and were drowned
+
+  - from: seven_swabians_frog
+    label: CAUSES_DEATH_OF
+    to: seven_swabians_allies
+    evidence: |
+      one frog took the lives of all six of them

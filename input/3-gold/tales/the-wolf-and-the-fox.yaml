@@ -1,0 +1,281 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-wolf-and-the-fox
+khm: 73
+atu: '41'
+atu_name: The Wolf and the Fox in the Storehouse / Overeating in the Pantry
+canonical_source: ../../2-silver/canonical/the-wolf-and-the-fox/canonical.txt
+title: The Wolf and the Fox
+
+
+entities:
+
+  characters:
+
+    wolf_fox_wolf:
+      name: The Wolf
+      archetypes: [arc_predator]
+      species: sp_wolf
+      agency_modes: [agency_violence, agency_speech]
+      speech_acts_performed: [speech_command, speech_boast]
+      affects: [affect_greed]
+      traits: [stronger-master, coercive, hungry, gluttonous, awkward-thief, beaten-twice, cellar-stuck, killed]
+      evidence: |
+        The wolf had the fox with him, and whatsoever the wolf wished,
+        that the fox was compelled to do
+
+    wolf_fox_fox:
+      name: The Fox
+      archetypes: [arc_trickster]
+      species: sp_fox
+      agency_modes: [agency_cunning, agency_speech, agency_violence]
+      speech_acts_performed: [speech_warning]
+      affects: [affect_fear]
+      traits: [weaker-companion, coerced-helper, food-finder, lamb-thief, pancake-thief, cellar-scout, escape-hole-tester, liberated-survivor]
+      evidence: |
+        he was the weaker, and he would gladly have been rid of his
+        master.
+
+    wolf_fox_lamb_mother:
+      name: The Mother Sheep
+      species: sp_sheep
+      agency_modes: [agency_speech]
+      traits: [lamb-mother, alarm-raiser, farmer-summoner]
+      evidence: |
+        the mother of the little lamb heard him, and began to cry out
+        terribly
+
+    wolf_fox_farmers:
+      name: The Country Folks
+      species: sp_human
+      agency_modes: [agency_violence, agency_domestic_labor]
+      traits: [farmyard-defenders, wolf-beaters, stick-wielders]
+      evidence: |
+        the farmer came running there.
+
+    wolf_fox_farm_wife:
+      name: The Pancake-Baking Wife
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [pancake-baker, noise-hearer, people-caller]
+      evidence: |
+        the wife is baking pancakes to-night
+
+    wolf_fox_cellar_farmer:
+      name: The Cellar Farmer
+      species: sp_human
+      agency_modes: [agency_violence, agency_domestic_labor]
+      traits: [meat-owner, noise-hearer, cudgel-carrier, wolf-killer]
+      evidence: |
+        the farmer, who had heard the noise of the fox’s jumping, came
+        into the cellar.
+
+  magic_objects:
+
+    obj_wolf_fox_lamb:
+      name: The Little Lamb
+      object_kind: food
+      attributes:
+        function: safe portion stolen by the fox but exceeded by the wolf's second attempt
+      evidence: |
+        the fox stole the little lamb
+
+    obj_wolf_fox_pancakes:
+      name: The Six Pancakes
+      object_kind: food
+      attributes:
+        count: 6
+        function: second safe portion stolen by the fox
+      evidence: |
+        drew down six pancakes and carried them to the wolf.
+
+    obj_wolf_fox_pancake_dish:
+      name: The Broken Pancake Dish
+      object_kind: food
+      attributes:
+        function: noisy object torn down by the wolf's excess appetite
+      evidence: |
+        tore the whole dish down so that it broke in pieces.
+
+    obj_wolf_fox_salted_meat_barrel:
+      name: The Barrel of Salted Meat
+      object_kind: food
+      attributes:
+        function: abundant cellar food that makes the wolf too fat to escape
+      evidence: |
+        the salted meat is lying in a barrel in the cellar
+
+    obj_wolf_fox_cudgel:
+      name: The Farmer's Cudgel
+      object_kind: weapon
+      attributes:
+        function: final weapon that kills the stuck wolf
+      evidence: |
+        Then came the farmer with a cudgel
+
+  locations:
+
+    loc_wolf_fox_forest:
+      name: The Wolf and Fox's Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        they were going through the forest
+
+    loc_wolf_fox_farmyard:
+      name: The Farm-Yard with Lambs
+      evidence: |
+        I know a farm-yard where there are two young lambs
+
+    loc_wolf_fox_farmhouse:
+      name: The Pancake Farm-House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        I know a farm-house where the wife is baking pancakes to-night
+
+    loc_wolf_fox_cellar:
+      name: The Meat Cellar
+      instance_of: loc_cellar
+      evidence: |
+        they reached the cellar.
+
+    loc_wolf_fox_escape_hole:
+      name: The Cellar-Hole
+      attributes:
+        function: escape aperture whose size tests whether the eater is still thin enough to leave
+      evidence: |
+        the hole by which they had come in
+
+
+classifications:
+
+  world_laws:
+    - law_might_unmakes_promise
+    - law_gluttony_traps_predator
+    - law_forest_suspends_domestic_order
+
+  moral_regimes:
+    - moral_retributive
+    - moral_trickster_wins
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_violence
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_greed
+    - affect_fear
+
+  symbol_numbers:
+    - num_2
+    - num_3
+    - num_6
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: wolf_fox_wolf,
+      scene: "the stronger wolf compels the weaker fox to serve him" }
+  - { function: func_coercion, order: 2, actor: wolf_fox_wolf,
+      scene: "the wolf threatens to eat the fox unless he gets food" }
+  - { function: func_trickery, order: 3, actor: wolf_fox_fox,
+      scene: "the fox steals one lamb safely for the wolf" }
+  - { function: func_violation, order: 4, actor: wolf_fox_wolf,
+      scene: "the unsatisfied wolf returns awkwardly for the second lamb and is beaten" }
+  - { function: func_repetition, order: 5, actor: wolf_fox_wolf,
+      scene: "the wolf again threatens the fox and receives six stolen pancakes" }
+  - { function: func_violation, order: 6, actor: wolf_fox_wolf,
+      scene: "the wolf returns for more pancakes, breaks the dish, and is beaten again" }
+  - { function: func_repetition, order: 7, actor: wolf_fox_wolf,
+      scene: "on the third day the wolf forces the fox to guide him to salted meat in a cellar" }
+  - { function: func_warning, order: 8, actor: wolf_fox_fox,
+      scene: "the fox repeatedly tests the hole and warns the wolf not to eat too much" }
+  - { function: func_violation, order: 9, actor: wolf_fox_wolf,
+      scene: "the wolf refuses to stop until the barrel is empty" }
+  - { function: func_punishment, order: 10, actor: wolf_fox_cellar_farmer,
+      scene: "the overfed wolf sticks fast and the farmer kills him with a cudgel" }
+  - { function: func_escape, order: 11, actor: wolf_fox_fox,
+      scene: "the fox escapes into the forest, glad to be rid of the old glutton" }
+
+
+edges:
+
+  # Coercive wolf-master
+  - { from: wolf_fox_wolf, to: wolf_fox_fox, label: COMPELS,
+      evidence: "whatsoever the wolf wished, that the fox was compelled to do" }
+  - { from: wolf_fox_fox, to: wolf_fox_wolf, label: IS_WEAKER_THAN,
+      evidence: "he was the weaker" }
+  - { from: wolf_fox_fox, to: wolf_fox_wolf, label: WANTS_RID_OF,
+      evidence: "he would gladly have been rid of his master" }
+  - { from: wolf_fox_wolf, to: wolf_fox_fox, label: THREATENS_TO_EAT,
+      evidence: "get me something to eat, or else I will eat thee thyself" }
+  - { from: wolf_fox_wolf, to: law_might_unmakes_promise, label: ENACTS,
+      evidence: "whatsoever the wolf wished, that the fox was compelled to do" }
+
+  # Lamb episode
+  - { from: wolf_fox_fox, to: loc_wolf_fox_farmyard, label: KNOWS,
+      evidence: "I know a farm-yard where there are two young lambs" }
+  - { from: wolf_fox_fox, to: obj_wolf_fox_lamb, label: STEALS,
+      evidence: "the fox stole the little lamb" }
+  - { from: wolf_fox_wolf, to: obj_wolf_fox_lamb, label: DEVOURS,
+      evidence: "The wolf devoured it" }
+  - { from: wolf_fox_wolf, to: affect_greed, label: FEELS,
+      evidence: "was not satisfied with one" }
+  - { from: wolf_fox_lamb_mother, to: wolf_fox_farmers, label: SUMMONS_BY_BLEATING,
+      evidence: "began to cry out terribly, and to bleat so that the farmer came running there" }
+  - { from: wolf_fox_farmers, to: wolf_fox_wolf, label: BEAT,
+      evidence: "beat him so mercilessly" }
+  - { from: wolf_fox_fox, to: wolf_fox_wolf, label: REBUKES_GLUTTONY,
+      evidence: "Why art thou such a glutton?" }
+
+  # Pancake episode
+  - { from: wolf_fox_wolf, to: wolf_fox_fox, label: THREATENS_TO_EAT,
+      evidence: "get me something to eat, or I will eat thee thyself" }
+  - { from: wolf_fox_fox, to: loc_wolf_fox_farmhouse, label: KNOWS,
+      evidence: "I know a farm-house where the wife is baking pancakes to-night" }
+  - { from: wolf_fox_fox, to: obj_wolf_fox_pancakes, label: STEALS,
+      evidence: "drew down six pancakes and carried them to the wolf" }
+  - { from: wolf_fox_wolf, to: obj_wolf_fox_pancakes, label: SWALLOWS,
+      evidence: "swallowed down the pancakes in an instant" }
+  - { from: wolf_fox_wolf, to: obj_wolf_fox_pancake_dish, label: BREAKS,
+      evidence: "tore the whole dish down so that it broke in pieces" }
+  - { from: wolf_fox_farm_wife, to: wolf_fox_wolf, label: CALLS_PEOPLE_AGAINST,
+      evidence: "she called the people" }
+  - { from: wolf_fox_farmers, to: wolf_fox_wolf, label: BEAT_WITH_STICKS,
+      evidence: "beat him as long as their sticks would hold together" }
+
+  # Cellar episode
+  - { from: wolf_fox_wolf, to: wolf_fox_fox, label: THREATENS_TO_EAT,
+      evidence: "get me something to eat, or I will eat thee thyself" }
+  - { from: wolf_fox_fox, to: obj_wolf_fox_salted_meat_barrel, label: KNOWS_LOCATION_OF,
+      evidence: "the salted meat is lying in a barrel in the cellar" }
+  - { from: wolf_fox_fox, to: loc_wolf_fox_cellar, label: GUIDES_TO,
+      evidence: "showed him the by-paths and ways by which at length they reached the cellar" }
+  - { from: wolf_fox_wolf, to: obj_wolf_fox_salted_meat_barrel, label: ATTACKS,
+      evidence: "the wolf attacked it instantly" }
+  - { from: wolf_fox_fox, to: loc_wolf_fox_escape_hole, label: TESTS_ESCAPE_THROUGH,
+      evidence: "tried if his body was still thin enough to slip through it" }
+  - { from: wolf_fox_fox, to: wolf_fox_wolf, label: WARNS,
+      evidence: "Don’t eat too much!" }
+  - { from: wolf_fox_wolf, to: law_gluttony_traps_predator, label: VIOLATES_LIMIT,
+      evidence: "I shall not leave until the barrel is empty." }
+  - { from: wolf_fox_cellar_farmer, to: loc_wolf_fox_cellar, label: ENTERS,
+      evidence: "came into the cellar" }
+  - { from: wolf_fox_fox, to: loc_wolf_fox_escape_hole, label: ESCAPES_THROUGH,
+      evidence: "he was out of the hole at one bound" }
+  - { from: wolf_fox_wolf, to: loc_wolf_fox_escape_hole, label: STICKS_FAST_IN,
+      evidence: "he could no longer get through, but stuck fast" }
+  - { from: wolf_fox_cellar_farmer, to: obj_wolf_fox_cudgel, label: CARRIES,
+      evidence: "Then came the farmer with a cudgel" }
+  - { from: wolf_fox_cellar_farmer, to: wolf_fox_wolf, label: KILLS,
+      evidence: "struck him dead" }
+  - { from: wolf_fox_fox, to: loc_wolf_fox_forest, label: BOUNDS_INTO,
+      evidence: "the fox bounded into the forest" }
+  - { from: wolf_fox_fox, to: wolf_fox_wolf, label: IS_GLAD_TO_BE_RID_OF,
+      evidence: "glad to be rid of the old glutton" }

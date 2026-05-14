@@ -1,0 +1,382 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-sparrow-and-his-four-children
+khm: 157
+atu: "157A"
+atu_name: The Sparrow and His Four Children
+canonical_source: ../../2-silver/canonical/the-sparrow-and-his-four-children/canonical.txt
+title: The Sparrow and His Four Children
+
+
+entities:
+
+  characters:
+
+    sparrow_father:
+      name: The Old Sparrow Father
+      species: sp_bird
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_warning]
+      affects: [affect_grief, affect_joy, affect_maternal_love]
+      traits: [old-bird, worried-father, delayed-teacher, danger-interpreter, pious-counsellor]
+      evidence: |
+        the old bird was grieved
+
+    sparrow_eldest_son:
+      name: The Eldest Sparrow Son
+      species: sp_bird
+      agency_modes: [agency_endurance, agency_speech]
+      speech_acts_performed: [speech_warning]
+      traits: [garden-survivor, caterpillar-eater, cherry-season-forager, worldly-shifty]
+      evidence: |
+        I stayed in the gardens
+
+    sparrow_second_son:
+      name: The Second Sparrow Son
+      species: sp_bird
+      agency_modes: [agency_endurance, agency_speech]
+      speech_acts_performed: [speech_warning]
+      traits: [court-survivor, stable-forager, snare-knower, lordly-danger-witness]
+      evidence: |
+        At court
+
+    sparrow_third_son:
+      name: The Third Sparrow Son
+      species: sp_bird
+      agency_modes: [agency_endurance, agency_speech]
+      speech_acts_performed: [speech_warning]
+      traits: [road-forager, barley-finder, stone-danger-knower, mountain-lad-witness]
+      evidence: |
+        I have broken up tubs and ropes on the cart-roads and highways
+
+    sparrow_youngest_son:
+      name: The Youngest Sparrow Son
+      species: sp_bird
+      agency_modes: [agency_endurance, agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_prayer]
+      affects: [affect_fear]
+      traits: [chirping-nestling, formerly-silliest, weakest, church-fed, pious-sermon-hearer, providential-truster]
+      evidence: |
+        Thou, my dear chirping nestling, wert always the silliest and weakest
+
+    sparrow_naughty_boys:
+      name: The Naughty Boys
+      species: sp_human
+      agency_modes: [agency_violence]
+      traits: [nest-pullers, accidental-dispersers]
+      evidence: |
+        some naughty boys pulled out the nest
+
+    sparrow_predatory_birds:
+      name: The Wild Malicious Birds
+      species: sp_bird
+      agency_modes: [agency_violence]
+      affects: [affect_hunger]
+      traits: [crooked-beaked, long-clawed, ambush-predators, sparrow-hawks-eagles-kites]
+      evidence: |
+        rough, wicked birds which have crooked beaks and long claws
+
+  magic_objects:
+
+    obj_sparrow_swallow_nest:
+      name: The Swallow's Nest
+      object_kind: architecture
+      attributes:
+        function: borrowed nest from which the young sparrows are violently displaced
+      evidence: |
+        in a swallow’s nest
+
+    obj_sparrow_green_hollow_pole:
+      name: The Long Green Hollow Pole
+      object_kind: weapon
+      attributes:
+        function: disguised human bird-killing device recognized by the garden-wise son
+      evidence: |
+        long green poles which are hollow inside
+
+    obj_sparrow_leaf_wax_decoy:
+      name: The Waxed Green Leaf Decoy
+      object_kind: material
+      attributes:
+        function: extra camouflage over the pole's hole, proving the eldest son's worldly caution
+      evidence: |
+        a little green leaf is stuck over the hole with wax
+
+    obj_sparrow_stable_snares:
+      name: The Stable Snares
+      object_kind: tool
+      attributes:
+        function: traps fixed in straw by court stable-boys to catch sparrows near grain
+      evidence: |
+        fix their gins and snares in the straw
+
+    obj_sparrow_pocket_ore:
+      name: The Pocket Ore
+      object_kind: material
+      attributes:
+        function: stone-like projectile already carried by mountain people before a sparrow can flee
+      evidence: |
+        carry a bit of rock, or ore, ready beforehand in his breast or pocket
+
+  locations:
+
+    loc_sparrow_swallow_nest:
+      name: The Swallow's Nest
+      instance_of: loc_house
+      evidence: |
+        in a swallow’s nest
+
+    loc_sparrow_wheatfield:
+      name: The Autumn Wheatfield
+      instance_of: loc_field
+      evidence: |
+        sparrows assembled together in a wheatfield
+
+    loc_sparrow_gardens:
+      name: The Gardens
+      instance_of: loc_garden
+      evidence: |
+        I stayed in the gardens
+
+    loc_sparrow_court:
+      name: The Court
+      instance_of: loc_castle
+      evidence: |
+        At court
+
+    loc_sparrow_horse_stable:
+      name: The Horse Stable
+      instance_of: loc_stable
+      evidence: |
+        keep to the horses’ stable
+
+    loc_sparrow_cart_roads:
+      name: The Cart-Roads and Highways
+      instance_of: loc_road
+      evidence: |
+        cart-roads and highways
+
+    loc_sparrow_mountains:
+      name: The Mountain Country
+      instance_of: loc_mountain
+      evidence: |
+        Among the mountaineers
+
+    loc_sparrow_church:
+      name: The Church
+      instance_of: loc_church
+      evidence: |
+        I came to a church
+
+
+classifications:
+
+  world_laws:
+    - law_parental_bird_counsel_maps_worldly_dangers
+
+  moral_regimes:
+    - moral_providential_protection
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_endurance
+    - agency_social_rank
+    - agency_domestic_labor
+    - agency_violence
+
+  affects_driving:
+    - affect_grief
+    - affect_joy
+    - affect_maternal_love
+    - affect_fear
+    - affect_hunger
+
+  symbol_numbers:
+    - num_4
+
+  threshold_types: []
+
+
+propp:
+
+  - function: func_displacement
+    order: 1
+    actor: sparrow_naughty_boys
+    victim: sparrow_eldest_son
+    scene: Boys pull out the nest, and the four young sparrows escape in the wind before their father can teach them.
+    evidence: |
+      some naughty boys pulled out the nest
+
+  - function: func_lack
+    order: 2
+    actor: sparrow_father
+    scene: The father grieves because his sons entered the world without warnings or instruction.
+    evidence: |
+      he had not first warned them of every kind of danger
+
+  - function: func_reunion
+    order: 3
+    actor: sparrow_father
+    scene: In autumn the old sparrow meets his four children again in a wheatfield.
+    evidence: |
+      the old bird met his four children again
+
+  - function: func_instruction
+    order: 4
+    actor: sparrow_father
+    scene: The father commands the children to listen, obey, and beware because little birds face great dangers.
+    evidence: |
+      Little birds have to encounter great dangers!
+
+  - function: func_report
+    order: 5
+    actor: sparrow_eldest_son
+    scene: The eldest reports surviving in gardens and learning the danger of hollow green poles.
+    evidence: |
+      I stayed in the gardens
+
+  - function: func_report
+    order: 6
+    actor: sparrow_second_son
+    scene: The second reports surviving at court and learning about traps in the stable straw.
+    evidence: |
+      stable-boys make traps and fix their gins and snares in the straw
+
+  - function: func_report
+    order: 7
+    actor: sparrow_third_son
+    scene: The third reports foraging on roads and learning that mountain people carry stones already.
+    evidence: |
+      carry a bit of rock, or ore, ready beforehand
+
+  - function: func_report
+    order: 8
+    actor: sparrow_youngest_son
+    scene: The youngest explains that church teaching, harmless food, and trust in God preserved him.
+    evidence: |
+      The Father of all sparrows fed me all the summer through
+
+  - function: func_moral_closure
+    order: 9
+    actor: sparrow_father
+    beneficiary: sparrow_youngest_son
+    scene: The father accepts the pious lesson and closes with a maxim of patient divine trust.
+    evidence: |
+      He who to God commits his ways
+
+
+edges:
+
+  - from: sparrow_naughty_boys
+    label: PULL_OUT
+    to: obj_sparrow_swallow_nest
+    evidence: |
+      some naughty boys pulled out the nest
+
+  - from: sparrow_eldest_son
+    label: IS_SCATTERED_BY
+    to: obj_sparrow_swallow_nest
+    evidence: |
+      all the birds got safely away in the high wind
+
+  - from: sparrow_father
+    label: GRIEVES_FOR
+    to: sparrow_eldest_son
+    evidence: |
+      the old bird was grieved
+
+  - from: sparrow_father
+    label: MEETS_CHILDREN_IN
+    to: loc_sparrow_wheatfield
+    evidence: |
+      met his four children again
+
+  - from: sparrow_father
+    label: WARNS
+    to: sparrow_eldest_son
+    evidence: |
+      listen to my words, obey your father
+
+  - from: sparrow_eldest_son
+    label: FORAGES_IN
+    to: loc_sparrow_gardens
+    evidence: |
+      I stayed in the gardens
+
+  - from: sparrow_father
+    label: WARNS_AGAINST
+    to: obj_sparrow_green_hollow_pole
+    evidence: |
+      long green poles which are hollow inside
+
+  - from: sparrow_eldest_son
+    label: KNOWS_DECOY
+    to: obj_sparrow_leaf_wax_decoy
+    evidence: |
+      a little green leaf is stuck over the hole with wax
+
+  - from: sparrow_second_son
+    label: LIVED_AT
+    to: loc_sparrow_court
+    evidence: |
+      At court
+
+  - from: sparrow_father
+    label: DIRECTS_TO_FORAGE_IN
+    to: loc_sparrow_horse_stable
+    evidence: |
+      keep to the horses’ stable
+
+  - from: sparrow_second_son
+    label: KNOWS_DANGER_OF
+    to: obj_sparrow_stable_snares
+    evidence: |
+      gins and snares in the straw
+
+  - from: sparrow_third_son
+    label: FORAGES_ON
+    to: loc_sparrow_cart_roads
+    evidence: |
+      cart-roads and highways
+
+  - from: sparrow_father
+    label: WARNS_AGAINST
+    to: obj_sparrow_pocket_ore
+    evidence: |
+      a bit of rock, or ore, ready beforehand
+
+  - from: sparrow_third_son
+    label: LEARNED_AMONG
+    to: loc_sparrow_mountains
+    evidence: |
+      Among the mountaineers
+
+  - from: sparrow_father
+    label: WARNS_OF
+    to: sparrow_predatory_birds
+    evidence: |
+      crooked beaks and long claws
+
+  - from: sparrow_youngest_son
+    label: TAKES_REFUGE_IN
+    to: loc_sparrow_church
+    evidence: |
+      I came to a church
+
+  - from: sparrow_youngest_son
+    label: FEEDS_WITHOUT_INJURY
+    to: agency_domestic_labor
+    evidence: |
+      he who feeds himself without injury to other people fares well
+
+  - from: sparrow_youngest_son
+    label: COMMITS_SELF_TO_GOD
+    to: moral_providential_protection
+    evidence: |
+      commits himself and his lawful food, evening and morning, faithfully to God
+
+  - from: sparrow_father
+    label: ACCEPTS_PIOUS_COUNSEL_OF
+    to: sparrow_youngest_son
+    evidence: |
+      all will be well with thee

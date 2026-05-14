@@ -1,0 +1,573 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-skilful-huntsman
+khm: 111
+atu: '304'
+atu_name: The Skilful Huntsman
+canonical_source: ../../2-silver/canonical/the-skilful-huntsman/canonical.txt
+title: The Skilful Huntsman
+
+
+entities:
+
+  characters:
+
+    skilful_huntsman:
+      name: The Skilful Huntsman
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_violence, agency_cunning, agency_endurance, agency_social_rank]
+      speech_acts_performed: [speech_request, speech_testimony]
+      affects: [affect_pity, affect_love, affect_courage, affect_joy]
+      traits: [locksmith-apprentice, trained-huntsman, perfect-marksman, tree-sleeper, giant-outwitter, princess-rescuer, proof-keeper, foreign-lord-disguise, king-heir]
+      evidence: |
+        he was a skilled huntsman, and that whatever he aimed at with his gun, he was certain to hit
+
+    skilful_father:
+      name: The Huntsman's Father
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      traits: [departure-permitter, journey-money-giver, final-household-beneficiary]
+      evidence: |
+        gave him some money for his journey
+
+    skilful_green_huntsman:
+      name: The Green Huntsman Teacher
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_domestic_labor]
+      traits: [hunting-master, apprenticeship-teacher, air-gun-giver]
+      evidence: |
+        a huntsman dressed in green
+
+    skilful_three_giants:
+      name: The Three Giants by the Fire
+      species: sp_human
+      being_type: being_giant
+      agency_modes: [agency_violence, agency_speech, agency_social_rank]
+      affects: [affect_hunger, affect_anger, affect_greed]
+      traits: [forest-giants, ox-roasters, princess-abductors, dog-fearing-raiders, decapitated-enemies]
+      evidence: |
+        three giants were sitting by it, who had an ox on the spit
+
+    skilful_warning_dog:
+      name: The Little Warning Dog
+      species: sp_dog
+      agency_modes: [agency_speech]
+      traits: [palace-alarm, bark-waker, shot-guardian]
+      evidence: |
+        a tiny little dog, which begins to bark directly any one goes near
+
+    skilful_princess:
+      name: The Sleeping King's Daughter
+      archetypes: [arc_imprisoned_maiden]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_endurance, agency_speech]
+      existential_states: [state_hidden_identity]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_fear, affect_love, affect_grief, affect_joy]
+      traits: [sleeping-princess, giant-target, proof-token-bearer, false-hero-refuser, pottery-humiliated-maiden, forest-hut-cook, true-rescuer-recognizer, huntsman-bride]
+      evidence: |
+        the room where the King’s daughter was lying sleeping
+
+    skilful_old_king:
+      name: The Old King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning, agency_violence]
+      speech_acts_performed: [speech_command, speech_riddle]
+      affects: [affect_joy, affect_anger]
+      traits: [awakened-father, false-claim-believer, coercive-marriage-father, pottery-test-arranger, proof-accepting-judge, feast-questioner]
+      evidence: |
+        The King summoned his whole court together
+
+    skilful_false_captain:
+      name: The One-Eyed Captain
+      archetypes: [arc_false_hero]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      existential_states: [state_maimed, state_deceived]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_pride, affect_greed]
+      traits: [one-eyed-captain, false-rescuer, hideous-suitor, tongue-lacking-claimant, self-sentencing-liar]
+      evidence: |
+        he had a captain, who was one-eyed and a hideous man, and he said that he had done it
+
+    skilful_potter:
+      name: The Potter
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation, agency_speech]
+      traits: [crockery-lender, debt-holder, second-loan-refuser]
+      evidence: |
+        she should go to a potter
+
+    skilful_peasants:
+      name: The Peasants with Carts
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation]
+      traits: [cart-drivers, pottery-breakers, royal-instrumental-agents]
+      evidence: |
+        he arranged with some peasants to drive over it with their carts
+
+  magic_objects:
+
+    obj_skilful_air_gun:
+      name: The Never-Missing Air-Gun
+      instance_of: obj_never_miss_gun
+      object_kind: weapon
+      attributes:
+        function: hits meat, warning dog, and any target without fail
+      evidence: |
+        an air-gun, which had, however, this property, that it hit its mark without fail
+
+    obj_skilful_hat_marker:
+      name: The Hat Used as a Direction Marker
+      object_kind: token
+      attributes:
+        function: marks the direction of the distant fire after descending from the tree
+      evidence: |
+        threw it down in the direction of the light
+
+    obj_skilful_silver_sword:
+      name: The King's Silver Sword with the Golden Star
+      object_kind: weapon
+      attributes:
+        function: authorizes killing everything that opposes its bearer
+      evidence: |
+        a sword was hanging on the wall which was made of pure silver
+
+    obj_skilful_sealed_letter:
+      name: The Sealed Letter Explaining the Sword
+      object_kind: token
+      attributes:
+        function: states the sword's killing power and legitimates its use
+      evidence: |
+        inside it was written that whosoever had the sword could kill everything which opposed him
+
+    obj_skilful_giant_tongues:
+      name: The Three Giants' Tongues
+      instance_of: obj_forensic_token
+      object_kind: token
+      attributes:
+        function: bodily trophies proving who truly killed the giants
+      evidence: |
+        he cut out their tongues and put them in his knapsack
+
+    obj_skilful_slipper_token:
+      name: The Princess's Right Slipper with the King's Name
+      instance_of: obj_forensic_token
+      object_kind: garment
+      attributes:
+        function: named proof taken without touching the sleeping princess
+      evidence: |
+        the right slipper with the King’s name
+
+    obj_skilful_neck_kerchief_corner:
+      name: The Cut Corner of the Princess's Neck-Kerchief
+      instance_of: obj_forensic_token
+      object_kind: garment
+      attributes:
+        function: named textile proof of access to the sleeping chamber
+      evidence: |
+        cut the right corner off
+
+    obj_skilful_nightdress_piece:
+      name: The Piece of the Princess's Night-Dress
+      instance_of: obj_forensic_token
+      object_kind: garment
+      attributes:
+        function: intimate proof taken without waking or touching the princess
+      evidence: |
+        he cut a morsel from this also
+
+    obj_skilful_broken_crockery:
+      name: The Broken Crockery Stall
+      object_kind: material
+      attributes:
+        function: royal humiliation device meant to force the princess into marriage with the false captain
+      evidence: |
+        broke all she had into tiny fragments
+
+  locations:
+
+    loc_skilful_fathers_house:
+      name: The Father's House
+      instance_of: loc_house
+      evidence: |
+        told his father he would now go out into the world
+
+    loc_skilful_large_forest:
+      name: The Very Large Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        a very large forest, which he could not get to the end of in one day
+
+    loc_skilful_high_tree:
+      name: The High Tree Refuge
+      instance_of: loc_tree
+      threshold_type: threshold_forest
+      evidence: |
+        seated himself in a high tree
+
+    loc_skilful_giant_fire:
+      name: The Giants' Enormous Fire
+      instance_of: loc_hearth
+      evidence: |
+        it was an enormous fire
+
+    loc_skilful_lake:
+      name: The Great Lake before the Tower
+      evidence: |
+        outside the forest there was a great lake
+
+    loc_skilful_tower:
+      name: The Princess's Tower across the Lake
+      instance_of: loc_tower
+      threshold_type: threshold_doorway
+      evidence: |
+        behind which stood a tower
+
+    loc_skilful_castle:
+      name: The Sleeping Royal Castle
+      instance_of: loc_castle
+      evidence: |
+        he went into the castle
+
+    loc_skilful_princess_room:
+      name: The Sleeping Princess's Room
+      instance_of: loc_bedchamber
+      threshold_type: threshold_doorway
+      evidence: |
+        he entered the room where the King’s daughter was lying sleeping
+
+    loc_skilful_gate:
+      name: The Gate Where the Giants Creep In
+      instance_of: loc_gate
+      threshold_type: threshold_gate
+      evidence: |
+        when he came to the gate again
+
+    loc_skilful_pottery_street:
+      name: The Street Pottery Stall
+      instance_of: loc_marketplace
+      evidence: |
+        placed her stall in the street
+
+    loc_skilful_forest_hut:
+      name: The Forest Hut of Free Food
+      instance_of: loc_house
+      threshold_type: threshold_forest
+      evidence: |
+        a little hut built for thee in the forest outside
+
+
+classifications:
+
+  world_laws:
+    - law_trophy_tokens_expose_false_rescuer
+    - law_false_boast_imposes_impossible_task
+
+  moral_regimes:
+    - moral_retributive
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_violence
+    - agency_cunning
+    - agency_social_rank
+    - agency_endurance
+
+  affects_driving:
+    - affect_courage
+    - affect_love
+    - affect_greed
+    - affect_grief
+    - affect_joy
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+    - threshold_gate
+
+
+propp:
+
+  - function: func_departure
+    order: 1
+    actor: skilful_huntsman
+    scene: The locksmith's apprentice leaves home to seek fortune.
+    evidence: |
+      go out into the world and seek his fortune
+
+  - function: func_training
+    order: 2
+    actor: skilful_green_huntsman
+    beneficiary: skilful_huntsman
+    scene: The youth binds himself to the green huntsman and learns hunting.
+    evidence: |
+      bound himself to him for some years, and learnt the art of hunting
+
+  - function: func_acquisition
+    order: 3
+    actor: skilful_huntsman
+    scene: The huntsman receives the never-missing air-gun.
+    evidence: |
+      it hit its mark without fail whenever he shot with it
+
+  - function: func_encounter
+    order: 4
+    actor: skilful_huntsman
+    scene: The huntsman finds the giants' fire in the forest.
+    evidence: |
+      three giants were sitting by it
+
+  - function: func_test
+    order: 5
+    actor: skilful_huntsman
+    scene: Perfect shots from hiding prove his usefulness to the giants.
+    evidence: |
+      the huntsman again shot it away from him
+
+  - function: func_villainy
+    order: 6
+    actor: skilful_three_giants
+    victim: skilful_princess
+    scene: The giants plan to abduct the princess from the tower.
+    evidence: |
+      in the tower was imprisoned a lovely princess, whom they wished very much to carry off
+
+  - function: func_rescue
+    order: 7
+    actor: skilful_huntsman
+    beneficiary: skilful_princess
+    scene: The huntsman kills the warning dog, enters alone, and protects the sleeping princess.
+    evidence: |
+      How can I give an innocent maiden into the power of the wild giants
+
+  - function: func_victory
+    order: 8
+    actor: skilful_huntsman
+    victim: skilful_three_giants
+    scene: The huntsman draws the giants through the hole and beheads them with the sword.
+    evidence: |
+      cut it off at one stroke with his sword
+
+  - function: func_false_claim
+    order: 9
+    actor: skilful_false_captain
+    scene: The one-eyed captain claims the rescue and is promised the princess.
+    evidence: |
+      he said that he had done it
+
+  - function: func_exile
+    order: 10
+    actor: skilful_old_king
+    victim: skilful_princess
+    scene: The king humiliates the princess to force marriage with the false captain.
+    evidence: |
+      wished by this to force her to marry the captain
+
+  - function: func_recognition
+    order: 11
+    actor: skilful_huntsman
+    beneficiary: skilful_princess
+    scene: The huntsman reveals the tokens and the princess recognizes her true rescuer.
+    evidence: |
+      he also showed her the slipper, and the corner of the neck-kerchief, and the bit of the night-dress
+
+  - function: func_exposure
+    order: 12
+    actor: skilful_old_king
+    victim: skilful_false_captain
+    scene: The king's riddle about missing giant tongues exposes the false claimant.
+    evidence: |
+      where the giants’ tongues were
+
+  - function: func_punishment
+    order: 13
+    actor: skilful_old_king
+    victim: skilful_false_captain
+    scene: The captain pronounces his own sentence and is torn in pieces.
+    evidence: |
+      he had pronounced his own sentence
+
+  - function: func_wedding
+    order: 14
+    actor: skilful_princess
+    beneficiary: skilful_huntsman
+    scene: The princess marries the huntsman, who later receives the kingdom.
+    evidence: |
+      the King’s daughter was married to the huntsman
+
+
+edges:
+
+  - from: skilful_father
+    label: SENDS_OUT
+    to: skilful_huntsman
+    evidence: |
+      gave him some money for his journey
+
+  - from: skilful_green_huntsman
+    label: TRAINS
+    to: skilful_huntsman
+    evidence: |
+      learnt the art of hunting
+
+  - from: skilful_green_huntsman
+    label: GIVES
+    to: obj_skilful_air_gun
+    evidence: |
+      the huntsman gave him nothing in the way of payment but an air-gun
+
+  - from: skilful_huntsman
+    label: MARKS_DIRECTION_WITH
+    to: obj_skilful_hat_marker
+    evidence: |
+      threw it down in the direction of the light
+
+  - from: skilful_huntsman
+    label: SHOOTS
+    to: skilful_three_giants
+    evidence: |
+      the huntsman shot it out of his hand
+
+  - from: skilful_three_giants
+    label: SEEKS_TO_ABDUCT
+    to: skilful_princess
+    evidence: |
+      a lovely princess, whom they wished very much to carry off
+
+  - from: skilful_huntsman
+    label: SHOOTS
+    to: skilful_warning_dog
+    evidence: |
+      took his air-gun and shot it dead
+
+  - from: skilful_huntsman
+    label: TAKES
+    to: obj_skilful_silver_sword
+    evidence: |
+      took the sword from the wall
+
+  - from: obj_skilful_sealed_letter
+    label: AUTHORIZES
+    to: obj_skilful_silver_sword
+    evidence: |
+      whosoever had the sword could kill everything which opposed him
+
+  - from: skilful_huntsman
+    label: SPARES
+    to: skilful_princess
+    evidence: |
+      left her lying asleep undisturbed
+
+  - from: skilful_huntsman
+    label: TAKES
+    to: obj_skilful_slipper_token
+    evidence: |
+      the right slipper with the King’s name, and thrust that in
+
+  - from: skilful_huntsman
+    label: TAKES
+    to: obj_skilful_neck_kerchief_corner
+    evidence: |
+      cut the right corner off
+
+  - from: skilful_huntsman
+    label: TAKES
+    to: obj_skilful_nightdress_piece
+    evidence: |
+      he cut a morsel from this also
+
+  - from: skilful_huntsman
+    label: BEHEADS
+    to: skilful_three_giants
+    evidence: |
+      then he killed the third also
+
+  - from: skilful_huntsman
+    label: TAKES
+    to: obj_skilful_giant_tongues
+    evidence: |
+      he cut out their tongues and put them in his knapsack
+
+  - from: skilful_false_captain
+    label: FALSELY_CLAIMS_RESCUE_OF
+    to: skilful_princess
+    evidence: |
+      he said that he had done it
+
+  - from: skilful_old_king
+    label: PROMISES_TO
+    to: skilful_false_captain
+    evidence: |
+      he should marry his daughter
+
+  - from: skilful_princess
+    label: REFUSES
+    to: skilful_false_captain
+    evidence: |
+      Rather than marry him, dear father, I will go away into the world
+
+  - from: skilful_old_king
+    label: HUMILIATES
+    to: skilful_princess
+    evidence: |
+      she should take off her royal garments and wear peasant’s clothing
+
+  - from: skilful_peasants
+    label: BREAKS
+    to: obj_skilful_broken_crockery
+    evidence: |
+      broke all she had into tiny fragments
+
+  - from: skilful_princess
+    label: WORKS_AT
+    to: loc_skilful_forest_hut
+    evidence: |
+      cook for every one, but thou shalt take no money for it
+
+  - from: skilful_huntsman
+    label: REVEALS
+    to: obj_skilful_giant_tongues
+    evidence: |
+      he took their tongues out of his knapsack in proof
+
+  - from: skilful_huntsman
+    label: REVEALS
+    to: obj_skilful_slipper_token
+    evidence: |
+      showed her the slipper
+
+  - from: law_trophy_tokens_expose_false_rescuer
+    label: EXPOSES
+    to: skilful_false_captain
+    evidence: |
+      where the giants’ tongues were
+
+  - from: skilful_old_king
+    label: IMPRISONS
+    to: skilful_false_captain
+    evidence: |
+      the captain was put in prison
+
+  - from: skilful_old_king
+    label: EXECUTES
+    to: skilful_false_captain
+    evidence: |
+      torn in four pieces
+
+  - from: skilful_princess
+    label: MARRIES
+    to: skilful_huntsman
+    evidence: |
+      married to the huntsman
+
+  - from: skilful_huntsman
+    label: INHERITS
+    to: skilful_old_king
+    evidence: |
+      after the death of the old King he received the kingdom

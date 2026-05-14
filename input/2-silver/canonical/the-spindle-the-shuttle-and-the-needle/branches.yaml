@@ -1,0 +1,10 @@
+slug: the-spindle-the-shuttle-and-the-needle
+khm: 188
+atu: '585'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg52521-grimm-olcott
+  weight: supplementary
+sections: []

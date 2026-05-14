@@ -1,0 +1,520 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-three-army-surgeons
+khm: 118
+atu: '660'
+atu_name: The Three Army Surgeons
+canonical_source: ../../2-silver/canonical/the-three-army-surgeons/canonical.txt
+title: The Three Army Surgeons
+
+
+entities:
+
+  characters:
+
+    army_surgeons_first:
+      name: The First Army-Surgeon with the Thief's Hand
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_violence, agency_speech]
+      existential_states: [state_maimed]
+      transformations: [transform_resurrection_by_remedy]
+      speech_acts_performed: [speech_boast, speech_testimony]
+      affects: [affect_pride, affect_shame]
+      traits: [travelling-surgeon, self-mutilating-demonstrator, salve-user, thief-hand-bearer, involuntary-stealer, compensated]
+      evidence: |
+        the first said he would cut off his hand, and put it on again early next morning
+
+    army_surgeons_second:
+      name: The Second Army-Surgeon with the Cat's Eyes
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_violence, agency_speech]
+      existential_states: [state_maimed, state_blind]
+      transformations: [transform_resurrection_by_remedy]
+      speech_acts_performed: [speech_boast, speech_testimony]
+      affects: [affect_pride, affect_fear]
+      traits: [travelling-surgeon, self-mutilating-demonstrator, salve-user, cat-eye-bearer, night-seer, wrong-organ-diagnoser, compensated]
+      evidence: |
+        the second said he would tear out his heart, and replace it next morning
+
+    army_surgeons_third:
+      name: The Third Army-Surgeon with the Pig's Heart
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_violence, agency_speech]
+      existential_states: [state_maimed]
+      transformations: [transform_resurrection_by_remedy]
+      speech_acts_performed: [speech_boast, speech_testimony]
+      affects: [affect_pride]
+      traits: [travelling-surgeon, self-mutilating-demonstrator, salve-user, pig-heart-bearer, dirt-rooter, compensated]
+      evidence: |
+        the third said he would cut out his eyes and heal them again next morning
+
+    army_surgeons_innkeeper:
+      name: The First Innkeeper / Host
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_request, speech_command]
+      affects: [affect_fear]
+      traits: [host, skill-witness, careless-delegator, blamed-householder, compensation-payer]
+      evidence: |
+        The host asked whence they came, and whither they were going?
+
+    army_surgeons_servant_girl:
+      name: The Servant-Girl
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_cunning, agency_speech]
+      speech_acts_performed: [speech_request]
+      affects: [affect_love, affect_fear, affect_shame]
+      traits: [cupboard-custodian, secret-lover, forgetful-door-leaver, substitute-parts-arranger, backdoor-fugitive]
+      evidence: |
+        The girl, however, had a lover in secret, who was a soldier
+
+    army_surgeons_soldier_lover:
+      name: The Secret Soldier Lover
+      species: sp_human
+      agency_modes: [agency_cunning, agency_violence, agency_speech]
+      speech_acts_performed: [speech_command]
+      affects: [affect_love]
+      traits: [secret-lover, night-visitor, food-seeker, gallows-hand-cutter, cat-eye-cutter, pig-heart-fetcher]
+      evidence: |
+        the soldier came and wanted something to eat
+
+    army_surgeons_cat:
+      name: The Household Cat
+      species: sp_cat
+      agency_modes: [agency_cunning]
+      traits: [cupboard-thief, body-part-stealer, eye-source]
+      evidence: |
+        the cat came creeping in, found the cupboard open
+
+    army_surgeons_hanged_thief:
+      name: The Hanged Thief Outside the Inn
+      species: sp_human
+      existential_states: [state_liminal_dead]
+      agency_modes: [agency_violence]
+      traits: [executed-thief, gallows-body, involuntary-hand-donor]
+      evidence: |
+        there is a thief hanging outside on the gallows
+
+    army_surgeons_pig:
+      name: The Dead Pig in the Cellar
+      species: sp_pig
+      agency_modes: [agency_domestic_labor]
+      traits: [slaughtered-food-animal, heart-source]
+      evidence: |
+        are not the dead pigs in the cellar?
+
+    army_surgeons_rich_man:
+      name: The Rich Man Counting Money
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      affects: [affect_greed]
+      traits: [money-counter, theft-victim]
+      evidence: |
+        there at a table in the corner sat a rich man counting money
+
+  magic_objects:
+
+    obj_army_surgeons_rejoining_salve:
+      name: The Rejoining Salve in the Little Bottle
+      instance_of: obj_rejoining_salve
+      object_kind: material
+      attributes:
+        function: joins severed or substituted parts directly to the surgeons' bodies
+      evidence: |
+        They, however, had a salve, with which they rubbed themselves, which joined parts together
+
+    obj_army_surgeons_body_parts_plate:
+      name: The Plate of Hand, Heart, and Eyes
+      object_kind: token
+      attributes:
+        function: custody vessel whose emptiness reveals the loss of the original organs
+      evidence: |
+        laid them all together on a plate
+
+    obj_army_surgeons_original_organs:
+      name: The Surgeons' Original Hand, Heart, and Eyes
+      object_kind: material
+      attributes:
+        function: original body parts removed for the boastful demonstration and lost by the cat
+      evidence: |
+        took the hand and heart and eyes of the three army-surgeons
+
+    obj_army_surgeons_thief_hand:
+      name: The Thief's Right Hand
+      object_kind: material
+      attributes:
+        function: substitute hand that compels involuntary stealing
+      evidence: |
+        cut the poor sinner’s right hand off
+
+    obj_army_surgeons_cat_eyes:
+      name: The Cat's Eyes
+      object_kind: material
+      attributes:
+        function: substitute eyes that carry animal night-sight and mouse-seeing
+      evidence: |
+        caught the cat and cut its eyes out
+
+    obj_army_surgeons_pig_heart:
+      name: The Pig's Heart
+      object_kind: material
+      attributes:
+        function: substitute heart that transfers piggish attraction to dirt
+      evidence: |
+        fetched a pig’s heart
+
+    obj_army_surgeons_sharp_knife:
+      name: The Sharp Knife
+      object_kind: weapon
+      attributes:
+        function: cuts replacement parts from the thief and cat
+      evidence: |
+        the girl gave him a sharp knife
+
+    obj_army_surgeons_compensation_money:
+      name: The Innkeeper's Compensation Money
+      object_kind: treasure
+      attributes:
+        function: pays off the wronged surgeons without restoring their proper organs
+      evidence: |
+        He gave them what he had, and whatever he could get together
+
+  locations:
+
+    loc_army_surgeons_first_inn:
+      name: The First Inn of the Surgical Boast
+      instance_of: loc_inn
+      threshold_type: threshold_doorway
+      evidence: |
+        came to an inn where they wanted to pass the night
+
+    loc_army_surgeons_cupboard:
+      name: The Inn Cupboard Holding the Plate
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        set it in the cupboard, and take good care of it
+
+    loc_army_surgeons_gallows:
+      name: The Gallows Outside the Inn
+      instance_of: loc_gallows
+      threshold_type: threshold_doorway
+      evidence: |
+        a thief hanging outside on the gallows
+
+    loc_army_surgeons_cellar:
+      name: The Cellar of Dead Pigs
+      instance_of: loc_cellar
+      evidence: |
+        dead pigs in the cellar
+
+    loc_army_surgeons_road:
+      name: The Road of Wrong-Organ Symptoms
+      instance_of: loc_road
+      evidence: |
+        As they were on their way
+
+    loc_army_surgeons_second_inn_bar:
+      name: The Second Inn Bar
+      instance_of: loc_inn
+      threshold_type: threshold_doorway
+      evidence: |
+        They went into the bar together
+
+    loc_army_surgeons_backdoor:
+      name: The Servant-Girl's Backdoor Escape
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        she had run out by the backdoor
+
+
+classifications:
+
+  world_laws:
+    - law_mismatched_body_parts_transfer_agency
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_violence
+    - agency_domestic_labor
+    - agency_cunning
+    - agency_speech
+
+  affects_driving:
+    - affect_pride
+    - affect_love
+    - affect_fear
+    - affect_shame
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_initial_situation
+    order: 1
+    actor: army_surgeons_first
+    scene: Three army-surgeons travel the world confident that their art is perfect.
+    evidence: |
+      Three army-surgeons who thought they knew their art perfectly
+
+  - function: func_challenge
+    order: 2
+    actor: army_surgeons_innkeeper
+    scene: The host asks the surgeons to show what they can do.
+    evidence: |
+      Just show me for once in a way what you can do
+
+  - function: func_boast
+    order: 3
+    actor: army_surgeons_first
+    scene: Each surgeon promises to remove and restore a vital body part overnight.
+    evidence: |
+      cut off his hand, and put it on again early next morning
+
+  - function: func_self_mutilation
+    order: 4
+    actor: army_surgeons_first
+    scene: The surgeons remove hand, heart, and eyes and place them on a plate.
+    evidence: |
+      laid them all together on a plate
+
+  - function: func_custody
+    order: 5
+    actor: army_surgeons_innkeeper
+    beneficiary: army_surgeons_servant_girl
+    scene: The innkeeper gives the plate to the servant-girl for safekeeping in the cupboard.
+    evidence: |
+      take good care of it
+
+  - function: func_violation
+    order: 6
+    actor: army_surgeons_servant_girl
+    scene: The servant-girl feeds her secret lover and forgets the cupboard-door open.
+    evidence: |
+      in her love forgot to shut the cupboard-door again
+
+  - function: func_loss
+    order: 7
+    actor: army_surgeons_cat
+    victim: army_surgeons_servant_girl
+    scene: The cat steals the original hand, heart, and eyes from the open cupboard.
+    evidence: |
+      took the hand and heart and eyes of the three army-surgeons
+
+  - function: func_substitution
+    order: 8
+    actor: army_surgeons_soldier_lover
+    beneficiary: army_surgeons_servant_girl
+    scene: The soldier lover replaces the lost organs with a thief's hand, cat's eyes, and pig's heart.
+    evidence: |
+      fetched a pig’s heart
+
+  - function: func_false_restoration
+    order: 9
+    actor: obj_army_surgeons_rejoining_salve
+    beneficiary: army_surgeons_first
+    scene: The surgeons attach the substitute parts with the salve and appear successful.
+    evidence: |
+      it grew to his arm directly
+
+  - function: func_revelation
+    order: 10
+    actor: army_surgeons_first
+    scene: The thief's hand steals, the cat's eyes see mice in darkness, and the pig's heart roots in dirt.
+    evidence: |
+      My hand twitches, and I am forced to snatch things whether I will or not.
+
+  - function: func_return
+    order: 11
+    actor: army_surgeons_second
+    scene: The surgeons realize they have not received their own organs and return to the innkeeper.
+    evidence: |
+      we have not got back again what is ours
+
+  - function: func_compensation
+    order: 12
+    actor: army_surgeons_innkeeper
+    beneficiary: army_surgeons_first
+    scene: The innkeeper pays a great deal of money under threat of having his house burned.
+    evidence: |
+      they would set his house on fire
+
+
+edges:
+
+  - from: army_surgeons_first
+    label: TRAVELS_WITH
+    to: army_surgeons_second
+    evidence: |
+      Three army-surgeons who thought they knew their art perfectly
+
+  - from: army_surgeons_first
+    label: ENTERS
+    to: loc_army_surgeons_first_inn
+    evidence: |
+      came to an inn where they wanted to pass the night
+
+  - from: army_surgeons_innkeeper
+    label: CHALLENGES
+    to: army_surgeons_first
+    evidence: |
+      Just show me for once in a way what you can do
+
+  - from: army_surgeons_first
+    label: CUTS_OFF
+    to: obj_army_surgeons_original_organs
+    evidence: |
+      cut off his hand
+
+  - from: army_surgeons_second
+    label: TEARS_OUT
+    to: obj_army_surgeons_original_organs
+    evidence: |
+      tear out his heart
+
+  - from: army_surgeons_third
+    label: CUTS_OUT
+    to: obj_army_surgeons_original_organs
+    evidence: |
+      cut out his eyes
+
+  - from: army_surgeons_first
+    label: POSSESSES
+    to: obj_army_surgeons_rejoining_salve
+    evidence: |
+      they carried the little bottle in which it was, constantly with them
+
+  - from: army_surgeons_innkeeper
+    label: ENTRUSTS
+    to: army_surgeons_servant_girl
+    evidence: |
+      The innkeeper gave it to a servant
+
+  - from: army_surgeons_servant_girl
+    label: STORES
+    to: obj_army_surgeons_body_parts_plate
+    evidence: |
+      set it in the cupboard
+
+  - from: army_surgeons_servant_girl
+    label: LOVES_SECRETLY
+    to: army_surgeons_soldier_lover
+    evidence: |
+      had a lover in secret, who was a soldier
+
+  - from: army_surgeons_servant_girl
+    label: LEAVES_OPEN
+    to: loc_army_surgeons_cupboard
+    evidence: |
+      forgot to shut the cupboard-door again
+
+  - from: army_surgeons_cat
+    label: STEALS
+    to: obj_army_surgeons_original_organs
+    evidence: |
+      took the hand and heart and eyes
+
+  - from: army_surgeons_soldier_lover
+    label: CUTS_FROM
+    to: army_surgeons_hanged_thief
+    evidence: |
+      cut the poor sinner’s right hand off
+
+  - from: army_surgeons_soldier_lover
+    label: CUTS_FROM
+    to: army_surgeons_cat
+    evidence: |
+      caught the cat and cut its eyes out
+
+  - from: army_surgeons_soldier_lover
+    label: FETCHES_FROM
+    to: loc_army_surgeons_cellar
+    evidence: |
+      went down and fetched a pig’s heart
+
+  - from: army_surgeons_first
+    label: ATTACHES
+    to: obj_army_surgeons_thief_hand
+    evidence: |
+      the first fixed the thief’s hand on
+
+  - from: army_surgeons_second
+    label: ATTACHES
+    to: obj_army_surgeons_cat_eyes
+    evidence: |
+      The second took the cat’s eyes
+
+  - from: army_surgeons_third
+    label: ATTACHES
+    to: obj_army_surgeons_pig_heart
+    evidence: |
+      The third fixed the pig’s heart
+
+  - from: obj_army_surgeons_rejoining_salve
+    label: JOINS
+    to: obj_army_surgeons_thief_hand
+    evidence: |
+      smeared it with his salve, and it grew to his arm directly
+
+  - from: obj_army_surgeons_pig_heart
+    label: TRANSFERS_TRAIT_TO
+    to: army_surgeons_third
+    evidence: |
+      rooted about in it with his nose as pigs do
+
+  - from: obj_army_surgeons_thief_hand
+    label: COMPELS
+    to: army_surgeons_first
+    evidence: |
+      I am forced to snatch things whether I will or not
+
+  - from: army_surgeons_first
+    label: STEALS_FROM
+    to: army_surgeons_rich_man
+    evidence: |
+      took a handful from it
+
+  - from: obj_army_surgeons_cat_eyes
+    label: TRANSFERS_SIGHT_TO
+    to: army_surgeons_second
+    evidence: |
+      do you see the white mice running about there?
+
+  - from: army_surgeons_second
+    label: DIAGNOSES_WRONG_PARTS
+    to: army_surgeons_first
+    evidence: |
+      we have not got back again what is ours
+
+  - from: army_surgeons_servant_girl
+    label: FLEES_THROUGH
+    to: loc_army_surgeons_backdoor
+    evidence: |
+      she had run out by the backdoor
+
+  - from: army_surgeons_first
+    label: THREATENS_BURNING_OF
+    to: loc_army_surgeons_first_inn
+    evidence: |
+      they would set his house on fire
+
+  - from: army_surgeons_innkeeper
+    label: PAYS
+    to: obj_army_surgeons_compensation_money
+    evidence: |
+      He gave them what he had, and whatever he could get together
+
+  - from: obj_army_surgeons_compensation_money
+    label: FAILS_TO_REPLACE
+    to: obj_army_surgeons_original_organs
+    evidence: |
+      they would rather have had their own proper organs

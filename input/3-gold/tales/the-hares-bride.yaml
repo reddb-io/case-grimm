@@ -1,0 +1,246 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-hares-bride
+khm: 66
+atu: '311'
+atu_name: Fitcher's Bird / Abducted Bride Self-Rescue
+canonical_source: ../../2-silver/canonical/the-hares-bride/canonical.txt
+title: The Hare's Bride
+
+
+entities:
+
+  characters:
+
+    hares_bride_maiden:
+      name: The Maiden
+      archetypes: [arc_reluctant_bride]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_domestic_labor, agency_object_mediation]
+      affects: [affect_fear, affect_grief]
+      traits: [cabbage-guard, three-times-invited, reluctant-rider, hare-bride, weeping-captive, decoy-maker, escaping-daughter]
+      evidence: |
+        The girl, however, was sad, for she was all alone.
+
+    hares_bride_mother:
+      name: The Mother
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_command]
+      traits: [garden-owner, daughter-sender, cabbage-protector, return-destination]
+      evidence: |
+        Then says the mother to the daughter, “Go into the garden, and
+        chase the hare away.”
+
+    hares_bride_little_hare:
+      name: The Little Hare
+      archetypes: [arc_coercive_animal_bridegroom]
+      species: sp_hare
+      agency_modes: [agency_speech, agency_animal_aid, agency_social_rank, agency_violence]
+      speech_acts_performed: [speech_command]
+      affects: [affect_longing, affect_grief]
+      traits: [cabbage-eater, repeated-suitor, tail-carrier, hut-owner, wedding-inviter, bride-caller, doll-striker, sorrowful-bridegroom]
+      evidence: |
+        Come, maiden, and seat yourself on my little hare’s tail, and
+        come with me into my little hare’s hut.
+
+    hares_bride_wedding_hares:
+      name: The Hare Wedding Guests
+      species: sp_hare
+      agency_modes: [agency_social_rank]
+      traits: [nonhuman-guests, merry, hungry, waiting]
+      evidence: |
+        They were all hares
+
+    hares_bride_crow_parson:
+      name: The Crow Parson
+      species: sp_bird
+      agency_modes: [agency_social_rank]
+      traits: [animal-cleric, wedding-officiant]
+      evidence: |
+        the crow was there as parson to marry the bride and bridegroom
+
+    hares_bride_fox_clerk:
+      name: The Fox Clerk
+      species: sp_fox
+      agency_modes: [agency_social_rank]
+      traits: [animal-clerk, wedding-attendant]
+      evidence: |
+        the fox as clerk
+
+  magic_objects:
+
+    obj_hares_bride_cabbages:
+      name: The Garden Cabbages
+      object_kind: food
+      attributes:
+        function: repeated object of hare trespass and cause of daughter being sent out
+      evidence: |
+        during the winter time ate all the cabbages
+
+    obj_hares_bride_green_cabbage_millet:
+      name: The Green Cabbage and Millet-Seed
+      object_kind: food
+      attributes:
+        function: wedding meal whose preparation keeps the bride in the hare's hut
+      evidence: |
+        Now cook green cabbage and millet-seed
+
+    obj_hares_bride_straw_doll:
+      name: The Straw-Doll Bride Decoy
+      instance_of: obj_decoy_bride_doll
+      object_kind: material
+      attributes:
+        dressed_as: hares_bride_maiden
+        placed_by: obj_hares_bride_millet_pan
+        function: false bride-presence that buys time for escape
+      evidence: |
+        she dresses a straw-doll in her clothes
+
+    obj_hares_bride_spoon:
+      name: The Spoon Given to the Doll
+      object_kind: tool
+      attributes:
+        function: makes the doll appear to be stirring the wedding food
+      evidence: |
+        gives her a spoon to stir with
+
+    obj_hares_bride_millet_pan:
+      name: The Pan with the Millet-Seed
+      object_kind: tool
+      attributes:
+        function: kitchen station where the decoy is placed
+      evidence: |
+        sets her by the pan with the millet-seed
+
+  locations:
+
+    loc_hares_bride_mother_garden:
+      name: The Mother's Cabbage Garden
+      instance_of: loc_garden
+      evidence: |
+        lived in a pretty garden with cabbages
+
+    loc_hares_bride_hare_hut:
+      name: The Little Hare's Hut
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        come with me into my little hare’s hut
+
+    loc_hares_bride_rainbow_altar:
+      name: The Altar Under the Rainbow
+      evidence: |
+        the altar was under the rainbow
+
+    loc_hares_bride_mothers_home:
+      name: The Mother's Home
+      instance_of: loc_house
+      evidence: |
+        goes back to her mother
+
+
+classifications:
+
+  world_laws:
+    - law_decoy_bride_buys_escape
+    - law_disguise_alters_social_reality
+
+  moral_regimes:
+    - moral_prudential_retreat
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+    - agency_domestic_labor
+    - agency_object_mediation
+
+  affects_driving:
+    - affect_fear
+    - affect_grief
+    - affect_longing
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: hares_bride_mother,
+      scene: "mother and daughter live in a cabbage garden during winter" }
+  - { function: func_villainy, order: 2, actor: hares_bride_little_hare,
+      scene: "hare repeatedly eats all the cabbages" }
+  - { function: func_command, order: 3, actor: hares_bride_mother,
+      scene: "mother sends the daughter to chase, drive, and hunt the hare away" }
+  - { function: func_repetition, order: 4, actor: hares_bride_little_hare,
+      scene: "hare repeats the invitation to ride on his tail to his hut" }
+  - { function: func_abduction, order: 5, actor: hares_bride_little_hare,
+      scene: "on the third day the girl sits on his tail and is taken far away" }
+  - { function: func_forced_wedding, order: 6, actor: hares_bride_little_hare,
+      scene: "hare orders cooking and invites animal wedding guests" }
+  - { function: func_lamentation, order: 7, actor: hares_bride_maiden,
+      scene: "the bride says nothing and weeps while the guests are merry, hungry, and waiting" }
+  - { function: func_escape, order: 8, actor: hares_bride_maiden,
+      scene: "maiden dresses a straw-doll in her clothes and returns to her mother" }
+  - { function: func_recognition, order: 9, actor: hares_bride_little_hare,
+      scene: "hare strikes the doll, sees it is not his bride, and goes away sorrowful" }
+
+
+edges:
+
+  # Garden trespass and triple invitation
+  - { from: hares_bride_little_hare, to: obj_hares_bride_cabbages, label: EATS,
+      evidence: "during the winter time ate all the cabbages." }
+  - { from: hares_bride_mother, to: hares_bride_maiden, label: COMMANDS,
+      evidence: "Go into the garden, and chase the hare away." }
+  - { from: hares_bride_maiden, to: hares_bride_little_hare, label: DRIVES_AWAY_VERBALLY,
+      evidence: "Sh-sh, hare, you are still eating up all our cabbages." }
+  - { from: hares_bride_little_hare, to: hares_bride_maiden, label: INVITES_TO_HUT,
+      evidence: "seat yourself on my little hare’s tail" }
+  - { from: hares_bride_maiden, to: hares_bride_little_hare, label: REFUSES,
+      evidence: "The girl will not do it." }
+  - { from: hares_bride_maiden, to: hares_bride_little_hare, label: REFUSES,
+      evidence: "The maiden refuses." }
+  - { from: hares_bride_maiden, to: hares_bride_little_hare, label: RIDES_ON_TAIL_OF,
+      evidence: "The girl seats herself on the little hare’s tail" }
+  - { from: hares_bride_little_hare, to: hares_bride_maiden, label: ABDUCTS,
+      evidence: "then the hare takes her far away to his little hut" }
+
+  # Animal wedding household
+  - { from: hares_bride_little_hare, to: obj_hares_bride_green_cabbage_millet, label: ORDERS_COOKING_OF,
+      evidence: "Now cook green cabbage and millet-seed" }
+  - { from: hares_bride_little_hare, to: hares_bride_wedding_hares, label: INVITES,
+      evidence: "I will invite the wedding-guests." }
+  - { from: hares_bride_crow_parson, to: hares_bride_little_hare, label: OFFICIATES_WEDDING_FOR,
+      evidence: "the crow was there as parson to marry the bride and bridegroom" }
+  - { from: hares_bride_fox_clerk, to: hares_bride_little_hare, label: SERVES_AS_CLERK_FOR,
+      evidence: "the fox as clerk" }
+  - { from: loc_hares_bride_rainbow_altar, to: hares_bride_little_hare, label: HOSTS_WEDDING_FOR,
+      evidence: "the altar was under the rainbow." }
+  - { from: hares_bride_maiden, to: affect_grief, label: FEELS,
+      evidence: "The girl, however, was sad" }
+  - { from: hares_bride_little_hare, to: hares_bride_maiden, label: SUMMONS_TO_GUESTS,
+      evidence: "Open the doors, open the doors, the wedding-guests are merry." }
+  - { from: hares_bride_little_hare, to: hares_bride_maiden, label: SUMMONS_TO_COOK,
+      evidence: "Take off the lid, take off the lid, the wedding-guests are hungry." }
+
+  # Decoy and escape
+  - { from: hares_bride_maiden, to: obj_hares_bride_straw_doll, label: DRESSES_AS_DECOY,
+      evidence: "she dresses a straw-doll in her clothes" }
+  - { from: hares_bride_maiden, to: obj_hares_bride_spoon, label: GIVES_TO_DECOY,
+      evidence: "gives her a spoon to stir with" }
+  - { from: hares_bride_maiden, to: obj_hares_bride_millet_pan, label: PLACES_DECOY_BY,
+      evidence: "sets her by the pan with the millet-seed" }
+  - { from: obj_hares_bride_straw_doll, to: law_decoy_bride_buys_escape, label: ACTIVATES,
+      evidence: "goes back to her mother." }
+  - { from: hares_bride_maiden, to: loc_hares_bride_mothers_home, label: ESCAPES_TO,
+      evidence: "goes back to her mother." }
+  - { from: hares_bride_little_hare, to: obj_hares_bride_straw_doll, label: STRIKES,
+      evidence: "strikes the doll on the head" }
+  - { from: hares_bride_little_hare, to: obj_hares_bride_straw_doll, label: RECOGNIZES_AS_FALSE,
+      evidence: "sees that it is not his bride" }
+  - { from: hares_bride_little_hare, to: affect_grief, label: FEELS,
+      evidence: "goes away and is sorrowful." }

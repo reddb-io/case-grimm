@@ -1,0 +1,495 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-devil-and-his-grandmother
+khm: 125
+atu: '812'
+atu_name: The Devil and His Grandmother
+canonical_source: ../../2-silver/canonical/the-devil-and-his-grandmother/canonical.txt
+title: The Devil and His Grandmother
+
+
+entities:
+
+  characters:
+
+    devil_grandmother_three_soldiers:
+      name: The Three Deserting Soldiers
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_object_mediation, agency_endurance]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_bargain, speech_riddle]
+      affects: [affect_hunger, affect_fear, affect_joy]
+      traits: [underpaid-soldiers, deserters, cornfield-hiders, devil-servants, gold-whip-bearers, seven-year-bargainers, riddle-answerers, freed-men]
+      evidence: |
+        three of them agreed among themselves to desert
+
+    devil_grandmother_first_soldier:
+      name: The First Soldier
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_riddle]
+      affects: [affect_fear, affect_joy]
+      traits: [first-riddle-answerer, roast-meat-answerer]
+      evidence: |
+        Then the first soldier began
+
+    devil_grandmother_second_soldier:
+      name: The Second Soldier
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_riddle]
+      affects: [affect_fear, affect_joy]
+      traits: [second-riddle-answerer, spoon-answerer]
+      evidence: |
+        asked the second
+
+    devil_grandmother_merry_soldier:
+      name: The Merry Sharp-Headed Soldier
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_object_mediation, agency_endurance]
+      existential_states: [state_bound_by_promise]
+      speech_acts_performed: [speech_riddle]
+      affects: [affect_joy]
+      traits: [third-soldier, fearless-planner, forest-helper-seeker, cellar-eavesdropper, riddle-answer-carrier, wineglass-answerer]
+      evidence: |
+        the third took the affair easily
+
+    devil_grandmother_king:
+      name: The King with Small Pay
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [war-king, bad-pay-master]
+      evidence: |
+        the King had many soldiers, but gave them small pay
+
+    devil_grandmother_troops:
+      name: The Troops Around the Cornfield
+      species: sp_human
+      agency_modes: [agency_violence, agency_social_rank]
+      traits: [army-searchers, cornfield-surrounders, gallows-threat-context]
+      evidence: |
+        remained lying all round about it
+
+    devil_grandmother_devil:
+      name: The Devil in Fiery Dragon Form
+      being_type: being_devil
+      agency_modes: [agency_speech, agency_object_mediation, agency_violence, agency_cunning]
+      speech_acts_performed: [speech_bargain, speech_riddle, speech_command]
+      affects: [affect_greed, affect_anger]
+      traits: [fiery-dragon, aerial-rescuer, contract-maker, gold-whip-donor, soul-claimant, riddle-setter, grandmother-confider, defeated-devil]
+      evidence: |
+        the dragon was no other than the Devil
+
+    devil_grandmother_aged_woman:
+      name: The Aged Woman in the Open Country
+      archetypes: [arc_wise_helper]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning]
+      speech_acts_performed: [speech_request, speech_warning]
+      traits: [trouble-inquirer, forest-rock-guide, salvation-pointer]
+      evidence: |
+        an aged woman came up to them
+
+    devil_grandmother_grandmother:
+      name: The Devil's Grandmother
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_cunning, agency_speech]
+      speech_acts_performed: [speech_request]
+      affects: [affect_pity]
+      traits: [infernal-grandmother, householder, pitying-helper, cellar-hider, table-layer, riddle-answer-extractor]
+      evidence: |
+        a very aged woman was sitting, who was the Devil’s grandmother
+
+  magic_objects:
+
+    obj_devil_grandmother_gold_whip:
+      name: The Gold-Summoning Whip
+      instance_of: obj_gold_summoning_whip
+      object_kind: weapon
+      attributes:
+        function: produces as much gold as wished when cracked
+      evidence: |
+        Whip with it and crack it
+
+    obj_devil_grandmother_contract_book:
+      name: The Devil's Signed Book
+      object_kind: book
+      attributes:
+        function: records the soldiers' signatures and the seven-year bargain
+      evidence: |
+        a book which they were all three forced to sign
+
+    obj_devil_grandmother_dead_dogfish:
+      name: The Dead Dog-Fish in the North Sea
+      object_kind: food
+      attributes:
+        function: first answer to the Devil's riddle, the roast meat of hell's meal
+      evidence: |
+        In the great North Sea lies a dead dog-fish
+
+    obj_devil_grandmother_whale_rib:
+      name: The Rib of a Whale
+      object_kind: tool
+      attributes:
+        function: second answer to the Devil's riddle, the silver spoon
+      evidence: |
+        the rib of a whale shall be your silver spoon
+
+    obj_devil_grandmother_horse_hoof:
+      name: The Hollow Old Horse's Hoof
+      object_kind: material
+      attributes:
+        function: third answer to the Devil's riddle, the wine-glass
+      evidence: |
+        a hollow old horse’s hoof shall be your wine-glass
+
+    obj_devil_grandmother_grandmother_table:
+      name: The Grandmother's Dinner Table
+      object_kind: tool
+      attributes:
+        function: domestic setting that makes the Devil talk about the riddle
+      evidence: |
+        The grandmother laid the table
+
+  locations:
+
+    loc_devil_grandmother_war:
+      name: The Great War
+      instance_of: loc_field
+      evidence: |
+        There was a great war
+
+    loc_devil_grandmother_cornfield:
+      name: The Great Cornfield Hiding Place
+      instance_of: loc_field
+      evidence: |
+        that great cornfield
+
+    loc_devil_grandmother_open_country:
+      name: The Open Country of Anxiety
+      instance_of: loc_field
+      evidence: |
+        They went out into the open country
+
+    loc_devil_grandmother_forest:
+      name: The Forest Path to Help
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        one of you must go into the forest
+
+    loc_devil_grandmother_rock_house:
+      name: The Fallen Rock-House
+      instance_of: loc_cave
+      threshold_type: threshold_doorway
+      evidence: |
+        a fallen rock which looks like a little house
+
+    loc_devil_grandmother_cellar:
+      name: The Hidden Cellar Under the Stone
+      instance_of: loc_cellar
+      evidence: |
+        a great stone which lay above a cellar
+
+    loc_devil_grandmother_hell:
+      name: Hell as the Threatened Meal-Place
+      instance_of: loc_hell
+      threshold_type: threshold_doorway
+      evidence: |
+        I will take you with me to hell
+
+    loc_devil_grandmother_north_sea:
+      name: The Great North Sea of the Riddle
+      instance_of: loc_sea
+      evidence: |
+        In the great North Sea
+
+
+classifications:
+
+  world_laws:
+    - law_overheard_infernal_riddle_breaks_soul_bargain
+    - law_promise_binds_reality
+    - law_formula_commands_magic_objects
+
+  moral_regimes:
+    - moral_trickster_wins
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_object_mediation
+    - agency_domestic_labor
+    - agency_endurance
+
+  affects_driving:
+    - affect_hunger
+    - affect_fear
+    - affect_pity
+    - affect_joy
+    - affect_greed
+
+  symbol_numbers:
+    - num_3
+    - num_7
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_initial_lack
+    order: 1
+    actor: devil_grandmother_three_soldiers
+    scene: Three soldiers desert because the king's pay is too small to live on.
+    evidence: |
+      gave them small pay
+
+  - function: func_concealment
+    order: 2
+    actor: devil_grandmother_three_soldiers
+    scene: They hide in the cornfield but are trapped there by the surrounding troops.
+    evidence: |
+      They crept into the corn
+
+  - function: func_infernal_bargain
+    order: 3
+    actor: devil_grandmother_devil
+    beneficiary: devil_grandmother_three_soldiers
+    scene: The fiery dragon rescues them in exchange for seven years of service.
+    evidence: |
+      If you will serve me for seven years
+
+  - function: func_magical_agent
+    order: 4
+    actor: devil_grandmother_devil
+    beneficiary: devil_grandmother_three_soldiers
+    scene: The Devil gives them a whip that produces gold and has them sign his book.
+    evidence: |
+      then as much gold will spring up round about as you can wish for
+
+  - function: func_term_approaches
+    order: 5
+    actor: devil_grandmother_three_soldiers
+    scene: As the seven years near their end, two soldiers become anxious and the third trusts his wit.
+    evidence: |
+      two of them were terribly anxious and alarmed
+
+  - function: func_helper_direction
+    order: 6
+    actor: devil_grandmother_aged_woman
+    beneficiary: devil_grandmother_merry_soldier
+    scene: The aged woman tells them that one soldier must enter the forest rock-house to obtain help.
+    evidence: |
+      there he will come to a fallen rock
+
+  - function: func_hidden_hearing
+    order: 7
+    actor: devil_grandmother_grandmother
+    beneficiary: devil_grandmother_merry_soldier
+    scene: The Devil's grandmother hides the merry soldier in the cellar beneath the stone.
+    evidence: |
+      Conceal thyself there
+
+  - function: func_riddle_extraction
+    order: 8
+    actor: devil_grandmother_grandmother
+    victim: devil_grandmother_devil
+    scene: She feeds the Devil and gets him to reveal the riddle's three answers.
+    evidence: |
+      I will question him about the riddle
+
+  - function: func_answer_transmission
+    order: 9
+    actor: devil_grandmother_merry_soldier
+    beneficiary: devil_grandmother_three_soldiers
+    scene: The merry soldier returns secretly and tells his companions the riddle answers.
+    evidence: |
+      he had learned the answer to the riddle from him
+
+  - function: func_final_claim
+    order: 10
+    actor: devil_grandmother_devil
+    victim: devil_grandmother_three_soldiers
+    scene: The Devil arrives with the signed book to claim the soldiers for hell.
+    evidence: |
+      showed the signatures
+
+  - function: func_riddle_solution
+    order: 11
+    actor: devil_grandmother_three_soldiers
+    scene: The three soldiers answer dog-fish, whale rib, and horse hoof correctly.
+    evidence: |
+      An old horse’s hoof is to be our wineglass
+
+  - function: func_release
+    order: 12
+    actor: devil_grandmother_devil
+    beneficiary: devil_grandmother_three_soldiers
+    scene: The Devil loses power over them, and they keep the whip and live happily.
+    evidence: |
+      had no more power over them
+
+
+edges:
+
+  - from: devil_grandmother_king
+    label: UNDERPAYS
+    to: devil_grandmother_three_soldiers
+    evidence: |
+      gave them small pay
+
+  - from: devil_grandmother_three_soldiers
+    label: DESERTS_FROM
+    to: devil_grandmother_king
+    evidence: |
+      agreed among themselves to desert
+
+  - from: devil_grandmother_three_soldiers
+    label: HIDES_IN
+    to: loc_devil_grandmother_cornfield
+    evidence: |
+      hide ourselves there
+
+  - from: devil_grandmother_troops
+    label: SURROUNDS
+    to: loc_devil_grandmother_cornfield
+    evidence: |
+      remained lying all round about it
+
+  - from: devil_grandmother_devil
+    label: APPEARS_AS_DRAGON_TO
+    to: devil_grandmother_three_soldiers
+    evidence: |
+      a fiery dragon came flying through the air
+
+  - from: devil_grandmother_devil
+    label: BARGAINS_WITH
+    to: devil_grandmother_three_soldiers
+    evidence: |
+      If you will serve me for seven years
+
+  - from: devil_grandmother_devil
+    label: CARRIES_OVER
+    to: devil_grandmother_troops
+    evidence: |
+      carried them away through the air over the army
+
+  - from: devil_grandmother_devil
+    label: GIVES
+    to: obj_devil_grandmother_gold_whip
+    evidence: |
+      He gave them a small whip
+
+  - from: obj_devil_grandmother_gold_whip
+    label: PRODUCES
+    to: obj_devil_grandmother_gold_whip
+    evidence: |
+      as much gold will spring up round about as you can wish for
+
+  - from: devil_grandmother_three_soldiers
+    label: SIGNS
+    to: obj_devil_grandmother_contract_book
+    evidence: |
+      forced to sign
+
+  - from: devil_grandmother_devil
+    label: SETS_RIDDLE_FOR
+    to: devil_grandmother_three_soldiers
+    evidence: |
+      I will, however, then set you a riddle
+
+  - from: devil_grandmother_aged_woman
+    label: DIRECTS_TO
+    to: loc_devil_grandmother_forest
+    evidence: |
+      one of you must go into the forest
+
+  - from: devil_grandmother_merry_soldier
+    label: ENTERS
+    to: loc_devil_grandmother_rock_house
+    evidence: |
+      found the rock-house
+
+  - from: devil_grandmother_grandmother
+    label: HIDES
+    to: devil_grandmother_merry_soldier
+    evidence: |
+      Conceal thyself there
+
+  - from: devil_grandmother_grandmother
+    label: QUESTIONS_ABOUT_RIDDLE
+    to: devil_grandmother_devil
+    evidence: |
+      she asked him what kind of a day he had had
+
+  - from: devil_grandmother_devil
+    label: REVEALS
+    to: obj_devil_grandmother_dead_dogfish
+    evidence: |
+      that shall be your roast meat
+
+  - from: devil_grandmother_devil
+    label: REVEALS
+    to: obj_devil_grandmother_whale_rib
+    evidence: |
+      shall be your silver spoon
+
+  - from: devil_grandmother_devil
+    label: REVEALS
+    to: obj_devil_grandmother_horse_hoof
+    evidence: |
+      shall be your wine-glass
+
+  - from: devil_grandmother_merry_soldier
+    label: OVERHEARS
+    to: devil_grandmother_devil
+    evidence: |
+      listen carefully to his answer
+
+  - from: devil_grandmother_merry_soldier
+    label: TELLS_ANSWERS_TO
+    to: devil_grandmother_three_soldiers
+    evidence: |
+      He told them how the Devil had been overreached
+
+  - from: devil_grandmother_devil
+    label: CLAIMS_FOR_HELL
+    to: devil_grandmother_three_soldiers
+    evidence: |
+      I will take you with me to hell
+
+  - from: devil_grandmother_first_soldier
+    label: ANSWERS_WITH
+    to: obj_devil_grandmother_dead_dogfish
+    evidence: |
+      that no doubt is the roast meat
+
+  - from: devil_grandmother_second_soldier
+    label: ANSWERS_WITH
+    to: obj_devil_grandmother_whale_rib
+    evidence: |
+      that is to be our silver spoon
+
+  - from: devil_grandmother_merry_soldier
+    label: ANSWERS_WITH
+    to: obj_devil_grandmother_horse_hoof
+    evidence: |
+      An old horse’s hoof is to be our wineglass
+
+  - from: devil_grandmother_devil
+    label: LOSES_POWER_OVER
+    to: devil_grandmother_three_soldiers
+    evidence: |
+      had no more power over them
+
+  - from: devil_grandmother_three_soldiers
+    label: KEEPS
+    to: obj_devil_grandmother_gold_whip
+    evidence: |
+      kept the whip

@@ -1,0 +1,8 @@
+slug: strong-hans
+khm: 166
+atu: 301B
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

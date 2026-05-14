@@ -1,0 +1,5860 @@
+$comment: Variant clusters keyed by KHM. Canonical reference is Hunt (pg5314).
+total_clusters: 211
+cluster_key: khm
+clusters:
+- khm: 1
+  khm_variant: false
+  atu: '440'
+  canonical_title_en: The Frog King, or Iron Henry
+  canonical_title_de: Der Froschkönig oder der eiserne Heinrich
+  canonical_slug: the-frog-king-or-iron-henry
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE FROG PRINCE
+  - THE FROG-KING; OR, IRON HENRY
+  - THE FROG-PRINCE
+  - The Frog King, or Iron Henry
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-frog-prince
+    title: THE FROG-PRINCE
+    language: en
+    weight: supplementary
+    word_count: 1192
+    path: books/pg2591-grimm-taylor/tales/the-frog-prince.txt
+  - book: pg5314-grimm-hunt
+    slug: the-frog-king-or-iron-henry
+    title: The Frog King, or Iron Henry
+    language: en
+    weight: canonical
+    word_count: 1410
+    path: books/pg5314-grimm-hunt/tales/the-frog-king-or-iron-henry.txt
+  - book: pg11027-grimm-gruelle
+    slug: the-frog-prince
+    title: THE FROG PRINCE
+    language: en
+    weight: supplementary
+    word_count: 1360
+    path: books/pg11027-grimm-gruelle/tales/the-frog-prince.txt
+  - book: pg52521-grimm-olcott
+    slug: the-frog-king-or-iron-henry
+    title: THE FROG-KING; OR, IRON HENRY
+    language: en
+    weight: supplementary
+    word_count: 1393
+    path: books/pg52521-grimm-olcott/tales/the-frog-king-or-iron-henry.txt
+  languages:
+  - en
+  cluster_id: khm-001
+  variant_count: 4
+- khm: 2
+  khm_variant: false
+  atu: '15'
+  canonical_title_en: Cat and Mouse in Partnership
+  canonical_title_de: Katze und Maus in Gesellschaft
+  canonical_slug: cat-and-mouse-in-partnership
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - CAT AND MOUSE IN PARTNERSHIP
+  - Cat and Mouse in Partnership
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: cat-and-mouse-in-partnership
+    title: CAT AND MOUSE IN PARTNERSHIP
+    language: en
+    weight: supplementary
+    word_count: 975
+    path: books/pg2591-grimm-taylor/tales/cat-and-mouse-in-partnership.txt
+  - book: pg5314-grimm-hunt
+    slug: cat-and-mouse-in-partnership
+    title: Cat and Mouse in Partnership
+    language: en
+    weight: canonical
+    word_count: 975
+    path: books/pg5314-grimm-hunt/tales/cat-and-mouse-in-partnership.txt
+  languages:
+  - en
+  cluster_id: khm-002
+  variant_count: 2
+- khm: 3
+  khm_variant: false
+  atu: '710'
+  canonical_title_en: Our Lady’s Child
+  canonical_title_de: Marienkind
+  canonical_slug: our-ladys-child
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Our Lady’s Child
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: our-ladys-child
+    title: Our Lady’s Child
+    language: en
+    weight: canonical
+    word_count: 1899
+    path: books/pg5314-grimm-hunt/tales/our-ladys-child.txt
+  languages:
+  - en
+  cluster_id: khm-003
+  variant_count: 1
+- khm: 4
+  khm_variant: false
+  atu: '326'
+  canonical_title_en: The Story of the Youth Who Went Forth to Learn What Fear Was
+  canonical_title_de: Märchen von einem, der auszog, das Fürchten zu lernen
+  canonical_slug: the-story-of-the-youth-who-went-forth-to-learn-what-fear-was
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - OH, IF I COULD BUT SHIVER!
+  - THE STORY OF THE YOUTH WHO WENT FORTH TO LEARN WHAT FEAR WAS
+  - The Story of the Youth Who Went Forth to Learn What Fear Was
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-story-of-the-youth-who-went-forth-to-learn-what-fear-was
+    title: THE STORY OF THE YOUTH WHO WENT FORTH TO LEARN WHAT FEAR WAS
+    language: en
+    weight: supplementary
+    word_count: 3780
+    path: books/pg2591-grimm-taylor/tales/the-story-of-the-youth-who-went-forth-to-learn-what-fear-was.txt
+  - book: pg5314-grimm-hunt
+    slug: the-story-of-the-youth-who-went-forth-to-learn-what-fear-was
+    title: The Story of the Youth Who Went Forth to Learn What Fear Was
+    language: en
+    weight: canonical
+    word_count: 3800
+    path: books/pg5314-grimm-hunt/tales/the-story-of-the-youth-who-went-forth-to-learn-what-fear-was.txt
+  - book: pg11027-grimm-gruelle
+    slug: oh-if-i-could-but-shiver
+    title: OH, IF I COULD BUT SHIVER!
+    language: en
+    weight: supplementary
+    word_count: 3614
+    path: books/pg11027-grimm-gruelle/tales/oh-if-i-could-but-shiver.txt
+  languages:
+  - en
+  cluster_id: khm-004
+  variant_count: 3
+- khm: 5
+  khm_variant: false
+  atu: '123'
+  canonical_title_en: The Wolf and the Seven Young Kids
+  canonical_title_de: Der Wolf und die sieben jungen Geißlein
+  canonical_slug: the-wolf-and-the-seven-young-kids
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE WOLF AND THE SEVEN LITTLE KIDS
+  - The Wolf and the Seven Young Kids
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-wolf-and-the-seven-little-kids
+    title: THE WOLF AND THE SEVEN LITTLE KIDS
+    language: en
+    weight: supplementary
+    word_count: 1099
+    path: books/pg2591-grimm-taylor/tales/the-wolf-and-the-seven-little-kids.txt
+  - book: pg5314-grimm-hunt
+    slug: the-wolf-and-the-seven-young-kids
+    title: The Wolf and the Seven Young Kids
+    language: en
+    weight: canonical
+    word_count: 1107
+    path: books/pg5314-grimm-hunt/tales/the-wolf-and-the-seven-young-kids.txt
+  - book: pg52521-grimm-olcott
+    slug: the-wolf-and-the-seven-little-kids
+    title: THE WOLF AND THE SEVEN LITTLE KIDS
+    language: en
+    weight: supplementary
+    word_count: 1103
+    path: books/pg52521-grimm-olcott/tales/the-wolf-and-the-seven-little-kids.txt
+  languages:
+  - en
+  cluster_id: khm-005
+  variant_count: 3
+- khm: 6
+  khm_variant: false
+  atu: '516'
+  canonical_title_en: Faithful John
+  canonical_title_de: Der treue Johannes
+  canonical_slug: faithful-john
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - FAITHFUL JOHN
+  - Faithful John
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: faithful-john
+    title: Faithful John
+    language: en
+    weight: canonical
+    word_count: 3128
+    path: books/pg5314-grimm-hunt/tales/faithful-john.txt
+  - book: pg11027-grimm-gruelle
+    slug: faithful-john
+    title: FAITHFUL JOHN
+    language: en
+    weight: supplementary
+    word_count: 3077
+    path: books/pg11027-grimm-gruelle/tales/faithful-john.txt
+  languages:
+  - en
+  cluster_id: khm-006
+  variant_count: 2
+- khm: 7
+  khm_variant: false
+  atu: '1642'
+  canonical_title_en: The Good Bargain
+  canonical_title_de: Der gute Handel
+  canonical_slug: the-good-bargain
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Good Bargain
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-good-bargain
+    title: The Good Bargain
+    language: en
+    weight: canonical
+    word_count: 1709
+    path: books/pg5314-grimm-hunt/tales/the-good-bargain.txt
+  languages:
+  - en
+  cluster_id: khm-007
+  variant_count: 1
+- khm: 8
+  khm_variant: false
+  atu: '151'
+  canonical_title_en: The Strange Musician
+  canonical_title_de: Der wunderliche Spielmann
+  canonical_slug: the-strange-musician
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Strange Musician
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-strange-musician
+    title: The Strange Musician
+    language: en
+    weight: canonical
+    word_count: 1062
+    path: books/pg5314-grimm-hunt/tales/the-strange-musician.txt
+  languages:
+  - en
+  cluster_id: khm-008
+  variant_count: 1
+- khm: 9
+  khm_variant: false
+  atu: '451'
+  canonical_title_en: The Twelve Brothers
+  canonical_title_de: Die zwölf Brüder
+  canonical_slug: the-twelve-brothers
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Twelve Brothers
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-twelve-brothers
+    title: The Twelve Brothers
+    language: en
+    weight: canonical
+    word_count: 1975
+    path: books/pg5314-grimm-hunt/tales/the-twelve-brothers.txt
+  languages:
+  - en
+  cluster_id: khm-009
+  variant_count: 1
+- khm: 10
+  khm_variant: false
+  atu: '210'
+  canonical_title_en: The Pack of Ragamuffins
+  canonical_title_de: Das Lumpengesindel
+  canonical_slug: the-pack-of-ragamuffins
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE ADVENTURES OF CHANTICLEER AND PARTLET
+  - The Pack of Ragamuffins
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-adventures-of-chanticleer-and-partlet
+    title: THE ADVENTURES OF CHANTICLEER AND PARTLET
+    language: en
+    weight: supplementary
+    word_count: 1871
+    path: books/pg2591-grimm-taylor/tales/the-adventures-of-chanticleer-and-partlet.txt
+  - book: pg5314-grimm-hunt
+    slug: the-pack-of-ragamuffins
+    title: The Pack of Ragamuffins
+    language: en
+    weight: canonical
+    word_count: 812
+    path: books/pg5314-grimm-hunt/tales/the-pack-of-ragamuffins.txt
+  languages:
+  - en
+  cluster_id: khm-010
+  variant_count: 2
+- khm: 11
+  khm_variant: false
+  atu: '450'
+  canonical_title_en: Little Brother and Little Sister
+  canonical_title_de: Brüderchen und Schwesterchen
+  canonical_slug: little-brother-and-little-sister
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - LITTLE BROTHER AND LITTLE SISTER
+  - Little Brother and Little Sister
+  - THE LITTLE BROTHER AND SISTER
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: little-brother-and-little-sister
+    title: Little Brother and Little Sister
+    language: en
+    weight: canonical
+    word_count: 2420
+    path: books/pg5314-grimm-hunt/tales/little-brother-and-little-sister.txt
+  - book: pg11027-grimm-gruelle
+    slug: the-little-brother-and-sister
+    title: THE LITTLE BROTHER AND SISTER
+    language: en
+    weight: supplementary
+    word_count: 2146
+    path: books/pg11027-grimm-gruelle/tales/the-little-brother-and-sister.txt
+  - book: pg52521-grimm-olcott
+    slug: little-brother-and-little-sister
+    title: LITTLE BROTHER AND LITTLE SISTER
+    language: en
+    weight: supplementary
+    word_count: 2438
+    path: books/pg52521-grimm-olcott/tales/little-brother-and-little-sister.txt
+  languages:
+  - en
+  cluster_id: khm-011
+  variant_count: 3
+- khm: 12
+  khm_variant: false
+  atu: '310'
+  canonical_title_en: Rapunzel
+  canonical_title_de: Rapunzel
+  canonical_slug: rapunzel
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - RAPUNZEL
+  - Rapunzel
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: rapunzel
+    title: RAPUNZEL
+    language: en
+    weight: supplementary
+    word_count: 1401
+    path: books/pg2591-grimm-taylor/tales/rapunzel.txt
+  - book: pg5314-grimm-hunt
+    slug: rapunzel
+    title: Rapunzel
+    language: en
+    weight: canonical
+    word_count: 1433
+    path: books/pg5314-grimm-hunt/tales/rapunzel.txt
+  - book: pg11027-grimm-gruelle
+    slug: rapunzel
+    title: RAPUNZEL
+    language: en
+    weight: supplementary
+    word_count: 1421
+    path: books/pg11027-grimm-gruelle/tales/rapunzel.txt
+  - book: pg52521-grimm-olcott
+    slug: rapunzel
+    title: RAPUNZEL
+    language: en
+    weight: supplementary
+    word_count: 1407
+    path: books/pg52521-grimm-olcott/tales/rapunzel.txt
+  languages:
+  - en
+  cluster_id: khm-012
+  variant_count: 4
+- khm: 13
+  khm_variant: false
+  atu: '403'
+  canonical_title_en: The Three Little Men in the Forest
+  canonical_title_de: Die drei Männlein im Walde
+  canonical_slug: the-three-little-men-in-the-forest
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE THREE LITTLE MEN IN THE WOOD
+  - The Three Little Men in the Forest
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-three-little-men-in-the-forest
+    title: The Three Little Men in the Forest
+    language: en
+    weight: canonical
+    word_count: 2035
+    path: books/pg5314-grimm-hunt/tales/the-three-little-men-in-the-forest.txt
+  - book: pg11027-grimm-gruelle
+    slug: the-three-little-men-in-the-wood
+    title: THE THREE LITTLE MEN IN THE WOOD
+    language: en
+    weight: supplementary
+    word_count: 2020
+    path: books/pg11027-grimm-gruelle/tales/the-three-little-men-in-the-wood.txt
+  - book: pg52521-grimm-olcott
+    slug: the-three-little-men-in-the-wood
+    title: THE THREE LITTLE MEN IN THE WOOD
+    language: en
+    weight: supplementary
+    word_count: 1510
+    path: books/pg52521-grimm-olcott/tales/the-three-little-men-in-the-wood.txt
+  languages:
+  - en
+  cluster_id: khm-013
+  variant_count: 3
+- khm: 14
+  khm_variant: false
+  atu: '501'
+  canonical_title_en: The Three Spinning Women
+  canonical_title_de: Die drei Spinnerinnen
+  canonical_slug: the-three-spinning-women
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Three Spinning Women
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-three-spinning-women
+    title: The Three Spinning Women
+    language: en
+    weight: canonical
+    word_count: 907
+    path: books/pg5314-grimm-hunt/tales/the-three-spinning-women.txt
+  languages:
+  - en
+  cluster_id: khm-014
+  variant_count: 1
+- khm: 15
+  khm_variant: false
+  atu: 327A
+  canonical_title_en: Hansel and Gretel
+  canonical_title_de: Hänsel und Gretel
+  canonical_slug: hansel-and-gretel
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - HAENSEL AND GRETHEL
+  - HANSEL AND GRETEL
+  - HANSEL AND GRETHEL
+  - Hansel and Gretel
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: hansel-and-gretel
+    title: HANSEL AND GRETEL
+    language: en
+    weight: supplementary
+    word_count: 2929
+    path: books/pg2591-grimm-taylor/tales/hansel-and-gretel.txt
+  - book: pg5314-grimm-hunt
+    slug: hansel-and-gretel
+    title: Hansel and Gretel
+    language: en
+    weight: canonical
+    word_count: 2946
+    path: books/pg5314-grimm-hunt/tales/hansel-and-gretel.txt
+  - book: pg11027-grimm-gruelle
+    slug: hansel-and-grethel
+    title: HANSEL AND GRETHEL
+    language: en
+    weight: supplementary
+    word_count: 2794
+    path: books/pg11027-grimm-gruelle/tales/hansel-and-grethel.txt
+  - book: pg52521-grimm-olcott
+    slug: haensel-and-grethel
+    title: HAENSEL AND GRETHEL
+    language: en
+    weight: supplementary
+    word_count: 2679
+    path: books/pg52521-grimm-olcott/tales/haensel-and-grethel.txt
+  languages:
+  - en
+  cluster_id: khm-015
+  variant_count: 4
+- khm: 16
+  khm_variant: false
+  atu: '612'
+  canonical_title_en: The Three Snake-Leaves
+  canonical_title_de: Die drei Schlangenblätter
+  canonical_slug: the-three-snake-leaves
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Three Snake-Leaves
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-three-snake-leaves
+    title: The Three Snake-Leaves
+    language: en
+    weight: canonical
+    word_count: 1437
+    path: books/pg5314-grimm-hunt/tales/the-three-snake-leaves.txt
+  languages:
+  - en
+  cluster_id: khm-016
+  variant_count: 1
+- khm: 17
+  khm_variant: false
+  atu: '673'
+  canonical_title_en: The White Snake
+  canonical_title_de: Die weiße Schlange
+  canonical_slug: the-white-snake
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE WHITE SNAKE
+  - The White Snake
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-white-snake
+    title: THE WHITE SNAKE
+    language: en
+    weight: supplementary
+    word_count: 1601
+    path: books/pg2591-grimm-taylor/tales/the-white-snake.txt
+  - book: pg5314-grimm-hunt
+    slug: the-white-snake
+    title: The White Snake
+    language: en
+    weight: canonical
+    word_count: 1601
+    path: books/pg5314-grimm-hunt/tales/the-white-snake.txt
+  - book: pg52521-grimm-olcott
+    slug: the-white-snake
+    title: THE WHITE SNAKE
+    language: en
+    weight: supplementary
+    word_count: 1595
+    path: books/pg52521-grimm-olcott/tales/the-white-snake.txt
+  languages:
+  - en
+  cluster_id: khm-017
+  variant_count: 3
+- khm: 18
+  khm_variant: false
+  atu: '295'
+  canonical_title_en: Straw, Coal, and Bean
+  canonical_title_de: Strohhalm, Kohle und Bohne
+  canonical_slug: straw-coal-and-bean
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Straw, Coal, and Bean
+  - THE STRAW, THE COAL, AND THE BEAN
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-straw-the-coal-and-the-bean
+    title: THE STRAW, THE COAL, AND THE BEAN
+    language: en
+    weight: supplementary
+    word_count: 503
+    path: books/pg2591-grimm-taylor/tales/the-straw-the-coal-and-the-bean.txt
+  - book: pg5314-grimm-hunt
+    slug: straw-coal-and-bean
+    title: Straw, Coal, and Bean
+    language: en
+    weight: canonical
+    word_count: 504
+    path: books/pg5314-grimm-hunt/tales/straw-coal-and-bean.txt
+  languages:
+  - en
+  cluster_id: khm-018
+  variant_count: 2
+- khm: 19
+  khm_variant: false
+  atu: '555'
+  canonical_title_en: The Fisherman and His Wife
+  canonical_title_de: Von dem Fischer un syner Fru
+  canonical_slug: the-fisherman-and-his-wife
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE FISHERMAN AND HIS WIFE
+  - The Fisherman and His Wife
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-fisherman-and-his-wife
+    title: THE FISHERMAN AND HIS WIFE
+    language: en
+    weight: supplementary
+    word_count: 2115
+    path: books/pg2591-grimm-taylor/tales/the-fisherman-and-his-wife.txt
+  - book: pg5314-grimm-hunt
+    slug: the-fisherman-and-his-wife
+    title: The Fisherman and His Wife
+    language: en
+    weight: canonical
+    word_count: 3061
+    path: books/pg5314-grimm-hunt/tales/the-fisherman-and-his-wife.txt
+  - book: pg52521-grimm-olcott
+    slug: the-fisherman-and-his-wife
+    title: THE FISHERMAN AND HIS WIFE
+    language: en
+    weight: supplementary
+    word_count: 3048
+    path: books/pg52521-grimm-olcott/tales/the-fisherman-and-his-wife.txt
+  languages:
+  - en
+  cluster_id: khm-019
+  variant_count: 3
+- khm: 20
+  khm_variant: false
+  atu: '1640'
+  canonical_title_en: The Brave Little Tailor
+  canonical_title_de: Das tapfere Schneiderlein
+  canonical_slug: the-brave-little-tailor
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE VALIANT LITTLE TAILOR
+  - The Brave Little Tailor
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-valiant-little-tailor
+    title: THE VALIANT LITTLE TAILOR
+    language: en
+    weight: supplementary
+    word_count: 3336
+    path: books/pg2591-grimm-taylor/tales/the-valiant-little-tailor.txt
+  - book: pg5314-grimm-hunt
+    slug: the-brave-little-tailor
+    title: The Brave Little Tailor
+    language: en
+    weight: canonical
+    word_count: 3345
+    path: books/pg5314-grimm-hunt/tales/the-brave-little-tailor.txt
+  - book: pg11027-grimm-gruelle
+    slug: the-valiant-little-tailor
+    title: THE VALIANT LITTLE TAILOR
+    language: en
+    weight: supplementary
+    word_count: 3246
+    path: books/pg11027-grimm-gruelle/tales/the-valiant-little-tailor.txt
+  languages:
+  - en
+  cluster_id: khm-020
+  variant_count: 3
+- khm: 21
+  khm_variant: false
+  atu: 510A
+  canonical_title_en: Cinderella
+  canonical_title_de: Aschenputtel
+  canonical_slug: cinderella
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - ASH-MAIDEN
+  - ASHPUTTEL
+  - CINDERELLA
+  - Cinderella
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: ashputtel
+    title: ASHPUTTEL
+    language: en
+    weight: supplementary
+    word_count: 2563
+    path: books/pg2591-grimm-taylor/tales/ashputtel.txt
+  - book: pg5314-grimm-hunt
+    slug: cinderella
+    title: Cinderella
+    language: en
+    weight: canonical
+    word_count: 2632
+    path: books/pg5314-grimm-hunt/tales/cinderella.txt
+  - book: pg11027-grimm-gruelle
+    slug: cinderella
+    title: CINDERELLA
+    language: en
+    weight: supplementary
+    word_count: 1977
+    path: books/pg11027-grimm-gruelle/tales/cinderella.txt
+  - book: pg52521-grimm-olcott
+    slug: ash-maiden
+    title: ASH-MAIDEN
+    language: en
+    weight: supplementary
+    word_count: 2616
+    path: books/pg52521-grimm-olcott/tales/ash-maiden.txt
+  languages:
+  - en
+  cluster_id: khm-021
+  variant_count: 4
+- khm: 22
+  khm_variant: false
+  atu: '851'
+  canonical_title_en: The Riddle
+  canonical_title_de: Das Rätsel
+  canonical_slug: the-riddle
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Riddle
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-riddle
+    title: The Riddle
+    language: en
+    weight: canonical
+    word_count: 1147
+    path: books/pg5314-grimm-hunt/tales/the-riddle.txt
+  languages:
+  - en
+  cluster_id: khm-022
+  variant_count: 1
+- khm: 23
+  khm_variant: false
+  atu: '85'
+  canonical_title_en: The Mouse, the Bird, and the Sausage
+  canonical_title_de: Von dem Mäuschen, Vögelchen und der Bratwurst
+  canonical_slug: the-mouse-the-bird-and-the-sausage
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE MOUSE, THE BIRD, AND THE SAUSAGE
+  - The Mouse, the Bird, and the Sausage
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-mouse-the-bird-and-the-sausage
+    title: THE MOUSE, THE BIRD, AND THE SAUSAGE
+    language: en
+    weight: supplementary
+    word_count: 704
+    path: books/pg2591-grimm-taylor/tales/the-mouse-the-bird-and-the-sausage.txt
+  - book: pg5314-grimm-hunt
+    slug: the-mouse-the-bird-and-the-sausage
+    title: The Mouse, the Bird, and the Sausage
+    language: en
+    weight: canonical
+    word_count: 629
+    path: books/pg5314-grimm-hunt/tales/the-mouse-the-bird-and-the-sausage.txt
+  languages:
+  - en
+  cluster_id: khm-023
+  variant_count: 2
+- khm: 24
+  khm_variant: false
+  atu: '480'
+  canonical_title_en: Frau Holle
+  canonical_title_de: Frau Holle
+  canonical_slug: frau-holle
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Frau Holle
+  - MOTHER HOLLE
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: mother-holle
+    title: MOTHER HOLLE
+    language: en
+    weight: supplementary
+    word_count: 1267
+    path: books/pg2591-grimm-taylor/tales/mother-holle.txt
+  - book: pg5314-grimm-hunt
+    slug: frau-holle
+    title: Frau Holle
+    language: en
+    weight: canonical
+    word_count: 1194
+    path: books/pg5314-grimm-hunt/tales/frau-holle.txt
+  - book: pg11027-grimm-gruelle
+    slug: mother-holle
+    title: MOTHER HOLLE
+    language: en
+    weight: supplementary
+    word_count: 1183
+    path: books/pg11027-grimm-gruelle/tales/mother-holle.txt
+  - book: pg52521-grimm-olcott
+    slug: mother-holle
+    title: MOTHER HOLLE
+    language: en
+    weight: supplementary
+    word_count: 1128
+    path: books/pg52521-grimm-olcott/tales/mother-holle.txt
+  languages:
+  - en
+  cluster_id: khm-024
+  variant_count: 4
+- khm: 25
+  khm_variant: false
+  atu: '451'
+  canonical_title_en: The Seven Ravens
+  canonical_title_de: Die sieben Raben
+  canonical_slug: the-seven-ravens
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE SEVEN RAVENS
+  - The Seven Ravens
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-seven-ravens
+    title: THE SEVEN RAVENS
+    language: en
+    weight: supplementary
+    word_count: 1008
+    path: books/pg2591-grimm-taylor/tales/the-seven-ravens.txt
+  - book: pg5314-grimm-hunt
+    slug: the-seven-ravens
+    title: The Seven Ravens
+    language: en
+    weight: canonical
+    word_count: 944
+    path: books/pg5314-grimm-hunt/tales/the-seven-ravens.txt
+  - book: pg52521-grimm-olcott
+    slug: the-seven-ravens
+    title: THE SEVEN RAVENS
+    language: en
+    weight: supplementary
+    word_count: 937
+    path: books/pg52521-grimm-olcott/tales/the-seven-ravens.txt
+  languages:
+  - en
+  cluster_id: khm-025
+  variant_count: 3
+- khm: 26
+  khm_variant: false
+  atu: '333'
+  canonical_title_en: Little Red-Cap
+  canonical_title_de: Rotkäppchen
+  canonical_slug: little-red-cap
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - LITTLE RED-CAP
+  - LITTLE RED-CAP [LITTLE RED RIDING HOOD]
+  - Little Red-Cap
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: little-red-cap-little-red-riding-hood
+    title: LITTLE RED-CAP [LITTLE RED RIDING HOOD]
+    language: en
+    weight: supplementary
+    word_count: 1378
+    path: books/pg2591-grimm-taylor/tales/little-red-cap-little-red-riding-hood.txt
+  - book: pg5314-grimm-hunt
+    slug: little-red-cap
+    title: Little Red-Cap
+    language: en
+    weight: canonical
+    word_count: 1383
+    path: books/pg5314-grimm-hunt/tales/little-red-cap.txt
+  - book: pg11027-grimm-gruelle
+    slug: little-red-cap
+    title: LITTLE RED-CAP
+    language: en
+    weight: supplementary
+    word_count: 1102
+    path: books/pg11027-grimm-gruelle/tales/little-red-cap.txt
+  - book: pg52521-grimm-olcott
+    slug: little-red-cap
+    title: LITTLE RED-CAP
+    language: en
+    weight: supplementary
+    word_count: 1073
+    path: books/pg52521-grimm-olcott/tales/little-red-cap.txt
+  languages:
+  - en
+  cluster_id: khm-026
+  variant_count: 4
+- khm: 27
+  khm_variant: false
+  atu: '130'
+  canonical_title_en: The Bremen Town Musicians
+  canonical_title_de: Die Bremer Stadtmusikanten
+  canonical_slug: the-bremen-town-musicians
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE BREMEN TOWN-MUSICIANS
+  - THE TRAVELLING MUSICIANS
+  - The Bremen Town Musicians
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-travelling-musicians
+    title: THE TRAVELLING MUSICIANS
+    language: en
+    weight: supplementary
+    word_count: 1361
+    path: books/pg2591-grimm-taylor/tales/the-travelling-musicians.txt
+  - book: pg5314-grimm-hunt
+    slug: the-bremen-town-musicians
+    title: The Bremen Town Musicians
+    language: en
+    weight: canonical
+    word_count: 1263
+    path: books/pg5314-grimm-hunt/tales/the-bremen-town-musicians.txt
+  - book: pg52521-grimm-olcott
+    slug: the-bremen-town-musicians
+    title: THE BREMEN TOWN-MUSICIANS
+    language: en
+    weight: supplementary
+    word_count: 1262
+    path: books/pg52521-grimm-olcott/tales/the-bremen-town-musicians.txt
+  languages:
+  - en
+  cluster_id: khm-027
+  variant_count: 3
+- khm: 28
+  khm_variant: false
+  atu: '780'
+  canonical_title_en: The Singing Bone
+  canonical_title_de: Der singende Knochen
+  canonical_slug: the-singing-bone
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Singing Bone
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-singing-bone
+    title: The Singing Bone
+    language: en
+    weight: canonical
+    word_count: 738
+    path: books/pg5314-grimm-hunt/tales/the-singing-bone.txt
+  languages:
+  - en
+  cluster_id: khm-028
+  variant_count: 1
+- khm: 29
+  khm_variant: false
+  atu: '461'
+  canonical_title_en: The Devil with the Three Golden Hairs
+  canonical_title_de: Der Teufel mit den drei goldenen Haaren
+  canonical_slug: the-devil-with-the-three-golden-hairs
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Devil with the Three Golden Hairs
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-devil-with-the-three-golden-hairs
+    title: The Devil with the Three Golden Hairs
+    language: en
+    weight: canonical
+    word_count: 2539
+    path: books/pg5314-grimm-hunt/tales/the-devil-with-the-three-golden-hairs.txt
+  languages:
+  - en
+  cluster_id: khm-029
+  variant_count: 1
+- khm: 30
+  khm_variant: false
+  atu: '2022'
+  canonical_title_en: Little Louse and Little Flea
+  canonical_title_de: Läuschen und Flöhchen
+  canonical_slug: little-louse-and-little-flea
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Little Louse and Little Flea
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: little-louse-and-little-flea
+    title: Little Louse and Little Flea
+    language: en
+    weight: canonical
+    word_count: 455
+    path: books/pg5314-grimm-hunt/tales/little-louse-and-little-flea.txt
+  languages:
+  - en
+  cluster_id: khm-030
+  variant_count: 1
+- khm: 31
+  khm_variant: false
+  atu: '706'
+  canonical_title_en: The Girl without Hands
+  canonical_title_de: Das Mädchen ohne Hände
+  canonical_slug: the-girl-without-hands
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Girl without Hands
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-girl-without-hands
+    title: The Girl without Hands
+    language: en
+    weight: canonical
+    word_count: 2332
+    path: books/pg5314-grimm-hunt/tales/the-girl-without-hands.txt
+  languages:
+  - en
+  cluster_id: khm-031
+  variant_count: 1
+- khm: 32
+  khm_variant: false
+  atu: '1696'
+  canonical_title_en: Clever Hans
+  canonical_title_de: Der gescheite Hans
+  canonical_slug: clever-hans
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - CLEVER HANS
+  - Clever Hans
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: clever-hans
+    title: CLEVER HANS
+    language: en
+    weight: supplementary
+    word_count: 895
+    path: books/pg2591-grimm-taylor/tales/clever-hans.txt
+  - book: pg5314-grimm-hunt
+    slug: clever-hans
+    title: Clever Hans
+    language: en
+    weight: canonical
+    word_count: 893
+    path: books/pg5314-grimm-hunt/tales/clever-hans.txt
+  - book: pg52521-grimm-olcott
+    slug: clever-hans
+    title: CLEVER HANS
+    language: en
+    weight: supplementary
+    word_count: 901
+    path: books/pg52521-grimm-olcott/tales/clever-hans.txt
+  languages:
+  - en
+  cluster_id: khm-032
+  variant_count: 3
+- khm: 33
+  khm_variant: false
+  atu: '671'
+  canonical_title_en: The Three Languages
+  canonical_title_de: Die drei Sprachen
+  canonical_slug: the-three-languages
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE THREE LANGUAGES
+  - The Three Languages
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-three-languages
+    title: THE THREE LANGUAGES
+    language: en
+    weight: supplementary
+    word_count: 946
+    path: books/pg2591-grimm-taylor/tales/the-three-languages.txt
+  - book: pg5314-grimm-hunt
+    slug: the-three-languages
+    title: The Three Languages
+    language: en
+    weight: canonical
+    word_count: 946
+    path: books/pg5314-grimm-hunt/tales/the-three-languages.txt
+  languages:
+  - en
+  cluster_id: khm-033
+  variant_count: 2
+- khm: 34
+  khm_variant: false
+  atu: '1450'
+  canonical_title_en: Clever Elsie
+  canonical_title_de: Die kluge Else
+  canonical_slug: clever-elsie
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - CLEVER ELSIE
+  - Clever Elsie
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: clever-elsie
+    title: CLEVER ELSIE
+    language: en
+    weight: supplementary
+    word_count: 1335
+    path: books/pg2591-grimm-taylor/tales/clever-elsie.txt
+  - book: pg5314-grimm-hunt
+    slug: clever-elsie
+    title: Clever Elsie
+    language: en
+    weight: canonical
+    word_count: 1332
+    path: books/pg5314-grimm-hunt/tales/clever-elsie.txt
+  - book: pg52521-grimm-olcott
+    slug: clever-elsie
+    title: CLEVER ELSIE
+    language: en
+    weight: supplementary
+    word_count: 1333
+    path: books/pg52521-grimm-olcott/tales/clever-elsie.txt
+  languages:
+  - en
+  cluster_id: khm-034
+  variant_count: 3
+- khm: 35
+  khm_variant: false
+  atu: '800'
+  canonical_title_en: The Tailor in Heaven
+  canonical_title_de: Der Schneider im Himmel
+  canonical_slug: the-tailor-in-heaven
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De kleermaker in den hemel
+  - The Tailor in Heaven
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-tailor-in-heaven
+    title: The Tailor in Heaven
+    language: en
+    weight: canonical
+    word_count: 774
+    path: books/pg5314-grimm-hunt/tales/the-tailor-in-heaven.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-kleermaker-in-den-hemel
+    title: De kleermaker in den hemel
+    language: nl
+    weight: supplementary
+    word_count: 729
+    path: books/pg22555-grimm-eeden-dutch/tales/de-kleermaker-in-den-hemel.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-035
+  variant_count: 2
+- khm: 36
+  khm_variant: false
+  atu: '563'
+  canonical_title_en: The Wishing-table, the Gold-ass, and the Cudgel in the Sack
+  canonical_title_de: Tischchendeckdich, Goldesel und Knüppel aus dem Sack
+  canonical_slug: the-wishing-table-the-gold-ass-and-the-cudgel-in-the-sack
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - LITTLE TABLE SET THYSELF, GOLD-ASS, AND CUDGEL OUT OF THE SACK
+  - Tafeltje dek je, Goudezel, en Knuppel uit de zak
+  - The Wishing-table, the Gold-ass, and the Cudgel in the Sack
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-wishing-table-the-gold-ass-and-the-cudgel-in-the-sack
+    title: The Wishing-table, the Gold-ass, and the Cudgel in the Sack
+    language: en
+    weight: canonical
+    word_count: 3815
+    path: books/pg5314-grimm-hunt/tales/the-wishing-table-the-gold-ass-and-the-cudgel-in-the-sack.txt
+  - book: pg52521-grimm-olcott
+    slug: little-table-set-thyself-gold-ass-and-cudgel-out-of-the-sack
+    title: LITTLE TABLE SET THYSELF, GOLD-ASS, AND CUDGEL OUT OF THE SACK
+    language: en
+    weight: supplementary
+    word_count: 3814
+    path: books/pg52521-grimm-olcott/tales/little-table-set-thyself-gold-ass-and-cudgel-out-of-the-sack.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: tafeltje-dek-je-goudezel-en-knuppel-uit-de-zak
+    title: Tafeltje dek je, Goudezel, en Knuppel uit de zak
+    language: nl
+    weight: supplementary
+    word_count: 3587
+    path: books/pg22555-grimm-eeden-dutch/tales/tafeltje-dek-je-goudezel-en-knuppel-uit-de-zak.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-036
+  variant_count: 3
+- khm: 37
+  khm_variant: false
+  atu: '700'
+  canonical_title_en: Thumbling
+  canonical_title_de: Daumesdick
+  canonical_slug: thumbling
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Duimpje
+  - THUMBLING
+  - TOM THUMB
+  - Thumbling
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: tom-thumb
+    title: TOM THUMB
+    language: en
+    weight: supplementary
+    word_count: 2501
+    path: books/pg2591-grimm-taylor/tales/tom-thumb.txt
+  - book: pg5314-grimm-hunt
+    slug: thumbling
+    title: Thumbling
+    language: en
+    weight: canonical
+    word_count: 2216
+    path: books/pg5314-grimm-hunt/tales/thumbling.txt
+  - book: pg11027-grimm-gruelle
+    slug: thumbling
+    title: THUMBLING
+    language: en
+    weight: supplementary
+    word_count: 2194
+    path: books/pg11027-grimm-gruelle/tales/thumbling.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: duimpje
+    title: Duimpje
+    language: nl
+    weight: supplementary
+    word_count: 2090
+    path: books/pg22555-grimm-eeden-dutch/tales/duimpje.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-037
+  variant_count: 4
+- khm: 38
+  khm_variant: false
+  atu: '65'
+  canonical_title_en: The Wedding of Mrs. Fox
+  canonical_title_de: Die Hochzeit der Frau Füchsin
+  canonical_slug: the-wedding-of-mrs-fox
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De bruiloft van vrouw Vos
+  - THE WEDDING OF MRS FOX
+  - The Wedding of Mrs. Fox
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-wedding-of-mrs-fox
+    title: THE WEDDING OF MRS FOX
+    language: en
+    weight: supplementary
+    word_count: 785
+    path: books/pg2591-grimm-taylor/tales/the-wedding-of-mrs-fox.txt
+  - book: pg5314-grimm-hunt
+    slug: the-wedding-of-mrs-fox
+    title: The Wedding of Mrs. Fox
+    language: en
+    weight: canonical
+    word_count: 787
+    path: books/pg5314-grimm-hunt/tales/the-wedding-of-mrs-fox.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-bruiloft-van-vrouw-vos
+    title: De bruiloft van vrouw Vos
+    language: nl
+    weight: supplementary
+    word_count: 711
+    path: books/pg22555-grimm-eeden-dutch/tales/de-bruiloft-van-vrouw-vos.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-038
+  variant_count: 3
+- khm: 39
+  khm_variant: false
+  atu: '503'
+  canonical_title_en: The Elves
+  canonical_title_de: Die Wichtelmänner
+  canonical_slug: the-elves
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De Kaboutertjes
+  - THE ELVES AND THE SHOEMAKER
+  - The Elves
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-elves-and-the-shoemaker
+    title: THE ELVES AND THE SHOEMAKER
+    language: en
+    weight: supplementary
+    word_count: 743
+    path: books/pg2591-grimm-taylor/tales/the-elves-and-the-shoemaker.txt
+  - book: pg5314-grimm-hunt
+    slug: the-elves
+    title: The Elves
+    language: en
+    weight: canonical
+    word_count: 1173
+    path: books/pg5314-grimm-hunt/tales/the-elves.txt
+  - book: pg52521-grimm-olcott
+    slug: the-elves-and-the-shoemaker
+    title: THE ELVES AND THE SHOEMAKER
+    language: en
+    weight: supplementary
+    word_count: 657
+    path: books/pg52521-grimm-olcott/tales/the-elves-and-the-shoemaker.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-kaboutertjes
+    title: De Kaboutertjes
+    language: nl
+    weight: supplementary
+    word_count: 1090
+    path: books/pg22555-grimm-eeden-dutch/tales/de-kaboutertjes.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-039
+  variant_count: 4
+- khm: 40
+  khm_variant: false
+  atu: '955'
+  canonical_title_en: The Robber Bridegroom
+  canonical_title_de: Der Räuberbräutigam
+  canonical_slug: the-robber-bridegroom
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De Rooverbruigom
+  - THE ROBBER BRIDEGROOM
+  - The Robber Bridegroom
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-robber-bridegroom
+    title: THE ROBBER BRIDEGROOM
+    language: en
+    weight: supplementary
+    word_count: 1474
+    path: books/pg2591-grimm-taylor/tales/the-robber-bridegroom.txt
+  - book: pg5314-grimm-hunt
+    slug: the-robber-bridegroom
+    title: The Robber Bridegroom
+    language: en
+    weight: canonical
+    word_count: 1384
+    path: books/pg5314-grimm-hunt/tales/the-robber-bridegroom.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-rooverbruigom
+    title: De Rooverbruigom
+    language: nl
+    weight: supplementary
+    word_count: 1246
+    path: books/pg22555-grimm-eeden-dutch/tales/de-rooverbruigom.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-040
+  variant_count: 3
+- khm: 41
+  khm_variant: false
+  atu: '210'
+  canonical_title_en: Herr Korbes
+  canonical_title_de: Herr Korbes
+  canonical_slug: herr-korbes
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Herr Korbes
+  - Mijnheer Korbes
+  - THE ADVENTURES OF CHANTICLEER AND PARTLET
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-adventures-of-chanticleer-and-partlet
+    title: THE ADVENTURES OF CHANTICLEER AND PARTLET
+    language: en
+    weight: supplementary
+    word_count: 1871
+    path: books/pg2591-grimm-taylor/tales/the-adventures-of-chanticleer-and-partlet.txt
+    partial: true
+    note: Source file covers KHM 10 + others; this cluster is a sub-tale embedded in it.
+  - book: pg5314-grimm-hunt
+    slug: herr-korbes
+    title: Herr Korbes
+    language: en
+    weight: canonical
+    word_count: 391
+    path: books/pg5314-grimm-hunt/tales/herr-korbes.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: mijnheer-korbes
+    title: Mijnheer Korbes
+    language: nl
+    weight: supplementary
+    word_count: 351
+    path: books/pg22555-grimm-eeden-dutch/tales/mijnheer-korbes.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-041
+  variant_count: 3
+- khm: 42
+  khm_variant: false
+  atu: '332'
+  canonical_title_en: The Godfather
+  canonical_title_de: Der Herr Gevatter
+  canonical_slug: the-godfather
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De Peet
+  - The Godfather
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-godfather
+    title: The Godfather
+    language: en
+    weight: canonical
+    word_count: 626
+    path: books/pg5314-grimm-hunt/tales/the-godfather.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-peet
+    title: De Peet
+    language: nl
+    weight: supplementary
+    word_count: 562
+    path: books/pg22555-grimm-eeden-dutch/tales/de-peet.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-042
+  variant_count: 2
+- khm: 43
+  khm_variant: false
+  atu: '334'
+  canonical_title_en: Frau Trude
+  canonical_title_de: Frau Trude
+  canonical_slug: frau-trude
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Frau Trude
+  - Vrouw Trude
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: frau-trude
+    title: Frau Trude
+    language: en
+    weight: canonical
+    word_count: 301
+    path: books/pg5314-grimm-hunt/tales/frau-trude.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: vrouw-trude
+    title: Vrouw Trude
+    language: nl
+    weight: supplementary
+    word_count: 280
+    path: books/pg22555-grimm-eeden-dutch/tales/vrouw-trude.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-043
+  variant_count: 2
+- khm: 44
+  khm_variant: false
+  atu: '332'
+  canonical_title_en: Godfather Death
+  canonical_title_de: Der Gevatter Tod
+  canonical_slug: godfather-death
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Godfather Death
+  - Peet de Dood
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: godfather-death
+    title: Godfather Death
+    language: en
+    weight: canonical
+    word_count: 1224
+    path: books/pg5314-grimm-hunt/tales/godfather-death.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: peet-de-dood
+    title: Peet de Dood
+    language: nl
+    weight: supplementary
+    word_count: 1064
+    path: books/pg22555-grimm-eeden-dutch/tales/peet-de-dood.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-044
+  variant_count: 2
+- khm: 45
+  khm_variant: false
+  atu: '700'
+  canonical_title_en: Thumbling as Journeyman [Thumbling’s Travels]
+  canonical_title_de: Daumerlings Wanderschaft
+  canonical_slug: thumbling-as-journeyman-thumblings-travels
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Hoe Duimpje op reis ging
+  - THE TRAVELS OF TOM THUMB
+  - Thumbling as Journeyman [Thumbling’s Travels]
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: thumbling-as-journeyman-thumblings-travels
+    title: Thumbling as Journeyman [Thumbling’s Travels]
+    language: en
+    weight: canonical
+    word_count: 1614
+    path: books/pg5314-grimm-hunt/tales/thumbling-as-journeyman-thumblings-travels.txt
+  - book: pg11027-grimm-gruelle
+    slug: the-travels-of-tom-thumb
+    title: THE TRAVELS OF TOM THUMB
+    language: en
+    weight: supplementary
+    word_count: 1738
+    path: books/pg11027-grimm-gruelle/tales/the-travels-of-tom-thumb.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: hoe-duimpje-op-reis-ging
+    title: Hoe Duimpje op reis ging
+    language: nl
+    weight: supplementary
+    word_count: 1440
+    path: books/pg22555-grimm-eeden-dutch/tales/hoe-duimpje-op-reis-ging.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-045
+  variant_count: 3
+- khm: 46
+  khm_variant: false
+  atu: '311'
+  canonical_title_en: Fitcher’s Bird [Fowler’s Fowl]
+  canonical_title_de: Fitchers Vogel
+  canonical_slug: fitchers-bird-fowlers-fowl
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Fitcher’s Bird [Fowler’s Fowl]
+  - Fitscher's Vogel
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: fitchers-bird-fowlers-fowl
+    title: Fitcher’s Bird [Fowler’s Fowl]
+    language: en
+    weight: canonical
+    word_count: 1404
+    path: books/pg5314-grimm-hunt/tales/fitchers-bird-fowlers-fowl.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: fitscher-s-vogel
+    title: Fitscher's Vogel
+    language: nl
+    weight: supplementary
+    word_count: 1148
+    path: books/pg22555-grimm-eeden-dutch/tales/fitscher-s-vogel.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-046
+  variant_count: 2
+- khm: 47
+  khm_variant: false
+  atu: '720'
+  canonical_title_en: The Juniper-Tree
+  canonical_title_de: Von dem Machandelboom
+  canonical_slug: the-juniper-tree
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE JUNIPER-TREE
+  - The Juniper-Tree
+  - Van den Amandelboom
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-juniper-tree
+    title: THE JUNIPER-TREE
+    language: en
+    weight: supplementary
+    word_count: 3077
+    path: books/pg2591-grimm-taylor/tales/the-juniper-tree.txt
+  - book: pg5314-grimm-hunt
+    slug: the-juniper-tree
+    title: The Juniper-Tree
+    language: en
+    weight: canonical
+    word_count: 3076
+    path: books/pg5314-grimm-hunt/tales/the-juniper-tree.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: van-den-amandelboom
+    title: Van den Amandelboom
+    language: nl
+    weight: supplementary
+    word_count: 2943
+    path: books/pg22555-grimm-eeden-dutch/tales/van-den-amandelboom.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-047
+  variant_count: 3
+- khm: 48
+  khm_variant: false
+  atu: '101'
+  canonical_title_en: Old Sultan
+  canonical_title_de: Der alte Sultan
+  canonical_slug: old-sultan
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De oude Sultan
+  - OLD SULTAN
+  - Old Sultan
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: old-sultan
+    title: OLD SULTAN
+    language: en
+    weight: supplementary
+    word_count: 870
+    path: books/pg2591-grimm-taylor/tales/old-sultan.txt
+  - book: pg5314-grimm-hunt
+    slug: old-sultan
+    title: Old Sultan
+    language: en
+    weight: canonical
+    word_count: 864
+    path: books/pg5314-grimm-hunt/tales/old-sultan.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-oude-sultan
+    title: De oude Sultan
+    language: nl
+    weight: supplementary
+    word_count: 833
+    path: books/pg22555-grimm-eeden-dutch/tales/de-oude-sultan.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-048
+  variant_count: 3
+- khm: 49
+  khm_variant: false
+  atu: '451'
+  canonical_title_en: The Six Swans
+  canonical_title_de: Die sechs Schwäne
+  canonical_slug: the-six-swans
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De zes Zwanen
+  - THE SIX SWANS
+  - The Six Swans
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-six-swans
+    title: The Six Swans
+    language: en
+    weight: canonical
+    word_count: 1987
+    path: books/pg5314-grimm-hunt/tales/the-six-swans.txt
+  - book: pg11027-grimm-gruelle
+    slug: the-six-swans
+    title: THE SIX SWANS
+    language: en
+    weight: supplementary
+    word_count: 1871
+    path: books/pg11027-grimm-gruelle/tales/the-six-swans.txt
+  - book: pg52521-grimm-olcott
+    slug: the-six-swans
+    title: THE SIX SWANS
+    language: en
+    weight: supplementary
+    word_count: 1974
+    path: books/pg52521-grimm-olcott/tales/the-six-swans.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-zes-zwanen
+    title: De zes Zwanen
+    language: nl
+    weight: supplementary
+    word_count: 1801
+    path: books/pg22555-grimm-eeden-dutch/tales/de-zes-zwanen.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-049
+  variant_count: 4
+- khm: 50
+  khm_variant: false
+  atu: '410'
+  canonical_title_en: Little Briar-Rose
+  canonical_title_de: Dornröschen
+  canonical_slug: little-briar-rose
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - BRIAR ROSE
+  - Doornenroosje
+  - LITTLE BRIAR-ROSE
+  - Little Briar-Rose
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: briar-rose
+    title: BRIAR ROSE
+    language: en
+    weight: supplementary
+    word_count: 1510
+    path: books/pg2591-grimm-taylor/tales/briar-rose.txt
+  - book: pg5314-grimm-hunt
+    slug: little-briar-rose
+    title: Little Briar-Rose
+    language: en
+    weight: canonical
+    word_count: 1318
+    path: books/pg5314-grimm-hunt/tales/little-briar-rose.txt
+  - book: pg11027-grimm-gruelle
+    slug: briar-rose
+    title: BRIAR ROSE
+    language: en
+    weight: supplementary
+    word_count: 1168
+    path: books/pg11027-grimm-gruelle/tales/briar-rose.txt
+  - book: pg52521-grimm-olcott
+    slug: little-briar-rose
+    title: LITTLE BRIAR-ROSE
+    language: en
+    weight: supplementary
+    word_count: 1311
+    path: books/pg52521-grimm-olcott/tales/little-briar-rose.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: doornenroosje
+    title: Doornenroosje
+    language: nl
+    weight: supplementary
+    word_count: 1128
+    path: books/pg22555-grimm-eeden-dutch/tales/doornenroosje.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-050
+  variant_count: 5
+- khm: 51
+  khm_variant: false
+  atu: '313'
+  canonical_title_en: Foundling-Bird
+  canonical_title_de: Fundevogel
+  canonical_slug: foundling-bird
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - BIRD-FOUND
+  - FUNDEVOGEL
+  - Foundling-Bird
+  - Vogelbuit
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: fundevogel
+    title: FUNDEVOGEL
+    language: en
+    weight: supplementary
+    word_count: 938
+    path: books/pg2591-grimm-taylor/tales/fundevogel.txt
+  - book: pg5314-grimm-hunt
+    slug: foundling-bird
+    title: Foundling-Bird
+    language: en
+    weight: canonical
+    word_count: 956
+    path: books/pg5314-grimm-hunt/tales/foundling-bird.txt
+  - book: pg52521-grimm-olcott
+    slug: bird-found
+    title: BIRD-FOUND
+    language: en
+    weight: supplementary
+    word_count: 874
+    path: books/pg52521-grimm-olcott/tales/bird-found.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: vogelbuit
+    title: Vogelbuit
+    language: nl
+    weight: supplementary
+    word_count: 887
+    path: books/pg22555-grimm-eeden-dutch/tales/vogelbuit.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-051
+  variant_count: 4
+- khm: 52
+  khm_variant: false
+  atu: '900'
+  canonical_title_en: King Thrushbeard
+  canonical_title_de: König Drosselbart
+  canonical_slug: king-thrushbeard
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - KING GRISLY-BEARD
+  - KING THRUSHBEARD
+  - King Thrushbeard
+  - Koning Lijsterbaard
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: king-grisly-beard
+    title: KING GRISLY-BEARD
+    language: en
+    weight: supplementary
+    word_count: 1469
+    path: books/pg2591-grimm-taylor/tales/king-grisly-beard.txt
+  - book: pg5314-grimm-hunt
+    slug: king-thrushbeard
+    title: King Thrushbeard
+    language: en
+    weight: canonical
+    word_count: 1641
+    path: books/pg5314-grimm-hunt/tales/king-thrushbeard.txt
+  - book: pg52521-grimm-olcott
+    slug: king-thrushbeard
+    title: KING THRUSHBEARD
+    language: en
+    weight: supplementary
+    word_count: 1649
+    path: books/pg52521-grimm-olcott/tales/king-thrushbeard.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: koning-lijsterbaard
+    title: Koning Lijsterbaard
+    language: nl
+    weight: supplementary
+    word_count: 1482
+    path: books/pg22555-grimm-eeden-dutch/tales/koning-lijsterbaard.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-052
+  variant_count: 4
+- khm: 53
+  khm_variant: false
+  atu: '709'
+  canonical_title_en: Little Snow-White
+  canonical_title_de: Sneewittchen
+  canonical_slug: little-snow-white
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - LITTLE SNOW-WHITE
+  - Little Snow-White
+  - SNOWDROP
+  - Sneeuwwitje
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: snowdrop
+    title: SNOWDROP
+    language: en
+    weight: supplementary
+    word_count: 2380
+    path: books/pg2591-grimm-taylor/tales/snowdrop.txt
+  - book: pg5314-grimm-hunt
+    slug: little-snow-white
+    title: Little Snow-White
+    language: en
+    weight: canonical
+    word_count: 3102
+    path: books/pg5314-grimm-hunt/tales/little-snow-white.txt
+  - book: pg11027-grimm-gruelle
+    slug: little-snow-white
+    title: LITTLE SNOW-WHITE
+    language: en
+    weight: supplementary
+    word_count: 2255
+    path: books/pg11027-grimm-gruelle/tales/little-snow-white.txt
+  - book: pg52521-grimm-olcott
+    slug: little-snow-white
+    title: LITTLE SNOW-WHITE
+    language: en
+    weight: supplementary
+    word_count: 3055
+    path: books/pg52521-grimm-olcott/tales/little-snow-white.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: sneeuwwitje
+    title: Sneeuwwitje
+    language: nl
+    weight: supplementary
+    word_count: 2833
+    path: books/pg22555-grimm-eeden-dutch/tales/sneeuwwitje.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-053
+  variant_count: 5
+- khm: 54
+  khm_variant: false
+  atu: '569'
+  canonical_title_en: The Knapsack, the Hat, and the Horn
+  canonical_title_de: Der Ranzen, das Hütlein und das Hörnlein
+  canonical_slug: the-knapsack-the-hat-and-the-horn
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De Ransel, het Hoedje en het Hoorntje
+  - The Knapsack, the Hat, and the Horn
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-knapsack-the-hat-and-the-horn
+    title: The Knapsack, the Hat, and the Horn
+    language: en
+    weight: canonical
+    word_count: 2324
+    path: books/pg5314-grimm-hunt/tales/the-knapsack-the-hat-and-the-horn.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-ransel-het-hoedje-en-het-hoorntje
+    title: De Ransel, het Hoedje en het Hoorntje
+    language: nl
+    weight: supplementary
+    word_count: 2082
+    path: books/pg22555-grimm-eeden-dutch/tales/de-ransel-het-hoedje-en-het-hoorntje.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-054
+  variant_count: 2
+- khm: 55
+  khm_variant: false
+  atu: '500'
+  canonical_title_en: Rumpelstiltskin
+  canonical_title_de: Rumpelstilzchen
+  canonical_slug: rumpelstiltskin
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - RUMPELSTILTSKIN
+  - Rompelsteeltje
+  - Rumpelstiltskin
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: rumpelstiltskin
+    title: RUMPELSTILTSKIN
+    language: en
+    weight: supplementary
+    word_count: 1138
+    path: books/pg2591-grimm-taylor/tales/rumpelstiltskin.txt
+  - book: pg5314-grimm-hunt
+    slug: rumpelstiltskin
+    title: Rumpelstiltskin
+    language: en
+    weight: canonical
+    word_count: 1084
+    path: books/pg5314-grimm-hunt/tales/rumpelstiltskin.txt
+  - book: pg11027-grimm-gruelle
+    slug: rumpelstiltskin
+    title: RUMPELSTILTSKIN
+    language: en
+    weight: supplementary
+    word_count: 1083
+    path: books/pg11027-grimm-gruelle/tales/rumpelstiltskin.txt
+  - book: pg52521-grimm-olcott
+    slug: rumpelstiltskin
+    title: RUMPELSTILTSKIN
+    language: en
+    weight: supplementary
+    word_count: 1088
+    path: books/pg52521-grimm-olcott/tales/rumpelstiltskin.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: rompelsteeltje
+    title: Rompelsteeltje
+    language: nl
+    weight: supplementary
+    word_count: 917
+    path: books/pg22555-grimm-eeden-dutch/tales/rompelsteeltje.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-055
+  variant_count: 5
+- khm: 56
+  khm_variant: false
+  atu: '1119'
+  canonical_title_en: Sweetheart Roland
+  canonical_title_de: Der Liebste Roland
+  canonical_slug: sweetheart-roland
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De liefste Roland
+  - SWEETHEART ROLAND
+  - Sweetheart Roland
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: sweetheart-roland
+    title: SWEETHEART ROLAND
+    language: en
+    weight: supplementary
+    word_count: 1473
+    path: books/pg2591-grimm-taylor/tales/sweetheart-roland.txt
+  - book: pg5314-grimm-hunt
+    slug: sweetheart-roland
+    title: Sweetheart Roland
+    language: en
+    weight: canonical
+    word_count: 1479
+    path: books/pg5314-grimm-hunt/tales/sweetheart-roland.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-liefste-roland
+    title: De liefste Roland
+    language: nl
+    weight: supplementary
+    word_count: 1384
+    path: books/pg22555-grimm-eeden-dutch/tales/de-liefste-roland.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-056
+  variant_count: 3
+- khm: 57
+  khm_variant: false
+  atu: '550'
+  canonical_title_en: The Golden Bird
+  canonical_title_de: Der goldene Vogel
+  canonical_slug: the-golden-bird
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De gouden Vogel
+  - THE GOLDEN BIRD
+  - The Golden Bird
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-golden-bird
+    title: THE GOLDEN BIRD
+    language: en
+    weight: supplementary
+    word_count: 2527
+    path: books/pg2591-grimm-taylor/tales/the-golden-bird.txt
+  - book: pg5314-grimm-hunt
+    slug: the-golden-bird
+    title: The Golden Bird
+    language: en
+    weight: canonical
+    word_count: 3081
+    path: books/pg5314-grimm-hunt/tales/the-golden-bird.txt
+  - book: pg52521-grimm-olcott
+    slug: the-golden-bird
+    title: THE GOLDEN BIRD
+    language: en
+    weight: supplementary
+    word_count: 2994
+    path: books/pg52521-grimm-olcott/tales/the-golden-bird.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-gouden-vogel
+    title: De gouden Vogel
+    language: nl
+    weight: supplementary
+    word_count: 2766
+    path: books/pg22555-grimm-eeden-dutch/tales/de-gouden-vogel.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-057
+  variant_count: 4
+- khm: 58
+  khm_variant: false
+  atu: 248A
+  canonical_title_en: The Dog and the Sparrow
+  canonical_title_de: Der Hund und der Sperling
+  canonical_slug: the-dog-and-the-sparrow
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De Hond en de Musch
+  - THE DOG AND THE SPARROW
+  - The Dog and the Sparrow
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-dog-and-the-sparrow
+    title: THE DOG AND THE SPARROW
+    language: en
+    weight: supplementary
+    word_count: 1342
+    path: books/pg2591-grimm-taylor/tales/the-dog-and-the-sparrow.txt
+  - book: pg5314-grimm-hunt
+    slug: the-dog-and-the-sparrow
+    title: The Dog and the Sparrow
+    language: en
+    weight: canonical
+    word_count: 1200
+    path: books/pg5314-grimm-hunt/tales/the-dog-and-the-sparrow.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-hond-en-de-musch
+    title: De Hond en de Musch
+    language: nl
+    weight: supplementary
+    word_count: 1121
+    path: books/pg22555-grimm-eeden-dutch/tales/de-hond-en-de-musch.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-058
+  variant_count: 3
+- khm: 59
+  khm_variant: false
+  atu: '1387'
+  canonical_title_en: Frederick and Catherine
+  canonical_title_de: Der Frieder und das Catherlieschen
+  canonical_slug: frederick-and-catherine
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - CATHERINE AND FREDERICK
+  - FREDERICK AND CATHERINE
+  - Frederick and Catherine
+  - Frieder en Katerliesje
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: frederick-and-catherine
+    title: FREDERICK AND CATHERINE
+    language: en
+    weight: supplementary
+    word_count: 1902
+    path: books/pg2591-grimm-taylor/tales/frederick-and-catherine.txt
+  - book: pg5314-grimm-hunt
+    slug: frederick-and-catherine
+    title: Frederick and Catherine
+    language: en
+    weight: canonical
+    word_count: 2573
+    path: books/pg5314-grimm-hunt/tales/frederick-and-catherine.txt
+  - book: pg11027-grimm-gruelle
+    slug: catherine-and-frederick
+    title: CATHERINE AND FREDERICK
+    language: en
+    weight: supplementary
+    word_count: 2516
+    path: books/pg11027-grimm-gruelle/tales/catherine-and-frederick.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: frieder-en-katerliesje
+    title: Frieder en Katerliesje
+    language: nl
+    weight: supplementary
+    word_count: 2390
+    path: books/pg22555-grimm-eeden-dutch/tales/frieder-en-katerliesje.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-059
+  variant_count: 4
+- khm: 60
+  khm_variant: false
+  atu: '567'
+  canonical_title_en: The Two Brothers
+  canonical_title_de: Die zwei Brüder
+  canonical_slug: the-two-brothers
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De twee Broeders
+  - The Two Brothers
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-two-brothers
+    title: The Two Brothers
+    language: en
+    weight: canonical
+    word_count: 8568
+    path: books/pg5314-grimm-hunt/tales/the-two-brothers.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-twee-broeders
+    title: De twee Broeders
+    language: nl
+    weight: supplementary
+    word_count: 7836
+    path: books/pg22555-grimm-eeden-dutch/tales/de-twee-broeders.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-060
+  variant_count: 2
+- khm: 61
+  khm_variant: false
+  atu: '1535'
+  canonical_title_en: The Little Peasant
+  canonical_title_de: Das Bürle
+  canonical_slug: the-little-peasant
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Het Boerke
+  - THE LITTLE PEASANT
+  - The Little Peasant
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-little-peasant
+    title: THE LITTLE PEASANT
+    language: en
+    weight: supplementary
+    word_count: 2069
+    path: books/pg2591-grimm-taylor/tales/the-little-peasant.txt
+  - book: pg5314-grimm-hunt
+    slug: the-little-peasant
+    title: The Little Peasant
+    language: en
+    weight: canonical
+    word_count: 2076
+    path: books/pg5314-grimm-hunt/tales/the-little-peasant.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: het-boerke
+    title: Het Boerke
+    language: nl
+    weight: supplementary
+    word_count: 1833
+    path: books/pg22555-grimm-eeden-dutch/tales/het-boerke.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-061
+  variant_count: 3
+- khm: 62
+  khm_variant: false
+  atu: '554'
+  canonical_title_en: The Queen Bee
+  canonical_title_de: Die Bienenkönigin
+  canonical_slug: the-queen-bee
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De Bijenkoningin
+  - THE QUEEN BEE
+  - The Queen Bee
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-queen-bee
+    title: THE QUEEN BEE
+    language: en
+    weight: supplementary
+    word_count: 850
+    path: books/pg2591-grimm-taylor/tales/the-queen-bee.txt
+  - book: pg5314-grimm-hunt
+    slug: the-queen-bee
+    title: The Queen Bee
+    language: en
+    weight: canonical
+    word_count: 808
+    path: books/pg5314-grimm-hunt/tales/the-queen-bee.txt
+  - book: pg52521-grimm-olcott
+    slug: the-queen-bee
+    title: THE QUEEN BEE
+    language: en
+    weight: supplementary
+    word_count: 792
+    path: books/pg52521-grimm-olcott/tales/the-queen-bee.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-bijenkoningin
+    title: De Bijenkoningin
+    language: nl
+    weight: supplementary
+    word_count: 724
+    path: books/pg22555-grimm-eeden-dutch/tales/de-bijenkoningin.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-062
+  variant_count: 4
+- khm: 63
+  khm_variant: false
+  atu: '402'
+  canonical_title_en: The Three Feathers
+  canonical_title_de: Die drei Federn
+  canonical_slug: the-three-feathers
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - DUMMLING AND THE THREE FEATHERS
+  - De drie Veeren
+  - The Three Feathers
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-three-feathers
+    title: The Three Feathers
+    language: en
+    weight: canonical
+    word_count: 1016
+    path: books/pg5314-grimm-hunt/tales/the-three-feathers.txt
+  - book: pg11027-grimm-gruelle
+    slug: dummling-and-the-three-feathers
+    title: DUMMLING AND THE THREE FEATHERS
+    language: en
+    weight: supplementary
+    word_count: 1226
+    path: books/pg11027-grimm-gruelle/tales/dummling-and-the-three-feathers.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-drie-veeren
+    title: De drie Veeren
+    language: nl
+    weight: supplementary
+    word_count: 943
+    path: books/pg22555-grimm-eeden-dutch/tales/de-drie-veeren.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-063
+  variant_count: 3
+- khm: 64
+  khm_variant: false
+  atu: '571'
+  canonical_title_en: The Golden Goose
+  canonical_title_de: Die goldene Gans
+  canonical_slug: the-golden-goose
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De gouden Gans
+  - THE GOLDEN GOOSE
+  - The Golden Goose
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-golden-goose
+    title: THE GOLDEN GOOSE
+    language: en
+    weight: supplementary
+    word_count: 1582
+    path: books/pg2591-grimm-taylor/tales/the-golden-goose.txt
+  - book: pg5314-grimm-hunt
+    slug: the-golden-goose
+    title: The Golden Goose
+    language: en
+    weight: canonical
+    word_count: 1088
+    path: books/pg5314-grimm-hunt/tales/the-golden-goose.txt
+  - book: pg11027-grimm-gruelle
+    slug: the-golden-goose
+    title: THE GOLDEN GOOSE
+    language: en
+    weight: supplementary
+    word_count: 1086
+    path: books/pg11027-grimm-gruelle/tales/the-golden-goose.txt
+  - book: pg52521-grimm-olcott
+    slug: the-golden-goose
+    title: THE GOLDEN GOOSE
+    language: en
+    weight: supplementary
+    word_count: 1070
+    path: books/pg52521-grimm-olcott/tales/the-golden-goose.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-gouden-gans
+    title: De gouden Gans
+    language: nl
+    weight: supplementary
+    word_count: 1441
+    path: books/pg22555-grimm-eeden-dutch/tales/de-gouden-gans.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-064
+  variant_count: 5
+- khm: 65
+  khm_variant: false
+  atu: 510B
+  canonical_title_en: Allerleirauh [All-Kinds-Of-Fur]
+  canonical_title_de: Allerleirauh
+  canonical_slug: allerleirauh-all-kinds-of-fur
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Albontje
+  - Allerleirauh [All-Kinds-Of-Fur]
+  - CAT-SKIN
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: cat-skin
+    title: CAT-SKIN
+    language: en
+    weight: supplementary
+    word_count: 2125
+    path: books/pg2591-grimm-taylor/tales/cat-skin.txt
+  - book: pg5314-grimm-hunt
+    slug: allerleirauh-all-kinds-of-fur
+    title: Allerleirauh [All-Kinds-Of-Fur]
+    language: en
+    weight: canonical
+    word_count: 2176
+    path: books/pg5314-grimm-hunt/tales/allerleirauh-all-kinds-of-fur.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: albontje
+    title: Albontje
+    language: nl
+    weight: supplementary
+    word_count: 2016
+    path: books/pg22555-grimm-eeden-dutch/tales/albontje.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-065
+  variant_count: 3
+- khm: 66
+  khm_variant: false
+  atu: '311'
+  canonical_title_en: The Hare’s Bride
+  canonical_title_de: Häsichenbraut
+  canonical_slug: the-hares-bride
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Hazebruidje
+  - The Hare’s Bride
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-hares-bride
+    title: The Hare’s Bride
+    language: en
+    weight: canonical
+    word_count: 483
+    path: books/pg5314-grimm-hunt/tales/the-hares-bride.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: hazebruidje
+    title: Hazebruidje
+    language: nl
+    weight: supplementary
+    word_count: 419
+    path: books/pg22555-grimm-eeden-dutch/tales/hazebruidje.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-066
+  variant_count: 2
+- khm: 67
+  khm_variant: false
+  atu: '884'
+  canonical_title_en: The Twelve Huntsmen
+  canonical_title_de: Die zwölf Jäger
+  canonical_slug: the-twelve-huntsmen
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De twaalf Jagers
+  - THE TWELVE HUNTSMEN
+  - The Twelve Huntsmen
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-twelve-huntsmen
+    title: THE TWELVE HUNTSMEN
+    language: en
+    weight: supplementary
+    word_count: 1059
+    path: books/pg2591-grimm-taylor/tales/the-twelve-huntsmen.txt
+  - book: pg5314-grimm-hunt
+    slug: the-twelve-huntsmen
+    title: The Twelve Huntsmen
+    language: en
+    weight: canonical
+    word_count: 1084
+    path: books/pg5314-grimm-hunt/tales/the-twelve-huntsmen.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-twaalf-jagers
+    title: De twaalf Jagers
+    language: nl
+    weight: supplementary
+    word_count: 1038
+    path: books/pg22555-grimm-eeden-dutch/tales/de-twaalf-jagers.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-067
+  variant_count: 3
+- khm: 68
+  khm_variant: false
+  atu: '325'
+  canonical_title_en: The Thief and His Master
+  canonical_title_de: De Gaudeif un sien Meester
+  canonical_slug: the-thief-and-his-master
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De Gauwdief en zijn Meester
+  - The Thief and His Master
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-thief-and-his-master
+    title: The Thief and His Master
+    language: en
+    weight: canonical
+    word_count: 799
+    path: books/pg5314-grimm-hunt/tales/the-thief-and-his-master.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-gauwdief-en-zijn-meester
+    title: De Gauwdief en zijn Meester
+    language: nl
+    weight: supplementary
+    word_count: 739
+    path: books/pg22555-grimm-eeden-dutch/tales/de-gauwdief-en-zijn-meester.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-068
+  variant_count: 2
+- khm: 69
+  khm_variant: false
+  atu: '405'
+  canonical_title_en: Jorinde and Joringel
+  canonical_title_de: Jorinde und Joringel
+  canonical_slug: jorinde-and-joringel
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - JORINDA AND JORINDEL
+  - JORINDA AND JORINGEL
+  - Jorinde and Joringel
+  - Jorinde en Joringel
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: jorinda-and-jorindel
+    title: JORINDA AND JORINDEL
+    language: en
+    weight: supplementary
+    word_count: 1133
+    path: books/pg2591-grimm-taylor/tales/jorinda-and-jorindel.txt
+  - book: pg5314-grimm-hunt
+    slug: jorinde-and-joringel
+    title: Jorinde and Joringel
+    language: en
+    weight: canonical
+    word_count: 937
+    path: books/pg5314-grimm-hunt/tales/jorinde-and-joringel.txt
+  - book: pg52521-grimm-olcott
+    slug: jorinda-and-joringel
+    title: JORINDA AND JORINGEL
+    language: en
+    weight: supplementary
+    word_count: 918
+    path: books/pg52521-grimm-olcott/tales/jorinda-and-joringel.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: jorinde-en-joringel
+    title: Jorinde en Joringel
+    language: nl
+    weight: supplementary
+    word_count: 871
+    path: books/pg22555-grimm-eeden-dutch/tales/jorinde-en-joringel.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-069
+  variant_count: 4
+- khm: 70
+  khm_variant: false
+  atu: '1650'
+  canonical_title_en: The Three Children of Fortune
+  canonical_title_de: Die drei Glückskinder
+  canonical_slug: the-three-children-of-fortune
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De drie Gelukskinderen
+  - THE THREE LUCK-CHILDREN
+  - The Three Children of Fortune
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-three-children-of-fortune
+    title: The Three Children of Fortune
+    language: en
+    weight: canonical
+    word_count: 982
+    path: books/pg5314-grimm-hunt/tales/the-three-children-of-fortune.txt
+  - book: pg52521-grimm-olcott
+    slug: the-three-luck-children
+    title: THE THREE LUCK-CHILDREN
+    language: en
+    weight: supplementary
+    word_count: 980
+    path: books/pg52521-grimm-olcott/tales/the-three-luck-children.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-drie-gelukskinderen
+    title: De drie Gelukskinderen
+    language: nl
+    weight: supplementary
+    word_count: 929
+    path: books/pg22555-grimm-eeden-dutch/tales/de-drie-gelukskinderen.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-070
+  variant_count: 3
+- khm: 71
+  khm_variant: false
+  atu: 513A
+  canonical_title_en: How Six Men Got On in the World
+  canonical_title_de: Sechse kommen durch die ganze Welt
+  canonical_slug: how-six-men-got-on-in-the-world
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - HOW SIX MEN GOT ON IN THE WORLD
+  - Hoe er zes door de wereld kwamen
+  - How Six Men Got On in the World
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: how-six-men-got-on-in-the-world
+    title: How Six Men Got On in the World
+    language: en
+    weight: canonical
+    word_count: 2071
+    path: books/pg5314-grimm-hunt/tales/how-six-men-got-on-in-the-world.txt
+  - book: pg52521-grimm-olcott
+    slug: how-six-men-got-on-in-the-world
+    title: HOW SIX MEN GOT ON IN THE WORLD
+    language: en
+    weight: supplementary
+    word_count: 2060
+    path: books/pg52521-grimm-olcott/tales/how-six-men-got-on-in-the-world.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: hoe-er-zes-door-de-wereld-kwamen
+    title: Hoe er zes door de wereld kwamen
+    language: nl
+    weight: supplementary
+    word_count: 1922
+    path: books/pg22555-grimm-eeden-dutch/tales/hoe-er-zes-door-de-wereld-kwamen.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-071
+  variant_count: 3
+- khm: 72
+  khm_variant: false
+  atu: '157'
+  canonical_title_en: The Wolf and the Man
+  canonical_title_de: Der Wolf und der Mensch
+  canonical_slug: the-wolf-and-the-man
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De Wolf en de Mensch
+  - The Wolf and the Man
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-wolf-and-the-man
+    title: The Wolf and the Man
+    language: en
+    weight: canonical
+    word_count: 406
+    path: books/pg5314-grimm-hunt/tales/the-wolf-and-the-man.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-wolf-en-de-mensch
+    title: De Wolf en de Mensch
+    language: nl
+    weight: supplementary
+    word_count: 398
+    path: books/pg22555-grimm-eeden-dutch/tales/de-wolf-en-de-mensch.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-072
+  variant_count: 2
+- khm: 73
+  khm_variant: false
+  atu: '41'
+  canonical_title_en: The Wolf and the Fox
+  canonical_title_de: Der Wolf und der Fuchs
+  canonical_slug: the-wolf-and-the-fox
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - De Wolf en de Vos
+  - The Wolf and the Fox
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-wolf-and-the-fox
+    title: The Wolf and the Fox
+    language: en
+    weight: canonical
+    word_count: 717
+    path: books/pg5314-grimm-hunt/tales/the-wolf-and-the-fox.txt
+  - book: pg22555-grimm-eeden-dutch
+    slug: de-wolf-en-de-vos
+    title: De Wolf en de Vos
+    language: nl
+    weight: supplementary
+    word_count: 780
+    path: books/pg22555-grimm-eeden-dutch/tales/de-wolf-en-de-vos.txt
+  languages:
+  - en
+  - nl
+  cluster_id: khm-073
+  variant_count: 2
+- khm: 74
+  khm_variant: false
+  atu: '65'
+  canonical_title_en: The Fox and His Cousin
+  canonical_title_de: Der Fuchs und die Frau Gevatterin
+  canonical_slug: the-fox-and-his-cousin
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Fox and His Cousin
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-fox-and-his-cousin
+    title: The Fox and His Cousin
+    language: en
+    weight: canonical
+    word_count: 374
+    path: books/pg5314-grimm-hunt/tales/the-fox-and-his-cousin.txt
+  languages:
+  - en
+  cluster_id: khm-074
+  variant_count: 1
+- khm: 75
+  khm_variant: false
+  atu: '105'
+  canonical_title_en: The Fox and the Cat
+  canonical_title_de: Der Fuchs und die Katze
+  canonical_slug: the-fox-and-the-cat
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE FOX AND THE CAT
+  - The Fox and the Cat
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-fox-and-the-cat
+    title: THE FOX AND THE CAT
+    language: en
+    weight: supplementary
+    word_count: 292
+    path: books/pg2591-grimm-taylor/tales/the-fox-and-the-cat.txt
+  - book: pg5314-grimm-hunt
+    slug: the-fox-and-the-cat
+    title: The Fox and the Cat
+    language: en
+    weight: canonical
+    word_count: 288
+    path: books/pg5314-grimm-hunt/tales/the-fox-and-the-cat.txt
+  languages:
+  - en
+  cluster_id: khm-075
+  variant_count: 2
+- khm: 76
+  khm_variant: false
+  atu: '652'
+  canonical_title_en: The Pink
+  canonical_title_de: Die Nelke
+  canonical_slug: the-pink
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE PINK
+  - The Pink
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-pink
+    title: THE PINK
+    language: en
+    weight: supplementary
+    word_count: 1799
+    path: books/pg2591-grimm-taylor/tales/the-pink.txt
+  - book: pg5314-grimm-hunt
+    slug: the-pink
+    title: The Pink
+    language: en
+    weight: canonical
+    word_count: 1800
+    path: books/pg5314-grimm-hunt/tales/the-pink.txt
+  languages:
+  - en
+  cluster_id: khm-076
+  variant_count: 2
+- khm: 77
+  khm_variant: false
+  atu: '1741'
+  canonical_title_en: Clever Grethel
+  canonical_title_de: Das kluge Gretel
+  canonical_slug: clever-grethel
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - CLEVER GRETEL
+  - Clever Grethel
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: clever-gretel
+    title: CLEVER GRETEL
+    language: en
+    weight: supplementary
+    word_count: 932
+    path: books/pg2591-grimm-taylor/tales/clever-gretel.txt
+  - book: pg5314-grimm-hunt
+    slug: clever-grethel
+    title: Clever Grethel
+    language: en
+    weight: canonical
+    word_count: 919
+    path: books/pg5314-grimm-hunt/tales/clever-grethel.txt
+  languages:
+  - en
+  cluster_id: khm-077
+  variant_count: 2
+- khm: 78
+  khm_variant: false
+  atu: 980B
+  canonical_title_en: The Old Man and His Grandson
+  canonical_title_de: Der alte Großvater und der Enkel
+  canonical_slug: the-old-man-and-his-grandson
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE OLD MAN AND HIS GRANDSON
+  - The Old Man and His Grandson
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-old-man-and-his-grandson
+    title: THE OLD MAN AND HIS GRANDSON
+    language: en
+    weight: supplementary
+    word_count: 249
+    path: books/pg2591-grimm-taylor/tales/the-old-man-and-his-grandson.txt
+  - book: pg5314-grimm-hunt
+    slug: the-old-man-and-his-grandson
+    title: The Old Man and His Grandson
+    language: en
+    weight: canonical
+    word_count: 249
+    path: books/pg5314-grimm-hunt/tales/the-old-man-and-his-grandson.txt
+  languages:
+  - en
+  cluster_id: khm-078
+  variant_count: 2
+- khm: 79
+  khm_variant: false
+  atu: '313'
+  canonical_title_en: The Water-Nix
+  canonical_title_de: Die Wassernixe
+  canonical_slug: the-water-nix
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Water-Nix
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-water-nix
+    title: The Water-Nix
+    language: en
+    weight: canonical
+    word_count: 301
+    path: books/pg5314-grimm-hunt/tales/the-water-nix.txt
+  languages:
+  - en
+  cluster_id: khm-079
+  variant_count: 1
+- khm: 80
+  khm_variant: false
+  atu: '2021'
+  canonical_title_en: The Death of the Little Hen
+  canonical_title_de: Von dem Tode des Hühnchens
+  canonical_slug: the-death-of-the-little-hen
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE ADVENTURES OF CHANTICLEER AND PARTLET
+  - The Death of the Little Hen
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-adventures-of-chanticleer-and-partlet
+    title: THE ADVENTURES OF CHANTICLEER AND PARTLET
+    language: en
+    weight: supplementary
+    word_count: 1871
+    path: books/pg2591-grimm-taylor/tales/the-adventures-of-chanticleer-and-partlet.txt
+    partial: true
+    note: Source file covers KHM 10 + others; this cluster is a sub-tale embedded in it.
+  - book: pg5314-grimm-hunt
+    slug: the-death-of-the-little-hen
+    title: The Death of the Little Hen
+    language: en
+    weight: canonical
+    word_count: 668
+    path: books/pg5314-grimm-hunt/tales/the-death-of-the-little-hen.txt
+  languages:
+  - en
+  cluster_id: khm-080
+  variant_count: 2
+- khm: 81
+  khm_variant: false
+  atu: '785'
+  canonical_title_en: Brother Lustig
+  canonical_title_de: Bruder Lustig
+  canonical_slug: brother-lustig
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Brother Lustig
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: brother-lustig
+    title: Brother Lustig
+    language: en
+    weight: canonical
+    word_count: 4142
+    path: books/pg5314-grimm-hunt/tales/brother-lustig.txt
+  languages:
+  - en
+  cluster_id: khm-081
+  variant_count: 1
+- khm: 82
+  khm_variant: false
+  atu: '330'
+  canonical_title_en: Gambling Hansel
+  canonical_title_de: De Spielhansl
+  canonical_slug: gambling-hansel
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Gambling Hansel
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: gambling-hansel
+    title: Gambling Hansel
+    language: en
+    weight: canonical
+    word_count: 981
+    path: books/pg5314-grimm-hunt/tales/gambling-hansel.txt
+  languages:
+  - en
+  cluster_id: khm-082
+  variant_count: 1
+- khm: 83
+  khm_variant: false
+  atu: '1415'
+  canonical_title_en: Hans in Luck
+  canonical_title_de: Hans im Glück
+  canonical_slug: hans-in-luck
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - HANS IN LUCK
+  - Hans in Luck
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: hans-in-luck
+    title: HANS IN LUCK
+    language: en
+    weight: supplementary
+    word_count: 2351
+    path: books/pg2591-grimm-taylor/tales/hans-in-luck.txt
+  - book: pg5314-grimm-hunt
+    slug: hans-in-luck
+    title: Hans in Luck
+    language: en
+    weight: canonical
+    word_count: 2047
+    path: books/pg5314-grimm-hunt/tales/hans-in-luck.txt
+  languages:
+  - en
+  cluster_id: khm-083
+  variant_count: 2
+- khm: 84
+  khm_variant: false
+  atu: '859'
+  canonical_title_en: Hans Married
+  canonical_title_de: Hans heiratet
+  canonical_slug: hans-married
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Hans Married
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: hans-married
+    title: Hans Married
+    language: en
+    weight: canonical
+    word_count: 443
+    path: books/pg5314-grimm-hunt/tales/hans-married.txt
+  languages:
+  - en
+  cluster_id: khm-084
+  variant_count: 1
+- khm: 85
+  khm_variant: false
+  atu: '555'
+  canonical_title_en: The Gold-Children
+  canonical_title_de: Die Goldkinder
+  canonical_slug: the-gold-children
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE GOLD-CHILDREN
+  - The Gold-Children
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-gold-children
+    title: The Gold-Children
+    language: en
+    weight: canonical
+    word_count: 1928
+    path: books/pg5314-grimm-hunt/tales/the-gold-children.txt
+  - book: pg52521-grimm-olcott
+    slug: the-gold-children
+    title: THE GOLD-CHILDREN
+    language: en
+    weight: supplementary
+    word_count: 1899
+    path: books/pg52521-grimm-olcott/tales/the-gold-children.txt
+  languages:
+  - en
+  cluster_id: khm-085
+  variant_count: 2
+- khm: 86
+  khm_variant: false
+  atu: '227'
+  canonical_title_en: The Fox and the Geese
+  canonical_title_de: Der Fuchs und die Gänse
+  canonical_slug: the-fox-and-the-geese
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Fox and the Geese
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-fox-and-the-geese
+    title: The Fox and the Geese
+    language: en
+    weight: canonical
+    word_count: 229
+    path: books/pg5314-grimm-hunt/tales/the-fox-and-the-geese.txt
+  languages:
+  - en
+  cluster_id: khm-086
+  variant_count: 1
+- khm: 87
+  khm_variant: false
+  atu: 750A
+  canonical_title_en: The Poor Man and the Rich Man
+  canonical_title_de: Der Arme und der Reiche
+  canonical_slug: the-poor-man-and-the-rich-man
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Poor Man and the Rich Man
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-poor-man-and-the-rich-man
+    title: The Poor Man and the Rich Man
+    language: en
+    weight: canonical
+    word_count: 1729
+    path: books/pg5314-grimm-hunt/tales/the-poor-man-and-the-rich-man.txt
+  languages:
+  - en
+  cluster_id: khm-087
+  variant_count: 1
+- khm: 88
+  khm_variant: false
+  atu: 425C
+  canonical_title_en: The Singing, Springing Lark
+  canonical_title_de: Das singende springende Löweneckerchen
+  canonical_slug: the-singing-springing-lark
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - LILY AND THE LION
+  - THE SINGING, SOARING LARK
+  - The Singing, Springing Lark
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: lily-and-the-lion
+    title: LILY AND THE LION
+    language: en
+    weight: supplementary
+    word_count: 2336
+    path: books/pg2591-grimm-taylor/tales/lily-and-the-lion.txt
+  - book: pg5314-grimm-hunt
+    slug: the-singing-springing-lark
+    title: The Singing, Springing Lark
+    language: en
+    weight: canonical
+    word_count: 2338
+    path: books/pg5314-grimm-hunt/tales/the-singing-springing-lark.txt
+  - book: pg52521-grimm-olcott
+    slug: the-singing-soaring-lark
+    title: THE SINGING, SOARING LARK
+    language: en
+    weight: supplementary
+    word_count: 2308
+    path: books/pg52521-grimm-olcott/tales/the-singing-soaring-lark.txt
+  languages:
+  - en
+  cluster_id: khm-088
+  variant_count: 3
+- khm: 89
+  khm_variant: false
+  atu: '533'
+  canonical_title_en: The Goose-Girl
+  canonical_title_de: Die Gänsemagd
+  canonical_slug: the-goose-girl
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE GOOSE-GIRL
+  - The Goose-Girl
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-goose-girl
+    title: THE GOOSE-GIRL
+    language: en
+    weight: supplementary
+    word_count: 2220
+    path: books/pg2591-grimm-taylor/tales/the-goose-girl.txt
+  - book: pg5314-grimm-hunt
+    slug: the-goose-girl
+    title: The Goose-Girl
+    language: en
+    weight: canonical
+    word_count: 2212
+    path: books/pg5314-grimm-hunt/tales/the-goose-girl.txt
+  - book: pg11027-grimm-gruelle
+    slug: the-goose-girl
+    title: THE GOOSE-GIRL
+    language: en
+    weight: supplementary
+    word_count: 2089
+    path: books/pg11027-grimm-gruelle/tales/the-goose-girl.txt
+  - book: pg52521-grimm-olcott
+    slug: the-goose-girl
+    title: THE GOOSE-GIRL
+    language: en
+    weight: supplementary
+    word_count: 2203
+    path: books/pg52521-grimm-olcott/tales/the-goose-girl.txt
+  languages:
+  - en
+  cluster_id: khm-089
+  variant_count: 4
+- khm: 90
+  khm_variant: false
+  atu: 650A
+  canonical_title_en: The Young Giant
+  canonical_title_de: Der junge Riese
+  canonical_slug: the-young-giant
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Young Giant
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-young-giant
+    title: The Young Giant
+    language: en
+    weight: canonical
+    word_count: 3091
+    path: books/pg5314-grimm-hunt/tales/the-young-giant.txt
+  languages:
+  - en
+  cluster_id: khm-090
+  variant_count: 1
+- khm: 91
+  khm_variant: false
+  atu: '301'
+  canonical_title_en: The Gnome
+  canonical_title_de: Dat Erdmänneken
+  canonical_slug: the-gnome
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Gnome
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-gnome
+    title: The Gnome
+    language: en
+    weight: canonical
+    word_count: 1854
+    path: books/pg5314-grimm-hunt/tales/the-gnome.txt
+  languages:
+  - en
+  cluster_id: khm-091
+  variant_count: 1
+- khm: 92
+  khm_variant: false
+  atu: '400'
+  canonical_title_en: The King of the Golden Mountain
+  canonical_title_de: Der König vom goldenen Berg
+  canonical_slug: the-king-of-the-golden-mountain
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE KING OF THE GOLDEN MOUNTAIN
+  - The King of the Golden Mountain
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-king-of-the-golden-mountain
+    title: THE KING OF THE GOLDEN MOUNTAIN
+    language: en
+    weight: supplementary
+    word_count: 2468
+    path: books/pg2591-grimm-taylor/tales/the-king-of-the-golden-mountain.txt
+  - book: pg5314-grimm-hunt
+    slug: the-king-of-the-golden-mountain
+    title: The King of the Golden Mountain
+    language: en
+    weight: canonical
+    word_count: 2429
+    path: books/pg5314-grimm-hunt/tales/the-king-of-the-golden-mountain.txt
+  languages:
+  - en
+  cluster_id: khm-092
+  variant_count: 2
+- khm: 93
+  khm_variant: false
+  atu: '401'
+  canonical_title_en: The Raven
+  canonical_title_de: Die Rabe
+  canonical_slug: the-raven
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE RAVEN
+  - The Raven
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-raven
+    title: THE RAVEN
+    language: en
+    weight: supplementary
+    word_count: 2412
+    path: books/pg2591-grimm-taylor/tales/the-raven.txt
+  - book: pg5314-grimm-hunt
+    slug: the-raven
+    title: The Raven
+    language: en
+    weight: canonical
+    word_count: 2261
+    path: books/pg5314-grimm-hunt/tales/the-raven.txt
+  languages:
+  - en
+  cluster_id: khm-093
+  variant_count: 2
+- khm: 94
+  khm_variant: false
+  atu: '875'
+  canonical_title_en: The Peasant’s Clever Daughter
+  canonical_title_de: Die kluge Bauerntochter
+  canonical_slug: the-peasants-clever-daughter
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Peasant’s Clever Daughter
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-peasants-clever-daughter
+    title: The Peasant’s Clever Daughter
+    language: en
+    weight: canonical
+    word_count: 1425
+    path: books/pg5314-grimm-hunt/tales/the-peasants-clever-daughter.txt
+  languages:
+  - en
+  cluster_id: khm-094
+  variant_count: 1
+- khm: 95
+  khm_variant: false
+  atu: 1360C
+  canonical_title_en: Old Hildebrand
+  canonical_title_de: Der alte Hildebrand
+  canonical_slug: old-hildebrand
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Old Hildebrand
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: old-hildebrand
+    title: Old Hildebrand
+    language: en
+    weight: canonical
+    word_count: 1323
+    path: books/pg5314-grimm-hunt/tales/old-hildebrand.txt
+  languages:
+  - en
+  cluster_id: khm-095
+  variant_count: 1
+- khm: 96
+  khm_variant: false
+  atu: '707'
+  canonical_title_en: The Three Little Birds
+  canonical_title_de: De drei Vügelkens
+  canonical_slug: the-three-little-birds
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Three Little Birds
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-three-little-birds
+    title: The Three Little Birds
+    language: en
+    weight: canonical
+    word_count: 1440
+    path: books/pg5314-grimm-hunt/tales/the-three-little-birds.txt
+  languages:
+  - en
+  cluster_id: khm-096
+  variant_count: 1
+- khm: 97
+  khm_variant: false
+  atu: '551'
+  canonical_title_en: The Water of Life
+  canonical_title_de: Das Wasser des Lebens
+  canonical_slug: the-water-of-life
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE WATER OF LIFE
+  - The Water of Life
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-water-of-life
+    title: THE WATER OF LIFE
+    language: en
+    weight: supplementary
+    word_count: 2822
+    path: books/pg2591-grimm-taylor/tales/the-water-of-life.txt
+  - book: pg5314-grimm-hunt
+    slug: the-water-of-life
+    title: The Water of Life
+    language: en
+    weight: canonical
+    word_count: 2319
+    path: books/pg5314-grimm-hunt/tales/the-water-of-life.txt
+  - book: pg11027-grimm-gruelle
+    slug: the-water-of-life
+    title: THE WATER OF LIFE
+    language: en
+    weight: supplementary
+    word_count: 2329
+    path: books/pg11027-grimm-gruelle/tales/the-water-of-life.txt
+  languages:
+  - en
+  cluster_id: khm-097
+  variant_count: 3
+- khm: 98
+  khm_variant: false
+  atu: '1641'
+  canonical_title_en: Dr. Know-All
+  canonical_title_de: Doktor Allwissend
+  canonical_slug: dr-know-all
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - DOCTOR KNOWALL
+  - Dr. Know-All
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: doctor-knowall
+    title: DOCTOR KNOWALL
+    language: en
+    weight: supplementary
+    word_count: 778
+    path: books/pg2591-grimm-taylor/tales/doctor-knowall.txt
+  - book: pg5314-grimm-hunt
+    slug: dr-know-all
+    title: Dr. Know-All
+    language: en
+    weight: canonical
+    word_count: 771
+    path: books/pg5314-grimm-hunt/tales/dr-know-all.txt
+  - book: pg52521-grimm-olcott
+    slug: doctor-knowall
+    title: DOCTOR KNOWALL
+    language: en
+    weight: supplementary
+    word_count: 615
+    path: books/pg52521-grimm-olcott/tales/doctor-knowall.txt
+  languages:
+  - en
+  cluster_id: khm-098
+  variant_count: 3
+- khm: 99
+  khm_variant: false
+  atu: '331'
+  canonical_title_en: The Spirit in the Bottle
+  canonical_title_de: Der Geist im Glas
+  canonical_slug: the-spirit-in-the-bottle
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Spirit in the Bottle
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-spirit-in-the-bottle
+    title: The Spirit in the Bottle
+    language: en
+    weight: canonical
+    word_count: 1786
+    path: books/pg5314-grimm-hunt/tales/the-spirit-in-the-bottle.txt
+  languages:
+  - en
+  cluster_id: khm-099
+  variant_count: 1
+- khm: 100
+  khm_variant: false
+  atu: '475'
+  canonical_title_en: The Devil’s Sooty Brother
+  canonical_title_de: Des Teufels rußiger Bruder
+  canonical_slug: the-devils-sooty-brother
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Devil’s Sooty Brother
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-devils-sooty-brother
+    title: The Devil’s Sooty Brother
+    language: en
+    weight: canonical
+    word_count: 1263
+    path: books/pg5314-grimm-hunt/tales/the-devils-sooty-brother.txt
+  languages:
+  - en
+  cluster_id: khm-100
+  variant_count: 1
+- khm: 101
+  khm_variant: false
+  atu: '361'
+  canonical_title_en: Bearskin
+  canonical_title_de: Der Bärenhäuter
+  canonical_slug: bearskin
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - BEARSKIN
+  - Bearskin
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: bearskin
+    title: Bearskin
+    language: en
+    weight: canonical
+    word_count: 1980
+    path: books/pg5314-grimm-hunt/tales/bearskin.txt
+  - book: pg11027-grimm-gruelle
+    slug: bearskin
+    title: BEARSKIN
+    language: en
+    weight: supplementary
+    word_count: 1959
+    path: books/pg11027-grimm-gruelle/tales/bearskin.txt
+  languages:
+  - en
+  cluster_id: khm-101
+  variant_count: 2
+- khm: 102
+  khm_variant: false
+  atu: '222'
+  canonical_title_en: The Willow-Wren and the Bear
+  canonical_title_de: Der Zaunkönig und der Bär
+  canonical_slug: the-willow-wren-and-the-bear
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE WILLOW-WREN AND THE BEAR
+  - The Willow-Wren and the Bear
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-willow-wren-and-the-bear
+    title: THE WILLOW-WREN AND THE BEAR
+    language: en
+    weight: supplementary
+    word_count: 908
+    path: books/pg2591-grimm-taylor/tales/the-willow-wren-and-the-bear.txt
+  - book: pg5314-grimm-hunt
+    slug: the-willow-wren-and-the-bear
+    title: The Willow-Wren and the Bear
+    language: en
+    weight: canonical
+    word_count: 913
+    path: books/pg5314-grimm-hunt/tales/the-willow-wren-and-the-bear.txt
+  languages:
+  - en
+  cluster_id: khm-102
+  variant_count: 2
+- khm: 103
+  khm_variant: false
+  atu: '565'
+  canonical_title_en: Sweet Porridge
+  canonical_title_de: Der süße Brei
+  canonical_slug: sweet-porridge
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - SWEET PORRIDGE
+  - Sweet Porridge
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: sweet-porridge
+    title: Sweet Porridge
+    language: en
+    weight: canonical
+    word_count: 245
+    path: books/pg5314-grimm-hunt/tales/sweet-porridge.txt
+  - book: pg52521-grimm-olcott
+    slug: sweet-porridge
+    title: SWEET PORRIDGE
+    language: en
+    weight: supplementary
+    word_count: 244
+    path: books/pg52521-grimm-olcott/tales/sweet-porridge.txt
+  languages:
+  - en
+  cluster_id: khm-103
+  variant_count: 2
+- khm: 104
+  khm_variant: false
+  atu: '1450'
+  canonical_title_en: Wise Folks
+  canonical_title_de: Die klugen Leute
+  canonical_slug: wise-folks
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Wise Folks
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: wise-folks
+    title: Wise Folks
+    language: en
+    weight: canonical
+    word_count: 1582
+    path: books/pg5314-grimm-hunt/tales/wise-folks.txt
+  languages:
+  - en
+  cluster_id: khm-104
+  variant_count: 1
+- khm: 105
+  khm_variant: false
+  atu: 285A
+  canonical_title_en: Stories about Snakes
+  canonical_title_de: Märchen von der Unke
+  canonical_slug: stories-about-snakes
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Stories about Snakes
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: stories-about-snakes
+    title: Stories about Snakes
+    language: en
+    weight: canonical
+    word_count: 518
+    path: books/pg5314-grimm-hunt/tales/stories-about-snakes.txt
+  languages:
+  - en
+  cluster_id: khm-105
+  variant_count: 1
+- khm: 106
+  khm_variant: false
+  atu: 545B
+  canonical_title_en: The Poor Miller’s Boy and the Cat
+  canonical_title_de: Der arme Müllerbursch und das Kätzchen
+  canonical_slug: the-poor-millers-boy-and-the-cat
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE POOR MILLER’S BOY AND THE CAT
+  - The Poor Miller’s Boy and the Cat
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-poor-millers-boy-and-the-cat
+    title: The Poor Miller’s Boy and the Cat
+    language: en
+    weight: canonical
+    word_count: 1398
+    path: books/pg5314-grimm-hunt/tales/the-poor-millers-boy-and-the-cat.txt
+  - book: pg52521-grimm-olcott
+    slug: the-poor-millers-boy-and-the-cat
+    title: THE POOR MILLER’S BOY AND THE CAT
+    language: en
+    weight: supplementary
+    word_count: 1384
+    path: books/pg52521-grimm-olcott/tales/the-poor-millers-boy-and-the-cat.txt
+  languages:
+  - en
+  cluster_id: khm-106
+  variant_count: 2
+- khm: 107
+  khm_variant: false
+  atu: '613'
+  canonical_title_en: The Two Travellers
+  canonical_title_de: Die beiden Wanderer
+  canonical_slug: the-two-travellers
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE TWO TRAVELERS
+  - The Two Travellers
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-two-travellers
+    title: The Two Travellers
+    language: en
+    weight: canonical
+    word_count: 4176
+    path: books/pg5314-grimm-hunt/tales/the-two-travellers.txt
+  - book: pg52521-grimm-olcott
+    slug: the-two-travelers
+    title: THE TWO TRAVELERS
+    language: en
+    weight: supplementary
+    word_count: 4138
+    path: books/pg52521-grimm-olcott/tales/the-two-travelers.txt
+  languages:
+  - en
+  cluster_id: khm-107
+  variant_count: 2
+- khm: 108
+  khm_variant: false
+  atu: '441'
+  canonical_title_en: Hans the Hedgehog
+  canonical_title_de: Hans mein Igel
+  canonical_slug: hans-the-hedgehog
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Hans the Hedgehog
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: hans-the-hedgehog
+    title: Hans the Hedgehog
+    language: en
+    weight: canonical
+    word_count: 2118
+    path: books/pg5314-grimm-hunt/tales/hans-the-hedgehog.txt
+  languages:
+  - en
+  cluster_id: khm-108
+  variant_count: 1
+- khm: 109
+  khm_variant: false
+  atu: '769'
+  canonical_title_en: The Shroud
+  canonical_title_de: Das Totenhemdchen
+  canonical_slug: the-shroud
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Shroud
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-shroud
+    title: The Shroud
+    language: en
+    weight: canonical
+    word_count: 256
+    path: books/pg5314-grimm-hunt/tales/the-shroud.txt
+  languages:
+  - en
+  cluster_id: khm-109
+  variant_count: 1
+- khm: 110
+  khm_variant: false
+  atu: '592'
+  canonical_title_en: The Jew among Thorns
+  canonical_title_de: Der Jude im Dorn
+  canonical_slug: the-jew-among-thorns
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE MISER IN THE BUSH
+  - The Jew among Thorns
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-miser-in-the-bush
+    title: THE MISER IN THE BUSH
+    language: en
+    weight: supplementary
+    word_count: 1166
+    path: books/pg2591-grimm-taylor/tales/the-miser-in-the-bush.txt
+  - book: pg5314-grimm-hunt
+    slug: the-jew-among-thorns
+    title: The Jew among Thorns
+    language: en
+    weight: canonical
+    word_count: 1792
+    path: books/pg5314-grimm-hunt/tales/the-jew-among-thorns.txt
+  languages:
+  - en
+  cluster_id: khm-110
+  variant_count: 2
+- khm: 111
+  khm_variant: false
+  atu: '304'
+  canonical_title_en: The Skilful Huntsman
+  canonical_title_de: Der gelernte Jäger
+  canonical_slug: the-skilful-huntsman
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Skilful Huntsman
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-skilful-huntsman
+    title: The Skilful Huntsman
+    language: en
+    weight: canonical
+    word_count: 2349
+    path: books/pg5314-grimm-hunt/tales/the-skilful-huntsman.txt
+  languages:
+  - en
+  cluster_id: khm-111
+  variant_count: 1
+- khm: 112
+  khm_variant: false
+  atu: 1889K
+  canonical_title_en: The Flail from Heaven
+  canonical_title_de: Der Dreschflegel vom Himmel
+  canonical_slug: the-flail-from-heaven
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Flail from Heaven
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-flail-from-heaven
+    title: The Flail from Heaven
+    language: en
+    weight: canonical
+    word_count: 396
+    path: books/pg5314-grimm-hunt/tales/the-flail-from-heaven.txt
+  languages:
+  - en
+  cluster_id: khm-112
+  variant_count: 1
+- khm: 113
+  khm_variant: false
+  atu: '313'
+  canonical_title_en: The Two Kings’ Children
+  canonical_title_de: De beiden Künigeskinner
+  canonical_slug: the-two-kings-children
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Two Kings’ Children
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-two-kings-children
+    title: The Two Kings’ Children
+    language: en
+    weight: canonical
+    word_count: 3418
+    path: books/pg5314-grimm-hunt/tales/the-two-kings-children.txt
+  languages:
+  - en
+  cluster_id: khm-113
+  variant_count: 1
+- khm: 114
+  khm_variant: false
+  atu: '850'
+  canonical_title_en: The Cunning Little Tailor
+  canonical_title_de: Vom klugen Schneiderlein
+  canonical_slug: the-cunning-little-tailor
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Cunning Little Tailor
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-cunning-little-tailor
+    title: The Cunning Little Tailor
+    language: en
+    weight: canonical
+    word_count: 1216
+    path: books/pg5314-grimm-hunt/tales/the-cunning-little-tailor.txt
+  languages:
+  - en
+  cluster_id: khm-114
+  variant_count: 1
+- khm: 115
+  khm_variant: false
+  atu: '960'
+  canonical_title_en: The Bright Sun Brings It to Light
+  canonical_title_de: Die klare Sonne bringt’s an den Tag
+  canonical_slug: the-bright-sun-brings-it-to-light
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Bright Sun Brings It to Light
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-bright-sun-brings-it-to-light
+    title: The Bright Sun Brings It to Light
+    language: en
+    weight: canonical
+    word_count: 541
+    path: books/pg5314-grimm-hunt/tales/the-bright-sun-brings-it-to-light.txt
+  languages:
+  - en
+  cluster_id: khm-115
+  variant_count: 1
+- khm: 116
+  khm_variant: false
+  atu: '562'
+  canonical_title_en: The Blue Light
+  canonical_title_de: Das blaue Licht
+  canonical_slug: the-blue-light
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE BLUE LIGHT
+  - The Blue Light
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-blue-light
+    title: THE BLUE LIGHT
+    language: en
+    weight: supplementary
+    word_count: 1739
+    path: books/pg2591-grimm-taylor/tales/the-blue-light.txt
+  - book: pg5314-grimm-hunt
+    slug: the-blue-light
+    title: The Blue Light
+    language: en
+    weight: canonical
+    word_count: 1750
+    path: books/pg5314-grimm-hunt/tales/the-blue-light.txt
+  - book: pg52521-grimm-olcott
+    slug: the-blue-light
+    title: THE BLUE LIGHT
+    language: en
+    weight: supplementary
+    word_count: 1741
+    path: books/pg52521-grimm-olcott/tales/the-blue-light.txt
+  languages:
+  - en
+  cluster_id: khm-116
+  variant_count: 3
+- khm: 117
+  khm_variant: false
+  atu: '779'
+  canonical_title_en: The Wilful Child
+  canonical_title_de: Das eigensinnige Kind
+  canonical_slug: the-wilful-child
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Wilful Child
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-wilful-child
+    title: The Wilful Child
+    language: en
+    weight: canonical
+    word_count: 142
+    path: books/pg5314-grimm-hunt/tales/the-wilful-child.txt
+  languages:
+  - en
+  cluster_id: khm-117
+  variant_count: 1
+- khm: 118
+  khm_variant: false
+  atu: '660'
+  canonical_title_en: The Three Army Surgeons
+  canonical_title_de: Die drei Feldscherer
+  canonical_slug: the-three-army-surgeons
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Three Army Surgeons
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-three-army-surgeons
+    title: The Three Army Surgeons
+    language: en
+    weight: canonical
+    word_count: 1087
+    path: books/pg5314-grimm-hunt/tales/the-three-army-surgeons.txt
+  languages:
+  - en
+  cluster_id: khm-118
+  variant_count: 1
+- khm: 119
+  khm_variant: false
+  atu: '1297'
+  canonical_title_en: The Seven Swabians
+  canonical_title_de: Die sieben Schwaben
+  canonical_slug: the-seven-swabians
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Seven Swabians
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-seven-swabians
+    title: The Seven Swabians
+    language: en
+    weight: canonical
+    word_count: 1021
+    path: books/pg5314-grimm-hunt/tales/the-seven-swabians.txt
+  languages:
+  - en
+  cluster_id: khm-119
+  variant_count: 1
+- khm: 120
+  khm_variant: false
+  atu: '360'
+  canonical_title_en: The Three Apprentices
+  canonical_title_de: Die drei Handwerksburschen
+  canonical_slug: the-three-apprentices
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Three Apprentices
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-three-apprentices
+    title: The Three Apprentices
+    language: en
+    weight: canonical
+    word_count: 1165
+    path: books/pg5314-grimm-hunt/tales/the-three-apprentices.txt
+  languages:
+  - en
+  cluster_id: khm-120
+  variant_count: 1
+- khm: 121
+  khm_variant: false
+  atu: 590A
+  canonical_title_en: The King’s Son Who Feared Nothing
+  canonical_title_de: Der Königssohn, der sich vor nichts fürchtet
+  canonical_slug: the-kings-son-who-feared-nothing
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The King’s Son Who Feared Nothing
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-kings-son-who-feared-nothing
+    title: The King’s Son Who Feared Nothing
+    language: en
+    weight: canonical
+    word_count: 2138
+    path: books/pg5314-grimm-hunt/tales/the-kings-son-who-feared-nothing.txt
+  languages:
+  - en
+  cluster_id: khm-121
+  variant_count: 1
+- khm: 122
+  khm_variant: false
+  atu: '566'
+  canonical_title_en: Donkey Cabbages
+  canonical_title_de: Der Krautesel
+  canonical_slug: donkey-cabbages
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Donkey Cabbages
+  - THE DONKEY CABBAGES
+  - THE SALAD
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-salad
+    title: THE SALAD
+    language: en
+    weight: supplementary
+    word_count: 2189
+    path: books/pg2591-grimm-taylor/tales/the-salad.txt
+  - book: pg5314-grimm-hunt
+    slug: donkey-cabbages
+    title: Donkey Cabbages
+    language: en
+    weight: canonical
+    word_count: 2634
+    path: books/pg5314-grimm-hunt/tales/donkey-cabbages.txt
+  - book: pg52521-grimm-olcott
+    slug: the-donkey-cabbages
+    title: THE DONKEY CABBAGES
+    language: en
+    weight: supplementary
+    word_count: 2567
+    path: books/pg52521-grimm-olcott/tales/the-donkey-cabbages.txt
+  languages:
+  - en
+  cluster_id: khm-122
+  variant_count: 3
+- khm: 123
+  khm_variant: false
+  atu: '442'
+  canonical_title_en: The Old Woman in the Wood
+  canonical_title_de: Die Alte im Wald
+  canonical_slug: the-old-woman-in-the-wood
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Old Woman in the Wood
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-old-woman-in-the-wood
+    title: The Old Woman in the Wood
+    language: en
+    weight: canonical
+    word_count: 916
+    path: books/pg5314-grimm-hunt/tales/the-old-woman-in-the-wood.txt
+  languages:
+  - en
+  cluster_id: khm-123
+  variant_count: 1
+- khm: 124
+  khm_variant: false
+  atu: '654'
+  canonical_title_en: The Three Brothers
+  canonical_title_de: Die drei Brüder
+  canonical_slug: the-three-brothers
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE THREE BROTHERS
+  - The Three Brothers
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-three-brothers
+    title: The Three Brothers
+    language: en
+    weight: canonical
+    word_count: 659
+    path: books/pg5314-grimm-hunt/tales/the-three-brothers.txt
+  - book: pg52521-grimm-olcott
+    slug: the-three-brothers
+    title: THE THREE BROTHERS
+    language: en
+    weight: supplementary
+    word_count: 658
+    path: books/pg52521-grimm-olcott/tales/the-three-brothers.txt
+  languages:
+  - en
+  cluster_id: khm-124
+  variant_count: 2
+- khm: 125
+  khm_variant: false
+  atu: '812'
+  canonical_title_en: The Devil and His Grandmother
+  canonical_title_de: Der Teufel und seine Großmutter
+  canonical_slug: the-devil-and-his-grandmother
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Devil and His Grandmother
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-devil-and-his-grandmother
+    title: The Devil and His Grandmother
+    language: en
+    weight: canonical
+    word_count: 1248
+    path: books/pg5314-grimm-hunt/tales/the-devil-and-his-grandmother.txt
+  languages:
+  - en
+  cluster_id: khm-125
+  variant_count: 1
+- khm: 126
+  khm_variant: false
+  atu: '531'
+  canonical_title_en: Ferdinand the Faithful
+  canonical_title_de: Ferenand getrü un Ferenand ungetrü
+  canonical_slug: ferdinand-the-faithful
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Ferdinand the Faithful
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: ferdinand-the-faithful
+    title: Ferdinand the Faithful
+    language: en
+    weight: canonical
+    word_count: 1991
+    path: books/pg5314-grimm-hunt/tales/ferdinand-the-faithful.txt
+  languages:
+  - en
+  cluster_id: khm-126
+  variant_count: 1
+- khm: 127
+  khm_variant: false
+  atu: 425A
+  canonical_title_en: The Iron Stove
+  canonical_title_de: Der Eisenofen
+  canonical_slug: the-iron-stove
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE IRON STOVE
+  - The Iron Stove
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-iron-stove
+    title: The Iron Stove
+    language: en
+    weight: canonical
+    word_count: 2201
+    path: books/pg5314-grimm-hunt/tales/the-iron-stove.txt
+  - book: pg52521-grimm-olcott
+    slug: the-iron-stove
+    title: THE IRON STOVE
+    language: en
+    weight: supplementary
+    word_count: 2179
+    path: books/pg52521-grimm-olcott/tales/the-iron-stove.txt
+  languages:
+  - en
+  cluster_id: khm-127
+  variant_count: 2
+- khm: 128
+  khm_variant: false
+  atu: '1405'
+  canonical_title_en: The Lazy Spinner
+  canonical_title_de: Die faule Spinnerin
+  canonical_slug: the-lazy-spinner
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Lazy Spinner
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-lazy-spinner
+    title: The Lazy Spinner
+    language: en
+    weight: canonical
+    word_count: 767
+    path: books/pg5314-grimm-hunt/tales/the-lazy-spinner.txt
+  languages:
+  - en
+  cluster_id: khm-128
+  variant_count: 1
+- khm: 129
+  khm_variant: false
+  atu: '653'
+  canonical_title_en: The Four Skilful Brothers
+  canonical_title_de: Die vier kunstreichen Brüder
+  canonical_slug: the-four-skilful-brothers
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE FOUR CLEVER BROTHERS
+  - The Four Skilful Brothers
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-four-clever-brothers
+    title: THE FOUR CLEVER BROTHERS
+    language: en
+    weight: supplementary
+    word_count: 1698
+    path: books/pg2591-grimm-taylor/tales/the-four-clever-brothers.txt
+  - book: pg5314-grimm-hunt
+    slug: the-four-skilful-brothers
+    title: The Four Skilful Brothers
+    language: en
+    weight: canonical
+    word_count: 1663
+    path: books/pg5314-grimm-hunt/tales/the-four-skilful-brothers.txt
+  languages:
+  - en
+  cluster_id: khm-129
+  variant_count: 2
+- khm: 130
+  khm_variant: false
+  atu: '511'
+  canonical_title_en: One-Eye, Two-Eyes, and Three-Eyes
+  canonical_title_de: Einäuglein, Zweiäuglein und Dreiäuglein
+  canonical_slug: one-eye-two-eyes-and-three-eyes
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - LITTLE ONE-EYE, TWO-EYES AND THREE-EYES
+  - ONE-EYE, TWO-EYES, AND THREE-EYES
+  - One-Eye, Two-Eyes, and Three-Eyes
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: one-eye-two-eyes-and-three-eyes
+    title: One-Eye, Two-Eyes, and Three-Eyes
+    language: en
+    weight: canonical
+    word_count: 2641
+    path: books/pg5314-grimm-hunt/tales/one-eye-two-eyes-and-three-eyes.txt
+  - book: pg11027-grimm-gruelle
+    slug: little-one-eye-two-eyes-and-three-eyes
+    title: LITTLE ONE-EYE, TWO-EYES AND THREE-EYES
+    language: en
+    weight: supplementary
+    word_count: 2389
+    path: books/pg11027-grimm-gruelle/tales/little-one-eye-two-eyes-and-three-eyes.txt
+  - book: pg52521-grimm-olcott
+    slug: one-eye-two-eyes-and-three-eyes
+    title: ONE-EYE, TWO-EYES, AND THREE-EYES
+    language: en
+    weight: supplementary
+    word_count: 2620
+    path: books/pg52521-grimm-olcott/tales/one-eye-two-eyes-and-three-eyes.txt
+  languages:
+  - en
+  cluster_id: khm-130
+  variant_count: 3
+- khm: 131
+  khm_variant: false
+  atu: '2019'
+  canonical_title_en: Fair Katrinelje and Pif Paf Poltrie
+  canonical_title_de: Die schöne Katrinelje und Pif Paf Poltrie
+  canonical_slug: fair-katrinelje-and-pif-paf-poltrie
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Fair Katrinelje and Pif Paf Poltrie
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: fair-katrinelje-and-pif-paf-poltrie
+    title: Fair Katrinelje and Pif Paf Poltrie
+    language: en
+    weight: canonical
+    word_count: 304
+    path: books/pg5314-grimm-hunt/tales/fair-katrinelje-and-pif-paf-poltrie.txt
+  languages:
+  - en
+  cluster_id: khm-131
+  variant_count: 1
+- khm: 132
+  khm_variant: false
+  atu: 47A
+  canonical_title_en: The Fox and the Horse
+  canonical_title_de: Der Fuchs und das Pferd
+  canonical_slug: the-fox-and-the-horse
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE FOX AND THE HORSE
+  - The Fox and the Horse
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-fox-and-the-horse
+    title: THE FOX AND THE HORSE
+    language: en
+    weight: supplementary
+    word_count: 490
+    path: books/pg2591-grimm-taylor/tales/the-fox-and-the-horse.txt
+  - book: pg5314-grimm-hunt
+    slug: the-fox-and-the-horse
+    title: The Fox and the Horse
+    language: en
+    weight: canonical
+    word_count: 481
+    path: books/pg5314-grimm-hunt/tales/the-fox-and-the-horse.txt
+  languages:
+  - en
+  cluster_id: khm-132
+  variant_count: 2
+- khm: 133
+  khm_variant: false
+  atu: '306'
+  canonical_title_en: The Shoes that Were Danced to Pieces
+  canonical_title_de: Die zertanzten Schuhe
+  canonical_slug: the-shoes-that-were-danced-to-pieces
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE SHOES THAT WERE DANCED TO PIECES
+  - THE TWELVE DANCING PRINCESSES
+  - The Shoes that Were Danced to Pieces
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-twelve-dancing-princesses
+    title: THE TWELVE DANCING PRINCESSES
+    language: en
+    weight: supplementary
+    word_count: 1601
+    path: books/pg2591-grimm-taylor/tales/the-twelve-dancing-princesses.txt
+  - book: pg5314-grimm-hunt
+    slug: the-shoes-that-were-danced-to-pieces
+    title: The Shoes that Were Danced to Pieces
+    language: en
+    weight: canonical
+    word_count: 1464
+    path: books/pg5314-grimm-hunt/tales/the-shoes-that-were-danced-to-pieces.txt
+  - book: pg52521-grimm-olcott
+    slug: the-shoes-that-were-danced-to-pieces
+    title: THE SHOES THAT WERE DANCED TO PIECES
+    language: en
+    weight: supplementary
+    word_count: 1393
+    path: books/pg52521-grimm-olcott/tales/the-shoes-that-were-danced-to-pieces.txt
+  languages:
+  - en
+  cluster_id: khm-133
+  variant_count: 3
+- khm: 134
+  khm_variant: false
+  atu: 513A
+  canonical_title_en: The Six Servants
+  canonical_title_de: Die sechs Diener
+  canonical_slug: the-six-servants
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Six Servants
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-six-servants
+    title: The Six Servants
+    language: en
+    weight: canonical
+    word_count: 2706
+    path: books/pg5314-grimm-hunt/tales/the-six-servants.txt
+  languages:
+  - en
+  cluster_id: khm-134
+  variant_count: 1
+- khm: 135
+  khm_variant: false
+  atu: '403'
+  canonical_title_en: The White Bride and the Black One
+  canonical_title_de: Die weiße und die schwarze Braut
+  canonical_slug: the-white-bride-and-the-black-one
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The White Bride and the Black One
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-white-bride-and-the-black-one
+    title: The White Bride and the Black One
+    language: en
+    weight: canonical
+    word_count: 1545
+    path: books/pg5314-grimm-hunt/tales/the-white-bride-and-the-black-one.txt
+  languages:
+  - en
+  cluster_id: khm-135
+  variant_count: 1
+- khm: 136
+  khm_variant: false
+  atu: '502'
+  canonical_title_en: Iron John
+  canonical_title_de: Der Eisenhans
+  canonical_slug: iron-john
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - IRON HANS
+  - IRON JOHN
+  - Iron John
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: iron-hans
+    title: IRON HANS
+    language: en
+    weight: supplementary
+    word_count: 3208
+    path: books/pg2591-grimm-taylor/tales/iron-hans.txt
+  - book: pg5314-grimm-hunt
+    slug: iron-john
+    title: Iron John
+    language: en
+    weight: canonical
+    word_count: 3221
+    path: books/pg5314-grimm-hunt/tales/iron-john.txt
+  - book: pg52521-grimm-olcott
+    slug: iron-john
+    title: IRON JOHN
+    language: en
+    weight: supplementary
+    word_count: 3173
+    path: books/pg52521-grimm-olcott/tales/iron-john.txt
+  languages:
+  - en
+  cluster_id: khm-136
+  variant_count: 3
+- khm: 137
+  khm_variant: false
+  atu: '870'
+  canonical_title_en: The Three Black Princesses
+  canonical_title_de: De drei schwatten Prinzessinnen
+  canonical_slug: the-three-black-princesses
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Three Black Princesses
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-three-black-princesses
+    title: The Three Black Princesses
+    language: en
+    weight: canonical
+    word_count: 710
+    path: books/pg5314-grimm-hunt/tales/the-three-black-princesses.txt
+  languages:
+  - en
+  cluster_id: khm-137
+  variant_count: 1
+- khm: 138
+  khm_variant: false
+  atu: '1965'
+  canonical_title_en: Knoist and His Three Sons
+  canonical_title_de: Knoist un sine dre Sühne
+  canonical_slug: knoist-and-his-three-sons
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Knoist and His Three Sons
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: knoist-and-his-three-sons
+    title: Knoist and His Three Sons
+    language: en
+    weight: canonical
+    word_count: 152
+    path: books/pg5314-grimm-hunt/tales/knoist-and-his-three-sons.txt
+  languages:
+  - en
+  cluster_id: khm-138
+  variant_count: 1
+- khm: 139
+  khm_variant: false
+  atu: '1476'
+  canonical_title_en: The Maid of Brakel
+  canonical_title_de: Dat Mäken von Brakel
+  canonical_slug: the-maid-of-brakel
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Maid of Brakel
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-maid-of-brakel
+    title: The Maid of Brakel
+    language: en
+    weight: canonical
+    word_count: 133
+    path: books/pg5314-grimm-hunt/tales/the-maid-of-brakel.txt
+  languages:
+  - en
+  cluster_id: khm-139
+  variant_count: 1
+- khm: 140
+  khm_variant: false
+  atu: '1940'
+  canonical_title_en: Domestic Servants
+  canonical_title_de: Das Hausgesinde
+  canonical_slug: domestic-servants
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Domestic Servants
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: domestic-servants
+    title: Domestic Servants
+    language: en
+    weight: canonical
+    word_count: 147
+    path: books/pg5314-grimm-hunt/tales/domestic-servants.txt
+  languages:
+  - en
+  cluster_id: khm-140
+  variant_count: 1
+- khm: 141
+  khm_variant: false
+  atu: '450'
+  canonical_title_en: The Lambkin and the Little Fish
+  canonical_title_de: Das Lämmchen und Fischchen
+  canonical_slug: the-lambkin-and-the-little-fish
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Lambkin and the Little Fish
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-lambkin-and-the-little-fish
+    title: The Lambkin and the Little Fish
+    language: en
+    weight: canonical
+    word_count: 640
+    path: books/pg5314-grimm-hunt/tales/the-lambkin-and-the-little-fish.txt
+  languages:
+  - en
+  cluster_id: khm-141
+  variant_count: 1
+- khm: 142
+  khm_variant: false
+  atu: '676'
+  canonical_title_en: Simeli Mountain
+  canonical_title_de: Simeliberg
+  canonical_slug: simeli-mountain
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Simeli Mountain
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: simeli-mountain
+    title: Simeli Mountain
+    language: en
+    weight: canonical
+    word_count: 851
+    path: books/pg5314-grimm-hunt/tales/simeli-mountain.txt
+  languages:
+  - en
+  cluster_id: khm-142
+  variant_count: 1
+- khm: 143
+  khm_variant: false
+  atu: '1696'
+  canonical_title_en: Going A-Travelling
+  canonical_title_de: Up Reisen gohn
+  canonical_slug: going-a-travelling
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Going A-Travelling
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: going-a-travelling
+    title: Going A-Travelling
+    language: en
+    weight: canonical
+    word_count: 424
+    path: books/pg5314-grimm-hunt/tales/going-a-travelling.txt
+  languages:
+  - en
+  cluster_id: khm-143
+  variant_count: 1
+- khm: 144
+  khm_variant: false
+  atu: '430'
+  canonical_title_en: The Donkey
+  canonical_title_de: Das Eselein
+  canonical_slug: the-donkey
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Donkey
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-donkey
+    title: The Donkey
+    language: en
+    weight: canonical
+    word_count: 1296
+    path: books/pg5314-grimm-hunt/tales/the-donkey.txt
+  languages:
+  - en
+  cluster_id: khm-144
+  variant_count: 1
+- khm: 145
+  khm_variant: false
+  atu: 980A
+  canonical_title_en: The Ungrateful Son
+  canonical_title_de: Der undankbare Sohn
+  canonical_slug: the-ungrateful-son
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Ungrateful Son
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-ungrateful-son
+    title: The Ungrateful Son
+    language: en
+    weight: canonical
+    word_count: 168
+    path: books/pg5314-grimm-hunt/tales/the-ungrateful-son.txt
+  languages:
+  - en
+  cluster_id: khm-145
+  variant_count: 1
+- khm: 146
+  khm_variant: false
+  atu: 1689A
+  canonical_title_en: The Turnip
+  canonical_title_de: Die Rübe
+  canonical_slug: the-turnip
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE TURNIP
+  - The Turnip
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: the-turnip
+    title: THE TURNIP
+    language: en
+    weight: supplementary
+    word_count: 1153
+    path: books/pg2591-grimm-taylor/tales/the-turnip.txt
+  - book: pg5314-grimm-hunt
+    slug: the-turnip
+    title: The Turnip
+    language: en
+    weight: canonical
+    word_count: 1155
+    path: books/pg5314-grimm-hunt/tales/the-turnip.txt
+  languages:
+  - en
+  cluster_id: khm-146
+  variant_count: 2
+- khm: 147
+  khm_variant: false
+  atu: '753'
+  canonical_title_en: The Old Man Made Young Again
+  canonical_title_de: Das junggeglühte Männlein
+  canonical_slug: the-old-man-made-young-again
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Old Man Made Young Again
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-old-man-made-young-again
+    title: The Old Man Made Young Again
+    language: en
+    weight: canonical
+    word_count: 543
+    path: books/pg5314-grimm-hunt/tales/the-old-man-made-young-again.txt
+  languages:
+  - en
+  cluster_id: khm-147
+  variant_count: 1
+- khm: 148
+  khm_variant: false
+  atu: 774E
+  canonical_title_en: The Lord’s Animals and the Devil’s
+  canonical_title_de: Des Herrn und des Teufels Getier
+  canonical_slug: the-lords-animals-and-the-devils
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Lord’s Animals and the Devil’s
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-lords-animals-and-the-devils
+    title: The Lord’s Animals and the Devil’s
+    language: en
+    weight: canonical
+    word_count: 365
+    path: books/pg5314-grimm-hunt/tales/the-lords-animals-and-the-devils.txt
+  languages:
+  - en
+  cluster_id: khm-148
+  variant_count: 1
+- khm: 149
+  khm_variant: false
+  atu: '987'
+  canonical_title_en: The Beam
+  canonical_title_de: Der Hahnenbalken
+  canonical_slug: the-beam
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Beam
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-beam
+    title: The Beam
+    language: en
+    weight: canonical
+    word_count: 282
+    path: books/pg5314-grimm-hunt/tales/the-beam.txt
+  languages:
+  - en
+  cluster_id: khm-149
+  variant_count: 1
+- khm: 150
+  khm_variant: false
+  atu: null
+  canonical_title_en: The Old Beggar-Woman
+  canonical_title_de: Die alte Bettelfrau
+  canonical_slug: the-old-beggar-woman
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Old Beggar-Woman
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-old-beggar-woman
+    title: The Old Beggar-Woman
+    language: en
+    weight: canonical
+    word_count: 164
+    path: books/pg5314-grimm-hunt/tales/the-old-beggar-woman.txt
+  languages:
+  - en
+  cluster_id: khm-150
+  variant_count: 1
+- khm: 151
+  khm_variant: false
+  atu: '1950'
+  canonical_title_en: The Three Sluggards
+  canonical_title_de: Die drei Faulen
+  canonical_slug: the-three-sluggards
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Three Sluggards
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-three-sluggards
+    title: The Three Sluggards
+    language: en
+    weight: canonical
+    word_count: 224
+    path: books/pg5314-grimm-hunt/tales/the-three-sluggards.txt
+  languages:
+  - en
+  cluster_id: khm-151
+  variant_count: 1
+- khm: 151
+  khm_variant: true
+  atu: '1951'
+  canonical_title_en: The Twelve Idle Servants
+  canonical_title_de: Die zwölf faulen Knechte
+  canonical_slug: the-twelve-idle-servants
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Twelve Idle Servants
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-twelve-idle-servants
+    title: The Twelve Idle Servants
+    language: en
+    weight: canonical
+    word_count: 1112
+    path: books/pg5314-grimm-hunt/tales/the-twelve-idle-servants.txt
+  languages:
+  - en
+  cluster_id: khm-151-variant
+  variant_count: 1
+- khm: 152
+  khm_variant: false
+  atu: 922A
+  canonical_title_en: The Shepherd Boy
+  canonical_title_de: Das Hirtenbüblein
+  canonical_slug: the-shepherd-boy
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Shepherd Boy
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-shepherd-boy
+    title: The Shepherd Boy
+    language: en
+    weight: canonical
+    word_count: 363
+    path: books/pg5314-grimm-hunt/tales/the-shepherd-boy.txt
+  languages:
+  - en
+  cluster_id: khm-152
+  variant_count: 1
+- khm: 153
+  khm_variant: false
+  atu: '779'
+  canonical_title_en: The Star-Money
+  canonical_title_de: Die Sterntaler
+  canonical_slug: the-star-money
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE STAR-MONEY
+  - The Star-Money
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-star-money
+    title: The Star-Money
+    language: en
+    weight: canonical
+    word_count: 337
+    path: books/pg5314-grimm-hunt/tales/the-star-money.txt
+  - book: pg52521-grimm-olcott
+    slug: the-star-money
+    title: THE STAR-MONEY
+    language: en
+    weight: supplementary
+    word_count: 335
+    path: books/pg52521-grimm-olcott/tales/the-star-money.txt
+  languages:
+  - en
+  cluster_id: khm-153
+  variant_count: 2
+- khm: 154
+  khm_variant: false
+  atu: '769'
+  canonical_title_en: The Stolen Farthings
+  canonical_title_de: Der gestohlene Heller
+  canonical_slug: the-stolen-farthings
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Stolen Farthings
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-stolen-farthings
+    title: The Stolen Farthings
+    language: en
+    weight: canonical
+    word_count: 350
+    path: books/pg5314-grimm-hunt/tales/the-stolen-farthings.txt
+  languages:
+  - en
+  cluster_id: khm-154
+  variant_count: 1
+- khm: 155
+  khm_variant: false
+  atu: '1452'
+  canonical_title_en: Brides on their Trial
+  canonical_title_de: Die Brautschau
+  canonical_slug: brides-on-their-trial
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Brides on their Trial
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: brides-on-their-trial
+    title: Brides on their Trial
+    language: en
+    weight: canonical
+    word_count: 155
+    path: books/pg5314-grimm-hunt/tales/brides-on-their-trial.txt
+  languages:
+  - en
+  cluster_id: khm-155
+  variant_count: 1
+- khm: 156
+  khm_variant: false
+  atu: '1452'
+  canonical_title_en: Odds and Ends
+  canonical_title_de: Die Schlickerlinge
+  canonical_slug: odds-and-ends
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Odds and Ends
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: odds-and-ends
+    title: Odds and Ends
+    language: en
+    weight: canonical
+    word_count: 205
+    path: books/pg5314-grimm-hunt/tales/odds-and-ends.txt
+  languages:
+  - en
+  cluster_id: khm-156
+  variant_count: 1
+- khm: 157
+  khm_variant: false
+  atu: 157A
+  canonical_title_en: The Sparrow and His Four Children
+  canonical_title_de: Der Sperling und seine vier Kinder
+  canonical_slug: the-sparrow-and-his-four-children
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Sparrow and His Four Children
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-sparrow-and-his-four-children
+    title: The Sparrow and His Four Children
+    language: en
+    weight: canonical
+    word_count: 929
+    path: books/pg5314-grimm-hunt/tales/the-sparrow-and-his-four-children.txt
+  languages:
+  - en
+  cluster_id: khm-157
+  variant_count: 1
+- khm: 158
+  khm_variant: false
+  atu: '1930'
+  canonical_title_en: The Story of Schlauraffen Land [The Tale of Cockaigne]
+  canonical_title_de: Das Märchen vom Schlauraffenland
+  canonical_slug: the-story-of-schlauraffen-land-the-tale-of-cockaigne
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Story of Schlauraffen Land [The Tale of Cockaigne]
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-story-of-schlauraffen-land-the-tale-of-cockaigne
+    title: The Story of Schlauraffen Land [The Tale of Cockaigne]
+    language: en
+    weight: canonical
+    word_count: 333
+    path: books/pg5314-grimm-hunt/tales/the-story-of-schlauraffen-land-the-tale-of-cockaigne.txt
+  languages:
+  - en
+  cluster_id: khm-158
+  variant_count: 1
+- khm: 159
+  khm_variant: false
+  atu: '1930'
+  canonical_title_en: The Ditmarsh Tale of Wonders
+  canonical_title_de: Das Diethmarsische Lügenmärchen
+  canonical_slug: the-ditmarsh-tale-of-wonders
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Ditmarsh Tale of Wonders
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-ditmarsh-tale-of-wonders
+    title: The Ditmarsh Tale of Wonders
+    language: en
+    weight: canonical
+    word_count: 209
+    path: books/pg5314-grimm-hunt/tales/the-ditmarsh-tale-of-wonders.txt
+  languages:
+  - en
+  cluster_id: khm-159
+  variant_count: 1
+- khm: 160
+  khm_variant: false
+  atu: 407A
+  canonical_title_en: A Riddling Tale
+  canonical_title_de: Rätselmärchen
+  canonical_slug: a-riddling-tale
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - A Riddling Tale
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: a-riddling-tale
+    title: A Riddling Tale
+    language: en
+    weight: canonical
+    word_count: 131
+    path: books/pg5314-grimm-hunt/tales/a-riddling-tale.txt
+  languages:
+  - en
+  cluster_id: khm-160
+  variant_count: 1
+- khm: 161
+  khm_variant: false
+  atu: '426'
+  canonical_title_en: Snow-White and Rose-Red
+  canonical_title_de: Schneeweißchen und Rosenrot
+  canonical_slug: snow-white-and-rose-red
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - SNOW-WHITE AND ROSE-RED
+  - Snow-White and Rose-Red
+  variants:
+  - book: pg2591-grimm-taylor
+    slug: snow-white-and-rose-red
+    title: SNOW-WHITE AND ROSE-RED
+    language: en
+    weight: supplementary
+    word_count: 2607
+    path: books/pg2591-grimm-taylor/tales/snow-white-and-rose-red.txt
+  - book: pg5314-grimm-hunt
+    slug: snow-white-and-rose-red
+    title: Snow-White and Rose-Red
+    language: en
+    weight: canonical
+    word_count: 2435
+    path: books/pg5314-grimm-hunt/tales/snow-white-and-rose-red.txt
+  - book: pg11027-grimm-gruelle
+    slug: snow-white-and-rose-red
+    title: SNOW-WHITE AND ROSE-RED
+    language: en
+    weight: supplementary
+    word_count: 2601
+    path: books/pg11027-grimm-gruelle/tales/snow-white-and-rose-red.txt
+  - book: pg52521-grimm-olcott
+    slug: snow-white-and-rose-red
+    title: SNOW-WHITE AND ROSE-RED
+    language: en
+    weight: supplementary
+    word_count: 2435
+    path: books/pg52521-grimm-olcott/tales/snow-white-and-rose-red.txt
+  languages:
+  - en
+  cluster_id: khm-161
+  variant_count: 4
+- khm: 162
+  khm_variant: false
+  atu: '1009'
+  canonical_title_en: The Wise Servant
+  canonical_title_de: Der kluge Knecht
+  canonical_slug: the-wise-servant
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Wise Servant
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-wise-servant
+    title: The Wise Servant
+    language: en
+    weight: canonical
+    word_count: 252
+    path: books/pg5314-grimm-hunt/tales/the-wise-servant.txt
+  languages:
+  - en
+  cluster_id: khm-162
+  variant_count: 1
+- khm: 163
+  khm_variant: false
+  atu: '410'
+  canonical_title_en: The Glass Coffin
+  canonical_title_de: Der gläserne Sarg
+  canonical_slug: the-glass-coffin
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Glass Coffin
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-glass-coffin
+    title: The Glass Coffin
+    language: en
+    weight: canonical
+    word_count: 2372
+    path: books/pg5314-grimm-hunt/tales/the-glass-coffin.txt
+  languages:
+  - en
+  cluster_id: khm-163
+  variant_count: 1
+- khm: 164
+  khm_variant: false
+  atu: '1430'
+  canonical_title_en: Lazy Harry
+  canonical_title_de: Der faule Heinz
+  canonical_slug: lazy-harry
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Lazy Harry
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: lazy-harry
+    title: Lazy Harry
+    language: en
+    weight: canonical
+    word_count: 996
+    path: books/pg5314-grimm-hunt/tales/lazy-harry.txt
+  languages:
+  - en
+  cluster_id: khm-164
+  variant_count: 1
+- khm: 165
+  khm_variant: false
+  atu: '610'
+  canonical_title_en: The Griffin
+  canonical_title_de: Der Vogel Greif
+  canonical_slug: the-griffin
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Griffin
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-griffin
+    title: The Griffin
+    language: en
+    weight: canonical
+    word_count: 2807
+    path: books/pg5314-grimm-hunt/tales/the-griffin.txt
+  languages:
+  - en
+  cluster_id: khm-165
+  variant_count: 1
+- khm: 166
+  khm_variant: false
+  atu: 301B
+  canonical_title_en: Strong Hans
+  canonical_title_de: Der starke Hans
+  canonical_slug: strong-hans
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Strong Hans
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: strong-hans
+    title: Strong Hans
+    language: en
+    weight: canonical
+    word_count: 2632
+    path: books/pg5314-grimm-hunt/tales/strong-hans.txt
+  languages:
+  - en
+  cluster_id: khm-166
+  variant_count: 1
+- khm: 167
+  khm_variant: false
+  atu: '802'
+  canonical_title_en: The Peasant in Heaven
+  canonical_title_de: Das Bürle im Himmel
+  canonical_slug: the-peasant-in-heaven
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Peasant in Heaven
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-peasant-in-heaven
+    title: The Peasant in Heaven
+    language: en
+    weight: canonical
+    word_count: 256
+    path: books/pg5314-grimm-hunt/tales/the-peasant-in-heaven.txt
+  languages:
+  - en
+  cluster_id: khm-167
+  variant_count: 1
+- khm: 168
+  khm_variant: false
+  atu: '1430'
+  canonical_title_en: Lean Lisa
+  canonical_title_de: Die hagere Liese
+  canonical_slug: lean-lisa
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Lean Lisa
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: lean-lisa
+    title: Lean Lisa
+    language: en
+    weight: canonical
+    word_count: 458
+    path: books/pg5314-grimm-hunt/tales/lean-lisa.txt
+  languages:
+  - en
+  cluster_id: khm-168
+  variant_count: 1
+- khm: 169
+  khm_variant: false
+  atu: '431'
+  canonical_title_en: The Hut in the Forest
+  canonical_title_de: Das Waldhaus
+  canonical_slug: the-hut-in-the-forest
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE LITTLE HOUSE IN THE WOOD
+  - The Hut in the Forest
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-hut-in-the-forest
+    title: The Hut in the Forest
+    language: en
+    weight: canonical
+    word_count: 1892
+    path: books/pg5314-grimm-hunt/tales/the-hut-in-the-forest.txt
+  - book: pg52521-grimm-olcott
+    slug: the-little-house-in-the-wood
+    title: THE LITTLE HOUSE IN THE WOOD
+    language: en
+    weight: supplementary
+    word_count: 1890
+    path: books/pg52521-grimm-olcott/tales/the-little-house-in-the-wood.txt
+  languages:
+  - en
+  cluster_id: khm-169
+  variant_count: 2
+- khm: 170
+  khm_variant: false
+  atu: '1408'
+  canonical_title_en: Sharing Joy and Sorrow
+  canonical_title_de: Lieb und Leid teilen
+  canonical_slug: sharing-joy-and-sorrow
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Sharing Joy and Sorrow
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: sharing-joy-and-sorrow
+    title: Sharing Joy and Sorrow
+    language: en
+    weight: canonical
+    word_count: 377
+    path: books/pg5314-grimm-hunt/tales/sharing-joy-and-sorrow.txt
+  languages:
+  - en
+  cluster_id: khm-170
+  variant_count: 1
+- khm: 171
+  khm_variant: false
+  atu: '221'
+  canonical_title_en: The Willow-Wren
+  canonical_title_de: Der Zaunkönig
+  canonical_slug: the-willow-wren
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE HEDGE-KING
+  - The Willow-Wren
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-willow-wren
+    title: The Willow-Wren
+    language: en
+    weight: canonical
+    word_count: 1142
+    path: books/pg5314-grimm-hunt/tales/the-willow-wren.txt
+  - book: pg52521-grimm-olcott
+    slug: the-hedge-king
+    title: THE HEDGE-KING
+    language: en
+    weight: supplementary
+    word_count: 1039
+    path: books/pg52521-grimm-olcott/tales/the-hedge-king.txt
+  languages:
+  - en
+  cluster_id: khm-171
+  variant_count: 2
+- khm: 172
+  khm_variant: false
+  atu: '250'
+  canonical_title_en: The Sole [The Flounder]
+  canonical_title_de: Die Scholle
+  canonical_slug: the-sole-the-flounder
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Sole [The Flounder]
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-sole-the-flounder
+    title: The Sole [The Flounder]
+    language: en
+    weight: canonical
+    word_count: 240
+    path: books/pg5314-grimm-hunt/tales/the-sole-the-flounder.txt
+  languages:
+  - en
+  cluster_id: khm-172
+  variant_count: 1
+- khm: 173
+  khm_variant: false
+  atu: '236'
+  canonical_title_en: The Bittern and Hoopoe
+  canonical_title_de: Rohrdommel und Wiedehopf
+  canonical_slug: the-bittern-and-hoopoe
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Bittern and Hoopoe
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-bittern-and-hoopoe
+    title: The Bittern and Hoopoe
+    language: en
+    weight: canonical
+    word_count: 236
+    path: books/pg5314-grimm-hunt/tales/the-bittern-and-hoopoe.txt
+  languages:
+  - en
+  cluster_id: khm-173
+  variant_count: 1
+- khm: 174
+  khm_variant: false
+  atu: '1281'
+  canonical_title_en: The Owl
+  canonical_title_de: Die Eule
+  canonical_slug: the-owl
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Owl
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-owl
+    title: The Owl
+    language: en
+    weight: canonical
+    word_count: 840
+    path: books/pg5314-grimm-hunt/tales/the-owl.txt
+  languages:
+  - en
+  cluster_id: khm-174
+  variant_count: 1
+- khm: 175
+  khm_variant: false
+  atu: '1174'
+  canonical_title_en: The Moon
+  canonical_title_de: Der Mond
+  canonical_slug: the-moon
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Moon
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-moon
+    title: The Moon
+    language: en
+    weight: canonical
+    word_count: 779
+    path: books/pg5314-grimm-hunt/tales/the-moon.txt
+  languages:
+  - en
+  cluster_id: khm-175
+  variant_count: 1
+- khm: 176
+  khm_variant: false
+  atu: '173'
+  canonical_title_en: The Duration of Life
+  canonical_title_de: Die Lebenszeit
+  canonical_slug: the-duration-of-life
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Duration of Life
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-duration-of-life
+    title: The Duration of Life
+    language: en
+    weight: canonical
+    word_count: 576
+    path: books/pg5314-grimm-hunt/tales/the-duration-of-life.txt
+  languages:
+  - en
+  cluster_id: khm-176
+  variant_count: 1
+- khm: 177
+  khm_variant: false
+  atu: '335'
+  canonical_title_en: Death’s Messengers
+  canonical_title_de: Die Boten des Todes
+  canonical_slug: deaths-messengers
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Death’s Messengers
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: deaths-messengers
+    title: Death’s Messengers
+    language: en
+    weight: canonical
+    word_count: 585
+    path: books/pg5314-grimm-hunt/tales/deaths-messengers.txt
+  languages:
+  - en
+  cluster_id: khm-177
+  variant_count: 1
+- khm: 178
+  khm_variant: false
+  atu: '801'
+  canonical_title_en: Master Pfriem
+  canonical_title_de: Meister Pfriem
+  canonical_slug: master-pfriem
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Master Pfriem
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: master-pfriem
+    title: Master Pfriem
+    language: en
+    weight: canonical
+    word_count: 1439
+    path: books/pg5314-grimm-hunt/tales/master-pfriem.txt
+  languages:
+  - en
+  cluster_id: khm-178
+  variant_count: 1
+- khm: 179
+  khm_variant: false
+  atu: '923'
+  canonical_title_en: The Goose-Girl at the Well
+  canonical_title_de: Die Gänsehirtin am Brunnen
+  canonical_slug: the-goose-girl-at-the-well
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE GOOSE-GIRL AT THE WELL
+  - The Goose-Girl at the Well
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-goose-girl-at-the-well
+    title: The Goose-Girl at the Well
+    language: en
+    weight: canonical
+    word_count: 3875
+    path: books/pg5314-grimm-hunt/tales/the-goose-girl-at-the-well.txt
+  - book: pg52521-grimm-olcott
+    slug: the-goose-girl-at-the-well
+    title: THE GOOSE-GIRL AT THE WELL
+    language: en
+    weight: supplementary
+    word_count: 3723
+    path: books/pg52521-grimm-olcott/tales/the-goose-girl-at-the-well.txt
+  languages:
+  - en
+  cluster_id: khm-179
+  variant_count: 2
+- khm: 180
+  khm_variant: false
+  atu: '758'
+  canonical_title_en: Eve’s Various Children
+  canonical_title_de: Die ungleichen Kinder Evas
+  canonical_slug: eves-various-children
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Eve’s Various Children
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: eves-various-children
+    title: Eve’s Various Children
+    language: en
+    weight: canonical
+    word_count: 677
+    path: books/pg5314-grimm-hunt/tales/eves-various-children.txt
+  languages:
+  - en
+  cluster_id: khm-180
+  variant_count: 1
+- khm: 181
+  khm_variant: false
+  atu: '316'
+  canonical_title_en: The Nixie of the Mill-Pond
+  canonical_title_de: Die Nixe im Teich
+  canonical_slug: the-nixie-of-the-mill-pond
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE NIX OF THE MILL-POND
+  - The Nixie of the Mill-Pond
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-nixie-of-the-mill-pond
+    title: The Nixie of the Mill-Pond
+    language: en
+    weight: canonical
+    word_count: 2125
+    path: books/pg5314-grimm-hunt/tales/the-nixie-of-the-mill-pond.txt
+  - book: pg52521-grimm-olcott
+    slug: the-nix-of-the-mill-pond
+    title: THE NIX OF THE MILL-POND
+    language: en
+    weight: supplementary
+    word_count: 2124
+    path: books/pg52521-grimm-olcott/tales/the-nix-of-the-mill-pond.txt
+  languages:
+  - en
+  cluster_id: khm-181
+  variant_count: 2
+- khm: 182
+  khm_variant: false
+  atu: '503'
+  canonical_title_en: The Little Folks’ Presents
+  canonical_title_de: Die Geschenke des kleinen Volkes
+  canonical_slug: the-little-folks-presents
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Little Folks’ Presents
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-little-folks-presents
+    title: The Little Folks’ Presents
+    language: en
+    weight: canonical
+    word_count: 981
+    path: books/pg5314-grimm-hunt/tales/the-little-folks-presents.txt
+  languages:
+  - en
+  cluster_id: khm-182
+  variant_count: 1
+- khm: 183
+  khm_variant: false
+  atu: '1049'
+  canonical_title_en: The Giant and the Tailor
+  canonical_title_de: Der Riese und der Schneider
+  canonical_slug: the-giant-and-the-tailor
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Giant and the Tailor
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-giant-and-the-tailor
+    title: The Giant and the Tailor
+    language: en
+    weight: canonical
+    word_count: 726
+    path: books/pg5314-grimm-hunt/tales/the-giant-and-the-tailor.txt
+  languages:
+  - en
+  cluster_id: khm-183
+  variant_count: 1
+- khm: 184
+  khm_variant: false
+  atu: '760'
+  canonical_title_en: The Nail
+  canonical_title_de: Der Nagel
+  canonical_slug: the-nail
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Nail
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-nail
+    title: The Nail
+    language: en
+    weight: canonical
+    word_count: 265
+    path: books/pg5314-grimm-hunt/tales/the-nail.txt
+  languages:
+  - en
+  cluster_id: khm-184
+  variant_count: 1
+- khm: 185
+  khm_variant: false
+  atu: '1577'
+  canonical_title_en: The Poor Boy in the Grave
+  canonical_title_de: Der arme Junge im Grab
+  canonical_slug: the-poor-boy-in-the-grave
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Poor Boy in the Grave
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-poor-boy-in-the-grave
+    title: The Poor Boy in the Grave
+    language: en
+    weight: canonical
+    word_count: 1265
+    path: books/pg5314-grimm-hunt/tales/the-poor-boy-in-the-grave.txt
+  languages:
+  - en
+  cluster_id: khm-185
+  variant_count: 1
+- khm: 186
+  khm_variant: false
+  atu: '313'
+  canonical_title_en: The True Sweetheart [The True Bride]
+  canonical_title_de: Die wahre Braut
+  canonical_slug: the-true-sweetheart-the-true-bride
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The True Sweetheart [The True Bride]
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-true-sweetheart-the-true-bride
+    title: The True Sweetheart [The True Bride]
+    language: en
+    weight: canonical
+    word_count: 2665
+    path: books/pg5314-grimm-hunt/tales/the-true-sweetheart-the-true-bride.txt
+  languages:
+  - en
+  cluster_id: khm-186
+  variant_count: 1
+- khm: 187
+  khm_variant: false
+  atu: 275A
+  canonical_title_en: The Hare and the Hedgehog
+  canonical_title_de: Der Hase und der Igel
+  canonical_slug: the-hare-and-the-hedgehog
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Hare and the Hedgehog
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-hare-and-the-hedgehog
+    title: The Hare and the Hedgehog
+    language: en
+    weight: canonical
+    word_count: 1360
+    path: books/pg5314-grimm-hunt/tales/the-hare-and-the-hedgehog.txt
+  languages:
+  - en
+  cluster_id: khm-187
+  variant_count: 1
+- khm: 188
+  khm_variant: false
+  atu: '585'
+  canonical_title_en: The Spindle, the Shuttle, and the Needle
+  canonical_title_de: Spindel, Weberschiffchen und Nadel
+  canonical_slug: the-spindle-the-shuttle-and-the-needle
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - THE SPINDLE, THE SHUTTLE, AND THE NEEDLE
+  - The Spindle, the Shuttle, and the Needle
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-spindle-the-shuttle-and-the-needle
+    title: The Spindle, the Shuttle, and the Needle
+    language: en
+    weight: canonical
+    word_count: 1099
+    path: books/pg5314-grimm-hunt/tales/the-spindle-the-shuttle-and-the-needle.txt
+  - book: pg52521-grimm-olcott
+    slug: the-spindle-the-shuttle-and-the-needle
+    title: THE SPINDLE, THE SHUTTLE, AND THE NEEDLE
+    language: en
+    weight: supplementary
+    word_count: 1095
+    path: books/pg52521-grimm-olcott/tales/the-spindle-the-shuttle-and-the-needle.txt
+  languages:
+  - en
+  cluster_id: khm-188
+  variant_count: 2
+- khm: 189
+  khm_variant: false
+  atu: '1030'
+  canonical_title_en: The Peasant and the Devil
+  canonical_title_de: Der Bauer und der Teufel
+  canonical_slug: the-peasant-and-the-devil
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Peasant and the Devil
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-peasant-and-the-devil
+    title: The Peasant and the Devil
+    language: en
+    weight: canonical
+    word_count: 376
+    path: books/pg5314-grimm-hunt/tales/the-peasant-and-the-devil.txt
+  languages:
+  - en
+  cluster_id: khm-189
+  variant_count: 1
+- khm: 190
+  khm_variant: false
+  atu: 1373A
+  canonical_title_en: The Crumbs on the Table
+  canonical_title_de: Die Brosamen auf dem Tisch
+  canonical_slug: the-crumbs-on-the-table
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Crumbs on the Table
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-crumbs-on-the-table
+    title: The Crumbs on the Table
+    language: en
+    weight: canonical
+    word_count: 181
+    path: books/pg5314-grimm-hunt/tales/the-crumbs-on-the-table.txt
+  languages:
+  - en
+  cluster_id: khm-190
+  variant_count: 1
+- khm: 191
+  khm_variant: false
+  atu: '554'
+  canonical_title_en: The Sea-Hare
+  canonical_title_de: Das Meerhäschen
+  canonical_slug: the-sea-hare
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Sea-Hare
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-sea-hare
+    title: The Sea-Hare
+    language: en
+    weight: canonical
+    word_count: 1310
+    path: books/pg5314-grimm-hunt/tales/the-sea-hare.txt
+  languages:
+  - en
+  cluster_id: khm-191
+  variant_count: 1
+- khm: 192
+  khm_variant: false
+  atu: 1525A
+  canonical_title_en: The Master Thief
+  canonical_title_de: Der Meisterdieb
+  canonical_slug: the-master-thief
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Master Thief
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-master-thief
+    title: The Master Thief
+    language: en
+    weight: canonical
+    word_count: 3069
+    path: books/pg5314-grimm-hunt/tales/the-master-thief.txt
+  languages:
+  - en
+  cluster_id: khm-192
+  variant_count: 1
+- khm: 193
+  khm_variant: false
+  atu: '400'
+  canonical_title_en: The Drummer
+  canonical_title_de: Der Trommler
+  canonical_slug: the-drummer
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Drummer
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-drummer
+    title: The Drummer
+    language: en
+    weight: canonical
+    word_count: 3823
+    path: books/pg5314-grimm-hunt/tales/the-drummer.txt
+  languages:
+  - en
+  cluster_id: khm-193
+  variant_count: 1
+- khm: 194
+  khm_variant: false
+  atu: '779'
+  canonical_title_en: The Ear of Corn
+  canonical_title_de: Die Kornähre
+  canonical_slug: the-ear-of-corn
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Ear of Corn
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-ear-of-corn
+    title: The Ear of Corn
+    language: en
+    weight: canonical
+    word_count: 240
+    path: books/pg5314-grimm-hunt/tales/the-ear-of-corn.txt
+  languages:
+  - en
+  cluster_id: khm-194
+  variant_count: 1
+- khm: 195
+  khm_variant: false
+  atu: '815'
+  canonical_title_en: The Grave Mound
+  canonical_title_de: Der Grabhügel
+  canonical_slug: the-grave-mound
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Grave Mound
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-grave-mound
+    title: The Grave Mound
+    language: en
+    weight: canonical
+    word_count: 1483
+    path: books/pg5314-grimm-hunt/tales/the-grave-mound.txt
+  languages:
+  - en
+  cluster_id: khm-195
+  variant_count: 1
+- khm: 196
+  khm_variant: false
+  atu: '311'
+  canonical_title_en: Old Rinkrank
+  canonical_title_de: Oll Rinkrank
+  canonical_slug: old-rinkrank
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Old Rinkrank
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: old-rinkrank
+    title: Old Rinkrank
+    language: en
+    weight: canonical
+    word_count: 764
+    path: books/pg5314-grimm-hunt/tales/old-rinkrank.txt
+  languages:
+  - en
+  cluster_id: khm-196
+  variant_count: 1
+- khm: 197
+  khm_variant: false
+  atu: 552A
+  canonical_title_en: The Crystal Ball
+  canonical_title_de: Die Kristallkugel
+  canonical_slug: the-crystal-ball
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Crystal Ball
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-crystal-ball
+    title: The Crystal Ball
+    language: en
+    weight: canonical
+    word_count: 1079
+    path: books/pg5314-grimm-hunt/tales/the-crystal-ball.txt
+  languages:
+  - en
+  cluster_id: khm-197
+  variant_count: 1
+- khm: 198
+  khm_variant: false
+  atu: '870'
+  canonical_title_en: Maid Maleen
+  canonical_title_de: Jungfrau Maleen
+  canonical_slug: maid-maleen
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - MAID MALEEN
+  - Maid Maleen
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: maid-maleen
+    title: Maid Maleen
+    language: en
+    weight: canonical
+    word_count: 1977
+    path: books/pg5314-grimm-hunt/tales/maid-maleen.txt
+  - book: pg52521-grimm-olcott
+    slug: maid-maleen
+    title: MAID MALEEN
+    language: en
+    weight: supplementary
+    word_count: 2005
+    path: books/pg52521-grimm-olcott/tales/maid-maleen.txt
+  languages:
+  - en
+  cluster_id: khm-198
+  variant_count: 2
+- khm: 199
+  khm_variant: false
+  atu: '952'
+  canonical_title_en: The Boot of Buffalo Leather
+  canonical_title_de: Der Stiefel von Büffelleder
+  canonical_slug: the-boot-of-buffalo-leather
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Boot of Buffalo Leather
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-boot-of-buffalo-leather
+    title: The Boot of Buffalo Leather
+    language: en
+    weight: canonical
+    word_count: 1461
+    path: books/pg5314-grimm-hunt/tales/the-boot-of-buffalo-leather.txt
+  languages:
+  - en
+  cluster_id: khm-199
+  variant_count: 1
+- khm: 200
+  khm_variant: false
+  atu: '2260'
+  canonical_title_en: The Golden Key
+  canonical_title_de: Der goldene Schlüssel
+  canonical_slug: the-golden-key
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Golden Key
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: the-golden-key
+    title: The Golden Key
+    language: en
+    weight: canonical
+    word_count: 184
+    path: books/pg5314-grimm-hunt/tales/the-golden-key.txt
+  languages:
+  - en
+  cluster_id: khm-200
+  variant_count: 1
+- legend_number: 1
+  canonical_title_en: St. Joseph in the Forest
+  canonical_title_de: Der heilige Joseph im Walde
+  canonical_slug: legend-01-st-joseph-in-the-forest
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - St. Joseph in the Forest
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: legend-01-st-joseph-in-the-forest
+    title: St. Joseph in the Forest
+    language: en
+    weight: canonical
+    word_count: 1161
+    path: books/pg5314-grimm-hunt/tales/legend-01-st-joseph-in-the-forest.txt
+  languages:
+  - en
+  cluster_id: legend-01
+  variant_count: 1
+- legend_number: 2
+  canonical_title_en: The Twelve Apostles
+  canonical_title_de: Die zwölf Apostel
+  canonical_slug: legend-02-the-twelve-apostles
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Twelve Apostles
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: legend-02-the-twelve-apostles
+    title: The Twelve Apostles
+    language: en
+    weight: canonical
+    word_count: 405
+    path: books/pg5314-grimm-hunt/tales/legend-02-the-twelve-apostles.txt
+  languages:
+  - en
+  cluster_id: legend-02
+  variant_count: 1
+- legend_number: 3
+  canonical_title_en: The Rose
+  canonical_title_de: Die Rose
+  canonical_slug: legend-03-the-rose
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Rose
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: legend-03-the-rose
+    title: The Rose
+    language: en
+    weight: canonical
+    word_count: 157
+    path: books/pg5314-grimm-hunt/tales/legend-03-the-rose.txt
+  languages:
+  - en
+  cluster_id: legend-03
+  variant_count: 1
+- legend_number: 4
+  canonical_title_en: Poverty and Humility Lead to Heaven
+  canonical_title_de: Armut und Demut führen zum Himmel
+  canonical_slug: legend-04-poverty-and-humility-lead-to-heaven
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Poverty and Humility Lead to Heaven
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: legend-04-poverty-and-humility-lead-to-heaven
+    title: Poverty and Humility Lead to Heaven
+    language: en
+    weight: canonical
+    word_count: 492
+    path: books/pg5314-grimm-hunt/tales/legend-04-poverty-and-humility-lead-to-heaven.txt
+  languages:
+  - en
+  cluster_id: legend-04
+  variant_count: 1
+- legend_number: 5
+  canonical_title_en: God’s Food
+  canonical_title_de: Gottes Speise
+  canonical_slug: legend-05-gods-food
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - God’s Food
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: legend-05-gods-food
+    title: God’s Food
+    language: en
+    weight: canonical
+    word_count: 243
+    path: books/pg5314-grimm-hunt/tales/legend-05-gods-food.txt
+  languages:
+  - en
+  cluster_id: legend-05
+  variant_count: 1
+- legend_number: 6
+  canonical_title_en: The Three Green Twigs
+  canonical_title_de: Die drei grünen Zweige
+  canonical_slug: legend-06-the-three-green-twigs
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Three Green Twigs
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: legend-06-the-three-green-twigs
+    title: The Three Green Twigs
+    language: en
+    weight: canonical
+    word_count: 964
+    path: books/pg5314-grimm-hunt/tales/legend-06-the-three-green-twigs.txt
+  languages:
+  - en
+  cluster_id: legend-06
+  variant_count: 1
+- legend_number: 7
+  canonical_title_en: Our Lady’s Little Glass
+  canonical_title_de: Muttergottesgläschen
+  canonical_slug: legend-07-our-ladys-little-glass
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - Our Lady’s Little Glass
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: legend-07-our-ladys-little-glass
+    title: Our Lady’s Little Glass
+    language: en
+    weight: canonical
+    word_count: 160
+    path: books/pg5314-grimm-hunt/tales/legend-07-our-ladys-little-glass.txt
+  languages:
+  - en
+  cluster_id: legend-07
+  variant_count: 1
+- legend_number: 8
+  canonical_title_en: The Aged Mother
+  canonical_title_de: Die alte Mütterchen
+  canonical_slug: legend-08-the-aged-mother
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Aged Mother
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: legend-08-the-aged-mother
+    title: The Aged Mother
+    language: en
+    weight: canonical
+    word_count: 341
+    path: books/pg5314-grimm-hunt/tales/legend-08-the-aged-mother.txt
+  languages:
+  - en
+  cluster_id: legend-08
+  variant_count: 1
+- legend_number: 9
+  canonical_title_en: The Heavenly Wedding
+  canonical_title_de: Die himmlische Hochzeit
+  canonical_slug: legend-09-the-heavenly-wedding
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Heavenly Wedding
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: legend-09-the-heavenly-wedding
+    title: The Heavenly Wedding
+    language: en
+    weight: canonical
+    word_count: 517
+    path: books/pg5314-grimm-hunt/tales/legend-09-the-heavenly-wedding.txt
+  languages:
+  - en
+  cluster_id: legend-09
+  variant_count: 1
+- legend_number: 10
+  canonical_title_en: The Hazel Branch
+  canonical_title_de: Die Haselrute
+  canonical_slug: legend-10-the-hazel-branch
+  canonical_book: pg5314-grimm-hunt
+  aliases:
+  - The Hazel Branch
+  variants:
+  - book: pg5314-grimm-hunt
+    slug: legend-10-the-hazel-branch
+    title: The Hazel Branch
+    language: en
+    weight: canonical
+    word_count: 204
+    path: books/pg5314-grimm-hunt/tales/legend-10-the-hazel-branch.txt
+  languages:
+  - en
+  cluster_id: legend-10
+  variant_count: 1

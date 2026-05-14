@@ -1,0 +1,685 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-blue-light
+khm: 116
+atu: '562'
+atu_name: The Blue Light
+canonical_source: ../../2-silver/canonical/the-blue-light/canonical.txt
+title: The Blue Light
+
+
+entities:
+
+  characters:
+
+    blue_light_soldier:
+      name: The Discharged Soldier
+      archetypes: [arc_discharged_soldier, arc_trickster]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_domestic_labor, agency_speech, agency_object_mediation, agency_violence, agency_cunning]
+      existential_states: [state_imprisoned]
+      speech_acts_performed: [speech_request, speech_command]
+      affects: [affect_hunger, affect_anger, affect_fear, affect_joy]
+      traits: [wounded-veteran, dismissed-without-wages, witch-labourer, well-abandoned, blue-light-bearer, revenge-seeker, princess-coercer, condemned-prisoner, execution-reverser, king]
+      evidence: |
+        a soldier who for many years had served the King faithfully
+
+    blue_light_king:
+      name: The Ungrateful King
+      archetypes: [arc_oath_enforcer]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command]
+      affects: [affect_fear]
+      traits: [soldier-dismisser, wage-refuser, father, track-strategist, execution-authorizer, mercy-beggar, kingdom-yielder]
+      evidence: |
+        I need thee no longer
+
+    blue_light_witch:
+      name: The Witch of the Forest House
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_domestic_labor, agency_speech, agency_cunning, agency_violence]
+      speech_acts_performed: [speech_bargain, speech_command]
+      affects: [affect_greed, affect_anger]
+      traits: [forest-host, hungry-soldier-exploiter, garden-taskmaster, well-betrayer, blue-light-seeker, gallows-punished]
+      evidence: |
+        a house wherein lived a witch
+
+    blue_light_black_mannikin:
+      name: The Little Black Mannikin / Dwarf
+      being_type: being_dwarf
+      agency_modes: [agency_object_mediation, agency_speech, agency_violence, agency_cunning]
+      speech_acts_performed: [speech_command]
+      traits: [smoke-summoned-servitor, command-bound-helper, underground-guide, treasure-revealer, witch-executor, princess-abductor, pea-countermeasure-maker, cudgel-wielder]
+      evidence: |
+        suddenly a little black dwarf stood before him
+
+    blue_light_princess:
+      name: The King's Daughter
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_cunning, agency_social_rank]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_fear]
+      traits: [sleep-carried-princess, dream-testifier, forced-servant, pea-trail-attempter, shoe-hider, final-bride]
+      evidence: |
+        the King’s daughter is in bed
+
+    blue_light_landlord:
+      name: The Inn Landlord
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [room-furnisher, clothes-provider, inn-keeper]
+      evidence: |
+        bade the landlord furnish him a room
+
+    blue_light_comrade:
+      name: The Passing Comrade
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      traits: [window-summoned-helper, bundle-fetcher, ducat-earner]
+      evidence: |
+        one of his comrades passing by
+
+    blue_light_judge_constable:
+      name: The False Judge and Constable
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_violence]
+      traits: [death-condemners, cudgel-struck-authorities]
+      evidence: |
+        that false judge there, and his constable
+
+    blue_light_poor_children:
+      name: The Poor Children Picking Peas
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [street-pea-gatherers, track-confusers, rain-of-peas-speakers]
+      evidence: |
+        in every street poor children were sitting, picking up peas
+
+  magic_objects:
+
+    obj_blue_light:
+      name: The Blue Light
+      instance_of: obj_blue_summoning_light
+      object_kind: relic
+      attributes:
+        function: never-extinguished flame that lights the soldier's pipe and summons the mannikin
+      evidence: |
+        it burns blue, and never goes out
+
+    obj_blue_light_pipe:
+      name: The Soldier's Half-Full Tobacco Pipe
+      instance_of: obj_summoning_pipe
+      object_kind: tool
+      attributes:
+        function: when lit at the blue light, calls the black mannikin
+      evidence: |
+        found his tobacco pipe, which was still half full
+
+    obj_blue_light_well_basket:
+      name: The Witch's Well Basket
+      object_kind: tool
+      attributes:
+        function: lowers the soldier into the old dry well and enables the witch's betrayal
+      evidence: |
+        let him down in a basket
+
+    obj_blue_light_hidden_gold:
+      name: The Witch's Hidden Gold
+      object_kind: treasure
+      attributes:
+        function: underground treasure taken by the soldier after the mannikin leads him out
+      evidence: |
+        the soldier took as much gold as he could carry
+
+    obj_blue_light_peas:
+      name: The Princess's Peas
+      object_kind: food
+      attributes:
+        function: intended trail-marker defeated by the mannikin scattering peas everywhere
+      evidence: |
+        Fill thy pocket full of peas
+
+    obj_blue_light_shoe:
+      name: The Hidden Princess Shoe
+      object_kind: garment
+      attributes:
+        function: successful proof object found in the soldier's room
+      evidence: |
+        she hid her shoe under the bed
+
+    obj_blue_light_forgotten_bundle:
+      name: The Forgotten Bundle with Blue Light and Gold
+      object_kind: material
+      attributes:
+        function: contains the valuable objects needed for the prison rescue
+      evidence: |
+        the small bundle I have left lying in the inn
+
+    obj_blue_light_cudgel:
+      name: The Mannikin's Small Cudgel
+      object_kind: weapon
+      attributes:
+        function: strikes down judge, constable, king, and bystanders during the execution reversal
+      evidence: |
+        the mannikin was there with a small cudgel in his hand
+
+  locations:
+
+    loc_blue_light_forest:
+      name: The Forest of Hunger and Witch-Light
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        he entered a forest
+
+    loc_blue_light_witch_house:
+      name: The Witch's Forest House
+      instance_of: loc_witch_house
+      threshold_type: threshold_doorway
+      evidence: |
+        came to a house wherein lived a witch
+
+    loc_blue_light_witch_garden:
+      name: The Witch's Garden
+      instance_of: loc_field
+      evidence: |
+        dig all round my garden
+
+    loc_blue_light_old_well:
+      name: The Old Dry Well of the Blue Light
+      instance_of: loc_well
+      threshold_type: threshold_well
+      evidence: |
+        there is an old dry well
+
+    loc_blue_light_underground_passage:
+      name: The Underground Passage of Hidden Treasure
+      instance_of: loc_cave
+      evidence: |
+        led him through an underground passage
+
+    loc_blue_light_town:
+      name: The Soldier's Former Town
+      instance_of: loc_town
+      threshold_type: threshold_gate
+      evidence: |
+        returned to the town from which he had come
+
+    loc_blue_light_inn_room:
+      name: The Handsome Inn Room
+      instance_of: loc_inn
+      threshold_type: threshold_doorway
+      evidence: |
+        furnish him a room as handsomely as possible
+
+    loc_blue_light_royal_palace:
+      name: The Royal Palace
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        carried her back to the royal palace
+
+    loc_blue_light_streets:
+      name: The Streets of the Night Carrying
+      instance_of: loc_road
+      evidence: |
+        carried through the streets
+
+    loc_blue_light_dungeon:
+      name: The Soldier's Dungeon
+      instance_of: loc_dungeon
+      evidence: |
+        standing at the window of his dungeon
+
+    loc_blue_light_gallows:
+      name: The Gallows and Execution Road
+      instance_of: loc_gallows
+      threshold_type: threshold_doorway
+      evidence: |
+        When he was led forth to die
+
+
+classifications:
+
+  world_laws:
+    - law_blue_light_pipe_summons_bound_servitor
+    - law_formula_commands_magic_objects
+    - law_irresistible_request_overrides_judgment
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_speech
+    - agency_violence
+    - agency_cunning
+    - agency_domestic_labor
+    - agency_social_rank
+
+  affects_driving:
+    - affect_hunger
+    - affect_anger
+    - affect_greed
+    - affect_fear
+    - affect_joy
+
+  symbol_numbers:
+    - num_3
+    - num_12
+
+  threshold_types:
+    - threshold_forest
+    - threshold_well
+    - threshold_doorway
+    - threshold_gate
+
+
+propp:
+
+  - function: func_initial_situation
+    order: 1
+    actor: blue_light_soldier
+    scene: The wounded faithful soldier is dismissed without wages after the war.
+    evidence: |
+      thou wilt not receive any more money
+
+  - function: func_lack
+    order: 2
+    actor: blue_light_soldier
+    scene: The hungry soldier wanders into the forest and asks the witch for food and lodging.
+    evidence: |
+      Do give me one night’s lodging, and a little to eat and drink
+
+  - function: func_donor_contract
+    order: 3
+    actor: blue_light_witch
+    victim: blue_light_soldier
+    scene: The witch grants lodging in exchange for garden-digging and wood-chopping labour.
+    evidence: |
+      if you will do what I wish
+
+  - function: func_descent
+    order: 4
+    actor: blue_light_witch
+    victim: blue_light_soldier
+    scene: The witch lowers the soldier into the dry well to retrieve the blue light.
+    evidence: |
+      let him down in a basket
+
+  - function: func_villainy
+    order: 5
+    actor: blue_light_witch
+    victim: blue_light_soldier
+    scene: The witch tries to take the blue light before raising him fully, then abandons him below.
+    evidence: |
+      let him down again into the well, and went away
+
+  - function: func_magical_agent
+    order: 6
+    actor: obj_blue_light_pipe
+    beneficiary: blue_light_soldier
+    scene: The soldier lights his pipe from the blue light and summons the black mannikin.
+    evidence: |
+      lit it at the blue light and began to smoke
+
+  - function: func_rescue
+    order: 7
+    actor: blue_light_black_mannikin
+    beneficiary: blue_light_soldier
+    scene: The mannikin leads the soldier out through an underground passage and shows him treasure.
+    evidence: |
+      led him through an underground passage
+
+  - function: func_punishment
+    order: 8
+    actor: blue_light_black_mannikin
+    victim: blue_light_witch
+    scene: The soldier commands the mannikin to bind the witch and carry her before the judge.
+    evidence: |
+      the witch is already hanging on the gallows
+
+  - function: func_revenge_command
+    order: 9
+    actor: blue_light_soldier
+    victim: blue_light_princess
+    scene: The soldier summons the mannikin from the inn and orders the sleeping princess brought to do servant work.
+    evidence: |
+      bring her here in her sleep
+
+  - function: func_counteraction
+    order: 10
+    actor: blue_light_king
+    beneficiary: blue_light_princess
+    scene: The king advises peas and then a hidden shoe to discover where the princess is taken.
+    evidence: |
+      leave a track in the streets
+
+  - function: func_exposure
+    order: 11
+    actor: obj_blue_light_shoe
+    victim: blue_light_soldier
+    scene: The hidden shoe is found in the soldier's room and he is imprisoned.
+    evidence: |
+      It was found at the soldier’s
+
+  - function: func_helper_recovery
+    order: 12
+    actor: blue_light_comrade
+    beneficiary: blue_light_soldier
+    scene: A comrade fetches the forgotten bundle from the inn to the dungeon.
+    evidence: |
+      brought him what he wanted
+
+  - function: func_execution
+    order: 13
+    actor: blue_light_judge_constable
+    victim: blue_light_soldier
+    scene: The judge condemns the soldier to death.
+    evidence: |
+      the judge condemned him to death
+
+  - function: func_last_request
+    order: 14
+    actor: blue_light_soldier
+    scene: The soldier asks to smoke one more pipe on the way to execution.
+    evidence: |
+      I may smoke one more pipe on my way
+
+  - function: func_victory
+    order: 15
+    actor: blue_light_black_mannikin
+    beneficiary: blue_light_soldier
+    scene: The summoned mannikin strikes down judge, constable, king, and everyone touched by the cudgel.
+    evidence: |
+      whosoever was so much as touched by his cudgel fell to earth
+
+  - function: func_wedding
+    order: 16
+    actor: blue_light_king
+    beneficiary: blue_light_soldier
+    scene: The terrified king gives the soldier the kingdom and the princess as wife.
+    evidence: |
+      gave him his kingdom for his own, and the princess to wife
+
+
+edges:
+
+  - from: blue_light_king
+    label: DISMISSES_WITHOUT_WAGES
+    to: blue_light_soldier
+    evidence: |
+      thou wilt not receive any more money
+
+  - from: blue_light_soldier
+    label: ENTERS
+    to: loc_blue_light_forest
+    evidence: |
+      he entered a forest
+
+  - from: blue_light_soldier
+    label: ASKS_LODGING_FROM
+    to: blue_light_witch
+    evidence: |
+      Do give me one night’s lodging
+
+  - from: blue_light_witch
+    label: BARGAINS_WITH
+    to: blue_light_soldier
+    evidence: |
+      if you will do what I wish
+
+  - from: blue_light_soldier
+    label: DIGS
+    to: loc_blue_light_witch_garden
+    evidence: |
+      dig all round my garden
+
+  - from: blue_light_soldier
+    label: CHOPS_WOOD_FOR
+    to: blue_light_witch
+    evidence: |
+      chop me a load of wood
+
+  - from: blue_light_witch
+    label: LOWERS_INTO
+    to: loc_blue_light_old_well
+    evidence: |
+      let him down in a basket
+
+  - from: blue_light_soldier
+    label: FINDS
+    to: obj_blue_light
+    evidence: |
+      He found the blue light
+
+  - from: blue_light_witch
+    label: TRIES_TO_TAKE
+    to: obj_blue_light
+    evidence: |
+      wanted to take the blue light away from him
+
+  - from: blue_light_witch
+    label: ABANDONS_IN
+    to: loc_blue_light_old_well
+    evidence: |
+      went away
+
+  - from: blue_light_soldier
+    label: LIGHTS
+    to: obj_blue_light_pipe
+    evidence: |
+      lit it at the blue light
+
+  - from: obj_blue_light
+    label: IGNITES
+    to: obj_blue_light_pipe
+    evidence: |
+      lit it at the blue light
+
+  - from: obj_blue_light_pipe
+    label: SUMMONS
+    to: blue_light_black_mannikin
+    evidence: |
+      suddenly a little black dwarf stood before him
+
+  - from: blue_light_black_mannikin
+    label: ASKS_COMMANDS_OF
+    to: blue_light_soldier
+    evidence: |
+      Lord, what are thy commands?
+
+  - from: blue_light_black_mannikin
+    label: LEADS_THROUGH
+    to: loc_blue_light_underground_passage
+    evidence: |
+      led him through an underground passage
+
+  - from: blue_light_black_mannikin
+    label: SHOWS
+    to: obj_blue_light_hidden_gold
+    evidence: |
+      showed him the treasures
+
+  - from: blue_light_soldier
+    label: TAKES
+    to: obj_blue_light_hidden_gold
+    evidence: |
+      took as much gold as he could carry
+
+  - from: blue_light_soldier
+    label: COMMANDS_PUNISHMENT_OF
+    to: blue_light_witch
+    evidence: |
+      bind the old witch, and carry her before the judge
+
+  - from: blue_light_black_mannikin
+    label: HANGS
+    to: blue_light_witch
+    evidence: |
+      the witch is already hanging on the gallows
+
+  - from: blue_light_soldier
+    label: STAYS_AT
+    to: loc_blue_light_inn_room
+    evidence: |
+      ordered himself handsome clothes
+
+  - from: blue_light_soldier
+    label: SUMMONS
+    to: blue_light_black_mannikin
+    evidence: |
+      if I summon thee
+
+  - from: blue_light_soldier
+    label: COMMANDS_ABDUCTION_OF
+    to: blue_light_princess
+    evidence: |
+      bring her here in her sleep
+
+  - from: blue_light_black_mannikin
+    label: CARRIES_TO
+    to: loc_blue_light_inn_room
+    evidence: |
+      the mannikin carried in the princess
+
+  - from: blue_light_soldier
+    label: COMMANDS_LABOR_OF
+    to: blue_light_princess
+    evidence: |
+      get to thy work at once
+
+  - from: blue_light_princess
+    label: SWEEPS
+    to: loc_blue_light_inn_room
+    evidence: |
+      sweep the chamber
+
+  - from: blue_light_princess
+    label: CLEANS_BOOTS_FOR
+    to: blue_light_soldier
+    evidence: |
+      clean and brighten them
+
+  - from: blue_light_black_mannikin
+    label: RETURNS_TO
+    to: loc_blue_light_royal_palace
+    evidence: |
+      carried her back to the royal palace
+
+  - from: blue_light_princess
+    label: TESTIFIES_TO
+    to: blue_light_king
+    evidence: |
+      she went to her father, and told him
+
+  - from: blue_light_king
+    label: ADVISES_TRAIL_WITH
+    to: obj_blue_light_peas
+    evidence: |
+      Fill thy pocket full of peas
+
+  - from: blue_light_black_mannikin
+    label: COUNTERS_TRAIL_WITH
+    to: obj_blue_light_peas
+    evidence: |
+      scattered peas in every street there was
+
+  - from: blue_light_poor_children
+    label: PICK_UP
+    to: obj_blue_light_peas
+    evidence: |
+      poor children were sitting, picking up peas
+
+  - from: blue_light_king
+    label: ADVISES_HIDING
+    to: obj_blue_light_shoe
+    evidence: |
+      hide one of them there
+
+  - from: blue_light_princess
+    label: HIDES
+    to: obj_blue_light_shoe
+    evidence: |
+      she hid her shoe under the bed
+
+  - from: obj_blue_light_shoe
+    label: EXPOSES
+    to: blue_light_soldier
+    evidence: |
+      It was found at the soldier’s
+
+  - from: blue_light_soldier
+    label: IMPRISONED_IN
+    to: loc_blue_light_dungeon
+    evidence: |
+      thrown into prison
+
+  - from: blue_light_soldier
+    label: FORGETS
+    to: obj_blue_light_forgotten_bundle
+    evidence: |
+      he had forgotten the most valuable things he had
+
+  - from: blue_light_comrade
+    label: FETCHES
+    to: obj_blue_light_forgotten_bundle
+    evidence: |
+      brought him what he wanted
+
+  - from: blue_light_soldier
+    label: LIGHTS_PIPE_AT
+    to: obj_blue_light
+    evidence: |
+      lighted his pipe
+
+  - from: blue_light_judge_constable
+    label: CONDEMNS
+    to: blue_light_soldier
+    evidence: |
+      the judge condemned him to death
+
+  - from: blue_light_soldier
+    label: REQUESTS_LAST_PIPE_FROM
+    to: blue_light_king
+    evidence: |
+      begged a last favor of the King
+
+  - from: blue_light_king
+    label: GRANTS_THREE_PIPES
+    to: blue_light_soldier
+    evidence: |
+      Thou mayst smoke three
+
+  - from: blue_light_black_mannikin
+    label: WIELDS
+    to: obj_blue_light_cudgel
+    evidence: |
+      with a small cudgel in his hand
+
+  - from: blue_light_soldier
+    label: COMMANDS_ATTACK_ON
+    to: blue_light_judge_constable
+    evidence: |
+      Strike down to earth that false judge there
+
+  - from: obj_blue_light_cudgel
+    label: STRIKES_DOWN
+    to: blue_light_judge_constable
+    evidence: |
+      whosoever was so much as touched by his cudgel fell to earth
+
+  - from: blue_light_king
+    label: YIELDS_KINGDOM_TO
+    to: blue_light_soldier
+    evidence: |
+      gave him his kingdom for his own
+
+  - from: blue_light_king
+    label: GIVES_PRINCESS_TO
+    to: blue_light_soldier
+    evidence: |
+      and the princess to wife

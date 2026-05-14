@@ -1,0 +1,431 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-six-swans
+khm: 49
+atu: '451'
+atu_name: The Brothers Who Were Turned into Birds
+canonical_source: ../../2-silver/canonical/the-six-swans/canonical.txt
+title: The Six Swans
+
+
+entities:
+
+  characters:
+
+    six_swans_first_king:
+      name: The Lost Hunting King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_fear, affect_maternal_love]
+      traits: [lost-hunter, forest-trapped, coerced-bridegroom, secret-father, protective-but-blind]
+      evidence: |
+        a certain King was hunting in a great forest
+
+    six_swans_witch_mother:
+      name: The Old Witch Mother
+      archetypes: [arc_prohibition_giver]
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_speech, agency_cunning]
+      speech_acts_performed: [speech_promise]
+      traits: [forest-bargainer, path-holder, marriage-condition-setter, witchcraft-teacher]
+      evidence: |
+        she was a witch
+
+    six_swans_stepmother_queen:
+      name: The Witch Daughter Queen
+      archetypes: [arc_cruel_stepmother, arc_disguised_villain]
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_cunning, agency_speech, agency_domestic_labor]
+      affects: [affect_envy]
+      traits: [unloved-bride, secret-horror, bribing-stepmother, shirt-enchanter, stepchildren-remover]
+      evidence: |
+        she made little shirts of white silk
+
+    six_swans_sister:
+      name: The Silent Sister Queen
+      archetypes: [arc_silent_bride]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_domestic_labor, agency_speech]
+      existential_states: [state_mute]
+      speech_acts_performed: [speech_prohibition]
+      affects: [affect_loyalty, affect_grief]
+      traits: [hidden-daughter, brother-seeker, tree-dweller, starwort-sewer, silent-bride, falsely-accused, condemned-innocent, vindicated-mother]
+      evidence: |
+        firmly resolved to deliver her brothers, even if it should
+        cost her her life.
+
+    six_swans_brothers_human:
+      name: The Six Brothers
+      species: sp_human
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_curse, transform_animal_human]
+      affects: [affect_loyalty]
+      traits: [first-wife-children, forest-hidden, enchanted-stepchildren, quarter-hour-humans, sister-redeemed]
+      evidence: |
+        six boys and a girl, whom he loved better than anything else
+        in the world.
+
+    six_swans_brothers_swan_form:
+      name: The Six Swans
+      species: sp_swan
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_curse, transform_animal_human]
+      traits: [white-shirt-cursed, evening-human, swan-skin-wearers, stake-arrivers, restored-brothers]
+      evidence: |
+        they were changed into swans, and flew away over the forest
+
+    six_swans_youngest_brother:
+      name: The Youngest Brother with the Swan Wing
+      species: sp_human
+      existential_states: [state_cursed, state_transformed]
+      transformations: [transform_animal_human]
+      traits: [partly-restored, missing-left-arm, swan-winged-shoulder]
+      evidence: |
+        The youngest only lacked his left arm, and had in the place of
+        it a swan’s wing on his shoulder.
+
+    six_swans_second_king:
+      name: The Hunting King Husband
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_violence]
+      affects: [affect_love_at_first_sight, affect_grief]
+      traits: [forest-hunter, rescuer, beauty-struck, protective-at-first, justice-bound, moved-husband]
+      evidence: |
+        the King’s heart was touched, and he was smitten with a great
+        love for her.
+
+    six_swans_huntsmen:
+      name: The Huntsmen
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_violence, agency_speech]
+      traits: [tree-questioners, gift-unmoved, maiden-fetchers]
+      evidence: |
+        climbed the tree and fetched the maiden down and led her
+        before the King.
+
+    six_swans_mother_in_law:
+      name: The Wicked Mother-in-Law
+      archetypes: [arc_envious_witness]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_social_rank, agency_violence]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_envy]
+      traits: [marriage-slanderer, child-stealer, blood-smearer, cannibalism-accuser, stake-condemned]
+      evidence: |
+        took it away from her, and smeared her mouth with blood as she
+        slept.
+
+    six_swans_three_children:
+      name: The Three Stolen Children
+      species: sp_human
+      traits: [newborns, hidden-from-mother, false-accusation-tokens, restored-to-parents]
+      evidence: |
+        who had taken away her three children and hidden them.
+
+  magic_objects:
+
+    obj_six_swans_path_yarn:
+      name: The Path-Showing Ball of Yarn
+      object_kind: tool
+      attributes:
+        function: guides the king through the hidden forest path
+      evidence: |
+        a ball of yarn with wonderful properties. When he threw it
+        down before him, it unrolled itself and showed him his path.
+
+    obj_six_swans_charmed_silk_shirts:
+      name: The Six Charmed Silk Shirts
+      object_kind: garment
+      attributes:
+        count: 6
+        function: transforms the six boys into swans on contact
+      evidence: |
+        she made little shirts of white silk, and as she had learnt
+        the art of witchcraft from her mother, she sewed a charm
+        inside them.
+
+    obj_six_swans_fallen_feathers:
+      name: The Fallen Swan Feathers
+      object_kind: token
+      attributes:
+        function: material proof that the brothers flew away as swans
+      evidence: |
+        she showed him the feathers, which they had let fall in the
+        courtyard
+
+    obj_six_swans_swan_skins:
+      name: The Swan Skins
+      object_kind: garment
+      attributes:
+        function: removable animal form worn each day by the brothers
+      evidence: |
+        their swan’s skins stripped off like a shirt.
+
+    obj_six_swans_starwort_shirts:
+      name: The Six Starwort Shirts
+      instance_of: obj_redeeming_shirt
+      object_kind: garment
+      attributes:
+        count: 6
+        material: starwort
+        function: restores the six swans to human form when thrown over them
+      evidence: |
+        thou must sew together six little shirts of starwort for us.
+
+    obj_six_swans_unfinished_left_sleeve:
+      name: The Missing Left Sleeve
+      object_kind: garment
+      attributes:
+        function: marks the unfinished sixth shirt and causes partial restoration
+      evidence: |
+        only the left sleeve of the sixth was wanting.
+
+    obj_six_swans_blood_accusation:
+      name: The Blood on the Queen's Mouth
+      object_kind: token
+      attributes:
+        function: forged evidence for the mother-in-law's man-eater accusation
+      evidence: |
+        smeared her mouth with blood as she slept.
+
+    obj_six_swans_execution_fire:
+      name: The Execution Fire at the Stake
+      object_kind: weapon
+      attributes:
+        function: threatened death by fire for the falsely accused queen
+      evidence: |
+        she was sentenced to suffer death by fire.
+
+  locations:
+
+    loc_six_swans_first_forest:
+      name: The Great Forest Where the First King Is Lost
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        a certain King was hunting in a great forest
+
+    loc_six_swans_witch_hut:
+      name: The Witch's Little Hut
+      instance_of: loc_witch_house
+      threshold_type: threshold_doorway
+      evidence: |
+        the old woman led him to her little hut
+
+    loc_six_swans_first_palace:
+      name: The First King's Royal Palace
+      instance_of: loc_castle
+      evidence: |
+        the King reached his royal palace again, where the wedding was
+        celebrated.
+
+    loc_six_swans_hidden_forest_castle:
+      name: The Lonely Forest Castle
+      instance_of: loc_castle
+      threshold_type: threshold_forest
+      evidence: |
+        a lonely castle which stood in the midst of a forest.
+
+    loc_six_swans_robbers_hut:
+      name: The Robbers' Forest-Hut
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        she saw a forest-hut, and went into it, and found a room with
+        six little beds
+
+    loc_six_swans_tree_of_silence:
+      name: The Tree of Starwort Silence
+      instance_of: loc_tree
+      evidence: |
+        went into the midst of the forest, seated herself on a tree
+
+    loc_six_swans_second_castle:
+      name: The Second King's Castle
+      instance_of: loc_castle
+      threshold_type: threshold_gate
+      evidence: |
+        carried her to his castle.
+
+    loc_six_swans_stake:
+      name: The Execution Stake
+      instance_of: loc_castle
+      evidence: |
+        when she stood on high and the fire was just going to be
+        lighted
+
+
+classifications:
+
+  world_laws:
+    - law_silent_endurance_redeems
+    - law_redeeming_garments_restore_body
+    - law_curse_requires_counter_condition
+
+  moral_regimes:
+    - moral_silent_endurance
+    - moral_restorative
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_domestic_labor
+    - agency_speech
+    - agency_social_rank
+    - agency_cunning
+
+  affects_driving:
+    - affect_loyalty
+    - affect_grief
+    - affect_envy
+    - affect_love_at_first_sight
+    - affect_fear
+
+  symbol_numbers:
+    - num_6   # six brothers, swans, shirts, and years of silence
+    - num_3   # three stolen children and three accusations
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+    - threshold_gate
+
+
+propp:
+  - { function: func_absentation, order: 1, actor: six_swans_first_king,
+      scene: "hunting king is separated from attendants and lost in the forest" }
+  - { function: func_trickery, order: 2, actor: six_swans_witch_mother,
+      scene: "witch offers forest exit only if king marries her daughter" }
+  - { function: func_interdiction, order: 3, actor: six_swans_first_king,
+      scene: "king hides his first children in a secret forest castle to protect them from the stepmother" }
+  - { function: func_villainy, order: 4, actor: six_swans_stepmother_queen,
+      scene: "stepmother uses charmed shirts to transform six boys into swans" }
+  - { function: func_mediation, order: 5, actor: six_swans_sister,
+      scene: "sister learns her brothers have flown away as swans and leaves to seek them" }
+  - { function: func_recognition, order: 6, actor: six_swans_brothers_human,
+      scene: "swan-brothers regain human form for one quarter-hour and recognize their sister" }
+  - { function: func_difficult_task, order: 7, actor: six_swans_brothers_human,
+      scene: "brothers set the six-year silence and six starwort-shirt release condition" }
+  - { function: func_departure, order: 8, actor: six_swans_sister,
+      scene: "sister takes to a tree in the forest and begins gathering and sewing starwort" }
+  - { function: func_pursuit, order: 9, actor: six_swans_huntsmen,
+      scene: "huntsmen find the silent maiden in the tree and bring her to the king" }
+  - { function: func_wedding, order: 10, actor: six_swans_second_king,
+      scene: "king marries the silent maiden despite her refusal to speak" }
+  - { function: func_branding, order: 11, actor: six_swans_mother_in_law,
+      scene: "mother-in-law steals three children and brands the queen as a man-eater with blood" }
+  - { function: func_difficult_task, order: 12, actor: six_swans_sister,
+      scene: "queen continues sewing in silence though unable to defend herself" }
+  - { function: func_punishment, order: 13, actor: six_swans_second_king,
+      victim: six_swans_sister,
+      scene: "king must surrender the silent queen to justice and death by fire" }
+  - { function: func_liquidation, order: 14, actor: six_swans_sister,
+      scene: "at the stake she throws the shirts over the swans and restores her brothers" }
+  - { function: func_recognition, order: 15, actor: six_swans_sister,
+      scene: "term complete, queen speaks and declares her innocence" }
+  - { function: func_punishment, order: 16, actor: six_swans_mother_in_law,
+      scene: "wicked mother-in-law is bound to the stake and burnt to ashes" }
+
+
+edges:
+
+  # Coerced marriage and hidden children
+  - { from: six_swans_first_king, to: loc_six_swans_first_forest, label: LOSES_WAY_IN,
+      evidence: "he saw that he had lost his way." }
+  - { from: six_swans_witch_mother, to: six_swans_first_king, label: OFFERS_EXIT_CONDITION,
+      evidence: "I certainly can, but on one condition" }
+  - { from: six_swans_witch_mother, to: six_swans_stepmother_queen, label: DEMANDS_MARRIAGE_FOR,
+      evidence: "if you will make her your Queen, I will show you the way out of the forest." }
+  - { from: six_swans_first_king, to: six_swans_stepmother_queen, label: MARRIES_UNWILLINGLY,
+      evidence: "he saw that she was very beautiful, but still she did not please him" }
+  - { from: six_swans_first_king, to: six_swans_brothers_human, label: HIDES_IN_CASTLE,
+      evidence: "he took them to a lonely castle which stood in the midst of a forest." }
+  - { from: six_swans_first_king, to: six_swans_sister, label: HIDES_IN_CASTLE,
+      evidence: "he took them to a lonely castle which stood in the midst of a forest." }
+  - { from: obj_six_swans_path_yarn, to: loc_six_swans_hidden_forest_castle, label: SHOWS_PATH_TO,
+      evidence: "it unrolled itself and showed him his path." }
+  - { from: six_swans_stepmother_queen, to: obj_six_swans_path_yarn, label: STEALS_ACCESS_TO,
+      evidence: "she had learnt where the King kept the ball of yarn" }
+
+  # Swan curse
+  - { from: six_swans_stepmother_queen, to: obj_six_swans_charmed_silk_shirts, label: SEWS_CHARM_INTO,
+      evidence: "she sewed a charm inside them." }
+  - { from: six_swans_stepmother_queen, to: six_swans_brothers_human, label: THROWS_SHIRTS_OVER,
+      evidence: "she threw one of the little shirts over each of them" }
+  - { from: obj_six_swans_charmed_silk_shirts, to: six_swans_brothers_swan_form, label: TRANSFORMS_INTO,
+      evidence: "they were changed into swans, and flew away over the forest." }
+  - { from: six_swans_sister, to: obj_six_swans_fallen_feathers, label: FINDS_PROOF_IN,
+      evidence: "she showed him the feathers, which they had let fall in the courtyard" }
+  - { from: six_swans_sister, to: six_swans_brothers_swan_form, label: SEEKS,
+      evidence: "I will go and seek my brothers." }
+
+  # Brothers reveal the release condition
+  - { from: six_swans_brothers_swan_form, to: obj_six_swans_swan_skins, label: SHEDS,
+      evidence: "their swan’s skins stripped off like a shirt." }
+  - { from: six_swans_brothers_swan_form, to: six_swans_brothers_human, label: TEMPORARILY_REGAINS_FORM,
+      evidence: "one quarter of an hour each evening can we lay aside our swan’s skins" }
+  - { from: six_swans_brothers_human, to: six_swans_sister, label: PROHIBITS_SPEECH_AND_LAUGHTER,
+      evidence: "For six years thou mayst neither speak nor laugh" }
+  - { from: six_swans_brothers_human, to: obj_six_swans_starwort_shirts, label: REQUIRES,
+      evidence: "thou must sew together six little shirts of starwort for us." }
+  - { from: six_swans_sister, to: law_silent_endurance_redeems, label: SUBMITS_TO,
+      evidence: "if one single word falls from thy lips, all thy work will be lost." }
+  - { from: six_swans_sister, to: obj_six_swans_starwort_shirts, label: SEWS,
+      evidence: "gathered starwort and began to sew." }
+  - { from: obj_six_swans_starwort_shirts, to: law_redeeming_garments_restore_body, label: ENACTS,
+      evidence: "as they were touched by them, their swan’s skins fell off" }
+
+  # Silent bride
+  - { from: six_swans_sister, to: loc_six_swans_tree_of_silence, label: DWELLS_AND_WORKS_AT,
+      evidence: "seated herself on a tree, and there passed the night." }
+  - { from: six_swans_huntsmen, to: six_swans_sister, label: QUESTIONS,
+      evidence: "Who art thou?" }
+  - { from: six_swans_sister, to: six_swans_huntsmen, label: ANSWERS_WITH_OBJECTS,
+      evidence: "she threw her golden necklace down to them" }
+  - { from: six_swans_huntsmen, to: six_swans_second_king, label: BRINGS_TO,
+      evidence: "fetched the maiden down and led her before the King." }
+  - { from: six_swans_second_king, to: six_swans_sister, label: CLOAKS_AND_CARRIES,
+      evidence: "He put his mantle on her, took her before him on his horse" }
+  - { from: six_swans_second_king, to: six_swans_sister, label: MARRIES,
+      evidence: "She is the one whom I wish to marry" }
+
+  # False accusation
+  - { from: six_swans_mother_in_law, to: six_swans_sister, label: SLANDERS,
+      evidence: "Who knows" }
+  - { from: six_swans_sister, to: six_swans_three_children, label: GIVES_BIRTH_TO,
+      evidence: "when the Queen brought her first child into the world" }
+  - { from: six_swans_mother_in_law, to: six_swans_three_children, label: STEALS,
+      evidence: "the old woman stole away the newly-born child for the third time" }
+  - { from: six_swans_mother_in_law, to: obj_six_swans_blood_accusation, label: FORGES_EVIDENCE_WITH,
+      evidence: "smeared her mouth with blood as she slept." }
+  - { from: six_swans_mother_in_law, to: six_swans_sister, label: ACCUSES_OF_MAN_EATING,
+      evidence: "accused the Queen of being a man-eater." }
+  - { from: six_swans_sister, to: six_swans_second_king, label: CANNOT_DEFEND_HERSELF_TO,
+      evidence: "the Queen, who did not utter one word of defence" }
+  - { from: six_swans_second_king, to: six_swans_sister, label: DELIVERS_TO_JUSTICE,
+      evidence: "could do no otherwise than deliver her over to justice" }
+  - { from: six_swans_sister, to: obj_six_swans_execution_fire, label: SENTENCED_TO,
+      evidence: "she was sentenced to suffer death by fire." }
+
+  # Release and justice
+  - { from: six_swans_sister, to: obj_six_swans_starwort_shirts, label: CARRIES_TO_STAKE,
+      evidence: "she laid the shirts on her arm" }
+  - { from: six_swans_brothers_swan_form, to: loc_six_swans_stake, label: ARRIVES_AT,
+      evidence: "six swans came flying through the air towards her." }
+  - { from: six_swans_sister, to: six_swans_brothers_swan_form, label: THROWS_SHIRTS_OVER,
+      evidence: "she could throw the shirts over them" }
+  - { from: obj_six_swans_starwort_shirts, to: six_swans_brothers_human, label: RESTORES_TO_HUMAN,
+      evidence: "their swan’s skins fell off, and her brothers stood in their own bodily form" }
+  - { from: obj_six_swans_unfinished_left_sleeve, to: six_swans_youngest_brother, label: LEAVES_SWAN_WING_ON,
+      evidence: "lacked his left arm, and had in the place of it a swan’s wing" }
+  - { from: six_swans_sister, to: six_swans_second_king, label: DECLARES_INNOCENCE_TO,
+      evidence: "now I may speak and declare to thee that I am innocent" }
+  - { from: six_swans_sister, to: six_swans_mother_in_law, label: REVEALS_TREACHERY_OF,
+      evidence: "she told him of the treachery of the old woman" }
+  - { from: six_swans_three_children, to: six_swans_second_king, label: RESTORED_TO,
+      evidence: "they were brought thither" }
+  - { from: six_swans_second_king, to: six_swans_mother_in_law, label: BURNS_AT_STAKE,
+      evidence: "the wicked step-mother was bound to the stake, and burnt to ashes." }

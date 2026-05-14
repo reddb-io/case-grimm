@@ -1,0 +1,10 @@
+slug: the-old-man-and-his-grandson
+khm: 78
+atu: 980B
+base: pg5314-grimm-hunt
+sources:
+- book: pg2591-grimm-taylor
+  weight: supplementary
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

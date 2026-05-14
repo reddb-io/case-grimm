@@ -1,0 +1,314 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-twelve-huntsmen
+khm: 67
+atu: '884'
+atu_name: The Forgotten Bride
+canonical_source: ../../2-silver/canonical/the-twelve-huntsmen/canonical.txt
+title: The Twelve Huntsmen
+
+
+entities:
+
+  characters:
+
+    twelve_huntsmen_first_bride:
+      name: The First Betrothed Bride
+      archetypes: [arc_reluctant_bride]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_endurance, agency_object_mediation, agency_speech]
+      existential_states: [state_forgotten_bride, state_hidden_identity, state_disguised]
+      speech_acts_performed: [speech_command]
+      affects: [affect_loyalty, affect_grief]
+      traits: [beloved-betrothed, ring-keeper, forsaken, near-death-with-grief, lookalike-recruiter, huntsman-disguised, test-instructor, fainting-true-bride, recognized-wife]
+      evidence: |
+        His first betrothed heard of this, and fretted so much about
+        his faithlessness that she nearly died.
+
+    twelve_huntsmen_young_king:
+      name: The Young King
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_object_mediation]
+      existential_states: [state_bound_by_promise, state_deceived]
+      speech_acts_performed: [speech_promise, speech_command]
+      affects: [affect_love_at_first_sight, affect_grief, affect_loyalty]
+      traits: [loving-betrothed, deathbed-promise-bound, mourning-son, second-bride-seeker, huntsmen-employer, lion-doubter, ring-recognizer, restored-bridegroom]
+      evidence: |
+        he was forced to keep the promise which he had given his father
+
+    twelve_huntsmen_dying_father_king:
+      name: The Dying Father King
+      archetypes: [arc_oath_enforcer]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_promise, speech_command]
+      traits: [deathbed-commanding, marriage-arranger, promise-extractor]
+      evidence: |
+        promise me to marry as I wish
+
+    twelve_huntsmen_bride_father:
+      name: The First Bride's Father
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_pity]
+      traits: [concerned-father, wish-granter, lookalike-searcher]
+      evidence: |
+        Dearest child, why art thou so sad? Thou shalt have whatsoever
+        thou wilt.
+
+    twelve_huntsmen_eleven_maidens:
+      name: The Eleven Lookalike Maidens
+      species: sp_human
+      agency_modes: [agency_cunning, agency_endurance]
+      existential_states: [state_disguised]
+      affects: [affect_loyalty]
+      traits: [exact-lookalikes, huntsmen-disguised, firm-steppers, spinning-wheel-resisters, loyal-company]
+      evidence: |
+        eleven young maidens were found who exactly resembled his
+        daughter in face, figure, and size.
+
+    twelve_huntsmen_lion:
+      name: The Wondrous Lion
+      species: sp_lion
+      agency_modes: [agency_speech, agency_cunning]
+      speech_acts_performed: [speech_testimony]
+      traits: [secret-knower, disguise-detector, gender-test-adviser, truth-teller, restored-favourite]
+      evidence: |
+        a lion which was a wondrous animal, for he knew all concealed
+        and secret things.
+
+    twelve_huntsmen_friendly_servant:
+      name: The Friendly Servant
+      archetypes: [arc_wise_helper]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning]
+      speech_acts_performed: [speech_warning]
+      affects: [affect_pity]
+      traits: [huntsmen-favourer, plan-overhearer, double-warning-helper]
+      evidence: |
+        a servant of the King’s who favored the huntsmen
+
+    twelve_huntsmen_second_bride:
+      name: The Promised King's Daughter
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      existential_states: [state_deceived]
+      traits: [arranged-bride, rival-bride, returned-home]
+      evidence: |
+        a certain King’s daughter who was to be his wife.
+
+  magic_objects:
+
+    obj_twelve_huntsmen_betrothal_ring:
+      name: The Betrothal Ring
+      instance_of: obj_hidden_bride_token
+      object_kind: token
+      attributes:
+        function: remembrance token that proves the disguised huntsman is the first bride
+      evidence: |
+        I give thee a ring as a remembrance of me.
+
+    obj_twelve_huntsmen_clothes:
+      name: The Twelve Suits of Huntsmen's Clothes
+      object_kind: garment
+      attributes:
+        function: collective masculine disguise enabling service at the king's court
+        count: 12
+      evidence: |
+        she had twelve suits of huntsmen’s clothes made, all alike
+
+    obj_twelve_huntsmen_peas:
+      name: The Peas in the Antechamber
+      object_kind: food
+      attributes:
+        function: first gendered test of gait and bodily performance
+      evidence: |
+        let some peas be strewn in thy ante-chamber
+
+    obj_twelve_huntsmen_spinning_wheels:
+      name: The Twelve Spinning-Wheels
+      instance_of: obj_spinning_wheel
+      object_kind: tool
+      attributes:
+        function: second gendered test through expected attraction to domestic labour
+        count: 12
+      evidence: |
+        let twelve spinning-wheels be brought into the ante-chamber
+
+  locations:
+
+    loc_twelve_huntsmen_first_bride_home:
+      name: The First Bride's Home Kingdom
+      instance_of: loc_castle
+      evidence: |
+        he caused a search to be made in his whole kingdom
+
+    loc_twelve_huntsmen_dying_king_chamber:
+      name: The Dying King's Chamber
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        his father lay sick unto death, and desired to see him once
+        again before his end
+
+    loc_twelve_huntsmen_young_king_court:
+      name: The Young King's Court
+      instance_of: loc_castle
+      evidence: |
+        rode to the court of her former betrothed
+
+    loc_twelve_huntsmen_antechamber:
+      name: The Testing Antechamber
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        in thy ante-chamber
+
+    loc_twelve_huntsmen_hunting_ground:
+      name: The Hunting Ground
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        once when they were out hunting
+
+
+classifications:
+
+  world_laws:
+    - law_promise_binds_reality
+    - law_disguise_alters_social_reality
+    - law_gendered_tests_threaten_disguise
+
+  moral_regimes:
+    - moral_restorative
+    - moral_silent_endurance
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_endurance
+    - agency_object_mediation
+    - agency_social_rank
+    - agency_speech
+
+  affects_driving:
+    - affect_loyalty
+    - affect_grief
+    - affect_love_at_first_sight
+
+  symbol_numbers:
+    - num_12
+
+  threshold_types:
+    - threshold_doorway
+    - threshold_forest
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: twelve_huntsmen_young_king,
+      scene: "king's son is happily betrothed to the maiden he loves" }
+  - { function: func_absentation, order: 2, actor: twelve_huntsmen_young_king,
+      scene: "he leaves the bride to visit his dying father, giving her a ring" }
+  - { function: func_interdiction, order: 3, actor: twelve_huntsmen_dying_father_king,
+      scene: "dying father asks him to promise marriage to another king's daughter" }
+  - { function: func_violation, order: 4, actor: twelve_huntsmen_young_king,
+      scene: "after mourning, he keeps the father's promise and asks the second bride in marriage" }
+  - { function: func_lack, order: 5, actor: twelve_huntsmen_first_bride,
+      scene: "first bride nearly dies from grief over his faithlessness" }
+  - { function: func_counteraction, order: 6, actor: twelve_huntsmen_first_bride,
+      scene: "she obtains eleven exact lookalikes and twelve identical huntsmen suits" }
+  - { function: func_departure, order: 7, actor: twelve_huntsmen_first_bride,
+      scene: "the disguised twelve ride to the former bridegroom's court" }
+  - { function: func_trickery, order: 8, actor: twelve_huntsmen_lion,
+      scene: "lion reveals that the twelve huntsmen are girls and proposes the pea test" }
+  - { function: func_helper_intervention, order: 9, actor: twelve_huntsmen_friendly_servant,
+      scene: "servant warns the huntsmen so they step firmly on the peas" }
+  - { function: func_trickery, order: 10, actor: twelve_huntsmen_lion,
+      scene: "lion proposes the spinning-wheel test to expose them again" }
+  - { function: func_helper_intervention, order: 11, actor: twelve_huntsmen_friendly_servant,
+      scene: "servant warns the huntsmen so they do not look at the spinning-wheels" }
+  - { function: func_recognition, order: 12, actor: twelve_huntsmen_young_king,
+      scene: "the first bride faints at news of the second bride and the king sees his ring" }
+  - { function: func_wedding, order: 13, actor: twelve_huntsmen_young_king,
+      scene: "king dismisses the second bride, marries the first, and restores the lion to favour" }
+
+
+edges:
+
+  # Conflicting promises
+  - { from: twelve_huntsmen_young_king, to: obj_twelve_huntsmen_betrothal_ring, label: GIVES_AS_REMEMBRANCE,
+      evidence: "I give thee a ring as a remembrance of me." }
+  - { from: twelve_huntsmen_young_king, to: twelve_huntsmen_first_bride, label: PROMISES_TO_FETCH,
+      evidence: "When I am King, I will return and fetch thee." }
+  - { from: twelve_huntsmen_dying_father_king, to: twelve_huntsmen_young_king, label: EXTRACTS_PROMISE_FROM,
+      evidence: "promise me to marry as I wish" }
+  - { from: twelve_huntsmen_young_king, to: twelve_huntsmen_dying_father_king, label: PROMISES_TO_OBEY,
+      evidence: "Yes, dear father, your will shall be done" }
+  - { from: twelve_huntsmen_young_king, to: twelve_huntsmen_second_bride, label: ASKS_IN_MARRIAGE,
+      evidence: "caused the King’s daughter to be asked in marriage" }
+  - { from: law_promise_binds_reality, to: twelve_huntsmen_young_king, label: BINDS,
+      evidence: "he was forced to keep the promise which he had given his father" }
+  - { from: twelve_huntsmen_first_bride, to: affect_grief, label: FEELS,
+      evidence: "fretted so much about his faithlessness that she nearly died." }
+
+  # Disguised return
+  - { from: twelve_huntsmen_first_bride, to: twelve_huntsmen_bride_father, label: REQUESTS,
+      evidence: "I wish for eleven girls exactly like myself" }
+  - { from: twelve_huntsmen_bride_father, to: twelve_huntsmen_eleven_maidens, label: FINDS,
+      evidence: "eleven young maidens were found" }
+  - { from: twelve_huntsmen_first_bride, to: obj_twelve_huntsmen_clothes, label: HAS_MADE,
+      evidence: "she had twelve suits of huntsmen’s clothes made" }
+  - { from: twelve_huntsmen_first_bride, to: obj_twelve_huntsmen_clothes, label: DISGUISES_WITH,
+      evidence: "she herself put on the twelfth suit." }
+  - { from: twelve_huntsmen_eleven_maidens, to: obj_twelve_huntsmen_clothes, label: DISGUISES_WITH,
+      evidence: "the eleven maidens had to put on the huntsmen’s clothes" }
+  - { from: twelve_huntsmen_first_bride, to: loc_twelve_huntsmen_young_king_court, label: RIDES_TO,
+      evidence: "rode to the court of her former betrothed" }
+  - { from: twelve_huntsmen_young_king, to: twelve_huntsmen_first_bride, label: FAILS_TO_RECOGNIZE,
+      evidence: "The King looked at her and did not know her" }
+  - { from: twelve_huntsmen_young_king, to: twelve_huntsmen_first_bride, label: TAKES_INTO_SERVICE,
+      evidence: "he would willingly take them" }
+
+  # Lion's tests and servant warnings
+  - { from: twelve_huntsmen_lion, to: twelve_huntsmen_young_king, label: TESTIFIES_TO,
+      evidence: "Thou art mistaken, they are twelve girls." }
+  - { from: twelve_huntsmen_lion, to: obj_twelve_huntsmen_peas, label: PROPOSES_TEST_WITH,
+      evidence: "let some peas be strewn in thy ante-chamber" }
+  - { from: obj_twelve_huntsmen_peas, to: law_gendered_tests_threaten_disguise, label: ACTIVATES,
+      evidence: "Men have a firm step" }
+  - { from: twelve_huntsmen_friendly_servant, to: twelve_huntsmen_first_bride, label: WARNS,
+      evidence: "repeated everything" }
+  - { from: twelve_huntsmen_first_bride, to: twelve_huntsmen_eleven_maidens, label: COMMANDS_PERFORMANCE,
+      evidence: "Put on some strength, and step firmly on the peas." }
+  - { from: twelve_huntsmen_eleven_maidens, to: obj_twelve_huntsmen_peas, label: DEFEATS_TEST_OF,
+      evidence: "not one of the peas either rolled or stirred." }
+  - { from: twelve_huntsmen_lion, to: obj_twelve_huntsmen_spinning_wheels, label: PROPOSES_TEST_WITH,
+      evidence: "let twelve spinning-wheels be brought into the ante-chamber" }
+  - { from: obj_twelve_huntsmen_spinning_wheels, to: law_gendered_tests_threaten_disguise, label: ACTIVATES,
+      evidence: "they will go to them and be pleased with them" }
+  - { from: twelve_huntsmen_friendly_servant, to: twelve_huntsmen_first_bride, label: WARNS,
+      evidence: "went to them, and disclosed the project." }
+  - { from: twelve_huntsmen_first_bride, to: twelve_huntsmen_eleven_maidens, label: COMMANDS_RESTRAINT,
+      evidence: "do not look round at the spinning-wheels." }
+  - { from: twelve_huntsmen_eleven_maidens, to: obj_twelve_huntsmen_spinning_wheels, label: DEFEATS_TEST_OF,
+      evidence: "never once looked at the spinning wheels." }
+
+  # Ring recognition and restored marriage
+  - { from: twelve_huntsmen_first_bride, to: twelve_huntsmen_young_king, label: FOLLOWS_TO_CHASE,
+      evidence: "always followed the King to the chase" }
+  - { from: twelve_huntsmen_first_bride, to: twelve_huntsmen_second_bride, label: HEARS_OF_APPROACH,
+      evidence: "news came that the King’s betrothed was approaching." }
+  - { from: twelve_huntsmen_first_bride, to: loc_twelve_huntsmen_hunting_ground, label: FAINTS_IN,
+      evidence: "she fell fainting to the ground." }
+  - { from: twelve_huntsmen_young_king, to: obj_twelve_huntsmen_betrothal_ring, label: RECOGNIZES,
+      evidence: "he saw the ring which he had given to his first bride" }
+  - { from: obj_twelve_huntsmen_betrothal_ring, to: twelve_huntsmen_first_bride, label: REVEALS,
+      evidence: "when he looked in her face he recognized her." }
+  - { from: twelve_huntsmen_young_king, to: twelve_huntsmen_first_bride, label: CLAIMS_AS_TRUE_BRIDE,
+      evidence: "Thou art mine, and I am thine" }
+  - { from: twelve_huntsmen_young_king, to: twelve_huntsmen_second_bride, label: DISMISSES,
+      evidence: "entreated her to return to her own kingdom" }
+  - { from: twelve_huntsmen_young_king, to: twelve_huntsmen_first_bride, label: MARRIES,
+      evidence: "Thereupon the wedding was celebrated" }
+  - { from: twelve_huntsmen_young_king, to: twelve_huntsmen_lion, label: RESTORES_TO_FAVOUR,
+      evidence: "the lion was again taken into favour" }

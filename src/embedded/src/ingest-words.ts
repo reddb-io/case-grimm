@@ -18,12 +18,13 @@
 //   word_filter   FILTER of every word      (bloom filter)
 //
 // Plus KV metadata under kv_default:
-//   corpus:version, corpus:last_ingest_at, corpus:source, corpus:total_tokens
+//   corpus_version, corpus_last_ingest_at, corpus_source, corpus_total_tokens
 
 import { connect, RedDBError } from '@reddb-io/sdk'
 import { readFileSync, readdirSync } from 'node:fs'
-import { resolve, dirname, basename } from 'node:path'
+import { resolve, dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import yaml from 'js-yaml'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const repoRoot = resolve(__dirname, '..', '..', '..')
@@ -53,6 +54,12 @@ interface Stats {
   perTaleUnique: Array<{ tale: string; total: number; unique: number }>
 }
 
+interface TaleTextSource {
+  slug: string
+  graphLabel: string
+  textPath: string
+}
+
 function sqlString(s: string): string {
   return `'${s.replace(/'/g, "''")}'`
 }
@@ -77,6 +84,30 @@ function countOccurrences(tokens: string[]): Map<string, number> {
   return c
 }
 
+function slugLabel(slug: string): string {
+  return slug.replace(/-/g, '_')
+}
+
+function taleTextSources(): TaleTextSource[] {
+  const goldTalesDir = resolve(repoRoot, 'input/3-gold/tales')
+  return readdirSync(goldTalesDir)
+    .filter((file) => file.endsWith('.yaml') || file.endsWith('.yml'))
+    .sort()
+    .flatMap((file) => {
+      const talePath = join(goldTalesDir, file)
+      const data = yaml.load(readFileSync(talePath, 'utf8')) as {
+        slug?: string
+        canonical_source?: string
+      }
+      if (!data.slug || !data.canonical_source) return []
+      return [{
+        slug: data.slug,
+        graphLabel: slugLabel(data.slug),
+        textPath: resolve(goldTalesDir, data.canonical_source),
+      }]
+    })
+}
+
 async function dropIfExists(db: import('@reddb-io/sdk').RedDB, name: string): Promise<void> {
   try {
     await db.query(`DROP TABLE ${name}`)
@@ -98,30 +129,8 @@ async function main(): Promise<void> {
   console.log(`Connecting to ${uri}`)
   const db = await connect(uri)
   try {
-    const talesDir = resolve(repoRoot, 'input/tales')
-    const files = readdirSync(talesDir).filter((f) => f.endsWith('.txt'))
-    console.log(`Found ${files.length} tale .txt files in ${talesDir}`)
-
-    // Build a mapping from the text-file slug (`hansel-and-gretel`) to the
-    // graph's tale label without `_tale` suffix (`hansel_gretel`). The
-    // text-file slug and the graph slug do not always match — text files
-    // use hyphens and the original verbose title, graph nodes use the
-    // curator's shorter underscore-separated form. We pull the tale label
-    // out of the sibling .json.
-    const slugMap = new Map<string, string>()
-    for (const file of files) {
-      const slug = basename(file, '.txt')
-      try {
-        const jsonPath = resolve(talesDir, `${slug}.json`)
-        const data = JSON.parse(readFileSync(jsonPath, 'utf8')) as {
-          nodes?: Array<{ label: string; node_type: string }>
-        }
-        const taleNode = (data.nodes ?? []).find((n) => n.node_type === 'tale')
-        if (taleNode) slugMap.set(slug, taleNode.label.replace(/_tale$/, ''))
-      } catch {
-        slugMap.set(slug, slug.replace(/-/g, '_'))
-      }
-    }
+    const sources = taleTextSources()
+    console.log(`Found ${sources.length} gold tale YAML files with canonical_source`)
 
     // Idempotency: wipe any prior word ingest so we can re-run cleanly.
     for (const t of ['tale_words', 'tale_bigrams', 'tale_vocab']) await dropIfExists(db, t)
@@ -136,10 +145,9 @@ async function main(): Promise<void> {
     let allBigramRows: Array<Record<string, unknown>> = []
 
     const start = Date.now()
-    for (const file of files) {
-      const fileSlug = basename(file, '.txt')
-      const slug = slugMap.get(fileSlug) ?? fileSlug.replace(/-/g, '_')
-      const text = readFileSync(resolve(talesDir, file), 'utf8')
+    for (const source of sources) {
+      const slug = source.graphLabel
+      const text = readFileSync(source.textPath, 'utf8')
       const tokens = tokenize(text)
       if (!tokens.length) continue
       const wordCounts = countOccurrences(tokens)
@@ -195,31 +203,37 @@ async function main(): Promise<void> {
     // every token (with repeats) into SKETCH. The v1.0.8 engine does not
     // surface these structures' interrogation API through the SDK, so we
     // populate them and let `SHOW COLLECTIONS` confirm they exist. Future
-    // versions of the engine will let us query estimates back.
+    // Keep these populated even when the current CLI surface only exposes
+    // collection-level confirmation for some probabilistic structures.
     console.log('Feeding HLL / SKETCH / FILTER (showcase)...')
-    const uniqueWords = [...stats.vocab]
-    for (let i = 0; i < uniqueWords.length; i += 200) {
-      const chunk = uniqueWords.slice(i, i + 200)
-      const tuples = chunk.map((w) => `(${sqlString(w)})`).join(', ')
-      await db.query(`INSERT INTO vocab_hll (value) VALUES ${tuples}`)
-      await db.query(`INSERT INTO word_filter (value) VALUES ${tuples}`)
-    }
-    // sketch gets every token occurrence
-    const allTokens = allWordRows.flatMap((r) => Array((r.freq as number)).fill(r.word))
-    for (let i = 0; i < allTokens.length; i += 500) {
-      const chunk = allTokens.slice(i, i + 500)
-      const tuples = chunk.map((w) => `(${sqlString(w as string)})`).join(', ')
-      await db.query(`INSERT INTO word_sketch (value) VALUES ${tuples}`)
+    try {
+      const uniqueWords = [...stats.vocab]
+      for (let i = 0; i < uniqueWords.length; i += 200) {
+        const chunk = uniqueWords.slice(i, i + 200)
+        const tuples = chunk.map((w) => `(${sqlString(w)})`).join(', ')
+        await db.query(`INSERT INTO vocab_hll (value) VALUES ${tuples}`)
+        await db.query(`INSERT INTO word_filter (value) VALUES ${tuples}`)
+      }
+      // sketch gets every token occurrence
+      const allTokens = allWordRows.flatMap((r) => Array((r.freq as number)).fill(r.word))
+      for (let i = 0; i < allTokens.length; i += 500) {
+        const chunk = allTokens.slice(i, i + 500)
+        const tuples = chunk.map((w) => `(${sqlString(w as string)})`).join(', ')
+        await db.query(`INSERT INTO word_sketch (value) VALUES ${tuples}`)
+      }
+    } catch (err) {
+      const msg = err instanceof RedDBError ? `[${err.code}] ${err.message}` : String(err)
+      console.warn(`  probabilistic feed skipped: ${msg}`)
     }
 
     // KV metadata. Showcases the kv model — corpus-level facts live here.
     console.log('Writing KV metadata...')
-    await db.kv.put('corpus:version', '1.0.0')
-    await db.kv.put('corpus:last_ingest_at', Date.now())
-    await db.kv.put('corpus:source', 'https://www.gutenberg.org/cache/epub/2591/pg2591.txt')
-    await db.kv.put('corpus:total_tokens', stats.totalTokens)
-    await db.kv.put('corpus:unique_vocab', stats.vocab.size)
-    await db.kv.put('corpus:tales', stats.perTaleUnique.length)
+    await db.kv.put('corpus_version', '1.0.0')
+    await db.kv.put('corpus_last_ingest_at', Date.now())
+    await db.kv.put('corpus_source', 'input/3-gold/tales/*.yaml canonical_source')
+    await db.kv.put('corpus_total_tokens', stats.totalTokens)
+    await db.kv.put('corpus_unique_vocab', stats.vocab.size)
+    await db.kv.put('corpus_tales', stats.perTaleUnique.length)
 
     console.log(`\nAll done in ${Date.now() - start}ms`)
   } finally {

@@ -1,0 +1,375 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: gambling-hansel
+khm: 82
+atu: '330A'
+atu_name: The Smith's Three Wishes / Cheating Death
+canonical_source: ../../2-silver/canonical/gambling-hansel/canonical.txt
+title: Gambling Hansel
+
+
+entities:
+
+  characters:
+
+    gambling_hansel:
+      name: Gambling Hansel
+      archetypes: [arc_compulsive_gambler, arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_object_mediation, agency_violence]
+      speech_acts_performed: [speech_wish, speech_command, speech_lie]
+      affects: [affect_greed]
+      traits: [compulsive-gambler, house-loser, poor-host, alms-gambler, gutter-pretender, winning-card-owner, winning-dice-owner, death-trapper, hell-gambler, heaven-cracker, heaven-expelled, soul-fragmented]
+      evidence: |
+        there was a man who did nothing but gamble
+
+    gambling_hansel_lord:
+      name: The Lord
+      being_type: being_divine
+      agency_modes: [agency_speech, agency_object_mediation, agency_social_rank]
+      speech_acts_performed: [speech_command]
+      traits: [night-shelter-asker, wine-provider, three-favour-granter, death-sender, heaven-gate-decider]
+      evidence: |
+        came the Lord and St. Peter, and asked him to give them shelter
+        for the night.
+
+    gambling_hansel_st_peter:
+      name: St. Peter
+      species: sp_human
+      being_type: being_divine
+      agency_modes: [agency_speech, agency_object_mediation, agency_social_rank]
+      speech_acts_performed: [speech_command]
+      traits: [bread-money-giver, heaven-doorkeeper, divine-adviser, hansel-opponent]
+      evidence: |
+        Thereupon St. Peter gave him three groschen
+
+    gambling_hansel_vagabonds:
+      name: The Gambling Vagabonds
+      archetypes: [arc_compulsive_gambler]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech]
+      affects: [affect_greed]
+      traits: [gambling-house-players, hansel-ruiners, three-groschen-winners, soul-fragment-hosts]
+      evidence: |
+        the other gambling vagabonds were gathered together
+
+    gambling_hansel_creditors:
+      name: Hansel's Creditors
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [house-claimants, ruin-deadline-makers]
+      evidence: |
+        the very day before his creditors were to take his house from
+        him
+
+    gambling_hansel_death:
+      name: Death
+      being_type: being_death
+      agency_modes: [agency_speech, agency_violence]
+      existential_states: [state_trapped]
+      speech_acts_performed: [speech_command]
+      traits: [summoner, fruit-tree-trapped, seven-year-bound, released-killer, afterlife-escort]
+      evidence: |
+        When Death appeared
+
+    gambling_hansel_lucifer:
+      name: Old Lucifer
+      being_type: being_devil
+      agency_modes: [agency_speech, agency_cunning]
+      traits: [hell-host, devil-stake-holder, gambling-loser]
+      evidence: |
+        no one at home but old Lucifer
+
+    gambling_hansel_crooked_devils:
+      name: The Crooked Devils
+      being_type: being_devil
+      agency_modes: [agency_violence, agency_object_mediation]
+      traits: [mis-shapen, evil-work-returned, won-from-lucifer, hop-pole-carriers, heaven-crackers]
+      evidence: |
+        the crooked devils who had just been doing their evil work in
+        the world.
+
+  magic_objects:
+
+    obj_gambling_hansel_three_groschen:
+      name: The Three Groschen
+      object_kind: treasure
+      attributes:
+        function: bread money first lost at gambling, then used properly on the second errand
+      evidence: |
+        St. Peter gave him three groschen
+
+    obj_gambling_hansel_bread:
+      name: The Bought Loaf
+      object_kind: food
+      attributes:
+        function: food bought for the Lord and St. Peter after the second three-groschen gift
+      evidence: |
+        fetched them the loaf.
+
+    obj_gambling_hansel_cellar_wine:
+      name: The Best Wine in the Empty Cellar
+      object_kind: food
+      attributes:
+        function: miraculous hospitality supplied by the Lord from apparently empty casks
+      evidence: |
+        the best of wine ran out
+
+    obj_gambling_hansel_cards:
+      name: The Winning Pack of Cards
+      instance_of: obj_winning_cards_dice
+      object_kind: tool
+      attributes:
+        function: favour with which Hansel can win everything by cards
+      evidence: |
+        a pack of cards with which he could win everything
+
+    obj_gambling_hansel_dice:
+      name: The Winning Dice
+      instance_of: obj_winning_cards_dice
+      object_kind: tool
+      attributes:
+        function: favour with which Hansel can win everything by dice
+      evidence: |
+        dice with which he would win everything
+
+    obj_gambling_hansel_fruit_tree:
+      name: The Inescapable Fruit Tree
+      instance_of: obj_sticky_fruit_tree
+      object_kind: tool
+      attributes:
+        function: third favour; traps Death in the tree for seven years
+      evidence: |
+        a tree whereon every kind of fruit would grow
+
+    obj_gambling_hansel_hop_pole:
+      name: The Hohenfuert Hop-Pole
+      object_kind: weapon
+      attributes:
+        function: pole used by Hansel and the won devils to crack Heaven
+      evidence: |
+        pulled up a hop-pole
+
+  locations:
+
+    loc_gambling_hansel_house:
+      name: Gambling Hansel's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        his creditors were to take his house from him
+
+    loc_gambling_hansel_gambling_house:
+      name: The Gambling Vagabonds' House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        the house where the other gambling vagabonds were gathered
+        together
+
+    loc_gambling_hansel_cellar:
+      name: The Miraculous Wine Cellar
+      instance_of: loc_cellar
+      evidence: |
+        go down into the cellar
+
+    loc_gambling_hansel_death_tree:
+      name: Death's Fruit Tree
+      instance_of: loc_tree
+      evidence: |
+        get up into that tree out there
+
+    loc_gambling_hansel_heaven_door:
+      name: The Door of Heaven
+      instance_of: loc_heaven
+      threshold_type: threshold_doorway
+      evidence: |
+        the door of Heaven
+
+    loc_gambling_hansel_purgatory_door:
+      name: The Door of Purgatory
+      instance_of: loc_purgatory
+      threshold_type: threshold_doorway
+      evidence: |
+        the door of Purgatory
+
+    loc_gambling_hansel_hell:
+      name: The Door and House of Hell
+      instance_of: loc_hell
+      threshold_type: threshold_doorway
+      evidence: |
+        the door of Hell
+
+    loc_gambling_hansel_hohenfuert:
+      name: Hohenfuert
+      instance_of: loc_town
+      evidence: |
+        they went to Hohenfuert
+
+
+classifications:
+
+  world_laws:
+    - law_winning_game_objects_totalize_play
+    - law_trapped_death_suspends_mortality
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_comic_inversion
+    - moral_mercy_over_judgment
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_object_mediation
+    - agency_social_rank
+    - agency_violence
+
+  affects_driving:
+    - affect_greed
+    - affect_fear
+
+  symbol_numbers:
+    - num_3
+    - num_7
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: gambling_hansel,
+      scene: "Hansel is known entirely by gambling and has gambled away his house and property" }
+  - { function: func_donor_arrival, order: 2, actor: gambling_hansel_lord,
+      scene: "the Lord and St. Peter ask Hansel for shelter on the night before the creditors take his house" }
+  - { function: func_failed_errand, order: 3, actor: gambling_hansel,
+      scene: "Hansel gambles away the first three groschen meant for bread and pretends they fell into the gutter" }
+  - { function: func_hospitality_miracle, order: 4, actor: gambling_hansel_lord,
+      scene: "the Lord reveals good wine in the supposedly empty cellar" }
+  - { function: func_three_favours, order: 5, actor: gambling_hansel,
+      scene: "Hansel asks for winning cards, winning dice, and a tree that traps climbers" }
+  - { function: func_overreach, order: 6, actor: gambling_hansel,
+      scene: "Hansel wins half the world, causing St. Peter and the Lord to send Death" }
+  - { function: func_trickery, order: 7, actor: gambling_hansel,
+      scene: "Hansel sends Death into the fruit tree and leaves him trapped for seven years" }
+  - { function: func_commanded_release, order: 8, actor: gambling_hansel_lord,
+      scene: "the Lord commands Hansel to release Death, and Death immediately kills him" }
+  - { function: func_afterlife_exclusion, order: 9, actor: gambling_hansel,
+      scene: "Hansel is refused by Heaven and Purgatory but admitted into Hell" }
+  - { function: func_infernal_gambling, order: 10, actor: gambling_hansel,
+      scene: "Hansel wins Lucifer's crooked devils with his cards" }
+  - { function: func_assault_on_heaven, order: 11, actor: gambling_hansel_crooked_devils,
+      scene: "Hansel and the devils use a hop-pole to crack Heaven until they let him in" }
+  - { function: func_expulsion, order: 12, actor: gambling_hansel_st_peter,
+      scene: "Hansel makes Heaven rebellious with gambling noise and is thrown down" }
+  - { function: func_etiology, order: 13, actor: gambling_hansel,
+      scene: "Hansel's soul breaks into fragments and enters living gambling vagabonds" }
+
+
+edges:
+
+  # Ruin and divine hospitality
+  - { from: gambling_hansel, to: arc_compulsive_gambler, label: EMBODIES,
+      evidence: "did nothing but gamble" }
+  - { from: gambling_hansel, to: gambling_hansel_creditors, label: LOSES_HOUSE_TO,
+      evidence: "his creditors were to take his house from him" }
+  - { from: gambling_hansel_lord, to: gambling_hansel, label: ASKS_SHELTER_FROM,
+      evidence: "asked him to give them shelter for the night" }
+  - { from: gambling_hansel_st_peter, to: obj_gambling_hansel_three_groschen, label: GIVES,
+      evidence: "St. Peter gave him three groschen" }
+  - { from: gambling_hansel, to: gambling_hansel_vagabonds, label: JOINS_GAMBLERS,
+      evidence: "So he went in" }
+  - { from: gambling_hansel, to: obj_gambling_hansel_three_groschen, label: PLAYS_AWAY,
+      evidence: "played away the three groschen also" }
+  - { from: gambling_hansel, to: gambling_hansel_lord, label: PRETENDS_MONEY_LOST_IN_GUTTER,
+      evidence: "pretended that the money had fallen into the gutter" }
+  - { from: gambling_hansel_lord, to: gambling_hansel, label: KNOWS_GAMBLING_LOSS,
+      evidence: "our Lord already knew that he had lost it in play" }
+  - { from: gambling_hansel, to: obj_gambling_hansel_bread, label: FETCHES,
+      evidence: "fetched them the loaf" }
+  - { from: gambling_hansel_lord, to: loc_gambling_hansel_cellar, label: REVEALS_WINE_IN,
+      evidence: "the best wine was still there" }
+  - { from: loc_gambling_hansel_cellar, to: obj_gambling_hansel_cellar_wine, label: PRODUCES,
+      evidence: "the best of wine ran out" }
+
+  # Three favours and totalized gambling
+  - { from: gambling_hansel_lord, to: gambling_hansel, label: GRANTS_THREE_FAVOURS,
+      evidence: "he might beg three favours" }
+  - { from: gambling_hansel_lord, to: num_3, label: FAVOURS_NUMBERED_AS,
+      evidence: "three favours" }
+  - { from: gambling_hansel, to: obj_gambling_hansel_cards, label: ASKS_FOR,
+      evidence: "a pack of cards with which he could win everything" }
+  - { from: gambling_hansel, to: obj_gambling_hansel_dice, label: ASKS_FOR,
+      evidence: "dice with which he would win everything" }
+  - { from: gambling_hansel, to: obj_gambling_hansel_fruit_tree, label: ASKS_FOR,
+      evidence: "a tree whereon every kind of fruit would grow" }
+  - { from: obj_gambling_hansel_cards, to: law_winning_game_objects_totalize_play, label: ENACTS,
+      evidence: "with which he could win everything" }
+  - { from: gambling_hansel, to: law_winning_game_objects_totalize_play, label: USES,
+      evidence: "at once set about gambling in real earnest" }
+  - { from: gambling_hansel, to: loc_gambling_hansel_death_tree, label: OWNS_TRAP_TREE,
+      evidence: "from which no one who had climbed up, could descend until he bade him do so" }
+  - { from: gambling_hansel, to: gambling_hansel_lord, label: THREATENS_WORLD_BY_WINNING,
+      evidence: "he will win, and thou lose, the whole world" }
+
+  # Death trapped
+  - { from: gambling_hansel_lord, to: gambling_hansel_death, label: SENDS,
+      evidence: "We must send Death to him" }
+  - { from: gambling_hansel_death, to: gambling_hansel, label: SUMMONS,
+      evidence: "Hansel, come out a while" }
+  - { from: gambling_hansel, to: gambling_hansel_death, label: DELAYS_WITH_GAME,
+      evidence: "Just wait a little until the game is done" }
+  - { from: gambling_hansel, to: gambling_hansel_death, label: SENDS_UP_TREE,
+      evidence: "get up into that tree out there" }
+  - { from: gambling_hansel_death, to: loc_gambling_hansel_death_tree, label: TRAPPED_IN,
+      evidence: "he could not" }
+  - { from: gambling_hansel, to: gambling_hansel_death, label: LEAVES_TRAPPED,
+      evidence: "Gambling Hansel left him up there for seven years" }
+  - { from: gambling_hansel_death, to: num_7, label: TRAPPED_FOR_YEARS,
+      evidence: "seven years" }
+  - { from: gambling_hansel_death, to: law_trapped_death_suspends_mortality, label: SUSPENDS_MORTALITY_WHILE_TRAPPED,
+      evidence: "during which time no one died" }
+  - { from: gambling_hansel_lord, to: gambling_hansel, label: COMMANDS_RELEASE_OF_DEATH,
+      evidence: "commanded Hansel to let Death come down" }
+  - { from: gambling_hansel_death, to: gambling_hansel, label: KILLS_DIRECTLY,
+      evidence: "Death took him directly and put an end to him" }
+
+  # Afterlife refusals and Hell gambling
+  - { from: gambling_hansel, to: loc_gambling_hansel_heaven_door, label: KNOCKS_AT,
+      evidence: "made straight for the door of Heaven, and knocked at it" }
+  - { from: loc_gambling_hansel_heaven_door, to: gambling_hansel, label: REFUSES,
+      evidence: "we will have nothing to do with him!" }
+  - { from: gambling_hansel, to: loc_gambling_hansel_purgatory_door, label: KNOCKS_AT,
+      evidence: "he went to the door of Purgatory" }
+  - { from: loc_gambling_hansel_purgatory_door, to: gambling_hansel, label: REFUSES,
+      evidence: "We do not want to gamble" }
+  - { from: gambling_hansel, to: loc_gambling_hansel_hell, label: ENTERS,
+      evidence: "there they let him in" }
+  - { from: gambling_hansel_lucifer, to: gambling_hansel_crooked_devils, label: STAKES,
+      evidence: "had nothing to lose, but his mis-shapen devils" }
+  - { from: gambling_hansel, to: gambling_hansel_crooked_devils, label: WINS_FROM_LUCIFER,
+      evidence: "Gambling Hansel won them from him" }
+  - { from: obj_gambling_hansel_cards, to: gambling_hansel_lucifer, label: MAKES_LOSS_INEVITABLE,
+      evidence: "as with his cards he could not fail to do" }
+
+  # Assault, admission, expulsion, etiology
+  - { from: gambling_hansel, to: loc_gambling_hansel_hohenfuert, label: GOES_WITH_DEVILS_TO,
+      evidence: "they went to Hohenfuert" }
+  - { from: gambling_hansel_crooked_devils, to: obj_gambling_hansel_hop_pole, label: PULL_UP,
+      evidence: "pulled up a hop-pole" }
+  - { from: gambling_hansel_crooked_devils, to: loc_gambling_hansel_heaven_door, label: THRUST_POLE_AGAINST,
+      evidence: "began to thrust the pole against it" }
+  - { from: obj_gambling_hansel_hop_pole, to: loc_gambling_hansel_heaven_door, label: CRACKS_HEAVEN,
+      evidence: "Heaven began to crack" }
+  - { from: gambling_hansel_st_peter, to: gambling_hansel_lord, label: URGES_ADMISSION,
+      evidence: "we must let him in, or he will throw us down from Heaven" }
+  - { from: gambling_hansel_lord, to: gambling_hansel, label: ADMITS_TO_HEAVEN,
+      evidence: "they let him in" }
+  - { from: gambling_hansel, to: loc_gambling_hansel_heaven_door, label: MAKES_NOISE_IN,
+      evidence: "there was such a noise and confusion" }
+  - { from: gambling_hansel_st_peter, to: gambling_hansel_lord, label: URGES_EXPULSION,
+      evidence: "we must throw him down" }
+  - { from: gambling_hansel_lord, to: gambling_hansel, label: THROWS_DOWN,
+      evidence: "they went to him at once, and threw him down" }
+  - { from: gambling_hansel, to: gambling_hansel_vagabonds, label: SOUL_FRAGMENTS_INTO,
+      evidence: "his soul broke into fragments, and went into the gambling vagabonds" }

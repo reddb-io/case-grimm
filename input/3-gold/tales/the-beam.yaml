@@ -1,0 +1,296 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-beam
+khm: 149
+atu: '987'
+atu_name: The Beam
+canonical_source: ../../2-silver/canonical/the-beam/canonical.txt
+title: The Beam
+
+
+entities:
+
+  characters:
+
+    beam_enchanter:
+      name: The Enchanter / Magician
+      species: sp_human
+      being_type: being_wizard
+      agency_modes: [agency_cunning, agency_object_mediation, agency_speech]
+      speech_acts_performed: [speech_testimony, speech_curse]
+      affects: [affect_shame, affect_anger]
+      traits: [public-wonder-worker, illusionist, exposed-magician, revenge-caster, mocking-wedding-avenger]
+      evidence: |
+        There was once an enchanter who was standing in the midst of a great crowd of people performing his wonders.
+
+    beam_truth_sighted_girl:
+      name: The Four-Leaf-Clover Girl / Bride
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_speech]
+      existential_states: [state_deceived]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_joy, affect_shame]
+      traits: [clover-finder, deception-seer, public-truth-teller, wedding-bride, flax-field-dupe, ridiculed-exposer]
+      evidence: |
+        a girl was present who had just found a bit of four-leaved clover
+
+    beam_enchanted_cock:
+      name: The Beam-Carrying Cock
+      species: sp_rooster
+      agency_modes: [agency_object_mediation, agency_endurance]
+      existential_states: [state_deceived]
+      traits: [illusion-carrier, straw-carrier, wonder-display-animal]
+      evidence: |
+        a cock brought in, which lifted a heavy beam
+
+    beam_crowd:
+      name: The Great Crowd
+      species: sp_human
+      agency_modes: [agency_speech, agency_violence]
+      existential_states: [state_deceived]
+      affects: [affect_joy, affect_shame]
+      traits: [wonder-audience, deception-believers, awakened-witnesses, shaming-expellers]
+      evidence: |
+        a great crowd of people
+
+    beam_wedding_procession:
+      name: The Wedding Procession
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      existential_states: [state_deceived]
+      affects: [affect_joy]
+      traits: [church-going-procession, ridicule-witnesses, laughter-crowd]
+      evidence: |
+        went in a great procession over the fields to the place where the church was
+
+  magic_objects:
+
+    obj_beam_four_leaf_clover:
+      name: The Four-Leaved Clover
+      instance_of: obj_four_leaf_truth_clover
+      object_kind: relic
+      attributes:
+        function: gives the girl sight that no deception can withstand
+      evidence: |
+        had just found a bit of four-leaved clover
+
+    obj_beam_illusionary_beam_straw:
+      name: The Beam That Is Straw
+      object_kind: material
+      attributes:
+        function: magician's public illusion, appearing heavy until truth-sight exposes it as straw
+      evidence: |
+        she saw that the beam was nothing but a straw
+
+    obj_beam_blue_flax_field:
+      name: The Blue Flax Field
+      object_kind: material
+      attributes:
+        function: field of blue flax misperceived as swollen water during the revenge illusion
+      evidence: |
+        standing with her clothes lifted up in the middle of a field that was blue with the flowers of blue flax
+
+  locations:
+
+    loc_beam_performance_crowd:
+      name: The Public Wonder-Performance
+      instance_of: loc_marketplace
+      evidence: |
+        standing in the midst of a great crowd of people performing his wonders
+
+    loc_beam_wedding_fields:
+      name: The Wedding Fields
+      instance_of: loc_field
+      evidence: |
+        went in a great procession over the fields
+
+    loc_beam_church_destination:
+      name: The Church Destination
+      instance_of: loc_church
+      evidence: |
+        the place where the church was
+
+    loc_beam_illusory_stream:
+      name: The Swollen Stream Illusion
+      instance_of: loc_river
+      evidence: |
+        she came to a stream which was very much swollen
+
+
+classifications:
+
+  world_laws:
+    - law_four_leaf_clover_sight_breaks_illusion
+    - law_revenge_illusion_transfers_public_shame
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_object_mediation
+    - agency_speech
+
+  affects_driving:
+    - affect_shame
+    - affect_anger
+    - affect_joy
+
+
+propp:
+
+  - function: func_deception
+    order: 1
+    actor: beam_enchanter
+    victim: beam_crowd
+    scene: The enchanter stages a public wonder in which a cock seems to carry a heavy beam.
+    evidence: |
+      a cock brought in, which lifted a heavy beam
+
+  - function: func_acquisition
+    order: 2
+    actor: beam_truth_sighted_girl
+    beneficiary: obj_beam_four_leaf_clover
+    scene: The girl has found four-leaved clover and can see through deception.
+    evidence: |
+      had thus become so wise that no deception could stand out against her
+
+  - function: func_exposure
+    order: 3
+    actor: beam_truth_sighted_girl
+    victim: beam_enchanter
+    scene: The girl names the beam as straw and the enchantment vanishes before the crowd.
+    evidence: |
+      it is a straw that the cock is carrying, and no beam
+
+  - function: func_banishment
+    order: 4
+    actor: beam_crowd
+    victim: beam_enchanter
+    scene: The crowd drives the exposed magician away in shame.
+    evidence: |
+      drove the magician away in shame and disgrace
+
+  - function: func_revenge_vow
+    order: 5
+    actor: beam_enchanter
+    victim: beam_truth_sighted_girl
+    scene: The enchanter promises revenge after being exposed.
+    evidence: |
+      I will soon revenge myself
+
+  - function: func_wedding
+    order: 6
+    actor: beam_truth_sighted_girl
+    scene: The girl goes as bride in procession over the fields toward the church.
+    evidence: |
+      the girl’s wedding-day came
+
+  - function: func_deception
+    order: 7
+    actor: beam_enchanter
+    victim: beam_truth_sighted_girl
+    scene: The enchanter makes the bride mistake blue flax field for swollen water.
+    evidence: |
+      Where are thine eyes that thou takest that for water?
+
+  - function: func_punishment
+    order: 8
+    actor: beam_wedding_procession
+    victim: beam_truth_sighted_girl
+    scene: The wedding crowd sees the exposed field posture and chases her away with laughter.
+    evidence: |
+      chased her away with ridicule and laughter
+
+
+edges:
+
+  - from: beam_enchanter
+    label: PERFORMS_BEFORE
+    to: beam_crowd
+    evidence: |
+      standing in the midst of a great crowd of people performing his wonders
+
+  - from: beam_enchanter
+    label: ENCHANTS
+    to: obj_beam_illusionary_beam_straw
+    evidence: |
+      lifted a heavy beam and carried it as if it were as light as a feather
+
+  - from: beam_enchanted_cock
+    label: CARRIES
+    to: obj_beam_illusionary_beam_straw
+    evidence: |
+      the cock is carrying
+
+  - from: beam_truth_sighted_girl
+    label: POSSESSES
+    to: obj_beam_four_leaf_clover
+    evidence: |
+      had just found a bit of four-leaved clover
+
+  - from: law_four_leaf_clover_sight_breaks_illusion
+    label: ENABLES_SIGHT_FOR
+    to: beam_truth_sighted_girl
+    evidence: |
+      had thus become so wise that no deception could stand out against her
+
+  - from: beam_truth_sighted_girl
+    label: SEES_THROUGH
+    to: obj_beam_illusionary_beam_straw
+    evidence: |
+      she saw that the beam was nothing but a straw
+
+  - from: beam_truth_sighted_girl
+    label: EXPOSES_TO
+    to: beam_crowd
+    evidence: |
+      do you not see that it is a straw
+
+  - from: obj_beam_four_leaf_clover
+    label: DISPELS
+    to: obj_beam_illusionary_beam_straw
+    evidence: |
+      Immediately the enchantment vanished
+
+  - from: beam_crowd
+    label: DRIVES_AWAY
+    to: beam_enchanter
+    evidence: |
+      drove the magician away in shame and disgrace
+
+  - from: beam_enchanter
+    label: VOWS_REVENGE_AGAINST
+    to: beam_truth_sighted_girl
+    evidence: |
+      I will soon revenge myself
+
+  - from: beam_truth_sighted_girl
+    label: WALKS_WITH
+    to: beam_wedding_procession
+    evidence: |
+      went in a great procession over the fields
+
+  - from: beam_enchanter
+    label: DECEIVES
+    to: beam_truth_sighted_girl
+    evidence: |
+      takest that for water
+
+  - from: loc_beam_illusory_stream
+    label: IS_REVEALED_AS
+    to: obj_beam_blue_flax_field
+    evidence: |
+      she saw that she was standing with her clothes lifted up in the middle of a field
+
+  - from: law_revenge_illusion_transfers_public_shame
+    label: TRANSFERS_SHAME_TO
+    to: beam_truth_sighted_girl
+    evidence: |
+      all the people saw it likewise
+
+  - from: beam_wedding_procession
+    label: CHASES_AWAY
+    to: beam_truth_sighted_girl
+    evidence: |
+      chased her away with ridicule and laughter

@@ -1,0 +1,10 @@
+slug: the-thief-and-his-master
+khm: 68
+atu: '325'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg22555-grimm-eeden-dutch
+  weight: supplementary
+sections: []

@@ -1,0 +1,283 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-godfather
+khm: 42
+atu: '332'
+atu_name: The Godfather / Godfather Death
+canonical_source: ../../2-silver/canonical/the-godfather/canonical.txt
+title: The Godfather
+
+
+entities:
+
+  characters:
+
+    godfather_poor_man:
+      name: The Poor Man
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_social_rank, agency_endurance]
+      affects: [affect_fear, affect_curiosity]
+      traits: [overburdened-father, dream-obeyer, godfather-seeker, diagnostic-healer, famous-physician, infernal-house-visitor, escaped-witness]
+      evidence: |
+        "A poor man had so many children that he had already asked every
+        one in the world to be godfather"
+
+    godfather_newborn_child:
+      name: The Newborn Child
+      species: sp_human
+      traits: [godfather-needing-child, kinship-occasion]
+      evidence: |
+        "when still another child was born, no one else was left whom
+        he could invite."
+
+    the_godfather_stranger:
+      name: The Stranger Godfather
+      archetypes: [arc_supernatural_godfather, arc_supernatural_donor]
+      being_type: being_devil
+      agency_modes: [agency_speech, agency_object_mediation, agency_cunning]
+      speech_acts_performed: [speech_command, speech_lie]
+      traits: [first-met-stranger, water-donor, death-rule-giver, horned, denial-speaker, dangerous-host]
+      evidence: |
+        "there he saw the godfather who had a pair of long horns."
+
+    the_godfather_death_figure:
+      name: Death
+      being_type: being_death
+      agency_modes: [agency_object_mediation]
+      traits: [bedside-fate-marker, head-healing-sign, feet-death-sign]
+      evidence: |
+        "only thou must see where Death is standing."
+
+    godfather_kings_child:
+      name: The King's Child
+      species: sp_human
+      traits: [royal-patient, twice-healed, third-time-doomed]
+      evidence: |
+        "Once he was called in to the child of the King"
+
+    godfather_broom_shovel:
+      name: The Broom and Shovel
+      being_type: being_animated_object
+      agency_modes: [agency_speech, agency_violence]
+      traits: [quarreling-household-pair, stairway-speakers, disguised-servants]
+      evidence: |
+        "the broom and shovel were disputing, and knocking each other
+        about violently."
+
+    godfather_dead_fingers:
+      name: The Dead Fingers
+      being_type: being_animated_object
+      existential_states: [state_liminal_dead]
+      agency_modes: [agency_speech]
+      traits: [dead-body-parts, stairway-directors, denied-as-roots]
+      evidence: |
+        "he saw a heap of dead fingers lying."
+
+    godfather_dead_heads:
+      name: The Dead Heads
+      being_type: being_animated_object
+      existential_states: [state_liminal_dead]
+      agency_modes: [agency_speech]
+      traits: [dead-body-parts, stairway-directors, denied-as-cabbages]
+      evidence: |
+        "On the third flight lay a heap of dead heads"
+
+    godfather_self_baking_fishes:
+      name: The Self-Baking Fishes
+      species: sp_fish
+      agency_modes: [agency_speech, agency_domestic_labor]
+      traits: [self-baking, stairway-directors, self-serving-food]
+      evidence: |
+        "he saw fishes on the fire, which frizzled in the pans and
+        baked themselves."
+
+  magic_objects:
+
+    obj_godfather_wonderful_water:
+      name: The Wonderful Water
+      instance_of: obj_death_diagnostic_remedy
+      object_kind: material
+      attributes:
+        donor: the_godfather_stranger
+        function: conditional_healing
+        healing_condition: death_at_patient_head
+        death_condition: death_at_patient_feet
+      evidence: |
+        "This is a wonderful water, with it thou canst heal the sick"
+
+  locations:
+
+    loc_godfather_gate:
+      name: The Gate Outside the House
+      instance_of: loc_gate
+      threshold_type: threshold_gate
+      evidence: |
+        "he dreamt that he was to go outside the gate"
+
+    loc_godfather_patient_bed:
+      name: The Patient's Bed
+      instance_of: loc_house
+      attributes:
+        diagnostic_axis: head_or_feet
+      evidence: |
+        "If he is standing by the patient’s head"
+
+    loc_godfather_king_child_room:
+      name: The King's Child's Sickroom
+      instance_of: loc_castle
+      evidence: |
+        "Once he was called in to the child of the King"
+
+    loc_godfather_house:
+      name: The Godfather's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        "when he entered the house, it was such a strange establishment!"
+
+    loc_godfather_stairs:
+      name: The Five Flights of Stairs
+      instance_of: loc_house
+      attributes:
+        flight_count: 5
+      evidence: |
+        "One flight of stairs higher up."
+
+    loc_godfather_keyhole_door:
+      name: The Keyhole Door
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        "he came to the door of a room and peeped through the keyhole"
+
+
+classifications:
+
+  world_laws:
+    - law_death_position_determines_healing
+
+  moral_regimes:
+    - moral_prudential_retreat
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_object_mediation
+    - agency_cunning
+    - agency_social_rank
+    - agency_violence
+
+  affects_driving:
+    - affect_fear
+    - affect_curiosity
+
+  symbol_numbers:
+    - num_3   # three visits to the king's child before the death-verdict
+
+  threshold_types:
+    - threshold_gate
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: godfather_poor_man,
+      scene: "poor father has exhausted every possible human godfather for his children" }
+  - { function: func_lack, order: 2, actor: godfather_newborn_child,
+      scene: "another child is born and no godfather remains available" }
+  - { function: func_guidance, order: 3, actor: godfather_poor_man,
+      scene: "dream instructs the man to ask the first person outside the gate" }
+  - { function: func_donor_test, order: 4, actor: the_godfather_stranger,
+      scene: "stranger accepts the godfather role and grants conditional healing water" }
+  - { function: func_magical_agent, order: 5, actor: the_godfather_stranger,
+      beneficiary: godfather_poor_man,
+      scene: "wonderful water and Death-position rule create the man's medical power" }
+  - { function: func_liquidation, order: 6, actor: godfather_poor_man,
+      beneficiary: godfather_kings_child,
+      scene: "the man cures the king's child twice when Death stands at the head" }
+  - { function: func_violation, order: 7, actor: the_godfather_death_figure,
+      victim: godfather_kings_child,
+      scene: "the third bedside visit reveals Death at the feet and the child must die" }
+  - { function: func_departure, order: 8, actor: godfather_poor_man,
+      scene: "the healer visits the godfather's house to report his success" }
+  - { function: func_reconnaissance, order: 9, actor: godfather_poor_man,
+      scene: "successive flights reveal quarreling tools, dead fingers, dead heads, and self-baking fish" }
+  - { function: func_exposure, order: 10, actor: godfather_poor_man,
+      scene: "peeping through the keyhole exposes the godfather's long horns" }
+  - { function: func_escape, order: 11, actor: godfather_poor_man,
+      scene: "after the godfather denies the horns, the man runs out before he can be harmed" }
+
+
+edges:
+
+  # Godfather lack and supernatural sponsorship
+  - { from: godfather_poor_man, to: godfather_newborn_child, label: HAS_NEW_CHILD,
+      evidence: "when still another child was born" }
+  - { from: godfather_poor_man, to: loc_godfather_gate, label: DREAM_DIRECTS_TO,
+      evidence: "he dreamt that he was to go outside the gate" }
+  - { from: godfather_poor_man, to: the_godfather_stranger, label: ASKS_AS_GODFATHER,
+      evidence: "asked the first person who came up to him to be godfather." }
+  - { from: the_godfather_stranger, to: obj_godfather_wonderful_water, label: GIVES,
+      evidence: "presented him with a little glass of water" }
+  - { from: obj_godfather_wonderful_water, to: godfather_poor_man, label: EMPOWERS_AS_HEALER,
+      evidence: "with it thou canst heal the sick" }
+  - { from: the_godfather_stranger, to: law_death_position_determines_healing, label: REVEALS_LAW,
+      evidence: "only thou must see where Death is standing." }
+
+  # Bedside death-diagnosis
+  - { from: the_godfather_death_figure, to: loc_godfather_patient_bed, label: MARKS_HEALING_AT_HEAD,
+      evidence: "If he is standing by the patient’s head" }
+  - { from: the_godfather_death_figure, to: loc_godfather_patient_bed, label: MARKS_DEATH_AT_FEET,
+      evidence: "if Death is standing by his feet" }
+  - { from: godfather_poor_man, to: godfather_kings_child, label: HEALS_TWICE,
+      evidence: "cured it with the water, and he did the same a second time" }
+  - { from: the_godfather_death_figure, to: godfather_kings_child, label: STANDS_BY_HEAD,
+      evidence: "he saw death standing by the child’s head" }
+  - { from: the_godfather_death_figure, to: godfather_kings_child, label: STANDS_BY_FEET,
+      evidence: "the third time Death was standing by its feet" }
+  - { from: godfather_kings_child, to: law_death_position_determines_healing, label: SUBMITS_TO,
+      evidence: "then he knew the child was forced to die." }
+
+  # Visit to the strange household
+  - { from: godfather_poor_man, to: loc_godfather_house, label: VISITS,
+      evidence: "he would visit the godfather" }
+  - { from: loc_godfather_house, to: godfather_broom_shovel, label: CONTAINS,
+      evidence: "the broom and shovel were disputing" }
+  - { from: godfather_broom_shovel, to: godfather_broom_shovel, label: DISPUTE_AND_BEAT,
+      evidence: "knocking each other about violently." }
+  - { from: godfather_broom_shovel, to: loc_godfather_stairs, label: DIRECTS_UPWARD,
+      evidence: "One flight of stairs higher up." }
+  - { from: loc_godfather_house, to: godfather_dead_fingers, label: CONTAINS,
+      evidence: "he saw a heap of dead fingers lying." }
+  - { from: godfather_dead_fingers, to: loc_godfather_stairs, label: DIRECTS_UPWARD,
+      evidence: "One of the fingers replied, “One flight of stairs higher.”" }
+  - { from: loc_godfather_house, to: godfather_dead_heads, label: CONTAINS,
+      evidence: "On the third flight lay a heap of dead heads" }
+  - { from: godfather_dead_heads, to: loc_godfather_stairs, label: DIRECTS_UPWARD,
+      evidence: "which again directed him to the flight beyond." }
+  - { from: loc_godfather_house, to: godfather_self_baking_fishes, label: CONTAINS,
+      evidence: "he saw fishes on the fire" }
+  - { from: godfather_self_baking_fishes, to: godfather_self_baking_fishes, label: BAKE_THEMSELVES,
+      evidence: "frizzled in the pans and baked themselves." }
+  - { from: godfather_self_baking_fishes, to: loc_godfather_stairs, label: DIRECTS_UPWARD,
+      evidence: "They, too, said, “One flight of stairs higher.”" }
+
+  # Keyhole exposure and retreat
+  - { from: godfather_poor_man, to: loc_godfather_keyhole_door, label: PEEPS_THROUGH,
+      evidence: "peeped through the keyhole" }
+  - { from: godfather_poor_man, to: the_godfather_stranger, label: SEES_HORNS_ON,
+      evidence: "he saw the godfather who had a pair of long horns." }
+  - { from: the_godfather_stranger, to: loc_godfather_house, label: HIDES_IN_BED,
+      evidence: "got into bed in a great hurry and covered himself up." }
+  - { from: the_godfather_stranger, to: godfather_broom_shovel, label: EXPLAINS_AWAY,
+      evidence: "That was the boy and the maid talking to each other." }
+  - { from: the_godfather_stranger, to: godfather_dead_fingers, label: EXPLAINS_AWAY,
+      evidence: "Those were some roots of scorzonera." }
+  - { from: the_godfather_stranger, to: godfather_dead_heads, label: EXPLAINS_AWAY,
+      evidence: "those were cabbages." }
+  - { from: godfather_self_baking_fishes, to: godfather_self_baking_fishes, label: SERVES_THEMSELVES,
+      evidence: "the fishes came and served themselves up." }
+  - { from: the_godfather_stranger, to: godfather_poor_man, label: DENIES_HORNS,
+      evidence: "Oh, that is a lie!" }
+  - { from: godfather_poor_man, to: the_godfather_stranger, label: FLEES_FROM,
+      evidence: "The man became alarmed, and ran out" }
+  - { from: godfather_poor_man, to: moral_prudential_retreat, label: SURVIVES_BY,
+      evidence: "if he had not, who knows what the godfather would have done to him." }

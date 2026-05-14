@@ -1,0 +1,319 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-bremen-town-musicians
+khm: 27
+atu: '130'
+atu_name: The Bremen Town Musicians
+canonical_source: ../../2-silver/canonical/the-bremen-town-musicians/canonical.txt
+title: The Bremen Town Musicians
+
+
+entities:
+
+  characters:
+
+    bremen_donkey:
+      name: The Old Donkey
+      species: sp_donkey
+      agency_modes: [agency_endurance, agency_speech, agency_music, agency_violence]
+      affects: [affect_fear, affect_longing]
+      traits: [mill-sack-carrier, work-worn, runaway, band-founder, lute-claimant, window-base, kicker]
+      evidence: |
+        "his strength was going, and he was growing more and more unfit
+        for work."
+
+    bremen_hound:
+      name: The Old Hound
+      species: sp_dog
+      agency_modes: [agency_endurance, agency_speech, agency_music, agency_violence]
+      affects: [affect_fear]
+      traits: [old-hunter, death-fugitive, kettledrum-claimant, stack-middle, leg-biter]
+      evidence: |
+        "as I am old, and daily grow weaker, and no longer can hunt, my
+        master wanted to kill me"
+
+    bremen_cat:
+      name: The Old Cat
+      species: sp_cat
+      agency_modes: [agency_endurance, agency_speech, agency_music, agency_violence]
+      affects: [affect_fear]
+      traits: [tooth-worn, fire-sitter, mouse-hunt-retiree, night-musician, eye-coal-misread, scratcher]
+      evidence: |
+        "my mistress wanted to drown me, so I ran away."
+
+    bremen_rooster:
+      name: The Cock
+      species: sp_rooster
+      agency_modes: [agency_speech, agency_music, agency_endurance]
+      affects: [affect_fear]
+      traits: [farmyard-crower, weather-foreteller, soup-threatened, high-percher, judge-misrecognised]
+      evidence: |
+        "this evening I am to have my head cut off. Now I am crowing at
+        full pitch while I can."
+
+    bremen_donkey_master:
+      name: The Donkey's Master
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [cost-saving-owner, disposal-planner]
+      evidence: |
+        "his master began to consider how he might best save his keep"
+
+    bremen_hound_master:
+      name: The Hound's Master
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_violence]
+      traits: [old-dog-killer]
+      evidence: |
+        "my master wanted to kill me"
+
+    bremen_cat_mistress:
+      name: The Cat's Mistress
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_violence]
+      traits: [old-cat-drowner]
+      evidence: |
+        "my mistress wanted to drown me"
+
+    bremen_housewife:
+      name: The Housewife Who Wants Cock Soup
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_violence]
+      traits: [sunday-guest-planner, soup-executioner]
+      evidence: |
+        "has told the cook that she intends to eat me in the soup
+        to-morrow"
+
+    bremen_robbers:
+      name: The Robbers in the Forest House
+      archetypes: [arc_predator]
+      species: sp_human
+      agency_modes: [agency_violence, agency_cunning]
+      affects: [affect_fear]
+      traits: [forest-house-occupiers, feast-eaters, ghost-fearers, house-losers]
+      evidence: |
+        "robbers sitting at it enjoying themselves."
+
+    bremen_robber_scout:
+      name: The Robber Scout
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      affects: [affect_fear]
+      traits: [candle-lighter, animal-attack-victim, witch-man-monster-judge-witness]
+      evidence: |
+        "ordered one of them to go and examine the house."
+
+  magic_objects:
+
+    obj_bremen_corn_sacks:
+      name: The Corn-Sacks
+      object_kind: material
+      attributes:
+        function: lifelong burden that exhausts the donkey
+      evidence: |
+        "had carried the corn-sacks to the mill indefatigably for many
+        a long year"
+
+    obj_bremen_robber_table:
+      name: The Robbers' Laden Table
+      object_kind: food
+      attributes:
+        function: feast seized by the animals after the robbers flee
+      evidence: |
+        "a table covered with good things to eat and drink"
+
+    obj_bremen_window:
+      name: The Robber-House Window
+      object_kind: architecture
+      attributes:
+        function: animals stack at it, make music, and burst through
+      evidence: |
+        "the donkey was to place himself with his fore-feet upon the
+        window-ledge"
+
+    obj_bremen_candle_match:
+      name: The Robber Scout's Lucifer-Match
+      object_kind: tool
+      attributes:
+        function: mistaken attempt to light from the cat's eyes
+      evidence: |
+        "he held a lucifer-match to them to light it."
+
+  locations:
+
+    loc_bremen_road:
+      name: The Road to Bremen
+      evidence: |
+        "ran away and set out on the road to Bremen."
+
+    loc_bremen_path:
+      name: The Path Where the Cat Sits
+      evidence: |
+        "they came to a cat, sitting on the path"
+
+    loc_bremen_farmyard:
+      name: The Farm-Yard Gate
+      instance_of: loc_house
+      evidence: |
+        "came to a farm-yard, where the cock was sitting upon the gate"
+
+    loc_bremen_forest:
+      name: The Night Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        "in the evening they came to a forest where they meant to pass
+        the night."
+
+    loc_bremen_large_tree:
+      name: The Large Tree in the Forest
+      instance_of: loc_tree
+      evidence: |
+        "The donkey and the hound laid themselves down under a large
+        tree"
+
+    loc_bremen_robber_house:
+      name: The Well-Lighted Robber's House
+      instance_of: loc_house
+      evidence: |
+        "until they came to a well-lighted robber's house."
+
+    loc_bremen_hearth:
+      name: The Warm Hearth Ashes
+      instance_of: loc_hearth
+      evidence: |
+        "the cat upon the hearth near the warm ashes"
+
+    loc_bremen_back_door:
+      name: The Back-Door
+      threshold_type: threshold_doorway
+      evidence: |
+        "ran to the back-door, but the dog, who lay there sprang up"
+
+    loc_bremen_yard:
+      name: The Straw Yard
+      instance_of: loc_house
+      evidence: |
+        "as he ran across the yard by the straw-heap"
+
+    loc_bremen_roof_beam:
+      name: The Roof Beam
+      instance_of: loc_house
+      evidence: |
+        "the cock perched himself upon a beam of the roof"
+
+
+classifications:
+
+  world_laws:
+    - law_collective_noise_magnifies_the_weak
+    - law_forest_suspends_domestic_order
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_music
+    - agency_endurance
+    - agency_violence
+    - agency_speech
+
+  affects_driving:
+    - affect_fear
+    - affect_longing
+
+  symbol_numbers:
+    - num_4   # donkey, hound, cat, and cock as a four-part animal band
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_lack, order: 1, actor: bremen_donkey,
+      scene: "old donkey is no longer fit for mill-work and his master plans to save his keep" }
+  - { function: func_departure, order: 2, actor: bremen_donkey,
+      scene: "donkey runs away toward Bremen to become a town-musician" }
+  - { function: func_mediation, order: 3, actor: bremen_hound,
+      scene: "hound, cat, and cock each reveal old-age death threats and join the road-band" }
+  - { function: func_lack, order: 4, actor: bremen_rooster,
+      scene: "the four cannot reach Bremen in one day and need night shelter" }
+  - { function: func_reconnaissance, order: 5, actor: bremen_rooster,
+      scene: "rooster sees a distant light from the forest tree" }
+  - { function: func_difficult_task, order: 6, actor: bremen_donkey,
+      scene: "animals find robbers feasting in a well-lit house" }
+  - { function: func_victory, order: 7, actor: bremen_donkey,
+      scene: "stacked animals burst through the window with collective music and drive robbers into forest" }
+  - { function: func_liquidation, order: 8, actor: bremen_robbers,
+      scene: "animals eat the robbers' feast and occupy the house" }
+  - { function: func_return, order: 9, actor: bremen_robber_scout,
+      scene: "robber scout returns at midnight to examine the quiet house" }
+  - { function: func_punishment, order: 10, actor: bremen_robber_scout,
+      scene: "cat scratches, dog bites, donkey kicks, and cock cries from above" }
+  - { function: func_victory, order: 11, actor: bremen_rooster,
+      scene: "scout misreports the animals as witch, knife-man, monster, and judge; robbers never return" }
+  - { function: func_wedding, order: 12, actor: bremen_donkey,
+      scene: "the four musicians keep the house and do not care to leave it anymore" }
+
+
+edges:
+
+  # Old-age threats and gathering the band
+  - { from: bremen_donkey_master, to: bremen_donkey, label: PLANS_TO_DISCARD,
+      evidence: "began to consider how he might best save his keep" }
+  - { from: bremen_donkey, to: loc_bremen_road, label: FLEES_TO,
+      evidence: "ran away and set out on the road to Bremen." }
+  - { from: bremen_donkey, to: bremen_hound, label: INVITES_TO_JOIN,
+      evidence: "go with me and engage yourself also as a musician." }
+  - { from: bremen_hound_master, to: bremen_hound, label: THREATENS_TO_KILL,
+      evidence: "my master wanted to kill me" }
+  - { from: bremen_donkey, to: bremen_cat, label: INVITES_TO_JOIN,
+      evidence: "Go with us to Bremen." }
+  - { from: bremen_cat_mistress, to: bremen_cat, label: THREATENS_TO_DROWN,
+      evidence: "my mistress wanted to drown me" }
+  - { from: bremen_donkey, to: bremen_rooster, label: INVITES_TO_JOIN,
+      evidence: "you had better come away with us." }
+  - { from: bremen_housewife, to: bremen_rooster, label: THREATENS_TO_COOK,
+      evidence: "she intends to eat me in the soup to-morrow" }
+
+  # Forest house and first rout
+  - { from: bremen_rooster, to: loc_bremen_robber_house, label: SPOTS_LIGHT_AT,
+      evidence: "he saw in the distance a little spark burning" }
+  - { from: bremen_donkey, to: obj_bremen_robber_table, label: SEES,
+      evidence: "a table covered with good things to eat and drink" }
+  - { from: bremen_donkey, to: obj_bremen_window, label: STACKS_AT,
+      evidence: "place himself with his fore-feet upon the window-ledge" }
+  - { from: bremen_hound, to: bremen_donkey, label: STACKS_ON,
+      evidence: "the hound was to jump on the donkey's back" }
+  - { from: bremen_cat, to: bremen_hound, label: STACKS_ON,
+      evidence: "the cat was to climb upon the dog" }
+  - { from: bremen_rooster, to: bremen_cat, label: STACKS_ON,
+      evidence: "the cock was to fly up and perch upon the head of the cat." }
+  - { from: law_collective_noise_magnifies_the_weak, to: bremen_robbers, label: FRIGHTENS,
+      evidence: "At this horrible din, the robbers sprang up... and fled" }
+  - { from: bremen_donkey, to: bremen_robbers, label: DRIVES_AWAY,
+      evidence: "burst through the window into the room" }
+  - { from: bremen_donkey, to: obj_bremen_robber_table, label: SEIZES_FEAST_AT,
+      evidence: "sat down at the table... and ate" }
+
+  # Night attack on the returning scout
+  - { from: bremen_robbers, to: bremen_robber_scout, label: SENDS_TO_SCOUT,
+      evidence: "ordered one of them to go and examine the house." }
+  - { from: bremen_robber_scout, to: obj_bremen_candle_match, label: USES,
+      evidence: "held a lucifer-match to them to light it." }
+  - { from: bremen_cat, to: bremen_robber_scout, label: SCRATCHES,
+      evidence: "flew in his face, spitting and scratching." }
+  - { from: bremen_hound, to: bremen_robber_scout, label: BITES,
+      evidence: "sprang up and bit his leg" }
+  - { from: bremen_donkey, to: bremen_robber_scout, label: KICKS,
+      evidence: "gave him a smart kick with its hind foot." }
+  - { from: bremen_rooster, to: bremen_robber_scout, label: CRIES_DOWN_TO,
+      evidence: "cried down from the beam, 'Cock-a-doodle-doo!'" }
+  - { from: bremen_robber_scout, to: bremen_robbers, label: MISREPORTS_TO,
+      evidence: "a horrible witch... a man with a knife... a black monster... the judge" }
+  - { from: bremen_robbers, to: loc_bremen_robber_house, label: ABANDONS,
+      evidence: "the robbers did not trust themselves in the house again" }
+  - { from: bremen_donkey, to: loc_bremen_robber_house, label: SETTLES_IN,
+      evidence: "it suited the four musicians of Bremen so well that they did not care to leave it any more." }

@@ -1,0 +1,307 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: stories-about-snakes
+khm: 105
+atu: '285/672B'
+atu_name: The Child and the Snake / The Serpent's Crown
+canonical_source: ../../2-silver/canonical/stories-about-snakes/canonical.txt
+title: Stories about Snakes
+
+
+entities:
+
+  characters:
+
+    stories_snakes_first_child:
+      name: The Little Child Who Shares Milk
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor, agency_object_mediation]
+      speech_acts_performed: [speech_command]
+      affects: [affect_joy, affect_pity, affect_hunger]
+      traits: [milk-sharing-child, snake-caller, spoon-corrector, vitality-bound-child, wasting-child]
+      evidence: |
+        There was once a little child
+
+    stories_snakes_mother:
+      name: The Mother with the Log of Wood
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_violence]
+      affects: [affect_fear]
+      traits: [milk-and-bread-giver, kitchen-witness, snake-killer, misunderstood-protector]
+      evidence: |
+        whose mother gave her every afternoon
+
+    stories_snakes_first_snake:
+      name: The Good Little Snake
+      species: sp_snake
+      agency_modes: [agency_animal_aid, agency_object_mediation]
+      affects: [affect_hunger]
+      traits: [crevice-dweller, milk-drinker, bread-refuser, treasure-bringer, killed-familiar]
+      evidence: |
+        a snake came creeping out of a crevice in the wall
+
+    stories_snakes_funeral_birds:
+      name: The Funeral Bird and Redbreast
+      species: sp_bird
+      agency_modes: [agency_speech, agency_object_mediation]
+      affects: [affect_grief]
+      traits: [death-announcer, funeral-garland-maker, child-bier-preparer]
+      evidence: |
+        the funeral bird began to cry in the night
+
+    stories_snakes_orphan:
+      name: The Orphan Child on the Town Walls
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation]
+      affects: [affect_greed, affect_pity]
+      traits: [spinning-orphan, silk-handkerchief-spreader, crown-taker, treasure-flow-interrupter]
+      evidence: |
+        An orphan child was sitting on the town walls spinning
+
+    stories_snakes_crown_snake:
+      name: The Crown-Bringing Snake
+      species: sp_snake
+      agency_modes: [agency_object_mediation, agency_animal_aid]
+      affects: [affect_grief]
+      traits: [silk-loving-serpent, crown-bringer, grief-suicide-serpent, hidden-hoard-owner]
+      evidence: |
+        bringing with it a small golden crown
+
+    stories_snakes_third_child:
+      name: The Child Who Calls the Crying Snake
+      species: sp_human
+      agency_modes: [agency_speech]
+      affects: [affect_grief]
+      traits: [snake-caller, lost-sister-seeker, huhu-answerer]
+      evidence: |
+        A child says, “Come out.”
+
+    stories_snakes_third_snake:
+      name: The Huhu Snake
+      species: sp_snake
+      agency_modes: [agency_speech]
+      affects: [affect_grief]
+      traits: [crying-snake, question-answerer, shared-not-knowing-companion]
+      evidence: |
+        A snake cries, “Huhu, huhu.”
+
+    stories_snakes_red_stockings:
+      name: Little Red-Stockings
+      species: sp_human
+      traits: [missing-little-sister, sought-child]
+      evidence: |
+        Hast thou not seen little Red-stockings?
+
+  magic_objects:
+
+    obj_stories_snakes_milk_bread_bowl:
+      name: The Bowl of Milk and Bread
+      object_kind: food
+      attributes:
+        function: shared food that establishes the child-snake bond
+      evidence: |
+        a small bowl of milk and bread
+
+    obj_stories_snakes_spoon:
+      name: The Child's Little Spoon
+      object_kind: tool
+      attributes:
+        function: gentle correction tool misread by the mother as danger
+      evidence: |
+        took its little spoon
+
+    obj_stories_snakes_log:
+      name: The Mother's Log of Wood
+      object_kind: weapon
+      attributes:
+        function: kills the good little snake and breaks the child's vitality bond
+      evidence: |
+        ran out with a log of wood
+
+    obj_stories_snake_treasures:
+      name: The Snake's Pretty Treasures
+      instance_of: obj_serpent_treasure
+      object_kind: treasure
+      attributes:
+        contents: bright stones, pearls, and golden playthings
+      evidence: |
+        bright stones, pearls, and golden playthings
+
+    obj_stories_snakes_silk_handkerchief:
+      name: The Blue Silk Handkerchief
+      object_kind: token
+      attributes:
+        function: textile lure that snakes like and will creep on
+      evidence: |
+        one of the blue silk handkerchiefs
+
+    obj_stories_snake_crown:
+      name: The Small Golden Crown
+      instance_of: obj_serpent_treasure
+      object_kind: treasure
+      attributes:
+        material: delicate golden filagree work
+      evidence: |
+        a small golden crown
+
+  locations:
+
+    loc_stories_snakes_yard:
+      name: The Yard Where the Child Eats
+      instance_of: loc_house
+      evidence: |
+        seated herself in the yard
+
+    loc_stories_snakes_wall_crevice:
+      name: The Wall Crevice of the First Snake
+      evidence: |
+        a crevice in the wall
+
+    loc_stories_snakes_kitchen:
+      name: The Mother's Kitchen
+      instance_of: loc_hearth
+      evidence: |
+        standing in the kitchen
+
+    loc_stories_snakes_child_bier:
+      name: The Child's Bier
+      threshold_type: threshold_grave
+      evidence: |
+        the child lay on her bier
+
+    loc_stories_snakes_town_walls:
+      name: The Town Walls
+      instance_of: loc_gate
+      evidence: |
+        sitting on the town walls
+
+    loc_stories_snakes_crown_hole:
+      name: The Crown Snake's Hole
+      evidence: |
+        coming out of a hole low down in the wall
+
+
+classifications:
+
+  world_laws:
+    - law_house_snake_feeding_sustains_child_vitality
+    - law_serpent_treasure_requires_reciprocal_respect
+
+  moral_regimes:
+    - moral_retributive
+    - moral_kindness_rewarded
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_animal_aid
+    - agency_speech
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_pity
+    - affect_grief
+    - affect_fear
+    - affect_greed
+
+  symbol_numbers: []
+
+  threshold_types:
+    - threshold_grave
+
+
+propp:
+  - { function: func_first_initial_situation, order: 1, actor: stories_snakes_first_child,
+      scene: "A mother gives her little child milk and bread every afternoon.",
+      evidence: "a small bowl of milk and bread" }
+  - { function: func_animal_visit, order: 2, actor: stories_snakes_first_snake,
+      scene: "A snake comes from the wall crevice and shares the child's dish.",
+      evidence: "dipped its little head in the dish" }
+  - { function: func_reciprocal_gift, order: 3, actor: stories_snakes_first_snake,
+      scene: "The snake shows gratitude by bringing hidden treasures to the child.",
+      evidence: "it showed gratitude" }
+  - { function: func_misread_contact, order: 4, actor: stories_snakes_mother,
+      scene: "The mother sees the child gently striking the snake with a spoon and kills it with a log.",
+      evidence: "killed the good little creature" }
+  - { function: func_vitality_loss, order: 5, actor: stories_snakes_first_child,
+      scene: "After the snake's death the child loses health, wastes away, and lies on her bier.",
+      evidence: "now she lost her pretty rosy cheeks and wasted away" }
+  - { function: func_second_initial_situation, order: 6, actor: stories_snakes_orphan,
+      scene: "An orphan child sits spinning on the town walls and sees a snake coming out.",
+      evidence: "sitting on the town walls spinning" }
+  - { function: func_textile_offering, order: 7, actor: stories_snakes_orphan,
+      scene: "She spreads a blue silk handkerchief, which snakes like to creep on.",
+      evidence: "blue silk handkerchiefs which snakes have such a strong liking for" }
+  - { function: func_treasure_display, order: 8, actor: stories_snakes_crown_snake,
+      scene: "The snake brings a small golden crown and lays it on the handkerchief.",
+      evidence: "laid it on the handkerchief" }
+  - { function: func_treasure_seizure, order: 9, actor: stories_snakes_orphan,
+      scene: "The girl takes the crown instead of leaving it for the snake's return.",
+      evidence: "The girl took up the crown" }
+  - { function: func_serpent_grief_death, order: 10, actor: stories_snakes_crown_snake,
+      scene: "The returning snake does not find the crown and beats its head against the wall until it dies.",
+      evidence: "smote its little head against it" }
+  - { function: func_third_call, order: 11, actor: stories_snakes_third_child,
+      scene: "A crying snake comes out when a child calls it.",
+      evidence: "A child says, “Come out.”" }
+  - { function: func_shared_not_knowing, order: 12, actor: stories_snakes_third_snake,
+      scene: "The child asks about little Red-stockings, and snake and child share the same not-knowing cry.",
+      evidence: "Then I am like you" }
+
+
+edges:
+
+  # First story: feeding bond, treasure, death
+  - { from: stories_snakes_mother, to: obj_stories_snakes_milk_bread_bowl, label: GIVES_DAILY,
+      evidence: "gave her every afternoon a small bowl of milk and bread" }
+  - { from: stories_snakes_first_child, to: loc_stories_snakes_yard, label: EATS_IN,
+      evidence: "seated herself in the yard" }
+  - { from: stories_snakes_first_snake, to: loc_stories_snakes_wall_crevice, label: COMES_FROM,
+      evidence: "came creeping out of a crevice in the wall" }
+  - { from: stories_snakes_first_snake, to: obj_stories_snakes_milk_bread_bowl, label: SHARES,
+      evidence: "dipped its little head in the dish" }
+  - { from: stories_snakes_first_child, to: stories_snakes_first_snake, label: CALLS_TO_FOOD,
+      evidence: "Snake, snake, come swiftly" }
+  - { from: stories_snakes_first_snake, to: obj_stories_snake_treasures, label: BRINGS_IN_GRATITUDE,
+      evidence: "brought the child all kinds of pretty things" }
+  - { from: stories_snakes_first_child, to: obj_stories_snakes_spoon, label: STRIKES_GENTLY_WITH,
+      evidence: "struck the snake gently on its head" }
+  - { from: stories_snakes_mother, to: obj_stories_snakes_log, label: USES_TO_KILL,
+      evidence: "ran out with a log of wood" }
+  - { from: stories_snakes_mother, to: stories_snakes_first_snake, label: KILLS,
+      evidence: "killed the good little creature" }
+  - { from: law_house_snake_feeding_sustains_child_vitality, to: stories_snakes_first_child, label: WITHDRAWS_VITALITY_FROM,
+      evidence: "now she lost her pretty rosy cheeks and wasted away" }
+  - { from: stories_snakes_funeral_birds, to: stories_snakes_first_child, label: ANNOUNCE_FUNERAL_FOR,
+      evidence: "redbreast to collect little branches and leaves for a funeral garland" }
+  - { from: stories_snakes_first_child, to: loc_stories_snakes_child_bier, label: LIES_ON,
+      evidence: "the child lay on her bier" }
+
+  # Second story: crown and broken reciprocity
+  - { from: stories_snakes_orphan, to: loc_stories_snakes_town_walls, label: SPINS_ON,
+      evidence: "sitting on the town walls spinning" }
+  - { from: stories_snakes_crown_snake, to: loc_stories_snakes_crown_hole, label: COMES_FROM,
+      evidence: "coming out of a hole low down in the wall" }
+  - { from: stories_snakes_orphan, to: obj_stories_snakes_silk_handkerchief, label: SPREADS,
+      evidence: "spread out beside this one of the blue silk handkerchiefs" }
+  - { from: stories_snakes_crown_snake, to: obj_stories_snake_crown, label: BRINGS,
+      evidence: "bringing with it a small golden crown" }
+  - { from: stories_snakes_crown_snake, to: obj_stories_snakes_silk_handkerchief, label: LAYS_CROWN_ON,
+      evidence: "laid it on the handkerchief" }
+  - { from: stories_snakes_orphan, to: obj_stories_snake_crown, label: TAKES,
+      evidence: "The girl took up the crown" }
+  - { from: law_serpent_treasure_requires_reciprocal_respect, to: stories_snakes_crown_snake, label: BREAKS_EXCHANGE_FOR,
+      evidence: "when it no longer saw the crown" }
+  - { from: stories_snakes_crown_snake, to: loc_stories_snakes_crown_hole, label: DIES_AGAINST_WALL_NEAR,
+      evidence: "until at last it lay there dead" }
+
+  # Third story: shared loss
+  - { from: stories_snakes_third_snake, to: stories_snakes_third_child, label: CRIES_TO,
+      evidence: "A snake cries, “Huhu, huhu.”" }
+  - { from: stories_snakes_third_child, to: stories_snakes_third_snake, label: CALLS_OUT,
+      evidence: "Come out" }
+  - { from: stories_snakes_third_child, to: stories_snakes_red_stockings, label: SEEKS,
+      evidence: "Hast thou not seen little Red-stockings?" }
+  - { from: stories_snakes_third_snake, to: stories_snakes_red_stockings, label: HAS_NOT_SEEN,
+      evidence: "No" }
+  - { from: stories_snakes_third_child, to: stories_snakes_third_snake, label: SHARES_NOT_KNOWING_WITH,
+      evidence: "Then I am like you" }

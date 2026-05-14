@@ -1,0 +1,129 @@
+$comment: All books in 1-bronze/, with extracted metadata. Authors are always the Brothers Grimm; what varies is the translator/editor, the edition year, the selection of tales included, and the language. The `kind` field flags meta-records (e.g. PG index files) that are not corpora and should be excluded from tale extraction.
+source_dir: ../1-bronze
+books:
+- id: pg2591-grimm-taylor
+  bronze_file: ../1-bronze/pg2591.txt
+  title: Grimms' Fairy Tales
+  authors:
+  - Jacob Grimm
+  - Wilhelm Grimm
+  translators:
+  - Edgar Taylor
+  - Marian Edwardes
+  language: en
+  original_language: de
+  first_published: 1812
+  edition_year: 1909
+  gutenberg_id: 2591
+  gutenberg_url: https://www.gutenberg.org/ebooks/2591
+  kind: selection
+  notes: Edgar Taylor translation (1823) revised by Marian Edwardes (1909). Abridged children's selection — the basis of the current modelled corpus (62 tales).
+  weight: supplementary
+  tales_count: 62
+- id: pg5314-grimm-hunt
+  bronze_file: ../1-bronze/pg5314.txt
+  title: Household Tales by Brothers Grimm
+  authors:
+  - Jacob Grimm
+  - Wilhelm Grimm
+  translators:
+  - Margaret Hunt
+  language: en
+  original_language: de
+  first_published: 1812
+  edition_year: 1884
+  gutenberg_id: 5314
+  gutenberg_url: https://www.gutenberg.org/ebooks/5314
+  kind: complete-corpus
+  notes: Margaret Hunt translation (1884). Scholarly, unabridged — covers the full KHM corpus (200 tales + 1 variant KHM 151* + 10 Children's Legends).
+  weight: canonical
+  tales_count: 211
+- id: pg11027-grimm-gruelle
+  bronze_file: ../1-bronze/pg11027.txt
+  title: Grimm's Fairy Stories
+  authors:
+  - Jacob Grimm
+  - Wilhelm Grimm
+  translators: []
+  illustrators:
+  - Johnny Gruelle
+  - Robert Emmett Owen
+  language: en
+  original_language: de
+  first_published: 1812
+  edition_year: 1922
+  gutenberg_id: 11027
+  gutenberg_url: https://www.gutenberg.org/ebooks/11027
+  kind: illustrated-selection
+  notes: Children's illustrated edition. Translator not credited.
+  weight: supplementary
+  tales_count: 25
+- id: pg52521-grimm-olcott
+  bronze_file: ../1-bronze/pg52521.txt
+  title: Grimm's Fairy Tales
+  authors:
+  - Jacob Grimm
+  - Wilhelm Grimm
+  editors:
+  - Frances Jenkins Olcott
+  illustrators:
+  - Rie Cramer
+  translators: []
+  language: en
+  original_language: de
+  first_published: 1812
+  edition_year: 1922
+  gutenberg_id: 52521
+  gutenberg_url: https://www.gutenberg.org/ebooks/52521
+  kind: illustrated-selection
+  notes: Edited by Frances Jenkins Olcott, illustrated by Rie Cramer.
+  weight: supplementary
+  tales_count: 51
+- id: pg22555-grimm-eeden-dutch
+  bronze_file: ../1-bronze/pg22555.txt
+  title: 'Sprookjes: Tweede verzameling'
+  authors:
+  - Jacob Grimm
+  - Wilhelm Grimm
+  translators:
+  - M. van Eeden-Van Vloten
+  illustrators:
+  - B. Midderigh-Bokhorst
+  - Jean Jacques Midderigh
+  language: nl
+  original_language: de
+  first_published: 1812
+  edition_year: null
+  gutenberg_id: 22555
+  gutenberg_url: https://www.gutenberg.org/ebooks/22555
+  kind: selection
+  notes: Dutch translation, second volume. Useful for preserving Germanic-language detail that may be lost in Victorian English translations.
+  weight: supplementary
+  tales_count: 39
+- id: pg59508-grimm-index
+  bronze_file: ../1-bronze/pg59508.txt
+  title: Index of the Project Gutenberg Works of the Brothers Grimm
+  authors:
+  - Jacob Grimm
+  - Wilhelm Grimm
+  editors:
+  - David Widger
+  language: en
+  gutenberg_id: 59508
+  gutenberg_url: https://www.gutenberg.org/ebooks/59508
+  kind: meta-index
+  notes: Project Gutenberg meta-index of Brothers Grimm works. NOT a tale corpus — exclude from extraction pipeline.
+  weight: excluded
+  tales_count: 0
+totals:
+  books: 6
+  books_extracted: 5
+  tales_extracted: 388
+  clusters: 211
+  atu_coverage: 200
+extraction_policy:
+  exclude_kinds:
+  - meta-index
+  canonical_weight: Hunt (pg5314) is the primary text for canonical merge. Other English translations supplement detail Hunt omits. Dutch (pg22555) is consulted for Germanic-near-original detail.
+  cluster_key: khm
+  cluster_key_rationale: All books are Grimm — the Kinder- und Hausmärchen index (KHM) is the natural canonical key. ATU is recorded but not the grouping axis here.

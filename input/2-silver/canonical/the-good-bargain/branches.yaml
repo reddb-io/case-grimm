@@ -1,0 +1,8 @@
+slug: the-good-bargain
+khm: 7
+atu: '1642'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

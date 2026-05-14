@@ -1,0 +1,367 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: king-thrushbeard
+khm: 52
+atu: '900'
+atu_name: King Thrushbeard
+canonical_source: ../../2-silver/canonical/king-thrushbeard/canonical.txt
+title: King Thrushbeard
+
+
+entities:
+
+  characters:
+
+    king_thrushbeard_princess:
+      name: The Proud Princess
+      archetypes: [arc_proud_rejecting_bride]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_endurance, agency_domestic_labor]
+      existential_states: [state_bound_by_promise]
+      affects: [affect_pride, affect_shame, affect_fear]
+      traits: [beautiful, proud, haughty, suitor-mocking, beggar-married, labour-unskilled, market-shamed, kitchen-maid, repentant-wife]
+      evidence: |
+        beautiful beyond all measure, but so proud and haughty withal
+        that no suitor was good enough for her.
+
+    king_thrushbeard_old_king:
+      name: The Angry Father King
+      archetypes: [arc_oath_enforcer]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_promise, speech_command]
+      affects: [affect_anger]
+      traits: [feast-maker, suitor-marshaller, angered-father, oath-maker, forced-marriage-enforcer]
+      evidence: |
+        was very angry, and swore that she should have for her husband
+        the very first beggar that came to his doors.
+
+    king_thrushbeard:
+      name: King Thrushbeard
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_social_rank, agency_domestic_labor]
+      existential_states: [state_disguised]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_love_at_first_sight]
+      traits: [mocked-suitor, crooked-chinned, disguised-fiddler, beggar-husband, labour-teacher, hussar-disguised, reveal-husband, reformer]
+      evidence: |
+        he has a chin like a thrush’s beak!
+
+    king_thrushbeard_suitors:
+      name: The Marshalled Suitors
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [rank-ordered, mocked, rejected, bodily-ridiculed]
+      evidence: |
+        They were all marshalled in a row according to their rank and
+        standing
+
+    king_thrushbeard_priest:
+      name: The Priest
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [wedding-officiant, oath-executor]
+      evidence: |
+        the priest was brought, and she had to let herself be wedded to
+        the fiddler on the spot.
+
+    king_thrushbeard_drunken_hussar:
+      name: The Drunken Hussar Disguise
+      species: sp_human
+      agency_modes: [agency_violence, agency_social_rank]
+      existential_states: [state_disguised]
+      traits: [galloping, crockery-breaking, Thrushbeard-persona, market-shame-agent]
+      evidence: |
+        I also was the hussar who rode through your crockery.
+
+    king_thrushbeard_palace_servants:
+      name: The Palace Servants
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_social_rank]
+      traits: [dish-carriers, morsel-throwers, laughter-witnesses]
+      evidence: |
+        now and then the servants threw her a few morsels
+
+    king_thrushbeard_maids:
+      name: The Maids-in-Waiting
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_social_rank]
+      traits: [restorative-dressers, wedding-reintegrators]
+      evidence: |
+        the maids-in-waiting came and put on her the most splendid
+        clothing
+
+  magic_objects:
+
+    obj_king_thrushbeard_fiddler_rags:
+      name: The Fiddler's Dirty Ragged Clothes
+      object_kind: garment
+      attributes:
+        function: disguise making King Thrushbeard socially legible as the first beggar-man
+      evidence: |
+        in his dirty, ragged clothes
+
+    obj_king_thrushbeard_willow_baskets:
+      name: The Willow Basket Work
+      object_kind: material
+      attributes:
+        function: first labour test that wounds the princess's delicate hands
+      evidence: |
+        He went out, cut some willows, and brought them home.
+
+    obj_king_thrushbeard_hard_thread:
+      name: The Hard Spinning Thread
+      instance_of: obj_spinning_wheel
+      object_kind: material
+      attributes:
+        function: second labour test that cuts the princess's soft fingers
+      evidence: |
+        the hard thread soon cut her soft fingers so that the blood ran
+        down.
+
+    obj_king_thrushbeard_crockery:
+      name: The Market Crockery
+      object_kind: material
+      attributes:
+        function: fragile ware whose destruction produces market shame and economic ruin
+      evidence: |
+        he rode right amongst the pots so that they were all broken
+        into a thousand bits.
+
+    obj_king_thrushbeard_pocket_jars:
+      name: The Pocket Jars of Leavings
+      object_kind: food
+      attributes:
+        function: containers for kitchen scraps taken home from palace service
+      evidence: |
+        In both her pockets she fastened a little jar
+
+    obj_king_thrushbeard_spilled_soup_scraps:
+      name: The Spilled Soup and Scraps
+      object_kind: food
+      attributes:
+        function: public exposure of kitchen-maid poverty at the royal wedding
+      evidence: |
+        the soup ran out, and the scraps were scattered all about.
+
+    obj_king_thrushbeard_splendid_clothing:
+      name: The Restorative Wedding Clothing
+      object_kind: garment
+      attributes:
+        function: restores the princess from kitchen-maid shame to royal bride status
+      evidence: |
+        put on her the most splendid clothing
+
+  locations:
+
+    loc_king_thrushbeard_fathers_palace:
+      name: The Father's Palace
+      instance_of: loc_castle
+      evidence: |
+        to stay any longer in my palace
+
+    loc_king_thrushbeard_suitor_feast:
+      name: The Suitor Feast Hall
+      instance_of: loc_castle
+      evidence: |
+        Once the King made a great feast
+
+    loc_king_thrushbeard_forest:
+      name: King Thrushbeard's Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        To whom does that beautiful forest belong?
+
+    loc_king_thrushbeard_meadow:
+      name: King Thrushbeard's Meadow
+      instance_of: loc_meadow
+      evidence: |
+        To whom does this beautiful green meadow belong?
+
+    loc_king_thrushbeard_town:
+      name: King Thrushbeard's Large Town
+      instance_of: loc_gate
+      threshold_type: threshold_gate
+      evidence: |
+        To whom does this fine large town belong?
+
+    loc_king_thrushbeard_hovel:
+      name: The Beggar Husband's Little Hut
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        what a small house; to whom does this miserable, mean hovel
+        belong?
+
+    loc_king_thrushbeard_marketplace:
+      name: The Market-Place Corner
+      instance_of: loc_marketplace
+      evidence: |
+        sit in the market-place and sell the ware.
+
+    loc_king_thrushbeard_palace_kitchen:
+      name: The King's Palace Kitchen
+      instance_of: loc_hearth
+      evidence: |
+        The King’s daughter was now a kitchen-maid
+
+    loc_king_thrushbeard_wedding_hall:
+      name: The Wedding Hall Door
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        placed herself by the door of the hall to look on.
+
+
+classifications:
+
+  world_laws:
+    - law_promise_binds_reality
+    - law_disguised_status_descent_humbles
+
+  moral_regimes:
+    - moral_humbling_reform
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_social_rank
+    - agency_speech
+    - agency_cunning
+    - agency_domestic_labor
+    - agency_endurance
+
+  affects_driving:
+    - affect_pride
+    - affect_shame
+    - affect_fear
+    - affect_anger
+    - affect_love_at_first_sight
+
+  threshold_types:
+    - threshold_forest
+    - threshold_gate
+    - threshold_doorway
+
+
+propp:
+  - { function: func_lack, order: 1, actor: king_thrushbeard_princess,
+      scene: "beautiful princess rejects every suitor through pride and mockery" }
+  - { function: func_interdiction, order: 2, actor: king_thrushbeard_old_king,
+      scene: "angry father swears she will marry the first beggar at his door" }
+  - { function: func_trickery, order: 3, actor: king_thrushbeard,
+      scene: "mocked King Thrushbeard appears as dirty ragged fiddler" }
+  - { function: func_wedding, order: 4, actor: king_thrushbeard_old_king,
+      scene: "father enforces oath and has princess married to the apparent beggar" }
+  - { function: func_departure, order: 5, actor: king_thrushbeard,
+      scene: "beggar-husband leads princess out of the palace on foot" }
+  - { function: func_testing, order: 6, actor: king_thrushbeard,
+      scene: "forest, meadow, and town reveal what she lost by rejecting Thrushbeard" }
+  - { function: func_difficult_task, order: 7, actor: king_thrushbeard_princess,
+      scene: "princess fails fire-making, cooking, basket-weaving, and spinning" }
+  - { function: func_difficult_task, order: 8, actor: king_thrushbeard_princess,
+      scene: "market pottery sale becomes public ruin when hussar breaks the ware" }
+  - { function: func_degradation, order: 9, actor: king_thrushbeard_princess,
+      scene: "princess becomes kitchen-maid and carries scraps home in pocket jars" }
+  - { function: func_recognition, order: 10, actor: king_thrushbeard_princess,
+      scene: "at the wedding hall she recognizes King Thrushbeard as the rejected suitor" }
+  - { function: func_exposure, order: 11, actor: obj_king_thrushbeard_spilled_soup_scraps,
+      scene: "pocket jars break, exposing soup and scraps before the laughing court" }
+  - { function: func_recognition, order: 12, actor: king_thrushbeard,
+      scene: "Thrushbeard reveals he was fiddler, beggar-husband, and hussar" }
+  - { function: func_reconciliation, order: 13, actor: king_thrushbeard_princess,
+      scene: "princess confesses wrong and is comforted by Thrushbeard" }
+  - { function: func_wedding, order: 14, actor: king_thrushbeard,
+      scene: "true wedding is celebrated with splendid clothing, father, and court" }
+
+
+edges:
+
+  # Pride and oath
+  - { from: king_thrushbeard_princess, to: king_thrushbeard_suitors, label: REJECTS_AND_MOCKS,
+      evidence: "She sent away one after the other, and ridiculed them as well." }
+  - { from: king_thrushbeard_old_king, to: king_thrushbeard_suitors, label: MARSHALS_BY_RANK,
+      evidence: "They were all marshalled in a row according to their rank and standing" }
+  - { from: king_thrushbeard_princess, to: king_thrushbeard, label: NICKNAMES_BY_MOCKERY,
+      evidence: "he has a chin like a thrush’s beak!" }
+  - { from: king_thrushbeard_princess, to: affect_pride, label: EMBODIES,
+      evidence: "so proud and haughty withal that no suitor was good enough for her." }
+  - { from: king_thrushbeard_old_king, to: king_thrushbeard_princess, label: SWEARS_BEGGAR_MARRIAGE_FOR,
+      evidence: "swore that she should have for her husband the very first beggar" }
+  - { from: king_thrushbeard_old_king, to: law_promise_binds_reality, label: BINDS_SELF_BY,
+      evidence: "I have taken an oath to give you to the very first beggar-man" }
+
+  # Disguised marriage
+  - { from: king_thrushbeard, to: obj_king_thrushbeard_fiddler_rags, label: WEARS_DISGUISE_OF,
+      evidence: "in his dirty, ragged clothes" }
+  - { from: king_thrushbeard, to: king_thrushbeard_princess, label: RECEIVES_AS_WIFE,
+      evidence: "I will give you my daughter there, to wife." }
+  - { from: king_thrushbeard_priest, to: king_thrushbeard_princess, label: WEDS_TO_FIDDLER,
+      evidence: "she had to let herself be wedded to the fiddler on the spot." }
+  - { from: king_thrushbeard_old_king, to: king_thrushbeard_princess, label: EXPELS_FROM_PALACE,
+      evidence: "it is not proper for you, a beggar-woman, to stay any longer in my palace" }
+  - { from: king_thrushbeard, to: king_thrushbeard_princess, label: LEADS_AWAY_ON_FOOT,
+      evidence: "led her out by the hand, and she was obliged to walk away on foot" }
+
+  # Lost rank route
+  - { from: king_thrushbeard_princess, to: loc_king_thrushbeard_forest, label: LEARNS_BELONGED_TO_THRUSHBEARD,
+      evidence: "It belongs to King Thrushbeard; if you had taken him, it would have been yours." }
+  - { from: king_thrushbeard_princess, to: loc_king_thrushbeard_meadow, label: LEARNS_BELONGED_TO_THRUSHBEARD,
+      evidence: "It belongs to King Thrushbeard; if you had taken him, it would have been yours." }
+  - { from: king_thrushbeard_princess, to: loc_king_thrushbeard_town, label: LEARNS_BELONGED_TO_THRUSHBEARD,
+      evidence: "It belongs to King Thrushbeard; if you had taken him, it would have been yours." }
+  - { from: king_thrushbeard_princess, to: king_thrushbeard, label: REGRETS_REJECTION_OF,
+      evidence: "Ah, unhappy girl that I am, if I had but taken King Thrushbeard!" }
+  - { from: king_thrushbeard, to: loc_king_thrushbeard_hovel, label: BRINGS_TO,
+      evidence: "That is my house and yours, where we shall live together." }
+
+  # Labour humiliations
+  - { from: king_thrushbeard, to: king_thrushbeard_princess, label: COMMANDS_HOUSEWORK,
+      evidence: "you must yourself do what you wish to have done." }
+  - { from: king_thrushbeard_princess, to: agency_domestic_labor, label: FAILS_AT,
+      evidence: "knew nothing about lighting fires or cooking" }
+  - { from: king_thrushbeard, to: obj_king_thrushbeard_willow_baskets, label: ASSIGNS_WEAVING_OF,
+      evidence: "You weave baskets." }
+  - { from: obj_king_thrushbeard_willow_baskets, to: king_thrushbeard_princess, label: WOUNDS_HANDS_OF,
+      evidence: "the tough willows wounded her delicate hands." }
+  - { from: king_thrushbeard, to: obj_king_thrushbeard_hard_thread, label: ASSIGNS_SPINNING_WITH,
+      evidence: "you had better spin, perhaps you can do that better." }
+  - { from: obj_king_thrushbeard_hard_thread, to: king_thrushbeard_princess, label: CUTS_FINGERS_OF,
+      evidence: "the hard thread soon cut her soft fingers so that the blood ran down." }
+
+  # Market and kitchen descent
+  - { from: king_thrushbeard, to: loc_king_thrushbeard_marketplace, label: SENDS_TO_SELL_AT,
+      evidence: "you must sit in the market-place and sell the ware." }
+  - { from: king_thrushbeard_princess, to: obj_king_thrushbeard_crockery, label: SELLS,
+      evidence: "selling, how they will mock me?" }
+  - { from: king_thrushbeard_drunken_hussar, to: obj_king_thrushbeard_crockery, label: BREAKS,
+      evidence: "they were all broken into a thousand bits." }
+  - { from: king_thrushbeard, to: loc_king_thrushbeard_palace_kitchen, label: PLACES_AS_KITCHEN_MAID_AT,
+      evidence: "they have promised me to take you" }
+  - { from: king_thrushbeard_princess, to: loc_king_thrushbeard_palace_kitchen, label: SERVES_AT,
+      evidence: "The King’s daughter was now a kitchen-maid" }
+  - { from: king_thrushbeard_princess, to: obj_king_thrushbeard_pocket_jars, label: CARRIES_LEAVINGS_IN,
+      evidence: "In both her pockets she fastened a little jar" }
+
+  # Wedding exposure and reveal
+  - { from: king_thrushbeard_princess, to: loc_king_thrushbeard_wedding_hall, label: WATCHES_FROM_DOOR,
+      evidence: "placed herself by the door of the hall to look on." }
+  - { from: king_thrushbeard_princess, to: affect_shame, label: FEELS,
+      evidence: "she was so ashamed that she would rather have been a thousand fathoms below the ground." }
+  - { from: obj_king_thrushbeard_spilled_soup_scraps, to: king_thrushbeard_princess, label: EXPOSES_POVERTY_OF,
+      evidence: "the pots fell down, the soup ran out, and the scraps were scattered all about." }
+  - { from: king_thrushbeard, to: king_thrushbeard_princess, label: REVEALS_DISGUISE_TO,
+      evidence: "I and the fiddler who has been living with you in that wretched hovel are one." }
+  - { from: king_thrushbeard_drunken_hussar, to: king_thrushbeard, label: WAS_PERSONA_OF,
+      evidence: "I also was the hussar who rode through your crockery." }
+  - { from: king_thrushbeard, to: law_disguised_status_descent_humbles, label: EXPLAINS,
+      evidence: "This was all done to humble your proud spirit" }
+  - { from: king_thrushbeard_princess, to: king_thrushbeard, label: CONFESSES_WRONG_TO,
+      evidence: "I have done great wrong, and am not worthy to be your wife." }
+  - { from: king_thrushbeard, to: king_thrushbeard_princess, label: COMFORTS,
+      evidence: "Be comforted, the evil days are past" }
+  - { from: king_thrushbeard_maids, to: obj_king_thrushbeard_splendid_clothing, label: DRESS_WITH,
+      evidence: "put on her the most splendid clothing" }
+  - { from: king_thrushbeard, to: king_thrushbeard_princess, label: CELEBRATES_TRUE_WEDDING_WITH,
+      evidence: "wished her happiness in her marriage with King Thrushbeard" }

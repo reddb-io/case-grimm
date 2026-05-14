@@ -1,0 +1,228 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-little-folks-presents
+khm: 182
+atu: "503"
+atu_name: The Elves / Gifts of the Little People
+canonical_source: ../../2-silver/canonical/the-little-folks-presents/canonical.txt
+title: The Little Folks' Presents
+
+
+entities:
+
+  characters:
+
+    little_folks_tailor:
+      name: The Tailor
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_object_mediation, agency_domestic_labor]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_fear, affect_joy]
+      traits: [travelling-tailor, cautious, dance-entrant, shaved-without-struggle, coal-recipient, contented, future-master, generous-comrade]
+      evidence: |
+        the tailor felt a little afraid at first
+
+    little_folks_goldsmith:
+      name: The Goldsmith
+      species: sp_human
+      archetypes: [arc_greedy_one]
+      agency_modes: [agency_endurance, agency_speech, agency_object_mediation, agency_domestic_labor]
+      existential_states: [state_maimed]
+      speech_acts_performed: [speech_request, speech_testimony]
+      affects: [affect_greed, affect_fear, affect_joy, affect_grief]
+      traits: [travelling-goldsmith, hunchbacked, brave, first-dance-entrant, shaved-without-struggle, overfilled-pockets, second-night-returner, bald-punished, double-humped]
+      evidence: |
+        The goldsmith, who had a hump
+
+    little_folks_old_man:
+      name: The Old Man of the Little Folks
+      archetypes: [arc_supernatural_donor]
+      being_type: being_dwarf
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_command]
+      traits: [taller-than-the-rest, parti-coloured-coat, iron-grey-beard, circle-inviter, ritual-shaver, coal-gift-director, donor-judge]
+      evidence: |
+        In the midst of them sat an old man
+
+    little_folks_dancers:
+      name: The Little Men and Women
+      being_type: being_dwarf
+      agency_modes: [agency_music, agency_speech]
+      traits: [moonlit-dancers, hand-holding-circle, singers, circle-openers, midnight-vanishers]
+      evidence: |
+        a crowd of little men and women
+
+  magic_objects:
+
+    obj_little_folks_coals:
+      name: The Little Folks' Coals
+      object_kind: material
+      attributes:
+        function: worthless-looking gift that becomes gold after the first night and reverts under greed
+      evidence: |
+        a heap of coals
+
+    obj_little_folks_gold:
+      name: The Coal-Transformed Gold
+      object_kind: treasure
+      attributes:
+        function: first reward for accepting the little folks' rite without struggle
+      evidence: |
+        not filled with coals, but with pure gold
+
+    obj_little_folks_knife:
+      name: The Old Man's Large Knife
+      object_kind: tool
+      attributes:
+        function: frightening ritual instrument used to shave the travellers before the gift
+      evidence: |
+        took a large knife which hung to his girdle
+
+    obj_little_folks_goldsmith_bags:
+      name: The Goldsmith's Two Bags
+      object_kind: tool
+      attributes:
+        function: greedy storage for the second attempted harvest of coal-gold
+      evidence: |
+        hung a couple of bags over his shoulders
+
+    obj_little_folks_cap:
+      name: The Goldsmith's Cap
+      object_kind: garment
+      attributes:
+        function: covering for the permanent baldness left by punishment
+      evidence: |
+        cover his bald head with a cap
+
+  locations:
+
+    loc_little_folks_moonlit_hill:
+      name: The Moonlit Hill of the Little Folks
+      instance_of: loc_mountain
+      evidence: |
+        reached a hill
+
+    loc_little_folks_valley:
+      name: The Valley below the Hill
+      instance_of: loc_mountain
+      evidence: |
+        When they had got into the valley
+
+    loc_little_folks_inn:
+      name: The Travellers' Inn
+      instance_of: loc_inn
+      evidence: |
+        found an inn
+
+
+classifications:
+
+  world_laws:
+    - law_otherworld_coal_gift_tests_contentment
+
+  moral_regimes:
+    - moral_overreach_reversal
+
+  agency_modes_dominant:
+    - agency_music
+    - agency_object_mediation
+    - agency_endurance
+    - agency_speech
+
+  affects_driving:
+    - affect_greed
+    - affect_fear
+    - affect_joy
+
+  symbol_numbers:
+    - num_2
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_initial_travel, order: 1, actor: little_folks_tailor,
+      scene: "the tailor and goldsmith travel together at evening" }
+  - { function: func_supernatural_summons, order: 2, actor: little_folks_dancers,
+      scene: "distant music draws the travellers to a moonlit hill" }
+  - { function: func_donor_circle_opened, order: 3, actor: little_folks_old_man,
+      beneficiary: little_folks_tailor,
+      scene: "the old man signs for the strangers to enter the dancing circle" }
+  - { function: func_frightening_rite, order: 4, actor: little_folks_old_man,
+      victim: little_folks_goldsmith,
+      scene: "the old man sharpens his knife and shaves both travellers" }
+  - { function: func_obedient_acceptance, order: 5, actor: little_folks_tailor,
+      scene: "both travellers endure the shaving willingly and without struggle" }
+  - { function: func_donor_gift, order: 6, actor: little_folks_old_man,
+      beneficiary: little_folks_tailor,
+      scene: "the old man gestures for the travellers to fill their pockets with coal" }
+  - { function: func_reward, order: 7, actor: law_otherworld_coal_gift_tests_contentment,
+      beneficiary: little_folks_tailor,
+      scene: "the morning reveals coal changed to gold and hair restored" }
+  - { function: func_greedy_return, order: 8, actor: little_folks_goldsmith,
+      scene: "the goldsmith returns with bags to gather greater treasure" }
+  - { function: func_reversal, order: 9, actor: law_otherworld_coal_gift_tests_contentment,
+      victim: little_folks_goldsmith,
+      scene: "the second harvest remains coal and the first gold reverts to coal" }
+  - { function: func_bodily_punishment, order: 10, actor: law_otherworld_coal_gift_tests_contentment,
+      victim: little_folks_goldsmith,
+      scene: "the goldsmith remains bald and receives a second hump" }
+  - { function: func_compassionate_sharing, order: 11, actor: little_folks_tailor,
+      beneficiary: little_folks_goldsmith,
+      scene: "the tailor keeps his comrade and shares his wealth" }
+
+
+edges:
+
+  - { from: little_folks_tailor, to: little_folks_goldsmith, label: TRAVELS_WITH,
+      evidence: "A tailor and a goldsmith were travelling together" }
+  - { from: little_folks_dancers, to: agency_music, label: SUMMON_BY_DISTANT_MUSIC,
+      evidence: "they heard the sound of distant music" }
+  - { from: little_folks_tailor, to: loc_little_folks_moonlit_hill, label: REACHES,
+      evidence: "when they reached a hill" }
+  - { from: little_folks_dancers, to: loc_little_folks_moonlit_hill, label: DANCE_ON,
+      evidence: "whirling round in the dance" }
+  - { from: little_folks_old_man, to: little_folks_tailor, label: INVITES_INTO_CIRCLE,
+      evidence: "made a sign that they should enter" }
+  - { from: little_folks_dancers, to: little_folks_tailor, label: OPEN_CIRCLE_FOR,
+      evidence: "willingly opened their circle" }
+  - { from: little_folks_goldsmith, to: little_folks_dancers, label: STEPS_IN_FIRST,
+      evidence: "stepped in" }
+  - { from: little_folks_tailor, to: affect_fear, label: FEELS_INITIAL_FEAR,
+      evidence: "felt a little afraid at first" }
+  - { from: little_folks_old_man, to: obj_little_folks_knife, label: SHARPENS_RITUAL_KNIFE,
+      evidence: "whetted it" }
+  - { from: little_folks_old_man, to: little_folks_goldsmith, label: SHAVES_HEAD_CLEAN,
+      evidence: "shaved the hair of his head clean off" }
+  - { from: little_folks_old_man, to: little_folks_tailor, label: SHAVES_HEAD_CLEAN,
+      evidence: "the same thing happened to the tailor" }
+  - { from: little_folks_old_man, to: little_folks_tailor, label: APPROVES_NONRESISTANCE,
+      evidence: "without any struggle" }
+  - { from: little_folks_old_man, to: obj_little_folks_coals, label: DIRECTS_TAKING_OF,
+      evidence: "pointed with his finger to a heap of coals" }
+  - { from: little_folks_tailor, to: obj_little_folks_coals, label: FILLS_POCKETS_WITH,
+      evidence: "fill their pockets with them" }
+  - { from: little_folks_dancers, to: loc_little_folks_moonlit_hill, label: VANISH_AT_MIDNIGHT,
+      evidence: "In a moment all had vanished" }
+  - { from: obj_little_folks_coals, to: obj_little_folks_gold, label: TRANSFORMS_INTO_GOLD,
+      evidence: "not filled with coals, but with pure gold" }
+  - { from: little_folks_tailor, to: obj_little_folks_gold, label: RECEIVES_CONTENTED_SHARE,
+      evidence: "I have enough and am content" }
+  - { from: little_folks_goldsmith, to: affect_greed, label: EMBODIES_GREEDY_DISPOSITION,
+      evidence: "in accordance with his greedy disposition" }
+  - { from: little_folks_goldsmith, to: obj_little_folks_goldsmith_bags, label: PREPARES_GREEDY_RETURN,
+      evidence: "hung a couple of bags over his shoulders" }
+  - { from: little_folks_goldsmith, to: loc_little_folks_moonlit_hill, label: RETURNS_FOR_GREATER_TREASURE,
+      evidence: "go out again in the evening" }
+  - { from: obj_little_folks_coals, to: little_folks_goldsmith, label: REMAINS_BLACK_COAL_AFTER_GREED,
+      evidence: "nothing out of them but black coals" }
+  - { from: obj_little_folks_gold, to: obj_little_folks_coals, label: REVERTS_TO_COAL,
+      evidence: "had again turned into coal" }
+  - { from: law_otherworld_coal_gift_tests_contentment, to: little_folks_goldsmith, label: PUNISHES_GREED_WITH_BODY_MARKS,
+      evidence: "the punishment of his greediness" }
+  - { from: little_folks_goldsmith, to: state_maimed, label: BEARS_TWO_HUMPS,
+      evidence: "a second, just as large, had grown in front" }
+  - { from: little_folks_goldsmith, to: obj_little_folks_cap, label: COVERS_BALD_HEAD_WITH,
+      evidence: "cover his bald head with a cap" }
+  - { from: little_folks_tailor, to: little_folks_goldsmith, label: SHARES_WEALTH_WITH_COMRADE,
+      evidence: "stay with me and share in my wealth" }

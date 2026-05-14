@@ -1,0 +1,269 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: old-hildebrand
+khm: 95
+atu: '1360C'
+atu_name: Old Hildebrand
+canonical_source: ../../2-silver/canonical/old-hildebrand/canonical.txt
+title: Old Hildebrand
+
+
+entities:
+
+  characters:
+
+    old_hildebrand_hildebrand:
+      name: Old Hildebrand / The Peasant
+      archetypes: [arc_trickster]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_object_mediation, agency_music, agency_violence]
+      existential_states: [state_deceived, state_hidden_identity]
+      affects: [affect_anger]
+      traits: [deceived-husband, false-pilgrim, basket-concealed-witness, song-answerer, parson-cudgeller]
+      evidence: |
+        the peasant was called Hildebrand
+
+    old_hildebrand_wife:
+      name: Hildebrand's Wife
+      archetypes: [arc_treacherous_spouse]
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_domestic_labor, agency_music]
+      speech_acts_performed: [speech_lie, speech_command]
+      affects: [affect_lust, affect_joy]
+      traits: [adulterous-wife, feigned-invalid, sermon-instigator, feast-maker, singing-betrayer]
+      evidence: |
+        The peasant woman, too, was quite willing.
+
+    old_hildebrand_parson:
+      name: The Village Parson
+      archetypes: [arc_hypocritical_cleric, arc_trickster]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning, agency_music]
+      speech_acts_performed: [speech_lie, speech_command]
+      affects: [affect_lust, affect_joy]
+      traits: [clerical-lover, false-sermon-preacher, pilgrimage-inventor, fiddle-player, cudgelled-adulterer]
+      evidence: |
+        the parson of the village had a fancy for the wife
+
+    old_hildebrand_gossip:
+      name: Hildebrand's Gossip / The Egg-Merchant
+      archetypes: [arc_wise_helper, arc_trickster]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning, agency_object_mediation, agency_domestic_labor, agency_music]
+      traits: [egg-merchant, market-returning-helper, adultery-interpreter, basket-carrier, song-prompter]
+      evidence: |
+        His gossip was an egg-merchant
+
+  magic_objects:
+
+    obj_old_hildebrand_laurel_bag:
+      name: The Laurel-Leaf Bag
+      object_kind: tool
+      attributes:
+        function: fake pilgrimage equipment given by the parson to remove Hildebrand from home
+      evidence: |
+        the bag for the laurel-leaves
+
+    obj_old_hildebrand_kreuzer:
+      name: The Kreuzer for Laurel-Leaves
+      object_kind: treasure
+      attributes:
+        function: small coin that materializes the false pilgrimage as practical errand
+      evidence: |
+        the bag for the laurel-leaves and the kreuzer
+
+    obj_old_hildebrand_egg_basket:
+      name: The Egg-Basket
+      object_kind: tool
+      attributes:
+        function: conceals Hildebrand so he can return home as hidden witness
+      evidence: |
+        Get into my egg-basket
+
+    obj_old_hildebrand_fiddle:
+      name: The Parson's Fiddle
+      instance_of: obj_fiddle
+      object_kind: instrument
+      attributes:
+        function: makes the adulterous merriment audible and sets up the sung exposure
+      evidence: |
+        had brought his fiddle with him
+
+    obj_old_hildebrand_pancakes:
+      name: The Pancakes
+      object_kind: food
+      attributes:
+        function: feast food marking the wife's false illness as exposed fraud
+      evidence: |
+        had made pancakes
+
+  locations:
+
+    loc_old_hildebrand_village:
+      name: Hildebrand's Village
+      instance_of: loc_village
+      evidence: |
+        the parson of the village
+
+    loc_old_hildebrand_church:
+      name: The Sermon Church
+      instance_of: loc_church
+      evidence: |
+        went to the sermon
+
+    loc_old_hildebrand_gockerli_hill:
+      name: The Göckerli Hill in Italy
+      instance_of: loc_mountain
+      evidence: |
+        the Göckerli hill in Italy
+
+    loc_old_hildebrand_road:
+      name: The Road to the False Pilgrimage
+      instance_of: loc_road
+      evidence: |
+        on his way he met his gossip
+
+    loc_old_hildebrand_market:
+      name: The Egg Market
+      instance_of: loc_marketplace
+      evidence: |
+        coming from the market
+
+    loc_old_hildebrand_house:
+      name: Hildebrand's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        When they got to the house
+
+    loc_old_hildebrand_stove_bench:
+      name: The Bench by the Stove
+      instance_of: loc_hearth
+      evidence: |
+        the bench by the stove
+
+
+classifications:
+
+  world_laws:
+    - law_false_sermon_displaces_husband
+    - law_hidden_basket_return_exposes_adultery
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_retributive
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+    - agency_object_mediation
+    - agency_music
+    - agency_violence
+    - agency_social_rank
+
+  affects_driving:
+    - affect_lust
+    - affect_anger
+    - affect_joy
+
+  symbol_numbers: []
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: old_hildebrand_parson,
+      scene: "The parson and Hildebrand's wife desire a day alone together.",
+      evidence: "had wished for a long while to spend a whole day happily with her" }
+  - { function: func_trickery, order: 2, actor: old_hildebrand_parson,
+      scene: "The parson designs a false illness and sermon-pilgrimage to send Hildebrand away.",
+      evidence: "I have now thought of a way" }
+  - { function: func_complicity, order: 3, actor: old_hildebrand_wife,
+      scene: "The wife agrees and takes to bed, performing illness until Sunday.",
+      evidence: "took to her bed, and complained and lamented as agreed on" }
+  - { function: func_false_preaching, order: 4, actor: old_hildebrand_parson,
+      scene: "The parson preaches that a pilgrimage to Göckerli hill will cure sick family members.",
+      evidence: "the sick child, sick husband, sick wife, sick father, sick mother, sick sister, brother, or whosoever else it might be, would be restored to health instantly" }
+  - { function: func_departure, order: 5, actor: old_hildebrand_hildebrand,
+      scene: "Hildebrand leaves with the bag and kreuzer to cure his supposedly sick wife.",
+      evidence: "will at once begin my journey so that thou mayst get well the faster" }
+  - { function: func_exposure_helper, order: 6, actor: old_hildebrand_gossip,
+      scene: "The egg-merchant explains the parson's real purpose and offers to carry Hildebrand home hidden in the basket.",
+      evidence: "The parson wants to spend a whole day alone with your wife" }
+  - { function: func_hidden_return, order: 7, actor: old_hildebrand_gossip,
+      scene: "The gossip puts Hildebrand in the egg-basket and carries him home.",
+      evidence: "put the peasant into his egg-basket and carried him home" }
+  - { function: func_witnessing, order: 8, actor: old_hildebrand_hildebrand,
+      scene: "At home the wife and parson feast, play fiddle, and sing over Hildebrand's absence.",
+      evidence: "The parson, however, and the woman, were as merry as possible" }
+  - { function: func_exposure_song, order: 9, actor: old_hildebrand_gossip,
+      scene: "The gossip sings to Hildebrand in the basket, prompting the hidden husband to reveal himself.",
+      evidence: "What art thou doing, my Hildebrand dear" }
+  - { function: func_punishment, order: 10, actor: old_hildebrand_hildebrand,
+      scene: "Hildebrand climbs from the basket and cudgels the parson out of the house.",
+      evidence: "cudgelled the parson out of the house" }
+
+
+edges:
+
+  # False illness and false sermon
+  - { from: old_hildebrand_parson, to: old_hildebrand_wife, label: DESIRES,
+      evidence: "had a fancy for the wife" }
+  - { from: old_hildebrand_wife, to: old_hildebrand_parson, label: DESIRES,
+      evidence: "The peasant woman, too, was quite willing" }
+  - { from: old_hildebrand_parson, to: old_hildebrand_wife, label: DEVISES_PLAN_WITH,
+      evidence: "I have now thought of a way" }
+  - { from: old_hildebrand_parson, to: old_hildebrand_wife, label: COMMANDS_FEIGNED_ILLNESS,
+      evidence: "you must take to your bed" }
+  - { from: old_hildebrand_wife, to: old_hildebrand_hildebrand, label: DECEIVES,
+      evidence: "complained and lamented as agreed on" }
+  - { from: old_hildebrand_hildebrand, to: old_hildebrand_wife, label: CARES_FOR,
+      evidence: "her husband did everything for her that he could think of" }
+  - { from: old_hildebrand_wife, to: old_hildebrand_hildebrand, label: SENDS_TO_SERMON,
+      evidence: "I should like to hear the parson’s sermon" }
+  - { from: old_hildebrand_hildebrand, to: loc_old_hildebrand_church, label: ATTENDS,
+      evidence: "So the peasant went to the sermon" }
+  - { from: old_hildebrand_parson, to: old_hildebrand_hildebrand, label: PREACHES_FALSE_CURE_TO,
+      evidence: "would be restored to health instantly" }
+  - { from: old_hildebrand_parson, to: obj_old_hildebrand_laurel_bag, label: GIVES,
+      evidence: "gave him the bag for the laurel-leaves and the kreuzer" }
+  - { from: old_hildebrand_parson, to: obj_old_hildebrand_kreuzer, label: GIVES,
+      evidence: "gave him the bag for the laurel-leaves and the kreuzer" }
+  - { from: law_false_sermon_displaces_husband, to: old_hildebrand_hildebrand, label: DISPLACES,
+      evidence: "he went away" }
+  - { from: old_hildebrand_wife, to: old_hildebrand_parson, label: RECEIVES_AFTER_HUSBAND_LEAVES,
+      evidence: "the parson was there directly" }
+
+  # Helper, hidden return, and household exposure
+  - { from: old_hildebrand_hildebrand, to: loc_old_hildebrand_road, label: TRAVELS_ON,
+      evidence: "walked on quickly without stopping" }
+  - { from: old_hildebrand_hildebrand, to: old_hildebrand_gossip, label: MEETS,
+      evidence: "on his way he met his gossip" }
+  - { from: old_hildebrand_gossip, to: old_hildebrand_hildebrand, label: REVEALS_ADULTERY_PLAN_TO,
+      evidence: "The parson wants to spend a whole day alone with your wife" }
+  - { from: old_hildebrand_hildebrand, to: obj_old_hildebrand_egg_basket, label: HIDES_IN,
+      evidence: "Get into my egg-basket" }
+  - { from: old_hildebrand_gossip, to: obj_old_hildebrand_egg_basket, label: CARRIES,
+      evidence: "carried him home" }
+  - { from: old_hildebrand_wife, to: obj_old_hildebrand_pancakes, label: MAKES,
+      evidence: "had made pancakes" }
+  - { from: old_hildebrand_parson, to: obj_old_hildebrand_fiddle, label: BRINGS,
+      evidence: "had brought his fiddle with him" }
+  - { from: old_hildebrand_gossip, to: loc_old_hildebrand_house, label: REQUESTS_SHELTER_AT,
+      evidence: "give me shelter this night" }
+  - { from: old_hildebrand_wife, to: loc_old_hildebrand_stove_bench, label: SEATS_BASKET_AT,
+      evidence: "placed the gossip and the basket which he carried on his back on the bench by the stove" }
+  - { from: old_hildebrand_wife, to: old_hildebrand_parson, label: SINGS_ABSENCE_TO,
+      evidence: "I’ve sent my husband away from me" }
+  - { from: old_hildebrand_parson, to: old_hildebrand_wife, label: SINGS_WISH_FOR_DELAY_TO,
+      evidence: "I wish ’twas a year before he came back" }
+  - { from: old_hildebrand_gossip, to: old_hildebrand_hildebrand, label: SINGS_TO_HIDDEN_HUSBAND,
+      evidence: "What art thou doing, my Hildebrand dear" }
+  - { from: old_hildebrand_hildebrand, to: old_hildebrand_gossip, label: ANSWERS_FROM_BASKET,
+      evidence: "And here in this basket no longer I’ll stay" }
+  - { from: law_hidden_basket_return_exposes_adultery, to: old_hildebrand_parson, label: EXPOSES,
+      evidence: "All singing I ever shall hate from this day" }
+  - { from: old_hildebrand_hildebrand, to: old_hildebrand_parson, label: CUDGELS_OUT,
+      evidence: "cudgelled the parson out of the house" }

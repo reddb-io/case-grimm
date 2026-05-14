@@ -1,0 +1,8 @@
+slug: the-wise-servant
+khm: 162
+atu: '1009'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

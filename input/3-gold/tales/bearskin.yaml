@@ -1,0 +1,416 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: bearskin
+khm: 101
+atu: '361'
+atu_name: Bearskin
+canonical_source: ../../2-silver/canonical/bearskin/canonical.txt
+title: Bearskin
+
+
+entities:
+
+  characters:
+
+    bearskin_soldier:
+      name: Bearskin / The Discharged Soldier
+      archetypes: [arc_discharged_soldier]
+      species: sp_human
+      existential_states: [state_bound_by_promise, state_infernal_unclean, state_hidden_identity]
+      agency_modes: [agency_endurance, agency_violence, agency_object_mediation, agency_speech]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_courage, affect_pity, affect_joy, affect_love]
+      traits: [brave-soldier, dismissed-after-peace, homeless-brother, devil-pact-survivor, bear-skin-wearer, monstrous-looking-benefactor, faithful-betrothed, cleaned-bridegroom]
+      evidence: |
+        There was once a young fellow who enlisted as a soldier
+
+    bearskin_devil:
+      name: Greencoat / The Devil
+      species: sp_human
+      being_type: being_devil
+      agency_modes: [agency_speech, agency_object_mediation, agency_social_rank]
+      speech_acts_performed: [speech_command, speech_promise]
+      affects: [affect_greed, affect_anger]
+      traits: [green-coated-stranger, cloven-footed-tempter, courage-tester, pact-maker, soul-claimant, reluctant-cleanser, two-soul-winner]
+      evidence: |
+        a strange man stood before him, who wore a green coat
+
+    bearskin_bear:
+      name: The Trial Bear
+      species: sp_bear
+      agency_modes: [agency_violence]
+      traits: [growling-test-beast, shot-through-muzzle, skin-source]
+      evidence: |
+        saw a large bear, which came growling towards him
+
+    bearskin_brothers:
+      name: The Hard-Hearted Brothers
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      affects: [affect_fear]
+      traits: [kin-refusers, usefulness-calculators, failed-shelter-givers]
+      evidence: |
+        The brothers, however, were hard-hearted
+
+    bearskin_innkeeper:
+      name: The Frightened Innkeeper
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      affects: [affect_fear, affect_greed]
+      traits: [stable-refuser, bad-name-fearer, ducat-persuaded-host]
+      evidence: |
+        the landlord would not receive him
+
+    bearskin_old_man:
+      name: The Poor Old Debtor
+      species: sp_human
+      existential_states: [state_bound_by_promise]
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_grief, affect_joy]
+      traits: [weeping-debtor, prison-threatened-father, rescued-householder, daughter-promiser]
+      evidence: |
+        saw an old man weeping bitterly
+
+    bearskin_youngest_bride:
+      name: The Youngest Daughter / Faithful Bride
+      archetypes: [arc_youngest_sibling]
+      species: sp_human
+      existential_states: [state_bound_by_promise]
+      agency_modes: [agency_speech, agency_object_mediation, agency_endurance]
+      speech_acts_performed: [speech_promise, speech_prayer]
+      affects: [affect_pity, affect_grief, affect_love]
+      traits: [promise-keeper, compassionate-judge, black-dressed-betrothed, mocked-sister, ring-half-keeper, recognizing-bride]
+      evidence: |
+        The youngest, however, said
+
+    bearskin_elder_sisters:
+      name: The Two Elder Sisters
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      affects: [affect_fear, affect_pride, affect_anger]
+      traits: [appearance-rejecters, mockers, handsome-stranger-courters, enraged-self-destroyers, devil-soul-substitutes]
+      evidence: |
+        When the eldest saw him she was so terribly alarmed
+
+  magic_objects:
+
+    obj_bearskin_gun:
+      name: The Soldier's Gun
+      object_kind: weapon
+      attributes:
+        function: proves courage by killing the bear
+      evidence: |
+        The soldier had nothing left but his gun
+
+    obj_bearskin_green_coat:
+      name: The Devil's Green Coat
+      object_kind: garment
+      attributes:
+        function: gives Bearskin endless money from its pocket during the seven-year term
+      evidence: |
+        The Devil took off his green coat
+
+    obj_bearskin_bear_cloak:
+      name: The Bearskin Cloak and Bed
+      object_kind: garment
+      attributes:
+        function: compulsory cloak, bed, and name-source during the pact
+      evidence: |
+        This shall be thy cloak, and thy bed also
+
+    obj_bearskin_ducats:
+      name: The Ducats from the Coat Pocket
+      object_kind: treasure
+      attributes:
+        function: buys shelter, pays debts, funds charity, and tests recognition through wealth
+      evidence: |
+        pulled out a handful of ducats
+
+    obj_bearskin_gold_purse:
+      name: The Purse Full of Gold
+      object_kind: treasure
+      attributes:
+        function: releases the old man from debt and prison
+      evidence: |
+        put a purse full of gold into the poor old
+
+    obj_bearskin_split_ring:
+      name: The Two Halves of the Betrothal Ring
+      instance_of: obj_betrothal_recognition_token
+      object_kind: token
+      attributes:
+        function: proves that the cleaned handsome stranger is Bearskin
+      evidence: |
+        broke it in two, and gave her one half
+
+    obj_bearskin_black_dress:
+      name: The Bride's Black Dress
+      object_kind: garment
+      attributes:
+        function: materializes mourning, fidelity, and deferred marriage during Bearskin's absence
+      evidence: |
+        dressed herself entirely in black
+
+    obj_bearskin_velvet_coat:
+      name: The Magnificent Velvet Coat
+      object_kind: garment
+      attributes:
+        function: creates the handsome stranger appearance after the pact ends
+      evidence: |
+        put on a magnificent velvet coat
+
+  locations:
+
+    loc_bearskin_heath:
+      name: The Wide Heath with the Circle of Trees
+      threshold_type: threshold_forest
+      evidence: |
+        He came to a wide heath
+
+    loc_bearskin_circle_trees:
+      name: The Circle of Trees
+      instance_of: loc_tree
+      threshold_type: threshold_forest
+      evidence: |
+        nothing was to be seen but a circle of trees
+
+    loc_bearskin_inn:
+      name: The Fourth-Year Inn
+      instance_of: loc_inn
+      threshold_type: threshold_doorway
+      evidence: |
+        In the fourth year, he entered an inn
+
+    loc_bearskin_debtor_house:
+      name: The Old Man's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        Come with me
+
+    loc_bearskin_town:
+      name: The Town of the Restored Bridegroom
+      instance_of: loc_marketplace
+      evidence: |
+        He went into the town
+
+    loc_bearskin_well:
+      name: The Well of the First Sister
+      instance_of: loc_well
+      evidence: |
+        One of them drowned herself in the well
+
+    loc_bearskin_tree:
+      name: The Tree of the Second Sister
+      instance_of: loc_tree
+      evidence: |
+        the other hanged herself on a tree
+
+
+classifications:
+
+  world_laws:
+    - law_devil_pact_unclean_endurance_wins_freedom
+    - law_split_betrothal_token_recognizes_true_bridegroom
+    - law_promise_binds_reality
+
+  moral_regimes:
+    - moral_kindness_rewarded
+    - moral_restorative
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_object_mediation
+    - agency_speech
+    - agency_social_rank
+
+  affects_driving:
+    - affect_fear
+    - affect_courage
+    - affect_pity
+    - affect_grief
+    - affect_love
+    - affect_anger
+
+  symbol_numbers:
+    - num_7
+    - num_3
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: bearskin_soldier,
+      scene: "A brave soldier is dismissed when peace comes.",
+      evidence: "when peace was made, he received his dismissal" }
+  - { function: func_lack, order: 2, actor: bearskin_soldier,
+      scene: "His parents are dead, his brothers reject him, and he foresees starvation.",
+      evidence: "so I see beforehand that I shall have to starve" }
+  - { function: func_donor_appearance, order: 3, actor: bearskin_devil,
+      scene: "A stately green-coated stranger with a cloven foot appears on the heath.",
+      evidence: "looked right stately, but had a hideous cloven foot" }
+  - { function: func_test, order: 4, actor: bearskin_devil,
+      scene: "The stranger tests whether the soldier is fearless by showing him a growling bear.",
+      evidence: "first I must know if thou art fearless" }
+  - { function: func_victory, order: 5, actor: bearskin_soldier,
+      scene: "The soldier shoots the bear through the muzzle and passes the courage test.",
+      evidence: "shot it through the muzzle" }
+  - { function: func_contract, order: 6, actor: bearskin_devil,
+      scene: "The Devil sets the seven-year no-washing, no-grooming, no-prayer pact with soul forfeiture if the soldier dies.",
+      evidence: "thou shalt for the next seven years neither wash thyself" }
+  - { function: func_magical_agent, order: 7, actor: bearskin_devil,
+      scene: "The Devil gives the soldier the money-giving green coat and the bear skin cloak and bed.",
+      evidence: "puttest thy hand into the pocket, thou wilt always find it full of money" }
+  - { function: func_ordeal, order: 8, actor: bearskin_soldier,
+      scene: "Bearskin wanders through the years as his hair, beard, claws, and dirt make him look monstrous.",
+      evidence: "he began to look like a monster" }
+  - { function: func_charity, order: 9, actor: bearskin_soldier,
+      scene: "He gives poor people money so they will pray that he survives the seven years.",
+      evidence: "gave the poor money to pray that he might not die" }
+  - { function: func_rescue, order: 10, actor: bearskin_soldier,
+      scene: "In the inn he hears the old man's lament, pays the debt, and adds a purse of gold.",
+      evidence: "paid him and put a purse full of gold" }
+  - { function: func_betrothal, order: 11, actor: bearskin_old_man,
+      scene: "The grateful father offers Bearskin one of his beautiful daughters as a wife.",
+      evidence: "choose one of them for thyself as a wife" }
+  - { function: func_rejection, order: 12, actor: bearskin_elder_sisters,
+      scene: "The two elder daughters reject Bearskin's appearance with fear and mockery.",
+      evidence: "How can I accept a husband who no longer has a human form" }
+  - { function: func_promise_kept, order: 13, actor: bearskin_youngest_bride,
+      scene: "The youngest insists that the father's promise must be kept because Bearskin helped him.",
+      evidence: "your promise must be kept" }
+  - { function: func_token_division, order: 14, actor: bearskin_soldier,
+      scene: "Bearskin breaks his ring in two, keeps one half, gives the other to the bride, and asks her to wait three years.",
+      evidence: "broke it in two, and gave her one half" }
+  - { function: func_fidelity_ordeal, order: 15, actor: bearskin_youngest_bride,
+      scene: "The promised bride wears black, weeps, and endures contempt and mockery from her sisters.",
+      evidence: "Nothing but contempt and mockery fell to her lot from her sisters" }
+  - { function: func_term_completed, order: 16, actor: bearskin_soldier,
+      scene: "On the last day of the seven years Bearskin returns to the heath and forces the Devil to clean him.",
+      evidence: "the last day of the seven years dawned" }
+  - { function: func_restoration, order: 17, actor: bearskin_devil,
+      scene: "The Devil washes, combs, and cuts Bearskin until he looks like a handsome soldier again.",
+      evidence: "wash Bearskin, comb his hair, and cut his nails" }
+  - { function: func_arrival_in_disguise, order: 18, actor: bearskin_soldier,
+      scene: "Bearskin returns as a magnificent, unrecognised stranger whom the father mistakes for a general.",
+      evidence: "No one recognized him" }
+  - { function: func_recognition, order: 19, actor: obj_bearskin_split_ring,
+      scene: "The ring halves fit exactly, proving the stranger is the promised Bearskin.",
+      evidence: "the two pieces fitted exactly together" }
+  - { function: func_wedding, order: 20, actor: bearskin_soldier,
+      scene: "The restored Bearskin embraces and kisses his faithful bride.",
+      evidence: "embraced her, and gave her a kiss" }
+  - { function: func_punishment, order: 21, actor: bearskin_elder_sisters,
+      scene: "The elder sisters destroy themselves in rage, giving the Devil two souls instead of one.",
+      evidence: "I have now got two souls in the place of thy one" }
+
+
+edges:
+
+  # Dismissal, lack, and devil pact
+  - { from: bearskin_soldier, to: bearskin_brothers, label: SEEKS_SHELTER_FROM,
+      evidence: "begged them to take him in" }
+  - { from: bearskin_brothers, to: bearskin_soldier, label: REFUSE_SHELTER_TO,
+      evidence: "go and make a living for thyself" }
+  - { from: bearskin_soldier, to: obj_bearskin_gun, label: CARRIES_ONLY,
+      evidence: "The soldier had nothing left but his gun" }
+  - { from: bearskin_soldier, to: loc_bearskin_heath, label: REACHES,
+      evidence: "He came to a wide heath" }
+  - { from: bearskin_devil, to: bearskin_soldier, label: APPEARS_BEFORE,
+      evidence: "a strange man stood before him" }
+  - { from: bearskin_devil, to: bearskin_soldier, label: OFFERS_GOLD_AND_POSSESSIONS,
+      evidence: "gold and possessions shall thou have" }
+  - { from: bearskin_devil, to: bearskin_soldier, label: TESTS_COURAGE_OF,
+      evidence: "first I must know if thou art fearless" }
+  - { from: bearskin_bear, to: bearskin_soldier, label: GROWLS_TOWARD,
+      evidence: "came growling towards him" }
+  - { from: bearskin_soldier, to: bearskin_bear, label: SHOOTS,
+      evidence: "shot it through the muzzle" }
+  - { from: bearskin_devil, to: bearskin_soldier, label: SETS_UNCLEAN_PACT_FOR,
+      evidence: "thou shalt for the next seven years neither wash thyself" }
+  - { from: law_devil_pact_unclean_endurance_wins_freedom, to: bearskin_soldier, label: BINDS,
+      evidence: "If thou diest during these seven years, thou art mine" }
+  - { from: bearskin_devil, to: obj_bearskin_green_coat, label: GIVES,
+      evidence: "The Devil took off his green coat, gave it to the soldier" }
+  - { from: obj_bearskin_green_coat, to: obj_bearskin_ducats, label: GENERATES,
+      evidence: "thou wilt always find it full of money" }
+  - { from: bearskin_devil, to: obj_bearskin_bear_cloak, label: MAKES_FROM_BEAR,
+      evidence: "pulled the skin off the bear" }
+  - { from: obj_bearskin_bear_cloak, to: bearskin_soldier, label: NAMES,
+      evidence: "because of this apparel shalt thou be called Bearskin" }
+
+  # Unclean endurance and charity
+  - { from: bearskin_soldier, to: state_infernal_unclean, label: FALLS_INTO,
+      evidence: "his face was so covered with dirt" }
+  - { from: state_infernal_unclean, to: bearskin_innkeeper, label: FRIGHTENS,
+      evidence: "because he was afraid the horses would be scared" }
+  - { from: bearskin_soldier, to: obj_bearskin_ducats, label: USES_TO_BUY_SHELTER,
+      evidence: "pulled out a handful of ducats" }
+  - { from: bearskin_soldier, to: speech_prayer, label: FUNDS_PRAYERS_FOR_SURVIVAL,
+      evidence: "gave the poor money to pray that he might not die" }
+  - { from: bearskin_soldier, to: loc_bearskin_inn, label: ENTERS_IN_FOURTH_YEAR,
+      evidence: "In the fourth year, he entered an inn" }
+  - { from: bearskin_old_man, to: affect_grief, label: IS_OVERCOME_BY,
+      evidence: "weeping bitterly, and wringing his hands" }
+  - { from: bearskin_old_man, to: bearskin_soldier, label: REVEALS_DEBT_TO,
+      evidence: "revealed the cause of his grief" }
+  - { from: bearskin_soldier, to: bearskin_old_man, label: PAYS_DEBT_FOR,
+      evidence: "paid him and put a purse full of gold" }
+  - { from: bearskin_soldier, to: obj_bearskin_gold_purse, label: GIVES,
+      evidence: "put a purse full of gold into the poor old" }
+
+  # Betrothal and token recognition
+  - { from: bearskin_old_man, to: bearskin_soldier, label: OFFERS_DAUGHTER_TO,
+      evidence: "choose one of them for thyself as a wife" }
+  - { from: bearskin_elder_sisters, to: bearskin_soldier, label: REJECT_APPEARANCE_OF,
+      evidence: "no longer has a human form" }
+  - { from: bearskin_youngest_bride, to: bearskin_soldier, label: ACCEPTS_AS_GOOD_MAN,
+      evidence: "that must be a good man to have helped you" }
+  - { from: bearskin_youngest_bride, to: state_bound_by_promise, label: ACCEPTS,
+      evidence: "your promise must be kept" }
+  - { from: bearskin_soldier, to: obj_bearskin_split_ring, label: BREAKS_AND_DIVIDES,
+      evidence: "broke it in two, and gave her one half" }
+  - { from: obj_bearskin_split_ring, to: bearskin_youngest_bride, label: BINDS_TO,
+      evidence: "begged her to keep her piece carefully" }
+  - { from: bearskin_youngest_bride, to: obj_bearskin_black_dress, label: WEARS,
+      evidence: "dressed herself entirely in black" }
+  - { from: bearskin_elder_sisters, to: bearskin_youngest_bride, label: MOCK,
+      evidence: "Nothing but contempt and mockery fell to her lot from her sisters" }
+  - { from: bearskin_soldier, to: agency_endurance, label: CONTINUES_WANDERING_BY,
+      evidence: "travelled about the world from one place to another" }
+
+  # Cleansing, recognition, and retributive closure
+  - { from: bearskin_soldier, to: loc_bearskin_circle_trees, label: RETURNS_TO,
+      evidence: "seated himself beneath the circle of trees" }
+  - { from: bearskin_devil, to: bearskin_soldier, label: DEMANDS_COAT_BACK_FROM,
+      evidence: "asked for his own green one back" }
+  - { from: bearskin_soldier, to: bearskin_devil, label: DEMANDS_CLEANSING_FROM,
+      evidence: "thou must first make me clean" }
+  - { from: bearskin_devil, to: bearskin_soldier, label: CLEANSES,
+      evidence: "wash Bearskin, comb his hair, and cut his nails" }
+  - { from: bearskin_soldier, to: obj_bearskin_velvet_coat, label: WEARS_AFTER_RESTORATION,
+      evidence: "put on a magnificent velvet coat" }
+  - { from: bearskin_soldier, to: loc_bearskin_town, label: ENTERS_CLEANED,
+      evidence: "He went into the town" }
+  - { from: bearskin_old_man, to: bearskin_soldier, label: MISRECOGNIZES_AS_GENERAL,
+      evidence: "took him for a distinguished general" }
+  - { from: bearskin_elder_sisters, to: bearskin_soldier, label: COURT_HANDSOME_STRANGER,
+      evidence: "never seen a handsomer man" }
+  - { from: bearskin_soldier, to: obj_bearskin_split_ring, label: PLACES_IN_WINE,
+      evidence: "threw it in a glass of wine" }
+  - { from: obj_bearskin_split_ring, to: bearskin_youngest_bride, label: REVEALS_IDENTITY_TO,
+      evidence: "the two pieces fitted exactly together" }
+  - { from: law_split_betrothal_token_recognizes_true_bridegroom, to: bearskin_soldier, label: RECOGNIZES,
+      evidence: "I am thy betrothed bridegroom" }
+  - { from: bearskin_soldier, to: bearskin_youngest_bride, label: EMBRACES_AND_KISSES,
+      evidence: "embraced her, and gave her a kiss" }
+  - { from: bearskin_elder_sisters, to: loc_bearskin_well, label: DROWNS_ONE_IN,
+      evidence: "One of them drowned herself in the well" }
+  - { from: bearskin_elder_sisters, to: loc_bearskin_tree, label: HANGS_ONE_ON,
+      evidence: "the other hanged herself on a tree" }
+  - { from: bearskin_devil, to: bearskin_elder_sisters, label: CLAIMS_SOULS_OF,
+      evidence: "I have now got two souls in the place of thy one" }

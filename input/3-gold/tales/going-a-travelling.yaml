@@ -1,0 +1,308 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: going-a-travelling
+khm: 143
+atu: '1696'
+atu_name: Clever Hans / Misapplied Instruction
+canonical_source: ../../2-silver/canonical/going-a-travelling/canonical.txt
+title: Going A-Travelling
+
+
+entities:
+
+  characters:
+
+    going_travelling_youth:
+      name: The Poor Woman's Travelling Son
+      archetypes: [arc_fool]
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      existential_states: [state_blind]
+      speech_acts_performed: [speech_request, speech_blessing]
+      affects: [affect_shame, affect_fear]
+      traits: [moneyless-traveller, formula-repeater, context-blind-learner, beaten-fool, returned-home]
+      evidence: |
+        a son, who much wished to travel
+
+    going_travelling_mother:
+      name: The Poor Mother
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      affects: [affect_fear]
+      traits: [poor-mother, travel-doubter, moneyless-householder]
+      evidence: |
+        We have no money at all
+
+    going_travelling_fishermen:
+      name: The Company of Fishermen
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command]
+      affects: [affect_anger]
+      traits: [net-drawers, bad-catch-hearers, stick-beaters, formula-correctors]
+      evidence: |
+        a company of fishermen
+
+    going_travelling_execution_people:
+      name: The People at the Gallows
+      species: sp_human
+      agency_modes: [agency_speech, agency_violence]
+      speech_acts_performed: [speech_command]
+      affects: [affect_anger]
+      traits: [hanging-witnesses, formula-correctors, blow-givers]
+      evidence: |
+        they had got a poor sinner whom they were about to hang
+
+    going_travelling_poor_sinner:
+      name: The Poor Sinner at the Gallows
+      species: sp_human
+      existential_states: [state_imprisoned]
+      affects: [affect_fear]
+      traits: [condemned-person, gallows-victim, pity-formula-subject]
+      evidence: |
+        a poor sinner whom they were about to hang
+
+    going_travelling_knacker:
+      name: The Knacker Cutting Up a Horse
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech, agency_violence]
+      speech_acts_performed: [speech_command]
+      affects: [affect_anger]
+      traits: [horse-cutter, pit-worker, ear-boxer, formula-corrector]
+      evidence: |
+        a knacker who was cutting up a horse
+
+    going_travelling_cart_driver:
+      name: The Cart Driver
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech]
+      affects: [affect_anger]
+      traits: [cart-driver, hole-pusher, whip-cracker, final-punisher]
+      evidence: |
+        the driver took his whip
+
+    going_travelling_cart_people:
+      name: The People in the Cart
+      species: sp_human
+      affects: [affect_anger]
+      traits: [cart-passengers, insulted-by-carrion-formula]
+      evidence: |
+        a cart full of people
+
+  magic_objects:
+
+    obj_going_travelling_fishing_net:
+      name: The Fishermen's Net
+      object_kind: tool
+      attributes:
+        function: proves the first formula unlucky when it catches little fish
+      evidence: |
+        when the net was drawn out
+
+    obj_going_travelling_stick:
+      name: The Fisherman's Stick
+      object_kind: weapon
+      attributes:
+        function: first correction-beating tool
+      evidence: |
+        fell on the youth with a stick
+
+    obj_going_travelling_dead_horse:
+      name: The Horse Carrion
+      object_kind: creature_object
+      attributes:
+        function: dead animal that makes the pity formula offensive
+      evidence: |
+        cutting up a horse
+
+    obj_going_travelling_cart:
+      name: The Cart Full of People
+      object_kind: tool
+      attributes:
+        function: final social group insulted by the carrion formula
+      evidence: |
+        a cart full of people
+
+    obj_going_travelling_whip:
+      name: The Driver's Whip
+      object_kind: weapon
+      attributes:
+        function: final punishment tool that sends the youth home
+      evidence: |
+        the driver took his whip
+
+  locations:
+
+    loc_going_travelling_mother_house:
+      name: The Poor Woman's House
+      instance_of: loc_house
+      evidence: |
+        crawl back to his mother
+
+    loc_going_travelling_road:
+      name: The Long Road
+      instance_of: loc_road
+      evidence: |
+        he walked for a long time
+
+    loc_going_travelling_fishermen_place:
+      name: The Fishermen's Place
+      instance_of: loc_road
+      evidence: |
+        he passed by a company of fishermen
+
+    loc_going_travelling_gallows:
+      name: The Gallows
+      instance_of: loc_gallows
+      evidence: |
+        he came to the gallows
+
+    loc_going_travelling_knacker_pit:
+      name: The Knacker's Pit
+      evidence: |
+        a pit by which stood a knacker
+
+    loc_going_travelling_hole:
+      name: The Hole beside the Cart
+      evidence: |
+        pushed him into a hole
+
+
+classifications:
+
+  world_laws:
+    - law_misapplied_instruction_cascades
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_violence
+    - agency_endurance
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_anger
+    - affect_shame
+    - affect_fear
+
+  threshold_types: []
+
+
+propp:
+
+  - function: func_initial_situation
+    order: 1
+    actor: going_travelling_youth
+    scene: "a poor woman's son wants to travel although the household has no money for him"
+    evidence: "much wished to travel"
+
+  - function: func_formula_choice
+    order: 2
+    actor: going_travelling_youth
+    scene: "the son decides he will manage by always saying not much"
+    evidence: "I will always say, Not much"
+
+  - function: func_misapplied_formula
+    order: 3
+    actor: going_travelling_youth
+    victim: going_travelling_fishermen
+    scene: "he says not much to fishermen whose net indeed catches little fish and is beaten"
+    evidence: "they had not caught much fish"
+
+  - function: func_correction
+    order: 4
+    actor: going_travelling_fishermen
+    beneficiary: going_travelling_youth
+    scene: "the fishermen correct him to say get it full"
+    evidence: "Thou must say, ‘Get it full, get it full.’"
+
+  - function: func_misapplied_formula
+    order: 5
+    actor: going_travelling_youth
+    victim: going_travelling_execution_people
+    scene: "he repeats get it full at the gallows, implying the world needs more condemned people"
+    evidence: "Dost thou want to make out that there are still more wicked people"
+
+  - function: func_correction
+    order: 6
+    actor: going_travelling_execution_people
+    beneficiary: going_travelling_youth
+    scene: "the gallows crowd tells him to pray for the poor soul"
+    evidence: "may God have pity on the poor soul"
+
+  - function: func_misapplied_formula
+    order: 7
+    actor: going_travelling_youth
+    victim: going_travelling_knacker
+    scene: "he repeats the pity formula over a knacker's dead horse and is boxed blind"
+    evidence: "could not see out of his eyes"
+
+  - function: func_correction
+    order: 8
+    actor: going_travelling_knacker
+    beneficiary: going_travelling_youth
+    scene: "the knacker tells him to say there lies the carrion in the pit"
+    evidence: "There lies the carrion in the pit"
+
+  - function: func_final_misapplication
+    order: 9
+    actor: going_travelling_youth
+    victim: going_travelling_cart_people
+    scene: "he says the carrion formula to a cart full of people, is pushed into a hole and whipped home"
+    evidence: "there lies the carrion in the pit"
+
+  - function: func_resolution
+    order: 10
+    actor: going_travelling_youth
+    scene: "the beaten youth crawls back to his mother and never travels again"
+    evidence: "never went out a-travelling again"
+
+
+edges:
+
+  - { from: going_travelling_youth, to: going_travelling_mother, label: WANTS_TO_LEAVE,
+      evidence: "much wished to travel" }
+  - { from: going_travelling_mother, to: going_travelling_youth, label: WARNS_NO_MONEY,
+      evidence: "We have no money at all" }
+  - { from: going_travelling_youth, to: going_travelling_youth, label: ADOPTS_FORMULA,
+      evidence: "I will always say, Not much" }
+  - { from: going_travelling_youth, to: going_travelling_fishermen, label: MISAPPLIES_FORMULA_TO,
+      evidence: "not much, not much, not much" }
+  - { from: obj_going_travelling_fishing_net, to: going_travelling_fishermen, label: YIELDS_LITTLE_FOR,
+      evidence: "they had not caught much fish" }
+  - { from: going_travelling_fishermen, to: obj_going_travelling_stick, label: BEATS_WITH,
+      evidence: "fell on the youth with a stick" }
+  - { from: going_travelling_youth, to: going_travelling_fishermen, label: ASKS_CORRECTION_FROM,
+      evidence: "What ought I to say, then?" }
+  - { from: going_travelling_fishermen, to: going_travelling_youth, label: CORRECTS_FORMULA_TO,
+      evidence: "Get it full, get it full" }
+  - { from: going_travelling_youth, to: loc_going_travelling_gallows, label: ARRIVES_AT,
+      evidence: "he came to the gallows" }
+  - { from: going_travelling_youth, to: going_travelling_execution_people, label: MISAPPLIES_FORMULA_TO,
+      evidence: "Good morning; get it full, get it full" }
+  - { from: going_travelling_execution_people, to: going_travelling_youth, label: BEATS,
+      evidence: "he again got some blows on his back" }
+  - { from: going_travelling_execution_people, to: going_travelling_youth, label: CORRECTS_FORMULA_TO,
+      evidence: "may God have pity on the poor soul" }
+  - { from: going_travelling_youth, to: going_travelling_knacker, label: MISAPPLIES_FORMULA_TO,
+      evidence: "God have pity on the poor soul" }
+  - { from: going_travelling_knacker, to: obj_going_travelling_dead_horse, label: CUTS_UP,
+      evidence: "cutting up a horse" }
+  - { from: going_travelling_knacker, to: going_travelling_youth, label: BOXES_EAR,
+      evidence: "gave him such a box on the ear" }
+  - { from: going_travelling_knacker, to: going_travelling_youth, label: CORRECTS_FORMULA_TO,
+      evidence: "There lies the carrion in the pit" }
+  - { from: going_travelling_youth, to: going_travelling_cart_people, label: MISAPPLIES_FORMULA_TO,
+      evidence: "Good morning, there lies the carrion in the pit" }
+  - { from: obj_going_travelling_cart, to: loc_going_travelling_hole, label: PUSHES_INTO,
+      evidence: "pushed him into a hole" }
+  - { from: going_travelling_cart_driver, to: obj_going_travelling_whip, label: USES,
+      evidence: "the driver took his whip" }
+  - { from: going_travelling_cart_driver, to: going_travelling_youth, label: WHIPS_HOME,
+      evidence: "cracked it upon the youth" }
+  - { from: going_travelling_youth, to: going_travelling_mother, label: RETURNS_TO,
+      evidence: "crawl back to his mother" }
+  - { from: going_travelling_youth, to: law_misapplied_instruction_cascades, label: ENACTS,
+      evidence: "What am I to say, then?" }

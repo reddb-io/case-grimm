@@ -1,0 +1,22 @@
+slug: the-water-of-life
+khm: 97
+atu: '551'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+- book: pg2591-grimm-taylor
+  weight: supplementary
+sections:
+- id: dwarf-s-first-appearance
+  title: dwarf's first appearance
+  canonical:
+    kept: pg5314-grimm-hunt + pg2591-grimm-taylor
+    type: enrichment
+    rationale: Taylor describes the dwarf as wearing 'a sugarloaf cap and a scarlet cloak'. Hunt omits visual detail. The description matters because the dwarf returns at the wedding wearing the same costume — restoration depends on having the original description.
+- id: wedding-celebration-closing-rhyme
+  title: wedding celebration + closing rhyme
+  canonical:
+    kept: pg5314-grimm-hunt + pg2591-grimm-taylor
+    type: enrichment
+    rationale: KHM 1857 closes with a wedding celebration that the dwarf attends — a structural closure where the helper-figure witnesses the quest's success. Hunt truncates this. Restoring it preserves the helper-returns motif and the tale's final folkloric rhyme.

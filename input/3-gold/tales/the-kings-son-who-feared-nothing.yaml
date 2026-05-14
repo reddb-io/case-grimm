@@ -1,0 +1,528 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-kings-son-who-feared-nothing
+khm: 121
+atu: 590A
+atu_name: The Prince Who Feared Nothing
+canonical_source: ../../2-silver/canonical/the-kings-son-who-feared-nothing/canonical.txt
+title: The King's Son Who Feared Nothing
+
+
+entities:
+
+  characters:
+
+    fearless_kings_son:
+      name: The King's Son Who Feared Nothing
+      species: sp_human
+      agency_modes: [agency_endurance, agency_extraordinary_body, agency_object_mediation, agency_violence, agency_speech]
+      existential_states: [state_fearless, state_blind]
+      transformations: [transform_resurrection_by_remedy]
+      speech_acts_performed: [speech_promise, speech_command]
+      affects: [affect_joy]
+      traits: [fearless-prince, world-wanderer, giant-toy-player, life-apple-quester, ring-strengthened, blinded-victim, healed-seer, silent-torment-endurer, castle-deliverer, bridegroom]
+      evidence: |
+        as he had no fear of anything
+
+    fearless_giant:
+      name: The Giant of the Playthings
+      being_type: being_giant
+      agency_modes: [agency_extraordinary_body, agency_cunning, agency_violence, agency_speech]
+      speech_acts_performed: [speech_command, speech_lie]
+      affects: [affect_pride, affect_anger]
+      traits: [giant-householder, bridegroom, life-apple-asker, ring-thief, blinder, precipice-trapper, lion-killed-antagonist]
+      evidence: |
+        he got to the house of a giant
+
+    fearless_giant_bride:
+      name: The Giant's Wise Bride
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning]
+      speech_acts_performed: [speech_testimony]
+      traits: [apple-wisher, ring-demanding-witness, wise-maiden]
+      evidence: |
+        She was a beautiful and wise maiden
+
+    fearless_lion:
+      name: The Faithful Lion
+      species: sp_lion
+      agency_modes: [agency_violence, agency_animal_aid, agency_object_mediation]
+      traits: [garden-guardian, ring-recoverer, blind-master-rescuer, giant-killer, guide]
+      evidence: |
+        following him humbly as its master
+
+    fearless_guard_beasts:
+      name: The Sleeping Wild Beasts Around the Garden
+      species: sp_bear
+      agency_modes: [agency_violence]
+      traits: [sleeping-guardians, fence-watchers, passively-overstepped]
+      evidence: |
+        The beasts lay round about it, but they had put their heads down and were asleep
+
+    fearless_healing_bird:
+      name: The Bird That Reveals the Healing Water
+      species: sp_bird
+      agency_modes: [agency_animal_aid]
+      transformations: [transform_resurrection_by_remedy]
+      traits: [wounded-bird, water-bather, divine-sign]
+      evidence: |
+        remarked a little bird flying quite close by, which wounded itself against the trunk of a tree
+
+    fearless_black_maiden:
+      name: The Black Enchanted Maiden
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation, agency_social_rank]
+      existential_states: [state_cursed]
+      transformations: [transform_curse]
+      speech_acts_performed: [speech_request, speech_command]
+      affects: [affect_fear, affect_joy]
+      traits: [enchanted-maiden, blackened-princess, release-instructor, water-of-life-healer, restored-king-daughter, bride]
+      evidence: |
+        In the gateway stood a maiden of beautiful form and fine face, but she was quite black
+
+    fearless_little_devils:
+      name: The Little Devils and Hob-Goblins
+      being_type: being_devil
+      agency_modes: [agency_violence, agency_speech]
+      speech_acts_performed: [speech_command]
+      affects: [affect_anger]
+      traits: [midnight-gamblers, tormentors, castle-enchanters, silence-defeated]
+      evidence: |
+        out of every hole and corner came little devils
+
+    fearless_castle_servants:
+      name: The Released Castle Servants
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [released-servants, table-setters, wedding-household]
+      evidence: |
+        The servants came and said that the table was already set in the great hall
+
+  magic_objects:
+
+    obj_fearless_giant_playthings:
+      name: The Giant's Balls and Man-High Nine-Pins
+      object_kind: tool
+      attributes:
+        function: prove that the prince can play with giant-scale objects
+      evidence: |
+        a couple of enormous balls, and nine-pins as tall as a man
+
+    obj_kings_son_life_apple:
+      name: The Apple of the Tree of Life
+      instance_of: obj_life_apple
+      object_kind: food
+      attributes:
+        function: quest fruit desired by the giant's bride and authenticated by the ring
+      evidence: |
+        an apple of the tree of life
+
+    obj_kings_son_life_ring:
+      name: The Ring Before the Apple
+      instance_of: obj_life_strength_ring
+      object_kind: token
+      attributes:
+        function: closes on the prince's arm and fills him with prodigious strength
+      evidence: |
+        The ring closed tightly on his arm, and all at once he felt a prodigious strength flowing through his veins
+
+    obj_kings_son_clear_brook_water:
+      name: The Clear Brook Water
+      object_kind: material
+      attributes:
+        function: heals the prince's blinded eyes after the bird reveals its restorative power
+      evidence: |
+        washed and bathed his face in it
+
+    obj_kings_son_water_of_life_bottle:
+      name: The Maiden's Bottle of Water of Life
+      instance_of: obj_water_of_life
+      object_kind: relic
+      attributes:
+        function: removes pain and restores strength after each night of torment
+      evidence: |
+        a little bottle wherein was the water of life
+
+    obj_kings_son_sword:
+      name: The Delivering Sword
+      object_kind: weapon
+      attributes:
+        function: swung three times over the stairs to complete the castle's release
+      evidence: |
+        swing thy sword three times over the stairs
+
+  locations:
+
+    loc_fearless_father_house:
+      name: The Father's Royal House
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        stay at home in his father’s house
+
+    loc_fearless_giant_house:
+      name: The Giant's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        the house of a giant
+
+    loc_fearless_giant_yard:
+      name: The Giant's Yard of Playthings
+      instance_of: loc_courtyard
+      evidence: |
+        the giant’s playthings lying in the yard
+
+    loc_fearless_life_garden:
+      name: The Wondrous Garden of the Tree of Life
+      instance_of: loc_garden
+      threshold_type: threshold_gate
+      evidence: |
+        he came to the wondrous garden
+
+    loc_fearless_tree_of_life:
+      name: The Tree of Life
+      instance_of: loc_tree
+      evidence: |
+        stood the tree of life
+
+    loc_fearless_river:
+      name: The River of the Giant's Stratagem
+      instance_of: loc_river
+      threshold_type: threshold_river
+      evidence: |
+        We will bathe in the river
+
+    loc_fearless_precipice:
+      name: The High Rock and Precipice
+      instance_of: loc_mountain
+      evidence: |
+        led him to the top of a high rock
+
+    loc_fearless_healing_brook:
+      name: The Clear Brook of Restored Sight
+      instance_of: loc_brook
+      evidence: |
+        guided him to a tree by which flowed a clear brook
+
+    loc_fearless_enchanted_castle:
+      name: The Enchanted Castle
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        arrived before a castle which was enchanted
+
+    loc_fearless_great_hall:
+      name: The Great Hall of Three Nights
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        pass three nights in the great hall
+
+    loc_fearless_stairs:
+      name: The Stairs of Final Release
+      instance_of: loc_castle
+      threshold_type: threshold_doorway
+      evidence: |
+        over the stairs
+
+
+classifications:
+
+  world_laws:
+    - law_life_ring_confers_strength_and_lion_mastery
+    - law_silent_torment_releases_enchanted_princess
+    - law_fearlessness_defeats_supernatural
+
+  moral_regimes:
+    - moral_restorative
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_extraordinary_body
+    - agency_object_mediation
+    - agency_violence
+    - agency_animal_aid
+
+  affects_driving:
+    - affect_joy
+    - affect_fear
+    - affect_anger
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_doorway
+    - threshold_gate
+    - threshold_river
+
+
+propp:
+
+  - function: func_departure
+    order: 1
+    actor: fearless_kings_son
+    scene: The fearless prince leaves his father's house to see wonders in the world.
+    evidence: |
+      I will go forth into the wide world
+
+  - function: func_giant_encounter
+    order: 2
+    actor: fearless_kings_son
+    scene: He reaches a giant's house and plays with the giant's enormous balls and nine-pins.
+    evidence: |
+      played with his nine-pins
+
+  - function: func_quest_assignment
+    order: 3
+    actor: fearless_giant
+    beneficiary: fearless_giant_bride
+    scene: The giant sends him to fetch an apple from the Tree of Life.
+    evidence: |
+      go and bring me an apple of the tree of life
+
+  - function: func_magical_acquisition
+    order: 4
+    actor: fearless_kings_son
+    scene: The prince crosses the sleeping beasts, takes the apple through the ring, and gains strength.
+    evidence: |
+      he felt a prodigious strength flowing through his veins
+
+  - function: func_animal_helper
+    order: 5
+    actor: fearless_lion
+    beneficiary: fearless_kings_son
+    scene: The awakened lion follows the prince humbly as its master.
+    evidence: |
+      following him humbly as its master
+
+  - function: func_betrayal
+    order: 6
+    actor: fearless_giant
+    victim: fearless_kings_son
+    scene: The giant steals the ring at the river and later blinds the prince.
+    evidence: |
+      surprised him, and put both his eyes out
+
+  - function: func_rescue
+    order: 7
+    actor: fearless_lion
+    beneficiary: fearless_kings_son
+    scene: The lion saves the blind prince from the precipice and throws the giant down.
+    evidence: |
+      the lion pushed the giant so that he was thrown down
+
+  - function: func_healing
+    order: 8
+    actor: fearless_healing_bird
+    beneficiary: fearless_kings_son
+    scene: A bird's recovery in the brook reveals the healing water that restores the prince's sight.
+    evidence: |
+      as if it had recovered its sight again
+
+  - function: func_enchanted_castle_request
+    order: 9
+    actor: fearless_black_maiden
+    beneficiary: fearless_kings_son
+    scene: The black maiden asks him to deliver her from the evil spell.
+    evidence: |
+      deliver me from the evil spell
+
+  - function: func_silent_ordeal
+    order: 10
+    actor: fearless_little_devils
+    victim: fearless_kings_son
+    scene: For three nights devils torment the prince, but he bears it without a cry.
+    evidence: |
+      he bore everything, and never uttered a cry
+
+  - function: func_restoration
+    order: 11
+    actor: fearless_black_maiden
+    beneficiary: fearless_kings_son
+    scene: The maiden heals him with water of life after each night and gradually turns white.
+    evidence: |
+      she had already become white to the tips of her fingers
+
+  - function: func_disenchantment
+    order: 12
+    actor: fearless_kings_son
+    beneficiary: fearless_black_maiden
+    scene: The prince swings his sword three times over the stairs and the whole castle is released.
+    evidence: |
+      the whole castle was released from enchantment
+
+  - function: func_wedding
+    order: 13
+    actor: fearless_kings_son
+    beneficiary: fearless_black_maiden
+    scene: The restored king's daughter and the prince marry that evening.
+    evidence: |
+      the wedding was solemnized with great rejoicings
+
+
+edges:
+
+  - from: fearless_kings_son
+    label: LEAVES
+    to: loc_fearless_father_house
+    evidence: |
+      took leave of his parents
+
+  - from: fearless_kings_son
+    label: ENTERS
+    to: loc_fearless_giant_house
+    evidence: |
+      he got to the house of a giant
+
+  - from: fearless_kings_son
+    label: PLAYS_WITH
+    to: obj_fearless_giant_playthings
+    evidence: |
+      rolled the balls at them
+
+  - from: fearless_giant
+    label: REQUESTS
+    to: obj_kings_son_life_apple
+    evidence: |
+      go and bring me an apple of the tree of life
+
+  - from: fearless_kings_son
+    label: ENTERS
+    to: loc_fearless_life_garden
+    evidence: |
+      got safely into the garden
+
+  - from: fearless_kings_son
+    label: GATHERS
+    to: obj_kings_son_life_apple
+    evidence: |
+      gathered the apple
+
+  - from: obj_kings_son_life_ring
+    label: STRENGTHENS
+    to: fearless_kings_son
+    evidence: |
+      prodigious strength flowing through his veins
+
+  - from: fearless_lion
+    label: FOLLOWS_AS_MASTER
+    to: fearless_kings_son
+    evidence: |
+      following him humbly as its master
+
+  - from: fearless_giant_bride
+    label: DEMANDS_PROOF_OF
+    to: obj_kings_son_life_ring
+    evidence: |
+      until I see the ring on thine arm
+
+  - from: fearless_giant
+    label: TRIES_TO_STEAL
+    to: obj_kings_son_life_ring
+    evidence: |
+      take away by force
+
+  - from: fearless_giant
+    label: STEALS
+    to: obj_kings_son_life_ring
+    evidence: |
+      The giant instantly snatched the ring
+
+  - from: fearless_lion
+    label: RECOVERS
+    to: obj_kings_son_life_ring
+    evidence: |
+      tore the ring out of his hand, and brought it back to its master
+
+  - from: fearless_giant
+    label: BLINDS
+    to: fearless_kings_son
+    evidence: |
+      put both his eyes out
+
+  - from: fearless_lion
+    label: SAVES_FROM
+    to: loc_fearless_precipice
+    evidence: |
+      drew him gradually back again
+
+  - from: fearless_lion
+    label: KILLS
+    to: fearless_giant
+    evidence: |
+      pushed the giant so that he was thrown down and fell, dashed to pieces
+
+  - from: fearless_healing_bird
+    label: REVEALS_HEALING_OF
+    to: obj_kings_son_clear_brook_water
+    evidence: |
+      recognized a sign from God
+
+  - from: obj_kings_son_clear_brook_water
+    label: RESTORES_SIGHT_TO
+    to: fearless_kings_son
+    evidence: |
+      he had his eyes once more
+
+  - from: fearless_black_maiden
+    label: ASKS_DELIVERANCE_FROM
+    to: fearless_kings_son
+    evidence: |
+      if thou couldst but deliver me
+
+  - from: fearless_black_maiden
+    label: SETS_ORDEAL_FOR
+    to: fearless_kings_son
+    evidence: |
+      pass three nights in the great hall
+
+  - from: fearless_little_devils
+    label: TORMENTS
+    to: fearless_kings_son
+    evidence: |
+      pinched him, pricked him, beat him, and tormented him
+
+  - from: fearless_kings_son
+    label: ENDURES_SILENTLY
+    to: fearless_little_devils
+    evidence: |
+      no sound escaped from him
+
+  - from: obj_kings_son_water_of_life_bottle
+    label: HEALS
+    to: fearless_kings_son
+    evidence: |
+      he at once felt all pain depart
+
+  - from: fearless_black_maiden
+    label: TRANSFORMS_TOWARD_WHITE
+    to: fearless_black_maiden
+    evidence: |
+      her feet had become white
+
+  - from: fearless_kings_son
+    label: SWINGS
+    to: obj_kings_son_sword
+    evidence: |
+      swing thy sword three times
+
+  - from: obj_kings_son_sword
+    label: RELEASES
+    to: loc_fearless_enchanted_castle
+    evidence: |
+      the whole castle was released from enchantment
+
+  - from: fearless_black_maiden
+    label: REVEALED_AS
+    to: fearless_black_maiden
+    evidence: |
+      the maiden was a rich King’s daughter
+
+  - from: fearless_kings_son
+    label: MARRIES
+    to: fearless_black_maiden
+    evidence: |
+      the wedding was solemnized with great rejoicings

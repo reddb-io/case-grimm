@@ -1,0 +1,207 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: straw-coal-and-bean
+khm: 18
+atu: '295'
+atu_name: The Straw, the Coal, and the Bean
+canonical_source: ../../2-silver/canonical/straw-coal-and-bean/canonical.txt
+title: The Straw, the Coal, and the Bean
+
+
+entities:
+
+  characters:
+
+    straw_coal_bean_straw:
+      name: The Straw
+      being_type: being_animated_object
+      agency_modes: [agency_speech, agency_cunning]
+      traits: [escaped-fuel, bridge-maker, self-sacrificing-crossing, burned-and-drowned]
+      evidence: |
+        "I will lay myself straight across, and then you can walk over
+        on me as on a bridge."
+
+    straw_coal_bean_coal:
+      name: The Burning Coal
+      being_type: being_animated_object
+      agency_modes: [agency_speech, agency_endurance]
+      affects: [affect_fear]
+      traits: [fire-escapee, impetuous, bridge-crosser, afraid-midstream, extinguished]
+      evidence: |
+        "the coal, who was of an impetuous disposition, tripped quite
+        boldly on to the newly-built bridge."
+
+    straw_coal_bean_bean:
+      name: The Bean
+      being_type: being_animated_object
+      agency_modes: [agency_speech, agency_endurance]
+      traits: [escaped-broth, prudent-shore-waiter, laughter-burster, sewn-survivor, black-seamed-origin]
+      evidence: |
+        "The bean, who had prudently stayed behind on the shore, could
+        not but laugh at the event"
+
+    straw_coal_bean_old_woman:
+      name: The Poor Old Woman
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_violence]
+      traits: [bean-cooker, straw-burner, unwitting-animator-threat]
+      evidence: |
+        "wanted to cook them. So she made a fire on her hearth"
+
+    straw_coal_bean_tailor:
+      name: The Travelling Tailor
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_endurance]
+      traits: [work-seeker, compassionate-mender, black-thread-user]
+      evidence: |
+        "a tailor who was traveling in search of work, had... a
+        compassionate heart"
+
+  magic_objects:
+
+    obj_dish_of_beans_straw_coal_bean:
+      name: The Dish of Beans
+      object_kind: food
+      attributes:
+        function: source group from which the single bean escapes
+      evidence: |
+        "had gathered together a dish of beans and wanted to cook them"
+
+    obj_handful_of_straw_straw_coal_bean:
+      name: The Handful of Straw
+      object_kind: material
+      attributes:
+        function: hearth fuel; source group from which the straw escapes
+      evidence: |
+        "she lighted it with a handful of straw."
+
+    obj_tailor_needle_thread_straw_coal_bean:
+      name: The Tailor's Needle and Black Thread
+      instance_of: obj_needle_thread
+      object_kind: tool
+      attributes:
+        thread_color: black
+        function: sews the burst bean together and creates the visible seam
+      evidence: |
+        "pulled out his needle and thread, and sewed her together"
+
+  locations:
+
+    loc_village_straw_coal_bean:
+      name: The Village
+      evidence: |
+        "In a village dwelt a poor old woman"
+
+    loc_hearth_straw_coal_bean:
+      name: The Old Woman's Hearth
+      instance_of: loc_hearth
+      evidence: |
+        "she made a fire on her hearth"
+
+    loc_ground_beside_hearth_straw_coal_bean:
+      name: The Ground Beside the Hearth
+      instance_of: loc_house
+      evidence: |
+        "lay on the ground beside a straw"
+
+    loc_brook_straw_coal_bean:
+      name: The Little Brook
+      instance_of: loc_brook
+      evidence: |
+        "they came to a little brook, and as there was no bridge or
+        foot-plank"
+
+    loc_brook_shore_straw_coal_bean:
+      name: The Brook Shore Where the Bean Waits
+      instance_of: loc_brook
+      evidence: |
+        "The bean, who had prudently stayed behind on the shore"
+
+
+classifications:
+
+  world_laws:
+    - law_etiological_mishap_marks_species
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+    - agency_domestic_labor
+    - agency_endurance
+
+  affects_driving:
+    - affect_fear
+
+  symbol_numbers:
+    - num_3   # three escaped companions: straw, coal, bean
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_lack, order: 1, actor: straw_coal_bean_old_woman,
+      scene: "old woman prepares beans, straw, hearth, and fire for cooking" }
+  - { function: func_departure, order: 2, actor: straw_coal_bean_bean,
+      scene: "bean, straw, and coal escape kitchen destruction and leave together" }
+  - { function: func_mediation, order: 3, actor: straw_coal_bean_bean,
+      scene: "bean proposes companionship and flight to a foreign country" }
+  - { function: func_difficult_task, order: 4, actor: straw_coal_bean_straw,
+      scene: "companions must cross a brook with no bridge or foot-plank" }
+  - { function: func_magical_agent, order: 5, actor: straw_coal_bean_straw,
+      scene: "straw turns herself into a bridge" }
+  - { function: func_villainy, order: 6, actor: straw_coal_bean_coal,
+      scene: "coal stops in fear mid-bridge; straw burns and breaks" }
+  - { function: func_punishment, order: 7, actor: straw_coal_bean_coal,
+      scene: "straw and coal fall into the brook and die" }
+  - { function: func_rescue, order: 8, actor: straw_coal_bean_tailor,
+      scene: "tailor sews the burst bean together" }
+  - { function: func_branding, order: 9, actor: straw_coal_bean_bean,
+      scene: "black thread becomes the permanent black seam of beans" }
+
+
+edges:
+
+  # Kitchen threat and escape
+  - { from: straw_coal_bean_old_woman, to: obj_dish_of_beans_straw_coal_bean, label: PREPARES_TO_COOK,
+      evidence: "had gathered together a dish of beans and wanted to cook them." }
+  - { from: straw_coal_bean_old_woman, to: obj_handful_of_straw_straw_coal_bean, label: BURNS,
+      evidence: "she lighted it with a handful of straw." }
+  - { from: straw_coal_bean_bean, to: loc_ground_beside_hearth_straw_coal_bean, label: ESCAPES_TO,
+      evidence: "one dropped without her observing it, and lay on the ground beside a straw" }
+  - { from: straw_coal_bean_coal, to: loc_ground_beside_hearth_straw_coal_bean, label: ESCAPES_TO,
+      evidence: "a burning coal from the fire leapt down to the two." }
+  - { from: straw_coal_bean_straw, to: straw_coal_bean_bean, label: QUESTIONS,
+      evidence: "Dear friends, from whence do you come here?" }
+  - { from: straw_coal_bean_bean, to: straw_coal_bean_straw, label: PROPOSES_COMPANIONSHIP_TO,
+      evidence: "we should keep together like good companions" }
+  - { from: straw_coal_bean_bean, to: straw_coal_bean_coal, label: PROPOSES_COMPANIONSHIP_TO,
+      evidence: "we should go away together, and repair to a foreign country." }
+
+  # Failed brook crossing
+  - { from: straw_coal_bean_straw, to: loc_brook_straw_coal_bean, label: BRIDGES,
+      evidence: "stretched itself from one bank to the other" }
+  - { from: straw_coal_bean_coal, to: straw_coal_bean_straw, label: CROSSES_ON,
+      evidence: "tripped quite boldly on to the newly-built bridge." }
+  - { from: loc_brook_straw_coal_bean, to: straw_coal_bean_coal, label: FRIGHTENS,
+      evidence: "heard the water rushing beneath her" }
+  - { from: straw_coal_bean_coal, to: straw_coal_bean_straw, label: BURNS,
+      evidence: "The straw, however, began to burn" }
+  - { from: straw_coal_bean_straw, to: loc_brook_straw_coal_bean, label: DIES_IN,
+      evidence: "broke in two pieces, and fell into the stream." }
+  - { from: straw_coal_bean_coal, to: loc_brook_straw_coal_bean, label: DIES_IN,
+      evidence: "hissed when she got into the water, and breathed her last." }
+  - { from: straw_coal_bean_bean, to: straw_coal_bean_coal, label: LAUGHS_AT,
+      evidence: "laughed so heartily that she burst." }
+
+  # Etiological repair
+  - { from: straw_coal_bean_tailor, to: straw_coal_bean_bean, label: RESCUES,
+      evidence: "As he had a compassionate heart" }
+  - { from: straw_coal_bean_tailor, to: obj_tailor_needle_thread_straw_coal_bean, label: USES,
+      evidence: "pulled out his needle and thread" }
+  - { from: obj_tailor_needle_thread_straw_coal_bean, to: straw_coal_bean_bean, label: SEWS_TOGETHER,
+      evidence: "sewed her together." }
+  - { from: obj_tailor_needle_thread_straw_coal_bean, to: straw_coal_bean_bean, label: MARKS_WITH_BLACK_SEAM,
+      evidence: "as the tailor used black thread, all beans since then have a black seam." }

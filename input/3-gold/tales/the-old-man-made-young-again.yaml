@@ -1,0 +1,361 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-old-man-made-young-again
+khm: 147
+atu: '753'
+atu_name: Christ and the Smith / The Old Man Made Young Again
+canonical_source: ../../2-silver/canonical/the-old-man-made-young-again/canonical.txt
+title: The Old Man Made Young Again
+
+
+entities:
+
+  characters:
+
+    old_man_lord:
+      name: Our Lord
+      archetypes: [arc_supernatural_donor]
+      species: sp_human
+      being_type: being_divine
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_command, speech_blessing]
+      traits: [earth-walking-lord, forge-healer, sacred-rejuvenator, grateful-guest]
+      evidence: |
+        In the time when our Lord still walked this earth
+
+    old_man_st_peter:
+      name: St. Peter
+      archetypes: [arc_wise_helper]
+      species: sp_human
+      being_type: being_divine
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_request]
+      affects: [affect_pity]
+      traits: [compassionate-intercessor, bellows-helper, lord-companion]
+      evidence: |
+        St. Peter had compassion on him
+
+    old_man_smith:
+      name: The Smith
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_object_mediation, agency_speech]
+      speech_acts_performed: [speech_command, speech_request]
+      affects: [affect_joy]
+      traits: [hospitable-smith, close-watcher, craft-imitator, failed-rejuvenator]
+      evidence: |
+        The smith, who had watched everything closely and attentively
+
+    old_man_beggar:
+      name: The Ailing Old Beggar
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      existential_states: [state_transformed]
+      speech_acts_performed: [speech_request, speech_blessing]
+      affects: [affect_pity, affect_joy]
+      traits: [aged-beggar, infirm-alms-seeker, forge-rejuvenated-youth, comfort-testifier]
+      evidence: |
+        a poor beggar, hardly pressed by age and infirmity
+
+    old_man_mother_in_law:
+      name: The Smith's Old Mother-in-Law
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      existential_states: [state_blind, state_maimed]
+      speech_acts_performed: [speech_request]
+      affects: [affect_fear]
+      traits: [old-half-blind-crooked-woman, willing-rejuvenation-subject, burned-failed-patient, shrivelled-warning-body]
+      evidence: |
+        an old half-blind crooked, mother-in-law
+
+    old_man_smith_wife:
+      name: The Smith's Wife
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_fear]
+      traits: [pregnant-witness, scream-hearer, ape-child-mother]
+      evidence: |
+        the smith’s wife upstairs and her daughter-in-law heard
+
+    old_man_daughter_in_law:
+      name: The Smith's Daughter-in-Law
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_fear]
+      traits: [pregnant-witness, scream-hearer, ape-child-mother]
+      evidence: |
+        the smith’s wife upstairs and her daughter-in-law heard
+
+    old_man_ape_children:
+      name: The First Ape Children
+      species: sp_ape
+      agency_modes: [agency_endurance]
+      traits: [terror-born-children, not-made-like-men, forest-runners, ape-race-origin]
+      evidence: |
+        two boys were born who were not made like men but apes
+
+  magic_objects:
+
+    obj_old_man_forge_fire:
+      name: The Red-Hot Forge Fire
+      object_kind: material
+      attributes:
+        function: sacred heating medium for rejuvenation and failed burning medium in the imitation
+      evidence: |
+        the coal fire sparkled up large and high
+
+    obj_old_man_bellows:
+      name: St. Peter's Bellows
+      object_kind: tool
+      attributes:
+        function: raises the forge fire for the Lord's healing and the smith's failed copy
+      evidence: |
+        St. Peter blew the bellows
+
+    obj_old_man_quenching_tub:
+      name: The Quenching Tub
+      object_kind: tool
+      attributes:
+        function: cooling water that completes sacred rejuvenation but cannot save the copied procedure
+      evidence: |
+        the Lord went to the quenching tub
+
+  locations:
+
+    loc_old_man_smith_house:
+      name: The Smith's House
+      instance_of: loc_house
+      evidence: |
+        stopped one evening at a smith’s and received free quarters
+
+    loc_old_man_made_young_forge:
+      name: The Smith's Forge
+      instance_of: loc_forge
+      evidence: |
+        lend me thy forge
+
+    loc_old_man_forest:
+      name: The Woods of the Ape Children
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        they ran into the woods
+
+
+classifications:
+
+  world_laws:
+    - law_sacred_forge_rejuvenates_body
+    - law_imitated_miracle_without_authority_deforms_body
+
+  moral_regimes:
+    - moral_mercy_over_judgment
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_speech
+    - agency_domestic_labor
+    - agency_endurance
+
+  affects_driving:
+    - affect_pity
+    - affect_joy
+    - affect_fear
+
+  symbol_numbers:
+    - num_2
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+
+  - function: func_hospitality
+    order: 1
+    actor: old_man_smith
+    beneficiary: old_man_lord
+    scene: The smith gives free lodging to the Lord and St. Peter.
+    evidence: |
+      received free quarters
+
+  - function: func_lack
+    order: 2
+    actor: old_man_beggar
+    scene: The aged beggar arrives under the pressure of infirmity and poverty.
+    evidence: |
+      hardly pressed by age and infirmity
+
+  - function: func_intercession
+    order: 3
+    actor: old_man_st_peter
+    beneficiary: old_man_beggar
+    scene: St. Peter asks the Lord to cure the beggar's torments.
+    evidence: |
+      cure his torments that he may be able to win his own bread
+
+  - function: func_transfiguration
+    order: 4
+    actor: old_man_lord
+    beneficiary: old_man_beggar
+    scene: The Lord heats, quenches, blesses, and restores the old beggar to youth.
+    evidence: |
+      looking fresh, straight, healthy, and as if he were but twenty
+
+  - function: func_imitation
+    order: 5
+    actor: old_man_smith
+    victim: old_man_mother_in_law
+    scene: The smith imitates the visible procedure on his old mother-in-law.
+    evidence: |
+      he might make his old mother-in-law young again likewise
+
+  - function: func_failed_transfiguration
+    order: 6
+    actor: old_man_smith
+    victim: old_man_mother_in_law
+    scene: The copied forge treatment burns and deforms instead of rejuvenating.
+    evidence: |
+      with her face wrinkled and shrivelled and all out of shape
+
+  - function: func_etiology
+    order: 7
+    actor: old_man_ape_children
+    scene: The frightened pregnant witnesses give birth to apes, beginning the ape race.
+    evidence: |
+      from them sprang the race of apes
+
+
+edges:
+
+  - from: old_man_lord
+    label: TRAVELS_WITH
+    to: old_man_st_peter
+    evidence: |
+      he and St. Peter stopped one evening
+
+  - from: old_man_smith
+    label: HOSTS
+    to: old_man_lord
+    evidence: |
+      received free quarters
+
+  - from: old_man_beggar
+    label: BEGS_FROM
+    to: old_man_smith
+    evidence: |
+      came to this house and begged alms of the smith
+
+  - from: old_man_st_peter
+    label: INTERCEDES_FOR
+    to: old_man_beggar
+    evidence: |
+      St. Peter had compassion on him
+
+  - from: old_man_lord
+    label: REQUESTS
+    to: loc_old_man_made_young_forge
+    evidence: |
+      Smith, lend me thy forge
+
+  - from: old_man_st_peter
+    label: BLOWS
+    to: obj_old_man_bellows
+    evidence: |
+      St. Peter blew the bellows
+
+  - from: old_man_lord
+    label: HEATS
+    to: old_man_beggar
+    evidence: |
+      pushed him in the forge in the midst of the red-hot fire
+
+  - from: old_man_lord
+    label: QUENCHES
+    to: old_man_beggar
+    evidence: |
+      put the glowing little man into it so that the water closed over him
+
+  - from: old_man_lord
+    label: BLESSES
+    to: old_man_beggar
+    evidence: |
+      gave him his blessing
+
+  - from: law_sacred_forge_rejuvenates_body
+    label: REJUVENATES
+    to: old_man_beggar
+    evidence: |
+      sprang nimbly out, looking fresh, straight, healthy
+
+  - from: old_man_mother_in_law
+    label: QUESTIONS
+    to: old_man_beggar
+    evidence: |
+      asked if the fire had burnt him much
+
+  - from: old_man_beggar
+    label: TESTIFIES_TO_COMFORT
+    to: old_man_mother_in_law
+    evidence: |
+      he had never felt more comfortable
+
+  - from: old_man_smith
+    label: IMITATES
+    to: old_man_lord
+    evidence: |
+      as he had watched everything so carefully
+
+  - from: old_man_smith
+    label: THRUSTS_INTO_FIRE
+    to: old_man_mother_in_law
+    evidence: |
+      thrust the old woman into it
+
+  - from: old_man_mother_in_law
+    label: SCREAMS_IN
+    to: loc_old_man_made_young_forge
+    evidence: |
+      uttered terrible cries of murder
+
+  - from: old_man_smith
+    label: QUENCHES
+    to: old_man_mother_in_law
+    evidence: |
+      took her out and threw her into the cooling-tub
+
+  - from: law_imitated_miracle_without_authority_deforms_body
+    label: DEFORMS
+    to: old_man_mother_in_law
+    evidence: |
+      wrinkled and shrivelled and all out of shape
+
+  - from: old_man_smith_wife
+    label: WITNESSES
+    to: old_man_mother_in_law
+    evidence: |
+      saw the old woman lying in a heap in the quenching-tub
+
+  - from: old_man_daughter_in_law
+    label: WITNESSES
+    to: old_man_mother_in_law
+    evidence: |
+      saw the old woman lying in a heap in the quenching-tub
+
+  - from: old_man_smith_wife
+    label: GIVES_BIRTH_TO
+    to: old_man_ape_children
+    evidence: |
+      two boys were born who were not made like men but apes
+
+  - from: old_man_daughter_in_law
+    label: GIVES_BIRTH_TO
+    to: old_man_ape_children
+    evidence: |
+      two boys were born who were not made like men but apes
+
+  - from: old_man_ape_children
+    label: RUNS_TO
+    to: loc_old_man_forest
+    evidence: |
+      they ran into the woods

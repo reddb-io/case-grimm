@@ -1,0 +1,363 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-golden-goose
+khm: 64
+atu: '571/513B'
+atu_name: All Stick Together / The Land-and-Water Ship
+canonical_source: ../../2-silver/canonical/the-golden-goose/canonical.txt
+title: The Golden Goose
+
+
+entities:
+
+  characters:
+
+    golden_goose_dummling:
+      name: Dummling
+      archetypes: [arc_youngest_sibling]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_bargain]
+      affects: [affect_pity]
+      traits: [despised-youngest, donor-feeder, golden-goose-carrier, laughter-maker, impossible-task-seeker, bridegroom, inheriting-king]
+      evidence: |
+        the youngest of whom was called Dummling, and was despised,
+        mocked, and put down on every occasion.
+
+    golden_goose_eldest_brother:
+      name: The Eldest Brother
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_greed]
+      traits: [forest-woodcutter, donor-refuser, self-protective, arm-wounded]
+      evidence: |
+        If I give you my cake and wine, I shall have none for myself
+
+    golden_goose_second_brother:
+      name: The Second Brother
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      affects: [affect_greed]
+      traits: [forest-woodcutter, donor-refuser, self-protective, leg-wounded]
+      evidence: |
+        What I give you will be taken away from myself
+
+    golden_goose_father:
+      name: Dummling's Father
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      traits: [dismissive-father, reluctant-permitter]
+      evidence: |
+        leave it alone, you do not understand anything about it.
+
+    golden_goose_mother:
+      name: The Mother
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [provision-giver, unequal-feeder]
+      evidence: |
+        His mother gave him a cake made with water and baked in the
+        cinders
+
+    golden_goose_little_grey_man:
+      name: The Little Grey-Haired Old Man
+      archetypes: [arc_supernatural_donor]
+      being_type: being_dwarf
+      agency_modes: [agency_speech, agency_object_mediation]
+      traits: [hunger-thirst-tester, punishment-maker, tree-reward-giver, ship-giver]
+      evidence: |
+        Since you have a good heart, and are willing to divide what you
+        have, I will give you good luck.
+
+    golden_goose_inn_daughters:
+      name: The Host's Three Daughters
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech]
+      affects: [affect_greed, affect_curiosity]
+      traits: [gold-feather-coveters, sequential-touchers, goose-stuck-girls]
+      evidence: |
+        would have liked to have one of its golden feathers.
+
+    golden_goose_parson:
+      name: The Parson
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      affects: [affect_shame]
+      traits: [moral-corrector, girl-puller, stuck-runner]
+      evidence: |
+        For shame, you good-for-nothing girls
+
+    golden_goose_sexton:
+      name: The Sexton
+      species: sp_human
+      agency_modes: [agency_speech]
+      traits: [parson-follower, sleeve-toucher, christening-reminder, stuck-runner]
+      evidence: |
+        do not forget that we have a christening to-day!
+
+    golden_goose_labourers:
+      name: The Two Labourers with Hoes
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [field-workers, parson-helpers, final-stuck-pair]
+      evidence: |
+        two labourers came with their hoes from the fields
+
+    golden_goose_king:
+      name: The King with the Unlaughing Daughter
+      archetypes: [arc_oath_enforcer]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_promise, speech_command]
+      affects: [affect_shame]
+      traits: [laughter-decree-maker, son-in-law-avoider, impossible-task-setter, final-consenter]
+      evidence: |
+        the king did not like the son-in-law, and made all manner of
+        excuses
+
+    golden_goose_princess:
+      name: The Unlaughing King's Daughter
+      archetypes: [arc_unlaughing_princess]
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      affects: [affect_curiosity]
+      traits: [serious-princess, laughter-bound-bride, final-wife]
+      evidence: |
+        had a daughter who was so serious that no one could make her
+        laugh.
+
+    golden_goose_thirsty_man:
+      name: The Insatiably Thirsty Man
+      species: sp_human
+      agency_modes: [agency_endurance]
+      affects: [affect_longing]
+      traits: [forest-helper, cellar-wine-drinker, thirst-task-solver]
+      evidence: |
+        I have such a great thirst and cannot quench it
+
+    golden_goose_hungry_man:
+      name: The Insatiably Hungry Man
+      species: sp_human
+      agency_modes: [agency_endurance]
+      affects: [affect_hunger]
+      traits: [forest-helper, strapped-body, mountain-of-bread-eater, hunger-task-solver]
+      evidence: |
+        My stomach remains empty, and I must tie myself up if I am not
+        to die of hunger.
+
+  magic_objects:
+
+    obj_golden_goose_cinder_cake:
+      name: Dummling's Transformed Cinder-Cake and Sour Beer
+      object_kind: food
+      attributes:
+        function: poor provisions transformed into fine cake and good wine when shared
+      evidence: |
+        the sour beer had become good wine.
+
+    obj_golden_goose_khm64:
+      name: The Golden Goose
+      instance_of: obj_golden_goose
+      object_kind: creature_object
+      attributes:
+        function: donor reward, sticky procession-maker, laughter trigger
+      evidence: |
+        a goose sitting in the roots with feathers of pure gold.
+
+    obj_golden_goose_feathers:
+      name: The Golden Feathers
+      object_kind: treasure
+      attributes:
+        function: coveted parts that trigger sticking
+      evidence: |
+        one of its golden feathers.
+
+    obj_golden_goose_wine_cellar:
+      name: The King's Cellarful of Wine
+      object_kind: food
+      attributes:
+        function: first impossible task consumed by the thirsty helper
+      evidence: |
+        drink a cellarful of wine.
+
+    obj_golden_goose_bread_mountain:
+      name: The Mountain of Bread
+      object_kind: food
+      attributes:
+        function: second impossible task consumed by the hungry helper
+      evidence: |
+        a whole mountain of bread.
+
+    obj_golden_goose_land_water_ship:
+      name: The Ship that Sails on Land and Water
+      instance_of: obj_land_water_ship
+      object_kind: tool
+      attributes:
+        function: final impossible task supplied by the donor
+      evidence: |
+        a ship which could sail on land and on water.
+
+  locations:
+
+    loc_golden_goose_family_house:
+      name: Dummling's Family House
+      instance_of: loc_house
+      evidence: |
+        There was a man who had three sons
+
+    loc_golden_goose_forest:
+      name: The Donor Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        wanted to go into the forest to hew wood
+
+    loc_golden_goose_old_tree:
+      name: The Old Tree with the Golden Goose
+      instance_of: loc_tree
+      evidence: |
+        There stands an old tree, cut it down
+
+    loc_golden_goose_inn:
+      name: The Inn of the Three Daughters
+      instance_of: loc_inn
+      evidence: |
+        went to an inn where he thought he would stay the night.
+
+    loc_golden_goose_fields:
+      name: The Fields of the Procession
+      instance_of: loc_field
+      evidence: |
+        running across the fields after this young man
+
+    loc_golden_goose_city:
+      name: The City of the Unlaughing Princess
+      evidence: |
+        Soon afterwards he came to a city
+
+    loc_golden_goose_king_cellar:
+      name: The King's Wine Cellar
+      instance_of: loc_cellar
+      evidence: |
+        He led him into the king’s cellar
+
+    loc_golden_goose_palace:
+      name: The King's Palace
+      instance_of: loc_castle
+      evidence: |
+        He led him to the king’s palace
+
+
+classifications:
+
+  world_laws:
+    - law_kindness_to_hidden_donors_rewarded
+    - law_sticky_wonder_object_collects_interferers
+    - law_laughter_releases_reward
+
+  moral_regimes:
+    - moral_kindness_rewarded
+    - moral_comic_inversion
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_speech
+    - agency_endurance
+    - agency_social_rank
+
+  affects_driving:
+    - affect_pity
+    - affect_greed
+    - affect_curiosity
+    - affect_longing
+
+  symbol_numbers:
+    - num_3
+    - num_7
+
+  threshold_types:
+    - threshold_forest
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: golden_goose_dummling,
+      scene: "Dummling is despised as the youngest of three sons" }
+  - { function: func_donor_test, order: 2, actor: golden_goose_little_grey_man,
+      scene: "elder and second brothers refuse to share cake and wine and are wounded" }
+  - { function: func_donor_test, order: 3, actor: golden_goose_dummling,
+      scene: "Dummling shares cinder-cake and sour beer with the hungry old man" }
+  - { function: func_magical_agent, order: 4, actor: golden_goose_little_grey_man,
+      scene: "donor grants the golden goose beneath the old tree" }
+  - { function: func_trickery_punishment, order: 5, actor: obj_golden_goose_khm64,
+      scene: "host's daughters, parson, sexton, and labourers stick together behind the goose" }
+  - { function: func_difficult_task, order: 6, actor: golden_goose_dummling,
+      scene: "the seven-person procession makes the serious princess laugh" }
+  - { function: func_counteraction, order: 7, actor: golden_goose_king,
+      scene: "king evades the reward with tasks to drink wine, eat bread, and procure a land-and-water ship" }
+  - { function: func_helper_intervention, order: 8, actor: golden_goose_thirsty_man,
+      scene: "thirsty forest-man drinks the cellarful of wine" }
+  - { function: func_helper_intervention, order: 9, actor: golden_goose_hungry_man,
+      scene: "hungry forest-man eats the mountain of bread" }
+  - { function: func_magical_agent, order: 10, actor: golden_goose_little_grey_man,
+      scene: "grey man gives the ship that sails on land and water" }
+  - { function: func_wedding, order: 11, actor: golden_goose_dummling,
+      scene: "king can no longer prevent the marriage; Dummling weds and later inherits the kingdom" }
+
+
+edges:
+
+  # Donor test
+  - { from: golden_goose_little_grey_man, to: golden_goose_eldest_brother, label: ASKS_FOOD_FROM,
+      evidence: "Do give me a piece of cake out of your pocket" }
+  - { from: golden_goose_eldest_brother, to: golden_goose_little_grey_man, label: REFUSES,
+      evidence: "be off with you" }
+  - { from: golden_goose_little_grey_man, to: golden_goose_eldest_brother, label: PUNISHES,
+      evidence: "And this was the little grey man’s doing." }
+  - { from: golden_goose_little_grey_man, to: golden_goose_dummling, label: ASKS_FOOD_FROM,
+      evidence: "Give me a piece of your cake and a drink out of your bottle" }
+  - { from: golden_goose_dummling, to: golden_goose_little_grey_man, label: SHARES_WITH,
+      evidence: "if that pleases you, we will sit down and eat." }
+  - { from: golden_goose_little_grey_man, to: obj_golden_goose_khm64, label: REWARDS_WITH,
+      evidence: "you will find something at the roots." }
+
+  # Sticky procession
+  - { from: golden_goose_inn_daughters, to: obj_golden_goose_feathers, label: COVETS,
+      evidence: "would have liked to have one of its golden feathers." }
+  - { from: obj_golden_goose_khm64, to: golden_goose_inn_daughters, label: STICKS_TO,
+      evidence: "her finger and hand remained sticking fast to it." }
+  - { from: golden_goose_parson, to: golden_goose_inn_daughters, label: TRIES_TO_PULL_AWAY,
+      evidence: "seized the youngest by the hand in order to pull her away" }
+  - { from: obj_golden_goose_khm64, to: golden_goose_parson, label: STICKS_TO,
+      evidence: "he likewise stuck fast" }
+  - { from: golden_goose_sexton, to: golden_goose_parson, label: TOUCHES_AND_STICKS_TO,
+      evidence: "took him by the sleeve, but was also held fast to it." }
+  - { from: golden_goose_labourers, to: golden_goose_sexton, label: TOUCHES_AND_STICKS_TO,
+      evidence: "they were held fast" }
+  - { from: obj_golden_goose_khm64, to: law_sticky_wonder_object_collects_interferers, label: ACTIVATES,
+      evidence: "now there were seven of them running behind Dummling and the goose." }
+
+  # Laughter and evasive tasks
+  - { from: obj_golden_goose_khm64, to: golden_goose_princess, label: MAKES_LAUGH,
+      evidence: "she began to laugh quite loudly" }
+  - { from: golden_goose_king, to: golden_goose_princess, label: OFFERS_AS_REWARD,
+      evidence: "whosoever should be able to make her laugh should marry her." }
+  - { from: golden_goose_king, to: golden_goose_dummling, label: ASSIGNS_TASK_TO,
+      attributes: { task: drink_cellarful_of_wine },
+      evidence: "produce a man who could drink a cellarful of wine." }
+  - { from: golden_goose_thirsty_man, to: obj_golden_goose_wine_cellar, label: CONSUMES,
+      evidence: "before the day was out he had emptied all the barrels." }
+  - { from: golden_goose_king, to: golden_goose_dummling, label: ASSIGNS_TASK_TO,
+      attributes: { task: eat_mountain_of_bread },
+      evidence: "find a man who could eat a whole mountain of bread." }
+  - { from: golden_goose_hungry_man, to: obj_golden_goose_bread_mountain, label: CONSUMES,
+      evidence: "by the end of one day the whole mountain had vanished." }
+  - { from: golden_goose_king, to: golden_goose_dummling, label: ASSIGNS_TASK_TO,
+      attributes: { task: bring_land_and_water_ship },
+      evidence: "ordered a ship which could sail on land and on water." }
+  - { from: golden_goose_little_grey_man, to: obj_golden_goose_land_water_ship, label: GIVES,
+      evidence: "I will give you the ship" }
+  - { from: obj_golden_goose_land_water_ship, to: golden_goose_king, label: DEFEATS_EVASION_OF,
+      evidence: "when the king saw that, he could no longer prevent him" }
+  - { from: golden_goose_dummling, to: golden_goose_princess, label: MARRIES,
+      evidence: "The wedding was celebrated" }

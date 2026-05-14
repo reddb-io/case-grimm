@@ -1,0 +1,268 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: our-ladys-child
+khm: 3
+atu: '710'
+atu_name: Our Lady's Child
+canonical_source: ../../2-silver/canonical/our-ladys-child/canonical.txt
+title: Our Lady's Child
+
+
+entities:
+
+  characters:
+
+    our_ladys_child_woodcutter:
+      name: The Woodcutter
+      species: sp_human
+      affects: []
+      traits: [poor, dutiful]
+      evidence: |
+        "Hard by a great forest dwelt a wood-cutter with his wife, who
+         had an only child, a little girl three years old. They were so
+         poor, however, that they no longer had daily bread."
+
+    our_ladys_child_wife:
+      name: The Wife (woodcutter's wife)
+      species: sp_human
+
+    our_ladys_child_queen:
+      name: The Girl / The Queen (Mary's child)
+      archetypes: [arc_silent_bride, arc_repentant_sinner]
+      species: sp_human
+      agency_modes: [agency_endurance]
+      existential_states: [state_mute, state_hidden_identity]
+      transformations: [transform_loss_of_voice, transform_restoration_by_confession]
+      speech_acts_performed: [speech_lie, speech_confession]
+      affects: [affect_curiosity, affect_pride, affect_shame, affect_repentance]
+      traits: [obedient-then-curious, proud, finally-repentant]
+      evidence: |
+        "the hard ice of pride melted, her heart was moved by repentance,
+         and she thought, 'If I could but confess before my death that I
+         opened the door.'"
+
+    our_ladys_child_mary:
+      name: The Virgin Mary
+      archetypes: [arc_prohibition_giver]
+      species: sp_human
+      being_type: being_divine
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_prohibition, speech_command]
+      evidence: |
+        "I am the Virgin Mary, mother of the child Jesus."
+
+    our_ladys_child_king:
+      name: The King (husband)
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      affects: [affect_love]
+      traits: [loving, protective, slow-to-doubt]
+      evidence: |
+        "the King would not believe it, for he loved her so much."
+
+    our_ladys_child_councillors:
+      name: The King's Councillors (collective accusers)
+      species: sp_human
+      agency_modes: [agency_social_rank]
+
+    our_ladys_child_first_son:
+      name: First Son (taken by Mary)
+      species: sp_human
+
+    our_ladys_child_second_son:
+      name: Second Son (taken by Mary)
+      species: sp_human
+
+    our_ladys_child_daughter:
+      name: Third Child — Daughter (taken by Mary)
+      species: sp_human
+
+  magic_objects:
+
+    obj_keys_of_heaven_marys_child:
+      name: The Thirteen Keys of Heaven
+      instance_of: obj_keys_of_heaven
+      object_kind: token
+      attributes:
+        count: 13
+        permitted: 12
+        forbidden: 1
+      evidence: |
+        "take into thy keeping the keys of the thirteen doors of heaven.
+         Twelve of these thou mayest open... but the thirteenth, to
+         which this little key belongs, is forbidden thee."
+
+    obj_forbidden_key_marys_child:
+      name: The Thirteenth Key (forbidden)
+      instance_of: obj_forbidden_key
+      object_kind: token
+      attributes:
+        opens: "the door to the Trinity in fire and splendour"
+
+    obj_golden_finger:
+      name: The Golden Finger (mark of transgression)
+      object_kind: token
+      attributes:
+        cause: touching the Trinity's fire
+        function: indelible evidence of sin
+      evidence: |
+        "she touched the light a little with her finger, and her finger
+         became quite golden... the gold too stayed on her finger, and
+         would not go away."
+
+    obj_hollow_tree_marys_child:
+      name: The Hollow Tree (her dwelling in wilderness)
+      object_kind: architecture
+      evidence: |
+        "there stood an old hollow tree, and this had to be her
+         dwelling-place."
+
+    obj_stake_marys_child:
+      name: The Stake (for burning)
+      object_kind: tool
+      evidence: |
+        "she was fast bound to the stake, and the fire began to burn
+         round about her"
+
+  locations:
+
+    loc_forest_our_ladys_child:
+      name: The Great Forest (woodcutter's place of work)
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+
+    loc_heaven_our_ladys_child:
+      name: Heaven (Mary's domain)
+      instance_of: loc_heaven
+      attributes:
+        doors: 13
+        residents: [angels, apostles, the_trinity]
+      evidence: |
+        "she had made the round of the twelve. In each of them sat one
+         of the Apostles in the midst of a great light."
+
+    loc_wilderness_our_ladys_child:
+      name: The Wilderness (place of exile)
+      instance_of: loc_wilderness
+      attributes:
+        feature: "thick hedges of thorns; an old hollow tree"
+        sustenance: roots, nuts, leaves
+      evidence: |
+        "whithersoever she turned herself, she was continually held back
+         by thick hedges of thorns through which she could not break."
+
+    loc_castle_our_ladys_child:
+      name: The King's Castle
+      instance_of: loc_castle
+
+
+classifications:
+
+  world_laws:
+    - law_prohibition_invites_violation
+    - law_repentance_restores
+
+  moral_regimes:
+    - moral_repentance
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_speech
+
+  affects_driving:
+    - affect_curiosity
+    - affect_pride
+    - affect_repentance
+
+  symbol_numbers:
+    - num_12
+    - num_13
+    - num_3   # three children, three denials, three nights of Mary's appearance
+
+  threshold_types:
+    - threshold_forbidden_door  # NOT YET in ontology — using threshold_doorway via metadata
+    - threshold_doorway
+
+
+propp:
+  - { function: func_lack, order: 1,
+      scene: "poor family cannot feed the child" }
+  - { function: func_donor_test, order: 2, actor: our_ladys_child_mary,
+      scene: "Mary appears, offers to take and raise the child" }
+  - { function: func_interdiction, order: 3, actor: our_ladys_child_mary,
+      scene: "twelve doors permitted, the thirteenth forbidden" }
+  - { function: func_violation, order: 4, actor: our_ladys_child_queen,
+      scene: "opens the thirteenth door, touches the Trinity's fire" }
+  - { function: func_branding, order: 5, victim: our_ladys_child_queen,
+      scene: "the golden finger marks her as transgressor" }
+  - { function: func_villainy, order: 6, actor: our_ladys_child_queen,
+      scene: "denies the sin three times to Mary's face" }
+  - { function: func_departure, order: 7, victim: our_ladys_child_queen,
+      scene: "cast down to earth in wilderness, mute" }
+  - { function: func_difficult_task, order: 8, actor: our_ladys_child_queen,
+      scene: "silent endurance year after year in hollow tree" }
+  - { function: func_recognition, order: 9, actor: our_ladys_child_king,
+      scene: "king finds her, takes her to his castle, marries her" }
+  - { function: func_villainy, order: 10, actor: our_ladys_child_mary,
+      scene: "Mary takes each of three newborns when queen will not confess" }
+  - { function: func_struggle, order: 11, actor: our_ladys_child_councillors,
+      scene: "councillors demand trial; queen condemned to the stake" }
+  - { function: func_recognition, order: 12, actor: our_ladys_child_queen,
+      scene: "at the stake, pride melts; she confesses" }
+  - { function: func_rescue, order: 13, actor: our_ladys_child_mary,
+      scene: "rain extinguishes the fire; children restored; voice returned" }
+
+
+edges:
+
+  # The transfer of the child
+  - { from: our_ladys_child_woodcutter, to: our_ladys_child_mary, label: GIVES_CHILD_TO,
+      evidence: "The wood-cutter obeyed, brought his child, and gave her to the Virgin Mary" }
+
+  # The prohibition
+  - { from: our_ladys_child_mary, to: our_ladys_child_queen, label: PROHIBITS,
+      evidence: "the thirteenth, to which this little key belongs, is forbidden thee. Beware of opening it" }
+
+  # The violation
+  - { from: our_ladys_child_queen, to: obj_forbidden_key_marys_child, label: USES,
+      evidence: "She sought out the key, and when she had got it in her hand, she put it in the lock" }
+
+  # The lies (three times)
+  - { from: our_ladys_child_queen, to: our_ladys_child_mary, label: LIES_TO,
+      evidence: "'Hast thou not opened the thirteenth door also?' 'No,' she replied." }
+
+  # Loss of voice
+  - { from: our_ladys_child_mary, to: our_ladys_child_queen, label: TAKES_AWAY,
+      attributes: { taken: voice, ground: lying },
+      evidence: "Thou hast not obeyed me, and besides that thou hast lied, thou art no longer worthy to be in heaven" }
+
+  # The exile
+  - { from: our_ladys_child_mary, to: our_ladys_child_queen, label: BANISHES_TO,
+      evidence: "when she awoke she lay on the earth below, and in the midst of a wilderness" }
+
+  # The king finds her, marries her
+  - { from: our_ladys_child_king, to: our_ladys_child_queen, label: RESCUES,
+      evidence: "he saw a wonderfully beautiful maiden sitting under the tree" }
+  - { from: our_ladys_child_king, to: our_ladys_child_queen, label: MARRIES,
+      evidence: "it was not long before he married her" }
+
+  # Mary takes the children
+  - { from: our_ladys_child_mary, to: our_ladys_child_first_son, label: TAKES_AWAY,
+      evidence: "the Virgin Mary took the new-born child from her arms, and vanished with it" }
+  - { from: our_ladys_child_mary, to: our_ladys_child_second_son, label: TAKES_AWAY,
+      evidence: "the Virgin took the child out of her arms, and away with her to heaven" }
+  - { from: our_ladys_child_mary, to: our_ladys_child_daughter, label: TAKES_AWAY,
+      evidence: "took from her likewise her third child" }
+
+  # Public accusation
+  - { from: our_ladys_child_councillors, to: our_ladys_child_queen, label: ACCUSES,
+      evidence: "'The Queen is a man-eater. She must be judged'" }
+
+  # The confession breaks the cycle
+  - { from: our_ladys_child_queen, to: our_ladys_child_mary, label: CONFESSES_TO,
+      evidence: "'Yes, Mary, I did it'" }
+
+  # Restoration
+  - { from: our_ladys_child_mary, to: our_ladys_child_queen, label: RESTORES_TO,
+      attributes: { restored: [voice, three_children, life] },
+      evidence: "Then she gave her the three children, untied her tongue, and granted her happiness for her whole life." }

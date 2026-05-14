@@ -1,0 +1,317 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-story-of-the-youth-who-went-forth-to-learn-what-fear-was
+khm: 4
+atu: '326'
+atu_name: The Youth Who Wanted to Learn What Fear Is
+canonical_source: ../../2-silver/canonical/the-story-of-the-youth-who-went-forth-to-learn-what-fear-was/canonical.txt
+title: The Story of the Youth Who Went Forth to Learn What Fear Was
+
+
+entities:
+
+  characters:
+
+    fearless_youth:
+      name: The Youth (younger son, later young king)
+      archetypes: [arc_fearless_fool, arc_youngest_sibling]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_violence]
+      existential_states: [state_fearless]
+      affects: [affect_curiosity]
+      traits: [stupid-by-reputation, literal, unflinching, persistent]
+      evidence: |
+        "'They are always saying \"it makes me shudder, it makes me
+         shudder!\" It does not make me shudder,' thought he. 'That,
+         too, must be an art of which I understand nothing.'"
+
+    fearless_youth_father:
+      name: The Father
+      species: sp_human
+      affects: [affect_shame]
+      traits: [exasperated, dismissive]
+      evidence: |
+        "'I have nothing but unhappiness with you. Go out of my sight.
+         I will see thee no more.'"
+
+    fearless_youth_elder_brother:
+      name: The Elder Brother
+      species: sp_human
+      agency_modes: []
+      affects: [affect_fear]
+      traits: [smart, sensible, afraid-of-dark]
+      evidence: |
+        "'Oh, no, father, I'll not go there, it makes me shudder!'"
+
+    fearless_youth_sexton:
+      name: The Sexton
+      species: sp_human
+      agency_modes: [agency_cunning]
+      speech_acts_performed: [speech_lie]
+      traits: [trickster-priest-figure]
+      evidence: |
+        "The sexton, however, remained standing motionless that the boy
+         might think he was a ghost."
+
+    fearless_youth_sextons_wife:
+      name: The Sexton's Wife
+      species: sp_human
+
+    fearless_youth_gallows_man:
+      name: The Man at the Gallows (failed wager)
+      species: sp_human
+      agency_modes: [agency_cunning]
+
+    fearless_youth_waggoner:
+      name: The Waggoner
+      species: sp_human
+
+    fearless_youth_innkeeper:
+      name: The Innkeeper
+      species: sp_human
+
+    fearless_youth_king:
+      name: The King (of the haunted-castle land)
+      species: sp_human
+      agency_modes: [agency_social_rank]
+
+    fearless_youth_princess:
+      name: The Princess (king's daughter, later wife)
+      species: sp_human
+
+    fearless_youth_waiting_maid:
+      name: The Waiting-Maid (devises the cold-water trick)
+      species: sp_human
+      agency_modes: [agency_cunning]
+      traits: [practical, problem-solver]
+      evidence: |
+        "'I will find a cure for him; he shall soon learn what it is
+         to shudder.'"
+
+    # Spirits of the haunted castle (collective entries — they appear
+    # as repeated supernatural threats; treating each as a separate
+    # character node would be over-modelling. Grouped by encounter.)
+
+    haunted_castle_hanged_men:
+      name: Seven Hanged Men at the Gallows
+      species: sp_human
+      being_type: being_spirit
+      existential_states: []
+      traits: [dead, swinging, mute]
+      evidence: |
+        "the wind knocked the hanged men against each other, and they
+         moved backwards and forwards"
+
+    haunted_castle_black_cats:
+      name: Two Great Black Cats (fiery-eyed)
+      species: sp_cat
+      being_type: being_spirit
+      agency_modes: []
+      evidence: |
+        "two great black cats came with one tremendous leap and sat
+         down on each side of him, and looked savagely at him with
+         their fiery eyes."
+
+    haunted_castle_cats_and_dogs:
+      name: Black Cats and Dogs with Red-hot Chains
+      being_type: being_spirit
+      traits: [chained-in-fire, yowling]
+
+    haunted_castle_half_man:
+      name: The Half-Man (joined from two halves dropped down chimney)
+      species: sp_human
+      being_type: being_spirit
+      transformations: [transform_reassembly]
+      evidence: |
+        "half a man came down the chimney and fell before him... the
+         other half fell down likewise... the two pieces were joined
+         together, and a frightful man was sitting in his place."
+
+    haunted_castle_skittle_players:
+      name: The Spirit Skittle-Players (men with bones for pins)
+      being_type: being_spirit
+      evidence: |
+        "they brought nine dead men's legs and two skulls, and set
+         them up and played at nine-pins with them."
+
+    haunted_castle_dead_cousin:
+      name: The "Little Cousin" (revenant in coffin)
+      species: sp_human
+      being_type: being_spirit
+      existential_states: [state_transformed]
+      traits: [cold-as-ice, then-warmed, attempts-strangulation]
+      evidence: |
+        "The dead man, however, got up and cried, 'Now will I strangle thee.'"
+
+    haunted_castle_bearded_giant:
+      name: The Old Man with Long White Beard (final guardian)
+      species: sp_human
+      being_type: being_spirit
+      agency_modes: [agency_violence]
+      traits: [tall, terrible, white-bearded, treasure-keeper]
+      evidence: |
+        "Then a man entered who was taller than all others, and looked
+         terrible. He was old, however, and had a long white beard."
+
+  magic_objects:
+
+    obj_anvil_youth:
+      name: The Smith's Anvil (split by the youth to trap the beard)
+      instance_of: obj_anvil
+      object_kind: tool
+
+    obj_coffin_dead_cousin:
+      name: The Coffin (carrying the revenant cousin)
+      object_kind: architecture
+
+    obj_haunted_castle_treasure:
+      name: Three Chests of Gold (released after defeating the giant)
+      object_kind: treasure
+      attributes:
+        chests: 3
+        distribution: [poor, king, hero]
+      evidence: |
+        "'Of these,' said he, 'one part is for the poor, the other
+         for the king, the third is thine.'"
+
+    obj_cold_water_gudgeons:
+      name: Bucket of Cold Water with Gudgeons (final fear-trigger)
+      object_kind: trail
+      attributes:
+        purpose: induce shudder in the fearless king
+      evidence: |
+        "his wife was to draw the clothes off him and empty the
+         bucketful of cold water with the gudgeons in it over him"
+
+  locations:
+
+    loc_church_tower_youth:
+      name: The Church Tower (where the sexton plays ghost)
+      instance_of: loc_church
+
+    loc_gallows_youth:
+      name: The Gallows (with seven hanged men)
+      instance_of: loc_gallows
+
+    loc_haunted_castle:
+      name: The Haunted Castle (King's, awaiting deliverance)
+      instance_of: loc_castle
+      threshold_type: threshold_castle
+      attributes:
+        nights_required: 3
+        condition_for_freedom: survive without dying
+        reward: princess + treasure
+
+    loc_smiths_forge_in_castle:
+      name: The Smith's Forge inside the Castle (cellar level)
+      instance_of: loc_castle
+
+
+classifications:
+
+  world_laws:
+    - law_fearlessness_defeats_supernatural
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_violence
+
+  affects_driving:
+    - affect_curiosity
+
+  symbol_numbers:
+    - num_3   # three nights in haunted castle, three chests of gold
+    - num_7   # seven hanged men
+
+  threshold_types:
+    - threshold_castle
+
+
+propp:
+  # Anti-quest: the hero seeks an affect he LACKS, rather than an
+  # object or person. The quest succeeds in trivialised form at the
+  # end via household contingency rather than supernatural ordeal.
+  - { function: func_lack, order: 1, victim: fearless_youth,
+      scene: "the youth lacks fear; his father shames him for it" }
+  - { function: func_departure, order: 2, actor: fearless_youth,
+      scene: "father gives him fifty thalers and sends him out" }
+  - { function: func_donor_test, order: 3, actor: fearless_youth_gallows_man,
+      scene: "gallows-man bets him on the hanged-men test — youth fails to feel fear" }
+  - { function: func_difficult_task, order: 4, actor: fearless_youth_king,
+      scene: "king sets the three-night haunted-castle vigil" }
+  - { function: func_struggle, order: 5, actor: fearless_youth,
+      scene: "night 1 — defeats the black cats and dogs" }
+  - { function: func_struggle, order: 6, actor: fearless_youth,
+      scene: "night 2 — joins skittle game; survives the half-man" }
+  - { function: func_struggle, order: 7, actor: fearless_youth,
+      scene: "night 3 — defeats the revenant cousin and the bearded giant" }
+  - { function: func_victory, order: 8, actor: fearless_youth,
+      scene: "treasure released; castle delivered" }
+  - { function: func_wedding, order: 9, scene: "marries the king's daughter" }
+  - { function: func_recognition, order: 10, actor: fearless_youth,
+      scene: "finally learns fear via cold water + gudgeons — anti-climax" }
+
+
+edges:
+
+  # The constitutive lack
+  - { from: fearless_youth, to: affect_fear, label: LACKS,
+      evidence: "It does not make me shudder, thought he." }
+
+  # The shaming and dispatch
+  - { from: fearless_youth_father, to: fearless_youth, label: BANISHES_TO,
+      attributes: { destination: "the wide world" },
+      evidence: "'I have nothing but unhappiness with you. Go out of my sight.'" }
+
+  # First test — sexton plays ghost
+  - { from: fearless_youth_sexton, to: fearless_youth, label: DECEIVES,
+      evidence: "secretly went there before him... that the boy might think he was a ghost" }
+  - { from: fearless_youth, to: fearless_youth_sexton, label: THROWS_AT,
+      attributes: { result: "broken leg" },
+      evidence: "he ran against him and pushed the ghost down the stairs" }
+
+  # The gallows scene
+  - { from: fearless_youth, to: loc_gallows_youth, label: VISITS }
+  - { from: fearless_youth, to: haunted_castle_hanged_men, label: RESCUES,
+      attributes: { from: "the cold" },
+      evidence: "he raised the ladder, and climbed up, unbound one of them after the other, and brought down all seven" }
+
+  # The haunted-castle ordeal
+  - { from: fearless_youth, to: loc_haunted_castle, label: VISITS }
+  - { from: fearless_youth_king, to: fearless_youth, label: COMMANDS,
+      attributes: { task: "three nights in the castle, no lifeless aid except three objects" },
+      evidence: "'Thou mayest ask for three things to take into the castle with thee, but they must be things without life.'" }
+
+  # Night 1
+  - { from: fearless_youth, to: haunted_castle_black_cats, label: DEFEATS,
+      evidence: "he struck them dead and threw them out into the water" }
+  - { from: fearless_youth, to: haunted_castle_cats_and_dogs, label: DEFEATS,
+      evidence: "'Away with ye, vermin,' and began to cut them down. Part of them ran away, the others he killed" }
+
+  # Night 2
+  - { from: fearless_youth, to: haunted_castle_half_man, label: DEFEATS,
+      evidence: "thrust him off with all his strength, and seated himself again in his own place" }
+  - { from: fearless_youth, to: haunted_castle_skittle_players, label: VISITS,
+      attributes: { engagement: "joins the nine-pins game using turned skulls" } }
+
+  # Night 3
+  - { from: fearless_youth, to: haunted_castle_dead_cousin, label: DEFEATS,
+      evidence: "he took him up, threw him into it, and shut the lid" }
+  - { from: fearless_youth, to: haunted_castle_bearded_giant, label: DEFEATS,
+      attributes: { method: "split the anvil, trapped the beard, beat with iron bar" },
+      evidence: "split the anvil with one blow, and struck the old man's beard in with it" }
+  - { from: haunted_castle_bearded_giant, to: obj_haunted_castle_treasure, label: GIVES_CHILD_TO,
+      attributes: { type: "treasure-revelation, not literal child" },
+      evidence: "showed him three chests full of gold" }
+
+  # Resolution
+  - { from: fearless_youth, to: fearless_youth_princess, label: MARRIES,
+      evidence: "Then the gold was brought up and the wedding celebrated" }
+  - { from: fearless_youth_waiting_maid, to: fearless_youth, label: USES,
+      attributes: { object: "bucket of cold water with gudgeons", purpose: "produce shudder" },
+      evidence: "'I will find a cure for him; he shall soon learn what it is to shudder.'" }
+  - { from: fearless_youth, to: affect_fear, label: LEARNS,
+      evidence: "'Oh, what makes me shudder so?... Ah! now I know what it is to shudder!'" }

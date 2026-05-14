@@ -1,0 +1,360 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-bright-sun-brings-it-to-light
+khm: 115
+atu: '960'
+atu_name: The Bright Sun Brings It to Light
+canonical_source: ../../2-silver/canonical/the-bright-sun-brings-it-to-light/canonical.txt
+title: The Bright Sun Brings It to Light
+
+
+entities:
+
+  characters:
+
+    bright_sun_tailor:
+      name: The Tailor's Apprentice
+      species: sp_human
+      agency_modes: [agency_violence, agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_confession]
+      affects: [affect_greed, affect_guilt, affect_fear, affect_love]
+      traits: [work-seeking-apprentice, penniless-traveller, murderer, body-hider, later-husband, father-of-two, guilt-speaker, condemned-criminal]
+      evidence: |
+        A tailor’s apprentice was travelling about the world in search of work
+
+    bright_sun_jewish_traveller:
+      name: The Jewish Traveller
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      speech_acts_performed: [speech_testimony]
+      affects: [affect_fear]
+      traits: [road-traveller, falsely-presumed-rich, robbed-victim, dying-prophetic-witness]
+      evidence: |
+        Presently he met a Jew on the road
+
+    bright_sun_wife:
+      name: The Tailor's Wife
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_promise, speech_request]
+      affects: [affect_love, affect_curiosity]
+      traits: [master-daughter, beloved-wife, secret-extractor, secrecy-promiser, story-confider]
+      evidence: |
+        his wife brought him his coffee
+
+    bright_sun_master:
+      name: The Master Tailor / Wife's Father
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_social_rank]
+      traits: [employer, father-in-law, household-predecessor]
+      evidence: |
+        he got work in a town with a master who had a pretty daughter
+
+    bright_sun_wife_friend:
+      name: The Wife's Great Friend
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_testimony]
+      traits: [confidante, secrecy-recipient, gossip-link]
+      evidence: |
+        she went to her great friend and confided the story to her
+
+    bright_sun_town:
+      name: The Whole Town
+      species: sp_human
+      agency_modes: [agency_speech, agency_social_rank]
+      traits: [rumour-public, trial-community, truth-receiver]
+      evidence: |
+        the whole town knew it
+
+  magic_objects:
+
+    obj_bright_sun_eight_farthings:
+      name: The Eight Farthings
+      object_kind: treasure
+      attributes:
+        count: 8
+        function: proves the victim told the truth about having almost no money
+      evidence: |
+        he found nothing but eight farthings
+
+    obj_bright_sun_dying_words:
+      name: The Victim's Dying Words
+      object_kind: token
+      attributes:
+        phrase: The bright sun will bring it to light
+        function: truth-formula that returns through the murderer's guilty interpretation of sunlight
+      evidence: |
+        The bright sun will bring it to light
+
+    obj_bright_sun_coffee_reflection:
+      name: The Coffee-Saucer Sun Reflection
+      object_kind: material
+      attributes:
+        function: natural light sign that triggers the murderer's guilty explanation
+      evidence: |
+        the reflection gleamed hither and thither on the wall above
+
+  locations:
+
+    loc_bright_sun_road:
+      name: The Road Where the Murder Happens
+      instance_of: loc_road
+      evidence: |
+        met a Jew on the road
+
+    loc_bright_sun_clump_trees:
+      name: The Clump of Trees Hiding the Body
+      instance_of: loc_tree
+      evidence: |
+        carried him behind a clump of trees
+
+    loc_bright_sun_town:
+      name: The Town of Work, Marriage, and Trial
+      instance_of: loc_town
+      threshold_type: threshold_doorway
+      evidence: |
+        he got work in a town
+
+    loc_bright_sun_house:
+      name: The Married Household by the Window
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        sitting on the table before the window
+
+
+classifications:
+
+  world_laws:
+    - law_guilt_reads_natural_light_as_accusation
+
+  moral_regimes:
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_violence
+    - agency_speech
+    - agency_domestic_labor
+    - agency_social_rank
+
+  affects_driving:
+    - affect_greed
+    - affect_guilt
+    - affect_fear
+    - affect_love
+
+  symbol_numbers:
+    - num_2
+    - num_8
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+
+  - function: func_lack
+    order: 1
+    actor: bright_sun_tailor
+    scene: The apprentice wanders in poverty and cannot find work.
+    evidence: |
+      his poverty was so great that he had not a farthing to live on
+
+  - function: func_villainy
+    order: 2
+    actor: bright_sun_tailor
+    victim: bright_sun_jewish_traveller
+    scene: The apprentice attacks and kills the traveller for presumed money.
+    evidence: |
+      fell on the Jew
+
+  - function: func_testimony
+    order: 3
+    actor: bright_sun_jewish_traveller
+    victim: bright_sun_tailor
+    scene: The dying traveller speaks the formula that later returns as truth.
+    evidence: |
+      The bright sun will bring it to light
+
+  - function: func_concealment
+    order: 4
+    actor: bright_sun_tailor
+    scene: The murderer hides the body behind trees and continues seeking work.
+    evidence: |
+      carried him behind a clump of trees
+
+  - function: func_marriage
+    order: 5
+    actor: bright_sun_tailor
+    beneficiary: bright_sun_wife
+    scene: The murderer finds work, loves the master's daughter, and marries her.
+    evidence: |
+      he married her, and lived in good and happy wedlock
+
+  - function: func_return_of_truth
+    order: 6
+    actor: obj_bright_sun_coffee_reflection
+    victim: bright_sun_tailor
+    scene: Sunlight reflected from coffee makes the old dying words return to mind.
+    evidence: |
+      the sun shone on it and the reflection gleamed hither and thither
+
+  - function: func_confession
+    order: 7
+    actor: bright_sun_tailor
+    beneficiary: bright_sun_wife
+    scene: The wife presses him until he tells the murder story.
+    evidence: |
+      he told her how years ago
+
+  - function: func_exposure
+    order: 8
+    actor: bright_sun_wife
+    victim: bright_sun_tailor
+    scene: The wife tells a friend; within two days the whole town knows.
+    evidence: |
+      before two days were over, the whole town knew it
+
+  - function: func_punishment
+    order: 9
+    actor: bright_sun_town
+    victim: bright_sun_tailor
+    scene: The tailor is brought to trial and condemned.
+    evidence: |
+      the tailor was brought to trial, and condemned
+
+
+edges:
+
+  - from: bright_sun_tailor
+    label: SEEKS_WORK_ON
+    to: loc_bright_sun_road
+    evidence: |
+      travelling about the world in search of work
+
+  - from: bright_sun_tailor
+    label: MEETS
+    to: bright_sun_jewish_traveller
+    evidence: |
+      Presently he met a Jew on the road
+
+  - from: bright_sun_tailor
+    label: DEMANDS_MONEY_FROM
+    to: bright_sun_jewish_traveller
+    evidence: |
+      Give me thy money, or I will strike thee dead
+
+  - from: bright_sun_jewish_traveller
+    label: PLEADS_WITH
+    to: bright_sun_tailor
+    evidence: |
+      Grant me my life
+
+  - from: bright_sun_tailor
+    label: KILLS
+    to: bright_sun_jewish_traveller
+    evidence: |
+      used violence and beat him until he was near death
+
+  - from: bright_sun_jewish_traveller
+    label: SPEAKS_DYING_WORDS
+    to: obj_bright_sun_dying_words
+    evidence: |
+      The bright sun will bring it to light
+
+  - from: bright_sun_tailor
+    label: FINDS_ONLY
+    to: obj_bright_sun_eight_farthings
+    evidence: |
+      he found nothing but eight farthings
+
+  - from: bright_sun_tailor
+    label: HIDES_BODY_AT
+    to: loc_bright_sun_clump_trees
+    evidence: |
+      carried him behind a clump of trees
+
+  - from: bright_sun_tailor
+    label: WORKS_FOR
+    to: bright_sun_master
+    evidence: |
+      he got work in a town with a master
+
+  - from: bright_sun_tailor
+    label: MARRIES
+    to: bright_sun_wife
+    evidence: |
+      he married her
+
+  - from: bright_sun_wife
+    label: BRINGS_COFFEE_TO
+    to: bright_sun_tailor
+    evidence: |
+      his wife brought him his coffee
+
+  - from: obj_bright_sun_coffee_reflection
+    label: GLEAMS_ON
+    to: loc_bright_sun_house
+    evidence: |
+      made circles on it
+
+  - from: obj_bright_sun_dying_words
+    label: RETURNS_THROUGH
+    to: obj_bright_sun_coffee_reflection
+    evidence: |
+      it would like very much to bring it to light
+
+  - from: bright_sun_wife
+    label: PRESSES_CONFESSION_FROM
+    to: bright_sun_tailor
+    evidence: |
+      left him no rest
+
+  - from: bright_sun_tailor
+    label: CONFESSES_TO
+    to: bright_sun_wife
+    evidence: |
+      Then he told her how years ago
+
+  - from: bright_sun_tailor
+    label: CHARGES_SECRECY_TO
+    to: bright_sun_wife
+    evidence: |
+      charged her particularly never to tell this
+
+  - from: bright_sun_wife
+    label: PROMISES_SECRECY_TO
+    to: bright_sun_tailor
+    evidence: |
+      she did promise
+
+  - from: bright_sun_wife
+    label: CONFIDES_STORY_TO
+    to: bright_sun_wife_friend
+    evidence: |
+      confided the story to her
+
+  - from: bright_sun_wife_friend
+    label: SPREADS_TO
+    to: bright_sun_town
+    evidence: |
+      the whole town knew it
+
+  - from: bright_sun_town
+    label: BRINGS_TO_TRIAL
+    to: bright_sun_tailor
+    evidence: |
+      the tailor was brought to trial
+
+  - from: bright_sun_town
+    label: CONDEMNS
+    to: bright_sun_tailor
+    evidence: |
+      condemned
+
+  - from: law_guilt_reads_natural_light_as_accusation
+    label: BRINGS_TO_LIGHT
+    to: bright_sun_tailor
+    evidence: |
+      after all, the bright sun did bring it to light

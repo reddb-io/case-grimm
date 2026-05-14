@@ -1,0 +1,8 @@
+slug: brother-lustig
+khm: 81
+atu: '785'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

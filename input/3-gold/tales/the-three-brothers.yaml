@@ -1,0 +1,374 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-three-brothers
+khm: 124
+atu: '654'
+atu_name: The Three Brothers
+canonical_source: ../../2-silver/canonical/the-three-brothers/canonical.txt
+title: The Three Brothers
+
+
+entities:
+
+  characters:
+
+    three_brothers_father:
+      name: The Father with One House
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_command]
+      affects: [affect_love]
+      traits: [father, equal-lover-of-sons, ancestral-householder, inheritance-arbiter]
+      evidence: |
+        the father loved them all alike
+
+    three_brothers_eldest_blacksmith:
+      name: The Eldest Brother, Blacksmith
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_endurance]
+      affects: [affect_pride, affect_loyalty]
+      traits: [eldest-son, blacksmith, king-horse-shoer, galloping-horse-shoe-master, satisfied-brother]
+      evidence: |
+        the eldest determined to be a blacksmith
+
+    three_brothers_second_barber:
+      name: The Second Brother, Barber
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_endurance]
+      affects: [affect_pride, affect_loyalty]
+      traits: [second-son, barber, great-people-shaver, running-hare-shaver, satisfied-brother]
+      evidence: |
+        the second a barber
+
+    three_brothers_third_fencing_master:
+      name: The Third Brother, Fencing-Master
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_endurance, agency_violence]
+      affects: [affect_pride, affect_loyalty]
+      traits: [third-son, fencing-master, blow-endurer, rain-fencer, masterpiece-winner, shared-householder]
+      evidence: |
+        the third a fencing-master
+
+    three_brothers_skilful_masters:
+      name: The Skilful Trade Masters
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      speech_acts_performed: [speech_command]
+      traits: [trade-teachers, apprenticeship-masters]
+      evidence: |
+        they all found skilful masters
+
+    three_brothers_running_hare:
+      name: The Running Hare
+      species: sp_hare
+      agency_modes: [agency_endurance]
+      traits: [field-runner, barber-masterpiece-subject, unharmed-animal]
+      evidence: |
+        a hare came running across the field
+
+    three_brothers_nobleman:
+      name: The Nobleman in the Coach
+      species: sp_human
+      agency_modes: [agency_social_rank]
+      traits: [coach-rider, blacksmith-test-arrival]
+      evidence: |
+        up came a nobleman in his coach
+
+    three_brothers_galloping_horse:
+      name: The Galloping Coach Horse
+      species: sp_horse
+      agency_modes: [agency_endurance]
+      traits: [coach-horse, galloping-test-subject, reshod-in-motion]
+      evidence: |
+        one of the horses whilst he was galloping
+
+  magic_objects:
+
+    obj_three_brothers_ancestral_house:
+      name: The Ancestral House
+      object_kind: architecture
+      attributes:
+        function: indivisible inheritance awarded by the best craft masterpiece
+      evidence: |
+        nothing else in the world but the house in which he lived
+
+    obj_three_brothers_barber_basin_soap:
+      name: The Barber's Basin and Soap
+      object_kind: tool
+      attributes:
+        function: used to shave the running hare without harm
+      evidence: |
+        he took his basin and soap
+
+    obj_three_brothers_blacksmith_shoes:
+      name: The Four New Horseshoes
+      object_kind: tool
+      attributes:
+        function: replace all four shoes of a galloping horse without stopping it
+      evidence: |
+        put him on four new shoes without stopping him
+
+    obj_three_brothers_fencing_sword:
+      name: The Fencing-Master's Sword
+      object_kind: weapon
+      attributes:
+        function: flourished so fast that rain cannot touch him
+      evidence: |
+        he drew his sword
+
+    obj_three_brothers_common_grave:
+      name: The Same Grave of the Three Brothers
+      object_kind: architecture
+      attributes:
+        function: final sign of brotherly unity after shared life and grief
+      evidence: |
+        they were all laid in the same grave
+
+  locations:
+
+    loc_three_brothers_father_house:
+      name: The Father's Ancestral House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        the house in which he lived
+
+    loc_three_brothers_world:
+      name: The World of Apprenticeship
+      instance_of: loc_road
+      evidence: |
+        Go into the world
+
+    loc_three_brothers_field:
+      name: The Field of the Running Hare
+      instance_of: loc_field
+      evidence: |
+        a hare came running across the field
+
+    loc_three_brothers_coach_road:
+      name: The Road of the Nobleman's Coach
+      instance_of: loc_road
+      evidence: |
+        up came a nobleman in his coach
+
+    loc_three_brothers_shared_grave:
+      name: The Shared Grave
+      instance_of: loc_tomb
+      threshold_type: threshold_grave
+      evidence: |
+        the same grave
+
+
+classifications:
+
+  world_laws:
+    - law_craft_masterpiece_arbitrates_inheritance
+
+  moral_regimes:
+    - moral_restorative
+
+  agency_modes_dominant:
+    - agency_domestic_labor
+    - agency_endurance
+    - agency_social_rank
+    - agency_violence
+
+  affects_driving:
+    - affect_love
+    - affect_pride
+    - affect_loyalty
+    - affect_grief
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_doorway
+    - threshold_grave
+
+
+propp:
+
+  - function: func_initial_problem
+    order: 1
+    actor: three_brothers_father
+    scene: The father has three sons and one ancestral house that he does not want to sell.
+    evidence: |
+      did not wish to sell the house
+
+  - function: func_task_assignment
+    order: 2
+    actor: three_brothers_father
+    beneficiary: three_brothers_eldest_blacksmith
+    scene: He sends the sons into the world to learn trades and promises the house for the best masterpiece.
+    evidence: |
+      he who makes the best masterpiece shall have the house
+
+  - function: func_apprenticeship
+    order: 3
+    actor: three_brothers_skilful_masters
+    beneficiary: three_brothers_eldest_blacksmith
+    scene: Each brother finds a skilful master and learns his trade well.
+    evidence: |
+      who taught them their trades well
+
+  - function: func_return
+    order: 4
+    actor: three_brothers_eldest_blacksmith
+    scene: At the appointed time the three brothers return to their father.
+    evidence: |
+      the three brothers came back home to their father
+
+  - function: func_first_masterpiece
+    order: 5
+    actor: three_brothers_second_barber
+    scene: The barber shaves a running hare without cutting its skin or injuring a hair.
+    evidence: |
+      shaved off the hare’s whiskers whilst he was running at the top of his speed
+
+  - function: func_second_masterpiece
+    order: 6
+    actor: three_brothers_eldest_blacksmith
+    scene: The blacksmith replaces all four shoes of a galloping horse without stopping it.
+    evidence: |
+      took all four shoes off the feet of one of the horses whilst he was galloping
+
+  - function: func_third_masterpiece
+    order: 7
+    actor: three_brothers_third_fencing_master
+    scene: The fencing-master keeps himself dry in a torrent by swordplay.
+    evidence: |
+      remained as dry as if he were sitting in a house
+
+  - function: func_judgment
+    order: 8
+    actor: three_brothers_father
+    beneficiary: three_brothers_third_fencing_master
+    scene: The father declares the fencing performance the masterpiece and awards the house.
+    evidence: |
+      This is the master-piece, the house is yours!
+
+  - function: func_harmony
+    order: 9
+    actor: three_brothers_eldest_blacksmith
+    scene: The brothers accept the judgment, live together, follow their trades, and prosper.
+    evidence: |
+      they all three stayed together in the house
+
+  - function: func_common_death
+    order: 10
+    actor: three_brothers_eldest_blacksmith
+    scene: Their mutual grief makes the two surviving brothers die soon after the first, and all share one grave.
+    evidence: |
+      they were all laid in the same grave
+
+
+edges:
+
+  - from: three_brothers_father
+    label: OWNS
+    to: obj_three_brothers_ancestral_house
+    evidence: |
+      nothing else in the world but the house
+
+  - from: three_brothers_eldest_blacksmith
+    label: WISHES_TO_INHERIT
+    to: obj_three_brothers_ancestral_house
+    evidence: |
+      each of the sons wished to have the house
+
+  - from: three_brothers_father
+    label: LOVES_ALIKE
+    to: three_brothers_eldest_blacksmith
+    evidence: |
+      loved them all alike
+
+  - from: three_brothers_father
+    label: SENDS_TO_LEARN_TRADE
+    to: three_brothers_eldest_blacksmith
+    evidence: |
+      try each of you to learn a trade
+
+  - from: three_brothers_father
+    label: SENDS_TO_LEARN_TRADE
+    to: three_brothers_second_barber
+    evidence: |
+      try each of you to learn a trade
+
+  - from: three_brothers_father
+    label: SENDS_TO_LEARN_TRADE
+    to: three_brothers_third_fencing_master
+    evidence: |
+      try each of you to learn a trade
+
+  - from: three_brothers_skilful_masters
+    label: TEACHES
+    to: three_brothers_eldest_blacksmith
+    evidence: |
+      taught them their trades well
+
+  - from: three_brothers_second_barber
+    label: SHAVES
+    to: three_brothers_running_hare
+    evidence: |
+      shaved off the hare’s whiskers
+
+  - from: obj_three_brothers_barber_basin_soap
+    label: ENABLES
+    to: three_brothers_second_barber
+    evidence: |
+      took his basin and soap
+
+  - from: three_brothers_eldest_blacksmith
+    label: RESHOES
+    to: three_brothers_galloping_horse
+    evidence: |
+      put him on four new shoes without stopping him
+
+  - from: obj_three_brothers_blacksmith_shoes
+    label: ENABLES
+    to: three_brothers_eldest_blacksmith
+    evidence: |
+      four new shoes
+
+  - from: three_brothers_third_fencing_master
+    label: FLOURISHES
+    to: obj_three_brothers_fencing_sword
+    evidence: |
+      flourished it backwards and forwards above his head
+
+  - from: obj_three_brothers_fencing_sword
+    label: KEEPS_DRY
+    to: three_brothers_third_fencing_master
+    evidence: |
+      not a drop fell upon him
+
+  - from: three_brothers_father
+    label: AWARDS
+    to: obj_three_brothers_ancestral_house
+    evidence: |
+      the house is yours
+
+  - from: three_brothers_eldest_blacksmith
+    label: ACCEPTS_JUDGMENT_WITH
+    to: three_brothers_second_barber
+    evidence: |
+      His brothers were satisfied with this
+
+  - from: three_brothers_eldest_blacksmith
+    label: LIVES_WITH
+    to: three_brothers_third_fencing_master
+    evidence: |
+      they all three stayed together in the house
+
+  - from: three_brothers_eldest_blacksmith
+    label: GRIEVES_FOR
+    to: three_brothers_second_barber
+    evidence: |
+      the two others grieved so sorely about it
+
+  - from: obj_three_brothers_common_grave
+    label: HOLDS
+    to: three_brothers_eldest_blacksmith
+    evidence: |
+      they were all laid in the same grave

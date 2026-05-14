@@ -1,0 +1,344 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-three-snake-leaves
+khm: 16
+atu: '612'
+atu_name: The Three Snake-Leaves
+canonical_source: ../../2-silver/canonical/the-three-snake-leaves/canonical.txt
+title: The Three Snake-Leaves
+
+
+entities:
+
+  characters:
+
+    three_snake_leaves_young_king:
+      name: The Poor Youth / Young King
+      species: sp_human
+      agency_modes: [agency_endurance, agency_violence, agency_speech, agency_social_rank]
+      existential_states: [state_bound_by_promise]
+      transformations: [transform_resurrection_by_remedy]
+      speech_acts_performed: [speech_promise]
+      affects: [affect_love_at_first_sight, affect_grief, affect_loyalty, affect_fear]
+      traits: [poor-son, soldier-hero, vow-bound-husband, burial-companion, remedy-observer, murdered-and-revived]
+      evidence: |
+        "I must be buried with her... but my love is so great that I
+        do not mind the danger."
+
+    three_snake_leaves_poor_father:
+      name: The Poor Father
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      affects: [affect_grief]
+      traits: [destitute, blessing-giver, long-separated-father]
+      evidence: |
+        "the father gave him his blessing, and with great sorrow took
+        leave of him."
+
+    three_snake_leaves_old_king:
+      name: The Old King
+      archetypes: [arc_oath_enforcer]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning]
+      speech_acts_performed: [speech_command]
+      affects: [affect_grief, affect_anger]
+      traits: [rewarding-ruler, oath-enforcer, hidden-witness-maker, punitive-judge]
+      evidence: |
+        "The King had placed sentries at all the gates, and it was not
+        possible to avoid his fate."
+
+    three_snake_leaves_young_queen:
+      name: The Young Queen
+      archetypes: [arc_treacherous_spouse]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech, agency_cunning, agency_violence]
+      transformations: [transform_resurrection_by_remedy]
+      speech_acts_performed: [speech_promise, speech_lie]
+      affects: [affect_love_at_first_sight, affect_greed, affect_shame]
+      traits: [strange-oath-maker, resurrected, loveless-after-revival, skipper-desiring, husband-murdering, false-mourner]
+      evidence: |
+        "After she had been restored to life, it seemed as if all love
+        for her husband had gone out of her heart."
+
+    three_snake_leaves_faithful_servant:
+      name: The Faithful Servant
+      archetypes: [arc_faithful_servant]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_cunning, agency_speech]
+      affects: [affect_loyalty]
+      traits: [leaf-keeper, unseen-witness, boat-rescuer, reviver, swift-rower]
+      evidence: |
+        "the faithful servant who had seen all that they did, unseen
+        by them, unfastened a little boat"
+
+    three_snake_leaves_skipper:
+      name: The Skipper
+      species: sp_human
+      agency_modes: [agency_violence, agency_cunning, agency_speech]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_greed]
+      traits: [adulterous-accomplice, body-thrower, false-witness, punished-at-sea]
+      evidence: |
+        "the skipper took him by the feet, and thus they threw him down
+        into the sea."
+
+    three_snake_leaves_first_snake:
+      name: The First Snake
+      species: sp_snake
+      transformations: [transform_resurrection_by_remedy]
+      traits: [vault-creeper, cut-in-three, serpent-revived]
+      evidence: |
+        "hewed the snake in three pieces."
+
+    three_snake_leaves_second_snake:
+      name: The Second Snake
+      species: sp_snake
+      agency_modes: [agency_animal_aid]
+      traits: [leaf-bringer, serpent-reviver, unwitting-donor]
+      evidence: |
+        "soon came again with three green leaves in its mouth."
+
+    three_snake_leaves_soldiers:
+      name: The Routed Soldiers
+      species: sp_human
+      agency_modes: [agency_violence]
+      affects: [affect_fear]
+      traits: [battle-weary, rallied-by-youth]
+      evidence: |
+        "those left were about to take flight, but the youth stepped
+        forth"
+
+  magic_objects:
+
+    obj_three_green_snake_leaves:
+      name: The Three Green Snake-Leaves
+      instance_of: obj_life_restoring_leaves
+      object_kind: relic
+      attributes:
+        count: 3
+        source: second snake brings them to revive the first snake
+        application: one leaf on mouth, two on eyes, or one on each wound
+      evidence: |
+        "with three green leaves in its mouth"
+
+    obj_vault_provisions_three_snake_leaves:
+      name: The Vault Provisions
+      object_kind: material
+      attributes:
+        candles: 4
+        loaves: 4
+        wine_bottles: 4
+        function: measure of how long the buried-alive husband can survive
+      evidence: |
+        "four candles, four loaves of bread, and four bottles of wine"
+
+    obj_young_king_sword_three_snake_leaves:
+      name: The Young King's Sword
+      object_kind: weapon
+      attributes:
+        function: cuts the first snake into three pieces
+      evidence: |
+        "he drew his sword... and hewed the snake in three pieces."
+
+  locations:
+
+    loc_poor_fathers_house_three_snake_leaves:
+      name: The Poor Father's House
+      instance_of: loc_house
+      evidence: |
+        "a poor man, who could no longer support his only son"
+
+    loc_battlefield_three_snake_leaves:
+      name: The Battlefield
+      evidence: |
+        "there was a battle, and great danger, and it rained shot"
+
+    loc_royal_castle_three_snake_leaves:
+      name: The Old King's Court
+      instance_of: loc_castle
+      evidence: |
+        "he raised him above all the others, gave him great treasures,
+        and made him the first in the kingdom."
+
+    loc_royal_vault_three_snake_leaves:
+      name: The Royal Vault
+      instance_of: loc_tomb
+      threshold_type: threshold_grave
+      attributes:
+        contains: [obj_vault_provisions_three_snake_leaves]
+      evidence: |
+        "he was taken down into the royal vault with it and then the
+        door was shut and bolted."
+
+    loc_voyage_ship_three_snake_leaves:
+      name: The Voyage Ship
+      instance_of: loc_ship
+      evidence: |
+        "they had gone on board a ship"
+
+    loc_little_boat_three_snake_leaves:
+      name: The Faithful Servant's Little Boat
+      instance_of: loc_ship
+      evidence: |
+        "unfastened a little boat from the ship, got into it, sailed
+        after his master"
+
+    loc_sea_three_snake_leaves:
+      name: The Sea of Betrayal and Punishment
+      instance_of: loc_sea
+      evidence: |
+        "they threw him down into the sea."
+
+    loc_secret_chamber_three_snake_leaves:
+      name: The Secret Chamber in the Old King's Court
+      instance_of: loc_castle
+      evidence: |
+        "bade both go into a secret chamber and keep themselves hidden"
+
+    loc_pierced_ship_three_snake_leaves:
+      name: The Pierced Punishment Ship
+      instance_of: loc_ship
+      attributes:
+        pierced_with_holes: true
+        function: retributive drowning of queen and skipper
+      evidence: |
+        "a ship which had been pierced with holes, and sent out to sea"
+
+
+classifications:
+
+  world_laws:
+    - law_promise_binds_reality
+    - law_serpent_medicine_restores_life
+
+  moral_regimes:
+    - moral_restorative
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_endurance
+    - agency_violence
+    - agency_cunning
+    - agency_social_rank
+
+  affects_driving:
+    - affect_love_at_first_sight
+    - affect_loyalty
+    - affect_grief
+    - affect_greed
+
+  symbol_numbers:
+    - num_3   # three snake-leaves; first snake cut into three pieces; three applications on human face
+
+  threshold_types:
+    - threshold_grave
+
+
+propp:
+  - { function: func_lack, order: 1, actor: three_snake_leaves_young_king,
+      scene: "poor son leaves father because the household can no longer support him" }
+  - { function: func_departure, order: 2, actor: three_snake_leaves_young_king,
+      scene: "youth takes military service and goes to war" }
+  - { function: func_victory, order: 3, actor: three_snake_leaves_young_king,
+      scene: "rallies fleeing soldiers and conquers the enemy" }
+  - { function: func_wedding, order: 4, actor: three_snake_leaves_young_king,
+      scene: "accepts the princess's burial oath and marries her" }
+  - { function: func_interdiction, order: 5, actor: three_snake_leaves_young_queen,
+      scene: "spouses must be buried alive with each other if one dies first" }
+  - { function: func_villainy, order: 6, actor: three_snake_leaves_old_king,
+      scene: "queen dies; old king enforces the vow by sealing husband in the vault" }
+  - { function: func_magical_agent, order: 7, actor: three_snake_leaves_second_snake,
+      scene: "second snake reveals the life-restoring power of three green leaves" }
+  - { function: func_liquidation, order: 8, actor: three_snake_leaves_young_king,
+      scene: "young king revives his wife with the snake-leaves and exits the vault" }
+  - { function: func_departure, order: 9, actor: three_snake_leaves_young_king,
+      scene: "sets out by sea to visit his old father" }
+  - { function: func_villainy, order: 10, actor: three_snake_leaves_young_queen,
+      scene: "queen and skipper throw sleeping husband into the sea" }
+  - { function: func_rescue, order: 11, actor: three_snake_leaves_faithful_servant,
+      scene: "servant witnesses betrayal, recovers the corpse, and revives the young king" }
+  - { function: func_return, order: 12, actor: three_snake_leaves_young_king,
+      scene: "young king and servant reach the old king before the traitors" }
+  - { function: func_exposure, order: 13, actor: three_snake_leaves_old_king,
+      scene: "old king hides the revived husband and exposes the queen's lie" }
+  - { function: func_punishment, order: 14, actor: three_snake_leaves_old_king,
+      scene: "queen and skipper are sent to sea in a pierced ship and drown" }
+
+
+edges:
+
+  # Poverty, war, and elevation
+  - { from: three_snake_leaves_young_king, to: three_snake_leaves_poor_father, label: LEAVES,
+      evidence: "I would rather go away and see how I can earn my bread." }
+  - { from: three_snake_leaves_poor_father, to: three_snake_leaves_young_king, label: BLESSES,
+      evidence: "the father gave him his blessing" }
+  - { from: three_snake_leaves_young_king, to: three_snake_leaves_soldiers, label: RALLIES,
+      evidence: "We will not let our fatherland be ruined!" }
+  - { from: three_snake_leaves_young_king, to: loc_battlefield_three_snake_leaves, label: WINS_BATTLE_AT,
+      evidence: "he pressed on and conquered the enemy." }
+  - { from: three_snake_leaves_old_king, to: three_snake_leaves_young_king, label: REWARDS,
+      evidence: "gave him great treasures, and made him the first in the kingdom." }
+
+  # Burial oath and vault
+  - { from: three_snake_leaves_young_queen, to: three_snake_leaves_young_king, label: DEMANDS_PROMISE_FROM,
+      evidence: "had made a vow to take no one as her lord and husband who did not promise" }
+  - { from: three_snake_leaves_young_king, to: three_snake_leaves_young_queen, label: PROMISES_TO,
+      attributes: { condition: buried_alive_if_she_dies_first },
+      evidence: "I must be buried with her" }
+  - { from: three_snake_leaves_young_queen, to: three_snake_leaves_young_king, label: PROMISES_TO,
+      attributes: { condition: buried_alive_if_he_dies_first },
+      evidence: "On her side she would do the same" }
+  - { from: three_snake_leaves_old_king, to: three_snake_leaves_young_king, label: ENFORCES_OATH_ON,
+      evidence: "The King had placed sentries at all the gates" }
+  - { from: three_snake_leaves_old_king, to: loc_royal_vault_three_snake_leaves, label: SEALS_IN,
+      evidence: "the door was shut and bolted." }
+
+  # Snake medicine discovered and used
+  - { from: three_snake_leaves_young_king, to: three_snake_leaves_first_snake, label: KILLS,
+      attributes: { instrument: obj_young_king_sword_three_snake_leaves },
+      evidence: "hewed the snake in three pieces." }
+  - { from: three_snake_leaves_second_snake, to: obj_three_green_snake_leaves, label: BRINGS,
+      evidence: "came again with three green leaves in its mouth." }
+  - { from: three_snake_leaves_second_snake, to: three_snake_leaves_first_snake, label: REVIVES_BY_REMEDY,
+      evidence: "Immediately the severed parts joined themselves together" }
+  - { from: three_snake_leaves_young_king, to: obj_three_green_snake_leaves, label: RETRIEVES,
+      evidence: "So he picked up the leaves" }
+  - { from: three_snake_leaves_young_king, to: three_snake_leaves_young_queen, label: REVIVES_BY_REMEDY,
+      evidence: "the blood stirred in her veins" }
+  - { from: three_snake_leaves_young_king, to: three_snake_leaves_faithful_servant, label: ENTRUSTS,
+      attributes: { object: obj_three_green_snake_leaves },
+      evidence: "Keep them for me carefully, and carry them constantly about thee" }
+
+  # Maritime betrayal
+  - { from: three_snake_leaves_young_queen, to: three_snake_leaves_skipper, label: DESIRES,
+      evidence: "conceived a wicked inclination for the skipper." }
+  - { from: three_snake_leaves_young_queen, to: three_snake_leaves_skipper, label: PLOTS_WITH,
+      evidence: "Now let us return home, and say that he died on the way." }
+  - { from: three_snake_leaves_young_queen, to: three_snake_leaves_young_king, label: KILLS,
+      evidence: "seized the sleeper by the head" }
+  - { from: three_snake_leaves_skipper, to: three_snake_leaves_young_king, label: KILLS,
+      evidence: "the skipper took him by the feet, and thus they threw him down into the sea." }
+  - { from: three_snake_leaves_faithful_servant, to: three_snake_leaves_young_queen, label: WITNESSES,
+      evidence: "had seen all that they did, unseen by them" }
+  - { from: three_snake_leaves_faithful_servant, to: three_snake_leaves_young_king, label: RESCUES,
+      evidence: "He fished up the dead body" }
+  - { from: three_snake_leaves_faithful_servant, to: three_snake_leaves_young_king, label: REVIVES_BY_REMEDY,
+      evidence: "by the help of the three snake-leaves... brought the young King back to life." }
+
+  # Exposure and punishment
+  - { from: three_snake_leaves_young_queen, to: three_snake_leaves_old_king, label: LIES_TO,
+      evidence: "during the voyage, my husband became suddenly ill and died" }
+  - { from: three_snake_leaves_skipper, to: three_snake_leaves_old_king, label: FALSELY_WITNESSES,
+      evidence: "He was present at his death, and can tell you all." }
+  - { from: three_snake_leaves_old_king, to: three_snake_leaves_young_king, label: REVEALS,
+      evidence: "I will make the dead alive again" }
+  - { from: three_snake_leaves_young_queen, to: three_snake_leaves_young_king, label: BEGS_MERCY_FROM,
+      evidence: "fell on her knees and begged for mercy." }
+  - { from: three_snake_leaves_old_king, to: three_snake_leaves_young_queen, label: PUNISHES,
+      evidence: "There is no mercy." }
+  - { from: three_snake_leaves_old_king, to: three_snake_leaves_skipper, label: PUNISHES,
+      evidence: "placed with her accomplice in a ship which had been pierced with holes" }
+  - { from: loc_pierced_ship_three_snake_leaves, to: three_snake_leaves_young_queen, label: KILLS,
+      evidence: "where they soon sank amid the waves." }
+  - { from: loc_pierced_ship_three_snake_leaves, to: three_snake_leaves_skipper, label: KILLS,
+      evidence: "where they soon sank amid the waves." }

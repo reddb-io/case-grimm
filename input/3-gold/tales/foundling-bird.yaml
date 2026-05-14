@@ -1,0 +1,271 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: foundling-bird
+khm: 51
+atu: '313'
+atu_name: The Magic Flight
+canonical_source: ../../2-silver/canonical/foundling-bird/canonical.txt
+title: Foundling-Bird
+
+
+entities:
+
+  characters:
+
+    foundling_bird_forester:
+      name: The Forester
+      species: sp_human
+      agency_modes: [agency_violence, agency_endurance, agency_domestic_labor]
+      traits: [hunter, rescuer, adoptive-father, absent-while-cook-plots]
+      evidence: |
+        There was once a forester who went into the forest to hunt
+
+    foundling_bird_fundevogel:
+      name: Fundevogel
+      archetypes: [arc_foundling_child]
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      existential_states: [state_transformed]
+      transformations: [transform_fugitive_pair]
+      affects: [affect_loyalty, affect_fear]
+      traits: [bird-carried-foundling, foster-child, Lina-beloved, boiling-target, loyal-fugitive, paired-shapeshifter]
+      evidence: |
+        was called Fundevogel, because a bird had carried it away.
+
+    foundling_bird_lina:
+      name: Lina
+      species: sp_human
+      agency_modes: [agency_cunning, agency_speech, agency_endurance]
+      existential_states: [state_transformed]
+      transformations: [transform_fugitive_pair]
+      affects: [affect_loyalty, affect_fear]
+      traits: [forester-daughter, secret-hearer, warning-companion, vow-speaker, transformation-initiator, duck-avenger]
+      evidence: |
+        Fundevogel and Lina loved each other so dearly
+
+    foundling_bird_bird_of_prey:
+      name: The Bird of Prey
+      archetypes: [arc_predator]
+      species: sp_bird
+      agency_modes: [agency_violence]
+      traits: [infant-snatcher, tree-carrier, origin-marker]
+      evidence: |
+        a bird of prey had seen it in her arms, had flown down,
+        snatched it away
+
+    foundling_bird_old_sanna:
+      name: Old Sanna the Cook
+      archetypes: [arc_predator]
+      species: sp_human
+      being_type: being_witch
+      agency_modes: [agency_cunning, agency_speech, agency_domestic_labor, agency_violence]
+      speech_acts_performed: [speech_lie]
+      affects: [affect_anger]
+      traits: [old-cook, water-fetcher, boiling-murderer, servant-sender, scolding-pursuer, pond-drinker, drowned-witch]
+      evidence: |
+        I will throw in Fundevogel, and will boil him in it.
+
+    foundling_bird_three_servants:
+      name: The Three Pursuing Servants
+      species: sp_human
+      agency_modes: [agency_endurance, agency_speech]
+      traits: [cook-sent, fast-runners, misrecognizers, twice-scolded, final-followers]
+      evidence: |
+        the cook sent three servants after them
+
+  magic_objects:
+
+    obj_foundling_bird_water_pails:
+      name: Old Sanna's Water Pails
+      object_kind: tool
+      attributes:
+        function: repeated water-fetching reveals the planned boiling murder
+      evidence: |
+        took two pails and began to fetch water
+
+    obj_foundling_bird_boiling_kettle:
+      name: The Boiling Kettle
+      object_kind: weapon
+      attributes:
+        function: intended instrument for boiling Fundevogel
+      evidence: |
+        when it is boiling in the kettle, I will throw in Fundevogel
+
+    obj_foundling_bird_rose_and_tree:
+      name: The Rose-Tree and Rose Form
+      object_kind: material
+      attributes:
+        function: first paired transformation hiding Fundevogel and Lina from the servants
+      evidence: |
+        Do thou become a rose-tree, and I the rose upon it.
+
+    obj_foundling_bird_church_chandelier:
+      name: The Church and Chandelier Form
+      object_kind: architecture
+      attributes:
+        function: second paired transformation hiding Fundevogel and Lina from the servants
+      evidence: |
+        thou become a church, and I’ll be the chandelier in it.
+
+    obj_foundling_bird_fishpond_duck:
+      name: The Fishpond and Duck Form
+      object_kind: creature_object
+      attributes:
+        function: final paired transformation through which Lina drowns the cook
+      evidence: |
+        Be a fishpond, and I will be the duck upon it.
+
+  locations:
+
+    loc_foundling_bird_high_tree:
+      name: The High Tree of the Foundling
+      instance_of: loc_tree
+      threshold_type: threshold_forest
+      evidence: |
+        at last came to a high tree
+
+    loc_foundling_bird_forester_house:
+      name: The Forester's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        He took it home, therefore, and the two children grew up
+        together.
+
+    loc_foundling_bird_spring:
+      name: The Water-Fetching Spring
+      instance_of: loc_well
+      evidence: |
+        many times, out to the spring.
+
+    loc_foundling_bird_forest_edge:
+      name: Outside the Forest
+      instance_of: loc_forest
+      threshold_type: threshold_forest
+      evidence: |
+        The children, however, were sitting outside the forest
+
+    loc_foundling_bird_pond:
+      name: The Final Fishpond
+      instance_of: loc_pond
+      evidence: |
+        when she saw the pond she lay down by it
+
+
+classifications:
+
+  world_laws:
+    - law_loyal_pair_magic_flight
+
+  moral_regimes:
+    - moral_restorative
+    - moral_retributive
+
+  agency_modes_dominant:
+    - agency_cunning
+    - agency_speech
+    - agency_endurance
+    - agency_domestic_labor
+    - agency_violence
+
+  affects_driving:
+    - affect_loyalty
+    - affect_fear
+    - affect_anger
+
+  symbol_numbers:
+    - num_3   # three servants and three fugitive transformations
+
+  threshold_types:
+    - threshold_forest
+    - threshold_doorway
+
+
+propp:
+  - { function: func_absentation, order: 1, actor: foundling_bird_bird_of_prey,
+      scene: "bird of prey carries the child away from his sleeping mother and sets him in a high tree" }
+  - { function: func_rescue, order: 2, actor: foundling_bird_forester,
+      scene: "forester climbs the tree, rescues the child, and raises him with Lina" }
+  - { function: func_villainy, order: 3, actor: foundling_bird_old_sanna,
+      scene: "old cook plans to boil Fundevogel while the forester is hunting" }
+  - { function: func_mediation, order: 4, actor: foundling_bird_lina,
+      scene: "Lina overhears the murder plan and tells Fundevogel after their loyalty vow" }
+  - { function: func_departure, order: 5, actor: foundling_bird_lina,
+      scene: "children dress quickly and flee together" }
+  - { function: func_pursuit, order: 6, actor: foundling_bird_three_servants,
+      scene: "three servants pursue and are fooled by rose-tree and rose" }
+  - { function: func_pursuit, order: 7, actor: foundling_bird_three_servants,
+      scene: "second pursuit is fooled by church and chandelier" }
+  - { function: func_pursuit, order: 8, actor: foundling_bird_old_sanna,
+      scene: "cook joins the third pursuit after scolding the servants" }
+  - { function: func_transfiguration, order: 9, actor: foundling_bird_lina,
+      scene: "children become fishpond and duck as the final fugitive pair" }
+  - { function: func_punishment, order: 10, actor: foundling_bird_lina,
+      scene: "duck pulls the drinking cook into the pond where the old witch drowns" }
+  - { function: func_return, order: 11, actor: foundling_bird_fundevogel,
+      scene: "children go home together delighted" }
+
+
+edges:
+
+  # Foundling origin
+  - { from: foundling_bird_bird_of_prey, to: foundling_bird_fundevogel, label: SNATCHES,
+      evidence: "snatched it away, and set it on the high tree." }
+  - { from: foundling_bird_forester, to: loc_foundling_bird_high_tree, label: CLIMBS,
+      evidence: "The forester climbed up" }
+  - { from: foundling_bird_forester, to: foundling_bird_fundevogel, label: RESCUES_AND_ADOPTS,
+      evidence: "brought the child down" }
+  - { from: foundling_bird_fundevogel, to: foundling_bird_bird_of_prey, label: NAMED_FOR,
+      evidence: "because a bird had carried it away." }
+  - { from: foundling_bird_fundevogel, to: foundling_bird_lina, label: LOVES_DEARLY,
+      evidence: "Fundevogel and Lina loved each other so dearly" }
+
+  # Murder plan and escape
+  - { from: foundling_bird_old_sanna, to: obj_foundling_bird_water_pails, label: FETCHES_WATER_WITH,
+      evidence: "took two pails and began to fetch water" }
+  - { from: foundling_bird_lina, to: foundling_bird_old_sanna, label: QUESTIONS,
+      evidence: "why are you fetching so much water?" }
+  - { from: foundling_bird_old_sanna, to: foundling_bird_fundevogel, label: PLANS_TO_BOIL,
+      evidence: "I will throw in Fundevogel, and will boil him in it." }
+  - { from: foundling_bird_old_sanna, to: obj_foundling_bird_boiling_kettle, label: PREPARES,
+      evidence: "I will heat the water" }
+  - { from: foundling_bird_lina, to: foundling_bird_fundevogel, label: WARNS,
+      evidence: "we will get up quickly, dress ourselves, and go away together." }
+  - { from: foundling_bird_lina, to: foundling_bird_fundevogel, label: VOWS_NEVER_TO_LEAVE,
+      evidence: "If thou wilt never leave me, I too will never leave thee." }
+  - { from: foundling_bird_fundevogel, to: foundling_bird_lina, label: RETURNS_VOW,
+      evidence: "Neither now, nor ever will I leave thee." }
+  - { from: foundling_bird_fundevogel, to: loc_foundling_bird_forest_edge, label: FLEES_TO,
+      evidence: "were sitting outside the forest" }
+  - { from: foundling_bird_lina, to: loc_foundling_bird_forest_edge, label: FLEES_TO,
+      evidence: "were sitting outside the forest" }
+
+  # Magic flight sequence
+  - { from: foundling_bird_lina, to: law_loyal_pair_magic_flight, label: ACTIVATES,
+      evidence: "Never leave me, and I will never leave thee." }
+  - { from: foundling_bird_lina, to: obj_foundling_bird_rose_and_tree, label: COMMANDS_TRANSFORMATION,
+      evidence: "Do thou become a rose-tree, and I the rose upon it." }
+  - { from: foundling_bird_three_servants, to: obj_foundling_bird_rose_and_tree, label: MISRECOGNIZES,
+      evidence: "nothing was there but a rose-tree and one rose on it" }
+  - { from: foundling_bird_old_sanna, to: obj_foundling_bird_rose_and_tree, label: INTERPRETS_AND_ESCALATES,
+      evidence: "you should have cut the rose-bush in two" }
+  - { from: foundling_bird_lina, to: obj_foundling_bird_church_chandelier, label: COMMANDS_TRANSFORMATION,
+      evidence: "thou become a church, and I’ll be the chandelier in it." }
+  - { from: foundling_bird_three_servants, to: obj_foundling_bird_church_chandelier, label: MISRECOGNIZES,
+      evidence: "they had found nothing but a church" }
+  - { from: foundling_bird_old_sanna, to: foundling_bird_three_servants, label: SCOLDS,
+      evidence: "You fools! why did you not pull the church to pieces" }
+  - { from: foundling_bird_lina, to: obj_foundling_bird_fishpond_duck, label: COMMANDS_TRANSFORMATION,
+      evidence: "Be a fishpond, and I will be the duck upon it." }
+  - { from: obj_foundling_bird_fishpond_duck, to: transform_fugitive_pair, label: EXEMPLIFIES,
+      evidence: "Be a fishpond, and I will be the duck upon it." }
+
+  # Punishment and return
+  - { from: foundling_bird_old_sanna, to: loc_foundling_bird_pond, label: TRIES_TO_DRINK,
+      evidence: "was about to drink it up." }
+  - { from: foundling_bird_lina, to: foundling_bird_old_sanna, label: DROWNS,
+      evidence: "drew her into the water, and there the old witch had to drown." }
+  - { from: foundling_bird_fundevogel, to: loc_foundling_bird_forester_house, label: RETURNS_HOME_WITH,
+      evidence: "Then the children went home together" }
+  - { from: foundling_bird_lina, to: loc_foundling_bird_forester_house, label: RETURNS_HOME_WITH,
+      evidence: "Then the children went home together" }

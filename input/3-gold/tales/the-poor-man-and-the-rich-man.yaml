@@ -1,0 +1,296 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-poor-man-and-the-rich-man
+khm: 87
+atu: 750A
+atu_name: The Three Wishes / The Poor Man and the Rich Man
+canonical_source: ../../2-silver/canonical/the-poor-man-and-the-rich-man/canonical.txt
+title: The Poor Man and the Rich Man
+
+
+entities:
+
+  characters:
+
+    poor_rich_lord:
+      name: The Lord as Traveler
+      archetypes: [arc_supernatural_donor]
+      being_type: being_divine
+      existential_states: [state_hidden_identity]
+      agency_modes: [agency_speech, agency_social_rank]
+      speech_acts_performed: [speech_wish, speech_command]
+      traits: [disguised-traveler, tired, night-overtaken, hospitality-tester, wish-granter, blessing-giver]
+      evidence: |
+        when the Lord himself still used to walk about on this earth
+        amongst men
+
+    poor_rich_poor_man:
+      name: The Poor Man
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      speech_acts_performed: [speech_wish]
+      traits: [poor, hospitable, generous, pious, wise-wisher, daily-bread-asker]
+      evidence: |
+        the poor man opened the little door and bade the traveler come
+        in
+
+    poor_rich_poor_wife:
+      name: The Poor Man's Wife
+      species: sp_human
+      agency_modes: [agency_domestic_labor, agency_speech]
+      traits: [welcoming, generous, food-preparer, bed-giver, straw-sleeper]
+      evidence: |
+        they had not much to offer him, but what they had they would
+        give him with all their hearts.
+
+    poor_rich_rich_man:
+      name: The Rich Man
+      archetypes: [arc_greedy_one]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_lie, speech_wish]
+      affects: [affect_greed, affect_envy, affect_anger]
+      traits: [rich, inhospitable, appearance-judging, excuse-maker, imitative-wisher, miserly, impatient, self-punishing]
+      evidence: |
+        as the Lord was wearing common clothes, and did not look like
+        one who had much money in his pocket, he shook his head
+
+    poor_rich_rich_wife:
+      name: The Rich Man's Wife
+      species: sp_human
+      agency_modes: [agency_speech]
+      affects: [affect_greed, affect_anger]
+      traits: [news-bearer, wish-pursuit-counselor, saddle-trapped, complaining, final-wish-compeller]
+      evidence: |
+        get on your horse
+
+    poor_rich_horse:
+      name: Lisa the Horse
+      species: sp_horse
+      agency_modes: [agency_object_mediation]
+      traits: [capering, meditation-disturber, killed-by-first-wish]
+      evidence: |
+        Gently, Lisa
+
+  magic_objects:
+
+    obj_poor_rich_common_clothes:
+      name: The Lord's Common Clothes
+      object_kind: garment
+      attributes:
+        function: hides divine identity and causes the rich man to misread the guest as poor
+      evidence: |
+        the Lord was wearing common clothes
+
+    obj_poor_rich_potatoes_milk:
+      name: Potatoes and Goat Milk
+      object_kind: food
+      attributes:
+        function: poor household's coarse but wholehearted guest meal
+      evidence: |
+        she put the potatoes on the fire, and while they were boiling,
+        she milked the goat
+
+    obj_poor_rich_straw_bed:
+      name: The Straw Bed
+      object_kind: material
+      attributes:
+        function: the old couple's self-denial so the guest can sleep in their bed
+      evidence: |
+        let us make up a bed of straw for ourselves to-night
+
+    obj_poor_rich_new_house:
+      name: The New House
+      object_kind: architecture
+      attributes:
+        function: third poor-household wish made visible to the rich neighbours
+      evidence: |
+        changed their old house into a new one
+
+    obj_poor_rich_saddle:
+      name: The Saddle
+      object_kind: tool
+      attributes:
+        function: burden shifted by the rich man's second uncontrolled wish onto his wife
+      evidence: |
+        this saddle, and could not get off it
+
+    obj_poor_rich_harness:
+      name: The Horse Harness
+      object_kind: tool
+      attributes:
+        function: miserly salvage burden after the first wish kills the horse
+      evidence: |
+        he did not like to leave the harness lying there
+
+  locations:
+
+    loc_poor_rich_road:
+      name: The Road with Two Houses
+      instance_of: loc_road
+      evidence: |
+        there stood on the road before him two houses facing each other
+
+    loc_poor_rich_rich_house:
+      name: The Rich Man's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        The large one belonged to a rich man
+
+    loc_poor_rich_poor_house:
+      name: The Poor Man's House
+      instance_of: loc_house
+      threshold_type: threshold_doorway
+      evidence: |
+        the small one to a poor man
+
+    loc_poor_rich_parlour:
+      name: The Rich Man's Parlour
+      instance_of: loc_house
+      evidence: |
+        he arrived there and opened the parlour-door
+
+
+classifications:
+
+  world_laws:
+    - law_kindness_to_hidden_donors_rewarded
+    - law_unruled_wishes_waste_the_gift
+    - law_wish_speech_materializes_reality
+
+  moral_regimes:
+    - moral_kindness_rewarded
+    - moral_retributive
+    - moral_mercy_over_judgment
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_domestic_labor
+    - agency_social_rank
+    - agency_object_mediation
+
+  affects_driving:
+    - affect_greed
+    - affect_envy
+    - affect_anger
+
+  symbol_numbers:
+    - num_3
+
+  threshold_types:
+    - threshold_doorway
+
+
+propp:
+  - { function: func_initial_situation, order: 1, actor: poor_rich_lord,
+      scene: "the Lord travels on earth at night and reaches two opposed houses" }
+  - { function: func_donor_test, order: 2, actor: poor_rich_lord,
+      scene: "the disguised Lord asks the rich man for a night's lodging" }
+  - { function: func_failed_hospitality, order: 3, actor: poor_rich_rich_man,
+      scene: "the rich man judges the traveler by common clothes and sends him away" }
+  - { function: func_successful_hospitality, order: 4, actor: poor_rich_poor_man,
+      scene: "the poor household welcomes the traveler, feeds him, and yields its bed" }
+  - { function: func_reward, order: 5, actor: poor_rich_lord,
+      scene: "the Lord grants the poor couple three wishes and changes their house" }
+  - { function: func_envious_recognition, order: 6, actor: poor_rich_rich_man,
+      scene: "the rich man sees the new house and learns he rejected the wish-granting traveler" }
+  - { function: func_false_repair_attempt, order: 7, actor: poor_rich_rich_man,
+      scene: "the rich man catches the Lord and politely rewrites his refusal as a misunderstanding" }
+  - { function: func_counter_gift_with_warning, order: 8, actor: poor_rich_lord,
+      scene: "the Lord permits three wishes but warns that they will not benefit the rich man" }
+  - { function: func_first_miswish, order: 9, actor: poor_rich_rich_man,
+      scene: "anger at the horse becomes a wish and kills it" }
+  - { function: func_second_miswish, order: 10, actor: poor_rich_rich_man,
+      scene: "resentment toward his wife shifts the saddle onto her" }
+  - { function: func_third_wish_repair, order: 11, actor: poor_rich_rich_man,
+      scene: "the final wish must release the wife from the saddle instead of gaining riches" }
+  - { function: func_moral_closure, order: 12,
+      scene: "the rich man gains only trouble, while the poor people live piously until death" }
+
+
+edges:
+
+  # Hidden divine guest tests two households
+  - { from: poor_rich_lord, to: loc_poor_rich_road, label: TRAVELS_ON,
+      evidence: "walk about on this earth amongst men" }
+  - { from: loc_poor_rich_road, to: loc_poor_rich_rich_house, label: PRESENTS,
+      evidence: "two houses facing each other; the one large and beautiful" }
+  - { from: loc_poor_rich_road, to: loc_poor_rich_poor_house, label: PRESENTS,
+      evidence: "the other small and poor" }
+  - { from: poor_rich_lord, to: loc_poor_rich_rich_house, label: KNOCKS_AT,
+      evidence: "knocking at his door" }
+  - { from: poor_rich_lord, to: poor_rich_rich_man, label: REQUESTS_LODGING_FROM,
+      evidence: "I only ask for" }
+  - { from: poor_rich_rich_man, to: obj_poor_rich_common_clothes, label: JUDGES_BY,
+      evidence: "the Lord was wearing common clothes" }
+  - { from: poor_rich_rich_man, to: poor_rich_lord, label: REFUSES_LODGING,
+      evidence: "No, I cannot take you in" }
+  - { from: poor_rich_rich_man, to: poor_rich_lord, label: SENDS_AWAY,
+      evidence: "Go somewhere else for a lodging" }
+
+  # Poor hospitality becomes blessing
+  - { from: poor_rich_lord, to: loc_poor_rich_poor_house, label: GOES_ACROSS_TO,
+      evidence: "went across to the small house and knocked" }
+  - { from: poor_rich_poor_man, to: poor_rich_lord, label: INVITES_IN,
+      evidence: "bade the traveler come in" }
+  - { from: poor_rich_poor_wife, to: poor_rich_lord, label: WELCOMES,
+      evidence: "shook hands with him, and welcomed him" }
+  - { from: poor_rich_poor_wife, to: obj_poor_rich_potatoes_milk, label: PREPARES,
+      evidence: "she put the potatoes on the fire" }
+  - { from: poor_rich_poor_wife, to: obj_poor_rich_straw_bed, label: PROPOSES_SLEEPING_ON,
+      evidence: "let us make up a bed of straw for ourselves to-night" }
+  - { from: poor_rich_poor_man, to: poor_rich_lord, label: OFFERS_BED_TO,
+      evidence: "invited him, if he had no objection, to sleep in their bed" }
+  - { from: poor_rich_lord, to: poor_rich_poor_man, label: GRANTS_THREE_WISHES,
+      evidence: "you may wish three things for yourselves and I will grant them" }
+  - { from: poor_rich_poor_man, to: speech_wish, label: WISHES_FOR,
+      evidence: "eternal happiness" }
+  - { from: poor_rich_poor_man, to: speech_wish, label: WISHES_FOR,
+      evidence: "may be healthy and have every day our daily bread" }
+  - { from: poor_rich_lord, to: obj_poor_rich_new_house, label: TRANSFORMS_HOUSE_INTO,
+      evidence: "changed their old house into a new one" }
+
+  # Envy chases the same gift
+  - { from: poor_rich_rich_man, to: obj_poor_rich_new_house, label: SEES,
+      evidence: "a new clean-looking house with red tiles and bright windows" }
+  - { from: poor_rich_rich_man, to: affect_envy, label: FEELS,
+      evidence: "I could tear myself to pieces!" }
+  - { from: poor_rich_rich_wife, to: poor_rich_rich_man, label: COUNSELS_PURSUIT,
+      evidence: "You can still catch the man up" }
+  - { from: poor_rich_rich_man, to: poor_rich_lord, label: PURSUES,
+      evidence: "galloped away on his horse, and soon came up with the Lord" }
+  - { from: poor_rich_rich_man, to: poor_rich_lord, label: LIES_TO,
+      evidence: "he was looking for the front-door key" }
+  - { from: poor_rich_lord, to: poor_rich_rich_man, label: WARNS_NOT_ADVANTAGEOUS,
+      evidence: "it would not be to his advantage" }
+  - { from: poor_rich_lord, to: poor_rich_rich_man, label: GRANTS_THREE_WISHES,
+      evidence: "three wishes which you shall form, shall be fulfilled." }
+
+  # The rich man's wish-speech consumes itself
+  - { from: poor_rich_horse, to: poor_rich_rich_man, label: DISTURBS,
+      evidence: "he was continually disturbed in his meditations" }
+  - { from: poor_rich_rich_man, to: affect_anger, label: FEELS,
+      evidence: "he was angry" }
+  - { from: poor_rich_rich_man, to: poor_rich_horse, label: WISHES_NECK_BROKEN,
+      evidence: "I wish your neck was broken!" }
+  - { from: law_unruled_wishes_waste_the_gift, to: poor_rich_horse, label: KILLS,
+      evidence: "down the horse fell on the ground, and there it lay dead" }
+  - { from: poor_rich_rich_man, to: obj_poor_rich_harness, label: SALVAGES,
+      evidence: "he cut it off, and put it on his back" }
+  - { from: poor_rich_rich_man, to: obj_poor_rich_saddle, label: CARRIES,
+      evidence: "The saddle hurt his back" }
+  - { from: poor_rich_rich_man, to: poor_rich_rich_wife, label: RESENTS_COMFORT_OF,
+      evidence: "what an easy life his wife had" }
+  - { from: poor_rich_rich_man, to: poor_rich_rich_wife, label: WISHES_ONTO_SADDLE,
+      evidence: "I just wish she was sitting there on this saddle" }
+  - { from: obj_poor_rich_saddle, to: poor_rich_rich_wife, label: TRAPS,
+      evidence: "sitting in the middle of the room on the saddle" }
+  - { from: poor_rich_rich_wife, to: poor_rich_rich_man, label: COMPELS_REPAIR_WISH,
+      evidence: "Thou hast wished me on it, so thou must help me off." }
+  - { from: poor_rich_rich_man, to: poor_rich_rich_wife, label: WISHES_RELEASE_FOR,
+      evidence: "she should be quit of the saddle, and able to get off it" }
+  - { from: law_unruled_wishes_waste_the_gift, to: poor_rich_rich_man, label: LEAVES_WITH_NOTHING_BUT,
+      evidence: "nothing by it but vexation, trouble, abuse, and the loss of his horse" }
+  - { from: law_kindness_to_hidden_donors_rewarded, to: poor_rich_poor_man, label: REWARDS,
+      evidence: "the poor people lived happily, quietly, and piously until their happy death." }

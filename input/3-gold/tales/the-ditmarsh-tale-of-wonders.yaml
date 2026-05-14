@@ -1,0 +1,260 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-ditmarsh-tale-of-wonders
+khm: 159
+atu: "1930"
+atu_name: The Ditmarsh Tale of Wonders
+canonical_source: ../../2-silver/canonical/the-ditmarsh-tale-of-wonders/canonical.txt
+title: The Ditmarsh Tale of Wonders
+
+
+entities:
+
+  characters:
+
+    ditmarsh_narrator:
+      name: The Wonder-Tale Speaker
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_lie]
+      traits: [first-person-wonder-teller, impossible-cataloguer, lie-releaser]
+      evidence: |
+        I will tell you something.
+
+    ditmarsh_roasted_fowls:
+      name: The Two Flying Roasted Fowls
+      species: sp_bird
+      agency_modes: [agency_extraordinary_body]
+      traits: [roasted-yet-flying, heaven-facing-breasts, hell-facing-backs]
+      evidence: |
+        two roasted fowls flying
+
+    ditmarsh_disabled_hunters:
+      name: The Impossible Hare Hunters
+      species: sp_human
+      existential_states: [state_blind, state_maimed, state_mute]
+      agency_modes: [agency_extraordinary_body, agency_speech]
+      traits: [deaf-fellow, blind-fellow, dumb-fellow, lame-fellow, hare-catchers]
+      evidence: |
+        one of them was deaf, the second blind, the third dumb
+
+    ditmarsh_sailing_men:
+      name: The Dry-Land Sailors
+      species: sp_human
+      agency_modes: [agency_object_mediation]
+      traits: [dry-land-sailors, field-sailors, mountain-drowned]
+      evidence: |
+        certain men who wished to sail on dry land
+
+    ditmarsh_crab:
+      name: The Hare-Chasing Crab
+      species: sp_crab
+      agency_modes: [agency_extraordinary_body]
+      traits: [crab, hare-chaser, prey-pursuer]
+      evidence: |
+        A crab was chasing a hare
+
+    ditmarsh_roof_cow:
+      name: The Roof Cow
+      species: sp_cattle
+      agency_modes: [agency_extraordinary_body]
+      traits: [roof-climbing-cow, vertical-farm-animal]
+      evidence: |
+        high up on the roof lay a cow
+
+  magic_objects:
+
+    obj_ditmarsh_anvil:
+      name: The Swimming Anvil
+      instance_of: obj_anvil
+      object_kind: tool
+      attributes:
+        function: heavy smithing object behaving like a swimmer across the Rhine
+      evidence: |
+        an anvil and a mill-stone swam across the Rhine
+
+    obj_ditmarsh_millstone:
+      name: The Swimming Mill-Stone
+      object_kind: material
+      attributes:
+        function: heavy milling stone paired with the anvil as impossible swimmer
+      evidence: |
+        a mill-stone swam across the Rhine
+
+    obj_ditmarsh_ploughshare:
+      name: The Eaten Ploughshare
+      object_kind: tool
+      attributes:
+        function: iron farm implement eaten by a frog on the ice
+      evidence: |
+        a frog sat on the ice at Whitsuntide and ate a ploughshare
+
+    obj_ditmarsh_sails:
+      name: The Dry-Land Sails
+      object_kind: tool
+      attributes:
+        function: sailing equipment absurdly used to move over fields and mountains
+      evidence: |
+        they set their sails in the wind
+
+  locations:
+
+    loc_ditmarsh_rhine:
+      name: The Rhine
+      instance_of: loc_river
+      evidence: |
+        swam across the Rhine
+
+    loc_ditmarsh_field:
+      name: The Great Fields
+      instance_of: loc_field
+      evidence: |
+        sailed away over great fields
+
+    loc_ditmarsh_high_mountain:
+      name: The High Mountain
+      instance_of: loc_mountain
+      evidence: |
+        sailed over a high mountain
+
+    loc_ditmarsh_roof:
+      name: The Cow's Roof
+      evidence: |
+        high up on the roof lay a cow
+
+
+classifications:
+
+  world_laws:
+    - law_nonsense_catalogue_suspends_causality
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_extraordinary_body
+    - agency_object_mediation
+
+  affects_driving: []
+
+  symbol_numbers:
+    - num_2
+    - num_3
+
+  threshold_types: []
+
+
+propp:
+
+  - function: func_opening_claim
+    order: 1
+    actor: ditmarsh_narrator
+    scene: The speaker announces a wonder-tale.
+    evidence: |
+      I will tell you something.
+
+  - function: func_impossibility_catalogue
+    order: 2
+    actor: ditmarsh_roasted_fowls
+    scene: Two roasted fowls fly with breasts toward heaven and backs toward hell.
+    evidence: |
+      their breasts turned to heaven and their backs to hell
+
+  - function: func_impossibility_catalogue
+    order: 3
+    actor: obj_ditmarsh_anvil
+    scene: An anvil and a mill-stone swim gently across the Rhine.
+    evidence: |
+      an anvil and a mill-stone swam across the Rhine
+
+  - function: func_impossibility_catalogue
+    order: 4
+    actor: ditmarsh_disabled_hunters
+    scene: Disabled hunters catch a hare through impossible swapped abilities.
+    evidence: |
+      the blind man saw the hare running across the field
+
+  - function: func_impossibility_catalogue
+    order: 5
+    actor: ditmarsh_sailing_men
+    scene: Men sail over fields and a mountain, then drown there.
+    evidence: |
+      sailed away over great fields
+
+  - function: func_impossibility_catalogue
+    order: 6
+    actor: ditmarsh_crab
+    scene: A crab chases a hare, a cow lies on a roof, and flies grow goat-sized.
+    evidence: |
+      A crab was chasing a hare
+
+  - function: func_lie_release
+    order: 7
+    actor: ditmarsh_narrator
+    scene: The speaker opens the window so the lies may fly out.
+    evidence: |
+      Open the window, that the lies may fly out.
+
+
+edges:
+
+  - from: ditmarsh_roasted_fowls
+    label: FLY_ROASTED
+    to: loc_heaven
+    evidence: |
+      two roasted fowls flying
+
+  - from: obj_ditmarsh_anvil
+    label: SWIMS_ACROSS
+    to: loc_ditmarsh_rhine
+    evidence: |
+      an anvil and a mill-stone swam across the Rhine
+
+  - from: sp_frog
+    label: EATS
+    to: obj_ditmarsh_ploughshare
+    evidence: |
+      ate a ploughshare
+
+  - from: ditmarsh_disabled_hunters
+    label: CATCHES
+    to: sp_hare
+    evidence: |
+      the lame one seized it by the neck
+
+  - from: ditmarsh_sailing_men
+    label: SAIL_OVER
+    to: loc_ditmarsh_field
+    evidence: |
+      sailed away over great fields
+
+  - from: ditmarsh_sailing_men
+    label: DROWN_ON
+    to: loc_ditmarsh_high_mountain
+    evidence: |
+      there they were miserably drowned
+
+  - from: ditmarsh_crab
+    label: CHASES
+    to: sp_hare
+    evidence: |
+      A crab was chasing a hare
+
+  - from: ditmarsh_roof_cow
+    label: LIES_ON
+    to: loc_ditmarsh_roof
+    evidence: |
+      high up on the roof lay a cow
+
+  - from: sp_fly
+    label: IS_AS_BIG_AS
+    to: sp_goat
+    evidence: |
+      the flies are as big as the goats are here
+
+  - from: ditmarsh_narrator
+    label: RELEASES_LIES
+    to: law_nonsense_catalogue_suspends_causality
+    evidence: |
+      that the lies may fly out

@@ -1,0 +1,110 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: legend-05-gods-food
+khm: null
+legend_number: 5
+canonical_source: ../../2-silver/canonical/legend-05-gods-food/canonical.txt
+title: God's Food
+
+entities:
+  characters:
+    gods_food_poor_widow:
+      name: The Poor Widow
+      species: sp_human
+      agency_modes: [agency_speech, agency_endurance]
+      speech_acts_performed: [speech_request, speech_prayer, speech_testimony]
+      affects: [affect_hunger, affect_pity]
+      traits: [widow, five-child-mother, starving, bread-beggar, praying, earthly-food-renouncer, heartbroken-dead]
+      evidence: |
+        the other had five and was a widow
+
+    gods_food_rich_sister:
+      name: The Rich Hard-Hearted Sister
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      speech_acts_performed: [speech_lie, speech_command]
+      affects: [affect_greed, affect_fear]
+      traits: [rich, childless, stone-hard, bread-refuser, harsh-speaker, terrified-by-blood]
+      evidence: |
+        The very rich sister was as hard as a stone
+
+    gods_food_husband:
+      name: The Rich Sister's Husband
+      species: sp_human
+      agency_modes: [agency_object_mediation, agency_speech]
+      affects: [affect_pity, affect_fear]
+      traits: [bread-cutter, blood-witness, belated-helper, food-offerer]
+      evidence: |
+        the husband of the rich sister came home
+
+    gods_food_children:
+      name: The Widow's Five Children
+      species: sp_human
+      agency_modes: [agency_endurance]
+      affects: [affect_hunger]
+      traits: [starving-children, three-dead-elders, two-dying-youngest, divinely-satisfied]
+      evidence: |
+        herself and her children
+
+  magic_objects:
+    obj_gods_food_bloody_loaf:
+      name: The Loaf that Flows Blood
+      object_kind: food
+      evidence: |
+        out flowed red blood
+
+  locations:
+    loc_gods_food_rich_house:
+      name: The Rich Sister's House
+      instance_of: loc_house
+      evidence: |
+        I myself have nothing in the house
+
+    loc_gods_food_widow_room:
+      name: The Widow's Room of Prayer
+      instance_of: loc_house
+      evidence: |
+        when he entered her room, he found her praying
+
+classifications:
+  world_laws:
+    - law_refused_bread_bleeds_as_divine_accusation
+  moral_regimes:
+    - moral_retributive
+    - moral_mercy_over_judgment
+  agency_modes_dominant: [agency_speech, agency_object_mediation, agency_endurance]
+  affects_driving: [affect_hunger, affect_pity, affect_greed, affect_fear]
+  symbol_numbers: []
+  threshold_types: []
+
+propp:
+  - { function: func_starving_request, order: 1, actor: gods_food_poor_widow,
+      scene: "the starving widow asks her rich sister for a mouthful of bread" }
+  - { function: func_charity_refused, order: 2, actor: gods_food_rich_sister,
+      victim: gods_food_poor_widow,
+      scene: "the rich sister lies that she has nothing and drives the widow away" }
+  - { function: func_blood_sign, order: 3, actor: obj_gods_food_bloody_loaf,
+      scene: "the loaf flows blood when the husband cuts it" }
+  - { function: func_belated_help, order: 4, actor: gods_food_husband,
+      beneficiary: gods_food_poor_widow,
+      scene: "the husband hurries to help but finds the widow praying beside dying children" }
+  - { function: func_heavenly_satisfaction, order: 5, actor: gods_food_poor_widow,
+      scene: "the widow says God has already satisfied the dead children and then dies with the rest" }
+
+edges:
+  - { from: gods_food_poor_widow, to: gods_food_rich_sister, label: BEGS_BREAD_FROM,
+      evidence: "give me a mouthful of bread" }
+  - { from: gods_food_rich_sister, to: gods_food_poor_widow, label: REFUSES_WITH_LIE,
+      evidence: "I myself have nothing in the house" }
+  - { from: gods_food_husband, to: obj_gods_food_bloody_loaf, label: CUTS,
+      evidence: "made the first cut into the loaf" }
+  - { from: obj_gods_food_bloody_loaf, to: law_refused_bread_bleeds_as_divine_accusation, label: MANIFESTS,
+      evidence: "out flowed red blood" }
+  - { from: gods_food_husband, to: loc_gods_food_widow_room, label: HURRIES_TO_HELP_AT,
+      evidence: "He hurried away to help the widow and her children" }
+  - { from: gods_food_poor_widow, to: speech_prayer, label: PRAYS,
+      evidence: "he found her praying" }
+  - { from: gods_food_poor_widow, to: gods_food_husband, label: REFUSES_EARTHLY_FOOD,
+      evidence: "For earthly food have we no longer any desire" }
+  - { from: gods_food_poor_widow, to: gods_food_children, label: DIES_WITH,
+      evidence: "her heart broke, and she sank down dead" }

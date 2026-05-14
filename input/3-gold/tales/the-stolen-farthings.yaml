@@ -1,0 +1,282 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-stolen-farthings
+khm: 154
+atu: '769'
+atu_name: The Stolen Farthings
+canonical_source: ../../2-silver/canonical/the-stolen-farthings/canonical.txt
+title: The Stolen Farthings
+
+
+entities:
+
+  characters:
+
+    stolen_farthings_dead_child:
+      name: The Pale Dead Child
+      species: sp_human
+      being_type: being_spirit
+      existential_states: [state_liminal_dead]
+      agency_modes: [agency_endurance, agency_object_mediation]
+      affects: [affect_guilt]
+      traits: [pale-child, snow-white-clothed, silent-revenant, noon-returner, hidden-farthings-seeker, unrested-dead]
+      evidence: |
+        a very pale child dressed in snow-white clothes came in
+
+    stolen_farthings_father:
+      name: The Father
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      traits: [dinner-host, unable-to-see-child, board-lifter, restitution-parent]
+      evidence: |
+        A father was one day sitting at dinner
+
+    stolen_farthings_mother:
+      name: The Mother
+      archetypes: [arc_protective_mother]
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      affects: [affect_grief, affect_pity]
+      traits: [dead-child-recognizer, former-farthing-giver, restitution-parent]
+      evidence: |
+        the mother recognized it
+
+    stolen_farthings_stranger:
+      name: The Visiting Stranger
+      species: sp_human
+      agency_modes: [agency_speech, agency_object_mediation]
+      traits: [dinner-guest, revenant-witness, threshold-peeper, evidence-reporter]
+      evidence: |
+        a good friend who had come on a visit
+
+    stolen_farthings_poor_man:
+      name: The Poor Man
+      species: sp_human
+      agency_modes: [agency_endurance]
+      affects: [affect_pity]
+      traits: [intended-alms-recipient, final-money-recipient]
+      evidence: |
+        give them to a poor man
+
+  magic_objects:
+
+    obj_stolen_farthings_two_farthings:
+      name: The Two Stolen Farthings
+      object_kind: treasure
+      attributes:
+        function: alms money withheld for a biscuit and hidden under the floor, binding the dead child to unrest
+      evidence: |
+        found two farthings
+
+    obj_stolen_farthings_snow_white_clothes:
+      name: The Snow-White Clothes
+      object_kind: garment
+      attributes:
+        function: visual sign by which the stranger describes the revenant and the mother recognizes it
+      evidence: |
+        dressed in snow-white clothes
+
+    obj_stolen_farthings_floor_boards:
+      name: The Floor Boards
+      object_kind: material
+      attributes:
+        function: household concealment surface whose crevices hold the unresolved alms money
+      evidence: |
+        crevices between the boards of the floor
+
+  locations:
+
+    loc_stolen_farthings_dinner_room:
+      name: The Dinner Room
+      instance_of: loc_house
+      evidence: |
+        sitting at dinner with his wife and his children
+
+    loc_stolen_farthings_next_room:
+      name: The Next Room
+      instance_of: loc_house
+      evidence: |
+        went straight into the next room
+
+    loc_stolen_farthings_grave:
+      name: The Child's Grave
+      instance_of: loc_tomb
+      threshold_type: threshold_grave
+      evidence: |
+        no rest in its grave
+
+
+classifications:
+
+  world_laws:
+    - law_hidden_alms_money_binds_dead_child_to_restless_search
+
+  moral_regimes:
+    - moral_restorative
+    - moral_compassionate_aid
+
+  agency_modes_dominant:
+    - agency_object_mediation
+    - agency_speech
+    - agency_endurance
+
+  affects_driving:
+    - affect_guilt
+    - affect_grief
+    - affect_pity
+
+  symbol_numbers:
+    - num_2
+    - num_3
+    - num_12
+
+  threshold_types:
+    - threshold_grave
+
+
+propp:
+
+  - function: func_initial_situation
+    order: 1
+    actor: stolen_farthings_father
+    scene: The family and visiting friend sit together at dinner.
+    evidence: |
+      sitting at dinner with his wife and his children
+
+  - function: func_apparition
+    order: 2
+    actor: stolen_farthings_dead_child
+    scene: At twelve o'clock the pale child enters silently and goes into the next room.
+    evidence: |
+      it was striking twelve o’clock
+
+  - function: func_repetition
+    order: 3
+    actor: stolen_farthings_dead_child
+    scene: The child appears in the same way on the second and third day.
+    evidence: |
+      On the second and on the third day
+
+  - function: func_failed_recognition
+    order: 4
+    actor: stolen_farthings_father
+    scene: The father, mother, and children cannot see the child when the stranger points it out.
+    evidence: |
+      the mother and the children also all saw nothing
+
+  - function: func_discovery
+    order: 5
+    actor: stolen_farthings_stranger
+    scene: The stranger peeps into the room and sees the child digging among the floor boards.
+    evidence: |
+      digging and seeking about industriously amongst the crevices between the boards of the floor
+
+  - function: func_recognition
+    order: 6
+    actor: stolen_farthings_mother
+    scene: The mother recognizes the apparition as her dear child who died a month earlier.
+    evidence: |
+      it is my dear child who died a month ago
+
+  - function: func_revelation
+    order: 7
+    actor: obj_stolen_farthings_two_farthings
+    scene: The lifted boards reveal the farthings that had been meant for a poor man.
+    evidence: |
+      They took up the boards and found two farthings
+
+  - function: func_restitution
+    order: 8
+    actor: stolen_farthings_father
+    beneficiary: stolen_farthings_poor_man
+    scene: The parents give the money to the poor man, completing the broken alms.
+    evidence: |
+      The parents gave the money at once to a poor man
+
+  - function: func_release
+    order: 9
+    actor: stolen_farthings_dead_child
+    scene: Once the alms are restored, the child never appears again.
+    evidence: |
+      after that the child was never seen again
+
+
+edges:
+
+  - from: stolen_farthings_dead_child
+    label: ENTERS_AT_NOON
+    to: loc_stolen_farthings_dinner_room
+    evidence: |
+      it was striking twelve o’clock
+
+  - from: stolen_farthings_dead_child
+    label: GOES_INTO
+    to: loc_stolen_farthings_next_room
+    evidence: |
+      went straight into the next room
+
+  - from: stolen_farthings_dead_child
+    label: REPEATS_VISIT
+    to: num_3
+    evidence: |
+      On the second and on the third day
+
+  - from: stolen_farthings_stranger
+    label: SEES
+    to: stolen_farthings_dead_child
+    evidence: |
+      the stranger saw the door open
+
+  - from: stolen_farthings_father
+    label: CANNOT_SEE
+    to: stolen_farthings_dead_child
+    evidence: |
+      the father, who however did not see it
+
+  - from: stolen_farthings_stranger
+    label: FINDS_SEEKING_AMONG
+    to: obj_stolen_farthings_floor_boards
+    evidence: |
+      digging and seeking about industriously amongst the crevices between the boards of the floor
+
+  - from: stolen_farthings_mother
+    label: RECOGNIZES
+    to: stolen_farthings_dead_child
+    evidence: |
+      the mother recognized it
+
+  - from: stolen_farthings_mother
+    label: HAD_GIVEN
+    to: obj_stolen_farthings_two_farthings
+    evidence: |
+      the child had once received from its mother
+
+  - from: obj_stolen_farthings_two_farthings
+    label: WERE_MEANT_FOR
+    to: stolen_farthings_poor_man
+    evidence: |
+      that it might give them to a poor man
+
+  - from: stolen_farthings_dead_child
+    label: HIDES
+    to: obj_stolen_farthings_two_farthings
+    evidence: |
+      hidden them in the openings between the boards
+
+  - from: obj_stolen_farthings_two_farthings
+    label: PREVENTS_REST_IN
+    to: loc_stolen_farthings_grave
+    evidence: |
+      therefore it had had no rest in its grave
+
+  - from: stolen_farthings_father
+    label: GIVES_MONEY_TO
+    to: stolen_farthings_poor_man
+    evidence: |
+      gave the money at once to a poor man
+
+  - from: law_hidden_alms_money_binds_dead_child_to_restless_search
+    label: RELEASES
+    to: stolen_farthings_dead_child
+    evidence: |
+      after that the child was never seen again

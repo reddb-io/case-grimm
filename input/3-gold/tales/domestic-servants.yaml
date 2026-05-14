@@ -1,0 +1,153 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: domestic-servants
+khm: 140
+atu: '1940'
+atu_name: Domestic Servants
+canonical_source: ../../2-silver/canonical/domestic-servants/canonical.txt
+title: Domestic Servants
+
+
+entities:
+
+  characters:
+
+    domestic_first_traveller:
+      name: The First Walpe Traveller
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_request]
+      traits: [questioner, formula-starter, walpe-bound]
+      evidence: |
+        Whither goest thou?
+
+    domestic_second_traveller:
+      name: The Second Walpe Traveller
+      species: sp_human
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_request]
+      traits: [answerer, formula-repeater, household-name-provider, walpe-bound]
+      evidence: |
+        To Walpe
+
+    domestic_man_cham:
+      name: Cham
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [named-man, repeated-household-member]
+      evidence: |
+        My man Cham
+
+    domestic_child_wild:
+      name: Wild
+      species: sp_human
+      traits: [named-child, repeated-household-member]
+      evidence: |
+        My child Wild
+
+    domestic_drudge:
+      name: From-thy-work-do-not-budge
+      species: sp_human
+      agency_modes: [agency_domestic_labor]
+      traits: [named-drudge, work-bound-servant, repeated-household-member]
+      evidence: |
+        From-thy-work-do-not-budge
+
+  magic_objects:
+
+    obj_domestic_cradle_hippodadle:
+      name: Hippodadle the Cradle
+      object_kind: tool
+      attributes:
+        function: comic named household object folded into the cumulative formula
+      evidence: |
+        My cradle Hippodadle
+
+  locations:
+
+    loc_domestic_walpe:
+      name: Walpe
+      instance_of: loc_village
+      evidence: |
+        To Walpe
+
+
+classifications:
+
+  world_laws:
+    - law_formulaic_name_chain_accumulates_household
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_domestic_labor
+
+
+propp:
+
+  - function: func_formulaic_departure
+    order: 1
+    actor: domestic_first_traveller
+    beneficiary: domestic_second_traveller
+    scene: "one speaker asks where the other is going, and shared travel to Walpe begins the refrain"
+    evidence: "together we’ll go"
+
+  - function: func_name_accumulation
+    order: 2
+    actor: domestic_second_traveller
+    beneficiary: domestic_man_cham
+    scene: "the man Cham is named and added to the repeated chain"
+    evidence: "My man Cham"
+
+  - function: func_name_accumulation
+    order: 3
+    actor: domestic_second_traveller
+    beneficiary: domestic_child_wild
+    scene: "the child Wild is named and added before the man and destination"
+    evidence: "My child Wild"
+
+  - function: func_name_accumulation
+    order: 4
+    actor: domestic_second_traveller
+    beneficiary: obj_domestic_cradle_hippodadle
+    scene: "the cradle Hippodadle is named and folded into the growing domestic list"
+    evidence: "My cradle Hippodadle"
+
+  - function: func_name_accumulation
+    order: 5
+    actor: domestic_second_traveller
+    beneficiary: domestic_drudge
+    scene: "the drudge From-thy-work-do-not-budge completes the cumulative household formula"
+    evidence: "My drudge, From-thy-work-do-not-budge"
+
+
+edges:
+
+  - { from: domestic_first_traveller, to: domestic_second_traveller, label: ASKS_DESTINATION_OF,
+      evidence: "Whither goest thou?" }
+  - { from: domestic_second_traveller, to: loc_domestic_walpe, label: GOES_TO,
+      evidence: "To Walpe" }
+  - { from: domestic_first_traveller, to: loc_domestic_walpe, label: JOINS_ROUTE_TO,
+      evidence: "I to Walpe" }
+  - { from: domestic_first_traveller, to: domestic_man_cham, label: ASKS_NAME_OF,
+      evidence: "What is his name?" }
+  - { from: domestic_second_traveller, to: domestic_man_cham, label: NAMES,
+      evidence: "My man Cham" }
+  - { from: domestic_first_traveller, to: domestic_child_wild, label: ASKS_NAME_OF,
+      evidence: "how is he styled?" }
+  - { from: domestic_second_traveller, to: domestic_child_wild, label: NAMES,
+      evidence: "My child Wild" }
+  - { from: domestic_first_traveller, to: obj_domestic_cradle_hippodadle, label: ASKS_NAME_OF,
+      evidence: "How callest thou thy cradle?" }
+  - { from: domestic_second_traveller, to: obj_domestic_cradle_hippodadle, label: NAMES,
+      evidence: "My cradle Hippodadle" }
+  - { from: domestic_first_traveller, to: domestic_drudge, label: ASKS_NAME_OF,
+      evidence: "what name has thy drudge?" }
+  - { from: domestic_second_traveller, to: domestic_drudge, label: NAMES,
+      evidence: "My drudge, From-thy-work-do-not-budge" }
+  - { from: domestic_drudge, to: agency_domestic_labor, label: EMBODIES,
+      evidence: "From-thy-work-do-not-budge" }
+  - { from: atu_1940, to: law_formulaic_name_chain_accumulates_household, label: REALIZED_BY,
+      evidence: "so, so, together we’ll go" }

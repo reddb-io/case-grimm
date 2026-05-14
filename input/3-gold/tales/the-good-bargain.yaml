@@ -1,0 +1,271 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-good-bargain
+khm: 7
+atu: '1642'
+atu_name: The Good Bargain
+canonical_source: ../../2-silver/canonical/the-good-bargain/canonical.txt
+title: The Good Bargain
+
+
+entities:
+
+  characters:
+
+    good_bargain_peasant:
+      name: The Peasant (countryman)
+      archetypes: [arc_literal_fool, arc_trickster]
+      species: sp_human
+      agency_modes: [agency_speech, agency_cunning]
+      affects: [affect_anger, affect_greed]
+      speech_acts_performed: [speech_bargain, speech_promise, speech_lie]
+      traits: [literalist, hot-tempered, accidentally-cunning, lucky]
+      evidence: |
+        "'Stupid animals that you are! Don’t you know better than
+         that? It is seven thalers and not eight.'" — argues a price
+         with frogs as if they were buyers.
+
+    good_bargain_frogs:
+      name: The Frogs (heckling chorus)
+      species: sp_frog
+      agency_modes: [agency_speech]
+      traits: [repetitive, water-dwelling, treated-as-counterparties]
+      evidence: |
+        "the frogs maintained their opinion and cried continually,
+         'aik, aik, aik, aik'" — their cry is interpreted as a
+         counter-offer of eight.
+
+    good_bargain_greyhound:
+      name: The Greyhound (dog-leader, treated as bond-guarantor)
+      species: sp_dog
+      agency_modes: [agency_speech]
+      traits: [hungry, treated-as-bondsman]
+      evidence: |
+        "'Wilt thou promise not to devour it all then, and wilt thou
+         go bail for thy companions?' 'Wow, wow, wow,' said the dog."
+
+    good_bargain_butcher:
+      name: The Butcher (dog-owner, refuses suit)
+      species: sp_human
+      agency_modes: [agency_violence]
+      affects: [affect_anger]
+      traits: [violent-when-mocked, drives-out-with-broom]
+      evidence: |
+        "the butcher grew angry, snatched a broomstick and drove him
+         out."
+
+    good_bargain_king:
+      name: The King
+      archetypes: [arc_oath_enforcer]
+      species: sp_human
+      agency_modes: [agency_social_rank, agency_speech]
+      affects: [affect_anger]
+      speech_acts_performed: [speech_command, speech_promise]
+      traits: [moody, transmutes-reward-into-punishment, finally-amused]
+      evidence: |
+        "'Thou shalt have another reward... five hundred counted out
+         in full.'" — the king's reward turns out to be five hundred
+         blows.
+
+    good_bargain_princess:
+      name: The Princess (unlaughing)
+      archetypes: [arc_unlaughing_princess]
+      species: sp_human
+      affects: [affect_curiosity]
+      traits: [unlaughing-until-now, royal]
+      evidence: |
+        "in her whole life she has never yet laughed as she has just
+         done at thee, and I have promised her to him who could make
+         her laugh."
+
+    good_bargain_sentinel:
+      name: The Sentinel (speculator-soldier)
+      archetypes: [arc_speculator]
+      species: sp_human
+      agency_modes: [agency_endurance]
+      affects: [affect_greed]
+      speech_acts_performed: [speech_bargain]
+      traits: [speculative, blow-hardened, takes-200-share]
+      evidence: |
+        "'give me some of it. What canst thou do with all that money?'"
+
+    good_bargain_jew:
+      name: The Jew (speculator-money-changer; antisemitic caricature of the source)
+      archetypes: [arc_speculator]
+      species: sp_human
+      affects: [affect_greed, affect_envy]
+      speech_acts_performed: [speech_bargain, speech_lie]
+      traits: [usurious-caricature, coat-lender, informer]
+      evidence: |
+        "'Oh, wonder! what a luck-child thou art! I will change it
+         for thee, I will change it for thee into small coins.'" —
+         buys 300 of the (yet undelivered) thalers at discount with
+         debased coin.
+        NOTE: this character is a 19th-century antisemitic caricature
+        in the source text. Modelled here as `arc_speculator` for
+        functional comparability across schwank tales while
+        preserving the historical attestation in `evidence`.
+
+  magic_objects:
+    # No magical objects — schwank operates entirely in mundane money,
+    # meat, coats. The frogs and dogs are not magical; only literally-
+    # interpreted.
+    obj_jew_coat:
+      name: The Jew's Coat (lent, then disowned)
+      object_kind: garment
+      attributes:
+        purpose: borrowed-for-court-appearance
+        outcome: peasant denies the loan to the king
+      evidence: |
+        "'I will out of pure friendship lend thee a coat for the
+         short time. What will people not do for love!'"
+
+  locations:
+
+    loc_pond_good_bargain:
+      name: The Pond (frog court)
+      instance_of: loc_pond
+      evidence: |
+        "On the way home he had to pass a pond, and already from afar
+         he heard the frogs crying, 'Aik, aik, aik, aik.'"
+
+    loc_town_gate_good_bargain:
+      name: The Town Gate (dog assembly)
+      instance_of: loc_gate
+      threshold_type: threshold_gate
+      attributes:
+        kind: city-gate-with-stray-dogs
+      evidence: |
+        "a great troop of dogs were gathered together in front of the
+         gate"
+
+    loc_castle_good_bargain:
+      name: The Royal Palace (audience chamber)
+      instance_of: loc_castle
+      evidence: |
+        "he went to the royal palace and begged for an audience."
+
+    loc_inn_good_bargain:
+      name: The Inn (post-treasure money-counting)
+      instance_of: loc_inn
+      evidence: |
+        "Afterwards he went to an inn and counted out his money."
+
+
+classifications:
+
+  world_laws:
+    - law_speech_taken_literally
+    - law_laughter_releases_reward
+    - law_promise_binds_reality   # king's blow-promise binds: the speculators get blows
+
+  moral_regimes:
+    - moral_trickster_wins
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_cunning
+
+  affects_driving:
+    - affect_anger
+    - affect_greed
+
+  symbol_numbers:
+    - num_7   # seven thalers; the exact count disputed against frog "eight"
+    - num_8   # "aik" heard as eight; comic one-too-many miscount
+    - num_3   # three days for butcher's payment; three actors of laughter (frog/dog/butcher)
+
+  threshold_types:
+    - threshold_gate
+
+
+propp:
+  # Schwank form: Propp's functions occur in fragmentary, comic
+  # sequence. The hero has no quest — only a series of misreadings
+  # and accidental triumphs. The recognisable arc is
+  # interdiction-by-king → false-claim-by-informer → escape-by-trick.
+  - { function: func_lack, order: 1, actor: good_bargain_peasant,
+      scene: "peasant sells cow for seven thalers; argues with frogs over the count" }
+  - { function: func_villainy, order: 2, actor: good_bargain_frogs,
+      scene: "peasant throws money into pond expecting return; frogs do not return it" }
+  - { function: func_villainy, order: 3, actor: good_bargain_butcher,
+      scene: "leaves meat with dog as bond; butcher refuses to pay and drives him out" }
+  - { function: func_difficult_task, order: 4, actor: good_bargain_peasant,
+      scene: "petitions the king for justice; tale of frogs/dogs/butcher makes princess laugh" }
+  - { function: func_branding, order: 5, beneficiary: good_bargain_peasant,
+      scene: "king promises 'five hundred counted out' — peasant assumes thalers, they are blows" }
+  - { function: func_difficult_task, order: 6, actor: good_bargain_peasant,
+      scene: "peasant sells the blow-claim: 200 to sentinel, 300 to Jew at discount" }
+  - { function: func_victory, order: 7, scene: "speculators receive the blows; peasant invited to take from treasury" }
+  - { function: func_branding, order: 8, actor: good_bargain_jew,
+      scene: "Jew overhears disrespectful speech; informs the king" }
+  - { function: func_struggle, order: 9, actor: good_bargain_peasant,
+      scene: "peasant borrows Jew's coat for audience, then denies the loan before the king" }
+  - { function: func_victory, order: 10, scene: "king cannot tell which of them lies; awards more thalers; peasant goes home in good coat and gold" }
+
+
+edges:
+
+  # The frog episode — speech taken literally
+  - { from: good_bargain_peasant, to: good_bargain_frogs, label: ABUSES,
+      evidence: "'You water-splashers, you thick-heads, you goggle-eyes'" }
+  - { from: good_bargain_peasant, to: good_bargain_frogs, label: THROWS_AT,
+      attributes: { item: seven_thalers },
+      evidence: "'count it yourselves,' and threw all the money into the water to them." }
+
+  # The dog episode — bond by bark
+  - { from: good_bargain_peasant, to: good_bargain_greyhound, label: ENTRUSTS,
+      attributes: { item: slaughtered_cow_meat, term: three_days },
+      evidence: "'I must have my money in three days or else it will go ill with thee'" }
+  - { from: good_bargain_peasant, to: good_bargain_butcher, label: PETITIONS,
+      attributes: { claim: meat-payment },
+      evidence: "'Jesting apart, I will have my money! Did not the great dog bring you the whole of the slaughtered cow three days ago?'" }
+  - { from: good_bargain_butcher, to: good_bargain_peasant, label: ABUSES,
+      evidence: "snatched a broomstick and drove him out." }
+
+  # Court — laughter triggers reward
+  - { from: good_bargain_peasant, to: good_bargain_king, label: PETITIONS,
+      evidence: "'I will have my money! ... the frogs and the dogs have taken from me what is mine'" }
+  - { from: good_bargain_peasant, to: good_bargain_princess, label: MAKES_LAUGH,
+      evidence: "the King’s daughter began to laugh heartily" }
+  - { from: good_bargain_king, to: good_bargain_peasant, label: PROMISES_TO,
+      attributes: { object: bride, declined: true },
+      evidence: "'you shall have my daughter to wife for it'" }
+  - { from: good_bargain_peasant, to: good_bargain_king, label: REFUSES,
+      evidence: "'I will not have her, I have a wife already'" }
+  - { from: good_bargain_king, to: good_bargain_peasant, label: PROMISES_TO,
+      attributes: { object: "five hundred (blows, but stated as a count)" },
+      evidence: "'thou shalt have five hundred counted out in full.'" }
+
+  # Speculators buy the (unspecified) reward
+  - { from: good_bargain_sentinel, to: good_bargain_peasant, label: BUYS_CLAIM,
+      attributes: { share: 200 },
+      evidence: "'give me some of it. What canst thou do with all that money?'" }
+  - { from: good_bargain_jew, to: good_bargain_peasant, label: BUYS_CLAIM,
+      attributes: { share: 300, paid_in: "debased groschen — three worth two good ones" },
+      evidence: "'I will change it for thee, I will change it for thee into small coins'" }
+
+  # The reveal — the reward is blows
+  - { from: good_bargain_king, to: good_bargain_sentinel, label: AWARDS,
+      attributes: { kind: "blows" },
+      evidence: "they received the blows strictly counted out. The soldier bore it patiently and knew already how it tasted" }
+  - { from: good_bargain_king, to: good_bargain_jew, label: AWARDS,
+      attributes: { kind: "blows" },
+      evidence: "the Jew said sorrowfully, 'Alas, alas, are these the heavy thalers?'" }
+  - { from: good_bargain_king, to: good_bargain_peasant, label: AWARDS,
+      attributes: { kind: "treasury contents — stuff your pockets" },
+      evidence: "'Go into my treasure chamber and get some money for thyself, as much as thou wilt.'" }
+
+  # The informer reversal
+  - { from: good_bargain_jew, to: good_bargain_peasant, label: INFORMS_ON,
+      evidence: "'that man is speaking disrespectfully of our lord the King, I will run and inform'" }
+  - { from: good_bargain_jew, to: good_bargain_peasant, label: LENDS,
+      attributes: { item: obj_jew_coat },
+      evidence: "'I will out of pure friendship lend thee a coat for the short time.'" }
+  - { from: good_bargain_peasant, to: good_bargain_jew, label: LIES_TO,
+      attributes: { lie: "denies the coat is borrowed" },
+      evidence: "'That rascal there is capable of maintaining that I have his coat on.'" }
+  - { from: good_bargain_king, to: good_bargain_peasant, label: AWARDS,
+      attributes: { kind: "more hard thalers — for the un-judgeable case" },
+      evidence: "'The Jew has assuredly deceived one or the other of us, either myself or the peasant,' and again he ordered something to be counted out to him in hard thalers." }

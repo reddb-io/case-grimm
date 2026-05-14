@@ -1,0 +1,21 @@
+slug: rumpelstiltskin
+khm: 55
+base:
+  book: pg5314-grimm-hunt
+edits:
+- id: 1
+  op: replace
+  from: pg2591-grimm-taylor
+  anchor: and “whirr, whirr, whirr,” three turns, and the reel was full
+  text: |
+    and whistled and sang:
+
+        Round about, round about,
+           Lo and behold!
+        Reel away, reel away,
+           Straw into gold!
+
+    Then “whirr, whirr, whirr,” three turns, and the reel was full
+  label: §4 spinning song restoration (with one-word bridge "Then")
+  bridge_words:
+  - Then

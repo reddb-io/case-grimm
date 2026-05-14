@@ -1,0 +1,8 @@
+slug: the-griffin
+khm: 165
+atu: '610'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []

@@ -1,0 +1,162 @@
+# yaml-language-server: $schema=../schemas/tale.schema.json
+
+slug: the-duration-of-life
+khm: 176
+atu: "173"
+atu_name: The Duration of Life
+canonical_source: ../../2-silver/canonical/the-duration-of-life/canonical.txt
+title: The Duration of Life
+
+
+entities:
+
+  characters:
+
+    duration_life_god:
+      name: God
+      being_type: being_divine
+      agency_modes: [agency_social_rank, agency_speech]
+      speech_acts_performed: [speech_command, speech_bargain]
+      affects: [affect_pity]
+      traits: [creator, lifespan-fixer, animal-years-reducer, human-years-adder, final-limit-setter]
+      evidence: |
+        God had created the world and was about to fix the length
+
+    duration_life_ass:
+      name: The Ass
+      species: sp_donkey
+      agency_modes: [agency_speech, agency_domestic_labor, agency_endurance]
+      speech_acts_performed: [speech_request]
+      affects: [affect_grief]
+      traits: [burden-carrier, mill-corn-dragger, beaten-worker, eighteen-years-relieved, comforted-animal]
+      evidence: |
+        the ass came and asked
+
+    duration_life_dog:
+      name: The Dog
+      species: sp_dog
+      agency_modes: [agency_speech, agency_endurance, agency_violence]
+      speech_acts_performed: [speech_request]
+      affects: [affect_fear]
+      traits: [runner, barker, biter, aging-growler, twelve-years-released]
+      evidence: |
+        the dog appeared
+
+    duration_life_monkey:
+      name: The Monkey
+      species: sp_monkey
+      agency_modes: [agency_speech]
+      speech_acts_performed: [speech_request]
+      affects: [affect_grief]
+      traits: [prank-player, face-maker, laughter-forcer, sour-apple-receiver, sadness-behind-mirth, ten-years-released]
+      evidence: |
+        Then came the monkey
+
+    duration_life_man:
+      name: Man
+      species: sp_human
+      agency_modes: [agency_speech, agency_domestic_labor]
+      speech_acts_performed: [speech_request]
+      affects: [affect_joy, affect_greed]
+      traits: [joyous, healthy, vigorous, house-builder, tree-planter, unsatisfied-life-extender, seventy-year-human]
+      evidence: |
+        At last man appeared, joyous, healthy and vigorous
+
+  locations: {}
+
+
+classifications:
+
+  world_laws:
+    - law_transferred_animal_years_shape_human_aging
+
+  moral_regimes:
+    - moral_comic_inversion
+
+  agency_modes_dominant:
+    - agency_speech
+    - agency_social_rank
+    - agency_domestic_labor
+
+  affects_driving:
+    - affect_pity
+    - affect_greed
+    - affect_grief
+
+  symbol_numbers:
+    - num_30
+    - num_12
+    - num_70
+
+  threshold_types: []
+
+
+propp:
+  - { function: func_creation_allotment, order: 1, actor: duration_life_god,
+      scene: "God fixes the length of each creature's life after creation" }
+  - { function: func_animal_complaint, order: 2, actor: duration_life_ass,
+      scene: "the ass says thirty years are too long for burden, blows, and kicks" }
+  - { function: func_lifespan_reduction, order: 3, actor: duration_life_god,
+      scene: "God pities the ass and relieves him of eighteen years" }
+  - { function: func_animal_complaint, order: 4, actor: duration_life_dog,
+      scene: "the dog rejects thirty years because running, barking, and biting will fail" }
+  - { function: func_lifespan_reduction, order: 5, actor: duration_life_god,
+      scene: "God releases the dog from twelve years of life" }
+  - { function: func_animal_complaint, order: 6, actor: duration_life_monkey,
+      scene: "the monkey says mirth hides sadness and cannot last thirty years" }
+  - { function: func_lifespan_reduction, order: 7, actor: duration_life_god,
+      scene: "God graciously takes ten years off the monkey's life" }
+  - { function: func_human_request, order: 8, actor: duration_life_man,
+      scene: "man asks for more than thirty years just as he is ready to enjoy life" }
+  - { function: func_transferred_years, order: 9, actor: duration_life_god,
+      scene: "God gives man the ass's, dog's, and monkey's surrendered years" }
+  - { function: func_etiological_explanation, order: 10, actor: law_transferred_animal_years_shape_human_aging,
+      scene: "human life becomes seventy years with animal-shaped aging stages" }
+
+
+edges:
+
+  - { from: duration_life_god, to: law_transferred_animal_years_shape_human_aging, label: FIXES_CREATURELY_LIFESPAN,
+      evidence: "fix the length of each creature" }
+  - { from: duration_life_god, to: duration_life_ass, label: OFFERS_THIRTY_YEARS,
+      evidence: "Thirty years" }
+  - { from: duration_life_ass, to: duration_life_god, label: REQUESTS_RELIEF_FROM_YEARS,
+      evidence: "Relieve me of a portion of this long time" }
+  - { from: duration_life_ass, to: agency_domestic_labor, label: SUFFERS_BURDENED_LABOR,
+      evidence: "To carry heavy burdens from morning to night" }
+  - { from: duration_life_god, to: duration_life_ass, label: REMOVES_EIGHTEEN_YEARS_FROM,
+      evidence: "relieved him of eighteen years" }
+  - { from: duration_life_dog, to: duration_life_god, label: REQUESTS_SHORTER_LIFE,
+      evidence: "Consider how I shall have to run" }
+  - { from: duration_life_dog, to: agency_violence, label: LOSES_BITING_CAPACITY,
+      evidence: "my teeth for biting" }
+  - { from: duration_life_god, to: duration_life_dog, label: REMOVES_TWELVE_YEARS_FROM,
+      evidence: "released him from twelve years of life" }
+  - { from: duration_life_monkey, to: duration_life_god, label: REJECTS_MIRTHFUL_APPEARANCE,
+      evidence: "How often sadness hides itself behind mirth" }
+  - { from: duration_life_monkey, to: agency_speech, label: PERFORMS_COMIC_FACE_MAKING,
+      evidence: "make faces which force people to laugh" }
+  - { from: duration_life_god, to: duration_life_monkey, label: REMOVES_TEN_YEARS_FROM,
+      evidence: "took off ten" }
+  - { from: duration_life_man, to: duration_life_god, label: ASKS_TO_LENGTHEN_TIME,
+      evidence: "O Lord, lengthen my time" }
+  - { from: duration_life_man, to: agency_domestic_labor, label: BUILDS_AND_PLANTS_BEFORE_DEATH,
+      evidence: "when I have built my house" }
+  - { from: duration_life_god, to: duration_life_man, label: ADDS_ASS_YEARS_TO,
+      evidence: "I will add to it the ass’s eighteen years" }
+  - { from: duration_life_god, to: duration_life_man, label: ADDS_DOG_YEARS_TO,
+      evidence: "Thou shalt also have the dog’s twelve years" }
+  - { from: duration_life_god, to: duration_life_man, label: ADDS_MONKEY_YEARS_TO,
+      evidence: "I will give thee the monkey’s ten years also" }
+  - { from: duration_life_man, to: num_70, label: LIVES_TOTAL_OF,
+      evidence: "So man lives seventy years" }
+  - { from: duration_life_man, to: num_30, label: HAS_FIRST_HUMAN_YEARS,
+      evidence: "The first thirty are his human years" }
+  - { from: duration_life_man, to: duration_life_ass, label: ENTERS_BURDENED_ASS_YEARS,
+      evidence: "Then follow the ass’s eighteen years" }
+  - { from: duration_life_man, to: duration_life_dog, label: ENTERS_TOOTHLESS_DOG_YEARS,
+      evidence: "Then come the dog’s twelve years" }
+  - { from: duration_life_man, to: duration_life_monkey, label: ENTERS_FOOLISH_MONKEY_YEARS,
+      evidence: "the monkey’s ten years form the end" }
+  - { from: law_transferred_animal_years_shape_human_aging, to: duration_life_man, label: EXPLAINS_HUMAN_AGING_STAGES,
+      evidence: "becomes the jest of the children" }

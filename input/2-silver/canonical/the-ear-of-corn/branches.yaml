@@ -1,0 +1,8 @@
+slug: the-ear-of-corn
+khm: 194
+atu: '779'
+base: pg5314-grimm-hunt
+sources:
+- book: pg5314-grimm-hunt
+  weight: canonical
+sections: []
