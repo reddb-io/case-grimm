@@ -1,4 +1,4 @@
-# Grimm Multi-Model Reader
+# Grimm Tales Data Studio
 
 Fairy tales are easy to read and hard to query. This site turns the curated
 gold corpus into a visual RedDB showcase: you can start from the stories,
@@ -7,12 +7,13 @@ tables, KV, timeseries, and statistics.
 
 <div id="overview-dashboard"></div>
 
-## How To Use This Site
+## What To Open First
 
-- Start with **Ask the Corpus** if you want guided questions and answers.
-- Open **Tale Reader** if you want to read the canonical gold text and inspect
+- Start with **Visual Atlas** if you want charts and corpus-level shape.
+- Open **Ask the Corpus** if you want guided questions and answers.
+- Use **Tale Reader** if you want to read the canonical gold text and inspect
   source editions.
-- Open **RedDB Showcase** if you want to see which database model powers each
+- Use **RedDB Showcase** if you want to see which database model powers each
   view.
 
 Locally, generate the static data before serving:
@@ -21,4 +22,3 @@ Locally, generate the static data before serving:
 ./grimm export docs
 ./grimm docs serve
 ```
-

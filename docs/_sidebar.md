@@ -12,4 +12,4 @@
 
 - Reference
   - [Ontology](ontology.md)
-  - [Deployment](deployment.md)
+  - [Build & Publish](deployment.md)

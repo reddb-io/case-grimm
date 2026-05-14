@@ -1,6 +1,11 @@
 # Data Pipeline
 
-The public site is generated, not hand-synchronized.
+The public site is generated, not hand-synchronized. The important idea is that
+each layer has a different job: books remain books, canonical tales remain
+editorial data, RedDB remains runtime/query state, and Docsify receives a static
+export.
+
+<div id="pipeline-root"></div>
 
 ```text
 input/1-bronze    raw Project Gutenberg books

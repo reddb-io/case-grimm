@@ -1,8 +1,7 @@
 # Visual Atlas
 
-This page summarizes the generated corpus data as compact visual tables for
-the first docs cut. The next pass can add Chart.js or Observable Plot without
-changing the export format.
+Scan the curated gold corpus before choosing a tale. The atlas uses the static
+JSON generated from the embedded RedDB snapshot to show length, graph density,
+source richness, and ontology balance.
 
-<div id="visual-atlas"></div>
-
+<div id="visual-atlas-root"></div>

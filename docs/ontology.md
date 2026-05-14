@@ -1,17 +1,24 @@
 # Ontology
 
-The site uses the shared graph vocabulary from `input/3-gold/ontology.yaml`.
-ATU tale-type notes are maintained separately in `input/3-gold/atu.yaml` so
-long comparative summaries do not crowd the ontology vocabulary.
+The ontology is the shared vocabulary that keeps the corpus useful. Without it,
+each tale would be a beautiful isolated document. With it, the same stories can
+answer questions about agency, consequence, thresholds, transformations,
+predators, helpers, tests, deception, and recurring symbolic machinery.
 
-The most useful reader facets are:
+ATU tale-type notes live in `input/3-gold/atu.yaml`; graph vocabulary lives in
+`input/3-gold/ontology.yaml`; tale-specific entities and edges live beside each
+canonical tale in `input/3-gold/tales`.
 
-- `HAS_WORLD_LAW`: rules of reality inside a tale.
-- `HAS_MORAL_REGIME`: how justice or consequence operates.
-- `IS_BEING_TYPE`: Grimm-like folkloric kinds, such as witch, dwarf, elf, dragon, fairy, or giant.
-- `GAINS_AGENCY_THROUGH`: how a character or object gains power to act.
-- `EXISTS_IN_STATE`: altered states such as abandoned, cursed, disguised, or bound by promise.
-- `HAS_THRESHOLD_TYPE`: places that behave as narrative thresholds, such as forests.
+<div id="ontology-root"></div>
 
-The reader panel shows these facets beside each tale so the user can move
-between the text and the graph vocabulary without leaving the page.
+## Reader Facets
+
+| Facet | What it captures |
+|---|---|
+| `HAS_WORLD_LAW` | Rules of reality inside a tale. |
+| `HAS_MORAL_REGIME` | How justice, consequence, restoration, or arbitrariness works. |
+| `IS_BEING_TYPE` | Folkloric kinds such as witch, dwarf, elf, dragon, fairy, or giant. |
+| `GAINS_AGENCY_THROUGH` | How a character or object gains power to act. |
+| `EXISTS_IN_STATE` | Altered states such as abandoned, cursed, disguised, or promised. |
+| `HAS_THRESHOLD_TYPE` | Places that behave as transitions, tests, or borders. |
+| `HAS_PROPP_EVENT` | Ordered narrative functions with actor, scene, and evidence. |
