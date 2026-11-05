@@ -1,17 +1,6 @@
 name: Deploy Docsify site to GitHub Pages
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'docs/**'
-      - 'input/**'
-      - 'scripts/**'
-      - 'src/**'
-      - 'package.json'
-      - 'pnpm-lock.yaml'
-      - 'grimm'
-      - '.github/workflows/pages.yml'
   workflow_dispatch:
 
 permissions:
